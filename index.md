@@ -3,5 +3,10 @@ title: "QMK Configurator Demo"
 layout: qmk
 ---
 
-Thing:
-<textarea></textarea>
+Keymap:
+<textarea id="keymap"></textarea>
+
+
+<script>
+
+</script>
