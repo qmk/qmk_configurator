@@ -327,8 +327,8 @@ img {
   max-width: 100%; }
 
 header {
-  width: 270px;
-  float: left;
+  /*width: 270px;*/
+  /*float: left;*/
   /*position: fixed;*/
   -webkit-font-smoothing: subpixel-antialiased; }
 /*
@@ -382,9 +382,11 @@ header ul a strong {
   color: #222; }
 */
 section {
-  width: 500px;
-  float: right;
-  padding-bottom: 50px; }
+  /*width: 500px;*/
+  /*float: right;*/
+  padding-bottom: 50px; 
+  position: relative;
+}
 
 small {
   font-size: 11px; }
@@ -396,9 +398,9 @@ hr {
   margin: 0 0 20px; }
 
 footer {
-  width: 270px;
-  float: left;
-  position: fixed;
+  /*width: 270px;*/
+  /*float: left;*/
+  /*position: fixed;*/
   bottom: 50px;
   -webkit-font-smoothing: subpixel-antialiased; }
 
