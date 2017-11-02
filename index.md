@@ -3,24 +3,24 @@ title: "QMK Configurator Demo"
 layout: qmk
 ---
 
-<p>
-  <select id="template" style="display:none;">
-      <option id="templateOption"></option>
-  </select>
-  <label>Keyboard: <select id="keyboard" onChange=" setSelectWidth(this);"></select></label> 
-  <label>Layout: <select id="layout" onChange=" setSelectWidth(this);"></select></label>
-  <button id="compile">Compile</button>
-  <button id="hex" disabled>Download .hex</button>
-  <button id="toolbox" disabled>Open in QMK Toolbox</button>
-  <button id="source" disabled>Download source</button>
-  <label>Keymap Name: <input id="keymap-name" type="text" value="mine" /></label>
-  <div id="status"></div>
-</p>
-<p>
-</p>
+<select id="template" style="display:none;">
+    <option id="templateOption"></option>
+</select>
+<div id="controller">
+  <div id="controller-top">
+    <label>Keyboard: <select id="keyboard" onChange=" setSelectWidth(this);"></select></label> 
+    <label>Layout: <select id="layout" onChange=" setSelectWidth(this);"></select></label>
+    <label id="keymap-name-label">Keymap name: <input id="keymap-name" type="text" value="mine" /></label>
+    <button id="compile">Compile</button>
+  </div><textarea id="status" readonly></textarea><div id="controller-bottom">
+    <button id="hex" disabled>Download .hex</button>
+    <button id="toolbox" disabled>Open in QMK Toolbox</button>
+    <button id="source" disabled>Download source</button>
+  </div>
+</div>
 <div class="split-content">
   <div class="left-side">
-    <label>Layer:</label>
+    <p><label>Layer:</label></p>
     <div id="layers">
       <div class="layer">15</div>
       <div class="layer">14</div>
@@ -41,7 +41,7 @@ layout: qmk
     </div>
   </div>
   <div class="right-side">
-    <label>Keymap:</label>
+    <p><label>Keymap:</label></p>
     <div id="visual-keymap"></div>
   </div>
 </div>
@@ -54,21 +54,80 @@ layout: qmk
 #compile, #hex, #toolbox, #source {
   float: right;
   line-height: 120%;
-  margin: 0px 0px 2px 2px;
+  margin: 0px 4px 0px 0px;
+  border-radius: 3px;
+  background-color: #49ad4c;
+  color: white;
+  border: 0px solid #000;
+  padding: 3px 6px;
+  cursor: pointer;
 }
 
-#hex, #source {
-  clear: right;
+#compile, #hex {
+  margin: 0px;
+}
+
+#source, #toolbox {
+  float: left;
+}
+
+#compile:disabled, #hex:disabled, #toolbox:disabled, #source:disabled {
+  background: #ccc;
+  color: #999;
+  cursor: unset;
+}
+
+#controller-top {
+  padding: 5px;
+  border-radius:  5px 5px 0px 0px;
+  background: #eee;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+  line-height: 100%;
+}
+
+select, input, label, button {
+  font-family: monospace;
+  font-size: 12px;
 }
 
 #status {
-  padding: 5px;
+  padding: 2px 5px;
   background: #333;
   color: #fff;
   border: 1px solid #000;
-  border-radius: 5px;
   font-family: monospace;
-  white-space: pre-wrap;
+  white-space: pre;
+  overflow-y: scroll;
+  height: 200px;
+  font-size: 12px;
+  width: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+}
+
+#controller-bottom {
+  padding: 5px;
+  border-radius: 0px 0px 5px 5px;
+  background: #eee;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+  line-height: 100%;
 }
 
 #layers {
@@ -416,6 +475,10 @@ keycodes = [
   {"width":0},
 
 
+  {"name":"N/A", "code":"KC_NO", title:"Nothing"},
+  {"name":"⍖", "code":"KC_TRNS", "title":"Pass-through"},
+  {"width":0},
+  {"width":0},
 
 
   {"name":"a", "code":"KC_A"},
@@ -468,6 +531,8 @@ keycodes = [
 job_id = "";
 hex_stream = "";
 hex_filename = "";
+keyboards = [];
+status = "";
 
 function setSelectWidth(s) {
   var sel = $(s);
@@ -483,14 +548,39 @@ function reset_keymap() {
   $(".layer.non-empty").removeClass("non-empty");
 }
 
+function keyboard_from_hash() {
+  if (keyboards.indexOf(window.location.hash.replace(/\#\//ig,"")) != -1) {
+    return window.location.hash.replace(/\#\//ig,"");
+  } else if (keyboards.indexOf(window.location.hash.replace(/\#\//ig,"").replace(/\/[^\/]+$/ig, "")) != -1) {
+    return window.location.hash.replace(/\#\//ig,"").replace(/\/[^\/]+$/ig, "");
+  } else {
+    return false;
+  }
+}
+
 $(document).ready(function() {
+
+
+  $(window).on('hashchange', function() {
+    console.log(window.location.hash);
+
+    if (keyboard_from_hash()) {
+      reset_keymap();
+      $("#keyboard").val(keyboard_from_hash());
+      setSelectWidth($("#keyboard"));
+      load_layouts($("#keyboard").val());
+    }
+  });
+
 
   $.each(keycodes, function(k, d) {
     if (d.code) {
       $("#keycodes").append($("<div>", {
         class: "keycode keycode-" + d.width,
         "data-code": d.code,
-        html: d.name
+        "data-type": "keycode",
+        html: d.name,
+        title: d.title
       }));
     } else {
       $("#keycodes").append($("<div>", {
@@ -535,10 +625,10 @@ $(document).ready(function() {
   }
 
   function render_layout(layout) {
-    var key_width = 50;
-    var key_height = 50;
-    var key_x_spacing = 55;
-    var key_y_spacing = 55;
+    var key_width = 40;
+    var key_height = 40;
+    var key_x_spacing = 45;
+    var key_y_spacing = 45;
     $("#visual-keymap").find("*").remove();
     if (!keymap[layer])
       keymap[layer] = {};
@@ -547,7 +637,8 @@ $(document).ready(function() {
         class: "key disabled",
         style: "left: " + (d.x * key_x_spacing) + "px; top: " + (d.y * key_y_spacing) + "px; width: " + ((d.w * key_x_spacing) - (key_x_spacing - key_width)) + "px; height: " + key_height + "px",
         id: "key-"+k,
-        "data-index": k
+        "data-index": k,
+        "data-type": "key"
       });
       if (keymap[layer][k] && keymap[layer][k].code != "KC_NO") {
         $(key).html(keymap[layer][k].name);
@@ -559,18 +650,32 @@ $(document).ready(function() {
       }
       $(key).droppable({
         over: function(event, ui) {
-          $(this).addClass("active-key");
+          if (ui.helper[0].dataset.type == "keycode")
+            $(this).addClass("active-key");
+          else
+            console.log(ui);
         },
         out: function(event, ui) {
-          $(this).removeClass("active-key");
+          if (ui.helper[0].dataset.type == "keycode")
+            $(this).removeClass("active-key");
         },
         drop: function(event, ui) {
-          $(".layer.active").addClass("non-empty");
-          $(this).html(ui.helper[0].innerHTML);
-          $(this).attr("data-code", ui.helper[0].dataset.code);
-          $(this).removeClass("active-key");
-          $(this).removeClass("disabled");
-          keymap[layer][k] = { name: ui.helper[0].innerHTML, code: ui.helper[0].dataset.code };
+          if (ui.helper[0].dataset.type == "keycode") {
+            $(this).removeClass("active-key");
+            if (ui.helper[0].dataset.code != "KC_NO") {
+              $(".layer.active").addClass("non-empty");
+              $(this).removeClass("disabled");
+              $(this).html(ui.helper[0].innerHTML);
+            } else {
+              $(this).addClass("disabled");
+              $(this).html("");
+            }
+            $(this).attr("data-code", ui.helper[0].dataset.code);
+            // $(this).draggable({revert: true, revertDuration: 100});
+            keymap[layer][k] = { name: ui.helper[0].innerHTML, code: ui.helper[0].dataset.code };
+          } else if (ui.helper[0].dataset.type == "key") {
+            console.log(ui);
+          }
         }
       });
 
@@ -579,19 +684,24 @@ $(document).ready(function() {
   }
 
   $.get("http://compile.qmk.fm/v1/keyboards", function(data) { 
+    keyboards = data;
     $.each(data, function(k, d) { 
       $("#keyboard").append($('<option>', { 
         value: d,
         text : d
       }));
     });
+    if (keyboard_from_hash()) {
+      $("#keyboard").val(keyboard_from_hash());
+    }
     setSelectWidth($("#keyboard"));
     load_layouts($("#keyboard").val());
   });
 
   $("#keyboard").change(function() {
-    reset_keymap();
-    load_layouts($("#keyboard").val());
+    // reset_keymap();
+    window.location.hash = "#/" + $("#keyboard").val();
+    // load_layouts($("#keyboard").val());
   });
 
   $("#layout").change(function() {
@@ -621,7 +731,7 @@ $(document).ready(function() {
       "layers": layers
     }
     console.log(JSON.stringify(data));
-    $("#status").append("* Sending keymap");
+    $("#status").append("* Sending " + $("#keyboard").val() + ":" + $("#keymap-name").val());
     $.ajax({
         'type': 'POST',
         'url': "http://compile.qmk.fm/v1/compile",
@@ -630,7 +740,7 @@ $(document).ready(function() {
         'dataType': 'json',
         'success': function(d) {
           if (d.enqueued) {
-            $("#status").append("\n* Compiling");
+            $("#status").append("\n* Received job_id: " + d.job_id);
             job_id = d.job_id;
             check_status();
           }
@@ -643,7 +753,7 @@ $(document).ready(function() {
     $.get("http://compile.qmk.fm/v1/compile/" + job_id, function(data) {
       console.log(data);
       if (data.status == "finished") {
-        $("#status").append("\n* Finished:\n" + data.result.output);
+        $("#status").append("\n* Finished:\n" + data.result.output.replace(/\[.*m/gi, ""));
         hex_stream = data.result.firmware;
         hex_filename = data.result.firmware_filename;
         $("#compile").removeAttr("disabled");
@@ -651,17 +761,27 @@ $(document).ready(function() {
         $("#toolbox").removeAttr("disabled");
         $("#source").removeAttr("disabled");
       } else if (data.status == "queued") {
-        $("#status").append(".");
+        if (status != "queued")
+          $("#status").append("\n* Queueing");
+        else
+          $("#status").append(".");
         setTimeout(check_status, 500);
       } else if (data.status == "running") {
-        $("#status").append(".");
+        if (status != "running")
+          $("#status").append("\n* Running");
+        else
+          $("#status").append(".");
         setTimeout(check_status, 500);
       } else if (data.status == "unknown") {
         $("#compile").removeAttr("disabled");
       } else if (data.status == "failed") {
-        $("#status").append("\n* Error:\n" + data.result.output);
+        $("#status").append("\n* Failed");
+        if (data.result)
+           $("#status").append("\n* Error:\n" + data.result.output);
         $("#compile").removeAttr("disabled");
       }
+      $("#status").scrollTop($("#status")[0].scrollHeight);
+      status = data.status;
     });
   }
 
