@@ -103,7 +103,7 @@ select, input, label, button {
   color: #fff;
   border: 1px solid #000;
   font-family: monospace;
-  white-space: pre;
+  white-space: pre-wrap;
   overflow-y: scroll;
   height: 200px;
   font-size: 12px;
@@ -533,6 +533,8 @@ hex_stream = "";
 hex_filename = "";
 keyboards = [];
 status = "";
+keyboard = "";
+layout = "";
 
 function setSelectWidth(s) {
   var sel = $(s);
@@ -558,17 +560,31 @@ function keyboard_from_hash() {
   }
 }
 
+function layout_from_hash() {
+  if (window.location.hash.replace(/^.+\//i, "") in layouts) {
+    return window.location.hash.replace(/^.+\//i, "");
+  } else {
+    return false;
+  }
+}
+
 $(document).ready(function() {
 
 
   $(window).on('hashchange', function() {
     console.log(window.location.hash);
 
-    if (keyboard_from_hash()) {
+    if (keyboard_from_hash() && keyboard_from_hash() != keyboard) {
       reset_keymap();
-      $("#keyboard").val(keyboard_from_hash());
+      keyboard = keyboard_from_hash();
+      $("#keyboard").val(keyboard);
       setSelectWidth($("#keyboard"));
       load_layouts($("#keyboard").val());
+    } else if (layout_from_hash() && layout_from_hash() != layout) {
+      layout = layout_from_hash();
+      $("#layout").val(layout);
+      setSelectWidth($("#layout"));
+      render_layout($("#layout").val());
     }
   });
 
@@ -614,8 +630,16 @@ $(document).ready(function() {
             value: k,
             text: k
           }));
-          layouts[k] = d;
+          if (d.layout)
+            layouts[k] = d.layout;
+          else
+            layouts[k] = d;
         });
+
+        if (layout_from_hash()) {
+          $("#layout").val(layout_from_hash());
+        }
+        window.location.hash = "#/" + $("#keyboard").val() + "/" + $("#layout").val();
         setSelectWidth($("#layout"));
         render_layout($("#layout").val());
       } else {
@@ -700,12 +724,13 @@ $(document).ready(function() {
 
   $("#keyboard").change(function() {
     // reset_keymap();
-    window.location.hash = "#/" + $("#keyboard").val();
+    window.location.hash = "#/" + $("#keyboard").val() + "/" + $("#layout").val();
     // load_layouts($("#keyboard").val());
   });
 
   $("#layout").change(function() {
-    render_layout($("#layout").val());
+    window.location.hash = "#/" + $("#keyboard").val() + "/" + $("#layout").val();
+    // render_layout($("#layout").val());
   });
 
   $(".layer").click(function(e) {
@@ -731,7 +756,7 @@ $(document).ready(function() {
       "layers": layers
     }
     console.log(JSON.stringify(data));
-    $("#status").append("* Sending " + $("#keyboard").val() + ":" + $("#keymap-name").val());
+    $("#status").append("* Sending " + $("#keyboard").val() + ":" + $("#keymap-name").val() + " with " + $("#layout").val());
     $.ajax({
         'type': 'POST',
         'url': "http://compile.qmk.fm/v1/compile",
@@ -764,13 +789,13 @@ $(document).ready(function() {
         if (status != "queued")
           $("#status").append("\n* Queueing");
         else
-          $("#status").append(".");
+          $("#status").append(" .");
         setTimeout(check_status, 500);
       } else if (data.status == "running") {
         if (status != "running")
           $("#status").append("\n* Running");
         else
-          $("#status").append(".");
+          $("#status").append(" .");
         setTimeout(check_status, 500);
       } else if (data.status == "unknown") {
         $("#compile").removeAttr("disabled");
