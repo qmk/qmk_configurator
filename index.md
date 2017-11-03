@@ -558,8 +558,8 @@ keycodes = [
   {name:"RCtrl", code:"RCTL(kc)", type:"container"},
   {name:"LAlt", code:"LALT(kc)", type:"container"},
   {name:"RAlt", code:"RALT(kc)", type:"container"},
-  {name:"LOs", code:"LGUI(kc)", type:"container"},
-  {name:"ROs", code:"RGUI(kc)", type:"container"},
+  {name:"LOS", code:"LGUI(kc)", type:"container"},
+  {name:"ROS", code:"RGUI(kc)", type:"container"},
 
   {label:"Alphabet", width:"label"},
 
