@@ -207,17 +207,53 @@ select, input, label, button {
   background: #fff;
   line-height: 100%;
   padding: 1px;
+  white-space: pre-line;
 }
 
-.key.disabled {
+.key:empty {
   background: #eee;
 }
-.key.disabled:before {
+.key:empty:before {
   content:"N/A";
   color: #ccc;
 }
 
 .key.active-key {
+  background: #d4f9d1;
+}
+
+.key-container {
+  font-size: 10px;
+  display: block;
+}
+
+.key-contents {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background: #eee;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 1px;
+  background: #fff;
+}
+
+.key-contents:empty {
+  background: #eee;
+}
+
+.key-contents:empty:before {
+  content:"N/A";
+  color: #ccc;
+}
+
+.key-contents.active-key {
   background: #d4f9d1;
 }
 
@@ -252,7 +288,35 @@ select, input, label, button {
   background: #fff;
   float: left;
   font-size: 70%;
-  line-height: 99%;
+  line-height: 11px;
+  white-space: pre-line;
+  padding: 1px;
+}
+
+.keycode:active { 
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  /*opacity: .5;
+  -moz-transform: scale(.8);
+  -webkit-transform: scale(.8);
+  transform: scale(.8);*/
+}
+
+.keycode-container {
+  font-size: 10px;
+  display: block;
+}
+
+.keycode-container:after {
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background: #eee;
+  margin: 0px auto;
+  display: block;
 }
 
 .keycode-1250 {
@@ -269,6 +333,12 @@ select, input, label, button {
 }
 .keycode-2250 {
   width: 78.25px;
+}
+.keycode-2750 {
+  width: 96.75px;
+}
+.keycode-6250 {
+  width: 226.25px;
 }
 
 .space {
@@ -311,16 +381,13 @@ select, input, label, button {
   margin: 0px;
   clear: left;
 }
-
-.keycode:active { 
-  cursor: grabbing;
-  cursor: -moz-grabbing;
-  cursor: -webkit-grabbing;
-  /*opacity: .5;
-  -moz-transform: scale(.8);
-  -webkit-transform: scale(.8);
-  transform: scale(.8);*/
+.space-label {
+  width: 100%;
+  clear: both;
+  height: 20px;
+  justify-content: left;
 }
+
 
 </style>
 
@@ -329,203 +396,218 @@ layouts = {};
 keymap = [];
 layer = 0;
 keycodes = [
-  {"name":"Esc", "code":"KC_ESC"},
-  {"width":1000},
-  {"name":"F1", "code":"KC_F1"},
-  {"name":"F2", "code":"KC_F2"},
-  {"name":"F3", "code":"KC_F3"},
-  {"name":"F4", "code":"KC_F4"},
-  {"width":500},
-  {"name":"F5", "code":"KC_F5"},
-  {"name":"F6", "code":"KC_F6"},
-  {"name":"F7", "code":"KC_F7"},
-  {"name":"F8", "code":"KC_F8"},
-  {"width":500},
-  {"name":"F9", "code":"KC_F9"},
-  {"name":"F10", "code":"KC_F10"},
-  {"name":"F11", "code":"KC_F11"},
-  {"name":"F12", "code":"KC_F12"},
-  {"width":250},
-  {"name":"Print Screen", "code":"KC_PSCR"},
-  {"name":"Scroll Lock", "code":"KC_SLCK"},
-  {"name":"Pause", "code":"KC_PAUS"},
-  {"width":0},
+  {name:"Esc", code:"KC_ESC"},
+  {width:1000},
+  {name:"F1", code:"KC_F1"},
+  {name:"F2", code:"KC_F2"},
+  {name:"F3", code:"KC_F3"},
+  {name:"F4", code:"KC_F4"},
+  {width:500},
+  {name:"F5", code:"KC_F5"},
+  {name:"F6", code:"KC_F6"},
+  {name:"F7", code:"KC_F7"},
+  {name:"F8", code:"KC_F8"},
+  {width:500},
+  {name:"F9", code:"KC_F9"},
+  {name:"F10", code:"KC_F10"},
+  {name:"F11", code:"KC_F11"},
+  {name:"F12", code:"KC_F12"},
+  {width:250},
+  {name:"Print Screen", code:"KC_PSCR"},
+  {name:"Scroll Lock", code:"KC_SLCK"},
+  {name:"Pause", code:"KC_PAUS"},
+  {width:0},
 
 
-  {"name":"~ `", "code":"KC_GRV"},
-  {"name":"! 1", "code":"KC_1"},
-  {"name":"@ 2", "code":"KC_2"},
-  {"name":"# 3", "code":"KC_3"},
-  {"name":"$ 4", "code":"KC_4"},
-  {"name":"% 5", "code":"KC_5"},
-  {"name":"^ 6", "code":"KC_6"},
-  {"name":"& 7", "code":"KC_7"},
-  {"name":"* 8", "code":"KC_8"},
-  {"name":"( 9", "code":"KC_9"},
-  {"name":") 0", "code":"KC_0"},
-  {"name":"_ -", "code":"KC_MINS"},
-  {"name":"+ =", "code":"KC_EQL"},
-  {"name":"Yen", "code":"KC_JYEN"},
-  {"name":"Back Space", "code":"KC_BSPC"},
-  {"width":250},
-  {"name":"Insert", "code":"KC_INS"},
-  {"name":"Home", "code":"KC_HOME"},
-  {"name":"Page Up", "code":"KC_PGUP"},
-  {"width":250},
-  {"name":"Num Lock", "code":"KC_NLCK"},
-  {"name":"/", "code":"KC_PSLS"},
-  {"name":"*", "code":"KC_PAST"},
-  {"name":"-", "code":"KC_PMNS"},
-  {"width":0},
+  {name:"~\n`", code:"KC_GRV"},
+  {name:"!\n1", code:"KC_1"},
+  {name:"@\n2", code:"KC_2"},
+  {name:"#\n3", code:"KC_3"},
+  {name:"$\n4", code:"KC_4"},
+  {name:"%\n5", code:"KC_5"},
+  {name:"^\n6", code:"KC_6"},
+  {name:"&\n7", code:"KC_7"},
+  {name:"*\n8", code:"KC_8"},
+  {name:"(\n9", code:"KC_9"},
+  {name:")\n0", code:"KC_0"},
+  {name:"_\n-", code:"KC_MINS"},
+  {name:"+\n=", code:"KC_EQL"},
+  {name:"Back Space", code:"KC_BSPC", width:2000},
+  {width:250},
+  {name:"Insert", code:"KC_INS"},
+  {name:"Home", code:"KC_HOME"},
+  {name:"Page Up", code:"KC_PGUP"},
+  {width:250},
+  {name:"Num Lock", code:"KC_NLCK"},
+  {name:"/", code:"KC_PSLS"},
+  {name:"*", code:"KC_PAST"},
+  {name:"-", code:"KC_PMNS"},
+  {width:0},
 
 
 
-  {"name":"Tab", "code":"KC_TAB", "width":1500},
-  {"name":"q", "code":"KC_Q"},
-  {"name":"w", "code":"KC_W"},
-  {"name":"e", "code":"KC_E"},
-  {"name":"r", "code":"KC_R"},
-  {"name":"t", "code":"KC_T"},
-  {"name":"y", "code":"KC_Y"},
-  {"name":"u", "code":"KC_U"},
-  {"name":"i", "code":"KC_I"},
-  {"name":"o", "code":"KC_O"},
-  {"name":"p", "code":"KC_P"},
-  {"name":"{ [", "code":"KC_LBRC"},
-  {"name":"} ]", "code":"KC_RBRC"},
-  {"name":"| \\", "code":"KC_BSLS", "width":1500},
-  {"width":250},
-  {"name":"Del", "code":"KC_DEL"},
-  {"name":"End", "code":"KC_END"},
-  {"name":"Page Down", "code":"KC_PGDN"},
-  {"width":250},
-  {"name":"7", "code":"KC_P7"},
-  {"name":"8", "code":"KC_P8"},
-  {"name":"9", "code":"KC_P9"},
-  {"name":"+", "code":"KC_PPLS"},
-  {"width":0},
+  {name:"Tab", code:"KC_TAB", width:1500},
+  {name:"q", code:"KC_Q"},
+  {name:"w", code:"KC_W"},
+  {name:"e", code:"KC_E"},
+  {name:"r", code:"KC_R"},
+  {name:"t", code:"KC_T"},
+  {name:"y", code:"KC_Y"},
+  {name:"u", code:"KC_U"},
+  {name:"i", code:"KC_I"},
+  {name:"o", code:"KC_O"},
+  {name:"p", code:"KC_P"},
+  {name:"{\n[", code:"KC_LBRC"},
+  {name:"}\n]", code:"KC_RBRC"},
+  {name:"|\n\\", code:"KC_BSLS", width:1500},
+  {width:250},
+  {name:"Del", code:"KC_DEL"},
+  {name:"End", code:"KC_END"},
+  {name:"Page Down", code:"KC_PGDN"},
+  {width:250},
+  {name:"7", code:"KC_P7"},
+  {name:"8", code:"KC_P8"},
+  {name:"9", code:"KC_P9"},
+  {name:"+", code:"KC_PPLS"},
+  {width:0},
 
 
-  {"name":"Caps Lock", "code":"KC_CAPS", "width":1750},
-  {"name":"a", "code":"KC_A"},
-  {"name":"s", "code":"KC_S"},
-  {"name":"d", "code":"KC_D"},
-  {"name":"f", "code":"KC_F"},
-  {"name":"g", "code":"KC_G"},
-  {"name":"h", "code":"KC_H"},
-  {"name":"j", "code":"KC_J"},
-  {"name":"k", "code":"KC_K"},
-  {"name":"l", "code":"KC_L"},
-  {"name":": ;", "code":"KC_SCLN"},
-  {"name":"\" '", "code":"KC_QUOT"},
-  {"name":"NUHS", "code":"KC_NUHS"},
-  {"name":"Enter", "code":"KC_ENT", "width":1250},
-  {"width":3500},
-  {"name":"4", "code":"KC_P4"},
-  {"name":"5", "code":"KC_P5"},
-  {"name":"6", "code":"KC_P6"},
-  {"name":",", "code":"KC_PCMM"},
-  {"width":0},
+  {name:"Caps Lock", code:"KC_CAPS", width:1750},
+  {name:"a", code:"KC_A"},
+  {name:"s", code:"KC_S"},
+  {name:"d", code:"KC_D"},
+  {name:"f", code:"KC_F"},
+  {name:"g", code:"KC_G"},
+  {name:"h", code:"KC_H"},
+  {name:"j", code:"KC_J"},
+  {name:"k", code:"KC_K"},
+  {name:"l", code:"KC_L"},
+  {name:":\n;", code:"KC_SCLN"},
+  {name:"\"\n'", code:"KC_QUOT"},
+  {name:"Enter", code:"KC_ENT", width:2250},
+  {width:3500},
+  {name:"4", code:"KC_P4"},
+  {name:"5", code:"KC_P5"},
+  {name:"6", code:"KC_P6"},
+  {name:",", code:"KC_PCMM"},
+  {width:0},
 
-  {"name":"Left Shift", "code":"KC_LSFT", "width":1250},
-  {"name":"NUBS", "code":"KC_NUBS"},
-  {"name":"z", "code":"KC_Z"},
-  {"name":"x", "code":"KC_X"},
-  {"name":"c", "code":"KC_C"},
-  {"name":"v", "code":"KC_V"},
-  {"name":"b", "code":"KC_B"},
-  {"name":"n", "code":"KC_N"},
-  {"name":"m", "code":"KC_M"},
-  {"name":"< ,", "code":"KC_COMM"},
-  {"name":"> .", "code":"KC_DOT"},
-  {"name":"? /", "code":"KC_SLSH"},
-  {"name":"Ro", "code":"KC_RO"},
-  {"name":"Right Shift", "code":"KC_RSFT", "width":1750},
-  {"width":1250},
-  {"name":"Up", "code":"KC_UP"},
-  {"width":1250},
-  {"name":"1", "code":"KC_P1"},
-  {"name":"2", "code":"KC_P2"},
-  {"name":"4", "code":"KC_P3"},
-  {"name":"=", "code":"KC_PEQL"},
-  {"width":0},
+  {name:"Left Shift", code:"KC_LSFT", width:2250},
+  {name:"z", code:"KC_Z"},
+  {name:"x", code:"KC_X"},
+  {name:"c", code:"KC_C"},
+  {name:"v", code:"KC_V"},
+  {name:"b", code:"KC_B"},
+  {name:"n", code:"KC_N"},
+  {name:"m", code:"KC_M"},
+  {name:"<\n,", code:"KC_COMM"},
+  {name:">\n.", code:"KC_DOT"},
+  {name:"?\n/", code:"KC_SLSH"},
+  {name:"Right Shift", code:"KC_RSFT", width:2750},
+  {width:1250},
+  {name:"Up", code:"KC_UP"},
+  {width:1250},
+  {name:"1", code:"KC_P1"},
+  {name:"2", code:"KC_P2"},
+  {name:"4", code:"KC_P3"},
+  {name:"=", code:"KC_PEQL"},
+  {width:0},
 
-  {"name":"Left Ctrl", "code":"KC_LCTL", "width":1250},
-  {"name":"Left OS", "code":"KC_LGUI", "width":1250},
-  {"name":"Left Alt", "code":"KC_LALT", "width":1250},
-  {"name":"MHEN", "code":"KC_MHEN"},
-  {"name":"HANJ", "code":"KC_HANJ"},
-  {"name":"Space", "code":"KC_SPC", "width":1250},
-  {"name":"HAEN", "code":"KC_HAEN"},
-  {"name":"HENK", "code":"KC_HENK"},
-  {"name":"KANA", "code":"KC_KANA"},
-  {"name":"Right Alt", "code":"KC_RALT", "width":1250},
-  {"name":"Right OS", "code":"KC_RGUI", "width":1250},
-  {"name":"Menu", "code":"KC_APP", "width":1250},
-  {"name":"Right Ctrl", "code":"KC_RCTL", "width":1250},
-  {"width":250},
-  {"name":"Left", "code":"KC_LEFT"},
-  {"name":"Down", "code":"KC_DOWN"},
-  {"name":"Right", "code":"KC_RGHT"},
-  {"width":250},
-  {"name":"0", "code":"KC_P0", "width":2000},
-  {"name":".", "code":"KC_PDOT"},
-  {"name":"Enter", "code":"KC_PENT"},
-  {"width":0},
-  {"width":0},
+  {name:"Left Ctrl", code:"KC_LCTL", width:1250},
+  {name:"Left OS", code:"KC_LGUI", width:1250},
+  {name:"Left Alt", code:"KC_LALT", width:1250},
+  {name:"Space", code:"KC_SPC", width:6250},
+  {name:"Right Alt", code:"KC_RALT", width:1250},
+  {name:"Right OS", code:"KC_RGUI", width:1250},
+  {name:"Menu", code:"KC_APP", width:1250},
+  {name:"Right Ctrl", code:"KC_RCTL", width:1250},
+  {width:250},
+  {name:"Left", code:"KC_LEFT"},
+  {name:"Down", code:"KC_DOWN"},
+  {name:"Right", code:"KC_RGHT"},
+  {width:250},
+  {name:"0", code:"KC_P0", width:2000},
+  {name:".", code:"KC_PDOT"},
+  {name:"Enter", code:"KC_PENT"},
 
+  {label:"International", width:"label"},
 
-  {"name":"N/A", "code":"KC_NO", title:"Nothing"},
-  {"name":"⍖", "code":"KC_TRNS", "title":"Pass-through"},
-  {"width":0},
-  {"width":0},
+  {name:"NUHS", code:"KC_NUHS"},
+  {name:"NUBS", code:"KC_NUBS"},
 
+  {name:"Ro", code:"KC_RO", title:"JIS \\ and |"},
+  {name:"¥", code:"KC_JYEN"},
 
-  {"name":"a", "code":"KC_A"},
-  {"name":"b", "code":"KC_B"},
-  {"name":"c", "code":"KC_C"},
-  {"name":"d", "code":"KC_D"},
-  {"name":"e", "code":"KC_E"},
-  {"name":"f", "code":"KC_F"},
-  {"name":"g", "code":"KC_G"},
-  {"name":"h", "code":"KC_H"},
-  {"name":"i", "code":"KC_I"},
-  {"name":"j", "code":"KC_J"},
-  {"name":"k", "code":"KC_K"},
-  {"name":"l", "code":"KC_L"},
-  {"name":"m", "code":"KC_M"},
-  {"name":"n", "code":"KC_N"},
-  {"name":"o", "code":"KC_O"},
-  {"name":"p", "code":"KC_P"},
-  {"name":"q", "code":"KC_Q"},
-  {"name":"r", "code":"KC_R"},
-  {"name":"s", "code":"KC_S"},
-  {"name":"t", "code":"KC_T"},
-  {"name":"u", "code":"KC_U"},
-  {"name":"v", "code":"KC_V"},
-  {"name":"w", "code":"KC_W"},
-  {"name":"x", "code":"KC_X"},
-  {"name":"y", "code":"KC_Y"},
-  {"name":"z", "code":"KC_Z"},
-  {"width":0},
-  {"width":0},
+  {name:"無変換", code:"KC_MHEN"},
+  {name:"漢字", code:"KC_HANJ"},
+
+  {name:"한영", code:"KC_HAEN"},
+  {name:"変換", code:"KC_HENK"},
+  {name:"かな", code:"KC_KANA"},
 
 
-  {"name":"Vol Down", "code":"KC_VOLD"},
-  {"name":"Vol Up", "code":"KC_VOLU"},
-  {"name":"Mute", "code":"KC_MUTE"},
-  {"name":"Power", "code":"KC_PWR"},
-  {"name":"Help", "code":"KC_HELP"},
-  {"name":"Stop", "code":"KC_STOP"},
-  {"name":"Again", "code":"KC_AGIN"},
-  {"name":"Menu", "code":"KC_MENU"},
-  {"name":"Undo", "code":"KC_UNDO"},
-  {"name":"Select", "code":"KC_SLCT"},
-  {"name":"Copy", "code":"KC_COPY"},
-  {"name":"Exec", "code":"KC_EXEC"},
-  {"name":"Paste", "code":"KC_PSTE"},
-  {"name":"Find", "code":"KC_FIND"},
-  {"name":"Cut", "code":"KC_CUT"},
+  {label:"QMK Specific", width:"label"},
+
+  {name:"N/A", code:"KC_NO", title:"Nothing"},
+  {name:"▽", code:"KC_TRNS", title:"Pass-through"},
+  {name:"Reset", code:"RESET", title:"Reset the keyboard"},
+  {name:"Debug", code:"DEBUG", title:"Toggle debug mode"},
+  {name:"LSft", code:"LSFT(kc)", type:"container"},
+  {name:"RSft", code:"RSFT(kc)", type:"container"},
+  {name:"LCtrl", code:"LCTL(kc)", type:"container"},
+  {name:"RCtrl", code:"RCTL(kc)", type:"container"},
+  {name:"LAlt", code:"LALT(kc)", type:"container"},
+  {name:"RAlt", code:"RALT(kc)", type:"container"},
+  {name:"LOs", code:"LGUI(kc)", type:"container"},
+  {name:"ROs", code:"RGUI(kc)", type:"container"},
+
+  {label:"Alphabet", width:"label"},
+
+  {name:"a", code:"KC_A"},
+  {name:"b", code:"KC_B"},
+  {name:"c", code:"KC_C"},
+  {name:"d", code:"KC_D"},
+  {name:"e", code:"KC_E"},
+  {name:"f", code:"KC_F"},
+  {name:"g", code:"KC_G"},
+  {name:"h", code:"KC_H"},
+  {name:"i", code:"KC_I"},
+  {name:"j", code:"KC_J"},
+  {name:"k", code:"KC_K"},
+  {name:"l", code:"KC_L"},
+  {name:"m", code:"KC_M"},
+  {width:0},
+  {name:"n", code:"KC_N"},
+  {name:"o", code:"KC_O"},
+  {name:"p", code:"KC_P"},
+  {name:"q", code:"KC_Q"},
+  {name:"r", code:"KC_R"},
+  {name:"s", code:"KC_S"},
+  {name:"t", code:"KC_T"},
+  {name:"u", code:"KC_U"},
+  {name:"v", code:"KC_V"},
+  {name:"w", code:"KC_W"},
+  {name:"x", code:"KC_X"},
+  {name:"y", code:"KC_Y"},
+  {name:"z", code:"KC_Z"},
+
+  {label:"Application", width:"label"},
+
+  {name:"Vol Down", code:"KC_VOLD"},
+  {name:"Vol Up", code:"KC_VOLU"},
+  {name:"Mute", code:"KC_MUTE"},
+  {name:"Power", code:"KC_PWR"},
+  {name:"Help", code:"KC_HELP"},
+  {name:"Stop", code:"KC_STOP"},
+  {name:"Again", code:"KC_AGIN"},
+  {name:"Menu", code:"KC_MENU"},
+  {name:"Undo", code:"KC_UNDO"},
+  {name:"Select", code:"KC_SLCT"},
+  {name:"Copy", code:"KC_COPY"},
+  {name:"Exec", code:"KC_EXEC"},
+  {name:"Paste", code:"KC_PSTE"},
+  {name:"Find", code:"KC_FIND"},
+  {name:"Cut", code:"KC_CUT"},
 ];
 
 job_id = "";
@@ -568,6 +650,71 @@ function layout_from_hash() {
   }
 }
 
+function droppable_config(t, key) {
+  return {
+    over: function(event, ui) {
+      $(t).addClass("active-key");
+      if ($(t).hasClass("key-contents")) {
+        $(t).parent().removeClass("active-key");
+      }
+    },
+    out: function(event, ui) {
+      $(t).removeClass("active-key");
+      if ($(t).hasClass("key-contents")) {
+        $(t).parent().addClass("active-key");
+      }
+    },
+    drop: function(event, ui) {
+      if ($(t).hasClass("active-key")) {
+        $(t).removeClass("active-key");
+        $(".layer.active").addClass("non-empty");
+        $(t).attr("data-code", ui.helper[0].dataset.code);
+        // $(t).draggable({revert: true, revertDuration: 100});
+        if ($(t).hasClass("key-contents")) {
+          keymap[layer][key]['contents'] = {
+            name: ui.helper[0].innerHTML,
+            code: ui.helper[0].dataset.code,
+            type: ui.helper[0].dataset['type']
+          }
+        } else {
+          assign_key(layer, key, ui.helper[0].innerHTML, ui.helper[0].dataset.code, ui.helper[0].dataset['type'])
+        }
+        render_key(layer, key);
+      }
+    }
+  }
+}
+
+function render_key(layer, k) {
+  var key = $("#key-" + k);
+  var keycode = keymap[layer][k];
+  if (!keycode)
+    keycode = assign_key(layer, k, "", "KC_NO", "");
+  $(key).html(keycode.name);
+  if (keycode.type == "container") {
+    var container = $("<div>", {
+      class: "key-contents"
+    });
+    if (keycode.contents) {
+      $(container).html(keycode.contents.name);
+    }
+    $(container).droppable(droppable_config(container, k));
+    $(key).addClass("key-container");
+    $(key).append(container);
+  } else {
+    $(key).removeClass("key-container");
+  }
+}
+
+function assign_key(layer, key, name, code, type) {
+  keymap[layer][key] = {
+    "name": name,
+    "code": code,
+    "type": type
+  };
+  return keymap[layer][key];
+}
+
 $(document).ready(function() {
 
 
@@ -591,16 +738,18 @@ $(document).ready(function() {
 
   $.each(keycodes, function(k, d) {
     if (d.code) {
-      $("#keycodes").append($("<div>", {
-        class: "keycode keycode-" + d.width,
+      var keycode = $("<div>", {
+        class: "keycode keycode-" + d.width + " keycode-" + d.type,
         "data-code": d.code,
-        "data-type": "keycode",
+        "data-type": d.type,
         html: d.name,
         title: d.title
-      }));
+      })
+      $("#keycodes").append(keycode);
     } else {
       $("#keycodes").append($("<div>", {
         class: "space space-" + d.width,
+        html: d.label
       }));
     }
   });
@@ -664,46 +813,9 @@ $(document).ready(function() {
         "data-index": k,
         "data-type": "key"
       });
-      if (keymap[layer][k] && keymap[layer][k].code != "KC_NO") {
-        $(key).html(keymap[layer][k].name);
-        $(key).attr("data-code", keymap[layer][k].code);
-        $(key).removeClass("disabled");
-      } else {
-        keymap[layer][k] = {name: "", code: "KC_NO"};
-        $(key).attr("data-code", "KC_NO");
-      }
-      $(key).droppable({
-        over: function(event, ui) {
-          if (ui.helper[0].dataset.type == "keycode")
-            $(this).addClass("active-key");
-          else
-            console.log(ui);
-        },
-        out: function(event, ui) {
-          if (ui.helper[0].dataset.type == "keycode")
-            $(this).removeClass("active-key");
-        },
-        drop: function(event, ui) {
-          if (ui.helper[0].dataset.type == "keycode") {
-            $(this).removeClass("active-key");
-            if (ui.helper[0].dataset.code != "KC_NO") {
-              $(".layer.active").addClass("non-empty");
-              $(this).removeClass("disabled");
-              $(this).html(ui.helper[0].innerHTML);
-            } else {
-              $(this).addClass("disabled");
-              $(this).html("");
-            }
-            $(this).attr("data-code", ui.helper[0].dataset.code);
-            // $(this).draggable({revert: true, revertDuration: 100});
-            keymap[layer][k] = { name: ui.helper[0].innerHTML, code: ui.helper[0].dataset.code };
-          } else if (ui.helper[0].dataset.type == "key") {
-            console.log(ui);
-          }
-        }
-      });
-
+      $(key).droppable(droppable_config(key, k));
       $("#visual-keymap").append(key);
+      render_key(layer, k);
     });
   }
 
@@ -746,7 +858,10 @@ $(document).ready(function() {
     $.each(keymap, function(k, d) {
       layers[k] = [];
       $.each(keymap[k], function(l, e) {
-        layers[k][l] = e.code;
+        var keycode = e.code;
+        if (e.contents && e.code.indexOf("(kc)"))
+          keycode = keycode.replace("kc", e.contents.code);
+        layers[k][l] = keycode;
       });
     });
     var data = {
