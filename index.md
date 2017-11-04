@@ -195,6 +195,12 @@ select, input, label, button {
   pointer-events: none;
 }
 
+.fixed p {
+  background: #fff;
+  margin: 0px;
+  padding: 14px 0px;
+}
+
 .left-side {
   float: left;
   pointer-events: all;
@@ -359,12 +365,12 @@ select, input, label, button {
   content: "N/A";
 }
 
-.keycode-container {
+.keycode-container, .keycode-layer {
   font-size: 10px;
   display: block;
 }
 
-.keycode-container:after {
+.keycode-container:after, .keycode-layer:after {
   content: "";
   width: 14px;
   height: 14px;
@@ -615,20 +621,50 @@ keycodes = [
   {name:"▽", code:"KC_TRNS", title:"Pass-through"},
   {name:"Reset", code:"RESET", title:"Reset the keyboard"},
   {name:"Debug", code:"DEBUG", title:"Toggle debug mode"},
-  {name:"Hold Layer", code:"MO(layer)", type:"layer", layer:0},
-  {name:"Toggle Layer", code:"TG(layer)", type:"layer", layer:0},
 
 
-  {label:"Mod key combinations (A = Alt, C = Control, O = Windows/Command, S = Shift)", width:"label"},
+  {label:"Layer functions", width:"label"},
 
-  {name:"LS", code:"LSFT(kc)", type:"container"},
-  {name:"LC", code:"LCTL(kc)", type:"container"},
-  {name:"LA", code:"LALT(kc)", type:"container"},
-  {name:"LO", code:"LGUI(kc)", type:"container"},
-  {name:"RS", code:"RSFT(kc)", type:"container"},
-  {name:"RC", code:"RCTL(kc)", type:"container"},
-  {name:"RA", code:"RALT(kc)", type:"container"},
-  {name:"RO", code:"RGUI(kc)", type:"container"},
+  {name:"MO", code:"MO(layer)", type:"layer", layer:0, title:"Momentary turn layer on"},
+  {name:"TG", code:"TG(layer)", type:"layer", layer:0, title:"Toggle layer on/off"},
+  {name:"DF", code:"DF(layer)", type:"layer", layer:0, title:"Sets the default layer"},
+  {name:"OSL", code:"OSL(layer)", type:"layer", layer:0, title:"Switch to layer for one keypress"},
+
+
+  {label:"Mod key combinations (A = Alt, C = Control, G = Windows/Command, S = Shift)", width:"label"},
+
+  {name:"LSft", code:"LSFT(kc)", type:"container"},
+  {name:"LCtl", code:"LCTL(kc)", type:"container"},
+  {name:"LAlt", code:"LALT(kc)", type:"container"},
+  {name:"LGui", code:"LGUI(kc)", type:"container"},
+  {name:"RSft", code:"RSFT(kc)", type:"container"},
+  {name:"RCtl", code:"RCTL(kc)", type:"container"},
+  {name:"RAlt", code:"RALT(kc)", type:"container"},
+  {name:"RGui", code:"RGUI(kc)", type:"container"},
+  {width:0},
+  {name:"LSft_T", code:"LSFT_T(kc)", type:"container", title:"Shift when held, kc when tapped"},
+  {name:"LCtl_T", code:"LCtl_T(kc)", type:"container", title:"Control when held, kc when tapped"},
+  {name:"LAlt_T", code:"LAlt_T(kc)", type:"container", title:"Alt when held, kc when tapped"},
+  {name:"LGui_T", code:"LGui_T(kc)", type:"container", title:"Gui when held, kc when tapped"},
+  {name:"RSft_T", code:"RSFT_T(kc)", type:"container", title:"Shift when held, kc when tapped"},
+  {name:"RCtl_T", code:"RCtl_T(kc)", type:"container", title:"Control when held, kc when tapped"},
+  {name:"RAlt_T", code:"RAlt_T(kc)", type:"container", title:"Alt when held, kc when tapped"},
+  {name:"RGui_T", code:"RGui_T(kc)", type:"container", title:"Gui when held, kc when tapped"},
+  {name:"CS_T", code:"C_S_T(kc)", type:"container", title:"Control + Shift when held, kc when tapped"},
+  {name:"All_T", code:"ALL_T(kc)", type:"container", title:"LCTL + LSFT + LALT + LGUI when held, kc when tapped"},
+  {name:"Meh_T", code:"MEH_T(kc)", type:"container", title:"LCTL + LSFT + LALT when held, kc when tapped"},
+  {name:"LCAG_T", code:"LCAG_T(kc)", type:"container", title:"LCTL + LALT + LGUI when held, kc when tapped"},
+  {name:"RCAG_T", code:"RCAG_T(kc)", type:"container", title:"RCTL + RALT + RGUI when held, kc when tapped"},
+  {name:"SGUI_T", code:"SCMD_T(kc)", type:"container", title:"LGUI + LSFT when held, kc when tapped"},
+  {name:"LCA_T", code:"LCA_T(kc)", type:"container", title:"LCTL + LALT when held, kc when tapped"},
+  {width:0},
+  {name:"Hyper", code:"HYPR(kc)", type:"container", title:"LCTL + LSFT + LALT + LGUI"},
+  {name:"Meh", code:"MEH(kc)", type:"container", title:"LCTL + LSFT + LALT"},
+  {name:"LCAG", code:"LCAG(kc)", type:"container", title:"LCTL + LALT + LGUI"},
+  {name:"ALTG", code:"ALTG(kc)", type:"container", title:"RCTL + RALT"},
+  {name:"SGUI", code:"SCMD(kc)", type:"container", title:"LGUI + LSFT"},
+  {name:"LCA", code:"LCA(kc)", type:"container", title:"LCTL + LALT"},
+
 
   {label:"Alphabet", width:"label"},
 
@@ -659,6 +695,12 @@ keycodes = [
   {name:"x", code:"KC_X"},
   {name:"y", code:"KC_Y"},
   {name:"z", code:"KC_Z"},
+
+
+  {label:"Special action keys", width:"label"},
+  {name:"Esc/~", code:"KC_GESC", title:"Esc normally, but ~ when shift/gui is pressed"},
+  {name:"LS/(", code:"KC_LSPO", title:"Left shift when held, ( when tapped"},
+  {name:"RS/)", code:"KC_RSPC", title:"Right shift when held, ) when tapped"},
 
   {label:"Shifted symbols", width:"label"},
 
@@ -952,6 +994,8 @@ $(document).ready(function() {
     var max_x = 0;
     var max_y = 0; 
     $.each(layouts[layout], function(k, d) {
+      if (!d.w)
+        d.w = 1;
       if (!d.h)
         d.h = 1;
       var key = $('<div>', {
