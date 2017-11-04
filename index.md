@@ -45,7 +45,7 @@ layout: qmk
     <div id="visual-keymap"></div>
   </div>
 </div>
-<p style="clear:both">
+<p style="clear:both" id="keycodes-section">
   <label>Keycodes:</label>
   <div id="keycodes"></div>
 </p>
@@ -133,6 +133,7 @@ select, input, label, button {
 #layers {
   column-count: 2;
   padding-right: 10px;
+  background: #fff;
 }
 
 #layers:before {
@@ -180,17 +181,53 @@ select, input, label, button {
 .split-content {
 }
 
+.split-content::after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.split-content.fixed {
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
 .left-side {
   float: left;
+  pointer-events: all;
 }
 
 .right-side {
   float: left;
+  pointer-events: all;
+}
+
+.rigth-side:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+#visual-keymap {
+  background: #fff;
+  border-radius: 5px;
+  border: 5px solid #fff;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, .3);
 }
 
 #visual-keymap {
   position: relative;
-  height: 300px;
+}
+
+#visual-keymap:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
 }
 
 .key {
@@ -222,7 +259,7 @@ select, input, label, button {
   background: #d4f9d1;
 }
 
-.key-container {
+.key-container, .key-layer {
   font-size: 10px;
   display: block;
 }
@@ -232,7 +269,6 @@ select, input, label, button {
   height: 24px;
   border-radius: 2px;
   border: 1px solid #ccc;
-  background: #eee;
   margin: 0px auto;
   display: flex;
   align-items: center;
@@ -255,6 +291,21 @@ select, input, label, button {
 
 .key-contents.active-key {
   background: #d4f9d1;
+}
+
+.key-layer-input {
+  width: 22px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  background: #eee;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 1px;
+  background: #fff;
+  text-align: center;
 }
 
 #keycodes {
@@ -297,10 +348,15 @@ select, input, label, button {
   cursor: grabbing;
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
+  z-index: 1001;
   /*opacity: .5;
   -moz-transform: scale(.8);
   -webkit-transform: scale(.8);
   transform: scale(.8);*/
+}
+
+.keycode:empty:after {
+  content: "N/A";
 }
 
 .keycode-container {
@@ -388,6 +444,13 @@ select, input, label, button {
   justify-content: left;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
 
 </style>
 
@@ -546,20 +609,26 @@ keycodes = [
   {name:"かな", code:"KC_KANA"},
 
 
-  {label:"QMK Specific", width:"label"},
+  {label:"QMK specific", width:"label"},
 
-  {name:"N/A", code:"KC_NO", title:"Nothing"},
+  {name:"", code:"KC_NO", title:"Nothing"},
   {name:"▽", code:"KC_TRNS", title:"Pass-through"},
   {name:"Reset", code:"RESET", title:"Reset the keyboard"},
   {name:"Debug", code:"DEBUG", title:"Toggle debug mode"},
-  {name:"LSft", code:"LSFT(kc)", type:"container"},
-  {name:"RSft", code:"RSFT(kc)", type:"container"},
-  {name:"LCtrl", code:"LCTL(kc)", type:"container"},
-  {name:"RCtrl", code:"RCTL(kc)", type:"container"},
-  {name:"LAlt", code:"LALT(kc)", type:"container"},
-  {name:"RAlt", code:"RALT(kc)", type:"container"},
-  {name:"LOS", code:"LGUI(kc)", type:"container"},
-  {name:"ROS", code:"RGUI(kc)", type:"container"},
+  {name:"Hold Layer", code:"MO(layer)", type:"layer", layer:0},
+  {name:"Toggle Layer", code:"TG(layer)", type:"layer", layer:0},
+
+
+  {label:"Mod key combinations (A = Alt, C = Control, O = Windows/Command, S = Shift)", width:"label"},
+
+  {name:"LS", code:"LSFT(kc)", type:"container"},
+  {name:"LC", code:"LCTL(kc)", type:"container"},
+  {name:"LA", code:"LALT(kc)", type:"container"},
+  {name:"LO", code:"LGUI(kc)", type:"container"},
+  {name:"RS", code:"RSFT(kc)", type:"container"},
+  {name:"RC", code:"RCTL(kc)", type:"container"},
+  {name:"RA", code:"RALT(kc)", type:"container"},
+  {name:"RO", code:"RGUI(kc)", type:"container"},
 
   {label:"Alphabet", width:"label"},
 
@@ -591,6 +660,30 @@ keycodes = [
   {name:"y", code:"KC_Y"},
   {name:"z", code:"KC_Z"},
 
+  {label:"Shifted symbols", width:"label"},
+
+  {name:"~", code:"KC_TILD"},
+  {name:"!", code:"KC_EXLM"},
+  {name:"@", code:"KC_AT"},
+  {name:"#", code:"KC_HASH"},
+  {name:"$", code:"KC_DLR"},
+  {name:"%", code:"KC_PERC"},
+  {name:"^", code:"KC_CIRC"},
+  {name:"&", code:"KC_AMPR"},
+  {name:"*", code:"KC_ASTR"},
+  {name:"(", code:"KC_LPRN"},
+  {name:")", code:"KC_RPRN"},
+  {name:"_", code:"KC_UNDS"},
+  {name:"+", code:"KC_PLUS"},
+  {name:"{", code:"KC_LCBR"},
+  {name:"}", code:"KC_RCBR"},
+  {name:"<", code:"KC_LT"},
+  {name:">", code:"KC_GT"},
+  {name:":", code:"KC_COLN"},
+  {name:"|", code:"KC_PIPE"},
+  {name:"?", code:"KC_QUES"},
+  {name:"\"", code:"KC_DQT"},
+
   {label:"Application", width:"label"},
 
   {name:"Vol Down", code:"KC_VOLD"},
@@ -608,6 +701,37 @@ keycodes = [
   {name:"Paste", code:"KC_PSTE"},
   {name:"Find", code:"KC_FIND"},
   {name:"Cut", code:"KC_CUT"},
+
+
+  {label:"Keyboard settings (persistent)", width:"label"},
+
+  {name:"Swap C/Caps", code:"MAGIC_SWAP_CONTROL_CAPSLOCK"},
+  {name:"Caps>C", code:"MAGIC_CAPSLOCK_TO_CONTROL"},
+  {name:"Swap LA/LO", code:"MAGIC_SWAP_LALT_LGUI"},
+  {name:"Swap RA/RO", code:"MAGIC_SWAP_RALT_RGUI"},
+  {name:"No O", code:"MAGIC_NO_GUI"},
+  {name:"Swap `/Esc", code:"MAGIC_SWAP_GRAVE_ESC"},
+  {name:"Swap \\/BS", code:"MAGIC_SWAP_BACKSLASH_BACKSPACE"},
+  {name:"NKRO", code:"MAGIC_HOST_NKRO"},
+  {name:"Swap A/O", code:"MAGIC_SWAP_ALT_GUI"},
+  {name:"Rev C/Caps", code:"MAGIC_UNSWAP_CONTROL_CAPSLOCK"},
+  {name:"Rev Caps>C", code:"MAGIC_UNCAPSLOCK_TO_CONTROL"},
+  {name:"Rev LA/LO", code:"MAGIC_UNSWAP_LALT_LGUI"},
+  {name:"Rev RA/RO", code:"MAGIC_UNSWAP_RALT_RGUI"},
+  {name:"Rev No O", code:"MAGIC_UNNO_GUI"},
+  {name:"Rev `/Esc", code:"MAGIC_UNSWAP_GRAVE_ESC"},
+  {name:"Rev \\/BS", code:"MAGIC_UNSWAP_BACKSLASH_BACKSPACE"},
+  {name:"Rev NKRO", code:"MAGIC_UNHOST_NKRO"},
+  {name:"Rev A/O", code:"MAGIC_UNSWAP_ALT_GUI"},
+  {name:"Togg NKRO", code:"MAGIC_TOGGLE_NKRO"},
+
+  {label:"Backlight settings", width:"label"},
+
+  {name:"BL Toggle", code:"BL_TOGG"},
+  {name:"BL +", code:"BL_INC"},
+  {name:"BL -", code:"BL_DEC"},
+  {name:"BL Cycle", code:"BL_STEP"},
+
 ];
 
 job_id = "";
@@ -677,7 +801,10 @@ function droppable_config(t, key) {
             type: ui.helper[0].dataset['type']
           }
         } else {
-          assign_key(layer, key, ui.helper[0].innerHTML, ui.helper[0].dataset.code, ui.helper[0].dataset['type'])
+          var keycode = assign_key(layer, key, ui.helper[0].innerHTML, ui.helper[0].dataset.code, ui.helper[0].dataset['type'])
+          if (keycode.type == "layer") {
+            keymap[layer][key]['layer'] = 0;
+          }
         }
         render_key(layer, key);
       }
@@ -692,6 +819,7 @@ function render_key(layer, k) {
     keycode = assign_key(layer, k, "", "KC_NO", "");
   $(key).html(keycode.name);
   if (keycode.type == "container") {
+    $(key).addClass("key-container");
     var container = $("<div>", {
       class: "key-contents"
     });
@@ -699,10 +827,26 @@ function render_key(layer, k) {
       $(container).html(keycode.contents.name);
     }
     $(container).droppable(droppable_config(container, k));
-    $(key).addClass("key-container");
     $(key).append(container);
+  } else if (keycode.type == "layer") {
+    $(key).addClass("key-layer");
+    var layer_input = $("<input>", {
+      class: "key-layer-input",
+      type: "number",
+      val: keycode.layer
+    }).on('input', function(e) {
+      keymap[layer][k]['layer'] = $(this).val();
+      if ($(this).val() != layer) {
+        if (keymap[$(this).val()] == undefined) {
+          keymap[$(this).val()] = {};
+        }
+        keymap[$(this).val()][k] = {name:"▽", code:"KC_TRNS"};
+      }
+    });
+    $(key).append(layer_input);
   } else {
     $(key).removeClass("key-container");
+    $(key).removeClass("key-layer");
   }
 }
 
@@ -805,17 +949,27 @@ $(document).ready(function() {
     $("#visual-keymap").find("*").remove();
     if (!keymap[layer])
       keymap[layer] = {};
+    var max_x = 0;
+    var max_y = 0; 
     $.each(layouts[layout], function(k, d) {
+      if (!d.h)
+        d.h = 1;
       var key = $('<div>', {
         class: "key disabled",
-        style: "left: " + (d.x * key_x_spacing) + "px; top: " + (d.y * key_y_spacing) + "px; width: " + ((d.w * key_x_spacing) - (key_x_spacing - key_width)) + "px; height: " + key_height + "px",
+        style: "left: " + (d.x * key_x_spacing) + "px; top: " + (d.y * key_y_spacing) + "px; width: " + ((d.w * key_x_spacing) - (key_x_spacing - key_width)) + "px; height: " + ((d.h * key_y_spacing) - (key_y_spacing - key_height)) + "px",
         id: "key-"+k,
         "data-index": k,
         "data-type": "key"
       });
+      max_x = Math.max(max_x, d.x * key_x_spacing + ((d.w * key_x_spacing) - (key_x_spacing - key_width)));
+      max_y = Math.max(max_y, d.y * key_y_spacing + ((d.h * key_y_spacing) - (key_y_spacing - key_height)));
       $(key).droppable(droppable_config(key, k));
       $("#visual-keymap").append(key);
       render_key(layer, k);
+    });
+    $("#visual-keymap").css({
+      "width": (max_x) + "px",
+      "height": (max_y) + "px"
     });
   }
 
@@ -841,7 +995,10 @@ $(document).ready(function() {
   });
 
   $("#layout").change(function() {
-    window.location.hash = "#/" + $("#keyboard").val() + "/" + $("#layout").val();
+    if (confirm("This will clear your keymap - are you sure you want to change your layout?"))
+      window.location.hash = "#/" + $("#keyboard").val() + "/" + $("#layout").val();
+    else
+      $("#layout").val(layout_from_hash());
     // render_layout($("#layout").val());
   });
 
@@ -949,6 +1106,19 @@ $(document).ready(function() {
       $.get("http://compile.qmk.fm/v1/compile/" + job_id + "/source", function(data) {
         console.log(data);
       });
+  });
+
+  var offsetTop = $(".split-content").offset().top;
+  var height = $(".split-content").height();
+
+  $(document).on("scroll", function() {
+    if (offsetTop < $(document).scrollTop()) {
+      $(".split-content").addClass("fixed");
+      $("#keycodes-section").css("margin-top", height + "px");
+    } else {
+      $("#keycodes-section").css("margin-top", "0px");
+      $(".split-content").removeClass("fixed");
+    }
   });
 
 });
