@@ -162,6 +162,7 @@ select, input, label, button {
   font-size: 80%;
   margin-bottom: 10px;
   background: #fff;
+  color: #ccc;
 }
 
 .layer:hover {
@@ -176,6 +177,11 @@ select, input, label, button {
 
 .layer.non-empty {
   font-weight: bold;
+  color: #000;
+}
+
+.layer.active.non-empty {
+  color: #fff;
 }
 
 .split-content {
@@ -256,9 +262,27 @@ select, input, label, button {
 .key:empty {
   background: #eee;
 }
+
 .key:empty:before {
   content:"N/A";
   color: #ccc;
+}
+
+.key .remove {
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding-right: 2px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.key:hover .remove {
+  width: unset;
+  height: unset;
 }
 
 .key.active-key {
@@ -348,6 +372,7 @@ select, input, label, button {
   line-height: 11px;
   white-space: pre-line;
   padding: 1px;
+  position: relative;
 }
 
 .keycode:active { 
@@ -379,6 +404,15 @@ select, input, label, button {
   background: #eee;
   margin: 0px auto;
   display: block;
+}
+
+.keycode[title]:before {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-left: 5px rgba(0, 0, 0, 0) inset;
+  border-top: 5px #fff inset;
 }
 
 .keycode-1250 {
@@ -832,6 +866,7 @@ function droppable_config(t, key) {
     },
     drop: function(event, ui) {
       if ($(t).hasClass("active-key")) {
+        $(ui.helper[0]).draggable( "option", "revertDuration", 0 );
         $(t).removeClass("active-key");
         $(".layer.active").addClass("non-empty");
         $(t).attr("data-code", ui.helper[0].dataset.code);
@@ -890,6 +925,17 @@ function render_key(layer, k) {
     $(key).removeClass("key-container");
     $(key).removeClass("key-layer");
   }
+  if (keycode.code != "KC_NO") {
+    var remove_keycode = $("<div>", {
+      class: "remove", 
+      html: "&#739;",
+      click: function() {
+        assign_key(layer, k, "", "KC_NO", "");
+        render_key(layer, k);
+      }
+    });
+    $(key).append(remove_keycode);
+  }
 }
 
 function assign_key(layer, key, name, code, type) {
@@ -943,7 +989,10 @@ $(document).ready(function() {
   $(".keycode").each(function(k, d) {
     $(d).draggable({
       revert: true,
-      revertDuration: 100
+      revertDuration: 100,
+      drag: function() {
+        $(d).draggable( "option", "revertDuration", 100 );
+      }
     });
   });
 
@@ -1060,8 +1109,11 @@ $(document).ready(function() {
       layers[k] = [];
       $.each(keymap[k], function(l, e) {
         var keycode = e.code;
-        if (e.contents && e.code.indexOf("(kc)"))
-          keycode = keycode.replace("kc", e.contents.code);
+        if (e.code.indexOf("(kc)"))
+          if (e.contents)
+            keycode = keycode.replace("kc", e.contents.code);
+          else
+            keycode = keycode.replace("kc", "KC_NO");
         layers[k][l] = keycode;
       });
     });
@@ -1072,6 +1124,8 @@ $(document).ready(function() {
       "layers": layers
     }
     console.log(JSON.stringify(data));
+    if ($("#status").html() != "")
+      $("#status").append("\n");
     $("#status").append("* Sending " + $("#keyboard").val() + ":" + $("#keymap-name").val() + " with " + $("#layout").val());
     $.ajax({
         'type': 'POST',
