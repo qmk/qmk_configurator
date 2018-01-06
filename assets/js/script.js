@@ -159,6 +159,8 @@ keycodes = [
   {name:"▽", code:"KC_TRNS", title:"Pass-through"},
   {name:"Reset", code:"RESET", title:"Reset the keyboard"},
   {name:"Debug", code:"DEBUG", title:"Toggle debug mode"},
+  {width:1000},
+  {name:"Any", code:"text", type:"text", title:"Manually enter any QMK keycode"},
 
 
   {label:"Layer functions", width:"label"},
@@ -425,6 +427,15 @@ function render_key(layer, k) {
       }
     });
     $(key).append(layer_input);
+  } else if (keycode.type == "text") {
+    $(key).addClass("key-layer");
+    var layer_input = $("<input>", {
+      class: "key-layer-input",
+      val: keycode.text
+    }).on('input', function(e) {
+      keymap[layer][k]['text'] = $(this).val();
+    });
+    $(key).append(layer_input);
   } else {
     $(key).removeClass("key-container");
     $(key).removeClass("key-layer");
@@ -614,11 +625,18 @@ $(document).ready(function() {
       layers[k] = [];
       $.each(keymap[k], function(l, e) {
         var keycode = e.code;
-        if (e.code.indexOf("(kc)"))
+        if (e.code.indexOf("(kc)") != -1) {
           if (e.contents)
             keycode = keycode.replace("kc", e.contents.code);
           else
             keycode = keycode.replace("kc", "KC_NO");
+        }
+        if (e.code.indexOf("(layer)") != -1) {
+          keycode = keycode.replace("layer", e.layer);
+        }
+        if (e.code.indexOf("text") != -1) {
+          keycode = e.text;
+        }
         layers[k][l] = keycode;
       });
     });
