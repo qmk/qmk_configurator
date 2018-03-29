@@ -1,0 +1,12 @@
+language: generic # don't install any environment
+script: bash ./deploy.sh
+branches:
+  only:
+    - master
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/428080202c6aa8650101
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always
