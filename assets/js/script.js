@@ -1,7 +1,7 @@
-layouts = {};
-keymap = [];
-layer = 0;
-keycodes = [
+var layouts = {};
+var keymap = [];
+var layer = 0;
+var keycodes = [
   { name: 'Esc', code: 'KC_ESC' },
   { width: 1000 },
   { name: 'F1', code: 'KC_F1' },
@@ -459,13 +459,13 @@ keycodes = [
   { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' }
 ];
 
-job_id = '';
-hex_stream = '';
-hex_filename = '';
-keyboards = [];
-status = '';
-keyboard = '';
-layout = '';
+var job_id = '';
+var hex_stream = '';
+var hex_filename = '';
+var keyboards = [];
+var status = '';
+var keyboard = '';
+var layout = '';
 
 function setSelectWidth(s) {
   var sel = $(s);
@@ -482,12 +482,12 @@ function reset_keymap() {
 }
 
 function keyboard_from_hash() {
-  if (keyboards.indexOf(window.location.hash.replace(/\#\//gi, '')) != -1) {
+  if (keyboards.indexOf(window.location.hash.replace(/\#\//gi, '')) !== -1) {
     return window.location.hash.replace(/\#\//gi, '');
   } else if (
     keyboards.indexOf(
       window.location.hash.replace(/\#\//gi, '').replace(/\/[^\/]+$/gi, '')
-    ) != -1
+    ) !== -1
   ) {
     return window.location.hash
       .replace(/\#\//gi, '')
@@ -507,7 +507,7 @@ function layout_from_hash() {
 
 function droppable_config(t, key) {
   return {
-    over: function(event, ui) {
+    over: function(/* event, ui*/) {
       $(t).addClass('active-key');
       if ($(t).hasClass('key-contents')) {
         $(t)
@@ -515,7 +515,7 @@ function droppable_config(t, key) {
           .removeClass('active-key');
       }
     },
-    out: function(event, ui) {
+    out: function(/* event, ui */) {
       $(t).removeClass('active-key');
       if ($(t).hasClass('key-contents')) {
         $(t)
@@ -531,10 +531,10 @@ function droppable_config(t, key) {
         $(t).attr('data-code', ui.helper[0].dataset.code);
         // $(t).draggable({revert: true, revertDuration: 100});
         if ($(t).hasClass('key-contents')) {
-          keymap[layer][key]['contents'] = {
+          keymap[layer][key].contents = {
             name: ui.helper[0].innerHTML,
             code: ui.helper[0].dataset.code,
-            type: ui.helper[0].dataset['type']
+            type: ui.helper[0].dataset.type
           };
         } else {
           var keycode = assign_key(
@@ -542,10 +542,10 @@ function droppable_config(t, key) {
             key,
             ui.helper[0].innerHTML,
             ui.helper[0].dataset.code,
-            ui.helper[0].dataset['type']
+            ui.helper[0].dataset.type
           );
-          if (keycode.type == 'layer') {
-            keymap[layer][key]['layer'] = 0;
+          if (keycode.type === 'layer') {
+            keymap[layer][key].layer = 0;
           }
         }
         render_key(layer, key);
@@ -554,12 +554,14 @@ function droppable_config(t, key) {
   };
 }
 
-function render_key(layer, k) {
+function render_key(_layer, k) {
   var key = $('#key-' + k);
-  var keycode = keymap[layer][k];
-  if (!keycode) keycode = assign_key(layer, k, '', 'KC_NO', '');
+  var keycode = keymap[_layer][k];
+  if (!keycode) {
+    keycode = assign_key(_layer, k, '', 'KC_NO', '');
+  }
   $(key).html(keycode.name);
-  if (keycode.type == 'container') {
+  if (keycode.type === 'container') {
     $(key).addClass('key-container');
     var container = $('<div>', {
       class: 'key-contents'
@@ -569,36 +571,36 @@ function render_key(layer, k) {
     }
     $(container).droppable(droppable_config(container, k));
     $(key).append(container);
-  } else if (keycode.type == 'layer') {
+  } else if (keycode.type === 'layer') {
     $(key).addClass('key-layer');
-    var layer_input = $('<input>', {
+    var layer_input1 = $('<input>', {
       class: 'key-layer-input',
       type: 'number',
       val: keycode.layer
-    }).on('input', function(e) {
-      keymap[layer][k]['layer'] = $(this).val();
-      if ($(this).val() != layer) {
-        if (keymap[$(this).val()] == undefined) {
+    }).on('input', function(/*e*/) {
+      keymap[_layer][k].layer = $(this).val();
+      if ($(this).val() !== layer) {
+        if (keymap[$(this).val()] === undefined) {
           keymap[$(this).val()] = {};
         }
         keymap[$(this).val()][k] = { name: '▽', code: 'KC_TRNS' };
       }
     });
-    $(key).append(layer_input);
-  } else if (keycode.type == 'text') {
+    $(key).append(layer_input1);
+  } else if (keycode.type === 'text') {
     $(key).addClass('key-layer');
     var layer_input = $('<input>', {
       class: 'key-layer-input',
       val: keycode.text
-    }).on('input', function(e) {
-      keymap[layer][k]['text'] = $(this).val();
+    }).on('input', function(/*e*/) {
+      keymap[layer][k].text = $(this).val();
     });
     $(key).append(layer_input);
   } else {
     $(key).removeClass('key-container');
     $(key).removeClass('key-layer');
   }
-  if (keycode.code != 'KC_NO') {
+  if (keycode.code !== 'KC_NO') {
     var remove_keycode = $('<div>', {
       class: 'remove',
       html: '&#739;',
@@ -611,26 +613,26 @@ function render_key(layer, k) {
   }
 }
 
-function assign_key(layer, key, name, code, type) {
-  keymap[layer][key] = {
+function assign_key(_layer, key, name, code, type) {
+  keymap[_layer][key] = {
     name: name,
     code: code,
     type: type
   };
-  return keymap[layer][key];
+  return keymap[_layer][key];
 }
 
 $(document).ready(function() {
   $(window).on('hashchange', function() {
     console.log(window.location.hash);
 
-    if (keyboard_from_hash() && keyboard_from_hash() != keyboard) {
+    if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
       reset_keymap();
       keyboard = keyboard_from_hash();
       $('#keyboard').val(keyboard);
       setSelectWidth($('#keyboard'));
       load_layouts($('#keyboard').val());
-    } else if (layout_from_hash() && layout_from_hash() != layout) {
+    } else if (layout_from_hash() && layout_from_hash() !== layout) {
       reset_keymap();
       layout = layout_from_hash();
       $('#layout').val(layout);
@@ -677,22 +679,25 @@ $(document).ready(function() {
   //   $(e.target).removeClass("active-key");
   // });
 
-  function load_layouts(keyboard) {
-    $.get('http://compile.qmk.fm/v1/keyboards/' + keyboard, function(data) {
-      if (data.keyboards[keyboard]) {
+  function load_layouts(_keyboard) {
+    $.get('http://compile.qmk.fm/v1/keyboards/' + _keyboard, function(data) {
+      if (data.keyboards[_keyboard]) {
         $('#layout')
           .find('option')
           .remove();
         layouts = {};
-        $.each(data.keyboards[keyboard].layouts, function(k, d) {
+        $.each(data.keyboards[_keyboard].layouts, function(k, d) {
           $('#layout').append(
             $('<option>', {
               value: k,
               text: k
             })
           );
-          if (d.layout) layouts[k] = d.layout;
-          else layouts[k] = d;
+          if (d.layout) {
+            layouts[k] = d.layout;
+          } else {
+            layouts[k] = d;
+          }
         });
 
         if (layout_from_hash()) {
@@ -702,12 +707,11 @@ $(document).ready(function() {
           '#/' + $('#keyboard').val() + '/' + $('#layout').val();
         setSelectWidth($('#layout'));
         render_layout($('#layout').val());
-      } else {
       }
     });
   }
 
-  function render_layout(layout) {
+  function render_layout(_layout) {
     var key_width = 40;
     var key_height = 40;
     var key_x_spacing = 45;
@@ -715,12 +719,18 @@ $(document).ready(function() {
     $('#visual-keymap')
       .find('*')
       .remove();
-    if (!keymap[layer]) keymap[layer] = {};
+    if (!keymap[layer]) {
+      keymap[layer] = {};
+    }
     var max_x = 0;
     var max_y = 0;
-    $.each(layouts[layout], function(k, d) {
-      if (!d.w) d.w = 1;
-      if (!d.h) d.h = 1;
+    $.each(layouts[_layout], function(k, d) {
+      if (!d.w) {
+        d.w = 1;
+      }
+      if (!d.h) {
+        d.h = 1;
+      }
       var key = $('<div>', {
         class: 'key disabled',
         style:
@@ -786,10 +796,12 @@ $(document).ready(function() {
       confirm(
         'This will clear your keymap - are you sure you want to change your layout?'
       )
-    )
+    ) {
       window.location.hash =
         '#/' + $('#keyboard').val() + '/' + $('#layout').val();
-    else $('#layout').val(layout_from_hash());
+    } else {
+      $('#layout').val(layout_from_hash());
+    }
     // render_layout($("#layout").val());
   });
 
@@ -803,18 +815,21 @@ $(document).ready(function() {
   $('#compile').click(function() {
     $('#compile').attr('disabled', 'disabled');
     var layers = [];
-    $.each(keymap, function(k, d) {
+    $.each(keymap, function(k /*, d*/) {
       layers[k] = [];
       $.each(keymap[k], function(l, e) {
         var keycode = e.code;
-        if (e.code.indexOf('(kc)') != -1) {
-          if (e.contents) keycode = keycode.replace('kc', e.contents.code);
-          else keycode = keycode.replace('kc', 'KC_NO');
+        if (e.code.indexOf('(kc)') !== -1) {
+          if (e.contents) {
+            keycode = keycode.replace('kc', e.contents.code);
+          } else {
+            keycode = keycode.replace('kc', 'KC_NO');
+          }
         }
-        if (e.code.indexOf('(layer)') != -1) {
+        if (e.code.indexOf('(layer)') !== -1) {
           keycode = keycode.replace('layer', e.layer);
         }
-        if (e.code.indexOf('text') != -1) {
+        if (e.code.indexOf('text') !== -1) {
           keycode = e.text;
         }
         layers[k][l] = keycode;
@@ -827,7 +842,9 @@ $(document).ready(function() {
       layers: layers
     };
     console.log(JSON.stringify(data));
-    if ($('#status').html() != '') $('#status').append('\n');
+    if ($('#status').html() !== '') {
+      $('#status').append('\n');
+    }
     $('#status').append(
       '* Sending ' +
         $('#keyboard').val() +
@@ -855,7 +872,7 @@ $(document).ready(function() {
   function check_status() {
     $.get('http://compile.qmk.fm/v1/compile/' + job_id, function(data) {
       console.log(data);
-      if (data.status == 'finished') {
+      if (data.status === 'finished') {
         $('#status').append(
           '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
         );
@@ -865,20 +882,27 @@ $(document).ready(function() {
         $('#hex').removeAttr('disabled');
         $('#toolbox').removeAttr('disabled');
         $('#source').removeAttr('disabled');
-      } else if (data.status == 'queued') {
-        if (status != 'queued') $('#status').append('\n* Queueing');
-        else $('#status').append(' .');
+      } else if (data.status === 'queued') {
+        if (status !== 'queued') {
+          $('#status').append('\n* Queueing');
+        } else {
+          $('#status').append(' .');
+        }
         setTimeout(check_status, 500);
-      } else if (data.status == 'running') {
-        if (status != 'running') $('#status').append('\n* Running');
-        else $('#status').append(' .');
+      } else if (data.status === 'running') {
+        if (status !== 'running') {
+          $('#status').append('\n* Running');
+        } else {
+          $('#status').append(' .');
+        }
         setTimeout(check_status, 500);
-      } else if (data.status == 'unknown') {
+      } else if (data.status === 'unknown') {
         $('#compile').removeAttr('disabled');
-      } else if (data.status == 'failed') {
+      } else if (data.status === 'failed') {
         $('#status').append('\n* Failed');
-        if (data.result)
+        if (data.result) {
           $('#status').append('\n* Error:\n' + data.result.output);
+        }
         $('#compile').removeAttr('disabled');
       }
       $('#status').scrollTop($('#status')[0].scrollHeight);
@@ -936,11 +960,11 @@ $(document).ready(function() {
     keymap = [];
 
     //Loop over each layer from the keymap
-    $.each(converted_keymap, function(layer, keys) {
+    $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
-      keymap[layer] = {};
+      keymap[_layer] = {};
       //Loop over each keycode in the layer
-      $.each(converted_keymap[layer], function(key, keycode) {
+      $.each(converted_keymap[_layer], function(key, keycode) {
         //Check if the keycode is a complex/combo keycode ie. contains ()
         if (keycode.includes('(')) {
           //Pull the keycode and or layer from within the brackets
@@ -957,7 +981,7 @@ $(document).ready(function() {
               code: internal,
               type: keycodes.find(x => x.code === internal).type
             };
-            keymap[layer][key] = {
+            keymap[_layer][key] = {
               name: keycodes.find(x => x.code === keycode).name,
               code: keycode,
               type: keycodes.find(x => x.code === keycode).type,
@@ -965,7 +989,7 @@ $(document).ready(function() {
             };
           } else {
             keycode = maincode + '(layer)';
-            keymap[layer][key] = {
+            keymap[_layer][key] = {
               name: keycodes.find(x => x.code === keycode).name,
               code: keycode,
               type: keycodes.find(x => x.code === keycode).type,
@@ -973,7 +997,7 @@ $(document).ready(function() {
             };
           }
         } else {
-          keymap[layer][key] = {
+          keymap[_layer][key] = {
             name: keycodes.find(x => x.code === keycode).name,
             code: keycode,
             type: keycodes.find(x => x.code === keycode).type
@@ -987,18 +1011,21 @@ $(document).ready(function() {
   $('#export').click(function() {
     //Squashes the keymaps to the api payload format, might look into making this a function
     var layers = [];
-    $.each(keymap, function(k, d) {
+    $.each(keymap, function(k /*, d*/) {
       layers[k] = [];
       $.each(keymap[k], function(l, e) {
         var keycode = e.code;
-        if (e.code.indexOf('(kc)') != -1) {
-          if (e.contents) keycode = keycode.replace('kc', e.contents.code);
-          else keycode = keycode.replace('kc', 'KC_NO');
+        if (e.code.indexOf('(kc)') !== -1) {
+          if (e.contents) {
+            keycode = keycode.replace('kc', e.contents.code);
+          } else {
+            keycode = keycode.replace('kc', 'KC_NO');
+          }
         }
-        if (e.code.indexOf('(layer)') != -1) {
+        if (e.code.indexOf('(layer)') !== -1) {
           keycode = keycode.replace('layer', e.layer);
         }
-        if (e.code.indexOf('text') != -1) {
+        if (e.code.indexOf('text') !== -1) {
           keycode = e.text;
         }
         layers[k][l] = keycode;
@@ -1027,25 +1054,25 @@ $(document).ready(function() {
 
     var reader = new FileReader();
 
-    reader.onload = function(e) {
+    reader.onload = function(/*e*/) {
       var jsonText = reader.result;
 
       var data = JSON.parse(jsonText);
 
       reset_keymap();
 
-      keyboard = data['keyboard'];
+      keyboard = data.keyboard;
       $('#keyboard').val(keyboard);
       setSelectWidth($('#keyboard'));
       load_layouts($('#keyboard').val());
 
-      layout = data['layout'];
+      layout = data.layout;
       $('#layout').val(layout);
       setSelectWidth($('#layout'));
 
-      $('#keymap-name').val(data['keymap']);
+      $('#keymap-name').val(data.keymap);
 
-      load_converted_keymap(data['layers']);
+      load_converted_keymap(data.layers);
 
       render_layout($('#layout').val());
     };
