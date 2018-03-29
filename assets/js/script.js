@@ -314,6 +314,18 @@ keycodes = [
   {name:"BL -", code:"BL_DEC"},
   {name:"BL Cycle", code:"BL_STEP"},
 
+  {label:"RGB Lighting settings", width:"label"},
+
+  {name:"RGB Toggle", code:"RGB_TOG"},
+  {name:"RGB Mode +", code:"RGB_MOD"},
+  {name:"RGB Mode -", code:"RGB_RMOD"},
+  {name:"Hue +", code:"RGB_HUI"},
+  {name:"Hue -", code:"RGB_HUD"},
+  {name:"Sat +", code:"RGB_SAI"},
+  {name:"Sat +", code:"RGB_SAD"},
+  {name:"Bright +", code:"RGB_VAI"},
+  {name:"Bright -", code:"RGB_VAD"},
+
 ];
 
 job_id = "";
