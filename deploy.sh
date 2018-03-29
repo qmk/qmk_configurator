@@ -1,12 +1,12 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-rm -fdr .git
+rm -rf .git
 git init
 git remote add origin config https://github.com/${TRAVIS_REPO_SLUG}
 git pull origin config
 
-rm -fdr .git
+rm -rf .git
 git init
 
 # inside this git repo we'll pretend to be a new user
