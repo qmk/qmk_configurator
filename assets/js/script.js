@@ -742,4 +742,115 @@ $(document).ready(function() {
     }
   });
 
+  //Function that takes in a keymap loops over it and fills populates the keymap variable
+  function load_converted_keymap(converted_keymap) {
+    //Empty the keymap variable
+    keymap = [];
+    
+    //Loop over each layer from the keymap
+    $.each(converted_keymap, function(layer, keys) {
+      //Add layer object for every layer that exists
+      keymap[layer] = {};
+      //Loop over each keycode in the layer
+      $.each(converted_keymap[layer], function(key, keycode) {
+        //Check if the keycode is a complex/combo keycode ie. contains ()
+        if (keycode.includes("(")) {
+          //Pull the keycode and or layer from within the brackets
+          var splitcode = keycode.split("(");
+          var maincode = splitcode[0];
+          var internal = splitcode[1];
+          internal = internal.split(")")[0];
+
+          //Check whether it is a layer switching code or combo keycode
+          if (internal.includes("KC")){
+            keycode = maincode + "(kc)";
+            var internalkeycode = {"name": keycodes.find(x => x.code === internal).name, "code": internal, "type": keycodes.find(x => x.code === internal).type};
+            keymap[layer][key] = {"name": keycodes.find(x => x.code === keycode).name, "code": keycode, "type": keycodes.find(x => x.code === keycode).type, "contents": internalkeycode};
+          }
+          else {
+            keycode = maincode + "(layer)";
+            keymap[layer][key] = {"name": keycodes.find(x => x.code === keycode).name, "code": keycode, "type": keycodes.find(x => x.code === keycode).type, "layer": internal};
+          }
+        }
+        else {
+          keymap[layer][key] = {"name": keycodes.find(x => x.code === keycode).name, "code": keycode, "type": keycodes.find(x => x.code === keycode).type};
+        }
+      });
+    });
+
+  }
+  
+  // Export function that outputs a JSON file with the API payload format
+  $("#export").click(function() {
+
+    //Squashes the keymaps to the api payload format, might look into making this a function
+    var layers = [];
+    $.each(keymap, function(k, d) {
+      layers[k] = [];
+      $.each(keymap[k], function(l, e) {
+        var keycode = e.code;
+        if (e.code.indexOf("(kc)") != -1) {
+          if (e.contents)
+            keycode = keycode.replace("kc", e.contents.code);
+          else
+            keycode = keycode.replace("kc", "KC_NO");
+        }
+        if (e.code.indexOf("(layer)") != -1) {
+          keycode = keycode.replace("layer", e.layer);
+        }
+        if (e.code.indexOf("text") != -1) {
+          keycode = e.text;
+        }
+        layers[k][l] = keycode;
+      });
+    });
+    
+    //API payload format
+    var data = {
+      "keyboard": $("#keyboard").val(),
+      "keymap": $("#keymap-name").val(),
+      "layout": $("#layout").val(),
+      "layers": layers
+    }
+    
+    download($("#keymap-name").val() + ".json", JSON.stringify(data));
+  });
+
+  //Uses a button to activate the hidden file input
+  $("#import").click(function(){
+    $("#fileImport").click();
+  });
+
+  //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
+  $("#fileImport").change(function() {
+    var files = document.getElementById("fileImport").files;
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      var jsonText = reader.result;
+
+      var data = JSON.parse(jsonText);
+
+      reset_keymap();
+      
+      keyboard = data["keyboard"];
+      $("#keyboard").val(keyboard);
+      setSelectWidth($("#keyboard"));
+      load_layouts($("#keyboard").val());
+
+      layout = data["layout"];
+      $("#layout").val(layout);
+      setSelectWidth($("#layout"));
+
+      $("#keymap-name").val(data["keymap"]);
+
+      load_converted_keymap(data["layers"]);
+
+      render_layout($("#layout").val());
+    }
+
+    reader.readAsText(files[0]);
+  });
+
 });

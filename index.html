@@ -11,11 +11,15 @@ layout: qmk
     <label>Keyboard: <select id="keyboard" onChange=" setSelectWidth(this);"></select></label> 
     <label>Layout: <select id="layout" onChange=" setSelectWidth(this);"></select></label>
     <label id="keymap-name-label">Keymap name: <input id="keymap-name" type="text" value="mine" /></label>
+    
     <button id="compile">Compile</button>
   </div><textarea id="status" readonly></textarea><div id="controller-bottom">
     <button id="hex" disabled>Download .hex</button>
     <button id="toolbox" disabled>Open in QMK Toolbox</button>
     <button id="source" disabled>Download source</button>
+    <button id="export">Download layout</button>
+    <button id="import">Import layout</button>
+    <input id="fileImport" type="file" />
   </div>
 </div>
 <div class="split-content">
