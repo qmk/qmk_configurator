@@ -1,8 +1,0 @@
-_site/*
-.sass-cache/*
-/.idea/
-id_rsa_*
-secrets.tar
-.bundle/*
-vendor/*
-*.sw[po]
