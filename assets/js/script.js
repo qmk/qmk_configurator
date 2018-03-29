@@ -314,6 +314,26 @@ keycodes = [
   {name:"BL -", code:"BL_DEC"},
   {name:"BL Cycle", code:"BL_STEP"},
 
+  {label:"RGB Lighting settings", width:"label"},
+
+  {name:"RGB Toggle", code:"RGB_TOG"},
+  {name:"RGB Mode +", code:"RGB_MOD"},
+  {name:"RGB Mode -", code:"RGB_RMOD"},
+  {name:"Hue +", code:"RGB_HUI"},
+  {name:"Hue -", code:"RGB_HUD"},
+  {name:"Sat +", code:"RGB_SAI"},
+  {name:"Sat +", code:"RGB_SAD"},
+  {name:"Bright +", code:"RGB_VAI"},
+  {name:"Bright -", code:"RGB_VAD"},
+  {name:"RGB Mode P", code:"RGB_M_P", title:"Plain"},
+  {name:"RGB Mode B", code:"RGB_M_B", title:"Breathe"},
+  {name:"RGB Mode R", code:"RGB_M_R", title:"Rainbow"},
+  {name:"RGB Mode SW", code:"RGB_M_SW", title:"Swirl"},
+  {name:"RGB Mode SN", code:"RGB_M_SN", title:"Snake"},
+  {name:"RGB Mode K", code:"RGB_M_K", title:"Knight"},
+  {name:"RGB Mode X", code:"RGB_M_X", title:"Xmas"},
+  {name:"RGB Mode G", code:"RGB_M_G", title:"Gradient"},
+
 ];
 
 job_id = "";
