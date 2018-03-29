@@ -3,7 +3,7 @@ set -e # exit with nonzero exit code if anything fails
 
 rm -rf .git
 git init
-git remote add origin config https://github.com/${TRAVIS_REPO_SLUG}
+git remote add origin https://github.com/${TRAVIS_REPO_SLUG}
 git pull origin config
 
 rm -rf .git
