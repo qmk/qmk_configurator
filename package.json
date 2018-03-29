@@ -1,0 +1,15 @@
+{
+  "name": "qmk_configurator",
+  "private": false,
+  "version": "0.1.0",
+  "description": "The QMK Configurator (WIP) http://config.qmk.fm",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:qmk/qmk_configurator.git"
+  },
+  "prettier": {
+    "commas": false,
+    "singleQuote": true
+  },
+  "dependencies": {}
+}
