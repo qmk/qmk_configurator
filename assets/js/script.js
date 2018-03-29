@@ -681,7 +681,7 @@ $(document).ready(() => {
     // });
 
     function load_layouts(_keyboard) {
-      $.get('http://compile.qmk.fm/v1/keyboards/' + _keyboard, function(data) {
+      $.get('https://compile.clueboard.co/v1/keyboards/' + _keyboard, function(data) {
         if (data.keyboards[_keyboard]) {
           $('#layout')
             .find('option')
@@ -768,7 +768,7 @@ $(document).ready(() => {
       });
     }
 
-    $.get('http://compile.qmk.fm/v1/keyboards', function(data) {
+    $.get('https://compile.clueboard.co/v1/keyboards', function(data) {
       keyboards = data;
       $.each(data, function(k, d) {
         $('#keyboard').append(
@@ -856,7 +856,7 @@ $(document).ready(() => {
       );
       $.ajax({
         type: 'POST',
-        url: 'http://compile.qmk.fm/v1/compile',
+        url: 'https://compile.clueboard.co/v1/compile',
         contentType: 'application/json',
         data: JSON.stringify(data),
         dataType: 'json',
@@ -871,7 +871,7 @@ $(document).ready(() => {
     });
 
     function check_status() {
-      $.get('http://compile.qmk.fm/v1/compile/' + job_id, function(data) {
+      $.get('https://compile.clueboard.co/v1/compile/' + job_id, function(data) {
         console.log(data);
         if (data.status === 'finished') {
           $('#status').append(
@@ -928,14 +928,14 @@ $(document).ready(() => {
     }
 
     $('#hex').click(function() {
-      // $.get("http://compile.qmk.fm/v1/compile/" + job_id + "/hex", function(data) {
+      // $.get("https://compile.clueboard.co/v1/compile/" + job_id + "/hex", function(data) {
       //   console.log(data);
       // });
       download(hex_filename, hex_stream);
     });
 
     $('#source').click(function() {
-      $.get('http://compile.qmk.fm/v1/compile/' + job_id + '/source', function(
+      $.get('https://compile.clueboard.co/v1/compile/' + job_id + '/source', function(
         data
       ) {
         console.log(data);
