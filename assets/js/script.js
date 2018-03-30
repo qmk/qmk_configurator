@@ -496,7 +496,7 @@ $(document).ready(() => {
     return found;
   }
 
-  //Function that takes in a keymap loops over it and fills populates the keymap variable
+  //Function that takes in a keymap loops over it and populates the keymap variable
   function load_converted_keymap(converted_keymap) {
     //Empty the keymap variable
     keymap = [];
@@ -521,6 +521,7 @@ $(document).ready(() => {
           //Check whether it is a layer switching code or combo keycode
           if (internal.includes('KC')) {
             metadata = lookupKeycode(internal);
+            //TODO: Add keycode to any block if it is not found
             if (metadata === undefined) {
               unknown.push(internal);
               stats.skipped += 1;
