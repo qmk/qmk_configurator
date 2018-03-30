@@ -480,7 +480,7 @@ a img {
 }
 
 #compile, #hex {
-  margin: 0px;
+  margin-right: 0px;
 }
 
 #source, #toolbox, #export, #import {
