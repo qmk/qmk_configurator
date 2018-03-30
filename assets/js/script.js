@@ -55,6 +55,8 @@ $(document).ready(() => {
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
 
+  urlRouteChanged();
+
   return;
 
   function loadDefault() {
