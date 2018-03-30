@@ -64,10 +64,8 @@ $(document).ready(() => {
 
   function loadDefault() {
     // hard-coding planck as the only default right now
-    if (keyboard.includes("planck")) {
-      $.get('keymaps/planck_default.json', function(
-        data
-      ) {
+    if (keyboard.includes('planck')) {
+      $.get('keymaps/planck_default.json', function(data) {
         console.log(data);
         reset_keymap();
 
@@ -87,10 +85,8 @@ $(document).ready(() => {
         render_layout($('#layout').val());
       });
     } else {
-       $('#status').append(
-          '\n* No default for this keyboard... yet!'
-        );
-     }
+      $('#status').append('\n* No default for this keyboard... yet!');
+    }
   }
 
   // Implementation goes here
@@ -476,6 +472,14 @@ $(document).ready(() => {
     document.body.removeChild(element);
   }
 
+  function lookupKeycode(searchTerm) {
+    var found = keycodes.find(({ code }) => code === searchTerm);
+    if (found === undefined) {
+      console.warn('Unknown keycode', searchTerm);
+    }
+    return found;
+  }
+
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   function load_converted_keymap(converted_keymap) {
     //Empty the keymap variable
@@ -485,6 +489,7 @@ $(document).ready(() => {
     $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
       keymap[_layer] = {};
+      var metadata;
       //Loop over each keycode in the layer
       $.each(converted_keymap[_layer], function(key, keycode) {
         //Check if the keycode is a complex/combo keycode ie. contains ()
@@ -497,32 +502,48 @@ $(document).ready(() => {
 
           //Check whether it is a layer switching code or combo keycode
           if (internal.includes('KC')) {
-            keycode = maincode + '(kc)';
+            metadata = lookupKeycode(internal);
+            if (metadata === undefined) {
+              return;
+            }
             var internalkeycode = {
-              name: keycodes.find(x => x.code === internal).name,
+              name: metadata.name,
               code: internal,
-              type: keycodes.find(x => x.code === internal).type
+              type: metadata.type
             };
+            keycode = maincode + '(kc)';
+            metadata = lookupKeycode(keycode);
+            if (metadata === undefined) {
+              return;
+            }
             keymap[_layer][key] = {
-              name: keycodes.find(x => x.code === keycode).name,
+              name: metadata.name,
               code: keycode,
-              type: keycodes.find(x => x.code === keycode).type,
+              type: metadata.type,
               contents: internalkeycode
             };
           } else {
             keycode = maincode + '(layer)';
+            metadata = lookupKeycode(keycode);
+            if (metadata === undefined) {
+              return;
+            }
             keymap[_layer][key] = {
-              name: keycodes.find(x => x.code === keycode).name,
+              name: metadata.name,
               code: keycode,
-              type: keycodes.find(x => x.code === keycode).type,
+              type: metadata.type,
               layer: internal
             };
           }
         } else {
+          metadata = lookupKeycode(keycode);
+          if (metadata === undefined) {
+            return;
+          }
           keymap[_layer][key] = {
-            name: keycodes.find(x => x.code === keycode).name,
+            name: metadata.name,
             code: keycode,
-            type: keycodes.find(x => x.code === keycode).type
+            type: metadata.type
           };
         }
       });
@@ -1155,7 +1176,6 @@ $(document).ready(() => {
       { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
       { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
-
     ];
   }
 });
