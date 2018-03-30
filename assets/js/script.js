@@ -480,7 +480,7 @@ $(document).ready(() => {
     return found;
   }
 
-  //Function that takes in a keymap loops over it and fills populates the keymap variable
+  //Function that takes in a keymap loops over it and populates the keymap variable
   function load_converted_keymap(converted_keymap) {
     //Empty the keymap variable
     keymap = [];
