@@ -23,7 +23,6 @@ $(document).ready(() => {
   var $import = $('#import');
   var $loadDefault = $('#load-default');
   var $fileImport = $('#fileImport');
-  var $keycodes = $('.keycode');
   var $status = $('#status');
 
   setSelectWidth($keyboard);
@@ -31,7 +30,10 @@ $(document).ready(() => {
 
   var keycodes = getKeycodes();
   $(window).on('hashchange', urlRouteChanged);
+
   $.each(keycodes, createKeyCodeUI);
+
+  var $keycodes = $('.keycode'); // wait until they are created
   $keycodes.each(makeDraggable);
 
   var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
