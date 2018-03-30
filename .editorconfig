@@ -29,4 +29,10 @@ end_of_line = lf
 [*.json]
 end_of_line = lf
 
+[*.css]
+end_of_line = lf
+
+[*.js]
+end_of_line = lf
+
 # The gitattributes file will handle the line endings conversion properly according to the operating system settings for other files
