@@ -461,9 +461,9 @@ $(document).ready(() => {
 
     { label: 'Multimedia Keys', width: 'label' },
 
-    { name: 'Next', code: 'KC_MNXT', title: 'Media Next' }
-    { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' }
-    { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' }
+    { name: 'Next', code: 'KC_MNXT', title: 'Media Next' },
+    { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
+    { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
     { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
   ];
 
