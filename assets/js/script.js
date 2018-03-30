@@ -457,7 +457,14 @@ $(document).ready(() => {
     { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'Snake' },
     { name: 'RGB Mode K', code: 'RGB_M_K', title: 'Knight' },
     { name: 'RGB Mode X', code: 'RGB_M_X', title: 'Xmas' },
-    { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' }
+    { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' },
+
+    { label: 'Multimedia Keys', width: 'label' },
+
+    { name: 'Next', code: 'KC_MNXT', title: 'Media Next' }
+    { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' }
+    { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' }
+    { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
   ];
 
   var job_id = '';
@@ -998,11 +1005,14 @@ $(document).ready(() => {
               };
             }
           } else {
-            keymap[_layer][key] = {
-              name: keycodes.find(x => x.code === keycode).name,
-              code: keycode,
-              type: keycodes.find(x => x.code === keycode).type
-            };
+            try {
+              keymap[_layer][key] = {
+                name: keycodes.find(x => x.code === keycode).name,
+                code: keycode,
+                type: keycodes.find(x => x.code === keycode).type
+              };
+            } catch (e) {
+            }
           }
         });
       });
@@ -1047,6 +1057,37 @@ $(document).ready(() => {
     //Uses a button to activate the hidden file input
     $('#import').click(function() {
       $('#fileImport').click();
+    });
+
+    $('#load-default').click(function() {
+      // hard-coding planck as the only default right now
+      if (keyboard.includes("planck")) {
+        $.get('/keymaps/planck_default.json', function(
+          data
+        ) {
+          console.log(data);
+          reset_keymap();
+
+          keyboard = data.keyboard;
+          $('#keyboard').val(keyboard);
+          setSelectWidth($('#keyboard'));
+          load_layouts($('#keyboard').val());
+
+          layout = data.layout;
+          $('#layout').val(layout);
+          setSelectWidth($('#layout'));
+
+          $('#keymap-name').val(data.keymap);
+
+          load_converted_keymap(data.layers);
+
+          render_layout($('#layout').val());
+        });
+      } else {
+         $('#status').append(
+            '\n* No default for this keyboard... yet!'
+          );
+      }
     });
 
     //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
