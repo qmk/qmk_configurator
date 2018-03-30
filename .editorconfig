@@ -1,0 +1,38 @@
+# EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs
+# editorconfig.org
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+
+# We recommend you to keep these unchanged
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 4
+
+# Make these match what we have in .gitattributes
+[*.mk]
+end_of_line = lf
+
+[Makefile]
+end_of_line = lf
+
+[*.sh]
+end_of_line = lf
+
+[*.json]
+end_of_line = lf
+
+[*.css]
+end_of_line = lf
+
+[*.js]
+end_of_line = lf
+
+# The gitattributes file will handle the line endings conversion properly according to the operating system settings for other files
