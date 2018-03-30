@@ -483,7 +483,7 @@ a img {
   margin: 0px;
 }
 
-#source, #toolbox, #export, #import, #load-default {
+#source, #toolbox, #export, #import {
   float: left;
 }
 
