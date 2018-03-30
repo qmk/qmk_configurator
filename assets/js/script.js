@@ -1062,7 +1062,7 @@ $(document).ready(() => {
     $('#load-default').click(function() {
       // hard-coding planck as the only default right now
       if (keyboard.includes("planck")) {
-        $.get('/keymaps/planck_default.json', function(
+        $.get('keymaps/planck_default.json', function(
           data
         ) {
           console.log(data);
