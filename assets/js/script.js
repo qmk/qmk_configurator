@@ -836,7 +836,6 @@ $(document).ready(() => {
         type: 'text',
         title: 'Manually enter any QMK keycode'
       },
->>>>>>> f098cc2cd85a3142c649c31bc956dc9c25fb9fbc
 
       { label: 'Layer functions', width: 'label' },
 
