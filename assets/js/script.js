@@ -20,7 +20,8 @@ $(document).ready(() => {
   $(window).on('hashchange', urlRouteChanged);
   $.each(keycodes, createKeyCodeUI);
   $('.keycode').each(makeDraggable);
-  $.get(backend_keyboards_url, createKeyboardDropdown);
+  // $.get(backend_keyboards_url, createKeyboardDropdown);
+  var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
 
   $('#keyboard').change(switchKeyboardLayout);
 
@@ -47,13 +48,50 @@ $(document).ready(() => {
     $('#fileImport').click();
   });
 
+  $('#load-default').click(loadDefault);
+
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
   $('#fileImport').change(importJSON);
 
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
 
+  promise.then(() => {
+    urlRouteChanged();
+  });
+
   return;
+
+  function loadDefault() {
+    // hard-coding planck as the only default right now
+    if (keyboard.includes("planck")) {
+      $.get('keymaps/planck_default.json', function(
+        data
+      ) {
+        console.log(data);
+        reset_keymap();
+
+        keyboard = data.keyboard;
+        $('#keyboard').val(keyboard);
+        setSelectWidth($('#keyboard'));
+        load_layouts($('#keyboard').val());
+
+        layout = data.layout;
+        $('#layout').val(layout);
+        setSelectWidth($('#layout'));
+
+        $('#keymap-name').val(data.keymap);
+
+        load_converted_keymap(data.layers);
+
+        render_layout($('#layout').val());
+      });
+    } else {
+       $('#status').append(
+          '\n* No default for this keyboard... yet!'
+        );
+     }
+  }
 
   // Implementation goes here
   function importJSON() {
@@ -1109,7 +1147,15 @@ $(document).ready(() => {
       { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'Snake' },
       { name: 'RGB Mode K', code: 'RGB_M_K', title: 'Knight' },
       { name: 'RGB Mode X', code: 'RGB_M_X', title: 'Xmas' },
-      { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' }
+      { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' },
+
+      { label: 'Multimedia Keys', width: 'label' },
+
+      { name: 'Next', code: 'KC_MNXT', title: 'Media Next' },
+      { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
+      { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
+      { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
+
     ];
   }
 });
