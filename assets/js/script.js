@@ -13,27 +13,40 @@ $(document).ready(() => {
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
 
-  setSelectWidth($('#keyboard'));
-  setSelectWidth($('#layout'));
+  var $keyboard = $('#keyboard');
+  var $layout = $('#layout');
+  var $layer = $('.layer');
+  var $compile = $('#compile');
+  var $hex = $('#hex');
+  var $source = $('#source');
+  var $export = $('#export');
+  var $import = $('#import');
+  var $loadDefault = $('#load-default');
+  var $fileImport = $('#fileImport');
+  var $keycodes = $('.keycode');
+  var $status = $('#status');
+
+  setSelectWidth($keyboard);
+  setSelectWidth($layout);
 
   var keycodes = getKeycodes();
   $(window).on('hashchange', urlRouteChanged);
   $.each(keycodes, createKeyCodeUI);
-  $('.keycode').each(makeDraggable);
-  // $.get(backend_keyboards_url, createKeyboardDropdown);
+  $keycodes.each(makeDraggable);
+
   var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
 
-  $('#keyboard').change(switchKeyboardLayout);
+  $keyboard.change(switchKeyboardLayout);
 
-  $('#layout').change(changeLayout);
+  $layout.change(changeLayout);
 
-  $('.layer').click(changeLayer);
+  $layer.click(changeLayer);
 
-  $('#compile').click(compileLayout);
+  $compile.click(compileLayout);
 
-  $('#hex').click(downloadHexFile);
+  $hex.click(downloadHexFile);
 
-  $('#source').click(downloadSourceBundle);
+  $source.click(downloadSourceBundle);
 
   var offsetTop = $('.split-content').offset().top;
   var height = $('.split-content').height();
@@ -41,26 +54,33 @@ $(document).ready(() => {
   $(document).on('scroll', scrollHandler);
 
   // Export function that outputs a JSON file with the API payload format
-  $('#export').click(exportJSON);
+  $export.click(exportJSON);
 
   //Uses a button to activate the hidden file input
-  $('#import').click(function() {
-    $('#fileImport').click();
+  $import.click(function() {
+    $fileImport.click();
   });
 
-  $('#load-default').click(loadDefault);
+  $loadDefault.click(loadDefault);
 
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
-  $('#fileImport').change(importJSON);
+  $fileImport.change(importJSON);
 
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
 
   promise.then(() => {
+    // wait until keyboard list has loaded before checking url hash
     urlRouteChanged();
   });
 
   return;
+
+  ////////////////////////////////////////
+  //
+  // Implementation goes here
+  //
+  ////////////////////////////////////////
 
   function loadDefault() {
     // hard-coding planck as the only default right now
@@ -70,26 +90,25 @@ $(document).ready(() => {
         reset_keymap();
 
         keyboard = data.keyboard;
-        $('#keyboard').val(keyboard);
-        setSelectWidth($('#keyboard'));
-        load_layouts($('#keyboard').val());
+        $keyboard.val(keyboard);
+        setSelectWidth($keyboard);
+        load_layouts($keyboard.val());
 
         layout = data.layout;
-        $('#layout').val(layout);
-        setSelectWidth($('#layout'));
+        $layout.val(layout);
+        setSelectWidth($layout);
 
         $('#keymap-name').val(data.keymap);
 
         load_converted_keymap(data.layers);
 
-        render_layout($('#layout').val());
+        render_layout($layout.val());
       });
     } else {
-      $('#status').append('\n* No default for this keyboard... yet!');
+      $status.append('\n* No default for this keyboard... yet!');
     }
   }
 
-  // Implementation goes here
   function importJSON() {
     var files = document.getElementById('fileImport').files;
 
@@ -103,9 +122,9 @@ $(document).ready(() => {
       reset_keymap();
 
       keyboard = data.keyboard;
-      $('#keyboard').val(keyboard);
-      setSelectWidth($('#keyboard'));
-      load_layouts($('#keyboard').val());
+      $keyboard.val(keyboard);
+      setSelectWidth($keyboard);
+      load_layouts($keyboard.val());
 
       layout = data.layout;
       $('#layout').val(layout);
@@ -147,9 +166,9 @@ $(document).ready(() => {
 
     //API payload format
     var data = {
-      keyboard: $('#keyboard').val(),
+      keyboard: $keyboard.val(),
       keymap: $('#keymap-name').val(),
-      layout: $('#layout').val(),
+      layout: $layout.val(),
       layers: layers
     };
 
@@ -178,7 +197,7 @@ $(document).ready(() => {
   }
 
   function compileLayout() {
-    $('#compile').attr('disabled', 'disabled');
+    $compile.attr('disabled', 'disabled');
     var layers = [];
     $.each(keymap, function(k /*, d*/) {
       layers[k] = [];
@@ -201,22 +220,22 @@ $(document).ready(() => {
       });
     });
     var data = {
-      keyboard: $('#keyboard').val(),
+      keyboard: $keyboard.val(),
       keymap: $('#keymap-name').val(),
-      layout: $('#layout').val(),
+      layout: $layout.val(),
       layers: layers
     };
     console.log(JSON.stringify(data));
-    if ($('#status').html() !== '') {
-      $('#status').append('\n');
+    if ($status.html() !== '') {
+      $status.append('\n');
     }
-    $('#status').append(
+    $status.append(
       '* Sending ' +
-        $('#keyboard').val() +
+        $keyboard.val() +
         ':' +
         $('#keymap-name').val() +
         ' with ' +
-        $('#layout').val()
+        $layout.val()
     );
     $.ajax({
       type: 'POST',
@@ -226,7 +245,7 @@ $(document).ready(() => {
       dataType: 'json',
       success: function(d) {
         if (d.enqueued) {
-          $('#status').append('\n* Received job_id: ' + d.job_id);
+          $status.append('\n* Received job_id: ' + d.job_id);
           job_id = d.job_id;
           check_status();
         }
@@ -247,25 +266,23 @@ $(document).ready(() => {
         'This will clear your keymap - are you sure you want to change your layout?'
       )
     ) {
-      window.location.hash =
-        '#/' + $('#keyboard').val() + '/' + $('#layout').val();
+      window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
     } else {
-      $('#layout').val(layout_from_hash());
+      $layout.val(layout_from_hash());
     }
     // render_layout($("#layout").val());
   }
 
   function switchKeyboardLayout() {
     // reset_keymap();
-    window.location.hash =
-      '#/' + $('#keyboard').val() + '/' + $('#layout').val();
-    // load_layouts($("#keyboard").val());
+    window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
+    // load_layouts($keyboard).val());
   }
 
   function createKeyboardDropdown(data) {
     keyboards = data;
     $.each(data, function(k, d) {
-      $('#keyboard').append(
+      $keyboard.append(
         $('<option>', {
           value: d,
           text: d
@@ -273,10 +290,10 @@ $(document).ready(() => {
       );
     });
     if (keyboard_from_hash()) {
-      $('#keyboard').val(keyboard_from_hash());
+      $keyboard.val(keyboard_from_hash());
     }
-    setSelectWidth($('#keyboard'));
-    load_layouts($('#keyboard').val());
+    setSelectWidth($keyboard);
+    load_layouts($keyboard.val());
   }
 
   function makeDraggable(k, d) {
@@ -315,27 +332,25 @@ $(document).ready(() => {
     if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
       reset_keymap();
       keyboard = keyboard_from_hash();
-      $('#keyboard').val(keyboard);
-      setSelectWidth($('#keyboard'));
-      load_layouts($('#keyboard').val());
+      $keyboard.val(keyboard);
+      setSelectWidth($keyboard);
+      load_layouts($keyboard.val());
     } else if (layout_from_hash() && layout_from_hash() !== layout) {
       reset_keymap();
       layout = layout_from_hash();
-      $('#layout').val(layout);
-      setSelectWidth($('#layout'));
-      render_layout($('#layout').val());
+      $layout.val(layout);
+      setSelectWidth($layout);
+      render_layout($layout.val());
     }
   }
 
   function load_layouts(_keyboard) {
     $.get(backend_keyboards_url + '/' + _keyboard, function(data) {
       if (data.keyboards[_keyboard]) {
-        $('#layout')
-          .find('option')
-          .remove();
+        $layout.find('option').remove();
         layouts = {};
         $.each(data.keyboards[_keyboard].layouts, function(k, d) {
-          $('#layout').append(
+          $layout.append(
             $('<option>', {
               value: k,
               text: k
@@ -349,10 +364,9 @@ $(document).ready(() => {
         });
 
         if (layout_from_hash()) {
-          $('#layout').val(layout_from_hash());
+          $layout.val(layout_from_hash());
         }
-        window.location.hash =
-          '#/' + $('#keyboard').val() + '/' + $('#layout').val();
+        window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
         setSelectWidth($('#layout'));
         render_layout($('#layout').val());
       }
@@ -419,39 +433,39 @@ $(document).ready(() => {
     $.get(backend_compile_url + '/' + job_id, function(data) {
       console.log(data);
       if (data.status === 'finished') {
-        $('#status').append(
+        $status.append(
           '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
         );
         hex_stream = data.result.firmware;
         hex_filename = data.result.firmware_filename;
-        $('#compile').removeAttr('disabled');
-        $('#hex').removeAttr('disabled');
+        $compile.removeAttr('disabled');
+        $hex.removeAttr('disabled');
         $('#toolbox').removeAttr('disabled');
-        $('#source').removeAttr('disabled');
+        $source.removeAttr('disabled');
       } else if (data.status === 'queued') {
         if (status !== 'queued') {
-          $('#status').append('\n* Queueing');
+          $status.append('\n* Queueing');
         } else {
-          $('#status').append(' .');
+          $status.append(' .');
         }
         setTimeout(check_status, 500);
       } else if (data.status === 'running') {
         if (status !== 'running') {
-          $('#status').append('\n* Running');
+          $status.append('\n* Running');
         } else {
-          $('#status').append(' .');
+          $status.append(' .');
         }
         setTimeout(check_status, 500);
       } else if (data.status === 'unknown') {
-        $('#compile').removeAttr('disabled');
+        $compile.removeAttr('disabled');
       } else if (data.status === 'failed') {
-        $('#status').append('\n* Failed');
+        $status.append('\n* Failed');
         if (data.result) {
-          $('#status').append('\n* Error:\n' + data.result.output);
+          $status.append('\n* Error:\n' + data.result.output);
         }
-        $('#compile').removeAttr('disabled');
+        $compile.removeAttr('disabled');
       }
-      $('#status').scrollTop($('#status')[0].scrollHeight);
+      $status.scrollTop($status[0].scrollHeight);
       status = data.status;
     });
   }
@@ -486,6 +500,8 @@ $(document).ready(() => {
     keymap = [];
 
     //Loop over each layer from the keymap
+    var unknown = [];
+    var stats = { count: 0, skipped: 0, layers: 0 };
     $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
       keymap[_layer] = {};
@@ -504,6 +520,8 @@ $(document).ready(() => {
           if (internal.includes('KC')) {
             metadata = lookupKeycode(internal);
             if (metadata === undefined) {
+              unknown.push(internal);
+              stats.skipped += 1;
               return;
             }
             var internalkeycode = {
@@ -514,6 +532,8 @@ $(document).ready(() => {
             keycode = maincode + '(kc)';
             metadata = lookupKeycode(keycode);
             if (metadata === undefined) {
+              unknown.push(keycode);
+              stats.skipped += 1;
               return;
             }
             keymap[_layer][key] = {
@@ -526,6 +546,8 @@ $(document).ready(() => {
             keycode = maincode + '(layer)';
             metadata = lookupKeycode(keycode);
             if (metadata === undefined) {
+              unknown.push(keycode);
+              stats.skipped += 1;
               return;
             }
             keymap[_layer][key] = {
@@ -538,6 +560,8 @@ $(document).ready(() => {
         } else {
           metadata = lookupKeycode(keycode);
           if (metadata === undefined) {
+            unknown.push(keycode);
+            stats.skipped += 1;
             return;
           }
           keymap[_layer][key] = {
@@ -546,8 +570,18 @@ $(document).ready(() => {
             type: metadata.type
           };
         }
+        stats.count += 1;
       });
+      stats.layers += 1;
     });
+
+    var msg = `\nLoaded ${stats.layers} layers and ${stats.count} keycodes. Skipped ${stats.skipped} unknown keycodes\n`;
+    $status.append(msg);
+    if (unknown.length > 0) {
+      msg =
+        'We skipped the following unknown keycodes ' + unknown.join(', ') + '\n';
+      $status.append(msg);
+    }
   }
 
   function setSelectWidth(s) {
