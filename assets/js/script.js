@@ -511,7 +511,8 @@ $(document).ready(() => {
               code: internal,
               type: metadata.type
             };
-            metadata = lookupKeycode(maincode + '(kc)');
+            keycode = maincode + '(kc)';
+            metadata = lookupKeycode(keycode);
             if (metadata === undefined) {
               return;
             }
@@ -522,7 +523,8 @@ $(document).ready(() => {
               contents: internalkeycode
             };
           } else {
-            metadata = lookupKeycode(maincode + '(layer)');
+            keycode = maincode + '(layer)';
+            metadata = lookupKeycode(keycode);
             if (metadata === undefined) {
               return;
             }
