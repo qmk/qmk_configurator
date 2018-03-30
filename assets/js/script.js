@@ -20,7 +20,8 @@ $(document).ready(() => {
   $(window).on('hashchange', urlRouteChanged);
   $.each(keycodes, createKeyCodeUI);
   $('.keycode').each(makeDraggable);
-  $.get(backend_keyboards_url, createKeyboardDropdown);
+  // $.get(backend_keyboards_url, createKeyboardDropdown);
+  var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
 
   $('#keyboard').change(switchKeyboardLayout);
 
@@ -55,7 +56,9 @@ $(document).ready(() => {
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
 
-  urlRouteChanged();
+  promise.then(() => {
+    urlRouteChanged();
+  });
 
   return;
 
