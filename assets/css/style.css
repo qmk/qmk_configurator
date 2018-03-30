@@ -290,7 +290,7 @@ blockquote {
 code, pre {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New, monospace;
   color: #666;
-  font-size: 12px;     
+  font-size: 12px;
   background: #f1f1f1;
   padding: 4px 4px;
   border-radius: 2px; }
@@ -384,7 +384,7 @@ header ul a strong {
 section {
   /*width: 500px;*/
   /*float: right;*/
-  padding-bottom: 50px; 
+  padding-bottom: 50px;
   position: relative;
 }
 
@@ -607,10 +607,10 @@ select, input, label, button {
 .split-content {
 }
 
-.split-content::after { 
+.split-content::after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -637,10 +637,10 @@ select, input, label, button {
   pointer-events: all;
 }
 
-.rigth-side:after { 
+.rigth-side:after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -655,10 +655,10 @@ select, input, label, button {
   position: relative;
 }
 
-#visual-keymap:after { 
+#visual-keymap:after {
    content: " ";
-   display: block; 
-   height: 0; 
+   display: block;
+   height: 0;
    clear: both;
 }
 
@@ -795,7 +795,7 @@ select, input, label, button {
   position: relative;
 }
 
-.keycode:active { 
+.keycode:active {
   cursor: grabbing;
   cursor: -moz-grabbing;
   cursor: -webkit-grabbing;
@@ -904,11 +904,13 @@ select, input, label, button {
   justify-content: left;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+    margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
