@@ -467,9 +467,7 @@ a img {
 }
 
 
-
-
-#compile, #hex, #toolbox, #source, #export, #import {
+#compile, #hex, #toolbox, #source, #export, #import, #load-default {
   float: right;
   line-height: 120%;
   margin: 0px 4px 0px 0px;
@@ -482,7 +480,7 @@ a img {
 }
 
 #compile, #hex {
-  margin: 0px;
+  margin-right: 0px;
 }
 
 #source, #toolbox, #export, #import {
