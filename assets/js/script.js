@@ -634,7 +634,7 @@ $(document).ready(() => {
     $(window).on('hashchange', function() {
       console.log(window.location.hash);
 
-      if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
+      if (keyboard_from_hash() && keyboard_from_hash() != keyboard) {
         reset_keymap();
         keyboard = keyboard_from_hash();
         $('#keyboard').val(keyboard);
