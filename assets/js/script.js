@@ -107,7 +107,7 @@ $(document).ready(() => {
         render_layout($layout.val());
       });
     } else {
-      $status.append('\n* No default for this keyboard... yet!');
+      $status.append(`\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`);
     }
   }
 
@@ -278,6 +278,7 @@ $(document).ready(() => {
   function switchKeyboardLayout() {
     // reset_keymap();
     window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
+    $status.html(''); // clear the DOM not the value otherwise weird things happen
     // load_layouts($keyboard).val());
   }
 
