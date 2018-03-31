@@ -495,12 +495,8 @@ $(document).ready(() => {
   }
 
   function newAnyKey(keycode) {
-    return {
-      name: 'Any',
-      code: 'text',
-      type: 'text',
-      text: keycode
-    };
+    var anyKey = lookupKeycode('text');
+    return $.extend(anyKey, { text: keycode });
   }
 
   function newKey(metadata, keycode, obj) {
