@@ -490,101 +490,108 @@ $(document).ready(() => {
 
   function lookupKeycode(searchTerm) {
     var found = keycodes.find(({ code }) => code === searchTerm);
-    if (found === undefined) {
-      console.warn('Unknown keycode', searchTerm);
-    }
     return found;
   }
 
-  //Function that takes in a keymap loops over it and populates the keymap variable
+  function newAnyKey(keycode) {
+    return {
+      name: 'Any',
+      code: 'text',
+      type: 'text',
+      text: keycode
+    };
+  }
+
+  function newKey(metadata, keycode, obj) {
+
+    var key = {
+      name: metadata.name,
+      code: keycode,
+      type: metadata.type
+    };
+
+    if (obj !== undefined) {
+      key = $.extend(key, obj);
+    }
+
+    return key;
+  }
+
+  function parseKeycode(keycode) {
+    var metadata;
+
+    // Check if the keycode is a complex/combo keycode ie. contains ()
+    if (keycode.includes('(')) {
+      // Pull the keycode and or layer from within the brackets
+      var key, outerKeycode;
+      var splitcode = keycode.split('(');
+      var maincode = splitcode[0];
+      var internal = splitcode[1];
+      internal = internal.split(')')[0];
+
+      //Check whether it is a layer switching code or combo keycode
+      if (internal.includes('KC')) {
+        // combo keycode
+        metadata = lookupKeycode(internal);
+        if (metadata === undefined) {
+          return newAnyKey(keycode);
+        }
+        var internalkeycode = newKey(metadata, internal);
+
+        outerKeycode = maincode + '(kc)';
+        metadata = lookupKeycode(outerKeycode);
+        if (metadata === undefined) {
+          return newAnyKey(keycode);
+        }
+
+        key = newKey(metadata, keycode, { contents: internalkeycode });
+        return key;
+      }
+
+      // layer switching
+      outerKeycode = maincode + '(layer)';
+      metadata = lookupKeycode(outerKeycode);
+      if (metadata === undefined) {
+        return newAnyKey(keycode);
+      }
+      var key = newKey(metadata, keycode, { layer: internal });
+      return key;
+    }
+
+    // regular keycode
+    metadata = lookupKeycode(keycode);
+    if (metadata === undefined) {
+      return newAnyKey(keycode);
+    }
+    return newKey(metadata, keycode);
+  }
+
+  //Function that takes in a keymap loops over it and fills populates the keymap variable
   function load_converted_keymap(converted_keymap) {
     //Empty the keymap variable
     keymap = [];
 
     //Loop over each layer from the keymap
-    var unknown = [];
-    var stats = { count: 0, skipped: 0, layers: 0 };
+    var stats = { count: 0, any: 0, layers: 0 };
     $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
       keymap[_layer] = {};
-      var metadata;
       //Loop over each keycode in the layer
       $.each(converted_keymap[_layer], function(key, keycode) {
-        //Check if the keycode is a complex/combo keycode ie. contains ()
-        if (keycode.includes('(')) {
-          //Pull the keycode and or layer from within the brackets
-          var splitcode = keycode.split('(');
-          var maincode = splitcode[0];
-          var internal = splitcode[1];
-          internal = internal.split(')')[0];
-
-          //Check whether it is a layer switching code or combo keycode
-          if (internal.includes('KC')) {
-            metadata = lookupKeycode(internal);
-            //TODO: Add keycode to any block if it is not found
-            if (metadata === undefined) {
-              unknown.push(internal);
-              stats.skipped += 1;
-              return;
-            }
-            var internalkeycode = {
-              name: metadata.name,
-              code: internal,
-              type: metadata.type
-            };
-            keycode = maincode + '(kc)';
-            metadata = lookupKeycode(keycode);
-            if (metadata === undefined) {
-              unknown.push(keycode);
-              stats.skipped += 1;
-              return;
-            }
-            keymap[_layer][key] = {
-              name: metadata.name,
-              code: keycode,
-              type: metadata.type,
-              contents: internalkeycode
-            };
-          } else {
-            keycode = maincode + '(layer)';
-            metadata = lookupKeycode(keycode);
-            if (metadata === undefined) {
-              unknown.push(keycode);
-              stats.skipped += 1;
-              return;
-            }
-            keymap[_layer][key] = {
-              name: metadata.name,
-              code: keycode,
-              type: metadata.type,
-              layer: internal
-            };
-          }
-        } else {
-          metadata = lookupKeycode(keycode);
-          if (metadata === undefined) {
-            unknown.push(keycode);
-            stats.skipped += 1;
-            return;
-          }
-          keymap[_layer][key] = {
-            name: metadata.name,
-            code: keycode,
-            type: metadata.type
-          };
-        }
+        keymap[_layer][key] = parseKeycode(keycode, stats);
         stats.count += 1;
+
+        if (keymap[_layer][key].name === 'Any') {
+          stats.any += 1;
+        }
       });
       stats.layers += 1;
     });
 
-    var msg = `\nLoaded ${stats.layers} layers and ${stats.count} keycodes. Skipped ${stats.skipped} unknown keycodes\n`;
+    var msg = `\nLoaded ${stats.layers} layers and ${
+      stats.count
+    } keycodes. Defined ${stats.any} Any key keycodes\n`;
     $status.append(msg);
-    if (unknown.length > 0) {
-      msg =
-        'We skipped the following unknown keycodes ' + unknown.join(', ') + '\n';
-      $status.append(msg);
-    }
   }
 
   function setSelectWidth(s) {
