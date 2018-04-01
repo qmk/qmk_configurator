@@ -28,6 +28,8 @@ $(document).ready(() => {
   setSelectWidth($keyboard);
   setSelectWidth($layout);
 
+  var lookupKeycode = _.memoize(lookupKeycode); // cache lookups
+
   var keycodes = getKeycodes();
   $(window).on('hashchange', urlRouteChanged);
 
