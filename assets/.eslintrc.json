@@ -6,7 +6,8 @@
 	"es6": true
   },
   "globals": {
-	"$": true
+	"$": true,
+	"_": true
   },
   "rules": {
     "block-scoped-var": 2,
