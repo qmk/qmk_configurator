@@ -84,6 +84,7 @@ $(document).ready(() => {
   //
   ////////////////////////////////////////
 
+
   function loadDefault() {
     // hard-coding planck as the only default right now
     if (keyboard.includes('planck')) {
@@ -603,7 +604,9 @@ $(document).ready(() => {
 
   function reset_keymap() {
     keymap = [];
-    $('.layer.non-empty').removeClass('non-empty');
+    layer = 0;
+    $('.layer').removeClass('non-empty active');
+    $('.layer.0').addClass('active');
   }
 
   function keyboard_from_hash() {
