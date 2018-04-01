@@ -583,6 +583,9 @@ $(document).ready(() => {
           stats.any += 1;
         }
       });
+      if (_.size(keymap[_layer]) > 0) {
+        $(`.layer.${_layer}`).addClass('non-empty');
+      }
       stats.layers += 1;
     });
 
