@@ -24,6 +24,7 @@ $(document).ready(() => {
   var $loadDefault = $('#load-default');
   var $fileImport = $('#fileImport');
   var $status = $('#status');
+  var $visualKeymap = $('#visual-keymap');
 
   setSelectWidth($keyboard);
   setSelectWidth($layout);
@@ -37,6 +38,10 @@ $(document).ready(() => {
 
   var $keycodes = $('.keycode'); // wait until they are created
   $keycodes.each(makeDraggable);
+
+  // click to assign keys to keymap
+  $visualKeymap.click(selectKeymapKey);
+  $('#keycodes').click(assignKeycodeToSelectedKey);
 
   var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
 
@@ -78,6 +83,11 @@ $(document).ready(() => {
     urlRouteChanged();
   });
 
+  var keypressListener = new window.keypress.Listener();
+  keypressListener.simple_combo('esc', function() {
+    getSelectedKey().removeClass('keycode-select');
+  });
+
   return;
 
   ////////////////////////////////////////
@@ -85,7 +95,46 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+  function assignKeycodeToSelectedKey(evt) {
+    var _keycode = $(evt.target).data('code');
+    if (_keycode === undefined) {
+      return;
+    }
 
+    var meta = lookupKeycode(_keycode);
+    if (meta === undefined) {
+      return;
+    }
+
+    var $key = getSelectedKey();
+    var _index = $key.data('index');
+    if ($key === undefined || _index === undefined || !_.isNumber(_index)) {
+      return; // not a key
+    }
+
+    if ($key.hasClass('key-contents')) {
+      keymap[layer][_index].contents = newKey(meta, _keycode.data('code'));
+    } else {
+      var keycode = assign_key(layer, _index, meta.name, _keycode, meta.type);
+      if (keycode.type === 'layer') {
+        keymap[layer][_index].layer = 0;
+      }
+    }
+    $key.removeClass('keycode-select'); // clear selection once assigned
+    render_key(layer, _index);
+  }
+
+  function getSelectedKey() {
+    return $visualKeymap.find('.key.keycode-select');
+  }
+
+  function selectKeymapKey(evt) {
+    var $target = $(evt.target);
+    getSelectedKey().removeClass('keycode-select');
+    if ($target.hasClass('key')) {
+      $target.addClass('keycode-select');
+    }
+  }
 
   function loadDefault() {
     // hard-coding planck as the only default right now
@@ -110,7 +159,9 @@ $(document).ready(() => {
         render_layout($layout.val());
       });
     } else {
-      $status.append(`\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`);
+      $status.append(
+        `\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`
+      );
     }
   }
 
@@ -275,7 +326,6 @@ $(document).ready(() => {
     } else {
       $layout.val(layout_from_hash());
     }
-    // render_layout($("#layout").val());
   }
 
   function switchKeyboardLayout() {
@@ -304,10 +354,29 @@ $(document).ready(() => {
 
   function makeDraggable(k, d) {
     $(d).draggable({
+      zIndex: 100,
       revert: true,
       revertDuration: 100,
+      distance: 5,
       drag: function() {
-        $(d).draggable('option', 'revertDuration', 100);
+        var $d = $(d);
+        if ($(d).hasClass('key')) {
+          // reduce size of dragged key to indicate src
+          $d.css({ height: '30px', width: '30px' });
+        }
+        $d.draggable('option', 'revertDuration', 100);
+      },
+      start: function(event, ui) {
+        // center the key under the cursor - stackoverflow
+        $(this).draggable('instance').offset.click = {
+          left: Math.floor(ui.helper.width() / 2),
+          top: Math.floor(ui.helper.height() / 2)
+        };
+      },
+      stop: function() {
+        if ($(d).hasClass('key')) {
+          $(d).css({ height: '40px', width: '40px' });
+        }
       }
     });
   }
@@ -384,9 +453,7 @@ $(document).ready(() => {
     var key_height = 40;
     var key_x_spacing = 45;
     var key_y_spacing = 45;
-    $('#visual-keymap')
-      .find('*')
-      .remove();
+    $visualKeymap.find('*').remove();
     if (!keymap[layer]) {
       keymap[layer] = {};
     }
@@ -426,13 +493,15 @@ $(document).ready(() => {
           (d.h * key_y_spacing - (key_y_spacing - key_height))
       );
       $(key).droppable(droppable_config(key, k));
-      $('#visual-keymap').append(key);
+      $visualKeymap.append(key);
       render_key(layer, k);
     });
-    $('#visual-keymap').css({
+    $visualKeymap.css({
       width: max_x + 'px',
       height: max_y + 'px'
     });
+
+    $('.key').each(makeDraggable);
   }
 
   function check_status() {
@@ -504,7 +573,6 @@ $(document).ready(() => {
   }
 
   function newKey(metadata, keycode, obj) {
-
     var key = {
       name: metadata.name,
       code: keycode,
@@ -654,32 +722,89 @@ $(document).ready(() => {
         }
       },
       drop: function(event, ui) {
-        if ($(t).hasClass('active-key')) {
-          $(ui.helper[0]).draggable('option', 'revertDuration', 0);
-          $(t).removeClass('active-key');
-          $('.layer.active').addClass('non-empty');
-          $(t).attr('data-code', ui.helper[0].dataset.code);
+        if (!$(t).hasClass('active-key')) {
+          return;
+        }
+        var srcKeycode = ui.helper[0];
+        $(srcKeycode).draggable('option', 'revertDuration', 0);
+        $(t).removeClass('active-key');
+        $('.layer.active').addClass('non-empty');
+        if ($(srcKeycode).hasClass('keycode')) {
+          $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
           if ($(t).hasClass('key-contents')) {
             keymap[layer][key].contents = {
-              name: ui.helper[0].innerHTML,
-              code: ui.helper[0].dataset.code,
-              type: ui.helper[0].dataset.type
+              name: srcKeycode.innerHTML,
+              code: srcKeycode.dataset.code,
+              type: srcKeycode.dataset.type
             };
           } else {
             var keycode = assign_key(
               layer,
               key,
-              ui.helper[0].innerHTML,
-              ui.helper[0].dataset.code,
-              ui.helper[0].dataset.type
+              srcKeycode.innerHTML,
+              srcKeycode.dataset.code,
+              srcKeycode.dataset.type
             );
             if (keycode.type === 'layer') {
               keymap[layer][key].layer = 0;
             }
           }
-          render_key(layer, key);
+        } else {
+          // handle swapping keys in keymap
+          var $src = $(srcKeycode);
+          var $dst = $(t);
+          var srcIndex = $src.data('index');
+          var dstIndex = $dst.data('index');
+
+          // get src and dest positions for animation
+          var srcPrevPos = ui.draggable.data().uiDraggable.originalPosition;
+          var srcPos = {
+            left: `${srcPrevPos.left}px`,
+            top: `${srcPrevPos.top}px`
+          };
+          var dstPos = $dst.css(['left', 'top']);
+
+          // use promises to wait until animation finished
+          var deferSrc = $.Deferred();
+          var deferDst = $.Deferred();
+
+          // animate swapping
+          $src.animate(
+            { left: dstPos.left, top: dstPos.top },
+            150,
+            'linear',
+            () => {
+              deferSrc.resolve();
+            }
+          );
+          $dst.animate(
+            { left: srcPos.left, top: srcPos.top },
+            150,
+            'linear',
+            () => {
+              deferDst.resolve();
+            }
+          );
+
+          function animationsFinished() {
+            // restore original element positions just swap their data
+            $src.css({ left: srcPos.left, top: srcPos.top });
+            $dst.css({ left: dstPos.left, top: dstPos.top });
+
+            var temp = keymap[layer][srcIndex];
+            keymap[layer][srcIndex] = keymap[layer][dstIndex];
+            keymap[layer][dstIndex] = temp;
+
+            render_key(layer, srcIndex);
+            render_key(layer, key);
+          }
+
+          // wait until both animations are complete
+          $.when(deferSrc, deferDst).done(animationsFinished);
+          return;
         }
+        render_key(layer, key);
       }
     };
   }
@@ -734,7 +859,9 @@ $(document).ready(() => {
       var remove_keycode = $('<div>', {
         class: 'remove',
         html: '&#739;',
-        click: function() {
+        click: function(evt) {
+          evt.preventDefault();
+          evt.stopPropagation();
           assign_key(layer, k, '', 'KC_NO', '');
           render_key(layer, k);
         }
