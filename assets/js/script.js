@@ -1206,7 +1206,7 @@ $(document).ready(() => {
       { name: 'Hue +', code: 'RGB_HUI' },
       { name: 'Hue -', code: 'RGB_HUD' },
       { name: 'Sat +', code: 'RGB_SAI' },
-      { name: 'Sat +', code: 'RGB_SAD' },
+      { name: 'Sat -', code: 'RGB_SAD' },
       { name: 'Bright +', code: 'RGB_VAI' },
       { name: 'Bright -', code: 'RGB_VAD' },
       { name: 'RGB Mode P', code: 'RGB_M_P', title: 'Plain' },
