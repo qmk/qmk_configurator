@@ -12,6 +12,14 @@ $(document).ready(() => {
   var backend_baseurl = 'https://compile.clueboard.co';
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
+  var defaults = {
+    KEY_WIDTH: 40,
+    KEY_HEIGHT: 40,
+    SWAP_KEY_WIDTH: 30,
+    SWAP_KEY_HEIGHT: 30,
+    KEY_X_SPACING: 45,
+    KEY_Y_SPACING: 45
+  };
 
   var $keyboard = $('#keyboard');
   var $layout = $('#layout');
@@ -362,7 +370,10 @@ $(document).ready(() => {
         var $d = $(d);
         if ($(d).hasClass('key')) {
           // reduce size of dragged key to indicate src
-          $d.css({ height: '30px', width: '30px' });
+          $(d).css({
+            height: `${defaults.SWAP_KEY_HEIGHT}px`,
+            width: `${defaults.SWAP_KEY_WIDTH}px`
+          });
         }
         $d.draggable('option', 'revertDuration', 100);
       },
@@ -375,7 +386,10 @@ $(document).ready(() => {
       },
       stop: function() {
         if ($(d).hasClass('key')) {
-          $(d).css({ height: '40px', width: '40px' });
+          $(d).css({
+            height: `${defaults.KEY_HEIGHT}px`,
+            width: `${defaults.KEY_WIDTH}px`
+          });
         }
       }
     });
@@ -449,10 +463,10 @@ $(document).ready(() => {
   }
 
   function render_layout(_layout) {
-    var key_width = 40;
-    var key_height = 40;
-    var key_x_spacing = 45;
-    var key_y_spacing = 45;
+    var key_width = defaults.KEY_WIDTH;
+    var key_height = defaults.KEY_HEIGHT;
+    var key_x_spacing = defaults.KEY_X_SPACING;
+    var key_y_spacing = defaults.KEY_Y_SPACING;
     $visualKeymap.find('*').remove();
     if (!keymap[layer]) {
       keymap[layer] = {};
@@ -468,16 +482,17 @@ $(document).ready(() => {
       }
       var key = $('<div>', {
         class: 'key disabled',
-        style:
-          'left: ' +
-          d.x * key_x_spacing +
-          'px; top: ' +
-          d.y * key_y_spacing +
-          'px; width: ' +
-          (d.w * key_x_spacing - (key_x_spacing - key_width)) +
-          'px; height: ' +
-          (d.h * key_y_spacing - (key_y_spacing - key_height)) +
-          'px',
+        style: [
+          'left: ',
+          d.x * key_x_spacing,
+          'px; top: ',
+          d.y * key_y_spacing,
+          'px; width: ',
+          d.w * key_x_spacing - (key_x_spacing - key_width),
+          'px; height: ',
+          d.h * key_y_spacing - (key_y_spacing - key_height),
+          'px'
+        ].join(''),
         id: 'key-' + k,
         'data-index': k,
         'data-type': 'key'
