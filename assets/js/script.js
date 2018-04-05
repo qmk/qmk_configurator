@@ -13,13 +13,17 @@ $(document).ready(() => {
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
   var defaults = {
+    MAX_X: 775,
     KEY_WIDTH: 40,
     KEY_HEIGHT: 40,
     SWAP_KEY_WIDTH: 30,
     SWAP_KEY_HEIGHT: 30,
     KEY_X_SPACING: 45,
-    KEY_Y_SPACING: 45
+    KEY_Y_SPACING: 45,
+    SCALE: 1
   };
+
+  var config = {};
 
   var $keyboard = $('#keyboard');
   var $layout = $('#layout');
@@ -103,6 +107,9 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+  function resetConfig(overrides) {
+    return _.extend(config, defaults, overrides);
+  }
   function assignKeycodeToSelectedKey(evt) {
     var _keycode = $(evt.target).data('code');
     if (_keycode === undefined) {
@@ -174,11 +181,11 @@ $(document).ready(() => {
   }
 
   function importJSON() {
-    var files = document.getElementById('fileImport').files;
+    var files = $fileImport[0].files;
 
     var reader = new FileReader();
 
-    reader.onload = function(/*e*/) {
+    reader.onload = function layoutLoaded(/*e*/) {
       var jsonText = reader.result;
 
       var data = JSON.parse(jsonText);
@@ -373,8 +380,8 @@ $(document).ready(() => {
           var w = $d.data('w');
           var h = $d.data('h');
           $d.css({
-            width: `${defaults.SWAP_KEY_WIDTH * w}px`,
-            height: `${defaults.SWAP_KEY_HEIGHT * h}px`
+            width: `${config.SWAP_KEY_WIDTH * w}px`,
+            height: `${config.SWAP_KEY_HEIGHT * h}px`
           });
         }
         $d.draggable('option', 'revertDuration', 100);
@@ -424,6 +431,9 @@ $(document).ready(() => {
   function urlRouteChanged() {
     console.log(window.location.hash);
 
+    // reset keyboard config
+    config = resetConfig();
+
     if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
       reset_keymap();
       keyboard = keyboard_from_hash();
@@ -469,27 +479,53 @@ $(document).ready(() => {
   }
 
   function calcKeyKeymapDims(w, h) {
-    var key_width = defaults.KEY_WIDTH;
-    var key_height = defaults.KEY_HEIGHT;
-    var key_x_spacing = defaults.KEY_X_SPACING;
-    var key_y_spacing = defaults.KEY_Y_SPACING;
     return {
-      w: w * key_x_spacing - (key_x_spacing - key_width),
-      h: h * key_y_spacing - (key_y_spacing - key_height)
+      w: w * config.KEY_X_SPACING - (config.KEY_X_SPACING - config.KEY_WIDTH),
+      h: h * config.KEY_Y_SPACING - (config.KEY_Y_SPACING - config.KEY_HEIGHT)
+    };
+  }
+
+  function calcKeyKeymapPos(x, y) {
+    return {
+      x: x * config.KEY_X_SPACING,
+      y: y * config.KEY_Y_SPACING
     };
   }
 
   function render_layout(_layout) {
-    var key_width = defaults.KEY_WIDTH;
-    var key_height = defaults.KEY_HEIGHT;
-    var key_x_spacing = defaults.KEY_X_SPACING;
-    var key_y_spacing = defaults.KEY_Y_SPACING;
     $visualKeymap.find('*').remove();
     if (!keymap[layer]) {
       keymap[layer] = {};
     }
-    var max_x = 0;
-    var max_y = 0;
+
+    var max = { x: 0, y: 0 };
+
+    $.each(layouts[_layout], function(k, d) {
+      // pre-calc size
+      if (!d.w) {
+        d.w = 1;
+      }
+      if (!d.h) {
+        d.h = 1;
+      }
+      var pos = calcKeyKeymapPos(d.x, d.y);
+      var dims = calcKeyKeymapDims(d.w, d.h);
+      max.x = Math.max(max.x, pos.x + dims.w);
+      max.y = Math.max(max.y, pos.y + dims.h);
+    });
+
+    if (max.x > defaults.MAX_X) {
+      config.SCALE = defaults.MAX_X / max.x;
+      config.KEY_WIDTH *= config.SCALE;
+      config.KEY_HEIGHT *= config.SCALE;
+      config.SWAP_KEY_HEIGHT *= config.SCALE;
+      config.SWAP_KEY_WIDTH *= config.SCALE;
+      config.KEY_X_SPACING *= config.SCALE;
+      config.KEY_Y_SPACING *= config.SCALE;
+      max.x *= config.SCALE;
+      max.y *= config.SCALE;
+    }
+
     $.each(layouts[_layout], function(k, d) {
       if (!d.w) {
         d.w = 1;
@@ -497,14 +533,15 @@ $(document).ready(() => {
       if (!d.h) {
         d.h = 1;
       }
+      var pos = calcKeyKeymapPos(d.x, d.y);
       var dims = calcKeyKeymapDims(d.w, d.h);
       var key = $('<div>', {
         class: 'key disabled',
         style: [
           'left: ',
-          d.x * key_x_spacing,
+          pos.x,
           'px; top: ',
-          d.y * key_y_spacing,
+          pos.y,
           'px; width: ',
           dims.w,
           'px; height: ',
@@ -517,23 +554,13 @@ $(document).ready(() => {
         'data-w': d.w,
         'data-h': d.h
       });
-      max_x = Math.max(
-        max_x,
-        d.x * key_x_spacing +
-          (d.w * key_x_spacing - (key_x_spacing - key_width))
-      );
-      max_y = Math.max(
-        max_y,
-        d.y * key_y_spacing +
-          (d.h * key_y_spacing - (key_y_spacing - key_height))
-      );
       $(key).droppable(droppable_config(key, k));
       $visualKeymap.append(key);
       render_key(layer, k);
     });
     $visualKeymap.css({
-      width: max_x + 'px',
-      height: max_y + 'px'
+      width: max.x + 'px',
+      height: max.y + 'px'
     });
 
     $('.key').each(makeDraggable);
