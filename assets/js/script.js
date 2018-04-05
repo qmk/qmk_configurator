@@ -368,11 +368,13 @@ $(document).ready(() => {
       distance: 5,
       drag: function() {
         var $d = $(d);
-        if ($(d).hasClass('key')) {
+        if ($d.hasClass('key')) {
           // reduce size of dragged key to indicate src
-          $(d).css({
-            height: `${defaults.SWAP_KEY_HEIGHT}px`,
-            width: `${defaults.SWAP_KEY_WIDTH}px`
+          var w = $d.data('w');
+          var h = $d.data('h');
+          $d.css({
+            height: `${defaults.SWAP_KEY_HEIGHT * h}px`,
+            width: `${defaults.SWAP_KEY_WIDTH * w}px`
           });
         }
         $d.draggable('option', 'revertDuration', 100);
@@ -385,10 +387,13 @@ $(document).ready(() => {
         };
       },
       stop: function() {
-        if ($(d).hasClass('key')) {
-          $(d).css({
-            height: `${defaults.KEY_HEIGHT}px`,
-            width: `${defaults.KEY_WIDTH}px`
+        var $d = $(d);
+        if ($d.hasClass('key')) {
+          var w = $d.data('w');
+          var h = $d.data('h');
+          $d.css({
+            height: `${defaults.KEY_HEIGHT * h}px`,
+            width: `${defaults.KEY_WIDTH * w}px`
           });
         }
       }
@@ -495,7 +500,9 @@ $(document).ready(() => {
         ].join(''),
         id: 'key-' + k,
         'data-index': k,
-        'data-type': 'key'
+        'data-type': 'key',
+        'data-w': d.w,
+        'data-h': d.h
       });
       max_x = Math.max(
         max_x,
