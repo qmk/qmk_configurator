@@ -373,8 +373,8 @@ $(document).ready(() => {
           var w = $d.data('w');
           var h = $d.data('h');
           $d.css({
-            height: `${defaults.SWAP_KEY_HEIGHT * h}px`,
-            width: `${defaults.SWAP_KEY_WIDTH * w}px`
+            width: `${defaults.SWAP_KEY_WIDTH * w}px`,
+            height: `${defaults.SWAP_KEY_HEIGHT * h}px`
           });
         }
         $d.draggable('option', 'revertDuration', 100);
@@ -391,9 +391,10 @@ $(document).ready(() => {
         if ($d.hasClass('key')) {
           var w = $d.data('w');
           var h = $d.data('h');
+          var dims = calcKeyKeymapDims(w, h);
           $d.css({
-            height: `${defaults.KEY_HEIGHT * h}px`,
-            width: `${defaults.KEY_WIDTH * w}px`
+            width: `${dims.w}px`,
+            height: `${dims.h}px`
           });
         }
       }
@@ -467,6 +468,17 @@ $(document).ready(() => {
     });
   }
 
+  function calcKeyKeymapDims(w, h) {
+    var key_width = defaults.KEY_WIDTH;
+    var key_height = defaults.KEY_HEIGHT;
+    var key_x_spacing = defaults.KEY_X_SPACING;
+    var key_y_spacing = defaults.KEY_Y_SPACING;
+    return {
+      w: w * key_x_spacing - (key_x_spacing - key_width),
+      h: h * key_y_spacing - (key_y_spacing - key_height)
+    };
+  }
+
   function render_layout(_layout) {
     var key_width = defaults.KEY_WIDTH;
     var key_height = defaults.KEY_HEIGHT;
@@ -485,6 +497,7 @@ $(document).ready(() => {
       if (!d.h) {
         d.h = 1;
       }
+      var dims = calcKeyKeymapDims(d.w, d.h);
       var key = $('<div>', {
         class: 'key disabled',
         style: [
@@ -493,9 +506,9 @@ $(document).ready(() => {
           'px; top: ',
           d.y * key_y_spacing,
           'px; width: ',
-          d.w * key_x_spacing - (key_x_spacing - key_width),
+          dims.w,
           'px; height: ',
-          d.h * key_y_spacing - (key_y_spacing - key_height),
+          dims.h,
           'px'
         ].join(''),
         id: 'key-' + k,
