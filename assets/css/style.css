@@ -689,8 +689,8 @@ button {
 
 #status {
   padding: 2px 5px;
-  background: #333;
-  color: #fff;
+  background: #272822;
+  color: #F8F8F2;
   border: 1px solid #000;
   font-family: monospace;
   white-space: pre-wrap;
