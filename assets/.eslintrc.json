@@ -3,40 +3,28 @@
   "env": {
     "browser": true,
     "builtin": true,
-	"es6": true
+    "es6": true
   },
   "globals": {
-	"$": true,
-	"_": true
+    "$": true,
+    "_": true
   },
   "rules": {
     "block-scoped-var": 2,
-    "curly": [
-      2,
-      "all"
-    ],
+    "curly": [2, "all"],
     "dot-notation": [
       2,
       {
         "allowKeywords": true
       }
     ],
-    "eqeqeq": [
-      2,
-      "allow-null"
-    ],
-	"semi-style": [
-	  "error",
-	  "last"
-	],
+    "eqeqeq": [2, "allow-null"],
+    "semi-style": ["error", "last"],
     "guard-for-in": 2,
     "new-cap": 2,
     "no-bitwise": 2,
     "no-caller": 2,
-    "no-cond-assign": [
-      2,
-      "except-parens"
-    ],
+    "no-cond-assign": [2, "except-parens"],
     "no-debugger": 2,
     "no-empty": 2,
     "no-eval": 2,
@@ -55,15 +43,9 @@
     "no-undef": 2,
     "no-unused-vars": 2,
     "no-with": 2,
-    "quotes": [
-      2,
-      "single"
-    ],
+    "quotes": [2, "single"],
     "strict": 0,
     "valid-typeof": 2,
-    "wrap-iife": [
-      2,
-      "inside"
-    ]
+    "wrap-iife": [2, "inside"]
   }
 }

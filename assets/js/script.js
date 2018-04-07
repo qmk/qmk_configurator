@@ -12,6 +12,7 @@ $(document).ready(() => {
   var backend_baseurl = 'https://compile.clueboard.co';
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
+  var backend_readme_url_template = _.template(`${backend_keyboards_url}/<%= keyboard %>/readme`);
   var defaults = {
     MAX_X: 775,
     KEY_WIDTH: 40,
@@ -42,6 +43,7 @@ $(document).ready(() => {
   setSelectWidth($layout);
 
   var lookupKeycode = _.memoize(lookupKeycode); // cache lookups
+  var viewReadme = _.debounce(viewReadme, 500);
 
   var keycodes = getKeycodes();
   $(window).on('hashchange', urlRouteChanged);
@@ -107,9 +109,16 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+  function viewReadme() {
+    $.get(backend_readme_url_template({keyboard: keyboard})).then((result) => {
+      $status.append(_.escape(result));
+    });
+  }
+
   function resetConfig(overrides) {
     return _.extend(config, defaults, overrides);
   }
+
   function assignKeycodeToSelectedKey(evt) {
     var _keycode = $(evt.target).data('code');
     if (_keycode === undefined) {
@@ -447,6 +456,7 @@ $(document).ready(() => {
       setSelectWidth($layout);
       render_layout($layout.val());
     }
+    viewReadme();
   }
 
   function load_layouts(_keyboard) {
