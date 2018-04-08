@@ -1,6 +1,6 @@
 $(document).ready(() => {
   var layouts = {};
-  var keymap = [];
+  //  var keymap = [];
   var layer = 0;
   var job_id = '';
   var hex_stream = '';
@@ -12,7 +12,9 @@ $(document).ready(() => {
   var backend_baseurl = 'https://compile.clueboard.co';
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
-  var backend_readme_url_template = _.template(`${backend_keyboards_url}/<%= keyboard %>/readme`);
+  var backend_readme_url_template = _.template(
+    `${backend_keyboards_url}/<%= keyboard %>/readme`
+  );
   var defaults = {
     MAX_X: 775,
     KEY_WIDTH: 40,
@@ -25,6 +27,8 @@ $(document).ready(() => {
   };
 
   var config = {};
+
+  var myKeymap = new Keymap(layer);
 
   var $keyboard = $('#keyboard');
   var $layout = $('#layout');
@@ -110,7 +114,7 @@ $(document).ready(() => {
   //
   ////////////////////////////////////////
   function viewReadme() {
-    $.get(backend_readme_url_template({keyboard: keyboard})).then((result) => {
+    $.get(backend_readme_url_template({ keyboard: keyboard })).then(result => {
       $status.append(_.escape(result));
     });
   }
@@ -137,12 +141,9 @@ $(document).ready(() => {
     }
 
     if ($key.hasClass('key-contents')) {
-      keymap[layer][_index].contents = newKey(meta, _keycode.data('code'));
+      myKeymap.setContents(_index, newKey(meta, _keycode.data('code')));
     } else {
-      var keycode = assign_key(layer, _index, meta.name, _keycode, meta.type);
-      if (keycode.type === 'layer') {
-        keymap[layer][_index].layer = 0;
-      }
+      myKeymap.assignKey(layer, _index, meta.name, _keycode, meta.type);
     }
     $key.removeClass('keycode-select'); // clear selection once assigned
     render_key(layer, _index);
@@ -222,27 +223,7 @@ $(document).ready(() => {
 
   function exportJSON() {
     //Squashes the keymaps to the api payload format, might look into making this a function
-    var layers = [];
-    $.each(keymap, function(k /*, d*/) {
-      layers[k] = [];
-      $.each(keymap[k], function(l, e) {
-        var keycode = e.code;
-        if (e.code.indexOf('(kc)') !== -1) {
-          if (e.contents) {
-            keycode = keycode.replace('kc', e.contents.code);
-          } else {
-            keycode = keycode.replace('kc', 'KC_NO');
-          }
-        }
-        if (e.code.indexOf('(layer)') !== -1) {
-          keycode = keycode.replace('layer', e.layer);
-        }
-        if (e.code.indexOf('text') !== -1) {
-          keycode = e.text;
-        }
-        layers[k][l] = keycode;
-      });
-    });
+    var layers = myKeymap.exportLayers();
 
     //API payload format
     var data = {
@@ -278,27 +259,7 @@ $(document).ready(() => {
 
   function compileLayout() {
     $compile.attr('disabled', 'disabled');
-    var layers = [];
-    $.each(keymap, function(k /*, d*/) {
-      layers[k] = [];
-      $.each(keymap[k], function(l, e) {
-        var keycode = e.code;
-        if (e.code.indexOf('(kc)') !== -1) {
-          if (e.contents) {
-            keycode = keycode.replace('kc', e.contents.code);
-          } else {
-            keycode = keycode.replace('kc', 'KC_NO');
-          }
-        }
-        if (e.code.indexOf('(layer)') !== -1) {
-          keycode = keycode.replace('layer', e.layer);
-        }
-        if (e.code.indexOf('text') !== -1) {
-          keycode = e.text;
-        }
-        layers[k][l] = keycode;
-      });
-    });
+    var layers = myKeymap.exportLayers();
     var data = {
       keyboard: $keyboard.val(),
       keymap: $('#keymap-name').val(),
@@ -337,6 +298,7 @@ $(document).ready(() => {
     $('.layer.active').removeClass('active');
     $(e.target).addClass('active');
     layer = e.target.innerHTML;
+    myKeymap.changeLayer(layer);
     render_layout($('#layout').val());
   }
 
@@ -504,9 +466,6 @@ $(document).ready(() => {
 
   function render_layout(_layout) {
     $visualKeymap.find('*').remove();
-    if (!keymap[layer]) {
-      keymap[layer] = {};
-    }
 
     var max = { x: 0, y: 0 };
 
@@ -710,23 +669,24 @@ $(document).ready(() => {
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   function load_converted_keymap(converted_keymap) {
     //Empty the keymap variable
-    keymap = [];
+    //keymap = [];
+    myKeymap.clear();
 
     //Loop over each layer from the keymap
     var stats = { count: 0, any: 0, layers: 0 };
     $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
-      keymap[_layer] = {};
+      myKeymap.initLayer(_layer);
       //Loop over each keycode in the layer
       $.each(converted_keymap[_layer], function(key, keycode) {
-        keymap[_layer][key] = parseKeycode(keycode, stats);
+        var key = myKeymap.setKey(_layer, key, parseKeycode(keycode, stats));
         stats.count += 1;
 
-        if (keymap[_layer][key].name === 'Any') {
+        if (key.name === 'Any') {
           stats.any += 1;
         }
       });
-      if (_.size(keymap[_layer]) > 0) {
+      if (myKeymap.size(_layer) > 0) {
         $(`.layer.${_layer}`).addClass('non-empty');
       }
       stats.layers += 1;
@@ -745,7 +705,7 @@ $(document).ready(() => {
   }
 
   function reset_keymap() {
-    keymap = [];
+    myKeymap.clear();
     layer = 0;
     $('.layer').removeClass('non-empty active');
     $('.layer.0').addClass('active');
@@ -805,22 +765,19 @@ $(document).ready(() => {
           $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
           if ($(t).hasClass('key-contents')) {
-            keymap[layer][key].contents = {
+            myKeymap.setContents(layer, key, {
               name: srcKeycode.innerHTML,
               code: srcKeycode.dataset.code,
               type: srcKeycode.dataset.type
-            };
+            });
           } else {
-            var keycode = assign_key(
+            myKeymap.assignKey(
               layer,
               key,
               srcKeycode.innerHTML,
               srcKeycode.dataset.code,
               srcKeycode.dataset.type
             );
-            if (keycode.type === 'layer') {
-              keymap[layer][key].layer = 0;
-            }
           }
         } else {
           // handle swapping keys in keymap
@@ -864,9 +821,7 @@ $(document).ready(() => {
             $src.css({ left: srcPos.left, top: srcPos.top });
             $dst.css({ left: dstPos.left, top: dstPos.top });
 
-            var temp = keymap[layer][srcIndex];
-            keymap[layer][srcIndex] = keymap[layer][dstIndex];
-            keymap[layer][dstIndex] = temp;
+            myKeymap.swapKeys(layer, srcIndex, dstIndex);
 
             render_key(layer, srcIndex);
             render_key(layer, key);
@@ -883,9 +838,9 @@ $(document).ready(() => {
 
   function render_key(_layer, k) {
     var key = $('#key-' + k);
-    var keycode = keymap[_layer][k];
+    var keycode = myKeymap.getKey(_layer, k);
     if (!keycode) {
-      keycode = assign_key(_layer, k, '', 'KC_NO', '');
+      keycode = myKeymap.assignKey(_layer, k, '', 'KC_NO', '');
     }
     $(key).html(keycode.name);
     if (keycode.type === 'container') {
@@ -904,14 +859,9 @@ $(document).ready(() => {
         class: 'key-layer-input',
         type: 'number',
         val: keycode.layer
-      }).on('input', function(/*e*/) {
-        keymap[_layer][k].layer = $(this).val();
-        if ($(this).val() !== layer) {
-          if (keymap[$(this).val()] === undefined) {
-            keymap[$(this).val()] = {};
-          }
-          keymap[$(this).val()][k] = { name: '▽', code: 'KC_TRNS' };
-        }
+      }).on('input', function() {
+        var val = $(this).val();
+        myKeymap.setKeycodeLayer(_layer, k, val);
       });
       $(key).append(layer_input1);
     } else if (keycode.type === 'text') {
@@ -920,7 +870,7 @@ $(document).ready(() => {
         class: 'key-layer-input',
         val: keycode.text
       }).on('input', function(/*e*/) {
-        keymap[layer][k].text = $(this).val();
+        myKeymap.setText(layer, k, $(this).val());
       });
       $(key).append(layer_input);
     } else {
@@ -934,21 +884,12 @@ $(document).ready(() => {
         click: function(evt) {
           evt.preventDefault();
           evt.stopPropagation();
-          assign_key(layer, k, '', 'KC_NO', '');
+          myKeymap.assignKey(layer, k, '', 'KC_NO', '');
           render_key(layer, k);
         }
       });
       $(key).append(remove_keycode);
     }
-  }
-
-  function assign_key(_layer, key, name, code, type) {
-    keymap[_layer][key] = {
-      name: name,
-      code: code,
-      type: type
-    };
-    return keymap[_layer][key];
   }
 
   function getKeycodes() {
@@ -1426,5 +1367,131 @@ $(document).ready(() => {
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
       { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
     ];
+  }
+
+  // encapsulate the keymap
+  function Keymap() {
+    var instance = this;
+    instance.km = [];
+    instance.l = 0;
+
+    _.extend(this, {
+      changeLayer: _changeLayer,
+      setContents: setContents,
+      assignKey: assignKey,
+      clear: clear,
+      initLayer: initLayer,
+      setKey: setKey,
+      size: size,
+      getKey: getKey,
+      swapKeys: swapKeys,
+      setText: setText,
+      exportLayers: exportLayers,
+      setKeycodeLayer: setKeycodeLayer
+    });
+    return instance;
+
+    //////////
+    // Impl
+    //////////
+
+    function assignKey(__layer, index, name, code, type) {
+      instance.km[__layer][index] = {
+        name: name,
+        code: code,
+        type: type
+      };
+      var keycode = instance.km[__layer][index];
+      if (keycode.type === 'layer') {
+        instance.km[__layer][index].layer = 0;
+      }
+      return keycode;
+    }
+
+    function setContents(index, key) {
+      instance.km[instance.l][index] = key;
+    }
+
+    function _changeLayer(newLayer) {
+      instance.l = newLayer;
+    }
+
+    function clear() {
+      instance.km = [];
+    }
+
+    function initLayer(__layer) {
+      instance.km[__layer] = {};
+    }
+
+    function setKey(__layer, index, key) {
+      instance.km[__layer][index] = key;
+      return instance.km[__layer][index];
+    }
+
+    function size(__layer) {
+      return _.size(instance.km[__layer]);
+    }
+
+    function getKey(__layer, index) {
+      if (instance.km[__layer] === undefined) {
+        instance.km[__layer] = {};
+      }
+      return instance.km[__layer][index];
+    }
+
+    function swapKeys(__layer, srcIndex, dstIndex) {
+      var temp = instance.km[__layer][srcIndex];
+      instance.km[__layer][srcIndex] = instance.km[__layer][dstIndex];
+      instance.km[__layer][dstIndex] = temp;
+    }
+
+    function setText(__layer, index, text) {
+      instance.km[__layer][index].text = text;
+    }
+
+    function exportLayers() {
+      return _.reduce(
+        instance.km,
+        function(layers, _layer, k) {
+          layers[k] = [];
+          var aLayer = _.reduce(
+            _layer,
+            function(acc, key) {
+              var keycode = key.code;
+              if (key.code.indexOf('(kc)') !== -1) {
+                if (key.contents) {
+                  keycode = keycode.replace('kc', key.contents.code);
+                } else {
+                  keycode = keycode.replace('kc', 'KC_NO');
+                }
+              }
+              if (key.code.indexOf('(layer)') !== -1) {
+                keycode = keycode.replace('layer', key.layer);
+              }
+              if (key.code.indexOf('text') !== -1) {
+                keycode = key.text;
+              }
+              acc.push(keycode);
+              return acc;
+            },
+            []
+          );
+          layers[k] = aLayer;
+          return layers;
+        },
+        []
+      );
+    }
+
+    function setKeycodeLayer(_layer, index, toLayer) {
+      instance.km[_layer][index].layer = toLayer;
+      if (toLayer !== _layer) {
+        if (instance.km[toLayer] === undefined) {
+          instance.km[toLayer] = {};
+        }
+        instance.km[toLayer][index] = { name: '▽', code: 'KC_TRNS' };
+      }
+    }
   }
 });
