@@ -63,9 +63,15 @@ $(document).ready(() => {
 
   var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
 
-  $keyboard.change(switchKeyboardLayout);
+  $keyboard.change(
+    checkIsDirty(switchKeyboardLayout, () =>
+      $keyboard.val(keyboard_from_hash())
+    )
+  );
 
-  $layout.change(changeLayout);
+  $layout.change(
+    checkIsDirty(changeLayout, () => $layout.val(layout_from_hash()))
+  );
 
   $layer.click(changeLayer);
 
@@ -84,11 +90,13 @@ $(document).ready(() => {
   $export.click(exportJSON);
 
   //Uses a button to activate the hidden file input
-  $import.click(function() {
-    $fileImport.click();
-  });
+  $import.click(
+    checkIsDirty(() => {
+      $fileImport.click();
+    })
+  );
 
-  $loadDefault.click(loadDefault);
+  $loadDefault.click(checkIsDirty(loadDefault));
 
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
   $fileImport.change(importJSON);
@@ -147,6 +155,7 @@ $(document).ready(() => {
     }
     $key.removeClass('keycode-select'); // clear selection once assigned
     render_key(layer, _index);
+    myKeymap.setDirty();
   }
 
   function getSelectedKey() {
@@ -159,6 +168,24 @@ $(document).ready(() => {
     if ($target.hasClass('key')) {
       $target.addClass('keycode-select');
     }
+  }
+
+  function checkIsDirty(confirmFn, cancelFn) {
+    return () => {
+      if (myKeymap.isDirty()) {
+        if (
+          !confirm(
+            'This will clear your keymap - are you sure you want to change your layout?'
+          )
+        ) {
+          if (_.isFunction(cancelFn)) {
+            cancelFn();
+          }
+          return;
+        }
+      }
+      confirmFn();
+    };
   }
 
   function loadDefault() {
@@ -182,6 +209,7 @@ $(document).ready(() => {
         load_converted_keymap(data.layers);
 
         render_layout($layout.val());
+        myKeymap.setDirty();
       });
     } else {
       $status.append(
@@ -303,21 +331,14 @@ $(document).ready(() => {
   }
 
   function changeLayout() {
-    if (
-      confirm(
-        'This will clear your keymap - are you sure you want to change your layout?'
-      )
-    ) {
-      window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
-    } else {
-      $layout.val(layout_from_hash());
-    }
+    window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
+    myKeymap.clearDirty();
   }
 
   function switchKeyboardLayout() {
-    // reset_keymap();
     window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
     $status.html(''); // clear the DOM not the value otherwise weird things happen
+    myKeymap.clearDirty();
     // load_layouts($keyboard).val());
   }
 
@@ -831,6 +852,7 @@ $(document).ready(() => {
           $.when(deferSrc, deferDst).done(animationsFinished);
           return;
         }
+        myKeymap.setDirty();
         render_key(layer, key);
       }
     };
@@ -1374,20 +1396,24 @@ $(document).ready(() => {
     var instance = this;
     instance.km = [];
     instance.l = 0;
+    instance.dirty = false;
 
     _.extend(this, {
-      changeLayer: _changeLayer,
-      setContents: setContents,
       assignKey: assignKey,
+      changeLayer: _changeLayer,
       clear: clear,
-      initLayer: initLayer,
-      setKey: setKey,
-      size: size,
-      getKey: getKey,
-      swapKeys: swapKeys,
-      setText: setText,
+      clearDirty: clearDirty,
       exportLayers: exportLayers,
-      setKeycodeLayer: setKeycodeLayer
+      getKey: getKey,
+      initLayer: initLayer,
+      isDirty: isDirty,
+      setContents: setContents,
+      setDirty: setDirty,
+      setKey: setKey,
+      setKeycodeLayer: setKeycodeLayer,
+      setText: setText,
+      size: size,
+      swapKeys: swapKeys
     });
     return instance;
 
@@ -1444,6 +1470,7 @@ $(document).ready(() => {
       var temp = instance.km[__layer][srcIndex];
       instance.km[__layer][srcIndex] = instance.km[__layer][dstIndex];
       instance.km[__layer][dstIndex] = temp;
+      instance.dirty = true;
     }
 
     function setText(__layer, index, text) {
@@ -1492,6 +1519,18 @@ $(document).ready(() => {
         }
         instance.km[toLayer][index] = { name: '▽', code: 'KC_TRNS' };
       }
+    }
+
+    function isDirty() {
+      return instance.dirty;
+    }
+
+    function clearDirty() {
+      instance.dirty = false;
+    }
+
+    function setDirty() {
+      instance.dirty = true;
     }
   }
 });
