@@ -110,9 +110,7 @@ $(document).ready(() => {
   });
 
   var keypressListener = new window.keypress.Listener();
-  keypressListener.simple_combo('esc', function() {
-    getSelectedKey().removeClass('keycode-select');
-  });
+  keypressListener.register_many(generateKeypressCombos(keycodes));
 
   return;
 
@@ -121,6 +119,45 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+
+  // generate keypress combo list from the keycodes list
+  function generateKeypressCombos(_keycodes) {
+    return _keycodes
+      .filter(({ keys }) => {
+        // only keycodes with keys members
+        return !_.isUndefined(keys);
+      })
+      .map(keycode => generateKeypressHandler(keycode));
+  }
+
+  // generate a keypress combo handler per keycode
+  function generateKeypressHandler(keycode) {
+    return {
+      keys: keycode.keys,
+      on_keydown: () => {
+        var meta = lookupKeycode(keycode.keys);
+        if (meta === undefined) {
+          return;
+        }
+
+        var $key = getSelectedKey();
+        var _index = $key.data('index');
+        if ($key === undefined || _index === undefined || !_.isNumber(_index)) {
+          return; // not a key
+        }
+
+        if ($key.hasClass('key-contents')) {
+          myKeymap.setContents(_index, newKey(meta, keycode.data('code')));
+        } else {
+          myKeymap.assignKey(layer, _index, meta.name, keycode.code, meta.type);
+        }
+        $key.removeClass('keycode-select'); // clear selection once assigned
+        render_key(layer, _index);
+        myKeymap.setDirty();
+      }
+    };
+  }
+
   function viewReadme() {
     $.get(backend_readme_url_template({ keyboard: keyboard })).then(result => {
       $status.append(_.escape(result));
@@ -614,7 +651,9 @@ $(document).ready(() => {
   }
 
   function lookupKeycode(searchTerm) {
-    var found = keycodes.find(({ code }) => code === searchTerm);
+    var found = keycodes.find(({ code, keys }) => {
+      return code === searchTerm || (keys && keys == searchTerm);
+    });
     return found;
   }
 
@@ -916,7 +955,7 @@ $(document).ready(() => {
 
   function getKeycodes() {
     return [
-      { name: 'Esc', code: 'KC_ESC' },
+      { name: 'Esc', code: 'KC_ESC', keys: 'esc' },
       { width: 1000 },
       { name: 'F1', code: 'KC_F1' },
       { name: 'F2', code: 'KC_F2' },
@@ -938,113 +977,113 @@ $(document).ready(() => {
       { name: 'Pause', code: 'KC_PAUS' },
       { width: 0 },
 
-      { name: '~\n`', code: 'KC_GRV' },
-      { name: '!\n1', code: 'KC_1' },
-      { name: '@\n2', code: 'KC_2' },
-      { name: '#\n3', code: 'KC_3' },
-      { name: '$\n4', code: 'KC_4' },
-      { name: '%\n5', code: 'KC_5' },
-      { name: '^\n6', code: 'KC_6' },
-      { name: '&\n7', code: 'KC_7' },
-      { name: '*\n8', code: 'KC_8' },
-      { name: '(\n9', code: 'KC_9' },
-      { name: ')\n0', code: 'KC_0' },
-      { name: '_\n-', code: 'KC_MINS' },
-      { name: '+\n=', code: 'KC_EQL' },
-      { name: 'Back Space', code: 'KC_BSPC', width: 2000 },
+      { name: '~\n`', code: 'KC_GRV', keys: '`' },
+      { name: '!\n1', code: 'KC_1', keys: '1' },
+      { name: '@\n2', code: 'KC_2', keys: '2' },
+      { name: '#\n3', code: 'KC_3', keys: '3' },
+      { name: '$\n4', code: 'KC_4', keys: '4' },
+      { name: '%\n5', code: 'KC_5', keys: '5' },
+      { name: '^\n6', code: 'KC_6', keys: '6' },
+      { name: '&\n7', code: 'KC_7', keys: '7' },
+      { name: '*\n8', code: 'KC_8', keys: '8' },
+      { name: '(\n9', code: 'KC_9', keys: '9' },
+      { name: ')\n0', code: 'KC_0', keys: '0' },
+      { name: '_\n-', code: 'KC_MINS', keys: '-' },
+      { name: '+\n=', code: 'KC_EQL', keys: '=' },
+      { name: 'Back Space', code: 'KC_BSPC', keys: 'backspace', width: 2000 },
       { width: 250 },
-      { name: 'Insert', code: 'KC_INS' },
-      { name: 'Home', code: 'KC_HOME' },
-      { name: 'Page Up', code: 'KC_PGUP' },
+      { name: 'Insert', code: 'KC_INS', keys: 'insert' },
+      { name: 'Home', code: 'KC_HOME', keys: 'home' },
+      { name: 'Page Up', code: 'KC_PGUP', keys: 'pageup' },
       { width: 250 },
-      { name: 'Num Lock', code: 'KC_NLCK' },
-      { name: '/', code: 'KC_PSLS' },
-      { name: '*', code: 'KC_PAST' },
-      { name: '-', code: 'KC_PMNS' },
+      { name: 'Num Lock', code: 'KC_NLCK', keys: 'num' },
+      { name: '/', code: 'KC_PSLS', keys: 'num_divide' },
+      { name: '*', code: 'KC_PAST', keys: 'num_multiply' },
+      { name: '-', code: 'KC_PMNS', keys: 'num_subtract' },
       { width: 0 },
 
-      { name: 'Tab', code: 'KC_TAB', width: 1500 },
-      { name: 'q', code: 'KC_Q' },
-      { name: 'w', code: 'KC_W' },
-      { name: 'e', code: 'KC_E' },
-      { name: 'r', code: 'KC_R' },
-      { name: 't', code: 'KC_T' },
-      { name: 'y', code: 'KC_Y' },
-      { name: 'u', code: 'KC_U' },
-      { name: 'i', code: 'KC_I' },
-      { name: 'o', code: 'KC_O' },
-      { name: 'p', code: 'KC_P' },
-      { name: '{\n[', code: 'KC_LBRC' },
-      { name: '}\n]', code: 'KC_RBRC' },
-      { name: '|\n\\', code: 'KC_BSLS', width: 1500 },
+      { name: 'Tab', code: 'KC_TAB', keys: 'tab', width: 1500 },
+      { name: 'q', code: 'KC_Q', keys: 'q' },
+      { name: 'w', code: 'KC_W', keys: 'w' },
+      { name: 'e', code: 'KC_E', keys: 'e' },
+      { name: 'r', code: 'KC_R', keys: 'r' },
+      { name: 't', code: 'KC_T', keys: 't' },
+      { name: 'y', code: 'KC_Y', keys: 'y' },
+      { name: 'u', code: 'KC_U', keys: 'u' },
+      { name: 'i', code: 'KC_I', keys: 'i' },
+      { name: 'o', code: 'KC_O', keys: 'o' },
+      { name: 'p', code: 'KC_P', keys: 'p' },
+      { name: '{\n[', code: 'KC_LBRC', keys: '[' },
+      { name: '}\n]', code: 'KC_RBRC', keys: ']' },
+      { name: '|\n\\', code: 'KC_BSLS', keys: '\\', width: 1500 },
       { width: 250 },
-      { name: 'Del', code: 'KC_DEL' },
-      { name: 'End', code: 'KC_END' },
-      { name: 'Page Down', code: 'KC_PGDN' },
+      { name: 'Del', code: 'KC_DEL', keys: 'delete' },
+      { name: 'End', code: 'KC_END', keys: 'end' },
+      { name: 'Page Down', code: 'KC_PGDN', keys: 'pagedown' },
       { width: 250 },
-      { name: '7', code: 'KC_P7' },
-      { name: '8', code: 'KC_P8' },
-      { name: '9', code: 'KC_P9' },
-      { name: '+', code: 'KC_PPLS' },
+      { name: '7', code: 'KC_P7', keys: 'num_7' },
+      { name: '8', code: 'KC_P8', keys: 'num_8' },
+      { name: '9', code: 'KC_P9', keys: 'num_9' },
+      { name: '+', code: 'KC_PPLS', keys: 'num_add' },
       { width: 0 },
 
-      { name: 'Caps Lock', code: 'KC_CAPS', width: 1750 },
-      { name: 'a', code: 'KC_A' },
-      { name: 's', code: 'KC_S' },
-      { name: 'd', code: 'KC_D' },
-      { name: 'f', code: 'KC_F' },
-      { name: 'g', code: 'KC_G' },
-      { name: 'h', code: 'KC_H' },
-      { name: 'j', code: 'KC_J' },
-      { name: 'k', code: 'KC_K' },
-      { name: 'l', code: 'KC_L' },
-      { name: ':\n;', code: 'KC_SCLN' },
-      { name: '"\n\'', code: 'KC_QUOT' },
-      { name: 'Enter', code: 'KC_ENT', width: 2250 },
+      { name: 'Caps Lock', code: 'KC_CAPS', keys: 'caps_lock', width: 1750 },
+      { name: 'a', code: 'KC_A', keys: 'a' },
+      { name: 's', code: 'KC_S', keys: 's' },
+      { name: 'd', code: 'KC_D', keys: 'd' },
+      { name: 'f', code: 'KC_F', keys: 'f' },
+      { name: 'g', code: 'KC_G', keys: 'g' },
+      { name: 'h', code: 'KC_H', keys: 'h' },
+      { name: 'j', code: 'KC_J', keys: 'j' },
+      { name: 'k', code: 'KC_K', keys: 'k' },
+      { name: 'l', code: 'KC_L', keys: 'l' },
+      { name: ':\n;', code: 'KC_SCLN', keys: ';' },
+      { name: '"\n\'', code: 'KC_QUOT', keys: "'" },
+      { name: 'Enter', code: 'KC_ENT', keys: 'enter', width: 2250 },
       { width: 3500 },
-      { name: '4', code: 'KC_P4' },
-      { name: '5', code: 'KC_P5' },
-      { name: '6', code: 'KC_P6' },
+      { name: '4', code: 'KC_P4', keys: 'num_4' },
+      { name: '5', code: 'KC_P5', keys: 'num_5' },
+      { name: '6', code: 'KC_P6', keys: 'num_6' },
       { name: ',', code: 'KC_PCMM' },
       { width: 0 },
 
-      { name: 'Left Shift', code: 'KC_LSFT', width: 2250 },
-      { name: 'z', code: 'KC_Z' },
-      { name: 'x', code: 'KC_X' },
-      { name: 'c', code: 'KC_C' },
-      { name: 'v', code: 'KC_V' },
-      { name: 'b', code: 'KC_B' },
-      { name: 'n', code: 'KC_N' },
-      { name: 'm', code: 'KC_M' },
-      { name: '<\n,', code: 'KC_COMM' },
-      { name: '>\n.', code: 'KC_DOT' },
-      { name: '?\n/', code: 'KC_SLSH' },
+      { name: 'Left Shift', code: 'KC_LSFT', keys: 'shift', width: 2250 },
+      { name: 'z', code: 'KC_Z', keys: 'z' },
+      { name: 'x', code: 'KC_X', keys: 'x' },
+      { name: 'c', code: 'KC_C', keys: 'c' },
+      { name: 'v', code: 'KC_V', keys: 'v' },
+      { name: 'b', code: 'KC_B', keys: 'b' },
+      { name: 'n', code: 'KC_N', keys: 'n' },
+      { name: 'm', code: 'KC_M', keys: 'm' },
+      { name: '<\n,', code: 'KC_COMM', keys: ',' },
+      { name: '>\n.', code: 'KC_DOT', keys: '.' },
+      { name: '?\n/', code: 'KC_SLSH', keys: '/' },
       { name: 'Right Shift', code: 'KC_RSFT', width: 2750 },
       { width: 1250 },
-      { name: 'Up', code: 'KC_UP' },
+      { name: 'Up', code: 'KC_UP', keys: 'up' },
       { width: 1250 },
-      { name: '1', code: 'KC_P1' },
-      { name: '2', code: 'KC_P2' },
-      { name: '4', code: 'KC_P3' },
+      { name: '1', code: 'KC_P1', keys: 'num_1' },
+      { name: '2', code: 'KC_P2', keys: 'num_2' },
+      { name: '4', code: 'KC_P3', keys: 'num_4' },
       { name: '=', code: 'KC_PEQL' },
       { width: 0 },
 
-      { name: 'Left Ctrl', code: 'KC_LCTL', width: 1250 },
-      { name: 'Left OS', code: 'KC_LGUI', width: 1250 },
-      { name: 'Left Alt', code: 'KC_LALT', width: 1250 },
-      { name: 'Space', code: 'KC_SPC', width: 6250 },
+      { name: 'Left Ctrl', code: 'KC_LCTL', keys: 'ctrl', width: 1250 },
+      { name: 'Left OS', code: 'KC_LGUI', keys: 'cmd', width: 1250 },
+      { name: 'Left Alt', code: 'KC_LALT', keys: 'alt', width: 1250 },
+      { name: 'Space', code: 'KC_SPC', keys: 'space', width: 6250 },
       { name: 'Right Alt', code: 'KC_RALT', width: 1250 },
       { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
       { name: 'Menu', code: 'KC_APP', width: 1250 },
       { name: 'Right Ctrl', code: 'KC_RCTL', width: 1250 },
       { width: 250 },
-      { name: 'Left', code: 'KC_LEFT' },
-      { name: 'Down', code: 'KC_DOWN' },
-      { name: 'Right', code: 'KC_RGHT' },
+      { name: 'Left', code: 'KC_LEFT', keys: 'left' },
+      { name: 'Down', code: 'KC_DOWN', keys: 'down' },
+      { name: 'Right', code: 'KC_RGHT', keys: 'right' },
       { width: 250 },
-      { name: '0', code: 'KC_P0', width: 2000 },
-      { name: '.', code: 'KC_PDOT' },
-      { name: 'Enter', code: 'KC_PENT' },
+      { name: '0', code: 'KC_P0', width: 2000, keys: 'num_0' },
+      { name: '.', code: 'KC_PDOT', keys: 'num_decimal' },
+      { name: 'Enter', code: 'KC_PENT', keys: 'num_enter' },
 
       { label: 'International', width: 'label' },
 
@@ -1293,27 +1332,27 @@ $(document).ready(() => {
 
       { label: 'Shifted symbols', width: 'label' },
 
-      { name: '~', code: 'KC_TILD' },
-      { name: '!', code: 'KC_EXLM' },
-      { name: '@', code: 'KC_AT' },
-      { name: '#', code: 'KC_HASH' },
-      { name: '$', code: 'KC_DLR' },
-      { name: '%', code: 'KC_PERC' },
-      { name: '^', code: 'KC_CIRC' },
-      { name: '&', code: 'KC_AMPR' },
-      { name: '*', code: 'KC_ASTR' },
-      { name: '(', code: 'KC_LPRN' },
-      { name: ')', code: 'KC_RPRN' },
-      { name: '_', code: 'KC_UNDS' },
-      { name: '+', code: 'KC_PLUS' },
-      { name: '{', code: 'KC_LCBR' },
-      { name: '}', code: 'KC_RCBR' },
-      { name: '<', code: 'KC_LT' },
-      { name: '>', code: 'KC_GT' },
-      { name: ':', code: 'KC_COLN' },
-      { name: '|', code: 'KC_PIPE' },
-      { name: '?', code: 'KC_QUES' },
-      { name: '"', code: 'KC_DQT' },
+      { name: '~', code: 'KC_TILD', keys: '`' },
+      { name: '!', code: 'KC_EXLM', keys: '!' },
+      { name: '@', code: 'KC_AT', keys: '@' },
+      { name: '#', code: 'KC_HASH', keys: '#' },
+      { name: '$', code: 'KC_DLR', keys: '$' },
+      { name: '%', code: 'KC_PERC', keys: '%' },
+      { name: '^', code: 'KC_CIRC', keys: '^' },
+      { name: '&', code: 'KC_AMPR', keys: '&' },
+      { name: '*', code: 'KC_ASTR', keys: '*' },
+      { name: '(', code: 'KC_LPRN', keys: '(' },
+      { name: ')', code: 'KC_RPRN', keys: ')' },
+      { name: '_', code: 'KC_UNDS', keys: '_' },
+      { name: '+', code: 'KC_PLUS', keys: '+' },
+      { name: '{', code: 'KC_LCBR', keys: '{' },
+      { name: '}', code: 'KC_RCBR', keys: '}' },
+      { name: '<', code: 'KC_LT', keys: '<' },
+      { name: '>', code: 'KC_GT', keys: '>' },
+      { name: ':', code: 'KC_COLN', keys: ':' },
+      { name: '|', code: 'KC_PIPE', keys: '|' },
+      { name: '?', code: 'KC_QUES', keys: '?' },
+      { name: '"', code: 'KC_DQT', keys: '"' },
 
       { label: 'Application', width: 'label' },
 
