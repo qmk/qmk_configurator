@@ -112,6 +112,10 @@ $(document).ready(() => {
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
 
+  var ignoreKeypressListener = _.partial(ignoreKeypressListener, keypressListener);
+
+  ignoreKeypressListener($('input[type=text]'));
+
   return;
 
   ////////////////////////////////////////
@@ -119,6 +123,12 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+
+  function ignoreKeypressListener(listener, $element) {
+    $element
+      .focus(() => listener.stop_listening())
+      .blur(() => listener.listen());
+  }
 
   // generate keypress combo list from the keycodes list
   function generateKeypressCombos(_keycodes) {
@@ -424,6 +434,9 @@ $(document).ready(() => {
       },
       stop: function() {
         var $d = $(d);
+        $d.css({
+          'z-index': ''
+        });
         if ($d.hasClass('key')) {
           var w = $d.data('w');
           var h = $d.data('h');
@@ -814,18 +827,26 @@ $(document).ready(() => {
         }
       },
       drop: function(event, ui) {
-        if (!$(t).hasClass('active-key')) {
-          return;
+        var $target;
+        if ($(t).hasClass('active-key')) {
+          $target = $(t);
+        } else {
+          // this is probably a container
+          $target = $(t).find('.active-key');
+          if ($target.length === 0) {
+            return;
+          }
+          $target = $($target[0]);
         }
         var srcKeycode = ui.helper[0];
         $(srcKeycode).draggable('option', 'revertDuration', 0);
-        $(t).removeClass('active-key');
+        $target.removeClass('active-key');
         $('.layer.active').addClass('non-empty');
         if ($(srcKeycode).hasClass('keycode')) {
           $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
-          if ($(t).hasClass('key-contents')) {
-            myKeymap.setContents(layer, key, {
+          if ($target.hasClass('key-contents')) {
+            myKeymap.setContents(key, {
               name: srcKeycode.innerHTML,
               code: srcKeycode.dataset.code,
               type: srcKeycode.dataset.type
@@ -924,6 +945,7 @@ $(document).ready(() => {
         var val = $(this).val();
         myKeymap.setKeycodeLayer(_layer, k, val);
       });
+      ignoreKeypressListener(layer_input1);
       $(key).append(layer_input1);
     } else if (keycode.type === 'text') {
       $(key).addClass('key-layer');
@@ -933,6 +955,7 @@ $(document).ready(() => {
       }).on('input', function(/*e*/) {
         myKeymap.setText(layer, k, $(this).val());
       });
+      ignoreKeypressListener(layer_input);
       $(key).append(layer_input);
     } else {
       $(key).removeClass('key-container');
@@ -1476,7 +1499,7 @@ $(document).ready(() => {
     }
 
     function setContents(index, key) {
-      instance.km[instance.l][index] = key;
+      instance.km[instance.l][index].contents = key;
     }
 
     function _changeLayer(newLayer) {
