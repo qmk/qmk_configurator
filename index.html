@@ -10,7 +10,7 @@ layout: qmk
   <div id="controller-top">
     <label>Keyboard: <select id="keyboard" onChange=" setSelectWidth(this);"></select></label>
     <label>Layout: <select id="layout" onChange=" setSelectWidth(this);"></select></label>
-    <label id="keymap-name-label">Keymap name: <input id="keymap-name" type="text" value="mine" /></label>
+    <label id="keymap-name-label">Keymap Name: <input id="keymap-name" type="text" value="mine" /></label>
     <button id="compile">Compile</button>
     <button id="load-default">Load Default</button>
   </div>
@@ -18,9 +18,9 @@ layout: qmk
   <div id="controller-bottom">
     <button id="hex" disabled>Download .hex</button>
     <button id="toolbox" disabled>Open in QMK Toolbox</button>
-    <button id="source" disabled>Download source</button>
-    <button id="export">Download layout</button>
-    <button id="import">Import layout</button>
+    <button id="source" disabled>Download Source</button>
+    <button id="export">Export Keymap</button>
+    <button id="import">Import Keymap</button>
     <input id="fileImport" type="file" />
   </div>
 </div>
