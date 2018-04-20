@@ -1087,7 +1087,7 @@ $(document).ready(() => {
       { width: 1250 },
       { name: '1', code: 'KC_P1', keys: 'num_1' },
       { name: '2', code: 'KC_P2', keys: 'num_2' },
-      { name: '4', code: 'KC_P3', keys: 'num_4' },
+      { name: '3', code: 'KC_P3', keys: 'num_3' },
       { name: '=', code: 'KC_PEQL' },
       { width: 0 },
 
