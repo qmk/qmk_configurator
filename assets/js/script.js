@@ -130,22 +130,30 @@ $(document).ready(() => {
   ////////////////////////////////////////
 
   function getPollInterval() {
-    return 25000 + 5000 * Math.random()
+    return 25000 + 5000 * Math.random();
   }
 
   function checkStatus() {
-    $.get(backend_status_url).then(json => {
-      var localTime = new Date(json.last_ping).toTimeString();
-      var stat = json.status;
-      stat = stat === 'running' ? 'UP' : stat;
-      $('.bes-status').html(_.escape(`${stat} @ ${localTime}`)).removeClass('bes-error');
-      $('.bes-version-num').html(_.escape(json.version));
-      $('.bes-jobs').html(_.template('<%= queue_length %> job(s) running')(json));
-    }).fail((json) => {
-      var localTime = new Date().toTimeString();
-      $('.bes-status').html(`DOWN @ ${localTime}`).addClass('bes-error');
-      console.error('API status error', json);
-    });
+    $.get(backend_status_url)
+      .then(json => {
+        var localTime = new Date(json.last_ping).toTimeString();
+        var stat = json.status;
+        stat = stat === 'running' ? 'UP' : stat;
+        $('.bes-status')
+          .html(_.escape(`${stat} @ ${localTime}`))
+          .removeClass('bes-error');
+        $('.bes-version-num').html(_.escape(json.version));
+        $('.bes-jobs').html(
+          _.template('<%= queue_length %> job(s) running')(json)
+        );
+      })
+      .fail(json => {
+        var localTime = new Date().toTimeString();
+        $('.bes-status')
+          .html(`DOWN @ ${localTime}`)
+          .addClass('bes-error');
+        console.error('API status error', json);
+      });
     setTimeout(checkStatus, getPollInterval());
   }
 
@@ -270,18 +278,18 @@ $(document).ready(() => {
         keyboard = data.keyboard;
         $keyboard.val(keyboard);
         setSelectWidth($keyboard);
-        load_layouts($keyboard.val());
+        load_layouts($keyboard.val()).then(() => {
+          layout = data.layout;
+          $layout.val(layout);
+          setSelectWidth($layout);
 
-        layout = data.layout;
-        $layout.val(layout);
-        setSelectWidth($layout);
+          $('#keymap-name').val(data.keymap);
 
-        $('#keymap-name').val(data.keymap);
+          load_converted_keymap(data.layers);
 
-        load_converted_keymap(data.layers);
-
-        render_layout($layout.val());
-        myKeymap.setDirty();
+          render_layout($layout.val());
+          myKeymap.setDirty();
+        });
       });
     } else {
       $status.append(
@@ -305,17 +313,19 @@ $(document).ready(() => {
       keyboard = data.keyboard;
       $keyboard.val(keyboard);
       setSelectWidth($keyboard);
-      load_layouts($keyboard.val());
+      load_layouts($keyboard.val()).then(() => {
+        setSelectWidth($('#layout'));
+        layout = data.layout;
+        $layout.val(layout);
+        changeLayout();
 
-      layout = data.layout;
-      $('#layout').val(layout);
-      setSelectWidth($('#layout'));
+        $('#keymap-name').val(data.keymap);
 
-      $('#keymap-name').val(data.keymap);
+        load_converted_keymap(data.layers);
 
-      load_converted_keymap(data.layers);
-
-      render_layout($('#layout').val());
+        render_layout($layout.val());
+        myKeymap.setDirty();
+      });
     };
 
     reader.readAsText(files[0]);
@@ -518,7 +528,7 @@ $(document).ready(() => {
   }
 
   function load_layouts(_keyboard) {
-    $.get(backend_keyboards_url + '/' + _keyboard, function(data) {
+    return $.get(backend_keyboards_url + '/' + _keyboard, function(data) {
       if (data.keyboards[_keyboard]) {
         $layout.find('option').remove();
         layouts = {};
@@ -539,7 +549,7 @@ $(document).ready(() => {
         if (layout_from_hash()) {
           $layout.val(layout_from_hash());
         }
-        window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
+        changeLayout();
         setSelectWidth($('#layout'));
         render_layout($('#layout').val());
       }
@@ -690,7 +700,7 @@ $(document).ready(() => {
 
   function lookupKeycode(searchTerm) {
     var found = keycodes.find(({ code, keys }) => {
-      return code === searchTerm || (keys && keys == searchTerm);
+      return code === searchTerm || (keys && keys === searchTerm);
     });
     return found;
   }
