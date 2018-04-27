@@ -308,8 +308,8 @@ $(document).ready(() => {
       load_layouts($keyboard.val());
 
       layout = data.layout;
-      $('#layout').val(layout);
-      setSelectWidth($('#layout'));
+      window.location.hash = '#/' + $keyboard.val() + '/' + layout;
+      checkIsDirty(changeLayout, () => $layout.val(layout))
 
       $('#keymap-name').val(data.keymap);
 
