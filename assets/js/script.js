@@ -112,7 +112,10 @@ $(document).ready(() => {
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
 
-  var ignoreKeypressListener = _.partial(ignoreKeypressListener, keypressListener);
+  var ignoreKeypressListener = _.partial(
+    ignoreKeypressListener,
+    keypressListener
+  );
 
   ignoreKeypressListener($('input[type=text]'));
 
@@ -834,6 +837,7 @@ $(document).ready(() => {
           // this is probably a container
           $target = $(t).find('.active-key');
           if ($target.length === 0) {
+            // if we can't find a container
             return;
           }
           $target = $($target[0]);
@@ -846,11 +850,14 @@ $(document).ready(() => {
           $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
           if ($target.hasClass('key-contents')) {
-            myKeymap.setContents(key, {
-              name: srcKeycode.innerHTML,
-              code: srcKeycode.dataset.code,
-              type: srcKeycode.dataset.type
-            });
+            if (srcKeycode.dataset.type !== 'container') {
+              // we currently don't support nested containers
+              myKeymap.setContents(key, {
+                name: srcKeycode.innerHTML,
+                code: srcKeycode.dataset.code,
+                type: srcKeycode.dataset.type
+              });
+            }
           } else {
             myKeymap.assignKey(
               layer,
