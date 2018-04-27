@@ -317,7 +317,7 @@ $(document).ready(() => {
         setSelectWidth($('#layout'));
         layout = data.layout;
         $layout.val(layout);
-        changeLayout();
+        switchKeyboardLayout();
 
         $('#keymap-name').val(data.keymap);
 
@@ -325,6 +325,7 @@ $(document).ready(() => {
 
         render_layout($layout.val());
         myKeymap.setDirty();
+        viewReadme();
       });
     };
 
@@ -507,9 +508,6 @@ $(document).ready(() => {
 
   function urlRouteChanged() {
     console.log(window.location.hash);
-
-    // reset keyboard config
-    config = resetConfig();
 
     if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
       reset_keymap();
@@ -813,6 +811,7 @@ $(document).ready(() => {
   }
 
   function reset_keymap() {
+    config = resetConfig();
     myKeymap.clear();
     layer = 0;
     $('.layer').removeClass('non-empty active');
