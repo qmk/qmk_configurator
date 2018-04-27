@@ -690,7 +690,7 @@ button {
 #status {
   padding: 2px 5px;
   background: #272822;
-  color: #F8F8F2;
+  color: #f8f8f2;
   border: 1px solid #000;
   font-family: monospace;
   white-space: pre-wrap;
@@ -1095,4 +1095,40 @@ input[type='number'] {
 
 .hint {
   font-size: 12px;
+}
+
+.backend-status {
+  z-index: 3000;
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #222;
+  color: #bbb;
+  width: 100%;
+  grid-template: 20px / 16ch 1fr 1fr 25ch;
+  grid-template-areas: 'title status version jobs';
+  align-items: center;
+  font-size: small;
+}
+
+.bes-title {
+  justify-self: start;
+}
+
+.bes-status {
+  justify-self: start;
+  color: lightgreen;
+}
+
+.bes-error {
+  color: red;
+}
+
+.bes-version {
+  justify-self: end;
+}
+
+.bes-jobs {
+  justify-self: end;
 }
