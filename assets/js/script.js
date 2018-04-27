@@ -12,6 +12,7 @@ $(document).ready(() => {
   var backend_baseurl = 'https://compile.clueboard.co';
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
   var backend_compile_url = `${backend_baseurl}/v1/compile`;
+  var backend_status_url = `${backend_baseurl}/v1`;
   var backend_readme_url_template = _.template(
     `${backend_keyboards_url}/<%= keyboard %>/readme`
   );
@@ -119,6 +120,7 @@ $(document).ready(() => {
 
   ignoreKeypressListener($('input[type=text]'));
 
+  checkStatus();
   return;
 
   ////////////////////////////////////////
@@ -126,6 +128,26 @@ $(document).ready(() => {
   // Implementation goes here
   //
   ////////////////////////////////////////
+
+  function getPollInterval() {
+    return 25000 + 5000 * Math.random()
+  }
+
+  function checkStatus() {
+    $.get(backend_status_url).then(json => {
+      var localTime = new Date(json.last_ping).toTimeString();
+      var stat = json.status;
+      stat = stat === 'running' ? 'UP' : stat;
+      $('.bes-status').html(_.escape(`${stat} @ ${localTime}`)).removeClass('bes-error');
+      $('.bes-version-num').html(_.escape(json.version));
+      $('.bes-jobs').html(_.template('<%= queue_length %> job(s) running')(json));
+    }).fail((json) => {
+      var localTime = new Date().toTimeString();
+      $('.bes-status').html(`DOWN @ ${localTime}`).addClass('bes-error');
+      console.error('API status error', json);
+    });
+    setTimeout(checkStatus, getPollInterval());
+  }
 
   function ignoreKeypressListener(listener, $element) {
     $element
