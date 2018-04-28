@@ -270,32 +270,32 @@ $(document).ready(() => {
 
   function loadDefault() {
     // hard-coding planck as the only default right now
-    if (keyboard.includes('planck')) {
-      $.get('keymaps/planck_default.json', function(data) {
-        console.log(data);
-        reset_keymap();
+    var keyboardName = $keyboard.val().replace('/', '_');
+    $.get(`keymaps/${keyboardName}_default.json`, data => {
+      console.log(data);
+      reset_keymap();
 
-        keyboard = data.keyboard;
-        $keyboard.val(keyboard);
-        setSelectWidth($keyboard);
-        load_layouts($keyboard.val()).then(() => {
-          layout = data.layout;
-          $layout.val(layout);
-          setSelectWidth($layout);
+      keyboard = data.keyboard;
+      $keyboard.val(keyboard);
+      setSelectWidth($keyboard);
+      load_layouts($keyboard.val()).then(() => {
+        layout = data.layout;
+        $layout.val(layout);
+        setSelectWidth($layout);
 
-          $('#keymap-name').val(data.keymap);
+        $('#keymap-name').val(data.keymap);
 
-          load_converted_keymap(data.layers);
+        load_converted_keymap(data.layers);
 
-          render_layout($layout.val());
-          myKeymap.setDirty();
-        });
+        render_layout($layout.val());
+        myKeymap.setDirty();
       });
-    } else {
+    }).fail(error => {
       $status.append(
         `\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`
       );
-    }
+      console.log('error loadDefault', error);
+    });
   }
 
   function importJSON() {
