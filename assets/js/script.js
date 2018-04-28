@@ -291,7 +291,7 @@ $(document).ready(() => {
         myKeymap.setDirty();
       });
     }).fail(error => {
-      $status.append(
+      statusError(
         `\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`
       );
       console.log('error loadDefault', error);
@@ -639,6 +639,11 @@ $(document).ready(() => {
     $('.key').each(makeDraggable);
   }
 
+  function statusError(message) {
+    $status.append(message);
+    $status.scrollTop($status[0].scrollHeight);
+  }
+
   function check_status() {
     $.get(backend_compile_url + '/' + job_id, function(data) {
       console.log(data);
@@ -669,9 +674,9 @@ $(document).ready(() => {
       } else if (data.status === 'unknown') {
         $compile.removeAttr('disabled');
       } else if (data.status === 'failed') {
-        $status.append('\n* Failed');
+        statusError('\n* Failed');
         if (data.result) {
-          $status.append('\n* Error:\n' + data.result.output);
+          statusError('\n* Error:\n' + data.result.output);
         }
         $compile.removeAttr('disabled');
       }
