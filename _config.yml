@@ -1,7 +1,7 @@
 title: QMK Configurator
 email: hello@qmk.fm
 show_downloads: true
-description: An open source firmware for AVR and ARM based keyboards
+description: An open source configurator for QMK Firmware (only the AVR boards right now)
 baseurl: ""
 url: "http://config.qmk.fm"
 github_username: qmk
