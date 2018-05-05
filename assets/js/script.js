@@ -306,7 +306,23 @@ $(document).ready(() => {
     reader.onload = function layoutLoaded(/*e*/) {
       var jsonText = reader.result;
 
-      var data = JSON.parse(jsonText);
+      var data;
+      try {
+        data = JSON.parse(jsonText);
+      } catch (error) {
+        console.log(error);
+        alert('Sorry, that doesn\'t appear to be a valid keymap file.');
+      }
+
+      if (data.version && data.keyboard && data.keyboard.settings) {
+        alert('Sorry, we don\'t support importing kbfirmware json files.');
+        return
+      }
+
+      if (_.isUndefined(data.keyboard) || _.isUndefined(data.keymap) || _.isUndefined(data.layout) || _.isUndefined(data.layers)) {
+        alert('Sorry, this doesn\'t appear to be a QMK keymap file.');
+        return
+      }
 
       reset_keymap();
 
