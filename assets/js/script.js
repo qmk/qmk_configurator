@@ -311,11 +311,11 @@ $(document).ready(() => {
         data = JSON.parse(jsonText);
       } catch (error) {
         console.log(error);
-        alert('Sorry, that doesn\'t appear to be a valid keymap file.');
+        alert('Sorry, that doesn\'t appear to be a valid QMK keymap file.');
       }
 
       if (data.version && data.keyboard && data.keyboard.settings) {
-        alert('Sorry, we don\'t support importing kbfirmware json files.');
+        alert('Sorry, QMK Configurator doesn\'t support importing kbfirmware JSON files.');
         return
       }
 
