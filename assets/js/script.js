@@ -311,17 +311,24 @@ $(document).ready(() => {
         data = JSON.parse(jsonText);
       } catch (error) {
         console.log(error);
-        alert('Sorry, that doesn\'t appear to be a valid QMK keymap file.');
+        alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
       }
 
       if (data.version && data.keyboard && data.keyboard.settings) {
-        alert('Sorry, QMK Configurator doesn\'t support importing kbfirmware JSON files.');
-        return
+        alert(
+          "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
+        );
+        return;
       }
 
-      if (_.isUndefined(data.keyboard) || _.isUndefined(data.keymap) || _.isUndefined(data.layout) || _.isUndefined(data.layers)) {
-        alert('Sorry, this doesn\'t appear to be a QMK keymap file.');
-        return
+      if (
+        _.isUndefined(data.keyboard) ||
+        _.isUndefined(data.keymap) ||
+        _.isUndefined(data.layout) ||
+        _.isUndefined(data.layers)
+      ) {
+        alert("Sorry, this doesn't appear to be a QMK keymap file.");
+        return;
       }
 
       reset_keymap();
@@ -723,7 +730,7 @@ $(document).ready(() => {
 
   function lookupKeycode(searchTerm, isKeys) {
     var found = keycodes.find(({ code, keys }) => {
-      return code === searchTerm || isKeys && keys && keys === searchTerm;
+      return code === searchTerm || (isKeys && keys && keys === searchTerm);
     });
     return found;
   }
@@ -791,7 +798,11 @@ $(document).ready(() => {
 
     if (keycode.length < 4) {
       // unexpectedly short keycode
-      $status.append(`Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${stats.layers} in keymap. Setting to KC_NO\n`)
+      $status.append(
+        `Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${
+          stats.layers
+        } in keymap. Setting to KC_NO\n`
+      );
       return lookupKeycode('KC_NO');
     }
 
@@ -1130,7 +1141,7 @@ $(document).ready(() => {
       { name: 'k', code: 'KC_K', keys: 'k' },
       { name: 'l', code: 'KC_L', keys: 'l' },
       { name: ':\n;', code: 'KC_SCLN', keys: ';' },
-      { name: '"\n\'', code: 'KC_QUOT', keys: "'" },
+      { name: '"\n\'', code: 'KC_QUOT', keys: '"' },
       { name: 'Enter', code: 'KC_ENT', keys: 'enter', width: 2250 },
       { width: 3500 },
       { name: '4', code: 'KC_P4', keys: 'num_4' },
