@@ -744,7 +744,7 @@ $(document).ready(() => {
     return key;
   }
 
-  function parseKeycode(keycode) {
+  function parseKeycode(keycode, stats) {
     var metadata;
 
     // Check if the keycode is a complex/combo keycode ie. contains ()
@@ -783,6 +783,12 @@ $(document).ready(() => {
       }
       var key = newKey(metadata, keycode, { layer: internal });
       return key;
+    }
+
+    if (keycode.length < 4) {
+      // unexpectedly short keycode
+      $status.append(`Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${stats.layers} in keymap. Setting to KC_NO\n`)
+      return lookupKeycode('KC_NO');
     }
 
     // regular keycode
