@@ -178,7 +178,7 @@ $(document).ready(() => {
     return {
       keys: keycode.keys,
       on_keydown: () => {
-        var meta = lookupKeycode(keycode.keys);
+        var meta = lookupKeyPressCode(keycode.keys);
         if (meta === undefined) {
           return;
         }
@@ -717,9 +717,13 @@ $(document).ready(() => {
     document.body.removeChild(element);
   }
 
-  function lookupKeycode(searchTerm) {
+  function lookupKeyPressCode(searchTerm) {
+    return lookupKeycode(searchTerm, true);
+  }
+
+  function lookupKeycode(searchTerm, isKeys) {
     var found = keycodes.find(({ code, keys }) => {
-      return code === searchTerm || (keys && keys === searchTerm);
+      return code === searchTerm || isKeys && keys && keys === searchTerm;
     });
     return found;
   }
@@ -744,7 +748,7 @@ $(document).ready(() => {
     return key;
   }
 
-  function parseKeycode(keycode) {
+  function parseKeycode(keycode, stats) {
     var metadata;
 
     // Check if the keycode is a complex/combo keycode ie. contains ()
@@ -783,6 +787,12 @@ $(document).ready(() => {
       }
       var key = newKey(metadata, keycode, { layer: internal });
       return key;
+    }
+
+    if (keycode.length < 4) {
+      // unexpectedly short keycode
+      $status.append(`Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${stats.layers} in keymap. Setting to KC_NO\n`)
+      return lookupKeycode('KC_NO');
     }
 
     // regular keycode
