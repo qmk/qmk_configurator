@@ -283,7 +283,7 @@ $(document).ready(() => {
         $layout.val(layout);
         setSelectWidth($layout);
 
-        $('#keymap-name').val(data.keymap);
+        setKeymapName(data.keymap);
 
         load_converted_keymap(data.layers);
 
@@ -296,6 +296,14 @@ $(document).ready(() => {
       );
       console.log('error loadDefault', error);
     });
+  }
+
+  function getKeymapName() {
+    return $('#keymap-name').val().replace(/\s/g, '_');
+  }
+
+  function setKeymapName(name) {
+    $('#keymap-name').val(name.replace(/\s/g,'_'));
   }
 
   function importJSON() {
@@ -335,7 +343,7 @@ $(document).ready(() => {
         $layout.val(layout);
         switchKeyboardLayout();
 
-        $('#keymap-name').val(data.keymap);
+        setKeymapName(data.keymap);
 
         load_converted_keymap(data.layers);
 
@@ -355,12 +363,12 @@ $(document).ready(() => {
     //API payload format
     var data = {
       keyboard: $keyboard.val(),
-      keymap: $('#keymap-name').val(),
+      keymap: getKeymapName(),
       layout: $layout.val(),
       layers: layers
     };
 
-    download($('#keymap-name').val() + '.json', JSON.stringify(data));
+    download(getKeymapName() + '.json', JSON.stringify(data));
   }
   function scrollHandler() {
     if (offsetTop < $(document).scrollTop()) {
@@ -389,7 +397,7 @@ $(document).ready(() => {
     var layers = myKeymap.exportLayers();
     var data = {
       keyboard: $keyboard.val(),
-      keymap: $('#keymap-name').val(),
+      keymap: getKeymapName(),
       layout: $layout.val(),
       layers: layers
     };
@@ -401,7 +409,7 @@ $(document).ready(() => {
       '* Sending ' +
         $keyboard.val() +
         ':' +
-        $('#keymap-name').val() +
+        getKeymapName() +
         ' with ' +
         $layout.val()
     );
