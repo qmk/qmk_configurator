@@ -299,11 +299,13 @@ $(document).ready(() => {
   }
 
   function getKeymapName() {
-    return $('#keymap-name').val().replace(/\s/g, '_');
+    return $('#keymap-name')
+      .val()
+      .replace(/\s/g, '_');
   }
 
   function setKeymapName(name) {
-    $('#keymap-name').val(name.replace(/\s/g,'_'));
+    $('#keymap-name').val(name.replace(/\s/g, '_'));
   }
 
   function importJSON() {
@@ -400,7 +402,7 @@ $(document).ready(() => {
   }
 
   function compileLayout() {
-    $compile.attr('disabled', 'disabled');
+    disableCompileButton();
     var layers = myKeymap.exportLayers();
     var data = {
       keyboard: $keyboard.val(),
@@ -453,6 +455,7 @@ $(document).ready(() => {
     window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
     $status.html(''); // clear the DOM not the value otherwise weird things happen
     myKeymap.clearDirty();
+    disableOtherButtons();
     // load_layouts($keyboard).val());
   }
 
@@ -675,41 +678,61 @@ $(document).ready(() => {
     $status.scrollTop($status[0].scrollHeight);
   }
 
+  function enableCompileButton() {
+    $compile.removeAttr('disabled');
+  }
+
+  function disableCompileButton() {
+    $compile.attr('disabled', 'disabled');
+  }
+
+  function enableOtherButtons() {
+    [$hex, $('#toolbox'), $source].forEach($el => {
+      $el.removeAttr('disabled');
+    });
+  }
+
+  function disableOtherButtons() {
+    [$hex, $('#toolbox'), $source].forEach($el => {
+      $el.attr('disabled', 'disabled');
+    });
+  }
+
   function check_status() {
     $.get(backend_compile_url + '/' + job_id, function(data) {
       console.log(data);
-      if (data.status === 'finished') {
-        $status.append(
-          '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
-        );
-        hex_stream = data.result.firmware;
-        hex_filename = data.result.firmware_filename;
-        $compile.removeAttr('disabled');
-        $hex.removeAttr('disabled');
-        $('#toolbox').removeAttr('disabled');
-        $source.removeAttr('disabled');
-      } else if (data.status === 'queued') {
-        if (status !== 'queued') {
-          $status.append('\n* Queueing');
-        } else {
-          $status.append(' .');
-        }
-        setTimeout(check_status, 500);
-      } else if (data.status === 'running') {
-        if (status !== 'running') {
-          $status.append('\n* Running');
-        } else {
-          $status.append(' .');
-        }
-        setTimeout(check_status, 500);
-      } else if (data.status === 'unknown') {
-        $compile.removeAttr('disabled');
-      } else if (data.status === 'failed') {
-        statusError('\n* Failed');
-        if (data.result) {
-          statusError('\n* Error:\n' + data.result.output);
-        }
-        $compile.removeAttr('disabled');
+      let msg;
+      switch (data.status) {
+        case 'finished':
+          $status.append(
+            '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
+          );
+          enableCompileButton();
+          enableOtherButtons();
+          break;
+        case 'queued':
+          msg = status === 'queued' ? ' .' : '\n* Queueing';
+          $status.append(msg);
+          setTimeout(check_status, 500);
+          break;
+        case 'running':
+          msg = status === 'running' ? ' .' : '\n* Running';
+          $status.append(msg);
+          setTimeout(check_status, 500);
+          break;
+        case 'unknown':
+          enableCompileButton();
+          break;
+        case 'failed':
+          statusError('\n* Failed');
+          if (data.result) {
+            statusError('\n* Error:\n' + data.result.output);
+          }
+          enableCompileButton();
+          break;
+        default:
+          console.log('Unexpected status', data.status);
+          enableCompileButton();
       }
       $status.scrollTop($status[0].scrollHeight);
       status = data.status;
