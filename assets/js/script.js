@@ -707,6 +707,8 @@ $(document).ready(() => {
           $status.append(
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
+          hex_stream = data.result.firmware;
+          hex_filename = data.result.firmware_filename;
           enableCompileButton();
           enableOtherButtons();
           break;
