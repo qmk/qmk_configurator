@@ -367,7 +367,7 @@ $(document).ready(() => {
 
   function exportJSON() {
     //Squashes the keymaps to the api payload format, might look into making this a function
-    var layers = myKeymap.exportLayers();
+    var layers = myKeymap.exportLayers({ compiler: false });
 
     //API payload format
     var data = {
@@ -403,7 +403,7 @@ $(document).ready(() => {
 
   function compileLayout() {
     disableCompileButton();
-    var layers = myKeymap.exportLayers();
+    var layers = myKeymap.exportLayers({ compiler: true });
     var data = {
       keyboard: $keyboard.val(),
       keymap: getKeymapName(),
@@ -788,8 +788,18 @@ $(document).ready(() => {
     return key;
   }
 
+  function stripANY(keycode) {
+    if (keycode.indexOf('ANY(') === 0) {
+      // strip ANY from keycodes, this is only for human debugging
+      keycode = keycode.slice(4, -1);
+    }
+    return keycode;
+  }
+
   function parseKeycode(keycode, stats) {
     var metadata;
+
+    keycode = stripANY(keycode);
 
     // Check if the keycode is a complex/combo keycode ie. contains ()
     if (keycode.includes('(')) {
@@ -1654,7 +1664,7 @@ $(document).ready(() => {
       instance.km[__layer][index].text = text;
     }
 
-    function exportLayers() {
+    function exportLayers({ compiler }) {
       return _.reduce(
         instance.km,
         function(layers, _layer, k) {
@@ -1674,7 +1684,9 @@ $(document).ready(() => {
                 keycode = keycode.replace('layer', key.layer);
               }
               if (key.code.indexOf('text') !== -1) {
-                keycode = key.text;
+                // add a special ANY marker to keycodes that were defined using ANY
+                // This will be stripped back off on import.
+                keycode = compiler ? key.text : `ANY(${key.text})`;
               }
               acc.push(keycode);
               return acc;
