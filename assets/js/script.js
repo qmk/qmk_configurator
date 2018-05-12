@@ -299,9 +299,11 @@ $(document).ready(() => {
   }
 
   function getKeymapName() {
-    return $('#keymap-name')
+    var keymapName = $('#keymap-name')
       .val()
       .replace(/\s/g, '_');
+    // use a default name if it is blank
+    return keymapName === '' ? 'mine' : keymapName;
   }
 
   function setKeymapName(name) {
