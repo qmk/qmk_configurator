@@ -58,6 +58,25 @@ The general flow of the code:
  1. setup key input handler
  1. run check status polling loop
 
+Major UI Elements
+=================
+
+### Keycode Display
+
+TBD
+
+### Status Panel
+
+TBD
+
+### VisualKeymap
+
+TBD
+
+### Buttons
+
+TBD
+
 
 Editing of Keymaps
 ==================
@@ -83,7 +102,7 @@ Importing of keymaps can be driven by multiple event
 Compiling those keymaps into Hex files
 ======================================
 
-All compilation of keymaps is done via the API. When you are ready to compile a keymap, press the compile button and this will send an RESTful POST request to the API containing the JSON for your keymap. On success we enable download buttons for the source and hex files.
+All compilation of keymaps is done via the API. When you are ready to compile a keymap, press the compile button and this will send an RESTful POST request to the API containing the JSON for your keymap. On success we enable download buttons for the source and hex files. Compilation is asynchronous and we poll on a 500ms interval for changes on the API baesd on the handle returned by the API.
 
 
 Downloading Hex Files or Source code generated
