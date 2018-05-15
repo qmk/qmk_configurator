@@ -6,3 +6,4 @@ secrets.tar
 .bundle/*
 vendor/*
 *.sw[po]
+node_modules
