@@ -1062,6 +1062,7 @@ $(document).ready(() => {
       $(key).append(container);
     } else if (keycode.type === 'layer') {
       $(key).addClass('key-layer');
+      $(key).append($('<br/>'));
       var layer_input1 = $('<input>', {
         class: 'key-layer-input',
         type: 'number',
