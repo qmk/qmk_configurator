@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  const PREVIEW_LABEL = 'Preview info.json';
   var layouts = {};
   //  var keymap = [];
   var layer = 0;
@@ -41,6 +42,7 @@ $(document).ready(() => {
   var $import = $('#import');
   var $loadDefault = $('#load-default');
   var $fileImport = $('#fileImport');
+  var $infoPreview = $('#infoPreview');
   var $status = $('#status');
   var $visualKeymap = $('#visual-keymap');
 
@@ -100,7 +102,11 @@ $(document).ready(() => {
   $loadDefault.click(checkIsDirty(loadDefault));
 
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
-  $fileImport.change(importJSON);
+  $fileImport.change(() => {
+    var files = $fileImport[0].files;
+    importJSON(files);
+    $infoPreview[0].value = ''; // clear value for chrome issue #83
+  });
 
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
@@ -112,6 +118,22 @@ $(document).ready(() => {
 
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
+  keypressListener.simple_combo('ctrl shift i', () => {
+    // add a special bogus entry to the keyboard list for previews
+    $keyboard.append(
+      $('<option>', {
+        value: PREVIEW_LABEL,
+        text: PREVIEW_LABEL
+      })
+    );
+    $infoPreview.click();
+  });
+
+  $infoPreview.change(() => {
+    var files = $infoPreview[0].files;
+    previewInfo(files);
+    $infoPreview[0].value = '';
+  });
 
   var ignoreKeypressListener = _.partial(
     ignoreKeypressListener,
@@ -310,60 +332,93 @@ $(document).ready(() => {
     $('#keymap-name').val(name.replace(/\s/g, '_'));
   }
 
-  function importJSON() {
-    var files = $fileImport[0].files;
+  function previewInfoOnLoad(reader /*e*/) {
+    var jsonText = reader.result;
+    var data;
+    try {
+      data = JSON.parse(jsonText);
+    } catch (error) {
+      console.log(error);
+      alert("Sorry, that doesn't appear to be a valid QMK info file.");
+      return;
+    }
 
+    reset_keymap();
+
+    keyboard = data.keyboard_name;
+    $keyboard.val(PREVIEW_LABEL);
+    setSelectWidth($keyboard);
+    load_layouts($keyboard.val(), data).then(() => {
+      setSelectWidth($layout);
+      layout = _.first(_.keys(data.layouts));
+      $layout.val(layout);
+      switchKeyboardLayout();
+
+      setKeymapName('info.json preview');
+
+      render_layout($layout.val());
+    });
+  }
+
+  function previewInfo(files) {
     var reader = new FileReader();
+    reader.onload = _.partial(previewInfoOnLoad, reader);
+    reader.readAsText(files[0]);
+  }
 
-    reader.onload = function layoutLoaded(/*e*/) {
-      var jsonText = reader.result;
+  function importJSONOnLoad(reader /*e*/) {
+    var jsonText = reader.result;
 
-      var data;
-      try {
-        data = JSON.parse(jsonText);
-      } catch (error) {
-        console.log(error);
-        alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
-      }
+    var data;
+    try {
+      data = JSON.parse(jsonText);
+    } catch (error) {
+      console.log(error);
+      alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
+      return;
+    }
 
-      if (data.version && data.keyboard && data.keyboard.settings) {
-        alert(
-          "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
-        );
-        return;
-      }
+    if (data.version && data.keyboard && data.keyboard.settings) {
+      alert(
+        "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
+      );
+      return;
+    }
 
-      if (
-        _.isUndefined(data.keyboard) ||
-        _.isUndefined(data.keymap) ||
-        _.isUndefined(data.layout) ||
-        _.isUndefined(data.layers)
-      ) {
-        alert("Sorry, this doesn't appear to be a QMK keymap file.");
-        return;
-      }
+    if (
+      _.isUndefined(data.keyboard) ||
+      _.isUndefined(data.keymap) ||
+      _.isUndefined(data.layout) ||
+      _.isUndefined(data.layers)
+    ) {
+      alert("Sorry, this doesn't appear to be a QMK keymap file.");
+      return;
+    }
 
-      reset_keymap();
+    reset_keymap();
 
-      keyboard = data.keyboard;
-      $keyboard.val(keyboard);
-      setSelectWidth($keyboard);
-      load_layouts($keyboard.val()).then(() => {
-        setSelectWidth($('#layout'));
-        layout = data.layout;
-        $layout.val(layout);
-        switchKeyboardLayout();
+    keyboard = data.keyboard;
+    $keyboard.val(keyboard);
+    setSelectWidth($keyboard);
+    load_layouts($keyboard.val()).then(() => {
+      setSelectWidth($layout);
+      layout = data.layout;
+      $layout.val(layout);
+      switchKeyboardLayout();
 
-        setKeymapName(data.keymap);
+      setKeymapName(data.keymap);
 
-        load_converted_keymap(data.layers);
+      load_converted_keymap(data.layers);
 
-        render_layout($layout.val());
-        myKeymap.setDirty();
-        viewReadme();
-      });
-    };
+      render_layout($layout.val());
+      myKeymap.setDirty();
+      viewReadme();
+    });
+  }
 
+  function importJSON(files) {
+    var reader = new FileReader();
+    reader.onload = _.partial(importJSONOnLoad, reader);
     reader.readAsText(files[0]);
   }
 
@@ -445,7 +500,7 @@ $(document).ready(() => {
     layer = e.target.innerHTML;
     myKeymap.changeLayer(layer);
     setLayerToNonEmpty(layer);
-    render_layout($('#layout').val());
+    render_layout($layout.val());
   }
 
   function changeLayout() {
@@ -463,11 +518,11 @@ $(document).ready(() => {
 
   function createKeyboardDropdown(data) {
     keyboards = data;
-    $.each(data, function(k, d) {
+    _.forEach(data, function(keyb) {
       $keyboard.append(
         $('<option>', {
-          value: d,
-          text: d
+          value: keyb,
+          text: keyb
         })
       );
     });
@@ -562,33 +617,46 @@ $(document).ready(() => {
     viewReadme();
   }
 
-  function load_layouts(_keyboard) {
-    return $.get(backend_keyboards_url + '/' + _keyboard, function(data) {
+  function load_layouts(_keyboard, preview) {
+    var _processInfoJSON = _.partial(processInfoJSON, _keyboard);
+    if (!_.isUndefined(preview)) {
+      let p = new Promise(resolve => {
+        let fake = {
+          keyboards: {}
+        };
+        fake.keyboards[_keyboard] = preview;
+        _processInfoJSON(fake);
+        resolve(preview);
+      });
+      return p;
+    }
+    return $.get(backend_keyboards_url + '/' + _keyboard, _processInfoJSON);
+    function processInfoJSON(_keyboard, data) {
       if (data.keyboards[_keyboard]) {
         $layout.find('option').remove();
-        layouts = {};
-        $.each(data.keyboards[_keyboard].layouts, function(k, d) {
-          $layout.append(
-            $('<option>', {
-              value: k,
-              text: k
-            })
-          );
-          if (d.layout) {
-            layouts[k] = d.layout;
-          } else {
-            layouts[k] = d;
-          }
-        });
+        layouts = _.reduce(
+          data.keyboards[_keyboard].layouts,
+          function(acc, _layout, key) {
+            $layout.append(
+              $('<option>', {
+                value: key,
+                text: key
+              })
+            );
+            acc[key] = _layout.layout ? _layout.layout : _layout;
+            return acc;
+          },
+          {}
+        );
 
         if (layout_from_hash()) {
           $layout.val(layout_from_hash());
         }
         changeLayout();
-        setSelectWidth($('#layout'));
-        render_layout($('#layout').val());
+        setSelectWidth($layout);
+        render_layout($layout.val());
       }
-    });
+    }
   }
 
   function calcKeyKeymapDims(w, h) {
@@ -762,7 +830,7 @@ $(document).ready(() => {
 
   function downloadSrc(url) {
     var element = document.createElement('a');
-    element.setAttribute( 'href', url);
+    element.setAttribute('href', url);
     element.setAttribute('download', 'source.zip');
 
     element.style.display = 'none';
@@ -977,7 +1045,7 @@ $(document).ready(() => {
         var srcKeycode = ui.helper[0];
         $(srcKeycode).draggable('option', 'revertDuration', 0);
         $target.removeClass('active-key');
-        setLayerToNonEmpty('active')
+        setLayerToNonEmpty('active');
         if ($(srcKeycode).hasClass('keycode')) {
           $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
@@ -1206,7 +1274,7 @@ $(document).ready(() => {
       { name: 'k', code: 'KC_K', keys: 'k' },
       { name: 'l', code: 'KC_L', keys: 'l' },
       { name: ':\n;', code: 'KC_SCLN', keys: ';' },
-      { name: '"\n\'', code: 'KC_QUOT', keys: '\'' },
+      { name: '"\n\'', code: 'KC_QUOT', keys: "'" },
       { name: 'Enter', code: 'KC_ENT', keys: 'enter', width: 2250 },
       { width: 3500 },
       { name: '4', code: 'KC_P4', keys: 'num_4' },
@@ -1673,10 +1741,14 @@ $(document).ready(() => {
         // layer 0 is always initialized. Use it as a reference
         let { name, code } = lookupKeycode('KC_NO');
         let KC_NO = { name, code };
-        instance.km[__layer] = _.reduce(instance.km[0], (acc, key, index) => {
-          acc[index] = KC_NO;
-          return acc;
-        }, {});
+        instance.km[__layer] = _.reduce(
+          instance.km[0],
+          (acc, key, index) => {
+            acc[index] = KC_NO;
+            return acc;
+          },
+          {}
+        );
       } else {
         instance.km[__layer] = {};
       }
