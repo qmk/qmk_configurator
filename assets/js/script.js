@@ -1279,6 +1279,21 @@ $(document).ready(() => {
         title: 'Toggle layer on/off'
       },
       {
+        name: 'TO',
+        code: 'TO(layer)',
+        type: 'layer',
+        layer: 0,
+        title: 'Turn on layer when pressed'
+      },
+      {
+        name: 'TT',
+        code: 'TT(layer)',
+        type: 'layer',
+        layer: 0,
+        title:
+          "Normally acts like MO unless it's tapped multple times which toggles layer on"
+      },
+      {
         name: 'DF',
         code: 'DF(layer)',
         type: 'layer',
