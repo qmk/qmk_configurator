@@ -445,6 +445,7 @@ $(document).ready(() => {
     $(e.target).addClass('active');
     layer = e.target.innerHTML;
     myKeymap.changeLayer(layer);
+    $(`.layer.${layer}`).addClass('non-empty');
     render_layout($('#layout').val());
   }
 
@@ -846,9 +847,9 @@ $(document).ready(() => {
       $status.append(
         `Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${
           stats.layers
-        } in keymap. Setting to KC_NO\n`
+        } in keymap. Setting to KC_TRNS\n`
       );
-      return lookupKeycode('KC_NO');
+      return lookupKeycode('KC_TRNS');
     }
 
     // regular keycode
@@ -902,7 +903,7 @@ $(document).ready(() => {
     myKeymap.clear();
     layer = 0;
     $('.layer').removeClass('non-empty active');
-    $('.layer.0').addClass('active');
+    $('.layer.0').addClass('active non-empty');
   }
 
   function keyboard_from_hash() {
@@ -1047,7 +1048,8 @@ $(document).ready(() => {
     var key = $('#key-' + k);
     var keycode = myKeymap.getKey(_layer, k);
     if (!keycode) {
-      keycode = myKeymap.assignKey(_layer, k, '', 'KC_NO', '');
+      let { name, code } = lookupKeycode('KC_NO');
+      keycode = myKeymap.assignKey(_layer, k, name, code, '');
     }
     $(key).html(keycode.name);
     if (keycode.type === 'container') {
@@ -1652,7 +1654,17 @@ $(document).ready(() => {
     }
 
     function initLayer(__layer) {
-      instance.km[__layer] = {};
+      if (__layer > 0) {
+        // layer 0 is always initialized. Use it as a reference
+        let { name, code } = lookupKeycode('KC_NO');
+        let KC_NO = { name, code };
+        instance.km[__layer] = _.reduce(instance.km[0], (acc, key, index) => {
+          acc[index] = KC_NO;
+          return acc;
+        }, {});
+      } else {
+        instance.km[__layer] = {};
+      }
     }
 
     function setKey(__layer, index, key) {
@@ -1666,7 +1678,7 @@ $(document).ready(() => {
 
     function getKey(__layer, index) {
       if (instance.km[__layer] === undefined) {
-        instance.km[__layer] = {};
+        instance.initLayer(__layer);
       }
       return instance.km[__layer][index];
     }
@@ -1722,9 +1734,10 @@ $(document).ready(() => {
       instance.km[_layer][index].layer = toLayer;
       if (toLayer !== _layer) {
         if (instance.km[toLayer] === undefined) {
-          instance.km[toLayer] = {};
+          instance.initLayer(toLayer);
         }
-        instance.km[toLayer][index] = { name: '▽', code: 'KC_TRNS' };
+        let { name, code } = lookupKeycode('KC_TRNS');
+        instance.km[toLayer][index] = { name, code };
       }
     }
 
