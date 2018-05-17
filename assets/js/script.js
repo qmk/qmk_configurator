@@ -440,12 +440,16 @@ $(document).ready(() => {
     });
   }
 
+  function setLayerToNonEmpty(_layer) {
+    $(`.layer.${_layer}`).addClass('non-empty');
+  }
+
   function changeLayer(e) {
     $('.layer.active').removeClass('active');
     $(e.target).addClass('active');
     layer = e.target.innerHTML;
     myKeymap.changeLayer(layer);
-    $(`.layer.${layer}`).addClass('non-empty');
+    setLayerToNonEmpty(layer);
     render_layout($('#layout').val());
   }
 
@@ -881,7 +885,7 @@ $(document).ready(() => {
         }
       });
       if (myKeymap.size(_layer) > 0) {
-        $(`.layer.${_layer}`).addClass('non-empty');
+        setLayerToNonEmpty(_layer);
       }
       stats.layers += 1;
     });
@@ -964,7 +968,7 @@ $(document).ready(() => {
         var srcKeycode = ui.helper[0];
         $(srcKeycode).draggable('option', 'revertDuration', 0);
         $target.removeClass('active-key');
-        $('.layer.active').addClass('non-empty');
+        setLayerToNonEmpty('active')
         if ($(srcKeycode).hasClass('keycode')) {
           $(t).attr('data-code', srcKeycode.dataset.code);
           // $(t).draggable({revert: true, revertDuration: 100});
@@ -1071,7 +1075,11 @@ $(document).ready(() => {
         val: keycode.layer
       }).on('input', function() {
         var val = $(this).val();
-        myKeymap.setKeycodeLayer(_layer, k, val);
+        var toLayer = parseInt(val, 10);
+        if (_.isNumber(toLayer)) {
+          myKeymap.setKeycodeLayer(_layer, k, toLayer);
+          setLayerToNonEmpty(toLayer);
+        }
       });
       ignoreKeypressListener(layer_input1);
       $(key).append(layer_input1);
