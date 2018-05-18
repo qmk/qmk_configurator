@@ -1316,19 +1316,19 @@ $(document).ready(() => {
       },
       {
         name: 'LCtl_T',
-        code: 'LCtl_T(kc)',
+        code: 'LCTL_T(kc)',
         type: 'container',
         title: 'Control when held, kc when tapped'
       },
       {
         name: 'LAlt_T',
-        code: 'LAlt_T(kc)',
+        code: 'LALT_T(kc)',
         type: 'container',
         title: 'Alt when held, kc when tapped'
       },
       {
         name: 'LGui_T',
-        code: 'LGui_T(kc)',
+        code: 'LGUI_T(kc)',
         type: 'container',
         title: 'Gui when held, kc when tapped'
       },
@@ -1340,19 +1340,19 @@ $(document).ready(() => {
       },
       {
         name: 'RCtl_T',
-        code: 'RCtl_T(kc)',
+        code: 'RCTL_T(kc)',
         type: 'container',
         title: 'Control when held, kc when tapped'
       },
       {
         name: 'RAlt_T',
-        code: 'RAlt_T(kc)',
+        code: 'RALT_T(kc)',
         type: 'container',
         title: 'Alt when held, kc when tapped'
       },
       {
         name: 'RGui_T',
-        code: 'RGui_T(kc)',
+        code: 'RGUI_T(kc)',
         type: 'container',
         title: 'Gui when held, kc when tapped'
       },
