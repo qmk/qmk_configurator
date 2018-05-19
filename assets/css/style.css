@@ -628,7 +628,6 @@ a img {
 #export,
 #import,
 #load-default {
-  float: right;
   line-height: 120%;
   margin: 0px 4px 0px 0px;
   border-radius: 3px;
@@ -639,20 +638,12 @@ a img {
   cursor: pointer;
 }
 
-#compile,
-#hex {
+#compile {
   margin-right: 0px;
 }
 
-#source,
-#toolbox,
-#export,
-#import {
-  float: left;
-}
-
-#fileImport {
-  visibility: hidden;
+#fileImport, #infoPreview {
+  display: none;
 }
 
 #compile:disabled,
@@ -718,6 +709,28 @@ button {
   -webkit-box-sizing: border-box;
   overflow: hidden;
   line-height: 100%;
+}
+
+.botctrl {
+  display: grid;
+  grid-template: auto auto / 80% 20%;
+  grid-row-gap: 5px;
+}
+
+.botctrl-1-1 {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
+}
+.botctrl-1-2 {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: end;
+}
+.botctrl-2 {
+  grid-row: 2;
+  grid-column: span 2;
+  justify-self: start;
 }
 
 #layers {
@@ -1131,4 +1144,19 @@ input[type='number'] {
 
 .bes-jobs {
   justify-self: end;
+}
+
+.topctrl {
+  display: grid;
+  grid-template: auto / 45% 35% 20%;
+}
+
+.topctrl-1 {
+  grid-column: 1;
+}
+.topctrl-2 {
+  grid-column: 2;
+}
+.topctrl-3 {
+  grid-column: 3;
 }

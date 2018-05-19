@@ -8,20 +8,38 @@ layout: qmk
 </select>
 <div id="controller">
   <div id="controller-top">
-    <label>Keyboard: <select id="keyboard" onChange=" setSelectWidth(this);"></select></label>
-    <label>Layout: <select id="layout" onChange=" setSelectWidth(this);"></select></label>
+    <div class="topctrl">
+      <span class="topctrl-1">
+      <label style="display: inline-block; width: 90px;" >Keyboard:</label>
+      <select id="keyboard" onChange="setSelectWidth(this);"></select>
+      </span>
+      <span class="topctrl-2">
+      <label>Layout:</label>
+      <select id="layout" onChange="setSelectWidth(this);"></select>
+      </span>
+      <span class="topctrl-3">
+      <button id="compile" title="Compile keymap">Compile</button>
+      <button id="load-default" title="Load default keymap from QMK Firmware">Load Default</button>
+      </span>
+    </div>
     <label id="keymap-name-label">Keymap Name: <input id="keymap-name" type="text" value="mine" /></label>
-    <button id="compile" title="Compile keymap">Compile</button>
-    <button id="load-default" title="Load default keymap from QMK Firmware">Load Default</button>
   </div>
   <textarea id="status" readonly></textarea>
-  <div id="controller-bottom">
-    <button id="hex" title="Download .hex file for flashing" disabled>Download .hex</button>
-    <button id="toolbox" title="Load firmware file in QMK Toolbox" disabled>Open in QMK Toolbox</button>
-    <button id="source" title="Download QMK Firmware code" disabled>Download Source</button>
-    <button id="export" title="Export QMK Keymap JSON file">Export Keymap</button>
-    <button id="import" title="Import QMK Keymap JSON file">Import Keymap</button>
-    <input id="fileImport" type="file" accept="application/json" />
+  <div id="controller-bottom" class="botctrl">
+    <div class="botctrl-1-1">
+      <button id="toolbox" title="Load firmware file in QMK Toolbox" disabled>Open in QMK Toolbox</button>
+      <button id="source" title="Download QMK Firmware code" disabled>Download Source</button>
+      <button id="export" title="Export QMK Keymap JSON file">Export Keymap</button>
+      <button id="import" title="Import QMK Keymap JSON file">Import Keymap</button>
+      <input id="fileImport" type="file" accept="application/json" />
+      <input id="infoPreview" type="file" accept="application/json" />
+    </div>
+    <div class="botctrl-1-2">
+      <button id="hex" title="Download .hex file for flashing" disabled>Download .hex</button>
+    </div>
+    <div class="botctrl-2">
+      <a class="hint" href="https://github.com/qmk/qmk_toolbox/releases">Download QMK Toolbox</a>
+    </div>
   </div>
 </div>
 <div class="split-content">

@@ -897,9 +897,9 @@ $(document).ready(() => {
   }
 
   function setSelectWidth(s) {
-    var sel = $(s);
-    $('#templateOption').text(sel.val());
-    sel.width($('#template').width() * 1.03);
+    var $sel = $(s);
+    $('#templateOption').text($sel.val());
+    $sel.width($('#template').width() * 1.03);
   }
 
   function reset_keymap() {
