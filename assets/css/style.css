@@ -713,7 +713,7 @@ button {
 
 .botctrl {
   display: grid;
-  grid-template: auto auto / 80% 20%;
+  grid-template: auto / 80% 20%;
   grid-row-gap: 5px;
 }
 
