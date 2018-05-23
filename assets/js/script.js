@@ -1526,7 +1526,7 @@ $(document).ready(() => {
       { name: ':', code: 'KC_COLN', keys: ':' },
       { name: '|', code: 'KC_PIPE', keys: '|' },
       { name: '?', code: 'KC_QUES', keys: '?' },
-      { name: '"', code: 'KC_DQT', keys: '"' },
+      { name: '\'', code: 'KC_DQUO', keys: '\'' },
 
       { label: 'Application', width: 'label' },
 
