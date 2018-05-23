@@ -1197,7 +1197,7 @@ $(document).ready(() => {
       { name: 'k', code: 'KC_K', keys: 'k' },
       { name: 'l', code: 'KC_L', keys: 'l' },
       { name: ':\n;', code: 'KC_SCLN', keys: ';' },
-      { name: '"\n\'', code: 'KC_QUOT', keys: '"' },
+      { name: '"\n\'', code: 'KC_QUOT', keys: '\'' },
       { name: 'Enter', code: 'KC_ENT', keys: 'enter', width: 2250 },
       { width: 3500 },
       { name: '4', code: 'KC_P4', keys: 'num_4' },
@@ -1526,7 +1526,7 @@ $(document).ready(() => {
       { name: ':', code: 'KC_COLN', keys: ':' },
       { name: '|', code: 'KC_PIPE', keys: '|' },
       { name: '?', code: 'KC_QUES', keys: '?' },
-      { name: '\'', code: 'KC_DQUO', keys: '\'' },
+      { name: '"', code: 'KC_DQUO', keys: '"' },
 
       { label: 'Application', width: 'label' },
 
