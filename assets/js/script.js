@@ -392,14 +392,9 @@ $(document).ready(() => {
   }
 
   function downloadSourceBundle() {
-    $.get(backend_compile_url + '/' + job_id + '/source', function(data) {
-      console.log(data);
-    });
+    downloadSrc(backend_compile_url + '/' + job_id + '/source');
   }
   function downloadHexFile() {
-    // $.get(backend_compile_url + "/" + job_id + "/hex", function(data) {
-    //   console.log(data);
-    // });
     download(hex_filename, hex_stream);
   }
 
@@ -755,6 +750,19 @@ $(document).ready(() => {
       'data:text/plain;charset=utf-8,' + encodeURIComponent(text)
     );
     element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+
+  function downloadSrc(url) {
+    var element = document.createElement('a');
+    element.setAttribute( 'href', url);
+    element.setAttribute('download', 'source.zip');
 
     element.style.display = 'none';
     document.body.appendChild(element);
