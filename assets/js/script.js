@@ -524,12 +524,13 @@ $(document).ready(() => {
 
   function createKeyCodeUI(k, d) {
     if (d.code) {
+      var help = d.title ? ` - ${d.title}` : '';
       var keycode = $('<div>', {
         class: 'keycode keycode-' + d.width + ' keycode-' + d.type,
         'data-code': d.code,
         'data-type': d.type,
         html: d.name,
-        title: d.title
+        title: `${d.code}${help}`
       });
       $('#keycodes').append(keycode);
     } else {
