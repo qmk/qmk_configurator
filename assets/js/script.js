@@ -1255,18 +1255,18 @@ $(document).ready(() => {
 
       { label: 'International', width: 'label' },
 
-      { name: 'NUHS', code: 'KC_NUHS' },
-      { name: 'NUBS', code: 'KC_NUBS' },
+      { name: 'NUHS', code: 'KC_NUHS', title: 'Non-US # and ~' },
+      { name: 'NUBS', code: 'KC_NUBS', title: 'Non-US \\ and |' },
 
       { name: 'Ro', code: 'KC_RO', title: 'JIS \\ and |' },
       { name: '¥', code: 'KC_JYEN' },
 
-      { name: '無変換', code: 'KC_MHEN' },
-      { name: '漢字', code: 'KC_HANJ' },
+      { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan' },
+      { name: '漢字', code: 'KC_HANJ', title: '' },
 
-      { name: '한영', code: 'KC_HAEN' },
-      { name: '変換', code: 'KC_HENK' },
-      { name: 'かな', code: 'KC_KANA' },
+      { name: '한영', code: 'KC_HAEN', title: '' },
+      { name: '変換', code: 'KC_HENK', title: 'JIS Henkan' },
+      { name: 'かな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana' },
 
       { label: 'QMK specific', width: 'label' },
 
