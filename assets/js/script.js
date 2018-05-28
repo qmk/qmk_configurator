@@ -1539,9 +1539,6 @@ $(document).ready(() => {
 
       { label: 'Application', width: 'label' },
 
-      { name: 'Vol Down', code: 'KC_VOLD' },
-      { name: 'Vol Up', code: 'KC_VOLU' },
-      { name: 'Mute', code: 'KC_MUTE' },
       { name: 'Power', code: 'KC_PWR' },
       { name: 'Help', code: 'KC_HELP' },
       { name: 'Stop', code: 'KC_STOP' },
@@ -1608,6 +1605,7 @@ $(document).ready(() => {
 
       { name: 'Previous', code: 'KC_MPRV', title: 'Media Previous' },
       { name: 'Next', code: 'KC_MNXT', title: 'Media Next' },
+      { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
       { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
       { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
