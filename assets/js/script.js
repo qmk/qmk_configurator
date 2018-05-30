@@ -523,6 +523,7 @@ $(document).ready(() => {
       if (isPreviewMode) {
         $keyboard.find('option[value="'+PREVIEW_LABEL+'"]').remove();
         isPreviewMode = false;
+        setKeymapName('mine');
       }
     }
     disableOtherButtons();
