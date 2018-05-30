@@ -1,6 +1,7 @@
 $(document).ready(() => {
   const PREVIEW_LABEL = 'Preview info.json';
   var layouts = {};
+  var isPreviewMode = false;
   //  var keymap = [];
   var layer = 0;
   var job_id = '';
@@ -120,12 +121,16 @@ $(document).ready(() => {
   keypressListener.register_many(generateKeypressCombos(keycodes));
   keypressListener.simple_combo('ctrl shift i', () => {
     // add a special bogus entry to the keyboard list for previews
-    $keyboard.append(
-      $('<option>', {
-        value: PREVIEW_LABEL,
-        text: PREVIEW_LABEL
-      })
-    );
+    if (!isPreviewMode) {
+      $keyboard.append(
+        $('<option>', {
+          value: PREVIEW_LABEL,
+          text: PREVIEW_LABEL
+        })
+      );
+      disableCompileButton();
+      isPreviewMode = true;
+    }
     $infoPreview.click();
   });
 
@@ -352,7 +357,7 @@ $(document).ready(() => {
       setSelectWidth($layout);
       layout = _.first(_.keys(data.layouts));
       $layout.val(layout);
-      switchKeyboardLayout();
+      switchKeyboardLayout(isPreviewMode);
 
       setKeymapName('info.json preview');
 
@@ -508,10 +513,18 @@ $(document).ready(() => {
     myKeymap.clearDirty();
   }
 
-  function switchKeyboardLayout() {
+  function switchKeyboardLayout(preview=false) {
     window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
     $status.html(''); // clear the DOM not the value otherwise weird things happen
     myKeymap.clearDirty();
+    if (!preview) {
+      // only do these steps if we haven't been invoked from preview
+      enableCompileButton();
+      if (isPreviewMode) {
+        $keyboard.find('option[value="'+PREVIEW_LABEL+'"]').remove();
+        isPreviewMode = false;
+      }
+    }
     disableOtherButtons();
     // load_layouts($keyboard).val());
   }
