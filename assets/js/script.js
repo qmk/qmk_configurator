@@ -328,13 +328,14 @@ $(document).ready(() => {
   function getKeymapName() {
     var keymapName = $('#keymap-name')
       .val()
-      .replace(/\s/g, '_');
+      .replace(/\s/g, '_')
+      .toLowerCase();
     // use a default name if it is blank
     return keymapName === '' ? 'mine' : keymapName;
   }
 
   function setKeymapName(name) {
-    $('#keymap-name').val(name.replace(/\s/g, '_'));
+    $('#keymap-name').val(name.replace(/\s/g, '_').toLowerCase());
   }
 
   function previewInfoOnLoad(reader /*e*/) {
@@ -513,7 +514,7 @@ $(document).ready(() => {
     myKeymap.clearDirty();
   }
 
-  function switchKeyboardLayout(preview=false) {
+  function switchKeyboardLayout(preview = false) {
     window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
     $status.html(''); // clear the DOM not the value otherwise weird things happen
     myKeymap.clearDirty();
@@ -521,7 +522,7 @@ $(document).ready(() => {
       // only do these steps if we haven't been invoked from preview
       enableCompileButton();
       if (isPreviewMode) {
-        $keyboard.find('option[value="'+PREVIEW_LABEL+'"]').remove();
+        $keyboard.find('option[value="' + PREVIEW_LABEL + '"]').remove();
         isPreviewMode = false;
         setKeymapName('mine');
       }
