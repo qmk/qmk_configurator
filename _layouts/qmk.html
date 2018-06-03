@@ -18,17 +18,14 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/keypress/2.1.5/keypress.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
     <script src="{{ '/assets/js/script.js?v=' | append: site.github.build_revision | relative_url }}"></script>
 
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body>
-    <div class="backend-status">
-      <div class="bes-title">Server Status:</div>
-      <div class="bes-status">Checking</div>
-      <div class="bes-version">API Version: <span class="version-num">0.1</div>
-      <div class="bes-jobs">...</div>
-    </div>
+    <div id="status-app"></div>
     <div class="wrapper">
       <header>
         <h1><a href="/"><img src="/qmk_icon_48.png" alt="QMK Logo" width="48" style="vertical-align: middle" /> {{ site.title | default: site.github.repository_name }}</a></h1>

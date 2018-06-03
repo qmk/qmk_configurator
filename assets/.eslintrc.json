@@ -7,7 +7,9 @@
   },
   "globals": {
     "$": true,
-    "_": true
+    "_": true,
+    "Vue": true,
+    "axios": true
   },
   "rules": {
     "block-scoped-var": 2,

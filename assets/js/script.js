@@ -147,7 +147,7 @@ $(document).ready(() => {
 
   ignoreKeypressListener($('input[type=text]'));
 
-  checkStatus();
+  var statusVue = checkStatus();
   return;
 
   ////////////////////////////////////////
@@ -156,32 +156,60 @@ $(document).ready(() => {
   //
   ////////////////////////////////////////
 
-  function getPollInterval() {
-    return 25000 + 5000 * Math.random();
-  }
-
   function checkStatus() {
-    $.get(backend_status_url)
-      .then(json => {
-        var localTime = new Date(json.last_ping).toTimeString();
-        var stat = json.status;
-        stat = stat === 'running' ? 'UP' : stat;
-        $('.bes-status')
-          .html(_.escape(`${stat} @ ${localTime}`))
-          .removeClass('bes-error');
-        $('.bes-version-num').html(_.escape(json.version));
-        $('.bes-jobs').html(
-          _.template('<%= queue_length %> job(s) running')(json)
-        );
-      })
-      .fail(json => {
-        var localTime = new Date().toTimeString();
-        $('.bes-status')
-          .html(`DOWN @ ${localTime}`)
-          .addClass('bes-error');
-        console.error('API status error', json);
-      });
-    setTimeout(checkStatus, getPollInterval());
+    let statusBar = Vue.component('status-bar', {
+      template: `
+        <div class="backend-status">
+          <div class="bes-title">Server Status:</div>
+          <div :class="{ 'bes-status': true, 'bes-error': hasError }">{{status}}</div>
+          <div class="bes-version">API Version: <span class="version-num">{{version}}</div>
+          <div class="bes-jobs">{{jobs}}</div>
+        </div>`,
+      methods: {
+        getPollInterval() {
+          return 25000 + 5000 * Math.random();
+        },
+        fetchData() {
+          axios
+            .get(backend_status_url)
+            .then(({ data }) => {
+              var localTime = new Date(data.last_ping).toTimeString();
+              var stat = data.status;
+              stat = stat === 'running' ? 'UP' : stat;
+              this.status = _.escape(`${stat} @ ${localTime}`);
+              this.version = data.version;
+              this.jobs = _.template('<%= queue_length %> job(s) running')(
+                data
+              );
+              this.hasError = false;
+            })
+            .catch(json => {
+              var localTime = new Date().toTimeString();
+              this.status = `DOWN @ ${localTime}`;
+              this.hasError = true;
+              console.error('API status error', json);
+            });
+          setTimeout(this.fetchData, this.getPollInterval());
+        }
+      },
+      data: () => {
+        return {
+          status: 'Checking',
+          version: '0.1',
+          jobs: '...',
+          hasError: false,
+        };
+      },
+      mounted() {
+        setTimeout(this.fetchData, 1000);
+      }
+    });
+
+    return new Vue({
+      el: '#status-app',
+      template: '<div><statusBar></statusBar></div>',
+      components: { statusBar }
+    });
   }
 
   function ignoreKeypressListener(listener, $element) {
