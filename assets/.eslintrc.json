@@ -9,6 +9,7 @@
     "$": true,
     "_": true,
     "Vue": true,
+    "Vuex": true,
     "axios": true
   },
   "rules": {

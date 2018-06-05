@@ -1,15 +1,10 @@
 $(document).ready(() => {
   const PREVIEW_LABEL = 'Preview info.json';
-  var layouts = {};
-  var isPreviewMode = false;
   //  var keymap = [];
   var layer = 0;
   var job_id = '';
   var fwStream = '';
   var fwFilename = '';
-  var keyboards = [];
-  var status = '';
-  var keyboard = '';
   var layout = '';
   var backend_baseurl = 'https://api.qmk.fm';
   var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
@@ -18,6 +13,7 @@ $(document).ready(() => {
   var backend_readme_url_template = _.template(
     `${backend_keyboards_url}/<%= keyboard %>/readme`
   );
+
   var defaults = {
     MAX_X: 775,
     KEY_WIDTH: 40,
@@ -36,12 +32,12 @@ $(document).ready(() => {
   var $keyboard = $('#keyboard');
   var $layout = $('#layout');
   var $layer = $('.layer');
-  var $compile = $('#compile');
+  //  var $compile = $('#compile');
   var $fwFile = $('#fwFile');
   var $source = $('#source');
   var $export = $('#export');
   var $import = $('#import');
-  var $loadDefault = $('#load-default');
+  //  var $loadDefault = $('#load-default');
   var $fileImport = $('#fileImport');
   var $infoPreview = $('#infoPreview');
   var $status = $('#status');
@@ -54,7 +50,7 @@ $(document).ready(() => {
   var viewReadme = _.debounce(viewReadme, 500);
 
   var keycodes = getKeycodes();
-  $(window).on('hashchange', urlRouteChanged);
+  //  $(window).on('hashchange', urlRouteChanged);
 
   $.each(keycodes, createKeyCodeUI);
 
@@ -65,21 +61,9 @@ $(document).ready(() => {
   $visualKeymap.click(selectKeymapKey);
   $('#keycodes').click(assignKeycodeToSelectedKey);
 
-  var promise = $.get(backend_keyboards_url, createKeyboardDropdown);
-
-  $keyboard.change(
-    checkIsDirty(switchKeyboardLayout, () =>
-      $keyboard.val(keyboard_from_hash())
-    )
-  );
-
-  $layout.change(
-    checkIsDirty(changeLayout, () => $layout.val(layout_from_hash()))
-  );
-
   $layer.click(changeLayer);
 
-  $compile.click(compileLayout);
+  //  $compile.click(compileLayout);
 
   $fwFile.click(downloadFirmwareFile);
 
@@ -100,7 +84,7 @@ $(document).ready(() => {
     })
   );
 
-  $loadDefault.click(checkIsDirty(loadDefault));
+  //  $loadDefault.click(checkIsDirty(loadDefault));
 
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
   $fileImport.change(() => {
@@ -112,24 +96,13 @@ $(document).ready(() => {
   // explicitly export functions to global namespace
   window.setSelectWidth = setSelectWidth;
 
-  promise.then(() => {
-    // wait until keyboard list has loaded before checking url hash
-    urlRouteChanged();
-  });
-
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
   keypressListener.simple_combo('ctrl shift i', () => {
     // add a special bogus entry to the keyboard list for previews
-    if (!isPreviewMode) {
-      $keyboard.append(
-        $('<option>', {
-          value: PREVIEW_LABEL,
-          text: PREVIEW_LABEL
-        })
-      );
+    if (!vueStore.getters['app/isPreview']) {
+      vueStore.commit('app/enablePreview');
       disableCompileButton();
-      isPreviewMode = true;
     }
     $infoPreview.click();
   });
@@ -145,9 +118,26 @@ $(document).ready(() => {
     keypressListener
   );
 
-  ignoreKeypressListener($('input[type=text]'));
+  var vueStatus = checkStatus();
 
-  var statusVue = checkStatus();
+  Vue.use(VueRouter);
+  Vue.use(Vuex);
+
+  var vueStore = newStore();
+  var App = newApp(vueStore);
+  var vueRouter = new VueRouter({
+    routes: [
+      { path: '/:keyboardP(.+)/:layoutP(.+)', component: App },
+      { path: '/', component: App }
+    ]
+  });
+
+  var vueInstance = new Vue({
+    store: vueStore,
+    router: vueRouter
+  }).$mount('#controller-app');
+
+  ignoreKeypressListener($('input[type=text]'));
   return;
 
   ////////////////////////////////////////
@@ -156,13 +146,291 @@ $(document).ready(() => {
   //
   ////////////////////////////////////////
 
+  function newApp(store) {
+    var controllerTop = controllerComponent(store);
+    return Vue.component('controller', {
+      store,
+      template: '<div><controllerTop></controllerTop></div>',
+      components: { controllerTop }
+    });
+  }
+  function newStore() {
+    var appStore = {
+      namespaced: true,
+      state: {
+        keyboard: '',
+        keyboards: [],
+        layout: '',
+        layouts: {},
+        keymapName: 'mine',
+        compileDisabled: false,
+        isPreview: false
+      },
+      getters: {
+        keyboard: state => state.keyboard,
+        keyboards: state => state.keyboards,
+        layout: state => state.layout,
+        layouts: state => state.layouts,
+        keymapName: state => {
+          let name = state.keymapName.replace(/\s/g, '_').toLowerCase();
+          return name === '' ? 'mine' : name;
+        },
+        compileDisabled: state => state.compileDisabled,
+        isPreview: state => state.isPreview
+      },
+      actions: {
+        changeKeyboard({ state, commit, dispatch }, _keyboard) {
+          let promise = new Promise(resolve => {
+            commit('disablePreview');
+            commit('enableCompile');
+            commit('setKeyboard', _keyboard);
+            dispatch('loadLayouts').then(() => {
+              commit('setLayout', _.first(_.keys(state.layouts)));
+              resolve();
+            });
+          });
+          return promise;
+        },
+        loadLayouts({ commit, state }, preview) {
+          if (!_.isUndefined(preview)) {
+            let p = new Promise(resolve => {
+              let fake = {
+                keyboards: {}
+              };
+              fake.keyboards[state.keyboard] = preview;
+              commit('processInfoJSON', fake);
+              resolve(preview);
+            });
+            return p;
+          }
+          return axios
+            .get(backend_keyboards_url + '/' + state.keyboard)
+            .then(resp => {
+              commit('processInfoJSON', resp);
+              return resp;
+            });
+        }
+      },
+      mutations: {
+        enableCompile(state) {
+          state.compileDisabled = false;
+        },
+        disableCompile(state) {
+          state.compileDisabled = true;
+        },
+        enablePreview(state) {
+          state.isPreview = true;
+          state.keyboards = state.keyboards.concat(PREVIEW_LABEL);
+        },
+        disablePreview(state) {
+          state.isPreview = false;
+          state.keyboards = state.keyboards.filter(k => k !== PREVIEW_LABEL);
+          state.keymapName = 'mine';
+        },
+        setKeyboard(state, _keyboard) {
+          state.keyboard = _keyboard;
+        },
+        setKeyboards(state, _keyboards) {
+          state.keyboards = _keyboards;
+        },
+        setLayout(state, _layout) {
+          state.layout = _layout;
+        },
+        setKeymapName(state, _keymapName) {
+          state.keymapName = _keymapName.replace(/\s/g, '_').toLowerCase();
+        },
+        processInfoJSON(state, resp) {
+          if (resp.status === 200 || state.isPreview) {
+            let _layouts = {};
+            if (state.isPreview) {
+              _layouts = resp.keyboards[PREVIEW_LABEL].layouts;
+            } else {
+              _layouts = resp.data.keyboards[state.keyboard].layouts;
+            }
+            if (_.size(_layouts) === 0) {
+              state.layouts = { to_be_defined: [] };
+            } else if (_layouts) {
+              state.layouts = _.reduce(
+                _layouts,
+                function(acc, _layout, key) {
+                  acc[key] = _layout.layout ? _layout.layout : _layout;
+                  return acc;
+                },
+                {}
+              );
+            }
+            return state.layouts;
+          }
+          return {};
+        }
+      }
+    };
+
+    return new Vuex.Store({
+      modules: {
+        app: appStore
+      },
+      strict: true
+    });
+  }
+
+  function controllerComponent(store) {
+    return Vue.component('controller-top', {
+      template: `
+  <div id="controller-top">
+    <div class="topctrl">
+      <span class="topctrl-1">
+      <label style="display: inline-block; width: 75px;" >Keyboard:</label>
+      <select id="keyboard" v-bind:style="width" v-bind:value="keyboard" @change="updateKeyboard">
+        <option v-for='keeb in keyboards' :key="keeb" v-bind:value="keeb">
+          {{keeb}}
+        </option>
+      </select>
+      </span>
+      <span class="topctrl-2">
+        <label id="keymap-name-label">Keymap Name:</label>
+        <input id="keymap-name" type="text" v-model="keymapName" placeholder="keymap name"/>
+      </span>
+      <span class="topctrl-3">
+      <button id="load-default"
+         title="Load default keymap from QMK Firmware"
+         @click="loadDefault">Load Default</button>
+      <button id="compile"
+              title="Compile keymap"
+              v-bind:disabled="compileDisabled"
+              @click="compile">Compile</button>
+      </span>
+    </div>
+    <label style="display: inline-block; width: 75px;">Layout:</label>
+    <select id="layout" v-bind:value="layout" @change="updateLayout">
+      <option v-for='(aLayout, layoutName) in layouts'
+              :key="layoutName"
+              v-bind:value="layoutName">
+        {{layoutName}}
+      </option>
+    </select>
+  </div>
+      `,
+      computed: {
+        keyboard: () => store.getters['app/keyboard'],
+        keyboards: () => store.getters['app/keyboards'],
+        layout: () => store.getters['app/layout'],
+        layouts: () => store.getters['app/layouts'],
+        compileDisabled: () => store.getters['app/compileDisabled'],
+        realKeymapName: () => store.getters['app/keymapName']
+      },
+      watch: {
+        keymapName: function(newKeymapName, oldKeymapName) {
+          if (newKeymapName !== oldKeymapName) {
+            this.updateKeymapName(newKeymapName);
+          }
+        },
+        realKeymapName: function(newName, oldName) {
+          if (newName !== oldName) {
+            this.keymapName = newName;
+          }
+        }
+      },
+      methods: {
+        loadDefault() {
+          // hard-coding planck as the only default right now
+          var keyboardName = this.keyboard.replace('/', '_');
+          axios
+            .get(`keymaps/${keyboardName}_default.json`)
+            .then(({ data, status }) => {
+              if (status === 200) {
+                console.log(data);
+                reset_keymap();
+
+                this.updateLayout(data.layout);
+                this.updateKeymapName(data.keymap);
+                load_converted_keymap(data.layers);
+                render_layout(
+                  this.layouts[this.layout].map(v => Object.assign({}, v))
+                );
+                myKeymap.setDirty();
+              }
+            })
+            .catch(error => {
+              statusError(
+                `\n* Sorry there is no default for the ${
+                  this.keyboard
+                } keyboard... yet!`
+              );
+              console.log('error loadDefault', error);
+            });
+        },
+        fetchKeyboards() {
+          axios.get(backend_keyboards_url).then(this.createKeyboardDropdown);
+        },
+        createKeyboardDropdown({ data, status }) {
+          let _keyboard = '';
+          if (status === 200) {
+            store.commit('app/setKeyboards', data);
+            _keyboard = _.first(this.keyboards);
+          }
+          let { keyboardP } = this.$route.params;
+          if (_.isString(keyboardP) && keyboardP !== '' && keyboardP !== PREVIEW_LABEL) {
+            _keyboard = keyboardP;
+          }
+          this.updateKeyboard({ target: { value: _keyboard } });
+        },
+        updateKeyboard(e) {
+          let newKeyboard = e.target ? e.target.value : e;
+          let render = e.target;
+          return store.dispatch('app/changeKeyboard', newKeyboard).then(() => {
+            reset_keymap();
+            this.$router.replace({
+              path: `/${this.keyboard}/${this.layout}`
+            });
+            if (render) {
+              render_layout(
+                this.layouts[this.layout].map(v => Object.assign({}, v))
+              );
+              viewReadme(this.keyboard);
+              disableOtherButtons();
+            }
+          });
+        },
+        updateLayout(e) {
+          let newLayout = e.target ? e.target.value : e;
+          let render = e.target;
+          store.commit('app/setLayout', newLayout);
+          reset_keymap();
+          this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
+          render &&
+            render_layout(
+              this.layouts[this.layout].map(v => Object.assign({}, v))
+            );
+        },
+        updateKeymapName(newKeymapName) {
+          this.keymapName = newKeymapName;
+          store.commit('app/setKeymapName', newKeymapName);
+        },
+        compile() {
+          compileLayout(this.keyboard, this.realKeymapName, this.layout);
+        }
+      },
+      data: () => {
+        return {
+          keymapName: 'mine',
+          width: 0,
+          selected: ''
+        };
+      },
+      mounted() {
+        this.fetchKeyboards();
+      }
+    });
+  }
+
   function checkStatus() {
     let statusBar = Vue.component('status-bar', {
       template: `
         <div class="backend-status">
           <div class="bes-title">Server Status:</div>
           <div :class="{ 'bes-status': true, 'bes-error': hasError }">{{status}}</div>
-          <div class="bes-version">API Version: <span class="version-num">{{version}}</div>
+          <div class="bes-version">API Version: <span class="version-num">{{version}}</span></div>
           <div class="bes-jobs">{{jobs}}</div>
         </div>`,
       methods: {
@@ -197,7 +465,7 @@ $(document).ready(() => {
           status: 'Checking',
           version: '0.1',
           jobs: '...',
-          hasError: false,
+          hasError: false
         };
       },
       mounted() {
@@ -256,8 +524,9 @@ $(document).ready(() => {
     };
   }
 
-  function viewReadme() {
-    $.get(backend_readme_url_template({ keyboard: keyboard })).then(result => {
+  function viewReadme(_keyboard) {
+    $.get(backend_readme_url_template({ keyboard: _keyboard })).then(result => {
+      $status.html('');
       $status.append(_.escape(result));
     });
   }
@@ -323,49 +592,6 @@ $(document).ready(() => {
     };
   }
 
-  function loadDefault() {
-    // hard-coding planck as the only default right now
-    var keyboardName = $keyboard.val().replace('/', '_');
-    $.get(`keymaps/${keyboardName}_default.json`, data => {
-      console.log(data);
-      reset_keymap();
-
-      keyboard = data.keyboard;
-      $keyboard.val(keyboard);
-      setSelectWidth($keyboard);
-      load_layouts($keyboard.val()).then(() => {
-        layout = data.layout;
-        $layout.val(layout);
-        setSelectWidth($layout);
-
-        setKeymapName(data.keymap);
-
-        load_converted_keymap(data.layers);
-
-        render_layout($layout.val());
-        myKeymap.setDirty();
-      });
-    }).fail(error => {
-      statusError(
-        `\n* Sorry there is no default for the ${$keyboard.val()} keyboard... yet!`
-      );
-      console.log('error loadDefault', error);
-    });
-  }
-
-  function getKeymapName() {
-    var keymapName = $('#keymap-name')
-      .val()
-      .replace(/\s/g, '_')
-      .toLowerCase();
-    // use a default name if it is blank
-    return keymapName === '' ? 'mine' : keymapName;
-  }
-
-  function setKeymapName(name) {
-    $('#keymap-name').val(name.replace(/\s/g, '_').toLowerCase());
-  }
-
   function previewInfoOnLoad(reader /*e*/) {
     var jsonText = reader.result;
     var data;
@@ -379,18 +605,14 @@ $(document).ready(() => {
 
     reset_keymap();
 
-    keyboard = data.keyboard_name;
-    $keyboard.val(PREVIEW_LABEL);
-    setSelectWidth($keyboard);
-    load_layouts($keyboard.val(), data).then(() => {
-      setSelectWidth($layout);
-      layout = _.first(_.keys(data.layouts));
-      $layout.val(layout);
-      switchKeyboardLayout(isPreviewMode);
+    vueStore.commit('app/setKeyboard', PREVIEW_LABEL);
+    vueStore.dispatch('app/loadLayouts', data).then(() => {
+      layout = _.first(_.keys(vueStore.getters['app/layouts']));
+      vueStore.commit('app/setLayout', layout);
+      vueStore.commit('app/setKeymapName', 'info.json preview');
 
-      setKeymapName('info.json preview');
-
-      render_layout($layout.val());
+      let _layouts = vueStore.getters['app/layouts'];
+      render_layout(_layouts[layout].map(v => Object.assign({}, v)));
     });
   }
 
@@ -431,23 +653,25 @@ $(document).ready(() => {
 
     reset_keymap();
 
-    keyboard = data.keyboard;
-    $keyboard.val(keyboard);
-    setSelectWidth($keyboard);
-    load_layouts($keyboard.val()).then(() => {
-      setSelectWidth($layout);
-      layout = data.layout;
-      $layout.val(layout);
-      switchKeyboardLayout();
+    vueStore.commit('app/setKeyboard', data.keyboard);
+    vueStore
+      .dispatch('app/changeKeyboard', vueStore.getters['app/keyboard'])
+      .then(() => {
+        vueStore.commit('app/setLayout', data.layout);
+        vueStore.commit('app/setKeymapName', data.keymap);
+        // todo validate these values
+        vueRouter.replace({
+          path: `/${data.keyboard}/${data.layout}`
+        });
 
-      setKeymapName(data.keymap);
+        load_converted_keymap(data.layers);
 
-      load_converted_keymap(data.layers);
-
-      render_layout($layout.val());
-      myKeymap.setDirty();
-      viewReadme();
-    });
+        let _layouts = vueStore.getters['app/layouts'];
+        render_layout(_layouts[data.layout].map(v => Object.assign({}, v)));
+        myKeymap.setDirty();
+        disableOtherButtons();
+        viewReadme(data.keyboard);
+      });
   }
 
   function importJSON(files) {
@@ -462,13 +686,16 @@ $(document).ready(() => {
 
     //API payload format
     var data = {
-      keyboard: $keyboard.val(),
-      keymap: getKeymapName(),
-      layout: $layout.val(),
+      keyboard: vueStore.getters['app/keyboard'],
+      keymap: vueStore.getters['app/keymapName'],
+      layout: vueStore.getters['app/layout'],
       layers: layers
     };
 
-    download(getKeymapName() + '.json', JSON.stringify(data));
+    download(
+      `${vueStore.getters['app/keymapName']}.json`,
+      JSON.stringify(data)
+    );
   }
   function scrollHandler() {
     if (offsetTop < $(document).scrollTop()) {
@@ -487,13 +714,13 @@ $(document).ready(() => {
     download(fwFilename, fwStream);
   }
 
-  function compileLayout() {
+  function compileLayout(_keyboard, _keymapName, _layout) {
     disableCompileButton();
     var layers = myKeymap.exportLayers({ compiler: true });
     var data = {
-      keyboard: $keyboard.val(),
-      keymap: getKeymapName(),
-      layout: $layout.val(),
+      keyboard: _keyboard,
+      keymap: _keymapName,
+      layout: _layout,
       layers: layers
     };
     console.log(JSON.stringify(data));
@@ -501,12 +728,7 @@ $(document).ready(() => {
       $status.append('\n');
     }
     $status.append(
-      '* Sending ' +
-        $keyboard.val() +
-        ':' +
-        getKeymapName() +
-        ' with ' +
-        $layout.val()
+      '* Sending ' + _keyboard + ':' + _keymapName + ' with ' + _layout
     );
     $.ajax({
       type: 'POST',
@@ -534,46 +756,9 @@ $(document).ready(() => {
     layer = e.target.innerHTML;
     myKeymap.changeLayer(layer);
     setLayerToNonEmpty(layer);
-    render_layout($layout.val());
-  }
-
-  function changeLayout() {
-    window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
-    myKeymap.clearDirty();
-  }
-
-  function switchKeyboardLayout(preview = false) {
-    window.location.hash = '#/' + $keyboard.val() + '/' + $layout.val();
-    $status.html(''); // clear the DOM not the value otherwise weird things happen
-    myKeymap.clearDirty();
-    if (!preview) {
-      // only do these steps if we haven't been invoked from preview
-      enableCompileButton();
-      if (isPreviewMode) {
-        $keyboard.find('option[value="' + PREVIEW_LABEL + '"]').remove();
-        isPreviewMode = false;
-        setKeymapName('mine');
-      }
-    }
-    disableOtherButtons();
-    // load_layouts($keyboard).val());
-  }
-
-  function createKeyboardDropdown(data) {
-    keyboards = data;
-    _.forEach(data, function(keyb) {
-      $keyboard.append(
-        $('<option>', {
-          value: keyb,
-          text: keyb
-        })
-      );
-    });
-    if (keyboard_from_hash()) {
-      $keyboard.val(keyboard_from_hash());
-    }
-    setSelectWidth($keyboard);
-    load_layouts($keyboard.val());
+    let _layouts = vueStore.getters['app/layouts'];
+    let _layout = vueStore.getters['app/layout'];
+    render_layout(_layouts[_layout].map(v => Object.assign({}, v)));
   }
 
   function makeDraggable(k, d) {
@@ -641,67 +826,6 @@ $(document).ready(() => {
     }
   }
 
-  function urlRouteChanged() {
-    console.log(window.location.hash);
-
-    if (keyboard_from_hash() && keyboard_from_hash() !== keyboard) {
-      reset_keymap();
-      keyboard = keyboard_from_hash();
-      $keyboard.val(keyboard);
-      setSelectWidth($keyboard);
-      load_layouts($keyboard.val());
-    } else if (layout_from_hash() && layout_from_hash() !== layout) {
-      reset_keymap();
-      layout = layout_from_hash();
-      $layout.val(layout);
-      setSelectWidth($layout);
-      render_layout($layout.val());
-    }
-    viewReadme();
-  }
-
-  function load_layouts(_keyboard, preview) {
-    var _processInfoJSON = _.partial(processInfoJSON, _keyboard);
-    if (!_.isUndefined(preview)) {
-      let p = new Promise(resolve => {
-        let fake = {
-          keyboards: {}
-        };
-        fake.keyboards[_keyboard] = preview;
-        _processInfoJSON(fake);
-        resolve(preview);
-      });
-      return p;
-    }
-    return $.get(backend_keyboards_url + '/' + _keyboard, _processInfoJSON);
-    function processInfoJSON(_keyboard, data) {
-      if (data.keyboards[_keyboard]) {
-        $layout.find('option').remove();
-        layouts = _.reduce(
-          data.keyboards[_keyboard].layouts,
-          function(acc, _layout, key) {
-            $layout.append(
-              $('<option>', {
-                value: key,
-                text: key
-              })
-            );
-            acc[key] = _layout.layout ? _layout.layout : _layout;
-            return acc;
-          },
-          {}
-        );
-
-        if (layout_from_hash()) {
-          $layout.val(layout_from_hash());
-        }
-        changeLayout();
-        setSelectWidth($layout);
-        render_layout($layout.val());
-      }
-    }
-  }
-
   function calcKeyKeymapDims(w, h) {
     return {
       w: w * config.KEY_X_SPACING - (config.KEY_X_SPACING - config.KEY_WIDTH),
@@ -721,7 +845,7 @@ $(document).ready(() => {
 
     var max = { x: 0, y: 0 };
 
-    $.each(layouts[_layout], function(k, d) {
+    $.each(_layout, function(k, d) {
       // pre-calc size
       if (!d.w) {
         d.w = 1;
@@ -747,7 +871,7 @@ $(document).ready(() => {
       max.y *= config.SCALE;
     }
 
-    $.each(layouts[_layout], function(k, d) {
+    $.each(_layout, function(k, d) {
       if (!d.w) {
         d.w = 1;
       }
@@ -793,11 +917,11 @@ $(document).ready(() => {
   }
 
   function enableCompileButton() {
-    $compile.removeAttr('disabled');
+    vueStore.commit('app/enableCompile');
   }
 
   function disableCompileButton() {
-    $compile.attr('disabled', 'disabled');
+    vueStore.commit('app/disableCompile');
   }
 
   function enableOtherButtons() {
@@ -1028,30 +1152,6 @@ $(document).ready(() => {
     layer = 0;
     $('.layer').removeClass('non-empty active');
     $('.layer.0').addClass('active non-empty');
-  }
-
-  function keyboard_from_hash() {
-    if (keyboards.indexOf(window.location.hash.replace(/\#\//gi, '')) !== -1) {
-      return window.location.hash.replace(/\#\//gi, '');
-    } else if (
-      keyboards.indexOf(
-        window.location.hash.replace(/\#\//gi, '').replace(/\/[^\/]+$/gi, '')
-      ) !== -1
-    ) {
-      return window.location.hash
-        .replace(/\#\//gi, '')
-        .replace(/\/[^\/]+$/gi, '');
-    } else {
-      return false;
-    }
-  }
-
-  function layout_from_hash() {
-    if (window.location.hash.replace(/^.+\//i, '') in layouts) {
-      return window.location.hash.replace(/^.+\//i, '');
-    } else {
-      return false;
-    }
   }
 
   function droppable_config(t, key) {
@@ -1746,13 +1846,20 @@ $(document).ready(() => {
       setKeycodeLayer: setKeycodeLayer,
       setText: setText,
       size: size,
-      swapKeys: swapKeys
+      swapKeys: swapKeys,
+      getLayer: getLayer
     });
     return instance;
 
     //////////
     // Impl
     //////////
+
+    function getLayer(__layer) {
+      return instance.km[__layer].map(key => {
+        return Object.assign({}, key);
+      });
+    }
 
     function assignKey(__layer, index, name, code, type) {
       instance.km[__layer][index] = {
