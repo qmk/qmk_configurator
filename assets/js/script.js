@@ -5,8 +5,8 @@ $(document).ready(() => {
   //  var keymap = [];
   var layer = 0;
   var job_id = '';
-  var hex_stream = '';
-  var hex_filename = '';
+  var fw_stream = '';
+  var fw_filename = '';
   var keyboards = [];
   var status = '';
   var keyboard = '';
@@ -37,7 +37,7 @@ $(document).ready(() => {
   var $layout = $('#layout');
   var $layer = $('.layer');
   var $compile = $('#compile');
-  var $hex = $('#hex');
+  var $fwfile = $('#fwfile');
   var $source = $('#source');
   var $export = $('#export');
   var $import = $('#import');
@@ -81,7 +81,7 @@ $(document).ready(() => {
 
   $compile.click(compileLayout);
 
-  $hex.click(downloadHexFile);
+  $fwfile.click(downloadFirmwareFile);
 
   $source.click(downloadSourceBundle);
 
@@ -455,8 +455,8 @@ $(document).ready(() => {
   function downloadSourceBundle() {
     downloadSrc(backend_compile_url + '/' + job_id + '/source');
   }
-  function downloadHexFile() {
-    download(hex_filename, hex_stream);
+  function downloadFirmwareFile() {
+    download(fw_filename, fw_stream);
   }
 
   function compileLayout() {
@@ -773,13 +773,13 @@ $(document).ready(() => {
   }
 
   function enableOtherButtons() {
-    [$hex, $('#toolbox'), $source].forEach($el => {
+    [$fwfile, $('#toolbox'), $source].forEach($el => {
       $el.removeAttr('disabled');
     });
   }
 
   function disableOtherButtons() {
-    [$hex, $('#toolbox'), $source].forEach($el => {
+    [$fwfile, $('#toolbox'), $source].forEach($el => {
       $el.attr('disabled', 'disabled');
     });
   }
@@ -793,8 +793,8 @@ $(document).ready(() => {
           $status.append(
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
-          hex_stream = data.result.firmware;
-          hex_filename = data.result.firmware_filename;
+          fw_stream = data.result.firmware;
+          fw_filename = data.result.firmware_filename;
           enableCompileButton();
           enableOtherButtons();
           break;
