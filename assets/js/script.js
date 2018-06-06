@@ -37,7 +37,7 @@ $(document).ready(() => {
   var $layout = $('#layout');
   var $layer = $('.layer');
   var $compile = $('#compile');
-  var $fwfile = $('#fwfile');
+  var $fwFile = $('#fwFile');
   var $source = $('#source');
   var $export = $('#export');
   var $import = $('#import');
@@ -81,7 +81,7 @@ $(document).ready(() => {
 
   $compile.click(compileLayout);
 
-  $fwfile.click(downloadFirmwareFile);
+  $fwFile.click(downloadFirmwareFile);
 
   $source.click(downloadSourceBundle);
 
@@ -773,13 +773,13 @@ $(document).ready(() => {
   }
 
   function enableOtherButtons() {
-    [$fwfile, $('#toolbox'), $source].forEach($el => {
+    [$fwFile, $('#toolbox'), $source].forEach($el => {
       $el.removeAttr('disabled');
     });
   }
 
   function disableOtherButtons() {
-    [$fwfile, $('#toolbox'), $source].forEach($el => {
+    [$fwFile, $('#toolbox'), $source].forEach($el => {
       $el.attr('disabled', 'disabled');
     });
   }
