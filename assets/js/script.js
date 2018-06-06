@@ -5,8 +5,8 @@ $(document).ready(() => {
   //  var keymap = [];
   var layer = 0;
   var job_id = '';
-  var fw_stream = '';
-  var fw_filename = '';
+  var fwStream = '';
+  var fwFilename = '';
   var keyboards = [];
   var status = '';
   var keyboard = '';
@@ -456,7 +456,7 @@ $(document).ready(() => {
     downloadSrc(backend_compile_url + '/' + job_id + '/source');
   }
   function downloadFirmwareFile() {
-    download(fw_filename, fw_stream);
+    download(fwFilename, fwStream);
   }
 
   function compileLayout() {
@@ -793,8 +793,8 @@ $(document).ready(() => {
           $status.append(
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
-          fw_stream = data.result.firmware;
-          fw_filename = data.result.firmware_filename;
+          fwStream = data.result.firmware;
+          fwFilename = data.result.firmware_filename;
           enableCompileButton();
           enableOtherButtons();
           break;
