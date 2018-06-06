@@ -622,7 +622,7 @@ a img {
 }
 
 #compile,
-#hex,
+#fwFile,
 #toolbox,
 #source,
 #export,
@@ -647,7 +647,7 @@ a img {
 }
 
 #compile:disabled,
-#hex:disabled,
+#fwFile:disabled,
 #toolbox:disabled,
 #source:disabled {
   background: #ccc;

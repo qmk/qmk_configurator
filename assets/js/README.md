@@ -20,7 +20,7 @@ The current functions for the configurator are:
 
  1. Editing of Keymaps
  1. Exporting and Import of Custom Keymaps via JSON
- 1. Compiling those keymaps into Hex files
+ 1. Compiling those keymaps into firmware files. Currently, only .hex files are supported
  1. Downloading Hex Files or Source code generated
 
 Code Style
