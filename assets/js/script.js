@@ -147,13 +147,28 @@ $(document).ready(() => {
   ////////////////////////////////////////
 
   function newApp(store) {
-    var controllerTop = controllerComponent(store);
+    var controllerTop = topControllerComponent(store);
     return Vue.component('controller', {
       store,
       template: '<div><controllerTop></controllerTop></div>',
       components: { controllerTop }
     });
   }
+
+  function getPreferredLayout(layouts) {
+    var keys = _.keys(layouts);
+    if (_.includes(keys, 'LAYOUT')) {
+      return 'LAYOUT';
+    }
+    if (_.includes(keys, 'LAYOUT_all')) {
+      return 'LAYOUT_all';
+    }
+    if (_.includes(keys, 'KEYMAP')) {
+      return 'KEYMAP';
+    }
+    return _.first(keys);
+  }
+
   function newStore() {
     var appStore = {
       namespaced: true,
@@ -185,7 +200,7 @@ $(document).ready(() => {
             commit('enableCompile');
             commit('setKeyboard', _keyboard);
             dispatch('loadLayouts').then(() => {
-              commit('setLayout', _.first(_.keys(state.layouts)));
+              commit('setLayout', getPreferredLayout(state.layouts));
               resolve();
             });
           });
@@ -198,7 +213,7 @@ $(document).ready(() => {
                 keyboards: {}
               };
               fake.keyboards[state.keyboard] = preview;
-              commit('processInfoJSON', fake);
+              commit('processLayouts', fake);
               resolve(preview);
             });
             return p;
@@ -206,7 +221,7 @@ $(document).ready(() => {
           return axios
             .get(backend_keyboards_url + '/' + state.keyboard)
             .then(resp => {
-              commit('processInfoJSON', resp);
+              commit('processLayouts', resp);
               return resp;
             });
         }
@@ -239,7 +254,7 @@ $(document).ready(() => {
         setKeymapName(state, _keymapName) {
           state.keymapName = _keymapName.replace(/\s/g, '_').toLowerCase();
         },
-        processInfoJSON(state, resp) {
+        processLayouts(state, resp) {
           if (resp.status === 200 || state.isPreview) {
             let _layouts = {};
             if (state.isPreview) {
@@ -274,7 +289,7 @@ $(document).ready(() => {
     });
   }
 
-  function controllerComponent(store) {
+  function topControllerComponent(store) {
     return Vue.component('controller-top', {
       template: `
   <div id="controller-top">
@@ -370,7 +385,11 @@ $(document).ready(() => {
             _keyboard = _.first(this.keyboards);
           }
           let { keyboardP } = this.$route.params;
-          if (_.isString(keyboardP) && keyboardP !== '' && keyboardP !== PREVIEW_LABEL) {
+          if (
+            _.isString(keyboardP) &&
+            keyboardP !== '' &&
+            keyboardP !== PREVIEW_LABEL
+          ) {
             _keyboard = keyboardP;
           }
           this.updateKeyboard({ target: { value: _keyboard } });
@@ -607,7 +626,7 @@ $(document).ready(() => {
 
     vueStore.commit('app/setKeyboard', PREVIEW_LABEL);
     vueStore.dispatch('app/loadLayouts', data).then(() => {
-      layout = _.first(_.keys(vueStore.getters['app/layouts']));
+      layout = getPreferredLayout(vueStore.getters['app/layouts']);
       vueStore.commit('app/setLayout', layout);
       vueStore.commit('app/setKeymapName', 'info.json preview');
 
