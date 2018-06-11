@@ -32,12 +32,12 @@ $(document).ready(() => {
   var $keyboard = $('#keyboard');
   var $layout = $('#layout');
   var $layer = $('.layer');
-  //  var $compile = $('#compile');
+
   var $fwFile = $('#fwFile');
   var $source = $('#source');
   var $export = $('#export');
   var $import = $('#import');
-  //  var $loadDefault = $('#load-default');
+
   var $fileImport = $('#fileImport');
   var $infoPreview = $('#infoPreview');
   var $status = $('#status');
@@ -62,8 +62,6 @@ $(document).ready(() => {
   $('#keycodes').click(assignKeycodeToSelectedKey);
 
   $layer.click(changeLayer);
-
-  //  $compile.click(compileLayout);
 
   $fwFile.click(downloadFirmwareFile);
 
@@ -99,7 +97,6 @@ $(document).ready(() => {
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
   keypressListener.simple_combo('ctrl shift i', () => {
-    // add a special bogus entry to the keyboard list for previews
     if (!vueStore.getters['app/isPreview']) {
       vueStore.commit('app/enablePreview');
       disableCompileButton();
