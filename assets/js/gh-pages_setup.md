@@ -10,7 +10,7 @@ Go to [qmk/qmk_configurator](https://github.com/qmk/qmk_configurator), and click
 
 In your git CLI, enter:
 
-    git branch gh-pages
+    git checkout gh-pages
 
 This will create a copy of the `gh-pages` branch that is already on the QMK repo.
 
@@ -30,7 +30,7 @@ In the root directory, open the `_config.yml` file in a text editor, and edit it
     description: QMK for potatoes - an open source configurator for QMK Firmware (only the AVR boards right now)
     baseurl: "/qmk_configurator"     # DO NOT CHANGE THIS LINE!
     # Replace <github_username> on the following three lines with your GitHub username
-    url: "http://<github_username>.qmk.fm"
+    url: "http://<github_username>.github.io"
     github_username: <github_username>
     repository: <github_username>/qmk_configurator
     theme: jekyll-theme-minimal
@@ -43,4 +43,4 @@ When you're done editing, save the file, commit it to your branch, and push your
     git commit -m "initial setup"
     git push
 
-Once you've pushed your changes, your instance should be live in about 30 seconds at `https://<github_username>.qmk.fm/qmk_configurator`.
+Once you've pushed your changes, your instance should be live in about 30 seconds at `https://<github_username>.github.io/qmk_configurator`.
