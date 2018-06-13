@@ -14,9 +14,9 @@ In your git CLI, enter:
 
 This will create a copy of the `gh-pages` branch that is already on the QMK repo.
 
-## 3. Remove the CNAME directory
+## 3. Remove the CNAME file
 
-Remove the `CNAME` directory, which is only for the production version of the Configurator.
+Remove the `CNAME` file, which is only for the production version of the Configurator.
 
     rm CNAME
 
