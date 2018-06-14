@@ -164,6 +164,11 @@ $(document).ready(() => {
     if (_.includes(keys, 'KEYMAP')) {
       return 'KEYMAP';
     }
+    // avoid keymaps ending with _kc unless we have no other choice
+    var nextBest = keys.filter((key) => !key.endsWith('_kc'));
+    if (nextBest.length > 0) {
+      return _.first(nextBest);
+    }
     return _.first(keys);
   }
 
