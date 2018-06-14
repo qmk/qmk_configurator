@@ -1,5 +1,8 @@
 $(document).ready(() => {
   const PREVIEW_LABEL = 'Preview info.json';
+  const clearKeymapTemplate = _.template(
+    'This will clear your keymap - are you sure you want to <%= action %>?'
+  );
   //  var keymap = [];
   var layer = 0;
   var job_id = '';
@@ -81,8 +84,6 @@ $(document).ready(() => {
       $fileImport.click();
     })
   );
-
-  //  $loadDefault.click(checkIsDirty(loadDefault));
 
   //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
   $fileImport.change(() => {
@@ -293,7 +294,7 @@ $(document).ready(() => {
     <div class="topctrl">
       <span class="topctrl-1">
       <label style="display: inline-block; width: 75px;" >Keyboard:</label>
-      <select id="keyboard" v-bind:style="width" v-bind:value="keyboard" @change="updateKeyboard">
+      <select id="keyboard" v-bind:style="width" v-model="keyboard">
         <option v-for='keeb in keyboards' :key="keeb" v-bind:value="keeb">
           {{keeb}}
         </option>
@@ -314,7 +315,7 @@ $(document).ready(() => {
       </span>
     </div>
     <label style="display: inline-block; width: 75px;">Layout:</label>
-    <select id="layout" v-bind:value="layout" @change="updateLayout">
+    <select id="layout" v-model="layout">
       <option v-for='(aLayout, layoutName) in layouts'
               :key="layoutName"
               v-bind:value="layoutName">
@@ -324,12 +325,48 @@ $(document).ready(() => {
   </div>
       `,
       computed: {
-        keyboard: () => store.getters['app/keyboard'],
         keyboards: () => store.getters['app/keyboards'],
-        layout: () => store.getters['app/layout'],
         layouts: () => store.getters['app/layouts'],
         compileDisabled: () => store.getters['app/compileDisabled'],
-        realKeymapName: () => store.getters['app/keymapName']
+        realKeymapName: () => store.getters['app/keymapName'],
+        keyboard: {
+          get() {
+            return store.getters['app/keyboard'];
+          },
+          set(value) {
+            if (myKeymap.isDirty()) {
+              if (
+                !confirm(
+                  clearKeymapTemplate({ action: 'change your keyboard' })
+                )
+              ) {
+                var old = store.getters['app/keyboard'];
+                store.commit('app/setKeyboard', ''); // force a refresh
+                Vue.nextTick(store.commit('app/setKeyboard', old));
+                return false;
+              }
+            }
+            this.updateKeyboard(value);
+          }
+        },
+        layout: {
+          get() {
+            return store.getters['app/layout'];
+          },
+          set(value) {
+            if (myKeymap.isDirty()) {
+              if (
+                !confirm(clearKeymapTemplate({ action: 'change your layout' }))
+              ) {
+                var old = store.getters['app/layout'];
+                store.commit('app/setLayout', ''); // force a refresh
+                Vue.nextTick(store.commit('app/setLayout', old));
+                return false;
+              }
+            }
+            this.updateLayout({ target: { value } });
+          }
+        }
       },
       watch: {
         keymapName: function(newKeymapName, oldKeymapName) {
@@ -345,6 +382,13 @@ $(document).ready(() => {
       },
       methods: {
         loadDefault() {
+          if (myKeymap.isDirty()) {
+            if (
+              !confirm(clearKeymapTemplate({ action: 'load default keymap' }))
+            ) {
+              return false;
+            }
+          }
           // hard-coding planck as the only default right now
           var keyboardName = this.keyboard.replace('/', '_');
           axios
@@ -389,23 +433,20 @@ $(document).ready(() => {
           ) {
             _keyboard = keyboardP;
           }
-          this.updateKeyboard({ target: { value: _keyboard } });
+          this.updateKeyboard(_keyboard);
         },
         updateKeyboard(e) {
-          let newKeyboard = e.target ? e.target.value : e;
-          let render = e.target;
+          let newKeyboard = e;
           return store.dispatch('app/changeKeyboard', newKeyboard).then(() => {
             reset_keymap();
             this.$router.replace({
               path: `/${this.keyboard}/${this.layout}`
             });
-            if (render) {
-              render_layout(
-                this.layouts[this.layout].map(v => Object.assign({}, v))
-              );
-              viewReadme(this.keyboard);
-              disableOtherButtons();
-            }
+            render_layout(
+              this.layouts[this.layout].map(v => Object.assign({}, v))
+            );
+            viewReadme(this.keyboard);
+            disableOtherButtons();
           });
         },
         updateLayout(e) {
@@ -591,7 +632,7 @@ $(document).ready(() => {
   }
 
   function checkIsDirty(confirmFn, cancelFn) {
-    return () => {
+    return function() {
       if (myKeymap.isDirty()) {
         if (
           !confirm(
@@ -1126,10 +1167,6 @@ $(document).ready(() => {
 
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   function load_converted_keymap(converted_keymap) {
-    //Empty the keymap variable
-    //keymap = [];
-    myKeymap.clear();
-
     //Loop over each layer from the keymap
     var stats = { count: 0, any: 0, layers: 0 };
     $.each(converted_keymap, function(_layer /*, keys*/) {
@@ -1900,6 +1937,7 @@ $(document).ready(() => {
 
     function clear() {
       instance.km = [];
+      this.clearDirty();
     }
 
     function initLayer(__layer) {
