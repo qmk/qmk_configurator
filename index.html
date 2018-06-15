@@ -7,23 +7,8 @@ layout: qmk
     <option id="templateOption"></option>
 </select>
 <div id="controller">
-  <div id="controller-top">
-    <div class="topctrl">
-      <span class="topctrl-1">
-      <label style="display: inline-block; width: 75px;" >Keyboard:</label>
-      <select id="keyboard" onChange="setSelectWidth(this);"></select>
-      </span>
-      <span class="topctrl-2">
-        <label id="keymap-name-label">Keymap Name:</label>
-        <input id="keymap-name" type="text" value="mine" />
-      </span>
-      <span class="topctrl-3">
-      <button id="load-default" title="Load default keymap from QMK Firmware">Load Default</button>
-      <button id="compile" title="Compile keymap">Compile</button>
-      </span>
-    </div>
-    <label style="display: inline-block; width: 75px;">Layout:</label>
-    <select id="layout" onChange="setSelectWidth(this);"></select>
+  <div id="controller-app">
+    <router-view></router-view>
   </div>
   <textarea id="status" readonly></textarea>
   <div id="controller-bottom" class="botctrl">
