@@ -12,6 +12,7 @@
     "singleQuote": true
   },
   "dependencies": {
+    "nightwatch": "^1.0.6",
     "eslint": "^4.19.1",
     "less": "^3.0.4"
   },
