@@ -7,3 +7,5 @@ secrets.tar
 vendor/*
 *.sw[po]
 node_modules
+/functional_tests/bin/selenium-server-standalone-3.12.0.jar
+

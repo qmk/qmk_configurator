@@ -9,7 +9,7 @@ nightwatch_config = {
     start_process: false,
     host: 'localhost',
     port: 4444,
-    server_path:'./functional_tests/bin/selenium-server-standalone-3.12.0.jar',
+    server_path:'./functional_tests/bin/selenium-server-standalone-3.12.0.jar', //Set this to the version you are using
     cli_args:{
       'webdriver.gecko.driver': './functional_tests/bin/geckodriver',
       'webdriver.chrome.driver': './functional_tests/bin/chromedriver'
