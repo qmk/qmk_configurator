@@ -9,15 +9,15 @@ $(document).ready(() => {
   var fwStream = '';
   var fwFilename = '';
   var layout = '';
-  var backend_baseurl = 'https://api.qmk.fm';
-  var backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
-  var backend_compile_url = `${backend_baseurl}/v1/compile`;
-  var backend_status_url = `${backend_baseurl}/v1`;
-  var backend_readme_url_template = _.template(
+  const backend_baseurl = 'https://api.qmk.fm';
+  const backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
+  const backend_compile_url = `${backend_baseurl}/v1/compile`;
+  const backend_status_url = `${backend_baseurl}/v1`;
+  const backend_readme_url_template = _.template(
     `${backend_keyboards_url}/<%= keyboard %>/readme`
   );
 
-  var defaults = {
+  const defaults = {
     MAX_X: 775,
     KEY_WIDTH: 40,
     KEY_HEIGHT: 40,
@@ -144,6 +144,11 @@ $(document).ready(() => {
   //
   ////////////////////////////////////////
 
+  /**
+   * newApp - creates a new root Vue app component
+   * @param {object} store ref
+   * @return {object} Vue component to run
+   */
   function newApp(store) {
     var controllerTop = topControllerComponent(store);
     return Vue.component('controller', {
@@ -153,6 +158,11 @@ $(document).ready(() => {
     });
   }
 
+  /**
+   *  getPreferredLayout
+   *  @param {array} layouts supported by this keyboard
+   *  @return {string} layout we think it should default to
+   */
   function getPreferredLayout(layouts) {
     var keys = _.keys(layouts);
     if (_.includes(keys, 'LAYOUT')) {
@@ -165,13 +175,17 @@ $(document).ready(() => {
       return 'KEYMAP';
     }
     // avoid keymaps ending with _kc unless we have no other choice
-    var nextBest = keys.filter((key) => !key.endsWith('_kc'));
+    var nextBest = keys.filter(key => !key.endsWith('_kc'));
     if (nextBest.length > 0) {
       return _.first(nextBest);
     }
     return _.first(keys);
   }
 
+  /**
+   * newStore
+   * @return {object} initialized Vuex store instance
+   */
   function newStore() {
     var appStore = {
       namespaced: true,
@@ -189,6 +203,11 @@ $(document).ready(() => {
         keyboards: state => state.keyboards,
         layout: state => state.layout,
         layouts: state => state.layouts,
+        /**
+         * keymapName
+         * @param {object} state of store
+         * @return {string} parsed filtered keymap name
+         */
         keymapName: state => {
           let name = state.keymapName.replace(/\s/g, '_').toLowerCase();
           return name === '' ? 'mine' : name;
@@ -197,11 +216,17 @@ $(document).ready(() => {
         isPreview: state => state.isPreview
       },
       actions: {
-        changeKeyboard({ state, commit, dispatch }, _keyboard) {
+        /**
+         *  changeKeyboard - change the keyboard state
+         *  @param {object} internal store state
+         *  @param {string} keyboard new keyboard we are switching to
+         *  @return {object} promise that will be fulfilled once action is complete
+         */
+        changeKeyboard({ state, commit, dispatch }, keyboard) {
           let promise = new Promise(resolve => {
             commit('disablePreview');
             commit('enableCompile');
-            commit('setKeyboard', _keyboard);
+            commit('setKeyboard', keyboard);
             dispatch('loadLayouts').then(() => {
               commit('setLayout', getPreferredLayout(state.layouts));
               resolve();
@@ -209,6 +234,13 @@ $(document).ready(() => {
           });
           return promise;
         },
+        /**
+         * loadLayouts
+         * @param {object} internal store state.
+         * @param {object} preview object containing layout data.
+         *                 We use this instead of loading layout from API.
+         * @return {object} promise that is fulfilled once action is complete
+         */
         loadLayouts({ commit, state }, preview) {
           if (!_.isUndefined(preview)) {
             let p = new Promise(resolve => {
@@ -257,19 +289,28 @@ $(document).ready(() => {
         setKeymapName(state, _keymapName) {
           state.keymapName = _keymapName.replace(/\s/g, '_').toLowerCase();
         },
+        /**
+         * processLayouts
+         * @param {object} state of store
+         * @param {object} resp from API call or a preview object
+         *        in same format containing keyboard layouts
+         * @return {object} layouts map or empty object
+         */
         processLayouts(state, resp) {
           if (resp.status === 200 || state.isPreview) {
-            let _layouts = {};
+            let layouts = {};
             if (state.isPreview) {
-              _layouts = resp.keyboards[PREVIEW_LABEL].layouts;
+              layouts = resp.keyboards[PREVIEW_LABEL].layouts;
             } else {
-              _layouts = resp.data.keyboards[state.keyboard].layouts;
+              layouts = resp.data.keyboards[state.keyboard].layouts;
             }
-            if (_.size(_layouts) === 0) {
+            if (_.size(layouts) === 0) {
+              // API return empty layout object
               state.layouts = { to_be_defined: [] };
-            } else if (_layouts) {
+            } else if (layouts) {
+              // parse the layouts into internal format
               state.layouts = _.reduce(
-                _layouts,
+                layouts,
                 function(acc, _layout, key) {
                   acc[key] = _layout.layout ? _layout.layout : _layout;
                   return acc;
@@ -292,6 +333,12 @@ $(document).ready(() => {
     });
   }
 
+  /**
+   * topControllerComponent - returns a valid Vue component to
+   * control the upper section of the UI.
+   * @param {object} store - vuex store instance
+   * @return {object} - Vue Component
+   */
   function topControllerComponent(store) {
     return Vue.component('controller-top', {
       template: `
@@ -374,6 +421,16 @@ $(document).ready(() => {
         }
       },
       watch: {
+        /*
+         * keymapname is local state so it can use v-model to be reactive.
+         * The v-model attempts to mutate the getter 'app/keymapName'.
+         * This would cause a mutation warning.
+         *
+         * The actual app state is in the store. To keep them in sync we
+         * have an alias for the store version called realKeymapName.
+         * When changes happen locally we update the store.
+         * When changes happen to the store we update the local version.
+         */
         keymapName: function(newKeymapName, oldKeymapName) {
           if (newKeymapName !== oldKeymapName) {
             this.updateKeymapName(newKeymapName);
@@ -386,6 +443,11 @@ $(document).ready(() => {
         }
       },
       methods: {
+        /**
+         * loadDefault keymap. Attempts to load the keymap data from
+         * a predefined known file path.
+         * @return {object} promise when it has completed
+         */
         loadDefault() {
           if (myKeymap.isDirty()) {
             if (
@@ -422,26 +484,35 @@ $(document).ready(() => {
             });
         },
         fetchKeyboards() {
-          axios.get(backend_keyboards_url).then(this.createKeyboardDropdown);
+          axios.get(backend_keyboards_url).then(this.initializeKeyboards);
         },
-        createKeyboardDropdown({ data, status }) {
+        /**
+         * initializeKeyboards - parse the keyboard list from the API response
+         * @param {object} the API Response
+         * @returns {undefined}
+         */
+        initializeKeyboards({ data, status }) {
           let _keyboard = '';
           if (status === 200) {
             store.commit('app/setKeyboards', data);
             _keyboard = _.first(this.keyboards);
+            let { keyboardP } = this.$route.params;
+            if (
+              _.isString(keyboardP) &&
+              keyboardP !== '' &&
+              keyboardP !== PREVIEW_LABEL
+            ) {
+              _keyboard = keyboardP;
+            }
+            this.updateKeyboard(_keyboard);
           }
-          let { keyboardP } = this.$route.params;
-          if (
-            _.isString(keyboardP) &&
-            keyboardP !== '' &&
-            keyboardP !== PREVIEW_LABEL
-          ) {
-            _keyboard = keyboardP;
-          }
-          this.updateKeyboard(_keyboard);
         },
-        updateKeyboard(e) {
-          let newKeyboard = e;
+        /**
+         * updateKeyboard - triggers a keyboard update action on the store
+         * @param {string} newKeyboard to switch to
+         * @return {object} promise when it has been done or error
+         */
+        updateKeyboard(newKeyboard) {
           return store.dispatch('app/changeKeyboard', newKeyboard).then(() => {
             reset_keymap();
             this.$router.replace({
@@ -454,6 +525,11 @@ $(document).ready(() => {
             disableOtherButtons();
           });
         },
+        /**
+         * updateLayout - switch the layout for this keyboard
+         * @param {object\string} e event object or layout name
+         * @return {undefined}
+         */
         updateLayout(e) {
           let newLayout = e.target ? e.target.value : e;
           let render = e.target;
@@ -476,8 +552,7 @@ $(document).ready(() => {
       data: () => {
         return {
           keymapName: 'mine',
-          width: 0,
-          selected: ''
+          width: 0
         };
       },
       mounted() {
@@ -486,6 +561,10 @@ $(document).ready(() => {
     });
   }
 
+  /**
+   * checkStatus - check status component to poll API for errors and status
+   * @return {object} Vue app component
+   */
   function checkStatus() {
     let statusBar = Vue.component('status-bar', {
       template: `
