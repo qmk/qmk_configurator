@@ -10,6 +10,7 @@
     "_": true,
     "Vue": true,
     "Vuex": true,
+    "VueRouter": true,
     "axios": true
   },
   "rules": {
