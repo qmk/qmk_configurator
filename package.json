@@ -12,9 +12,12 @@
     "singleQuote": true
   },
   "dependencies": {
-    "nightwatch": "^1.0.6",
     "eslint": "^4.19.1",
     "less": "^3.0.4"
+  },
+  "devDependencies": {
+    "nightwatch": "^0.9.21",
+    "nightwatch-html-reporter": "^2.0.5"
   },
   "scripts": {
     "lint-code": "./node_modules/eslint/bin/eslint.js assets/js/script.js",

@@ -2,7 +2,7 @@ nightwatch_config = {
   src_folders: [
     './functional_tests/tests'
   ],
-  output_folder: './functional_tests/reports',
+  output_folder: './functional_tests/reports/xml',
   page_objects_path: './functional_tests/pageobjects',
   globals_path: 'functional_tests/globals.js',
   selenium: {
@@ -16,8 +16,15 @@ nightwatch_config = {
   },
 
   common_capabilities: {
-    javascriptEnabled: true
+    javascriptEnabled: true,
+    screenshots : {
+      enabled: true,
+      path: "./functional_tests/reports/screenshots",
+      on_failure: true,
+      on_error: true
+    }
   },
+  /* these are the environments aka the test profiles*/
   test_settings: {
     default: {
       desiredCapabilities: {

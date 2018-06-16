@@ -1,3 +1,15 @@
+const HtmlReporter = require('nightwatch-html-reporter');
+
+const reporter = new HtmlReporter({
+  openBrowser: false,
+  hideSuccess: false,
+  reportsDirectory: './functional_tests/reports',
+  reportFilename: 'report_' + process.env.__NIGHTWATCH_ENV +'_.html',
+  uniqueFilename: true,
+  separateReportPerSuite: false
+});
+
+
 module.exports = {
 
   /* URL for the qmk SPA */
@@ -19,5 +31,6 @@ module.exports = {
   afterEach : function(browser,done){
     browser.end();
     done();
-  }
+  },
+  reporter: reporter.fn
 };
