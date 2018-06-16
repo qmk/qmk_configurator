@@ -32,8 +32,6 @@ $(document).ready(() => {
 
   var myKeymap = new Keymap(layer);
 
-  var $keyboard = $('#keyboard');
-  var $layout = $('#layout');
   var $layer = $('.layer');
 
   var $fwFile = $('#fwFile');
@@ -43,14 +41,9 @@ $(document).ready(() => {
 
   var $fileImport = $('#fileImport');
   var $infoPreview = $('#infoPreview');
-  var $status = $('#status');
   var $visualKeymap = $('#visual-keymap');
 
-  setSelectWidth($keyboard);
-  setSelectWidth($layout);
-
   var lookupKeycode = _.memoize(lookupKeycode); // cache lookups
-  var viewReadme = _.debounce(viewReadme, 500);
 
   var keycodes = getKeycodes();
   //  $(window).on('hashchange', urlRouteChanged);
@@ -93,7 +86,6 @@ $(document).ready(() => {
   });
 
   // explicitly export functions to global namespace
-  window.setSelectWidth = setSelectWidth;
 
   var keypressListener = new window.keypress.Listener();
   keypressListener.register_many(generateKeypressCombos(keycodes));
@@ -153,11 +145,16 @@ $(document).ready(() => {
    * @return {object} Vue component to run
    */
   function newApp(store) {
-    var controllerTop = topControllerComponent(store);
+    let controllerTop = topControllerComponent(store);
+    let statusPanel = statusPanelComponent(store);
     return Vue.component('controller', {
       store,
-      template: '<div><controllerTop></controllerTop></div>',
-      components: { controllerTop }
+      template: `
+  <div>
+      <controllerTop></controllerTop>
+      <statusPanel></statusPanel>
+  </div>`,
+      components: { controllerTop, statusPanel }
     });
   }
 
@@ -334,11 +331,26 @@ $(document).ready(() => {
       namespaced: true,
       state: {
         message: '',
+        scrollToLatest: false,
       },
-      getters: {},
+      getters: {
+        message: state => state.message,
+        empty: state => state.message === '',
+        scrollToLatest: state => state.scrollToLatest
+      },
       actions: {
-        scrollToEnd() {
+        scrollToEnd({commit}) {
           // signal scroll buffer to lastest message
+          commit('startScroll');
+        },
+        viewReadme({commit}, _keyboard) {
+          return axios
+            .get(backend_readme_url_template({ keyboard: _keyboard }))
+            .then(result => {
+              if (result.status === 200) {
+                commit('append', _.escape(result.data));
+              }
+            });
         }
       },
       mutations: {
@@ -347,6 +359,12 @@ $(document).ready(() => {
         },
         append(state, message) {
           state.message += message;
+        },
+        doneScroll(state) {
+          state.scrollToLatest = false;
+        },
+        startScroll(state) {
+          state.scrollToLatest = true;
         }
       }
     };
@@ -363,6 +381,43 @@ $(document).ready(() => {
         status: initStatusStore()
       },
       strict: true
+    });
+  }
+
+  /**
+   * statusPanelComponent
+   * @param {object} store handle
+   * @return {object} vue component
+   */
+  function statusPanelComponent(store) {
+    return Vue.component('status-panel', {
+      template: `
+  <div id="status">
+      <textarea id="terminal" v-model="message" ref="terminal" readonly></textarea>
+  </div>`,
+      watch: {
+        message(newV, oldV) {
+          if (this.scrollToLatest && newV !== oldV) {
+            this.scrollToEnd();
+            store.commit('status/doneScroll');
+          }
+        }
+      },
+      methods: {
+        scrollToEnd() {
+          let terminal = this.$refs.terminal;
+          this.$nextTick(() => {
+            terminal.scrollTop = terminal.scrollHeight;
+          })
+        },
+      },
+      computed: {
+        message: () => store.getters['status/message'],
+        scrollToLatest: () => store.getters['status/scrollToLatest']
+      },
+      data: () => {
+        return {};
+      }
     });
   }
 
@@ -554,7 +609,8 @@ $(document).ready(() => {
             render_layout(
               this.layouts[this.layout].map(v => Object.assign({}, v))
             );
-            viewReadme(this.keyboard);
+            store.commit('status/clear');
+            store.dispatch('status/viewReadme', this.keyboard);
             disableOtherButtons();
           });
         },
@@ -698,13 +754,6 @@ $(document).ready(() => {
     };
   }
 
-  function viewReadme(_keyboard) {
-    $.get(backend_readme_url_template({ keyboard: _keyboard })).then(result => {
-      $status.html('');
-      $status.append(_.escape(result));
-    });
-  }
-
   function resetConfig(overrides) {
     return _.extend(config, defaults, overrides);
   }
@@ -838,13 +887,14 @@ $(document).ready(() => {
           path: `/${data.keyboard}/${data.layout}`
         });
 
+        vueStore.commit('status/clear');
         load_converted_keymap(data.layers);
 
         let _layouts = vueStore.getters['app/layouts'];
         render_layout(_layouts[data.layout].map(v => Object.assign({}, v)));
         myKeymap.setDirty();
         disableOtherButtons();
-        viewReadme(data.keyboard);
+        vueStore.dispatch('status/viewReadme', data.keyboard);
       });
   }
 
@@ -898,10 +948,11 @@ $(document).ready(() => {
       layers: layers
     };
     console.log(JSON.stringify(data));
-    if ($status.html() !== '') {
-      $status.append('\n');
+    if (vueStore.getters['status/empty']) {
+      vueStore.commit('status/append', '\n');
     }
-    $status.append(
+    vueStore.commit(
+      'status/append',
       '* Sending ' + _keyboard + ':' + _keymapName + ' with ' + _layout
     );
     $.ajax({
@@ -912,7 +963,7 @@ $(document).ready(() => {
       dataType: 'json',
       success: function(d) {
         if (d.enqueued) {
-          $status.append('\n* Received job_id: ' + d.job_id);
+          vueStore.commit('status/append', '\n* Received job_id: ' + d.job_id);
           job_id = d.job_id;
           check_status();
         }
@@ -1086,8 +1137,8 @@ $(document).ready(() => {
   }
 
   function statusError(message) {
-    $status.append(message);
-    $status.scrollTop($status[0].scrollHeight);
+    vueStore.commit('status/append', message);
+    vueStore.dispatch('status/scrollToEnd');
   }
 
   function enableCompileButton() {
@@ -1116,7 +1167,8 @@ $(document).ready(() => {
       let msg;
       switch (data.status) {
         case 'finished':
-          $status.append(
+          vueStore.commit(
+            'status/append',
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
           fwStream = data.result.firmware;
@@ -1126,12 +1178,12 @@ $(document).ready(() => {
           break;
         case 'queued':
           msg = status === 'queued' ? ' .' : '\n* Queueing';
-          $status.append(msg);
+          vueStore.commit('status/append', msg);
           setTimeout(check_status, 500);
           break;
         case 'running':
           msg = status === 'running' ? ' .' : '\n* Running';
-          $status.append(msg);
+          vueStore.commit('status/append', msg);
           setTimeout(check_status, 500);
           break;
         case 'unknown':
@@ -1148,7 +1200,7 @@ $(document).ready(() => {
           console.log('Unexpected status', data.status);
           enableCompileButton();
       }
-      $status.scrollTop($status[0].scrollHeight);
+      vueStore.dispatch('status/scrollToEnd');
       status = data.status;
     });
   }
@@ -1266,7 +1318,8 @@ $(document).ready(() => {
 
     if (keycode.length < 4) {
       // unexpectedly short keycode
-      $status.append(
+      vueStore.commit(
+        'status/append',
         `Found an unexpected keycode \'${_.escape(keycode)}\' on layer ${
           stats.layers
         } in keymap. Setting to KC_TRNS\n`
@@ -1307,13 +1360,7 @@ $(document).ready(() => {
     var msg = `\nLoaded ${stats.layers} layers and ${
       stats.count
     } keycodes. Defined ${stats.any} Any key keycodes\n`;
-    $status.append(msg);
-  }
-
-  function setSelectWidth(s) {
-    var $sel = $(s);
-    $('#templateOption').text($sel.val());
-    $sel.width($('#template').width() * 1.03);
+    vueStore.commit('status/append', msg);
   }
 
   function reset_keymap() {
