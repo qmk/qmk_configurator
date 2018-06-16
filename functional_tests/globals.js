@@ -1,7 +1,7 @@
 module.exports = {
 
   /* URL for the qmk SPA */
-  launch_url:`https://config.qmk.fm/`,
+  launch_url:`https://config.qmk.fm/#/`,
 
   abortOnAssertionFailure: false,
 
@@ -14,6 +14,7 @@ module.exports = {
   waitForConditionTimeout: 10000,
 
   beforeEach : function(browser,done){
+    browser.resizeWindow(1920,1080,done);
   },
   afterEach : function(browser,done){
     browser.end();

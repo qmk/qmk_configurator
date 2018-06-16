@@ -6,15 +6,13 @@ nightwatch_config = {
   page_objects_path: './functional_tests/pageobjects',
   globals_path: 'functional_tests/globals.js',
   selenium: {
-    start_process: false,
-    host: 'localhost',
+    start_process: true,
     port: 4444,
     server_path:'./functional_tests/bin/selenium-server-standalone-3.12.0.jar', //Set this to the version you are using
     cli_args:{
       'webdriver.gecko.driver': './functional_tests/bin/geckodriver',
       'webdriver.chrome.driver': './functional_tests/bin/chromedriver'
     }
-
   },
 
   common_capabilities: {
@@ -41,10 +39,10 @@ nightwatch_config = {
     firefoxHeadless: {
         desiredCapabilities: {
           browserName: 'firefox',
-          firefoxOptions:{
+          'moz:firefoxOptions':{
             args:[
-              'headless',
-              'window-size=1920,1080'
+              '-headless',
+              '-window-size=1920,1080'
             ]
           }
       }
