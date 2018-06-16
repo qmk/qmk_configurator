@@ -186,11 +186,11 @@ $(document).ready(() => {
   }
 
   /**
-   * newStore
-   * @return {object} initialized Vuex store instance
+   * initAppStore - creates a new store for the app namespace
+   * @return {object} initialized app store
    */
-  function newStore() {
-    var appStore = {
+  function initAppStore() {
+    return {
       namespaced: true,
       state: {
         keyboard: '',
@@ -327,10 +327,40 @@ $(document).ready(() => {
         }
       }
     };
+  }
 
+  function initStatusStore() {
+    return {
+      namespaced: true,
+      state: {
+        message: '',
+      },
+      getters: {},
+      actions: {
+        scrollToEnd() {
+          // signal scroll buffer to lastest message
+        }
+      },
+      mutations: {
+        clear(state) {
+          state.message = '';
+        },
+        append(state, message) {
+          state.message += message;
+        }
+      }
+    };
+  }
+
+  /**
+   * newStore
+   * @return {object} initialized Vuex store instance
+   */
+  function newStore() {
     return new Vuex.Store({
       modules: {
-        app: appStore
+        app: initAppStore(),
+        status: initStatusStore()
       },
       strict: true
     });
