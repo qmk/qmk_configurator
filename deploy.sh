@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
+npm test
+
+if [ "${TRAVIS_PULL_REQUEST}"  != "false" ]; then
+  # Exit if we're running a pull request
+  exit 0;
+fi
+
 rm -rf .git
 git init
 git remote add origin https://github.com/${TRAVIS_REPO_SLUG}

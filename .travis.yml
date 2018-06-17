@@ -3,7 +3,7 @@ node_js:
   - "node"
 before_script:
   - npm install --dev
-#script: bash ./deploy.sh
+script: bash ./deploy.sh
 branches:
   only:
     - master
