@@ -1,5 +1,9 @@
-language: generic # don't install any environment
-script: bash ./deploy.sh
+language: node_js
+node_js:
+  - "node"
+before_script:
+  - npm install --dev
+#script: bash ./deploy.sh
 branches:
   only:
     - master

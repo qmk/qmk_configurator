@@ -1,7 +1,7 @@
 {
   "name": "qmk_configurator",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The QMK Configurator (WIP) http://config.qmk.fm",
   "repository": {
     "type": "git",
@@ -11,5 +11,13 @@
     "commas": false,
     "singleQuote": true
   },
-  "dependencies": {}
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "less": "^3.0.4"
+  },
+  "scripts": {
+    "lint-code": "./node_modules/eslint/bin/eslint.js assets/js/script.js",
+    "lint-css": "./node_modules/less/bin/lessc assets/css/style.css > /dev/null",
+    "test": "npm run lint-css && npm run lint-code"
+  }
 }
