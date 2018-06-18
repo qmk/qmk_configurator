@@ -326,6 +326,10 @@ $(document).ready(() => {
     };
   }
 
+  /**
+   * initStatusStore
+   * @return {object} a new instance of a status store
+   */
   function initStatusStore() {
     return {
       namespaced: true,
