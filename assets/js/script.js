@@ -136,7 +136,10 @@ $(document).ready(() => {
   }).$mount('#controller-app');
 
   ignoreKeypressListener($('input[type=text]'));
-  return;
+  return {
+    vueStatus,
+    vueInstance,
+  };
 
   ////////////////////////////////////////
   //
