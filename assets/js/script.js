@@ -555,7 +555,14 @@ $(document).ready(() => {
           store.commit('app/setKeymapName', newKeymapName);
         },
         compile() {
-          compileLayout(this.keyboard, this.realKeymapName, this.layout);
+          let keymapName = this.realKeymapName;
+          let _keymapName = store.getters['app/exportKeymapName'];
+          // TODO extract this name function to the store
+          keymapName =
+            keymapName === ''
+              ? _keymapName.slice(this.keyboard.length + 1, _keymapName.length)
+              : keymapName;
+          compileLayout(this.keyboard, keymapName, this.layout);
         }
       },
       data: () => {
