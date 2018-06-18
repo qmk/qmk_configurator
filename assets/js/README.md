@@ -23,6 +23,19 @@ The current functions for the configurator are:
  1. Compiling those keymaps into firmware files. Currently, only .hex files are supported
  1. Downloading Hex Files or Source code generated
 
+Vue 2 Integration
+=================
+
+We're currently in the process of porting many of the UI elements into Vue 2. Currently this is a WIP in progress, but up until now this includes:
+
+ 1. application state (vuex)
+ 1. routing (vue-router)
+ 1. top control panel (vue component)
+ 1. backend status bar (vue component)
+ 1. vue status panel (vue component)
+
+This is a non-optimized implementation, that is allowing co-existence with existing jquery components with no build process. At some future date, once the port is complete we may introduce more build process. This document is therefore in a state of flux and is mostly true except for the noted exceptions in the above list.
+
 Code Style
 ==========
 
@@ -40,6 +53,7 @@ External Dependencies
  - jQuery UI components for drag and drop.
  - keypress.js for keyboard bindings
  - lodash.js for general collections and utility functions
+ - vue 2, vuex, vue-router, axios
 
 
 Startup

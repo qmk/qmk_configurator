@@ -15,7 +15,7 @@ The [QMK Configurator](https://config.qmk.fm/) leverages the Jekyll static site 
 
         cd qmk_configurator
 
- 1. If you have never run serve before you may have to install the ruby dependencies for this project.    
+ 1. If you have never run serve before you may have to install the ruby dependencies for this project.
     From the CLI, run `bundle install`. You'll get a warning if the next command doesn't work.
  1. From the CLI, run `bundle exec jekyll serve`
 
@@ -36,12 +36,9 @@ Configuration file: none
   Server running... press ctrl-c to stop.
  ```
 
-On OSX, it will open a browser pointing to localhost port 4000. If it does not, open up a browser and paste http://127.0.0.1:4000 into the search bar. 
+On OSX, it will open a browser pointing to localhost port 4000. If it does not, open up a browser and paste http://127.0.0.1:4000 into the search bar.
 
-You are now able to do development. 
+You are now able to do development.
 
 You will have to reload between changes as `jekyll` in it's default configuration doesn't support live reloading. If someone wants to contribute that please do.
 
-## Development using gh-pages
-
-TBD
