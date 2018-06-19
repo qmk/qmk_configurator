@@ -15,6 +15,10 @@
     "eslint": "^4.19.1",
     "less": "^3.0.4"
   },
+  "devDependencies": {
+    "nightwatch": "^0.9.21",
+    "nightwatch-html-reporter": "^2.0.5"
+  },
   "scripts": {
     "lint-code": "./node_modules/eslint/bin/eslint.js assets/js/script.js",
     "lint-css": "./node_modules/less/bin/lessc assets/css/style.css > /dev/null",
