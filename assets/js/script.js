@@ -194,7 +194,7 @@ $(document).ready(() => {
         keyboards: [],
         layout: '',
         layouts: {},
-        keymapName: 'mine',
+        keymapName: '',
         compileDisabled: false,
         isPreview: false
       },
@@ -209,8 +209,14 @@ $(document).ready(() => {
          * @return {string} parsed filtered keymap name
          */
         keymapName: state => {
-          let name = state.keymapName.replace(/\s/g, '_').toLowerCase();
-          return name === '' ? 'mine' : name;
+          return state.keymapName.replace(/\s/g, '_').toLowerCase();
+        },
+        exportKeymapName: state => {
+          let exportName = state.keymapName.replace(/\s/g, '_').toLowerCase();
+          if (exportName === '') {
+            exportName = `${state.keyboard}_${state.layout}_mine`.toLowerCase();
+          }
+          return exportName;
         },
         compileDisabled: state => state.compileDisabled,
         isPreview: state => state.isPreview
@@ -275,7 +281,7 @@ $(document).ready(() => {
         disablePreview(state) {
           state.isPreview = false;
           state.keyboards = state.keyboards.filter(k => k !== PREVIEW_LABEL);
-          state.keymapName = 'mine';
+          state.keymapName = '';
         },
         setKeyboard(state, _keyboard) {
           state.keyboard = _keyboard;
@@ -446,7 +452,7 @@ $(document).ready(() => {
       </span>
       <span class="topctrl-2">
         <label id="keymap-name-label">Keymap Name:</label>
-        <input id="keymap-name" type="text" v-model="keymapName" placeholder="keymap name"/>
+        <input id="keymap-name" type="text" v-model="keymapName" placeholder="custom keymap name"/>
       </span>
       <span class="topctrl-3">
       <button id="load-default"
@@ -639,12 +645,19 @@ $(document).ready(() => {
           store.commit('app/setKeymapName', newKeymapName);
         },
         compile() {
-          compileLayout(this.keyboard, this.realKeymapName, this.layout);
+          let keymapName = this.realKeymapName;
+          let _keymapName = store.getters['app/exportKeymapName'];
+          // TODO extract this name function to the store
+          keymapName =
+            keymapName === ''
+              ? _keymapName.slice(this.keyboard.length + 1, _keymapName.length)
+              : keymapName;
+          compileLayout(this.keyboard, keymapName, this.layout);
         }
       },
       data: () => {
         return {
-          keymapName: 'mine',
+          keymapName: '',
           width: 0
         };
       },
@@ -915,13 +928,13 @@ $(document).ready(() => {
     //API payload format
     var data = {
       keyboard: vueStore.getters['app/keyboard'],
-      keymap: vueStore.getters['app/keymapName'],
+      keymap: vueStore.getters['app/exportKeymapName'],
       layout: vueStore.getters['app/layout'],
       layers: layers
     };
 
     download(
-      `${vueStore.getters['app/keymapName']}.json`,
+      `${vueStore.getters['app/exportKeymapName']}.json`,
       JSON.stringify(data)
     );
   }
