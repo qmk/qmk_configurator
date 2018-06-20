@@ -4,9 +4,6 @@ $(document).ready(() => {
     'This will clear your keymap - are you sure you want to <%= action %>?'
   );
   var layer = 0;
-  var job_id = '';
-  var fwStream = '';
-  var fwFilename = '';
   var layout = '';
   const backend_baseurl = 'https://api.qmk.fm';
   const backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
@@ -33,19 +30,11 @@ $(document).ready(() => {
 
   var $layer = $('.layer');
 
-  var $fwFile = $('#fwFile');
-  var $source = $('#source');
-  var $export = $('#export');
-  var $import = $('#import');
-
-  var $fileImport = $('#fileImport');
-  var $infoPreview = $('#infoPreview');
   var $visualKeymap = $('#visual-keymap');
 
   var lookupKeycode = _.memoize(lookupKeycode); // cache lookups
 
   var keycodes = getKeycodes();
-  //  $(window).on('hashchange', urlRouteChanged);
 
   $.each(keycodes, createKeyCodeUI);
 
@@ -58,31 +47,10 @@ $(document).ready(() => {
 
   $layer.click(changeLayer);
 
-  $fwFile.click(downloadFirmwareFile);
-
-  $source.click(downloadSourceBundle);
-
   var offsetTop = $('.split-content').offset().top;
   var height = $('.split-content').height();
 
   $(document).on('scroll', scrollHandler);
-
-  // Export function that outputs a JSON file with the API payload format
-  $export.click(exportJSON);
-
-  //Uses a button to activate the hidden file input
-  $import.click(
-    checkIsDirty(() => {
-      $fileImport.click();
-    })
-  );
-
-  //Import function that takes in a JSON file reads it and loads the keyboard, layout and keymap data
-  $fileImport.change(() => {
-    var files = $fileImport[0].files;
-    importJSON(files);
-    $infoPreview[0].value = ''; // clear value for chrome issue #83
-  });
 
   // explicitly export functions to global namespace
 
@@ -93,13 +61,6 @@ $(document).ready(() => {
       vueStore.commit('app/enablePreview');
       disableCompileButton();
     }
-    $infoPreview.click();
-  });
-
-  $infoPreview.change(() => {
-    var files = $infoPreview[0].files;
-    previewInfo(files);
-    $infoPreview[0].value = '';
   });
 
   var ignoreKeypressListener = _.partial(
@@ -129,7 +90,7 @@ $(document).ready(() => {
   ignoreKeypressListener($('input[type=text]'));
   return {
     vueStatus,
-    vueInstance,
+    vueInstance
   };
 
   ////////////////////////////////////////
@@ -146,14 +107,16 @@ $(document).ready(() => {
   function newApp(store) {
     let controllerTop = topControllerComponent(store);
     let statusPanel = statusPanelComponent(store);
+    let controllerBottom = bottomControllerComponent(store);
     return Vue.component('controller', {
       store,
       template: `
   <div>
       <controllerTop></controllerTop>
       <statusPanel></statusPanel>
+      <controllerBottom></controllerBottom>
   </div>`,
-      components: { controllerTop, statusPanel }
+      components: { controllerTop, statusPanel, controllerBottom }
     });
   }
 
@@ -195,7 +158,11 @@ $(document).ready(() => {
         layouts: {},
         keymapName: '',
         compileDisabled: false,
-        isPreview: false
+        isPreview: false,
+        jobID: '',
+        enableDownloads: false,
+        firmwareFile: '',
+        firmwareStream: ''
       },
       getters: {
         keyboard: state => state.keyboard,
@@ -218,7 +185,11 @@ $(document).ready(() => {
           return exportName;
         },
         compileDisabled: state => state.compileDisabled,
-        isPreview: state => state.isPreview
+        isPreview: state => state.isPreview,
+        jobID: state => state.jobID,
+        enableDownloads: state => state.enableDownloads,
+        firmwareFile: state => state.firmwareFile,
+        firmwareStream: state => state.firmwareStream
       },
       actions: {
         /**
@@ -294,6 +265,21 @@ $(document).ready(() => {
         setKeymapName(state, _keymapName) {
           state.keymapName = _keymapName.replace(/\s/g, '_').toLowerCase();
         },
+        setJobID(state, jobID) {
+          state.jobID = jobID;
+        },
+        setEnableDownloads(state) {
+          state.enableDownloads = true;
+        },
+        setDisableDownloads(state) {
+          state.enableDownloads = false;
+        },
+        setFirmwareFile(state, filename) {
+          state.firmwareFile = filename;
+        },
+        setFirmwareStream(state, stream) {
+          state.firmwareStream = stream;
+        },
         /**
          * processLayouts
          * @param {object} state of store
@@ -340,7 +326,7 @@ $(document).ready(() => {
       namespaced: true,
       state: {
         message: '',
-        scrollToLatest: false,
+        scrollToLatest: false
       },
       getters: {
         message: state => state.message,
@@ -348,11 +334,11 @@ $(document).ready(() => {
         scrollToLatest: state => state.scrollToLatest
       },
       actions: {
-        scrollToEnd({commit}) {
+        scrollToEnd({ commit }) {
           // signal scroll buffer to lastest message
           commit('startScroll');
         },
-        viewReadme({commit}, _keyboard) {
+        viewReadme({ commit }, _keyboard) {
           return axios
             .get(backend_readme_url_template({ keyboard: _keyboard }))
             .then(result => {
@@ -393,6 +379,229 @@ $(document).ready(() => {
     });
   }
 
+  function bottomControllerComponent(store) {
+    const encoding = 'data:text/plain;charset=utf-8,';
+    return Vue.component('bottom-panel', {
+      template: `
+  <div id="controller-bottom" class="botctrl">
+    <div class="botctrl-1-1">
+      <button id="toolbox"
+              title="Load firmware file in QMK Toolbox"
+              v-bind:disabled="disableDownloads">Open in QMK Toolbox</button>
+      <button id="source"
+              @click="downloadSource"
+              title="Download QMK Firmware code"
+              v-bind:disabled="disableDownloads">Download Source</button>
+      <button id="export" @click="exportJSON" title="Export QMK Keymap JSON file">Export Keymap</button>
+      <button id="import"
+              title="Import QMK Keymap JSON file"
+              @click="importKeymap"
+      >Import Keymap</button>
+      <input id="fileImport"
+             type="file"
+             ref="fileImportElement"
+             accept="application/json"
+             @change="fileImportChanged"
+      />
+      <input id="infoPreview"
+             type="file"
+             accept="application/json"
+             ref="infoPreviewElement"
+             @change="infoPreviewChanged"
+      />
+    </div>
+    <div class="botctrl-1-2">
+      <button id="fwFile"
+              @click="downloadFirmware"
+              title="Download firmware file for flashing"
+              v-bind:disabled="disableDownloads">Download Firmware</button>
+    </div>
+
+    <div v-if="downloadElementEnabled">
+      <a ref="downloadElement" v-bind:href="urlEncodedData" v-bind:download="filename"></a>
+    </div>
+  </div>
+      `,
+      computed: {
+        disableDownloads() {
+          return !vueStore.getters['app/enableDownloads'];
+        },
+        isPreview() {
+          return vueStore.getters['app/isPreview'];
+        }
+      },
+      watch: {
+        /**
+         * isPreview.
+         * When isPreview changes we click the infoPreview element.
+         * @param {Bool} newValue isPreview has changed
+         * @return {null} nothing
+         */
+        isPreview(newValue) {
+          if (newValue) {
+            this.$refs.infoPreviewElement.click();
+          }
+        }
+      },
+      methods: {
+        exportJSON() {
+          //Squashes the keymaps to the api payload format, might look into making this a function
+          var layers = myKeymap.exportLayers({ compiler: false });
+
+          //API payload format
+          var data = {
+            keyboard: vueStore.getters['app/keyboard'],
+            keymap: vueStore.getters['app/exportKeymapName'],
+            layout: vueStore.getters['app/layout'],
+            layers: layers
+          };
+
+          this.download(
+            `${vueStore.getters['app/exportKeymapName']}.json`,
+            JSON.stringify(data)
+          );
+        },
+        downloadFirmware() {
+          this.download(
+            vueStore.getters['app/firmwareFile'],
+            vueStore.getters['app/firmwareStream']
+          );
+        },
+        download(filename, data) {
+          this.urlEncodedData = encoding + encodeURIComponent(data);
+          this.filename = filename;
+          this.downloadElementEnabled = true;
+          Vue.nextTick(() => {
+            this.$refs.downloadElement.click();
+            this.downloadElementEnabled = false;
+          });
+        },
+        downloadSource() {
+          this.urlEncodedData = `${backend_compile_url}/${
+            store.getters['app/jobID']
+          }/source`;
+          this.filename = 'source.zip';
+          this.downloadElementEnabled = true;
+          Vue.nextTick(() => {
+            this.$refs.downloadElement.click();
+            this.downloadElementEnabled = false;
+          });
+        },
+        importKeymap() {
+          if (myKeymap.isDirty()) {
+            if (
+              !confirm(
+                clearKeymapTemplate({ action: 'change keyboard and layout' })
+              )
+            ) {
+              return false;
+            }
+          }
+          this.$refs.fileImportElement.click();
+        },
+        fileImportChanged() {
+          var files = this.$refs.fileImportElement.files;
+          this.reader = new FileReader();
+          this.reader.onload = this.importJSONOnLoad;
+          this.reader.readAsText(_.first(files));
+          this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
+        },
+        importJSONOnLoad() {
+          let jsonText = this.reader.result;
+
+          let data;
+          try {
+            data = JSON.parse(jsonText);
+          } catch (error) {
+            console.log(error);
+            alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
+            return;
+          }
+
+          if (data.version && data.keyboard && data.keyboard.settings) {
+            alert(
+              "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
+            );
+            return;
+          }
+
+          if (
+            _.isUndefined(data.keyboard) ||
+            _.isUndefined(data.keymap) ||
+            _.isUndefined(data.layout) ||
+            _.isUndefined(data.layers)
+          ) {
+            alert("Sorry, this doesn't appear to be a QMK keymap file.");
+            return;
+          }
+
+          reset_keymap();
+
+          store.commit('app/setKeyboard', data.keyboard);
+          store
+            .dispatch('app/changeKeyboard', store.getters['app/keyboard'])
+            .then(() => {
+              store.commit('app/setLayout', data.layout);
+              store.commit('app/setKeymapName', data.keymap);
+              // todo validate these values
+              vueRouter.replace({
+                path: `/${data.keyboard}/${data.layout}`
+              });
+
+              store.commit('status/clear');
+              load_converted_keymap(data.layers);
+
+              let _layouts = store.getters['app/layouts'];
+              render_layout(
+                _layouts[data.layout].map(v => Object.assign({}, v))
+              );
+              myKeymap.setDirty();
+              disableOtherButtons();
+              store.dispatch('status/viewReadme', data.keyboard);
+            });
+        },
+        infoPreviewChanged() {
+          var files = this.$refs.infoPreviewElement.files;
+          this.reader = new FileReader();
+          this.reader.onload = this.previewInfoOnLoad;
+          this.reader.readAsText(_.first(files));
+          this.$refs.infoPreviewElement.value = ''; // clear value for chrome issue #83
+        },
+        previewInfoOnLoad() {
+          var jsonText = this.reader.result;
+          var data;
+          try {
+            data = JSON.parse(jsonText);
+          } catch (error) {
+            console.log(error);
+            alert("Sorry, that doesn't appear to be a valid QMK info file.");
+            return;
+          }
+
+          reset_keymap();
+
+          store.commit('app/setKeyboard', PREVIEW_LABEL);
+          store.dispatch('app/loadLayouts', data).then(() => {
+            layout = getPreferredLayout(store.getters['app/layouts']);
+            store.commit('app/setLayout', layout);
+            store.commit('app/setKeymapName', 'info.json preview');
+
+            let _layouts = store.getters['app/layouts'];
+            render_layout(_layouts[layout].map(v => Object.assign({}, v)));
+          });
+        }
+      },
+      data: () => {
+        return {
+          downloadElementEnabled: false,
+          urlEncodedData: '',
+          filename: '',
+          reader: undefined
+        };
+      }
+    });
+  }
+
   /**
    * statusPanelComponent
    * @param {object} store handle
@@ -417,8 +626,8 @@ $(document).ready(() => {
           let terminal = this.$refs.terminal;
           this.$nextTick(() => {
             terminal.scrollTop = terminal.scrollHeight;
-          })
-        },
+          });
+        }
       },
       computed: {
         message: () => store.getters['status/message'],
@@ -813,130 +1022,6 @@ $(document).ready(() => {
     }
   }
 
-  function checkIsDirty(confirmFn, cancelFn) {
-    return function() {
-      if (myKeymap.isDirty()) {
-        if (
-          !confirm(
-            'This will clear your keymap - are you sure you want to change your layout?'
-          )
-        ) {
-          if (_.isFunction(cancelFn)) {
-            cancelFn();
-          }
-          return;
-        }
-      }
-      confirmFn();
-    };
-  }
-
-  function previewInfoOnLoad(reader /*e*/) {
-    var jsonText = reader.result;
-    var data;
-    try {
-      data = JSON.parse(jsonText);
-    } catch (error) {
-      console.log(error);
-      alert("Sorry, that doesn't appear to be a valid QMK info file.");
-      return;
-    }
-
-    reset_keymap();
-
-    vueStore.commit('app/setKeyboard', PREVIEW_LABEL);
-    vueStore.dispatch('app/loadLayouts', data).then(() => {
-      layout = getPreferredLayout(vueStore.getters['app/layouts']);
-      vueStore.commit('app/setLayout', layout);
-      vueStore.commit('app/setKeymapName', 'info.json preview');
-
-      let _layouts = vueStore.getters['app/layouts'];
-      render_layout(_layouts[layout].map(v => Object.assign({}, v)));
-    });
-  }
-
-  function previewInfo(files) {
-    var reader = new FileReader();
-    reader.onload = _.partial(previewInfoOnLoad, reader);
-    reader.readAsText(files[0]);
-  }
-
-  function importJSONOnLoad(reader /*e*/) {
-    var jsonText = reader.result;
-
-    var data;
-    try {
-      data = JSON.parse(jsonText);
-    } catch (error) {
-      console.log(error);
-      alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
-      return;
-    }
-
-    if (data.version && data.keyboard && data.keyboard.settings) {
-      alert(
-        "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
-      );
-      return;
-    }
-
-    if (
-      _.isUndefined(data.keyboard) ||
-      _.isUndefined(data.keymap) ||
-      _.isUndefined(data.layout) ||
-      _.isUndefined(data.layers)
-    ) {
-      alert("Sorry, this doesn't appear to be a QMK keymap file.");
-      return;
-    }
-
-    reset_keymap();
-
-    vueStore.commit('app/setKeyboard', data.keyboard);
-    vueStore
-      .dispatch('app/changeKeyboard', vueStore.getters['app/keyboard'])
-      .then(() => {
-        vueStore.commit('app/setLayout', data.layout);
-        vueStore.commit('app/setKeymapName', data.keymap);
-        // todo validate these values
-        vueRouter.replace({
-          path: `/${data.keyboard}/${data.layout}`
-        });
-
-        vueStore.commit('status/clear');
-        load_converted_keymap(data.layers);
-
-        let _layouts = vueStore.getters['app/layouts'];
-        render_layout(_layouts[data.layout].map(v => Object.assign({}, v)));
-        myKeymap.setDirty();
-        disableOtherButtons();
-        vueStore.dispatch('status/viewReadme', data.keyboard);
-      });
-  }
-
-  function importJSON(files) {
-    var reader = new FileReader();
-    reader.onload = _.partial(importJSONOnLoad, reader);
-    reader.readAsText(files[0]);
-  }
-
-  function exportJSON() {
-    //Squashes the keymaps to the api payload format, might look into making this a function
-    var layers = myKeymap.exportLayers({ compiler: false });
-
-    //API payload format
-    var data = {
-      keyboard: vueStore.getters['app/keyboard'],
-      keymap: vueStore.getters['app/exportKeymapName'],
-      layout: vueStore.getters['app/layout'],
-      layers: layers
-    };
-
-    download(
-      `${vueStore.getters['app/exportKeymapName']}.json`,
-      JSON.stringify(data)
-    );
-  }
   function scrollHandler() {
     if (offsetTop < $(document).scrollTop()) {
       $('.split-content').addClass('fixed');
@@ -945,13 +1030,6 @@ $(document).ready(() => {
       $('#keycodes-section').css('margin-top', '0px');
       $('.split-content').removeClass('fixed');
     }
-  }
-
-  function downloadSourceBundle() {
-    downloadSrc(backend_compile_url + '/' + job_id + '/source');
-  }
-  function downloadFirmwareFile() {
-    download(fwFilename, fwStream);
   }
 
   function compileLayout(_keyboard, _keymapName, _layout) {
@@ -980,7 +1058,7 @@ $(document).ready(() => {
       success: function(d) {
         if (d.enqueued) {
           vueStore.commit('status/append', '\n* Received job_id: ' + d.job_id);
-          job_id = d.job_id;
+          vueStore.commit('app/setJobID', d.job_id);
           check_status();
         }
       }
@@ -1166,19 +1244,17 @@ $(document).ready(() => {
   }
 
   function enableOtherButtons() {
-    [$fwFile, $('#toolbox'), $source].forEach($el => {
-      $el.removeAttr('disabled');
-    });
+    vueStore.commit('app/setEnableDownloads');
   }
 
   function disableOtherButtons() {
-    [$fwFile, $('#toolbox'), $source].forEach($el => {
-      $el.attr('disabled', 'disabled');
-    });
+    vueStore.commit('app/setDisableDownloads');
   }
 
   function check_status() {
-    $.get(backend_compile_url + '/' + job_id, function(data) {
+    $.get(backend_compile_url + '/' + vueStore.getters['app/jobID'], function(
+      data
+    ) {
       console.log(data);
       let msg;
       switch (data.status) {
@@ -1187,8 +1263,8 @@ $(document).ready(() => {
             'status/append',
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
-          fwStream = data.result.firmware;
-          fwFilename = data.result.firmware_filename;
+          vueStore.commit('app/setFirmwareStream', data.result.firmware);
+          vueStore.commit('app/setFirmwareFile', data.result.firmware_filename);
           enableCompileButton();
           enableOtherButtons();
           break;
@@ -1219,35 +1295,6 @@ $(document).ready(() => {
       vueStore.dispatch('status/scrollToEnd');
       status = data.status;
     });
-  }
-
-  function download(filename, text) {
-    var element = document.createElement('a');
-    element.setAttribute(
-      'href',
-      'data:text/plain;charset=utf-8,' + encodeURIComponent(text)
-    );
-    element.setAttribute('download', filename);
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
-  }
-
-  function downloadSrc(url) {
-    var element = document.createElement('a');
-    element.setAttribute('href', url);
-    element.setAttribute('download', 'source.zip');
-
-    element.style.display = 'none';
-    document.body.appendChild(element);
-
-    element.click();
-
-    document.body.removeChild(element);
   }
 
   function lookupKeyPressCode(searchTerm) {
