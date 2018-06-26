@@ -3,7 +3,6 @@ $(document).ready(() => {
   const clearKeymapTemplate = _.template(
     'This will clear your keymap - are you sure you want to <%= action %>?'
   );
-  //  var keymap = [];
   var layer = 0;
   var job_id = '';
   var fwStream = '';
