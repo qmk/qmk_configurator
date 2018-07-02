@@ -178,7 +178,7 @@ $(document).ready(() => {
           return state.keymapName.replace(/\s/g, '_').toLowerCase();
         },
         exportKeymapName: state => {
-          let exportName = state.keymapName.replace(/\s/g, '_').toLowerCase();
+          let exportName = state.keymapName.replace(/[\s\/]/g, '_').toLowerCase();
           if (exportName === '') {
             exportName = `${state.keyboard}_${state.layout}_mine`.toLowerCase();
           }
@@ -263,7 +263,7 @@ $(document).ready(() => {
           state.layout = _layout;
         },
         setKeymapName(state, _keymapName) {
-          state.keymapName = _keymapName.replace(/\s/g, '_').toLowerCase();
+          state.keymapName = _keymapName.replace(/[\s\/]/g, '_').toLowerCase();
         },
         setJobID(state, jobID) {
           state.jobID = jobID;
