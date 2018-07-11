@@ -2083,6 +2083,8 @@ $(document).ready(() => {
       { name: 'Sat -', code: 'RGB_SAD' },
       { name: 'Bright +', code: 'RGB_VAI' },
       { name: 'Bright -', code: 'RGB_VAD' },
+      { name: 'Effect +', code: 'RGB_SPI' },
+      { name: 'Effect -', code: 'RGB_SPD' },
       { name: 'RGB Mode P', code: 'RGB_M_P', title: 'Plain' },
       { name: 'RGB Mode B', code: 'RGB_M_B', title: 'Breathe' },
       { name: 'RGB Mode R', code: 'RGB_M_R', title: 'Rainbow' },
