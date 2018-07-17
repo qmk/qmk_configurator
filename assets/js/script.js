@@ -13,6 +13,10 @@ $(document).ready(() => {
     `${backend_keyboards_url}/<%= keyboard %>/readme`
   );
 
+  randomPotatoFact();
+  setInterval(() => {
+    randomPotatoFact();
+  }, 60000);
   const defaults = {
     MAX_X: 775,
     KEY_WIDTH: 40,
@@ -2272,5 +2276,26 @@ $(document).ready(() => {
     function setDirty() {
       instance.dirty = true;
     }
+  }
+
+  function randomPotatoFact() {
+    let potatoFact = [
+      'A potato is about 80% water and 20% solid.',
+      'Henry Spalding first planted potatoes in Idaho in 1837',
+      '“French Fries” were introduced to America when Thomas Jefferson served them at a Whitehouse dinner.',
+      'United States potato lovers consumed more than 4 million tons of French Fries in various shapes and sizes.',
+      'Potatoes are a powerful aphrodisiac, says a physician in Ireland.',
+      'The average American eats 140 pounds of potatoes per year. Germans eat more than 200 pounds per year.',
+      'The largest potato grown was 18 pounds and 4 ounces according to the Guinness Book of World Records. It was grown in England in 1795.',
+      'Potatoes are the world’s fourth food staple – after wheat, corn and rice.',
+      'Potatoes are grown in more than 125 countries.',
+      'Every year enough potatoes are grown worldwide to cover a four-lane motorway circling the world six times.',
+      'China is the world’s largest potato producer.',
+      'Potatoes were the first vegetable grown in space.',
+      'Potatoes are totally gluten-free.'
+    ];
+    $('.random-potato').html(
+      potatoFact[Math.floor(Math.random(Date.now()) * potatoFact.length)]
+    );
   }
 });
