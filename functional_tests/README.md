@@ -23,7 +23,7 @@ Ideally these should be downloaded by a script when executed on a CI environment
             Chrome Web Driver version 2.40  
 
 ```
-foo@bar:~/qmk_configurator/functional_tests$ sudo ./selenium_setup.sh
+foo@bar:~/qmk_configurator/functional_tests$ ./selenium_setup.sh
 ```
 2. Download and install the Java SDK. 
 3. Run 'npm install'  from the the main qmk_configurator directory
