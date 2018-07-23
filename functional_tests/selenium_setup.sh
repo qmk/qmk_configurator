@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # This script is intended to be run from the qmk_configurator/functional_tests directory
-# Installs Chrome Web Driver version 2.40
-# Installs Selenium Standalone Server version 3.13.0
+# Installs Chrome Web Driver
+# Installs Selenium Standalone Server
 
 if [ "$EUID" -ne 0 ]; then 
     exec sudo "$0" $@; 
@@ -11,20 +11,24 @@ fi
 # Determine which OS
 OS="$(uname -s)"
 
+# Set Versions
+SELENIUM_VERSION="3.13.0"
+CHR_DRIVER_VER="2.40"
+
 # Get Paths
 PWD="$(pwd)" # should be qmk_configurator/functional_tests
 
 # Determine which Chrome Web Driver to download based on system
 if [ "${OS}" == "Darwin" ]; then
-    CHR_DRIVER="https://chromedriver.storage.googleapis.com/2.40/chromedriver_mac64.zip"
+    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_mac64.zip"
     DRIVER="mac64"
 else
     VERSION="$(uname -m)"
     if [ "${VERSION}" == "x86_64:" ]; then
-	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux32.zip"
+	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux32.zip"
         DRIVER="linux32"
     else
-	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/2.40/chromedriver_linux64.zip"
+	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux64.zip"
         DRIVER="linux64"
     fi
 fi
@@ -45,7 +49,6 @@ sudo chmod 0755 "$DEST_PATH"
 printf "Installed Chrome Web Driver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
 
 #Download and install Standalone Selenium Server
-SELENIUM_VERSION="3.13.0"
 SELENIUM_JAR_FILE=selenium-server-standalone-$SELENIUM_VERSION.jar
 wget http://selenium-release.storage.googleapis.com/$(echo "$SELENIUM_VERSION" | cut -d'.' -f-2)/$SELENIUM_JAR_FILE -P "$TEMP_PATH"
 mv -f "$TEMP_PATH/$SELENIUM_JAR_FILE" "$DEST_PATH"
