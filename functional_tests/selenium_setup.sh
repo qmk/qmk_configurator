@@ -14,6 +14,7 @@ OS="$(uname -s)"
 # Set Versions
 SELENIUM_VERSION="3.13.0"
 CHR_DRIVER_VER="2.40"
+GKO_DRIVER_VER="0.21.0"
 
 # Get Paths
 PWD="$(pwd)" # should be qmk_configurator/functional_tests
@@ -21,14 +22,17 @@ PWD="$(pwd)" # should be qmk_configurator/functional_tests
 # Determine which Chrome Web Driver to download based on system
 if [ "${OS}" == "Darwin" ]; then
     CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_mac64.zip"
+    GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-macos.tar.gz"
     DRIVER="mac64"
 else
     VERSION="$(uname -m)"
     if [ "${VERSION}" == "x86_64:" ]; then
 	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux32.zip"
+        GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-linux32.tar.gz"
         DRIVER="linux32"
     else
 	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux64.zip"
+        GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-linux64.tar.gz"
         DRIVER="linux64"
     fi
 fi
