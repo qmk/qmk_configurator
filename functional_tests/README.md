@@ -18,14 +18,21 @@ Ideally these should be downloaded by a script when executed on a CI environment
 
 ## Setup
 
-1. Download the latest [Selenium Standalone Server .jar](https://www.seleniumhq.org/download/) and put it in the 'functional_tests/bin' directory.
-2. Update the 'server_path' setting to the correct path and version in 'nightwatch.conf.js' as needed.
-3. If you are using Google Chrome make sure you download the [correct drivers](https://chromedriver.storage.googleapis.com/index.html?path=2.40/) suitable for your system, and place it in the `functional_tests/bin` directory, replacing files as necessary. 
-4. Download and install the Java SDK. 
-5. Run 'npm install'  from the the main qmk_configurator directory
+1. Run the `selenium_setup.sh` script to install the following to `qmk_configurator/functional_tests/bin`  
+            Selenium Standalone Server 
+            Chrome Web Driver version 
+
+```
+foo@bar:~/qmk_configurator/functional_tests$ ./selenium_setup.sh
+```
+At the time of this writing, `chromedriver` is at `2.40` and Selenium Standalone Server is at `3.13.0'
+
+2. Download and install the Java SDK. 
+3. Run 'npm install'  from the the main qmk_configurator directory
 ```console
 foo@bar:~/qmk_configurator$ npm install
 ```
+4. Update `qmk_configurator/nightwatch.conf.js` to have the correct version for the `Selenium Standalone Server`
 
 ## Execution
 

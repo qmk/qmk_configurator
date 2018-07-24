@@ -2292,7 +2292,8 @@ $(document).ready(() => {
       'Every year enough potatoes are grown worldwide to cover a four-lane motorway circling the world six times.',
       'China is the world’s largest potato producer.',
       'Potatoes were the first vegetable grown in space.',
-      'Potatoes are totally gluten-free.'
+      'Potatoes are totally gluten-free.',
+      'One of the most basic Incan measurements of time was the time it took to cook a potato.'
     ];
     $('.random-potato').html(
       potatoFact[Math.floor(Math.random(Date.now()) * potatoFact.length)]
