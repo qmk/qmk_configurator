@@ -2293,7 +2293,8 @@ $(document).ready(() => {
       'China is the world’s largest potato producer.',
       'Potatoes were the first vegetable grown in space.',
       'Potatoes are totally gluten-free.',
-      'One of the most basic Incan measurements of time was the time it took to cook a potato.'
+      'One of the most basic Incan measurements of time was the time it took to cook a potato.',
+      'If a potato is exposed to light while growing, it will turn green and become poisonous.'
     ];
     $('.random-potato').html(
       potatoFact[Math.floor(Math.random(Date.now()) * potatoFact.length)]
