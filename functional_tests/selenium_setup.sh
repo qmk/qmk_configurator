@@ -52,6 +52,27 @@ sudo chmod 0755 "$DEST_PATH"
 
 printf "Installed Chrome Web Driver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
 
+# Download geckodriver to temporary location
+TEMP_PATH=${PWD}"/tmp/geckodriver"
+mkdir "$TEMP_PATH" && pushd "$TEMP_PATH"
+wget $GKO_DRIVER -P "$TEMP_PATH"
+printf "geckodriver downloaded to %s.\\n" "${TEMP_PATH}"
+
+# gunzip/tar geckodriver to qmk_configurator/functional_tests/bin directory
+DEST_PATH=${PWD}"/bin"
+if [ "${OS}" == "Darwin" ]; then
+    DRIVER="macos"
+fi
+
+gunzip "${TEMP_PATH}"/geckodriver-v$GKO_DRIVER_VER-$DRIVER.tar.gz
+tar xvf "${TEMP_PATH}"/geckodriver-v$GKO_DRIVER_VER-$DRIVER.tar
+
+sudo mv -f ./geckodriver "$DEST_PATH"
+sudo chown root:root "$DEST_PATH"
+sudo chmod 0755 "$DEST_PATH"
+
+printf "Installed geckodriver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
+
 #Download and install Standalone Selenium Server
 SELENIUM_JAR_FILE=selenium-server-standalone-$SELENIUM_VERSION.jar
 wget http://selenium-release.storage.googleapis.com/$(echo "$SELENIUM_VERSION" | cut -d'.' -f-2)/$SELENIUM_JAR_FILE -P "$TEMP_PATH"
