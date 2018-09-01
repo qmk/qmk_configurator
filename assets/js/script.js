@@ -158,6 +158,7 @@ $(document).ready(() => {
       state: {
         keyboard: '',
         keyboards: [],
+        _keyboards: [],
         layout: '',
         layouts: {},
         keymapName: '',
@@ -166,13 +167,15 @@ $(document).ready(() => {
         jobID: '',
         enableDownloads: false,
         firmwareFile: '',
-        firmwareStream: ''
+        firmwareStream: '',
+        filter: ''
       },
       getters: {
         keyboard: state => state.keyboard,
         keyboards: state => state.keyboards,
         layout: state => state.layout,
         layouts: state => state.layouts,
+        filter: state => state.filter,
         /**
          * keymapName
          * @param {object} state of store
@@ -182,7 +185,9 @@ $(document).ready(() => {
           return state.keymapName.replace(/\s/g, '_').toLowerCase();
         },
         exportKeymapName: state => {
-          let exportName = state.keymapName.replace(/[\s\/]/g, '_').toLowerCase();
+          let exportName = state.keymapName
+            .replace(/[\s\/]/g, '_')
+            .toLowerCase();
           if (exportName === '') {
             exportName = `${state.keyboard}_${state.layout}_mine`.toLowerCase();
           }
@@ -262,6 +267,7 @@ $(document).ready(() => {
         },
         setKeyboards(state, _keyboards) {
           state.keyboards = _keyboards;
+          state._keyboards = _keyboards; // make a 2nd copy
         },
         setLayout(state, _layout) {
           state.layout = _layout;
@@ -283,6 +289,19 @@ $(document).ready(() => {
         },
         setFirmwareStream(state, stream) {
           state.firmwareStream = stream;
+        },
+        setFilter(state, filter) {
+          state.filter = filter;
+          let keyboards = state._keyboards.filter(k => {
+            if (state.filter === '') {
+              return true;
+            }
+            return k.startsWith(state.filter);
+          });
+          if (keyboards.length > 0) {
+            // only use filter if it matches
+            state.keyboards = keyboards;
+          }
         },
         /**
          * processLayouts
@@ -750,6 +769,15 @@ $(document).ready(() => {
           if (newName !== oldName) {
             this.keymapName = newName;
           }
+        },
+        $route: function(to/*, from*/) {
+          if (to.query) {
+            let filter = to.query.filter;
+            if (!_.isUndefined(filter)) {
+              this.updateFilter(filter);
+              this.updateKeyboard(_.first(this.keyboards))
+            }
+          }
         }
       },
       methods: {
@@ -805,6 +833,12 @@ $(document).ready(() => {
           let _keyboard = '';
           if (status === 200) {
             store.commit('app/setKeyboards', data);
+            if (this.$route.query) {
+              let filter = this.$route.query.filter;
+              if (!_.isUndefined(filter)) {
+                this.updateFilter(filter);
+              }
+            }
             _keyboard = _.first(this.keyboards);
             let { keyboardP } = this.$route.params;
             if (
@@ -865,6 +899,9 @@ $(document).ready(() => {
               ? _keymapName.slice(this.keyboard.length + 1, _keymapName.length)
               : keymapName;
           compileLayout(this.keyboard, keymapName, this.layout);
+        },
+        updateFilter(filter) {
+          store.commit('app/setFilter', filter);
         }
       },
       data: () => {
