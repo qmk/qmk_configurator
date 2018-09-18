@@ -166,8 +166,8 @@ $(document).ready(() => {
         isPreview: false,
         jobID: '',
         enableDownloads: false,
-        firmwareFile: '',
-        firmwareStream: '',
+        firmwareBinaryURL: [],
+        firmwareSourceURL: [],
         filter: ''
       },
       getters: {
@@ -197,8 +197,8 @@ $(document).ready(() => {
         isPreview: state => state.isPreview,
         jobID: state => state.jobID,
         enableDownloads: state => state.enableDownloads,
-        firmwareFile: state => state.firmwareFile,
-        firmwareStream: state => state.firmwareStream
+        firmwareBinaryURL: state => state.firmwareBinaryURL,
+        firmwareSourceURL: state => state.firmwareSourceURL
       },
       actions: {
         /**
@@ -287,8 +287,11 @@ $(document).ready(() => {
         setFirmwareFile(state, filename) {
           state.firmwareFile = filename;
         },
-        setFirmwareStream(state, stream) {
-          state.firmwareStream = stream;
+        setFirmwareBinaryURL(state, url) {
+          state.firmwareBinaryURL = url;
+        },
+        setFirmwareSourceURL(state, url) {
+          state.firmwareSourceURL = url;
         },
         setFilter(state, filter) {
           state.filter = filter;
@@ -484,12 +487,6 @@ $(document).ready(() => {
             JSON.stringify(data)
           );
         },
-        downloadFirmware() {
-          this.download(
-            vueStore.getters['app/firmwareFile'],
-            vueStore.getters['app/firmwareStream']
-          );
-        },
         download(filename, data) {
           this.urlEncodedData = encoding + encodeURIComponent(data);
           this.filename = filename;
@@ -499,10 +496,17 @@ $(document).ready(() => {
             this.downloadElementEnabled = false;
           });
         },
+        downloadFirmware() {
+          this.urlEncodedData = _.first(store.getters['app/firmwareBinaryURL']);
+          this.filename = store.getters['app/firmwareFile'];
+          this.downloadElementEnabled = true;
+          Vue.nextTick(() => {
+            this.$refs.downloadElement.click();
+            this.downloadElementEnabled = false;
+          });
+        },
         downloadSource() {
-          this.urlEncodedData = `${backend_compile_url}/${
-            store.getters['app/jobID']
-          }/source`;
+          this.urlEncodedData = _.first(store.getters['app/firmwareSourceURL']);
           this.filename = 'source.zip';
           this.downloadElementEnabled = true;
           Vue.nextTick(() => {
@@ -770,12 +774,12 @@ $(document).ready(() => {
             this.keymapName = newName;
           }
         },
-        $route: function(to/*, from*/) {
+        $route: function(to /*, from*/) {
           if (to.query) {
             let filter = to.query.filter;
             if (!_.isUndefined(filter)) {
               this.updateFilter(filter);
-              this.updateKeyboard(_.first(this.keyboards))
+              this.updateKeyboard(_.first(this.keyboards));
             }
           }
         }
@@ -1304,7 +1308,14 @@ $(document).ready(() => {
             'status/append',
             '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
           );
-          vueStore.commit('app/setFirmwareStream', data.result.firmware);
+          vueStore.commit(
+            'app/setFirmwareBinaryURL',
+            data.result.firmware_binary_url
+          );
+          vueStore.commit(
+            'app/setFirmwareSourceURL',
+            data.result.firmware_source_url
+          );
           vueStore.commit('app/setFirmwareFile', data.result.firmware_filename);
           enableCompileButton();
           enableOtherButtons();
