@@ -41,7 +41,7 @@ GKO_DRIVER="${GKO_DRIVER_URL}/${GKO_ARCHIVE}"
 
 # Download Chrome Web Driver .zip file to temporary location
 TEMP_PATH="${ROOTPWD}/tmp/chromedriver"
-rm -fr "$TEMP_PATH" && mkdir -p "$TEMP_PATH" && cd "$TEMP_PATH"
+mkdir -p "$TEMP_PATH" && cd "$TEMP_PATH"
 wget $CHR_DRIVER -P "$TEMP_PATH"
 printf "Chrome Driver zip file downloaded to %s.\\n" "${TEMP_PATH}"
 
@@ -55,7 +55,7 @@ printf "Installed Chrome Web Driver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
 
 # Download geckodriver to temporary location
 TEMP_PATH=${ROOTPWD}"/tmp/geckodriver"
-mkdir "$TEMP_PATH" && pushd "$TEMP_PATH"
+mkdir -p "$TEMP_PATH" && cd "$TEMP_PATH"
 wget $GKO_DRIVER -P "$TEMP_PATH"
 printf "geckodriver downloaded to %s.\\n" "${TEMP_PATH}"
 
