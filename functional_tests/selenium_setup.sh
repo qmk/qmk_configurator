@@ -38,7 +38,6 @@ else
 fi
 
 # Download Chrome Web Driver .zip file to temporary location
-echo ${ROOTPWD}
 TEMP_PATH="${ROOTPWD}/tmp/chromedriver"
 rm -fr "$TEMP_PATH" && mkdir -p "$TEMP_PATH" && cd "$TEMP_PATH"
 wget $CHR_DRIVER -P "$TEMP_PATH"
@@ -74,7 +73,7 @@ printf "Installed geckodriver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
 
 #Download and install Standalone Selenium Server
 SELENIUM_JAR_FILE=selenium-server-standalone-$SELENIUM_VERSION.jar
-wget http://selenium-release.storage.googleapis.com/$(echo "$SELENIUM_VERSION" | cut -d'.' -f-2)/$SELENIUM_JAR_FILE -P "$TEMP_PATH"
+wget "http://selenium-release.storage.googleapis.com/$(echo "$SELENIUM_VERSION" | cut -d'.' -f-2)/$SELENIUM_JAR_FILE" -P "$TEMP_PATH"
 mv -f "${TEMP_PATH}/${SELENIUM_JAR_FILE}" "$DEST_PATH"
 chmod 755 "$DEST_PATH/${SELENIUM_JAR_FILE}"
 
