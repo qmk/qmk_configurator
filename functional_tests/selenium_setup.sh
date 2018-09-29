@@ -24,10 +24,8 @@ if [ "${OS}" == "Darwin" ]; then
     CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_mac64.zip"
     GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-macos.tar.gz"
     DRIVER="mac64"
-    ROOTUSER="root:staff"
 else
     VERSION="$(uname -m)"
-    ROOTUSER="root:root"
     if [ "${VERSION}" == "x86_64:" ]; then
 	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux32.zip"
         GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-linux32.tar.gz"
