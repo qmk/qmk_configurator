@@ -12,6 +12,8 @@ OS="$(uname -s)"
 SELENIUM_VERSION="3.13.0"
 CHR_DRIVER_VER="2.40"
 GKO_DRIVER_VER="0.21.0"
+CHR_DRIVER_URL="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}"
+GKO_DRIVER_URL="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}"
 
 # Get Paths
 ROOTPWD=$(pwd) # should be qmk_configurator/functional_tests
@@ -21,21 +23,21 @@ mkdir -p ./bin ./tmp
 
 # Determine which Chrome Web Driver to download based on system
 if [ "${OS}" == "Darwin" ]; then
-    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_mac64.zip"
-    GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-macos.tar.gz"
-    DRIVER="mac64"
+    DRIVER="macos"
+    GKO_ARCHIVE="geckodriver-v${GKO_DRIVER_VER}-${DRIVER}.tar.gz"
+    CHR_ARCHIVE="chromedriver_mac64.zip"
 else
     VERSION="$(uname -m)"
     if [ "${VERSION}" == "x86_64:" ]; then
-	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux32.zip"
-        GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-linux32.tar.gz"
-        DRIVER="linux32"
+      DRIVER="linux32"
     else
-	    CHR_DRIVER="https://chromedriver.storage.googleapis.com/${CHR_DRIVER_VER}/chromedriver_linux64.zip"
-        GKO_DRIVER="https://github.com/mozilla/geckodriver/releases/download/v${GKO_DRIVER_VER}/geckodriver-v${GKO_DRIVER_VER}-linux64.tar.gz"
-        DRIVER="linux64"
+      DRIVER="linux64"
     fi
+    GKO_ARCHIVE="geckodriver-v${GKO_DRIVER_VER}-${DRIVER}.tar.gz"
+    CHR_ARCHIVE="chromedriver_${DRIVER}.zip"
 fi
+CHR_DRIVER="${CHR_DRIVER_URL}/${CHR_ARCHIVE}"
+GKO_DRIVER="${GKO_DRIVER_URL}/${GKO_ARCHIVE}"
 
 # Download Chrome Web Driver .zip file to temporary location
 TEMP_PATH="${ROOTPWD}/tmp/chromedriver"
@@ -45,7 +47,7 @@ printf "Chrome Driver zip file downloaded to %s.\\n" "${TEMP_PATH}"
 
 # Unzip Chrome Driver zip file to qmk_configurator/functional_tests/bin directory
 DEST_PATH=${ROOTPWD}"/bin"
-unzip "${TEMP_PATH}"/chromedriver_$DRIVER.zip
+unzip "${TEMP_PATH}/${CHR_ARCHIVE}"
 mv -f ./chromedriver "$DEST_PATH"
 chmod 0755 "$DEST_PATH"
 
@@ -59,23 +61,18 @@ printf "geckodriver downloaded to %s.\\n" "${TEMP_PATH}"
 
 # gunzip/tar geckodriver to qmk_configurator/functional_tests/bin directory
 DEST_PATH=${ROOTPWD}"/bin"
-if [ "${OS}" == "Darwin" ]; then
-    DRIVER="macos"
-fi
-
-gunzip "${TEMP_PATH}"/geckodriver-v$GKO_DRIVER_VER-$DRIVER.tar.gz
-tar xvf "${TEMP_PATH}"/geckodriver-v$GKO_DRIVER_VER-$DRIVER.tar
+gunzip < "${TEMP_PATH}/${GKO_ARCHIVE}" | tar xvf -
 
 mv -f ./geckodriver "$DEST_PATH"
-chmod 0755 "$DEST_PATH"
+chmod 0755 "${DEST_PATH}"
 
 printf "Installed geckodriver for %s to %s.\\n" "${DRIVER}" "${DEST_PATH}"
 
 #Download and install Standalone Selenium Server
 SELENIUM_JAR_FILE=selenium-server-standalone-$SELENIUM_VERSION.jar
 wget "http://selenium-release.storage.googleapis.com/$(echo "$SELENIUM_VERSION" | cut -d'.' -f-2)/$SELENIUM_JAR_FILE" -P "$TEMP_PATH"
-mv -f "${TEMP_PATH}/${SELENIUM_JAR_FILE}" "$DEST_PATH"
-chmod 755 "$DEST_PATH/${SELENIUM_JAR_FILE}"
+mv -f "${TEMP_PATH}/${SELENIUM_JAR_FILE}" "${DEST_PATH}"
+chmod 755 "${DEST_PATH}/${SELENIUM_JAR_FILE}"
 
 printf "Installed Selenium Standalone Server %s. \\n" "${SELENIUM_VERSION}"
 
