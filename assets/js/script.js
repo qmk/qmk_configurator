@@ -836,7 +836,13 @@ $(document).ready(() => {
         initializeKeyboards({ data, status }) {
           let _keyboard = '';
           if (status === 200) {
-            store.commit('app/setKeyboards', data);
+            let exclude = getExclusionList();
+            store.commit(
+              'app/setKeyboards',
+              data.filter(keeb => {
+                return _.isUndefined(exclude[keeb]);
+              })
+            );
             if (this.$route.query) {
               let filter = this.$route.query.filter;
               if (!_.isUndefined(filter)) {
@@ -2342,10 +2348,69 @@ $(document).ready(() => {
       'Potatoes were the first vegetable grown in space.',
       'Potatoes are totally gluten-free.',
       'One of the most basic Incan measurements of time was the time it took to cook a potato.',
-      'If a potato is exposed to light while growing, it will turn green and become poisonous.'
+      'If a potato is exposed to light while growing, it will turn green and become poisonous.',
+      'It takes 10,000 pounds of potatoes to make 2,500 pounds of potato chips.',
+      'Today there are more than 4000 different kinds of potatoes.',
+      'Potatoes belong to a small family, the Nightshade or Solanaceous family.',
+      'During the Alaskan Klondike gold rush, (1897-1898) potatoes were practically worth their weight in gold.',
+      'Sir Walter Raleigh introduced potatoes to Ireland in 1589 on the 40,000 acres of land near Cork.',
+      'Potatoes are available year-round as they are harvested somewhere every month of the year.',
+      'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.'
     ];
     $('.random-potato').html(
       potatoFact[Math.floor(Math.random(Date.now()) * potatoFact.length)]
     );
+  }
+
+  function getExclusionList() {
+    return [
+      'atom47',
+      'chibios_test',
+      'christmas_tree',
+      'crkbd',
+      'deltasplit75',
+      'duck/eagle_viper',
+      'e6v2',
+      'eco',
+      'ergo42',
+      'ergodash',
+      'ergotravel',
+      'fortitude60',
+      'fourier',
+      'hadron',
+      'handwired/qc60',
+      'handwired/xealous',
+      'helix',
+      'iris',
+      'jc65',
+      'kbd75',
+      'kinesis',
+      'launchpad',
+      'lets_split',
+      'lets_split_eh',
+      'levinson',
+      'lfkeyboards',
+      'lily58',
+      'mechmini',
+      'meira',
+      'minidox',
+      'nyquist',
+      'octagon',
+      'orthodox',
+      'planck',
+      'preonic',
+      'ps2avrGB',
+      'quefrency',
+      'qwertyydox',
+      'redox',
+      'rorschach',
+      's60_x',
+      'vitamins_included',
+      'viterbi',
+      'zen'
+    ].reduce((acc, k) => {
+      acc[k] = true;
+      return acc;
+    }, {});
   }
 });
