@@ -2365,6 +2365,7 @@ $(document).ready(() => {
   function getExclusionList() {
     return [
       'atom47',
+      'chibios_test',
       'christmas_tree',
       'crkbd',
       'deltasplit75',
@@ -2385,6 +2386,7 @@ $(document).ready(() => {
       'launchpad',
       'lets_split',
       'levinson',
+      'lfkeyboards',
       'mechmini',
       'meira',
       'minidox',
@@ -2393,9 +2395,11 @@ $(document).ready(() => {
       'orthodox',
       'planck',
       'preonic',
+      'ps2avrGB',
       'redox',
       's60_x',
       'vitamins_included',
+      'viterbi',
       'zen'
     ].reduce((acc, k) => {
       acc[k] = true;
