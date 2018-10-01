@@ -2365,8 +2365,10 @@ $(document).ready(() => {
   function getExclusionList() {
     return [
       'atom47',
+      'bigseries',
       'chibios_test',
       'christmas_tree',
+      'clueboard/66',
       'crkbd',
       'deltasplit75',
       'duck/eagle_viper',
