@@ -22,18 +22,18 @@ At the time of this writing, `chromedriver` is at `2.40`, `geckodriver` is at `0
 
 1. Download and install the Java SDK.
 1. Download and install [nvm](https://github.com/creationix/nvm)
-```console
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-```
+  ```console
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  ```
 1. Run `nvm install` if this is your first time using nvm, or `nvm use` if you already have nvm installed.
 1. Run `npm install`  from the the main qmk_configurator directory
-```console
-foo@bar:~/qmk_configurator$ npm install
-```
+  ```console
+  foo@bar:~/qmk_configurator$ npm install
+  ```
 1. Run `npm run init_nightwatch` to download nightwatch binary drivers for your OS
-```console
-foo@bar:~/qmk_configurator$ npm run init_nightwatch
-```
+  ```console
+  foo@bar:~/qmk_configurator$ npm run init_nightwatch
+  ```
 1. Update `qmk_configurator/nightwatch.conf.js` to have the correct version for the `Selenium Standalone Server`
 
 ## Execution
