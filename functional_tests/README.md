@@ -21,6 +21,11 @@ Ideally these should be downloaded by a script when executed on a CI environment
 At the time of this writing, `chromedriver` is at `2.40`, `geckodriver` is at `0.21.0` and Selenium Standalone Server is at `3.13.0`
 
 1. Download and install the Java SDK.
+1. Download and install [nvm](https://github.com/creationix/nvm)
+```console
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+```
+1. Run `nvm install` if this is your first time using nvm, or `nvm use` if you already have nvm installed.
 1. Run `npm install`  from the the main qmk_configurator directory
 ```console
 foo@bar:~/qmk_configurator$ npm install
