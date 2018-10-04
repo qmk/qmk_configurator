@@ -2368,7 +2368,6 @@ $(document).ready(() => {
       'bigseries',
       'chibios_test',
       'christmas_tree',
-      'clueboard/66',
       'converter/usb_usb',
       'crkbd',
       'deltasplit75',
