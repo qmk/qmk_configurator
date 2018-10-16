@@ -3,7 +3,6 @@ $(document).ready(() => {
   const clearKeymapTemplate = _.template(
     'This will clear your keymap - are you sure you want to <%= action %>?'
   );
-  var layer = 0;
   var layout = '';
   const backend_baseurl = 'https://api.qmk.fm';
   const backend_keyboards_url = `${backend_baseurl}/v1/keyboards`;
@@ -29,8 +28,6 @@ $(document).ready(() => {
   };
 
   var config = {};
-
-  var myKeymap = new Keymap(layer);
 
   var $layer = $('.layer');
 
@@ -391,6 +388,143 @@ $(document).ready(() => {
     };
   }
 
+  function initKeymapStore() {
+    return {
+      namespaced: true,
+      state: {
+        keymap: [],
+        layer: 0,
+        dirty: false
+      },
+      getters: {
+        getKey: state => ({ _layer, index }) => state.keymap[_layer][index],
+        layer: state => state.layer,
+        getLayer: state => _layer => {
+          return state.keymap[_layer].map(key => {
+            return Object.assign({}, key);
+          });
+        },
+        size: state => _layer => {
+          return _.size(state.keymap[_layer]);
+        },
+        isDirty: state => state.dirty,
+        exportLayers: state => ({ compiler }) => {
+          return _.reduce(
+            state.keymap,
+            function(layers, _layer, k) {
+              layers[k] = [];
+              var aLayer = _.reduce(
+                _layer,
+                function(acc, key) {
+                  var keycode = key.code;
+                  if (key.code.indexOf('(kc)') !== -1) {
+                    if (key.contents) {
+                      keycode = keycode.replace('kc', key.contents.code);
+                    } else {
+                      keycode = keycode.replace('kc', 'KC_NO');
+                    }
+                  }
+                  if (key.code.indexOf('(layer)') !== -1) {
+                    keycode = keycode.replace('layer', key.layer);
+                  }
+                  if (key.code.indexOf('text') !== -1) {
+                    // add a special ANY marker to keycodes that were defined using ANY
+                    // This will be stripped back off on import.
+                    keycode = compiler ? key.text : `ANY(${key.text})`;
+                  }
+                  acc.push(keycode);
+                  return acc;
+                },
+                []
+              );
+              layers[k] = aLayer;
+              return layers;
+            },
+            []
+          );
+        }
+      },
+      actions: {
+        initKey: ({ state, commit }, { _layer, index }) => {
+          if (state.keymap[_layer] === undefined) {
+            commit('initLayer', _layer);
+          }
+          return state.keymap[_layer][index];
+        },
+        setKeycodeLayer({ state, commit }, { _layer, index, toLayer }) {
+          state.keymap[_layer][index].layer = toLayer;
+          if (toLayer !== _layer) {
+            if (state.keymap[toLayer] === undefined) {
+              commit('initLayer', toLayer);
+            }
+            let { name, code } = lookupKeycode('KC_TRNS');
+            state.keymap[toLayer][index] = { name, code };
+          }
+        }
+      },
+      mutations: {
+        setContents(state, { index, key }) {
+          state.keymap[state.layer][index].contents = key;
+        },
+        assignKey(state, { _layer, index, name, code, type }) {
+          state.keymap[_layer][index] = {
+            name: name,
+            code: code,
+            type: type
+          };
+          var keycode = state.keymap[_layer][index];
+          if (keycode.type === 'layer') {
+            state.keymap[_layer][index].layer = 0;
+          }
+        },
+        swapKeys(state, { _layer, srcIndex, dstIndex }) {
+          var temp = state.keymap[_layer][srcIndex];
+          state.keymap[_layer][srcIndex] = state.keymap[_layer][dstIndex];
+          state.keymap[_layer][dstIndex] = temp;
+          state.dirty = true;
+        },
+        setText({ state }, { _layer, index, text }) {
+          state.keymap[_layer][index].text = text;
+        },
+        setKey(state, { _layer, index, key }) {
+          state.keymap[_layer][index] = key;
+        },
+        setDirty(state) {
+          state.dirty = true;
+        },
+        clearDirty({ state }) {
+          state.dirty = false;
+        },
+        clear(state) {
+          state.keymap = [];
+          state.dirty = false;
+        },
+        changeLayer(state, newLayer) {
+          state.layer = newLayer;
+        },
+        initLayer: (state, _layer) => {
+          if (_layer > 0) {
+            // layer 0 is always initialized. Use it as a reference
+            let { name, code } = lookupKeycode('KC_NO');
+            let KC_NO = { name, code };
+            state.keymap[_layer] = _.reduce(
+              state.keymap[0],
+              (acc, key, index) => {
+                acc[index] = KC_NO;
+                return acc;
+              },
+              {}
+            );
+          } else {
+            // TODO probably need to do something differently here
+            state.keymap[_layer] = {};
+          }
+        }
+      }
+    };
+
+  }
+
   /**
    * newStore
    * @return {object} initialized Vuex store instance
@@ -399,7 +533,8 @@ $(document).ready(() => {
     return new Vuex.Store({
       modules: {
         app: initAppStore(),
-        status: initStatusStore()
+        status: initStatusStore(),
+        keymap: initKeymapStore()
       },
       strict: true
     });
@@ -472,10 +607,12 @@ $(document).ready(() => {
       methods: {
         exportJSON() {
           //Squashes the keymaps to the api payload format, might look into making this a function
-          var layers = myKeymap.exportLayers({ compiler: false });
+          let layers = vueStore.getters['keymap/exportLayers']({
+            compiler: false
+          });
 
           //API payload format
-          var data = {
+          let data = {
             keyboard: vueStore.getters['app/keyboard'],
             keymap: vueStore.getters['app/exportKeymapName'],
             layout: vueStore.getters['app/layout'],
@@ -515,7 +652,7 @@ $(document).ready(() => {
           });
         },
         importKeymap() {
-          if (myKeymap.isDirty()) {
+          if (vueStore.getters['keymap/isDirty']) {
             if (
               !confirm(
                 clearKeymapTemplate({ action: 'change keyboard and layout' })
@@ -582,7 +719,7 @@ $(document).ready(() => {
               render_layout(
                 _layouts[data.layout].map(v => Object.assign({}, v))
               );
-              myKeymap.setDirty();
+              store.commit('keymap/setDirty');
               disableOtherButtons();
               store.dispatch('status/viewReadme', data.keyboard);
             });
@@ -719,7 +856,7 @@ $(document).ready(() => {
             return store.getters['app/keyboard'];
           },
           set(value) {
-            if (myKeymap.isDirty()) {
+            if (store.getters['keymap/isDirty']) {
               if (
                 !confirm(
                   clearKeymapTemplate({ action: 'change your keyboard' })
@@ -739,7 +876,7 @@ $(document).ready(() => {
             return store.getters['app/layout'];
           },
           set(value) {
-            if (myKeymap.isDirty()) {
+            if (store.getters['keymap/isDirty']) {
               if (
                 !confirm(clearKeymapTemplate({ action: 'change your layout' }))
               ) {
@@ -791,7 +928,7 @@ $(document).ready(() => {
          * @return {object} promise when it has completed
          */
         loadDefault() {
-          if (myKeymap.isDirty()) {
+          if (store.getters['keymap/isDirty']) {
             if (
               !confirm(clearKeymapTemplate({ action: 'load default keymap' }))
             ) {
@@ -813,7 +950,7 @@ $(document).ready(() => {
                 render_layout(
                   this.layouts[this.layout].map(v => Object.assign({}, v))
                 );
-                myKeymap.setDirty();
+                store.commit('keymap/setDirty');
               }
             })
             .catch(error => {
@@ -1019,13 +1156,22 @@ $(document).ready(() => {
         }
 
         if ($key.hasClass('key-contents')) {
-          myKeymap.setContents(_index, newKey(meta, keycode.data('code')));
+          vueStore.commit('keymap/setContents', {
+            _index,
+            key: newKey(meta, keycode.data('code'))
+          });
         } else {
-          myKeymap.assignKey(layer, _index, meta.name, keycode.code, meta.type);
+          vueStore.commit('keymap/assignKey', {
+            _layer: vueStore.getters['keymap/layer'],
+            index: _index,
+            name: meta.name,
+            code: keycode.code,
+            type: meta.type
+          });
         }
         $key.removeClass('keycode-select'); // clear selection once assigned
-        render_key(layer, _index);
-        myKeymap.setDirty();
+        render_key(vueStore.getters['keymap/layer'], _index);
+        vueStore.commit('keymap/setDirty');
       }
     };
   }
@@ -1052,13 +1198,22 @@ $(document).ready(() => {
     }
 
     if ($key.hasClass('key-contents')) {
-      myKeymap.setContents(_index, newKey(meta, _keycode.data('code')));
+      vueStore.commit('keymap/setContents', {
+        _index,
+        key: newKey(meta, _keycode.data('code'))
+      });
     } else {
-      myKeymap.assignKey(layer, _index, meta.name, _keycode, meta.type);
+      vueStore.commit('keymap/assignKey', {
+        _layer: vueStore.getters['keymap/layer'],
+        index: _index,
+        name: meta.name,
+        keycode: meta.code,
+        type: meta.type
+      });
     }
     $key.removeClass('keycode-select'); // clear selection once assigned
-    render_key(layer, _index);
-    myKeymap.setDirty();
+    render_key(vueStore.getters['keymap/layer'], _index);
+    vueStore.commit('keymap/setDirty');
   }
 
   function getSelectedKey() {
@@ -1085,7 +1240,7 @@ $(document).ready(() => {
 
   function compileLayout(_keyboard, _keymapName, _layout) {
     disableCompileButton();
-    var layers = myKeymap.exportLayers({ compiler: true });
+    var layers = vueStore.getters['keymap/exportLayers']({ compiler: true });
     var data = {
       keyboard: _keyboard,
       keymap: _keymapName,
@@ -1123,8 +1278,8 @@ $(document).ready(() => {
   function changeLayer(e) {
     $('.layer.active').removeClass('active');
     $(e.target).addClass('active');
-    layer = e.target.innerHTML;
-    myKeymap.changeLayer(layer);
+    let layer = e.target.innerHTML;
+    vueStore.commit('keymap/changeLayer', layer);
     setLayerToNonEmpty(layer);
     let _layouts = vueStore.getters['app/layouts'];
     let _layout = vueStore.getters['app/layout'];
@@ -1271,7 +1426,7 @@ $(document).ready(() => {
       });
       $(key).droppable(droppable_config(key, k));
       $visualKeymap.append(key);
-      render_key(layer, k);
+      render_key(vueStore.getters['keymap/layer'], k);
     });
     $visualKeymap.css({
       width: max.x + 'px',
@@ -1462,17 +1617,22 @@ $(document).ready(() => {
     var stats = { count: 0, any: 0, layers: 0 };
     $.each(converted_keymap, function(_layer /*, keys*/) {
       //Add layer object for every layer that exists
-      myKeymap.initLayer(_layer);
+      vueStore.commit('keymap/initLayer', _layer);
       //Loop over each keycode in the layer
-      $.each(converted_keymap[_layer], function(key, keycode) {
-        var key = myKeymap.setKey(_layer, key, parseKeycode(keycode, stats));
+      $.each(converted_keymap[_layer], function(index, keycode) {
+        vueStore.commit('keymap/setKey', {
+          _layer,
+          index: index,
+          key: parseKeycode(keycode, stats)
+        });
+        let key = vueStore.getters['keymap/getKey']({ _layer, index: index });
         stats.count += 1;
 
         if (key.name === 'Any') {
           stats.any += 1;
         }
       });
-      if (myKeymap.size(_layer) > 0) {
+      if (vueStore.getters['keymap/size'](_layer) > 0) {
         setLayerToNonEmpty(_layer);
       }
       stats.layers += 1;
@@ -1486,8 +1646,8 @@ $(document).ready(() => {
 
   function reset_keymap() {
     config = resetConfig();
-    myKeymap.clear();
-    layer = 0;
+    vueStore.commit('keymap/clear');
+    vueStore.commit('keymap/changeLayer', 0);
     $('.layer').removeClass('non-empty active');
     $('.layer.0').addClass('active non-empty');
   }
@@ -1533,20 +1693,23 @@ $(document).ready(() => {
           if ($target.hasClass('key-contents')) {
             if (srcKeycode.dataset.type !== 'container') {
               // we currently don't support nested containers
-              myKeymap.setContents(key, {
-                name: srcKeycode.innerHTML,
-                code: srcKeycode.dataset.code,
-                type: srcKeycode.dataset.type
+              vueStore.commit('keymap/setContents', {
+                index: key,
+                key: {
+                  name: srcKeycode.innerHTML,
+                  code: srcKeycode.dataset.code,
+                  type: srcKeycode.dataset.type
+                }
               });
             }
           } else {
-            myKeymap.assignKey(
-              layer,
-              key,
-              srcKeycode.innerHTML,
-              srcKeycode.dataset.code,
-              srcKeycode.dataset.type
-            );
+            vueStore.commit('keymap/assignKey', {
+              _layer: vueStore.getters['keymap/layer'],
+              index: key,
+              name: srcKeycode.innerHTML,
+              code: srcKeycode.dataset.code,
+              type: srcKeycode.dataset.type
+            });
           }
         } else {
           // handle swapping keys in keymap
@@ -1590,7 +1753,12 @@ $(document).ready(() => {
             $src.css({ left: srcPos.left, top: srcPos.top });
             $dst.css({ left: dstPos.left, top: dstPos.top });
 
-            myKeymap.swapKeys(layer, srcIndex, dstIndex);
+            let layer = vueStore.getters['keymap/layer'];
+            vueStore.commit('keymap/swapKeys', {
+              _layer: layer,
+              srcIndex,
+              dstIndex
+            });
 
             render_key(layer, srcIndex);
             render_key(layer, key);
@@ -1600,74 +1768,101 @@ $(document).ready(() => {
           $.when(deferSrc, deferDst).done(animationsFinished);
           return;
         }
-        myKeymap.setDirty();
-        render_key(layer, key);
+        vueStore.commit('keymap/setDirty');
+        render_key(vueStore.getters['keymap/layer'], key);
       }
     };
   }
 
   function render_key(_layer, k) {
-    var key = $('#key-' + k);
-    var keycode = myKeymap.getKey(_layer, k);
-    if (!keycode) {
-      let { name, code } = lookupKeycode('KC_NO');
-      keycode = myKeymap.assignKey(_layer, k, name, code, '');
-    }
-    $(key).html(keycode.name);
-    if (keycode.type === 'container') {
-      $(key).addClass('key-container');
-      var container = $('<div>', {
-        class: 'key-contents'
-      });
-      if (keycode.contents) {
-        $(container).html(keycode.contents.name);
+    var $key = $('#key-' + k);
+    var promise = vueStore.dispatch('keymap/initKey', { _layer, index: k });
+    promise.then(keycode => {
+      if (!keycode) {
+        let { name, code } = lookupKeycode('KC_NO');
+        vueStore.commit('keymap/assignKey', {
+          _layer,
+          index: k,
+          name,
+          code,
+          type: ''
+        });
+        keycode = vueStore.getters['keymap/getKey']({ _layer, index: k });
       }
-      $(container).droppable(droppable_config(container, k));
-      $(key).append(container);
-    } else if (keycode.type === 'layer') {
-      $(key).addClass('key-layer');
-      $(key).append($('<br/>'));
-      var layer_input1 = $('<input>', {
-        class: 'key-layer-input',
-        type: 'number',
-        val: keycode.layer
-      }).on('input', function() {
-        var val = $(this).val();
-        var toLayer = parseInt(val, 10);
-        if (_.isNumber(toLayer)) {
-          myKeymap.setKeycodeLayer(_layer, k, toLayer);
-          setLayerToNonEmpty(toLayer);
+      $key.html(keycode.name);
+      if (keycode.type === 'container') {
+        $key.addClass('key-container');
+        var $container = $('<div>', {
+          class: 'key-contents'
+        });
+        if (keycode.contents) {
+          $container.html(keycode.contents.name);
         }
-      });
-      ignoreKeypressListener(layer_input1);
-      $(key).append(layer_input1);
-    } else if (keycode.type === 'text') {
-      $(key).addClass('key-layer');
-      var layer_input = $('<input>', {
-        class: 'key-layer-input',
-        val: keycode.text
-      }).on('input', function(/*e*/) {
-        myKeymap.setText(layer, k, $(this).val());
-      });
-      ignoreKeypressListener(layer_input);
-      $(key).append(layer_input);
-    } else {
-      $(key).removeClass('key-container');
-      $(key).removeClass('key-layer');
-    }
-    if (keycode.code !== 'KC_NO') {
-      var remove_keycode = $('<div>', {
-        class: 'remove',
-        html: '&#739;',
-        click: function(evt) {
-          evt.preventDefault();
-          evt.stopPropagation();
-          myKeymap.assignKey(layer, k, '', 'KC_NO', '');
-          render_key(layer, k);
-        }
-      });
-      $(key).append(remove_keycode);
-    }
+        $container.droppable(droppable_config($container, k));
+        $key.append($container);
+      } else if (keycode.type === 'layer') {
+        $key.addClass('key-layer');
+        $key.append($('<br/>'));
+        var layer_input1 = $('<input>', {
+          class: 'key-layer-input',
+          type: 'number',
+          val: keycode.layer
+        }).on('input', function() {
+          var val = $(this).val();
+          var toLayer = parseInt(val, 10);
+          if (_.isNumber(toLayer)) {
+            vueStore
+              .dispatch('keymap/setKeycodeLayer', {
+                _layer,
+                index: k,
+                toLayer
+              })
+              .then(() => {
+                setLayerToNonEmpty(toLayer);
+              });
+          }
+        });
+        ignoreKeypressListener(layer_input1);
+        $key.append(layer_input1);
+      } else if (keycode.type === 'text') {
+        $key.addClass('key-layer');
+        var layer_input = $('<input>', {
+          class: 'key-layer-input',
+          val: keycode.text
+        }).on('input', function(/*e*/) {
+          vueStore.commit('keymap/setText', {
+            _layer: vueStore.getters['keymap/layer'],
+            index: k,
+            text: $(this).val()
+          });
+        });
+        ignoreKeypressListener(layer_input);
+        $key.append(layer_input);
+      } else {
+        $key.removeClass('key-container');
+        $key.removeClass('key-layer');
+      }
+      if (keycode.code !== 'KC_NO') {
+        var remove_keycode = $('<div>', {
+          class: 'remove',
+          html: '&#739;',
+          click: function(evt) {
+            let layer = vueStore.getters['keymap/layer'];
+            evt.preventDefault();
+            evt.stopPropagation();
+            vueStore.commit('keymap/assignKey', {
+              _layer: layer,
+              index: k,
+              name: '',
+              code: 'KC_NO',
+              type: ''
+            });
+            render_key(layer, k);
+          }
+        });
+        $key.append(remove_keycode);
+      }
+    });
   }
 
   function getKeycodes() {
@@ -2162,174 +2357,6 @@ $(document).ready(() => {
       { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
       { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
     ];
-  }
-
-  // encapsulate the keymap
-  function Keymap() {
-    var instance = this;
-    instance.km = [];
-    instance.l = 0;
-    instance.dirty = false;
-
-    _.extend(this, {
-      assignKey: assignKey,
-      changeLayer: _changeLayer,
-      clear: clear,
-      clearDirty: clearDirty,
-      exportLayers: exportLayers,
-      getKey: getKey,
-      initLayer: initLayer,
-      isDirty: isDirty,
-      setContents: setContents,
-      setDirty: setDirty,
-      setKey: setKey,
-      setKeycodeLayer: setKeycodeLayer,
-      setText: setText,
-      size: size,
-      swapKeys: swapKeys,
-      getLayer: getLayer
-    });
-    return instance;
-
-    //////////
-    // Impl
-    //////////
-
-    function getLayer(__layer) {
-      return instance.km[__layer].map(key => {
-        return Object.assign({}, key);
-      });
-    }
-
-    function assignKey(__layer, index, name, code, type) {
-      instance.km[__layer][index] = {
-        name: name,
-        code: code,
-        type: type
-      };
-      var keycode = instance.km[__layer][index];
-      if (keycode.type === 'layer') {
-        instance.km[__layer][index].layer = 0;
-      }
-      return keycode;
-    }
-
-    function setContents(index, key) {
-      instance.km[instance.l][index].contents = key;
-    }
-
-    function _changeLayer(newLayer) {
-      instance.l = newLayer;
-    }
-
-    function clear() {
-      instance.km = [];
-      this.clearDirty();
-    }
-
-    function initLayer(__layer) {
-      if (__layer > 0) {
-        // layer 0 is always initialized. Use it as a reference
-        let { name, code } = lookupKeycode('KC_NO');
-        let KC_NO = { name, code };
-        instance.km[__layer] = _.reduce(
-          instance.km[0],
-          (acc, key, index) => {
-            acc[index] = KC_NO;
-            return acc;
-          },
-          {}
-        );
-      } else {
-        instance.km[__layer] = {};
-      }
-    }
-
-    function setKey(__layer, index, key) {
-      instance.km[__layer][index] = key;
-      return instance.km[__layer][index];
-    }
-
-    function size(__layer) {
-      return _.size(instance.km[__layer]);
-    }
-
-    function getKey(__layer, index) {
-      if (instance.km[__layer] === undefined) {
-        instance.initLayer(__layer);
-      }
-      return instance.km[__layer][index];
-    }
-
-    function swapKeys(__layer, srcIndex, dstIndex) {
-      var temp = instance.km[__layer][srcIndex];
-      instance.km[__layer][srcIndex] = instance.km[__layer][dstIndex];
-      instance.km[__layer][dstIndex] = temp;
-      instance.dirty = true;
-    }
-
-    function setText(__layer, index, text) {
-      instance.km[__layer][index].text = text;
-    }
-
-    function exportLayers({ compiler }) {
-      return _.reduce(
-        instance.km,
-        function(layers, _layer, k) {
-          layers[k] = [];
-          var aLayer = _.reduce(
-            _layer,
-            function(acc, key) {
-              var keycode = key.code;
-              if (key.code.indexOf('(kc)') !== -1) {
-                if (key.contents) {
-                  keycode = keycode.replace('kc', key.contents.code);
-                } else {
-                  keycode = keycode.replace('kc', 'KC_NO');
-                }
-              }
-              if (key.code.indexOf('(layer)') !== -1) {
-                keycode = keycode.replace('layer', key.layer);
-              }
-              if (key.code.indexOf('text') !== -1) {
-                // add a special ANY marker to keycodes that were defined using ANY
-                // This will be stripped back off on import.
-                keycode = compiler ? key.text : `ANY(${key.text})`;
-              }
-              acc.push(keycode);
-              return acc;
-            },
-            []
-          );
-          layers[k] = aLayer;
-          return layers;
-        },
-        []
-      );
-    }
-
-    function setKeycodeLayer(_layer, index, toLayer) {
-      instance.km[_layer][index].layer = toLayer;
-      if (toLayer !== _layer) {
-        if (instance.km[toLayer] === undefined) {
-          instance.initLayer(toLayer);
-        }
-        let { name, code } = lookupKeycode('KC_TRNS');
-        instance.km[toLayer][index] = { name, code };
-      }
-    }
-
-    function isDirty() {
-      return instance.dirty;
-    }
-
-    function clearDirty() {
-      instance.dirty = false;
-    }
-
-    function setDirty() {
-      instance.dirty = true;
-    }
   }
 
   function randomPotatoFact() {
