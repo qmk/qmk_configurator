@@ -415,7 +415,7 @@ $(document).ready(() => {
               layers[k] = [];
               var aLayer = _.reduce(
                 _layer,
-                function(acc, key) {
+                function(acc, key, i) {
                   var keycode = key.code;
                   if (keycode) {
                     if (keycode.indexOf('(kc)') !== -1) {
@@ -433,6 +433,8 @@ $(document).ready(() => {
                       // This will be stripped back off on import.
                       keycode = compiler ? key.text : `ANY(${key.text})`;
                     }
+                  } else {
+                    console.log(`ERROR: unexpected keycode ${key}`, k, i, _layer);
                   }
                   acc.push(keycode);
                   return acc;
