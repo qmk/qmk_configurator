@@ -1168,7 +1168,7 @@ $(document).ready(() => {
             _layer: vueStore.getters['keymap/layer'],
             index: _index,
             name: meta.name,
-            code: keycode.code,
+            code: meta.code,
             type: meta.type
           });
         }
@@ -1184,18 +1184,18 @@ $(document).ready(() => {
   }
 
   function assignKeycodeToSelectedKey(evt) {
-    var _keycode = $(evt.target).data('code');
+    let _keycode = $(evt.target).data('code');
     if (_keycode === undefined) {
       return;
     }
 
-    var meta = lookupKeycode(_keycode);
+    let meta = lookupKeycode(_keycode);
     if (meta === undefined) {
       return;
     }
 
-    var $key = getSelectedKey();
-    var _index = $key.data('index');
+    let $key = getSelectedKey();
+    let _index = $key.data('index');
     if ($key === undefined || _index === undefined || !_.isNumber(_index)) {
       return; // not a key
     }
@@ -1210,7 +1210,7 @@ $(document).ready(() => {
         _layer: vueStore.getters['keymap/layer'],
         index: _index,
         name: meta.name,
-        keycode: meta.code,
+        code: meta.code,
         type: meta.type
       });
     }
