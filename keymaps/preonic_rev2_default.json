@@ -1,5 +1,5 @@
 {
-  "keyboard":"preonic",
+  "keyboard":"preonic/rev2",
   "keymap":"defaultish",
   "layout":"LAYOUT_ortho_5x12",
   "layers":[
