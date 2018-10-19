@@ -417,20 +417,22 @@ $(document).ready(() => {
                 _layer,
                 function(acc, key) {
                   var keycode = key.code;
-                  if (key.code.indexOf('(kc)') !== -1) {
-                    if (key.contents) {
-                      keycode = keycode.replace('kc', key.contents.code);
-                    } else {
-                      keycode = keycode.replace('kc', 'KC_NO');
+                  if (keycode) {
+                    if (keycode.indexOf('(kc)') !== -1) {
+                      if (key.contents) {
+                        keycode = keycode.replace('kc', key.contents.code);
+                      } else {
+                        keycode = keycode.replace('kc', 'KC_NO');
+                      }
                     }
-                  }
-                  if (key.code.indexOf('(layer)') !== -1) {
-                    keycode = keycode.replace('layer', key.layer);
-                  }
-                  if (key.code.indexOf('text') !== -1) {
-                    // add a special ANY marker to keycodes that were defined using ANY
-                    // This will be stripped back off on import.
-                    keycode = compiler ? key.text : `ANY(${key.text})`;
+                    if (keycode.indexOf('(layer)') !== -1) {
+                      keycode = keycode.replace('layer', key.layer);
+                    }
+                    if (keycode.indexOf('text') !== -1) {
+                      // add a special ANY marker to keycodes that were defined using ANY
+                      // This will be stripped back off on import.
+                      keycode = compiler ? key.text : `ANY(${key.text})`;
+                    }
                   }
                   acc.push(keycode);
                   return acc;
@@ -522,7 +524,6 @@ $(document).ready(() => {
         }
       }
     };
-
   }
 
   /**
