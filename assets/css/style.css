@@ -957,7 +957,7 @@ button {
 }
 
 .keycode {
-  width: 32px;
+  min-width: 31px;
   height: 32px;
   margin: 0px 5px 5px 0px;
   border: #ccc 1px solid;
