@@ -2358,7 +2358,9 @@ $(document).ready(() => {
       { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
       { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
-      { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' }
+      { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
+      { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' }
+
     ];
   }
 
