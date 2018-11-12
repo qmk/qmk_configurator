@@ -487,7 +487,7 @@ $(document).ready(() => {
           state.keymap[_layer][dstIndex] = temp;
           state.dirty = true;
         },
-        setText({ state }, { _layer, index, text }) {
+        setText(state, { _layer, index, text }) {
           state.keymap[_layer][index].text = text;
         },
         setKey(state, { _layer, index, key }) {
@@ -496,7 +496,7 @@ $(document).ready(() => {
         setDirty(state) {
           state.dirty = true;
         },
-        clearDirty({ state }) {
+        clearDirty(state) {
           state.dirty = false;
         },
         clear(state) {
