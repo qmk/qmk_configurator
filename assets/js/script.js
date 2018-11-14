@@ -2022,16 +2022,18 @@ $(document).ready(() => {
 
       { name: 'NUHS', code: 'KC_NUHS', title: 'Non-US # and ~' },
       { name: 'NUBS', code: 'KC_NUBS', title: 'Non-US \\ and |' },
+      { width: 250 },
 
-      { name: 'Ro', code: 'KC_RO', title: 'JIS \\ and |' },
-      { name: '¥', code: 'KC_JYEN' },
+      { name: 'Ro', code: 'KC_RO', title: 'JIS \\ and _' },
+      { name: '¥', code: 'KC_JYEN', title: 'JIS Yen and |' },
 
       { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan' },
-      { name: '漢字', code: 'KC_HANJ', title: '' },
-
-      { name: '한영', code: 'KC_HAEN', title: '' },
       { name: '変換', code: 'KC_HENK', title: 'JIS Henkan' },
       { name: 'かな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana' },
+      { width: 250 },
+
+      { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
+      { name: '한영', code: 'KC_HAEN', title: 'Korean Han/Yeong' },
 
       { label: 'QMK specific', width: 'label' },
 
@@ -2345,6 +2347,9 @@ $(document).ready(() => {
       { name: 'BL +', code: 'BL_INC' },
       { name: 'BL -', code: 'BL_DEC' },
       { name: 'BL Cycle', code: 'BL_STEP' },
+      { name: 'BL On', code: 'BL_ON', title: 'Set the backlight to max brightness' },
+      { name: 'BL Off', code: 'BL_OFF', title: 'Turn the backlight off' },
+      { name: 'BL Toggle Breathing', code: 'BL_BRTG', title: 'Toggle backlight breathing' },
 
       { label: 'RGB Lighting settings', width: 'label' },
 
@@ -2357,8 +2362,8 @@ $(document).ready(() => {
       { name: 'Sat -', code: 'RGB_SAD' },
       { name: 'Bright +', code: 'RGB_VAI' },
       { name: 'Bright -', code: 'RGB_VAD' },
-      { name: 'Effect +', code: 'RGB_SPI' },
-      { name: 'Effect -', code: 'RGB_SPD' },
+      { name: 'Effect +', code: 'RGB_SPI', title: 'Increase effect speed' },
+      { name: 'Effect -', code: 'RGB_SPD', title: 'Decrease effect speed' },
       { name: 'RGB Mode P', code: 'RGB_M_P', title: 'Plain' },
       { name: 'RGB Mode B', code: 'RGB_M_B', title: 'Breathe' },
       { name: 'RGB Mode R', code: 'RGB_M_R', title: 'Rainbow' },
