@@ -2027,9 +2027,9 @@ $(document).ready(() => {
       { name: 'Ro', code: 'KC_RO', title: 'JIS \\ and _' },
       { name: '¥', code: 'KC_JYEN', title: 'JIS Yen and |' },
 
-      { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan' },
-      { name: '変換', code: 'KC_HENK', title: 'JIS Henkan' },
-      { name: 'かな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana' },
+      { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan', width: 1250 },
+      { name: '変換', code: 'KC_HENK', title: 'JIS Henkan', width: 1250 },
+      { name: 'かな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana', width: 1250 },
       { width: 250 },
 
       { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
@@ -2306,7 +2306,9 @@ $(document).ready(() => {
 
       { label: 'Application', width: 'label' },
 
-      { name: 'Power', code: 'KC_PWR' },
+      { name: 'Power', code: 'KC_PWR', title: 'System Power Down' },
+      { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' }
+      { name: 'Wake', code: 'KC_WAKE', title: 'System Wake' }
       { name: 'Help', code: 'KC_HELP' },
       { name: 'Stop', code: 'KC_STOP' },
       { name: 'Again', code: 'KC_AGIN' },
@@ -2349,19 +2351,19 @@ $(document).ready(() => {
       { name: 'BL Cycle', code: 'BL_STEP' },
       { name: 'BL On', code: 'BL_ON', title: 'Set the backlight to max brightness' },
       { name: 'BL Off', code: 'BL_OFF', title: 'Turn the backlight off' },
-      { name: 'BL Toggle Breathing', code: 'BL_BRTG', title: 'Toggle backlight breathing' },
+      { name: 'BL Breath', code: 'BL_BRTG', title: 'Toggle backlight breathing' },
 
       { label: 'RGB Lighting settings', width: 'label' },
 
-      { name: 'RGB Toggle', code: 'RGB_TOG' },
-      { name: 'RGB Mode +', code: 'RGB_MOD' },
-      { name: 'RGB Mode -', code: 'RGB_RMOD' },
-      { name: 'Hue +', code: 'RGB_HUI' },
-      { name: 'Hue -', code: 'RGB_HUD' },
-      { name: 'Sat +', code: 'RGB_SAI' },
-      { name: 'Sat -', code: 'RGB_SAD' },
-      { name: 'Bright +', code: 'RGB_VAI' },
-      { name: 'Bright -', code: 'RGB_VAD' },
+      { name: 'RGB Toggle', code: 'RGB_TOG', title: 'Toggle RGB lighting on or off' },
+      { name: 'RGB Mode +', code: 'RGB_MOD', title: 'Next mode' },
+      { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'Previous mode' },
+      { name: 'Hue +', code: 'RGB_HUI', title: 'Increase hue' },
+      { name: 'Hue -', code: 'RGB_HUD', title: 'Decrease hue' },
+      { name: 'Sat +', code: 'RGB_SAI', title: 'Increase saturation' },
+      { name: 'Sat -', code: 'RGB_SAD', title: 'Decrease saturation' },
+      { name: 'Bright +', code: 'RGB_VAI', title: 'Increase value (brightness)' },
+      { name: 'Bright -', code: 'RGB_VAD', title: 'Decrease value (brightness)' },
       { name: 'Effect +', code: 'RGB_SPI', title: 'Increase effect speed' },
       { name: 'Effect -', code: 'RGB_SPD', title: 'Decrease effect speed' },
       { name: 'RGB Mode P', code: 'RGB_M_P', title: 'Plain' },
@@ -2369,21 +2371,23 @@ $(document).ready(() => {
       { name: 'RGB Mode R', code: 'RGB_M_R', title: 'Rainbow' },
       { name: 'RGB Mode SW', code: 'RGB_M_SW', title: 'Swirl' },
       { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'Snake' },
-      { name: 'RGB Mode K', code: 'RGB_M_K', title: 'Knight' },
+      { name: 'RGB Mode K', code: 'RGB_M_K', title: 'Knight Rider' },
       { name: 'RGB Mode X', code: 'RGB_M_X', title: 'Xmas' },
       { name: 'RGB Mode G', code: 'RGB_M_G', title: 'Gradient' },
 
       { label: 'Multimedia Keys', width: 'label' },
 
-      { name: 'Previous', code: 'KC_MPRV', title: 'Media Previous' },
-      { name: 'Next', code: 'KC_MNXT', title: 'Media Next' },
+      { name: '▐◄◄\nWindows', code: 'KC_MPRV', title: 'Previous Track (Windows)' },
+      { name: '►►▌\nWindows', code: 'KC_MNXT', title: 'Next Track (Windows)' },
       { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
       { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
       { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
       { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
-      { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' }
 
+      { width: 0 },
+      { name: '▐◄◄\nmacOS', code: 'KC_MRWD', title: 'Previous Track (macOS)' },
+      { name: '►►▌\nmacOS', code: 'KC_MFFD', title: 'Next Track (macOS)' }
     ];
   }
 
