@@ -2323,25 +2323,26 @@ $(document).ready(() => {
 
       { label: 'Keyboard settings (persistent)', width: 'label' },
 
-      { name: 'Swap C/Caps', code: 'MAGIC_SWAP_CONTROL_CAPSLOCK' },
-      { name: 'Caps>C', code: 'MAGIC_CAPSLOCK_TO_CONTROL' },
-      { name: 'Swap LA/LO', code: 'MAGIC_SWAP_LALT_LGUI' },
-      { name: 'Swap RA/RO', code: 'MAGIC_SWAP_RALT_RGUI' },
-      { name: 'No O', code: 'MAGIC_NO_GUI' },
-      { name: 'Swap `/Esc', code: 'MAGIC_SWAP_GRAVE_ESC' },
-      { name: 'Swap \\/BS', code: 'MAGIC_SWAP_BACKSLASH_BACKSPACE' },
-      { name: 'NKRO', code: 'MAGIC_HOST_NKRO' },
-      { name: 'Swap A/O', code: 'MAGIC_SWAP_ALT_GUI' },
-      { name: 'Rev C/Caps', code: 'MAGIC_UNSWAP_CONTROL_CAPSLOCK' },
-      { name: 'Rev Caps>C', code: 'MAGIC_UNCAPSLOCK_TO_CONTROL' },
-      { name: 'Rev LA/LO', code: 'MAGIC_UNSWAP_LALT_LGUI' },
-      { name: 'Rev RA/RO', code: 'MAGIC_UNSWAP_RALT_RGUI' },
-      { name: 'Rev No O', code: 'MAGIC_UNNO_GUI' },
-      { name: 'Rev `/Esc', code: 'MAGIC_UNSWAP_GRAVE_ESC' },
-      { name: 'Rev \\/BS', code: 'MAGIC_UNSWAP_BACKSLASH_BACKSPACE' },
-      { name: 'Rev NKRO', code: 'MAGIC_UNHOST_NKRO' },
-      { name: 'Rev A/O', code: 'MAGIC_UNSWAP_ALT_GUI' },
-      { name: 'Togg NKRO', code: 'MAGIC_TOGGLE_NKRO' },
+      { name: 'Swap LCTL/Caps', code: 'MAGIC_SWAP_CONTROL_CAPSLOCK', title: 'Swap Left Control and Caps Lock', width: 1500 },
+      { name: 'Caps>LCTL', code: 'MAGIC_CAPSLOCK_TO_CONTROL', title: 'Treat Caps Lock as Left Control', width: 1500 },
+      { name: 'Swap LALT/LGUI', code: 'MAGIC_SWAP_LALT_LGUI', title: 'Swap Left Alt and Left GUI', width: 1500 },
+      { name: 'Swap RALT/RGUI', code: 'MAGIC_SWAP_RALT_RGUI', title: 'Swap Right Alt and Right GUI', width: 1500 },
+      { name: 'No GUI', code: 'MAGIC_NO_GUI', title: 'Disable the GUI keys (useful when gaming)', width: 1500 },
+      { name: 'Swap `/Esc', code: 'MAGIC_SWAP_GRAVE_ESC', title: 'Swap ` and Escape', width: 1500 },
+      { name: 'Swap \\/BS', code: 'MAGIC_SWAP_BACKSLASH_BACKSPACE', title: 'Swap Backslash and Backspace', width: 1500 },
+      { name: 'NKRO On', code: 'MAGIC_HOST_NKRO', title: 'Force N-Key Rollover (NKRO) on', width: 1500 },
+      { name: 'Swap A/O', code: 'MAGIC_SWAP_ALT_GUI', title: 'Swap Alt and GUI on both sides (for macOS)', width: 1500 },
+      { width: 0 },
+      { name: 'Rev LCTL/Caps', code: 'MAGIC_UNSWAP_CONTROL_CAPSLOCK', title: 'Unswap Left Control and Caps Lock', width: 1500 },
+      { name: 'Rev Caps>LCTL', code: 'MAGIC_UNCAPSLOCK_TO_CONTROL', title: 'Stop treating Caps Lock as Left Control', width: 1500 },
+      { name: 'Rev LALT/LGUI', code: 'MAGIC_UNSWAP_LALT_LGUI', title: 'Unswap Left Alt and Left GUI', width: 1500 },
+      { name: 'Rev RALT/RGUI', code: 'MAGIC_UNSWAP_RALT_RGUI', title: 'Unswap Right Alt and Right GUI', width: 1500 },
+      { name: 'Enable GUI', code: 'MAGIC_UNNO_GUI', title: 'Enable the GUI keys', width: 1500 },
+      { name: 'Rev `/Esc', code: 'MAGIC_UNSWAP_GRAVE_ESC', title: 'Unswap ` and Escape', width: 1500 },
+      { name: 'Rev \\/BS', code: 'MAGIC_UNSWAP_BACKSLASH_BACKSPACE', title: 'Unswap Backslash and Backspace', width: 1500 },
+      { name: 'NKRO Off', code: 'MAGIC_UNHOST_NKRO', title: 'Force N-Key Rollover (NKRO) off', width: 1500 },
+      { name: 'Rev A/O', code: 'MAGIC_UNSWAP_ALT_GUI', title: 'Unswap Alt and GUI on both sides (for macOS)', width: 1500 },
+      { name: 'Togg NKRO', code: 'MAGIC_TOGGLE_NKRO', title: 'Turn NKRO on or off', width: 1500 },
 
       { label: 'Backlight settings', width: 'label' },
 
@@ -2377,8 +2378,8 @@ $(document).ready(() => {
 
       { label: 'Multimedia Keys', width: 'label' },
 
-      { name: '▐◄◄\nWindows', code: 'KC_MPRV', title: 'Previous Track (Windows)' },
-      { name: '►►▌\nWindows', code: 'KC_MNXT', title: 'Next Track (Windows)' },
+      { name: 'Previous\nWindows', code: 'KC_MPRV', title: 'Previous Track (Windows)' },
+      { name: 'Next\nWindows', code: 'KC_MNXT', title: 'Next Track (Windows)' },
       { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
       { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
       { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
@@ -2386,8 +2387,8 @@ $(document).ready(() => {
       { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
 
       { width: 0 },
-      { name: '▐◄◄\nmacOS', code: 'KC_MRWD', title: 'Previous Track (macOS)' },
-      { name: '►►▌\nmacOS', code: 'KC_MFFD', title: 'Next Track (macOS)' }
+      { name: 'Previous\nmacOS', code: 'KC_MRWD', title: 'Previous Track (macOS)' },
+      { name: 'Next\nmacOS', code: 'KC_MFFD', title: 'Next Track (macOS)' }
     ];
   }
 
