@@ -2388,7 +2388,26 @@ $(document).ready(() => {
 
       { width: 0 },
       { name: 'Prev Track', code: 'KC_MRWD', title: 'Previous Track (macOS)' },
-      { name: 'Next Track', code: 'KC_MFFD', title: 'Next Track (macOS)' }
+      { name: 'Next Track', code: 'KC_MFFD', title: 'Next Track (macOS)' },
+
+      { label: 'Mouse Keys', width: 'label' },
+
+      { name: 'Mouse Up', code: 'KC_MS_U', title: 'Mouse Cursor Up' },
+      { name: 'Mouse Down', code: 'KC_MS_D', title: 'Mouse Cursor Down' },
+      { name: 'Mouse Left', code: 'KC_MS_L', title: 'Mouse Cursor Left' },
+      { name: 'Mouse Right', code: 'KC_MS_R', title: 'Mouse Cursor Right' },
+      { name: 'Mouse 1', code: 'KC_BTN1', title: 'Mouse Button 1' },
+      { name: 'Mouse 2', code: 'KC_BTN2', title: 'Mouse Button 2' },
+      { name: 'Mouse 3', code: 'KC_BTN3', title: 'Mouse Button 3' },
+      { name: 'Mouse 4', code: 'KC_BTN4', title: 'Mouse Button 4' },
+      { name: 'Mouse 5', code: 'KC_BTN5', title: 'Mouse Button 5' },
+      { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'Mouse Wheel Up' },
+      { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'Mouse Wheel Down' },
+      { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
+      { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
+      { name: 'Mouse Accel 1', code: 'KC_ACL0', title: 'Set mouse acceleration to 0' },
+      { name: 'Mouse Accel 2', code: 'KC_ACL1', title: 'Set mouse acceleration to 1' },
+      { name: 'Mouse Accel 3', code: 'KC_ACL2', title: 'Set mouse acceleration to 2' }
     ];
   }
 
