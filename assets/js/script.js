@@ -59,8 +59,7 @@ $(document).ready(() => {
   keypressListener.register_many(generateKeypressCombos(keycodes));
   keypressListener.simple_combo('ctrl shift i', () => {
     if (!vueStore.getters['app/isPreview']) {
-      vueStore.commit('app/enablePreview');
-      disableCompileButton();
+      vueStore.commit('app/requestPreview');
     }
   });
 
@@ -161,6 +160,7 @@ $(document).ready(() => {
         keymapName: '',
         compileDisabled: false,
         isPreview: false,
+        previewRequested: false,
         jobID: '',
         enableDownloads: false,
         firmwareBinaryURL: [],
@@ -192,6 +192,7 @@ $(document).ready(() => {
         },
         compileDisabled: state => state.compileDisabled,
         isPreview: state => state.isPreview,
+        previewRequested: state => state.previewRequested,
         jobID: state => state.jobID,
         enableDownloads: state => state.enableDownloads,
         firmwareBinaryURL: state => state.firmwareBinaryURL,
@@ -249,6 +250,12 @@ $(document).ready(() => {
         },
         disableCompile(state) {
           state.compileDisabled = true;
+        },
+        requestPreview(state) {
+          state.previewRequested = true;
+        },
+        dismissPreview(state) {
+          state.previewRequested = false;
         },
         enablePreview(state) {
           state.isPreview = true;
@@ -434,7 +441,12 @@ $(document).ready(() => {
                       keycode = compiler ? key.text : `ANY(${key.text})`;
                     }
                   } else {
-                    console.log(`ERROR: unexpected keycode ${key}`, k, i, _layer);
+                    console.log(
+                      `ERROR: unexpected keycode ${key}`,
+                      k,
+                      i,
+                      _layer
+                    );
                   }
                   acc.push(keycode);
                   return acc;
@@ -590,8 +602,8 @@ $(document).ready(() => {
         disableDownloads() {
           return !vueStore.getters['app/enableDownloads'];
         },
-        isPreview() {
-          return vueStore.getters['app/isPreview'];
+        previewRequested() {
+          return vueStore.getters['app/previewRequested'];
         }
       },
       watch: {
@@ -601,9 +613,10 @@ $(document).ready(() => {
          * @param {Bool} newValue isPreview has changed
          * @return {null} nothing
          */
-        isPreview(newValue) {
+        previewRequested(newValue) {
           if (newValue) {
             this.$refs.infoPreviewElement.click();
+            window.setTimeout(() => vueStore.commit('app/dismissPreview'));
           }
         }
       },
@@ -729,6 +742,11 @@ $(document).ready(() => {
         },
         infoPreviewChanged() {
           var files = this.$refs.infoPreviewElement.files;
+          if (files.length === 0) {
+            return;
+          }
+          vueStore.commit('app/enablePreview');
+          disableCompileButton();
           this.reader = new FileReader();
           this.reader.onload = this.previewInfoOnLoad;
           this.reader.readAsText(_.first(files));
