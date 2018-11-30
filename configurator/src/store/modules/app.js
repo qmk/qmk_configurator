@@ -3,6 +3,7 @@ import isUndefined from 'lodash/isUndefined';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
+import { getPreferredLayout } from '@/jquery';
 
 const state = {
   keyboard: '',
@@ -64,6 +65,7 @@ const actions = {
       commit('enableCompile');
       commit('setKeyboard', keyboard);
       dispatch('loadLayouts').then(() => {
+        console.log(getPreferredLayout(state.layouts));
         commit('setLayout', getPreferredLayout(state.layouts));
         resolve();
       });

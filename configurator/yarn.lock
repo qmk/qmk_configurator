@@ -5933,6 +5933,11 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+keypress.js@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/keypress.js/-/keypress.js-2.1.5.tgz#38f96d1ded85f56115a0cafd9908e727bcd1b348"
+  integrity sha512-PQpeWxG6vNuTT0Gq20LyAzqSpeBWtQ6DTYIJB7JMJEetgF730Om9e6y82GdEv06o1iaJiH1hh2JpSOXK3zIAdA==
+
 killable@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"

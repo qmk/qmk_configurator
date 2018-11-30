@@ -71,7 +71,8 @@ const actions = {
       if (state.keymap[toLayer] === undefined) {
         commit('initLayer', toLayer);
       }
-      let { name, code } = lookupKeycode('KC_TRNS');
+      let store = this;
+      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
       state.keymap[toLayer][index] = { name, code };
     }
   }
@@ -119,9 +120,10 @@ const mutations = {
   initLayer: (state, _layer) => {
     if (_layer > 0) {
       // layer 0 is always initialized. Use it as a reference
-      let { name, code } = lookupKeycode('KC_NO');
+      let store = this;
+      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_NO');
       let KC_NO = { name, code };
-      state.keymap[_layer] = _.reduce(
+      state.keymap[_layer] = reduce(
         state.keymap[0],
         (acc, key, index) => {
           acc[index] = KC_NO;

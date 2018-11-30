@@ -1,14 +1,17 @@
 import $ from 'jquery';
+import 'jquery-ui/ui/core';
 import store from './store';
 import extend from 'lodash/extend';
 import escape from 'lodash/escape';
 import isNumber from 'lodash/isNumber';
 import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';
+import includes from 'lodash/includes';
+import first from 'lodash/first';
+import keys from 'lodash/keys';
+import * as keypress from 'keypress.js';
 
 import { backend_compile_url } from './store/modules/constants';
-
-require('jquery-ui');
 
 const defaults = {
   MAX_X: 775,
@@ -51,7 +54,7 @@ function init() {
 
   $(document).on('scroll', scrollHandler);
 
-  keypressListener = new window.keypress.Listener();
+  keypressListener = new keypress.Listener();
   keypressListener.register_many(
     generateKeypressCombos(store.getters['keycodes/keycodes'])
   );
@@ -61,7 +64,11 @@ function init() {
     }
   });
 
-  ignoreKeypressListener = partial(ignoreKeypressListener, keypressListener);
+  ignoreKeypressListener = partial(rawIgnoreKeypressListener, keypressListener);
+}
+
+function rawIgnoreKeypressListener(listener, $element) {
+  $element.focus(() => listener.stop_listening()).blur(() => listener.listen());
 }
 
 function scrollHandler() {
@@ -842,7 +849,31 @@ function check_status() {
   });
 }
 
-export default {
+/**
+ *  getPreferredLayout
+ *  @param {array} layouts supported by this keyboard
+ *  @return {string} layout we think it should default to
+ */
+function getPreferredLayout(layouts) {
+  let mykeys = keys(layouts);
+  if (includes(mykeys, 'LAYOUT')) {
+    return 'LAYOUT';
+  }
+  if (includes(mykeys, 'LAYOUT_all')) {
+    return 'LAYOUT_all';
+  }
+  if (includes(mykeys, 'KEYMAP')) {
+    return 'KEYMAP';
+  }
+  // avoid keymaps ending with _kc unless we have no other choice
+  let nextBest = mykeys.filter(key => !key.endsWith('_kc'));
+  if (nextBest.length > 0) {
+    return first(nextBest);
+  }
+  return first(mykeys);
+}
+
+export {
   init,
   reset_keymap,
   resetConfig,
@@ -855,5 +886,6 @@ export default {
   enableCompileButton,
   disableCompileButton,
   enableOtherButtons,
-  disableOtherButtons
+  disableOtherButtons,
+  getPreferredLayout
 };
