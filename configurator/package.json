@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "jquery": "^3.3.1",
-    "jquery-ui": "^1.12.1",
+    "jquery-ui-bundle": "^1.12.1-migrate",
     "keypress.js": "^2.1.5",
     "lodash": "^4.17.11",
     "vue": "^2.5.17",

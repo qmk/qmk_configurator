@@ -5752,10 +5752,10 @@ joi@^13.0.0:
     isemail "3.x.x"
     topo "3.x.x"
 
-jquery-ui@^1.12.1:
-  version "1.12.1"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
-  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+jquery-ui-bundle@^1.12.1-migrate:
+  version "1.12.1-migrate"
+  resolved "https://registry.yarnpkg.com/jquery-ui-bundle/-/jquery-ui-bundle-1.12.1-migrate.tgz#b9343e2c310743527632cff8bedb0c5e9600b14c"
+  integrity sha1-uTQ+LDEHQ1J2Ms/4vtsMXpYAsUw=
 
 jquery@^3.3.1:
   version "3.3.1"

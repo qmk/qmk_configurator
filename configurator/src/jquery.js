@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import 'jquery-ui/ui/core';
+import 'jquery-ui-bundle';
 import store from './store';
 import extend from 'lodash/extend';
 import escape from 'lodash/escape';
