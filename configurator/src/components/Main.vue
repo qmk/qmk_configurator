@@ -1,19 +1,21 @@
 <template>
   <div>
     <controllerTop />
-    <statusPanel />
-    <controllerBottom />
+    <!-- statusPanel />
+    <controllerBottom /-->
   </div>
 </template>
 
 <script>
-import controllerTop from 'controllerTop';
+import ControllerTop from '@/components/ControllerTop';
+/*
 import statusPanel from 'statusPanel';
 import controllerBottom from 'controllerBottom';
+*/
 export default {
   name: 'configurator',
   props: {},
-  components: { controllerTop, statusPanel, controllerBottom }
+  components: { ControllerTop }
 };
 </script>
 
