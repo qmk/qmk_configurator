@@ -51,6 +51,7 @@
 
 <script>
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -82,15 +83,12 @@ export default {
   name: 'ControllerTop',
   props: {},
   computed: {
-    keyboards() {
-      return this.$store.getters['app/keyboards'];
-    },
-    layouts() {
-      return this.$store.getters['app/layouts'];
-    },
-    compileDisabled() {
-      return this.$store.getters['app/compileDisabled'];
-    },
+    ...mapGetters('keymap', ['isDirty']),
+    ...mapGetters('app', [
+      'keyboards',
+      'layouts',
+      'compileDisabled',
+    ]),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
