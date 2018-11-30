@@ -51,7 +51,6 @@
 
 <script>
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -83,12 +82,18 @@ export default {
   name: 'ControllerTop',
   props: {},
   computed: {
-    ...mapGetters('app', [
-      'keyboards',
-      'layouts',
-      'compileDisabled'
-    ]),
-    ...mapGetters('keymap', ['isDirty']),
+    keyboards() {
+      return this.$store.getters['app/keyboards'];
+    },
+    layouts() {
+      return this.$store.getters['app/layouts'];
+    },
+    compileDisabled() {
+      return this.$store.getters['app/compileDisabled'];
+    },
+    realKeymapName() {
+      return this.$store.getters['app/keymapName'];
+    },
     keyboard: {
       get() {
         return this.$store.getters['app/keyboard'];
@@ -196,6 +201,7 @@ export default {
         });
     },
     fetchKeyboards() {
+      console.log(backend_keyboards_url);
       axios.get(backend_keyboards_url).then(this.initializeKeyboards);
     },
     /**
@@ -239,18 +245,17 @@ export default {
     updateKeyboard(newKeyboard) {
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
-        .then(() => {
-          reset_keymap();
-          this.$router.replace({
-            path: `/${this.keyboard}/${this.layout}`
-          });
-          render_layout(
-            this.layouts[this.layout].map(v => Object.assign({}, v))
-          );
-          this.$store.commit('status/clear');
-          this.$store.dispatch('status/viewReadme', this.keyboard);
-          disableOtherButtons();
-        });
+        .then(this.postUpdateKeyboard);
+    },
+    postUpdateKeyboard() {
+      reset_keymap();
+      this.$router.replace({
+        path: `/${this.keyboard}/${this.layout}`
+      });
+      render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
+      this.$store.commit('status/clear');
+      this.$store.dispatch('status/viewReadme', this.keyboard);
+      disableOtherButtons();
     },
     /**
      * updateLayout - switch the layout for this keyboard
