@@ -6,11 +6,13 @@ const backend_status_url = `${backend_baseurl}/v1`;
 const backend_readme_url_template = template(
   `${backend_keyboards_url}/<%= keyboard %>/readme`
 );
+const PREVIEW_LABEL = 'Preview info.json';
 
 export default {
   backend_baseurl,
   backend_keyboards_url,
   backend_compile_url,
   backend_status_url,
-  backend_readme_url_template
+  backend_readme_url_template,
+  PREVIEW_LABEL
 };
