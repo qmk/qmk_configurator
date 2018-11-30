@@ -63,7 +63,7 @@ import axios from 'axios';
 import {
   backend_keyboards_url,
   PREVIEW_LABEL
-} from './store/modules/constants';
+} from '@/store/modules/constants';
 
 import {
   statusError,
@@ -73,21 +73,20 @@ import {
   getExclusionList,
   compileLayout,
   disableOtherButtons
-} from './jquery';
+} from '@/jquery';
 
 const clearKeymapTemplate = template(
   'This will clear your keymap - are you sure you want to <%= action %>?'
 );
 
 export default {
-  name: 'configurator',
+  name: 'ControllerTop',
   props: {},
   computed: {
     ...mapGetters('app', [
       'keyboards',
       'layouts',
-      'compileDisabled',
-      'keymapName'
+      'compileDisabled'
     ]),
     ...mapGetters('keymap', ['isDirty']),
     keyboard: {
