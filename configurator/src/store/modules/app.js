@@ -2,9 +2,7 @@ import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
-import { backend_keyboards_url } from './constants';
-
-const PREVIEW_LABEL = 'Preview info.json';
+import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
 
 const state = {
   keyboard: '',

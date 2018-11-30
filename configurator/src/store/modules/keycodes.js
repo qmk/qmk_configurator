@@ -492,6 +492,7 @@ const state = [
 ];
 
 const getters = {
+  keycodes: state => state.keycodes,
   lookupKeyPressCode: () => searchTerm =>
     getters.lookupKeycode(searchTerm, true),
   lookupKeycode: state => (searchTerm, isKeys = false) => {
