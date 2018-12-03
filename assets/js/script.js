@@ -2041,7 +2041,7 @@ $(document).ready(() => {
       { name: '▽', code: 'KC_TRNS', title: 'Pass-through' },
       { name: 'Reset', code: 'RESET', title: 'Reset the keyboard' },
       { name: 'Debug', code: 'DEBUG', title: 'Toggle debug mode' },
-      { name: 'EEPROM Reset', code: 'EEP_RST', title: 'Resets EEPROM state' },
+      { name: 'EEPROM Reset', code: 'EEP_RST', title: 'Resets EEPROM state', width: 1250 },
       { width: 1000 },
       {
         name: 'Any',
@@ -2348,7 +2348,7 @@ $(document).ready(() => {
 
       { label: 'Backlight settings', width: 'label' },
 
-      { name: 'BL Toggle', code: 'BL_TOGG', title: "Turn the backlight on or off" },
+      { name: 'BL Toggle', code: 'BL_TOGG', title: 'Turn the backlight on or off' },
       { name: 'BL Cycle', code: 'BL_STEP', title: 'Cycle through backlight levels' },
       { name: 'BL On', code: 'BL_ON', title: 'Set the backlight to max brightness' },
       { name: 'BL Off', code: 'BL_OFF', title: 'Turn the backlight off' },
