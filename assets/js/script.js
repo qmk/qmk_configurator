@@ -2416,9 +2416,9 @@ $(document).ready(() => {
       { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
       { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
       { width: 250 },
-      { name: 'Mouse Accel 1', code: 'KC_ACL0', title: 'Set mouse acceleration to 0' },
-      { name: 'Mouse Accel 2', code: 'KC_ACL1', title: 'Set mouse acceleration to 1' },
-      { name: 'Mouse Accel 3', code: 'KC_ACL2', title: 'Set mouse acceleration to 2' }
+      { name: 'Mouse Accel 0', code: 'KC_ACL0', title: 'Set mouse acceleration to 0' },
+      { name: 'Mouse Accel 1', code: 'KC_ACL1', title: 'Set mouse acceleration to 1' },
+      { name: 'Mouse Accel 2', code: 'KC_ACL2', title: 'Set mouse acceleration to 2' }
     ];
   }
 
