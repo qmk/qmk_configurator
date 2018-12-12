@@ -2454,10 +2454,13 @@ $(document).ready(() => {
 
   function getExclusionList() {
     return [
+      '40percentclub/i75',
       'atom47',
       'bigseries',
       'chibios_test',
       'christmas_tree',
+      'converter/palm_usb',
+      'converter/sun_usb ',
       'converter/usb_usb',
       'crkbd',
       'deltasplit75',
@@ -2471,6 +2474,7 @@ $(document).ready(() => {
       'fortitude60',
       'fourier',
       'hadron',
+      'handwired/bluepill',
       'handwired/dactyl_manuform',
       'handwired/qc60',
       'handwired/xealous',
@@ -2497,10 +2501,12 @@ $(document).ready(() => {
       'qwertyydox',
       'redox',
       'rorschach',
+      'sol',
       's60_x',
       'vitamins_included',
       'viterbi',
-      'zen'
+      'zen',
+      'zinc'
     ].reduce((acc, k) => {
       acc[k] = true;
       return acc;
