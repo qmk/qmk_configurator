@@ -1,11 +1,6 @@
 <template>
   <div id="status">
-    <textarea
-      id="terminal"
-      v-model="message"
-      ref="terminal"
-      readonly>
-    </textarea>
+    <textarea id="terminal" v-model="message" ref="terminal" readonly />
   </div>
 </template>
 <script>
