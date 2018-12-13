@@ -1,21 +1,15 @@
 <template>
-  <div>
-    <controllerTop />
-    <!-- statusPanel />
-    <controllerBottom /-->
-  </div>
+  <div><controllerTop /><statusPanel /><controllerBottom /></div>
 </template>
 
 <script>
 import ControllerTop from '@/components/ControllerTop';
-/*
-import statusPanel from 'statusPanel';
-import controllerBottom from 'controllerBottom';
-*/
+import StatusPanel from '@/components/StatusPanel';
+import ControllerBottom from '@/components/ControllerBottom';
 export default {
   name: 'Main',
   props: {},
-  components: { ControllerTop }
+  components: { ControllerTop, StatusPanel, ControllerBottom }
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -55,7 +55,6 @@ import { mapGetters } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
-import template from 'lodash/template';
 import isString from 'lodash/isString';
 
 import axios from 'axios';
@@ -75,20 +74,14 @@ import {
   disableOtherButtons
 } from '@/jquery';
 
-const clearKeymapTemplate = template(
-  'This will clear your keymap - are you sure you want to <%= action %>?'
-);
+import { clearKeymapTemplate } from '@/common';
 
 export default {
   name: 'ControllerTop',
   props: {},
   computed: {
     ...mapGetters('keymap', ['isDirty']),
-    ...mapGetters('app', [
-      'keyboards',
-      'layouts',
-      'compileDisabled',
-    ]),
+    ...mapGetters('app', ['keyboards', 'layouts', 'compileDisabled']),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
@@ -298,6 +291,3 @@ export default {
   }
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-</style>
