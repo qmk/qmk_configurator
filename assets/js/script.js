@@ -2460,7 +2460,7 @@ $(document).ready(() => {
       'chibios_test',
       'christmas_tree',
       'converter/palm_usb',
-      'converter/sun_usb ',
+      'converter/sun_usb',
       'converter/usb_usb',
       'crkbd',
       'deltasplit75',
