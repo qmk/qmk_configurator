@@ -1,15 +1,20 @@
 <template>
-  <div class="main"><Main /></div>
+  <div>
+    <div class="main"><Main /></div>
+    <keycodes />
+  </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/Main.vue';
+import Main from '@/components/Main';
+import Keycodes from '@/components/Keycodes';
 
 export default {
   name: 'home',
   components: {
-    Main
+    Main,
+    Keycodes
   }
 };
 </script>
