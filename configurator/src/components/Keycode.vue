@@ -1,10 +1,14 @@
 <template>
   <div
-    class="keycode"
+    draggable
+    class="keycode ui-draggable ui-draggable-handle"
     :class="computedClass"
     :data-type="type"
     :data-code="code"
     :title="title"
+    @drag="drag"
+    @dragstart="dragstart"
+    @dragend="dragend"
   >
     {{ name }}
   </div>
@@ -34,6 +38,19 @@ export default {
   },
   data() {
     return {};
+  },
+  methods: {
+    dragend() {},
+    drag() {},
+    dragstart(ev) {
+      console.log('dragstarted on ', this.name);
+      let { name, keycode, type } = this;
+      ev.dropEffect = 'copy';
+      ev.dataTransfer.setData(
+        'application/json',
+        JSON.stringify({ name, type, keycode })
+      );
+    }
   }
 };
 </script>
