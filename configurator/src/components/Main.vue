@@ -1,15 +1,49 @@
 <template>
-  <div><controllerTop /><statusPanel /><controllerBottom /></div>
+  <div>
+    <controllerTop /><statusPanel /><controllerBottom />
+    <div class="split-content">
+      <div class="left-side">
+        <p><label>Layer:</label></p>
+        <div id="layers">
+          <div class="layer 15">15</div>
+          <div class="layer 14">14</div>
+          <div class="layer 13">13</div>
+          <div class="layer 12">12</div>
+          <div class="layer 11">11</div>
+          <div class="layer 10">10</div>
+          <div class="layer 9">9</div>
+          <div class="layer 8">8</div>
+          <div class="layer 7">7</div>
+          <div class="layer 6">6</div>
+          <div class="layer 5">5</div>
+          <div class="layer 4">4</div>
+          <div class="layer 3">3</div>
+          <div class="layer 2">2</div>
+          <div class="layer 1">1</div>
+          <div class="layer active 0">0</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <p><label>Keymap:</label></p>
+        <div id="visual-keymap"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
+import * as jquery from '@/jquery';
+
 export default {
   name: 'Main',
   props: {},
-  components: { ControllerTop, StatusPanel, ControllerBottom }
+  components: { ControllerTop, StatusPanel, ControllerBottom },
+  mounted() {
+    jquery.init();
+  }
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
