@@ -1,6 +1,13 @@
 <template>
   <div>
     <controllerTop /><statusPanel /><controllerBottom />
+    <a
+      class="hint"
+      target="_blank"
+      href="https://github.com/qmk/qmk_toolbox/releases"
+    >
+      Download QMK Toolbox
+    </a>
     <div class="split-content">
       <div class="left-side">
         <p><label>Layer:</label></p>
@@ -49,5 +56,10 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .Main {
+}
+.hint {
+  display: grid;
+  justify-content: start;
+  align-content: start;
 }
 </style>

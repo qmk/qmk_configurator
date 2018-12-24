@@ -634,7 +634,7 @@ a img {
   background-color: #49ad4c;
   color: white;
   border: 0px solid #000;
-  padding: 3px 6px;
+  padding: 6px 12px;
   cursor: pointer;
 }
 
@@ -642,7 +642,8 @@ a img {
   margin-right: 0px;
 }
 
-#fileImport, #infoPreview {
+#fileImport,
+#infoPreview {
   display: none;
 }
 
@@ -655,27 +656,18 @@ a img {
   cursor: unset;
 }
 
-#controller-top {
-  padding: 5px;
-  border-radius: 5px 5px 0px 0px;
-  background: #eee;
-  border-color: #ccc;
-  border-style: solid;
-  border-width: 1px 1px 0px 1px;
-  margin: 0px auto;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  overflow: hidden;
-  line-height: 100%;
+select,
+input {
+  font-family: monospace;
+  font-size: 14px;
 }
 
-select,
-input,
 label,
 button {
-  font-family: monospace;
-  font-size: 12px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 #terminal {
@@ -1107,7 +1099,9 @@ input[type='number'] {
 }
 
 .hint {
-  font-size: 12px;
+  font-size: 13px;
+  font-family: sans-serif;
+  margin-left: 5px;
 }
 
 .backend-status {
@@ -1144,19 +1138,4 @@ input[type='number'] {
 
 .bes-jobs {
   justify-self: end;
-}
-
-.topctrl {
-  display: grid;
-  grid-template: auto / 45% 35% 20%;
-}
-
-.topctrl-1 {
-  grid-column: 1;
-}
-.topctrl-2 {
-  grid-column: 2;
-}
-.topctrl-3 {
-  grid-column: 3;
 }

@@ -1,24 +1,24 @@
 <template>
   <div id="controller-top">
     <div class="topctrl">
-      <span class="topctrl-1">
-        <label style="display: inline-block; width: 75px;">Keyboard:</label>
+      <div class="topctrl-1-1">
+        <label class="drop-label">Keyboard:</label>
         <select id="keyboard" v-bind:style="width" v-model="keyboard">
           <option v-for="keeb in keyboards" :key="keeb" v-bind:value="keeb">
             {{ keeb }}
           </option>
         </select>
-      </span>
-      <span class="topctrl-2">
-        <label id="keymap-name-label">Keymap Name:</label>
+      </div>
+      <div class="topctrl-1-2">
+        <label class="drop-label">Keymap Name:</label>
         <input
           id="keymap-name"
           type="text"
           v-model="keymapName"
           placeholder="custom keymap name"
         />
-      </span>
-      <span class="topctrl-3">
+      </div>
+      <div class="topctrl-1-3">
         <button
           id="load-default"
           title="Load default keymap from QMK Firmware"
@@ -34,18 +34,20 @@
         >
           Compile
         </button>
-      </span>
+      </div>
+      <div class="topctrl-2-1">
+        <label class="drop-label">Layout:</label>
+        <select id="layout" v-model="layout">
+          <option
+            v-for="(aLayout, layoutName) in layouts"
+            :key="layoutName"
+            v-bind:value="layoutName"
+          >
+            {{ layoutName }}
+          </option>
+        </select>
+      </div>
     </div>
-    <label style="display: inline-block; width: 75px;">Layout:</label>
-    <select id="layout" v-model="layout">
-      <option
-        v-for="(aLayout, layoutName) in layouts"
-        :key="layoutName"
-        v-bind:value="layoutName"
-      >
-        {{ layoutName }}
-      </option>
-    </select>
   </div>
 </template>
 
@@ -291,3 +293,50 @@ export default {
   }
 };
 </script>
+<style>
+.topctrl {
+  display: grid;
+  grid-template: auto / 400px 400px auto;
+  grid-row-gap: 0px;
+}
+#controller-top {
+  padding: 5px;
+  border-radius: 5px 5px 0px 0px;
+  background: #eee;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 1px 1px 0px 1px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+  line-height: 100%;
+}
+.topctrl-1-1 {
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: start;
+}
+.topctrl-1-2 {
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: start;
+}
+.topctrl-1-3 {
+  grid-row: 1;
+  grid-column: 3;
+  justify-self: end;
+}
+.topctrl-2-1 {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: start;
+}
+.drop-label {
+  display: inline-block;
+  text-align: right;
+  padding-right: 5px;
+  min-width: 90px;
+}
+</style>
