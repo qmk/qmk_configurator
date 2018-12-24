@@ -1,7 +1,20 @@
 <template>
   <div>
     <div class="main"><Main /></div>
-    <keycodes />
+
+    <div class="keycodes-section">
+      <label>Keycodes:</label>
+      <span class="hint-right hint">
+        <a
+          href="https://docs.qmk.fm/#/keycodes"
+          title="Keycodes reference"
+          target="_blank"
+        >
+          Keycodes reference
+        </a>
+      </span>
+      <keycodes />
+    </div>
   </div>
 </template>
 
@@ -18,3 +31,12 @@ export default {
   }
 };
 </script>
+<style>
+.keycodes-section {
+  margin-top: 30px;
+  text-align: left;
+}
+.keycodes-section label {
+  padding-left: 20px;
+}
+</style>
