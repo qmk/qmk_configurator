@@ -1,9 +1,10 @@
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
+import map from 'lodash/map';
 import isUndefined from 'lodash/isUndefined';
 
 const state = {
-  keymap: [],
+  keymap: [{}],
   layer: 0,
   dirty: false,
   selectedIndex: undefined
@@ -13,7 +14,7 @@ const getters = {
   getKey: state => ({ _layer, index }) => state.keymap[_layer][index],
   layer: state => state.layer,
   getLayer: state => _layer => {
-    return state.keymap[_layer].map(key => {
+    return map(state.keymap[_layer], key => {
       return Object.assign({}, key);
     });
   },
