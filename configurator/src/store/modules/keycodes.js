@@ -495,7 +495,7 @@ const state = {
 
 const getters = {
   keycodes: state => state.keycodes,
-  lookupKeyPressCode: () => searchTerm =>
+  lookupKeyPressCode: (state, getters) => searchTerm =>
     getters.lookupKeycode(searchTerm, true),
   lookupKeycode: state => (searchTerm, isKeys = false) => {
     var found = state.keycodes.find(({ code, keys }) => {

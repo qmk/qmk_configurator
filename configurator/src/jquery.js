@@ -27,7 +27,7 @@ const defaults = {
 let config = {};
 
 let $visualKeymap;
-let $keycodes;
+//let $keycodes;
 let keypressListener;
 let ignoreKeypressListener;
 let $layer;
@@ -39,13 +39,8 @@ function init() {
   $visualKeymap = $('#visual-keymap');
   $layer = $('.layer');
 
-  $.each(store.getters['keycodes/keycodes'], createKeyCodeUI);
-  $keycodes = $('.keycode'); // wait until they are created
-  $keycodes.each(makeDraggable);
-
   // click to assign keys to keymap
   $visualKeymap.click(selectKeymapKey);
-  //$('#keycodes').click(assignKeycodeToSelectedKey);
 
   $layer.click(changeLayer);
 
@@ -94,12 +89,13 @@ function changeLayer(e) {
 
 // generate keypress combo list from the keycodes list
 function generateKeypressCombos(_keycodes) {
-  return _keycodes
+  const combos = _keycodes
     .filter(({ keys }) => {
       // only keycodes with keys members
       return !isUndefined(keys);
     })
     .map(keycode => generateKeypressHandler(keycode));
+  return combos;
 }
 
 // generate a keypress combo handler per keycode
@@ -107,13 +103,13 @@ function generateKeypressHandler(keycode) {
   return {
     keys: keycode.keys,
     on_keydown: () => {
-      var meta = store.getters['keycodes/lookupKeyPressCode'](keycode.keys);
-      if (meta === undefined) {
+      const meta = store.getters['keycodes/lookupKeyPressCode'](keycode.keys);
+      if (isUndefined(meta)) {
         return;
       }
 
-      var $key = getSelectedKey();
-      var _index = $key.data('index');
+      const $key = getSelectedKey();
+      const _index = $key.data('index');
       if ($key === undefined || _index === undefined || !isNumber(_index)) {
         return; // not a key
       }
@@ -625,7 +621,9 @@ function render_key(_layer, k) {
       });
       keycode = store.getters['keymap/getKey']({ _layer, index: k });
     }
-    $key.html(keycode.name);
+    const legend =
+      keycode.name.length === 1 ? keycode.name.toUpperCase() : keycode.name;
+    $key.html(legend);
     if (keycode.type === 'container') {
       $key.addClass('key-container');
       var $container = $('<div>', {
