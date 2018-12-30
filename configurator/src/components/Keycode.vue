@@ -16,7 +16,7 @@
     @dragstart="dragstart"
     @dragend="dragend"
     @click="clicked"
-  >{{ name }}</div>
+  >{{ displayName }}</div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
@@ -42,6 +42,9 @@ export default {
         classes.push(`keycode-${this.type}`);
       }
       return classes;
+    },
+    displayName() {
+      return this.name.length === 1 ? this.name.toUpperCase() : this.name;
     }
   },
   data() {
