@@ -1,12 +1,15 @@
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
+import isUndefined from 'lodash/isUndefined';
 
 const state = {
   keymap: [],
   layer: 0,
-  dirty: false
+  dirty: false,
+  selectedIndex: undefined
 };
 const getters = {
+  getSelectedKey: state => state.selectedIndex,
   getKey: state => ({ _layer, index }) => state.keymap[_layer][index],
   layer: state => state.layer,
   getLayer: state => _layer => {
@@ -78,6 +81,17 @@ const actions = {
   }
 };
 const mutations = {
+  setSelected(state, index) {
+    state.selectedIndex = index;
+  },
+  setKeycode(state, _code) {
+    if (isUndefined(state.selectedIndex)) {
+      return;
+    }
+    let store = this;
+    let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
+    state.keymap[state.layer][state.selectedIndex] = { name, code, type };
+  },
   setContents(state, { index, key }) {
     state.keymap[state.layer][index].contents = key;
   },

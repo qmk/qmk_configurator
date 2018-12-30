@@ -9,12 +9,16 @@
     @drag="drag"
     @dragstart="dragstart"
     @dragend="dragend"
+    @click="clicked"
   >
     {{ name }}
   </div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
+
+import * as jquery from '@/jquery';
+
 export default {
   name: 'keycode',
   props: {
@@ -50,6 +54,11 @@ export default {
         'application/json',
         JSON.stringify({ name, type, keycode })
       );
+    },
+    clicked() {
+      this.$store.commit('keymap/setKeycode', this.code);
+      jquery.updateVisualKeymap();
+      this.$store.commit('keymap/setDirty');
     }
   }
 };
