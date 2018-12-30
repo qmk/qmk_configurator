@@ -4,8 +4,8 @@
     <div :class="{ 'bes-status': true, 'bes-error': hasError }">
       {{ status }}
     </div>
-    <div class="bes-version">API Version:
-      <span class="version-num">{{ version }}</span>
+    <div class="bes-version">
+      API Version:<span class="version-num">{{ version }}</span>
     </div>
     <div class="bes-jobs">{{ jobs }}</div>
   </div>
@@ -58,12 +58,4 @@ export default {
     setTimeout(this.fetchData, 1000);
   }
 };
-
-/*
-  return new Vue({
-    el: '#status-app',
-    template: '<div><statusBar></statusBar></div>',
-    components: { statusBar }
-  });
-  */
 </script>
