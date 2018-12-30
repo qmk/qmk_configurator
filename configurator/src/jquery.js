@@ -162,6 +162,7 @@ function updateVisualKeymap() {
   store.commit('keymap/setSelected', undefined);
 }
 
+/*
 function assignKeycodeToSelectedKey(evt) {
   let _keycode = $(evt.target).data('code');
   if (_keycode === undefined) {
@@ -196,6 +197,7 @@ function assignKeycodeToSelectedKey(evt) {
   render_key(store.getters['keymap/layer'], _index);
   store.commit('keymap/setDirty');
 }
+*/
 
 function createKeyCodeUI(k, d) {
   if (d.code) {

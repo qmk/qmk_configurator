@@ -1,4 +1,10 @@
+<!--
+  ignore the spacing around the div otherwise we want to
+  ignore the space between inline block elements
+  @see https://css-tricks.com/fighting-the-space-between-inline-block-elements/ -->
 <template>
+  <!-- prettier-ignore
+  -->
   <div
     draggable
     class="keycode ui-draggable ui-draggable-handle"
@@ -10,9 +16,7 @@
     @dragstart="dragstart"
     @dragend="dragend"
     @click="clicked"
-  >
-    {{ name }}
-  </div>
+  >{{ name }}</div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';

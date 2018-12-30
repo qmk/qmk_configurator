@@ -1,24 +1,18 @@
 <template>
+  <!-- prettier-ignore -->
   <div
     class="space"
     :class="computedClass"
-    :data-type="type"
-    :data-code="code"
-    :title="title"
-  >
-    {{ name }}
-  </div>
+    :title="label"
+  >{{ label }}</div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
 export default {
   name: 'space',
   props: {
-    type: String,
-    code: String,
-    title: String,
-    width: null,
-    name: String
+    label: String,
+    width: null
   },
   computed: {
     computedClass() {
@@ -34,3 +28,12 @@ export default {
   }
 };
 </script>
+<style>
+.space-label {
+  width: 100%;
+  clear: both;
+  height: 20px;
+  justify-content: left;
+  font-weight: bold;
+}
+</style>
