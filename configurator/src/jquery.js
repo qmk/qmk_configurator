@@ -45,7 +45,7 @@ function init() {
 
   // click to assign keys to keymap
   $visualKeymap.click(selectKeymapKey);
-  $('#keycodes').click(assignKeycodeToSelectedKey);
+  //$('#keycodes').click(assignKeycodeToSelectedKey);
 
   $layer.click(changeLayer);
 
@@ -145,10 +145,21 @@ function selectKeymapKey(evt) {
   if ($target.hasClass('key')) {
     $target.addClass('keycode-select');
   }
+  store.commit('keymap/setSelected', $target.data('index'));
 }
 
 function getSelectedKey() {
   return $visualKeymap.find('.key.keycode-select');
+}
+
+function updateVisualKeymap() {
+  render_key(
+    store.getters['keymap/layer'],
+    store.getters['keymap/getSelectedKey']
+  );
+  let $key = getSelectedKey();
+  $key.removeClass('keycode-select'); // clear selection once assigned
+  store.commit('keymap/setSelected', undefined);
 }
 
 function assignKeycodeToSelectedKey(evt) {
@@ -167,7 +178,6 @@ function assignKeycodeToSelectedKey(evt) {
   if ($key === undefined || _index === undefined || !isNumber(_index)) {
     return; // not a key
   }
-
   if ($key.hasClass('key-contents')) {
     store.commit('keymap/setContents', {
       _index,
@@ -887,5 +897,6 @@ export {
   disableCompileButton,
   enableOtherButtons,
   disableOtherButtons,
-  getPreferredLayout
+  getPreferredLayout,
+  updateVisualKeymap
 };
