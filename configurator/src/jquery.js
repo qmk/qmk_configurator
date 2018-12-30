@@ -195,27 +195,6 @@ function assignKeycodeToSelectedKey(evt) {
 }
 */
 
-function createKeyCodeUI(k, d) {
-  if (d.code) {
-    var help = d.title ? ` - ${d.title}` : '';
-    var keycode = $('<div>', {
-      class: 'keycode keycode-' + d.width + ' keycode-' + d.type,
-      'data-code': d.code,
-      'data-type': d.type,
-      html: d.name,
-      title: `${d.code}${help}`
-    });
-    $('#keycodes').append(keycode);
-  } else {
-    $('#keycodes').append(
-      $('<div>', {
-        class: 'space space-' + d.width,
-        html: d.label
-      })
-    );
-  }
-}
-
 function reset_keymap() {
   config = resetConfig();
   store.commit('keymap/clear');

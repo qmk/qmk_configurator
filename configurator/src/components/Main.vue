@@ -8,6 +8,7 @@
     >
       Download QMK Toolbox
     </a>
+    <visualKeymap />
     <div class="split-content">
       <div class="left-side">
         <p><label>Layer:</label></p>
@@ -42,12 +43,13 @@
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
+import VisualKeymap from '@/components/VisualKeymap';
 import * as jquery from '@/jquery';
 
 export default {
   name: 'Main',
   props: {},
-  components: { ControllerTop, StatusPanel, ControllerBottom },
+  components: { ControllerTop, StatusPanel, ControllerBottom, VisualKeymap },
   mounted() {
     jquery.init();
   }
