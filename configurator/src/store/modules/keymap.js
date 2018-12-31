@@ -19,14 +19,17 @@ const state = {
   dirty: false,
   selectedIndex: undefined,
   defaults,
-  config: Object.assign({}, defaults)
+  config: Object.assign({}, defaults),
+  lastChanged: undefined
 };
 
 const getters = {
+  lastChanged: state => state.lastChanged,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
-  getKey: state => ({ _layer, index }) => state.keymap[_layer][index],
+  getKey: state => ({ _layer = state.layer, index }) =>
+    state.keymap[_layer][index],
   layer: state => state.layer,
   getLayer: state => _layer => {
     return map(state.keymap[_layer], key => {
@@ -100,6 +103,9 @@ const mutations = {
   setSelected(state, index) {
     state.selectedIndex = index;
   },
+  resetLastChanged(state) {
+    state.lastChanged = undefined;
+  },
   setKeycode(state, _code) {
     if (isUndefined(state.selectedIndex)) {
       return;
@@ -107,6 +113,9 @@ const mutations = {
     let store = this;
     let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
     state.keymap[state.layer][state.selectedIndex] = { name, code, type };
+    state.lastChanged = state.selectedIndex;
+    mutations.setSelected(state, undefined);
+    mutations.setDirty(state);
   },
   setContents(state, { index, key }) {
     state.keymap[state.layer][index].contents = key;
@@ -179,14 +188,12 @@ const mutations = {
     state.config.KEY_Y_SPACING *= state.config.SCALE;
   },
   initKeymap: (state, { layout, layer }) => {
-    state.keymap[layer] = layout.map((key, index) => {
-      mutations.assignKey(state, {
-        _layer: 0,
-        index,
+    state.keymap[layer] = layout.map(() => {
+      return {
         name: '',
         code: 'KC_NO',
         type: undefined
-      });
+      };
     });
   }
 };

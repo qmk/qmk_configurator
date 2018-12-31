@@ -107,29 +107,7 @@ function generateKeypressHandler(keycode) {
         return;
       }
 
-      const $key = getSelectedKey();
-      const _index = $key.data('index');
-      if ($key === undefined || _index === undefined || !isNumber(_index)) {
-        return; // not a key
-      }
-
-      if ($key.hasClass('key-contents')) {
-        store.commit('keymap/setContents', {
-          _index,
-          key: newKey(meta, keycode.data('code'))
-        });
-      } else {
-        store.commit('keymap/assignKey', {
-          _layer: store.getters['keymap/layer'],
-          index: _index,
-          name: meta.name,
-          code: meta.code,
-          type: meta.type
-        });
-      }
-      $key.removeClass('keycode-select'); // clear selection once assigned
-      render_key(store.getters['keymap/layer'], _index);
-      store.commit('keymap/setDirty');
+      store.commit('keymap/setKeycode', meta.code);
     }
   };
 }
@@ -144,17 +122,7 @@ function selectKeymapKey(evt) {
 }
 
 function getSelectedKey() {
-  return $visualKeymap.find('.key.keycode-select');
-}
-
-function updateVisualKeymap() {
-  render_key(
-    store.getters['keymap/layer'],
-    store.getters['keymap/getSelectedKey']
-  );
-  let $key = getSelectedKey();
-  $key.removeClass('keycode-select'); // clear selection once assigned
-  store.commit('keymap/setSelected', undefined);
+  return store.getters['keymap/getSelectedKey'];
 }
 
 /*
@@ -867,6 +835,5 @@ export {
   disableCompileButton,
   enableOtherButtons,
   disableOtherButtons,
-  getPreferredLayout,
-  updateVisualKeymap
+  getPreferredLayout
 };
