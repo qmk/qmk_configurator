@@ -20,6 +20,13 @@ export default {
     layout(newLayout, oldLayout) {
       if (newLayout !== oldLayout) {
         this.resetConfig();
+        this.$store.commit('keymap/clear');
+        this.$store.commit('keymap/changeLayer', 0);
+        this.$store.commit('keymap/initLayer', 0);
+        this.$store.commit('keymap/initKeymap', {
+          layer: 0,
+          layout: this.layouts[newLayout]
+        });
       }
     }
   },
@@ -60,7 +67,7 @@ export default {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-        return Object.assign({ id: index }, coor, dims);
+        return Object.assign({ id: index, layer: this.layer }, coor, dims);
       });
       return curLayer;
     }

@@ -4,20 +4,24 @@
     :id="myid"
     class="key"
     :class="myclasses"
-    :style="mystyles"></div>
+    :style="mystyles"
+    @click="clicked"
+  ></div>
 </template>
 <script>
+import { mapGetters } from 'vuex';
 export default {
   name: 'base-key',
   props: {
     id: Number,
-    meta: Object,
+    layer: Number,
     w: Number,
     h: Number,
     y: Number,
     x: Number
   },
   computed: {
+    ...mapGetters('keymap', ['getSelectedKey']),
     myid() {
       return `key-${this.id}`;
     },
@@ -27,7 +31,11 @@ export default {
         : this.meta.name;
     },
     myclasses() {
-      return '';
+      let classes = [];
+      if (this.id === this.getSelectedKey) {
+        classes.push('keycode-select');
+      }
+      return classes.join(' ');
     },
     mystyles() {
       let styles = [];
@@ -46,6 +54,15 @@ export default {
       return styles.join('');
     }
   },
-  methods: {}
+  methods: {
+    clicked() {
+      let id = this.id;
+      if (this.getSelectedKey === this.id) {
+        id = undefined;
+      }
+      this.$store.commit('keymap/setSelected', id);
+    }
+  },
+  mounted() {}
 };
 </script>
