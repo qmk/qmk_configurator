@@ -21,8 +21,6 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 
-import * as jquery from '@/jquery';
-
 export default {
   name: 'keycode',
   props: {
@@ -64,8 +62,6 @@ export default {
     },
     clicked() {
       this.$store.commit('keymap/setKeycode', this.code);
-      jquery.updateVisualKeymap();
-      this.$store.commit('keymap/setDirty');
     }
   }
 };

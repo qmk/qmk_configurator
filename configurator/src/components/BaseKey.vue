@@ -6,10 +6,10 @@
     :class="myclasses"
     :style="mystyles"
     @click="clicked"
-  ></div>
+    >{{ displayName }}</div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'base-key',
   props: {
@@ -21,11 +21,16 @@ export default {
     x: Number
   },
   computed: {
-    ...mapGetters('keymap', ['getSelectedKey']),
+    ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'lastChanged']),
     myid() {
       return `key-${this.id}`;
     },
     displayName() {
+      if (this.lastChanged === this.id) {
+        let meta = this.getKey({ index: this.id });
+        this.setMeta(meta);
+        this.resetLastChanged();
+      }
       return this.meta.name.length === 1
         ? this.meta.name.toUpperCase()
         : this.meta.name;
@@ -55,14 +60,24 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('keymap', ['resetLastChanged']),
     clicked() {
       let id = this.id;
       if (this.getSelectedKey === this.id) {
         id = undefined;
       }
       this.$store.commit('keymap/setSelected', id);
+    },
+    setMeta(meta) {
+      this.meta = meta;
     }
   },
-  mounted() {}
+  data() {
+    return {
+      meta: {
+        name: ''
+      }
+    };
+  }
 };
 </script>
