@@ -1,11 +1,7 @@
 <template>
   <div id="visual-keymap" :style="styles">
     <template v-for="meta in currentLayer">
-      <component
-        v-bind:is="getComponent(meta)"
-        v-bind="meta"
-        :key="meta.id"
-      />
+      <component v-bind:is="getComponent(meta)" v-bind="meta" :key="meta.id" />
     </template>
   </div>
 </template>
