@@ -2,14 +2,29 @@ import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import map from 'lodash/map';
 import isUndefined from 'lodash/isUndefined';
+const defaults = {
+  MAX_X: 775,
+  KEY_WIDTH: 40,
+  KEY_HEIGHT: 40,
+  SWAP_KEY_WIDTH: 30,
+  SWAP_KEY_HEIGHT: 30,
+  KEY_X_SPACING: 45,
+  KEY_Y_SPACING: 45,
+  SCALE: 1
+};
 
 const state = {
   keymap: [{}],
   layer: 0,
   dirty: false,
-  selectedIndex: undefined
+  selectedIndex: undefined,
+  defaults,
+  config: Object.assign({}, defaults)
 };
+
 const getters = {
+  defaults: state => Object.assign({}, state.defaults),
+  config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
   getKey: state => ({ _layer, index }) => state.keymap[_layer][index],
   layer: state => state.layer,
@@ -150,6 +165,18 @@ const mutations = {
       // TODO probably need to do something differently here
       state.keymap[_layer] = {};
     }
+  },
+  resetConfig: state => {
+    state.config = Object.assign({}, state.defaults);
+  },
+  resizeConfig: (state, max) => {
+    state.config.SCALE = defaults.MAX_X / max.x;
+    state.config.KEY_WIDTH *= state.config.SCALE;
+    state.config.KEY_HEIGHT *= state.config.SCALE;
+    state.config.SWAP_KEY_HEIGHT *= state.config.SCALE;
+    state.config.SWAP_KEY_WIDTH *= state.config.SCALE;
+    state.config.KEY_X_SPACING *= state.config.SCALE;
+    state.config.KEY_Y_SPACING *= state.config.SCALE;
   }
 };
 

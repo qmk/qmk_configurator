@@ -1,5 +1,5 @@
 <template>
-  <div id="visual-keymap2" :mystyle="style">
+  <div id="visual-keymap" :style="styles">
     <template v-for="meta in currentLayer">
       <component
         v-bind:is="getComponent(meta)"
@@ -10,39 +10,95 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
+import reduce from 'lodash/reduce';
+import map from 'lodash/map';
 import BaseKey from '@/components/BaseKey';
+
 export default {
+  watch: {
+    layout(newLayout, oldLayout) {
+      if (newLayout !== oldLayout) {
+        this.resetConfig();
+      }
+    }
+  },
   computed: {
-    ...mapGetters('keymap', ['layer', 'getLayer']),
-    style() {
-      return '';
+    ...mapGetters('keymap', ['layer', 'getLayer', 'defaults', 'config']),
+    ...mapGetters('app', ['layout', 'layouts']),
+    styles() {
+      let styles = [];
+      styles.push(`width: ${this.width}px;`);
+      styles.push(`height: ${this.height}px;`);
+      return styles.join('');
     },
     currentLayer() {
-      return this.getLayer(this.layer);
+      const layout = this.layouts[this.layout];
+      // Calculate Max with given layout
+      const max = reduce(
+        layout,
+        (acc, pos) => {
+          let _pos = Object.assign({ w: 1, h: 1 }, pos);
+          const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+          const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
+          acc.x = Math.max(acc.x, coor.x + dims.w);
+          acc.y = Math.max(acc.y, coor.y + dims.h);
+          return acc;
+        },
+        {
+          x: 0,
+          y: 0
+        }
+      );
+      if (max.x > this.defaults.MAX_X) {
+        this.resizeConfig(max);
+        max.x *= this.config.SCALE;
+        max.y *= this.config.SCALE;
+      }
+      this.setSize(max);
+      let curLayer = map(layout, (pos, index) => {
+        let _pos = Object.assign({ w: 1, h: 1 }, pos);
+        const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+        const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
+        return Object.assign({ id: index }, coor, dims);
+      });
+      return curLayer;
     }
   },
   methods: {
+    ...mapMutations('keymap', ['resizeConfig', 'resetConfig']),
     calcKeyKeymapDims(w, h) {
       return {
-        w: w * config.KEY_X_SPACING - (config.KEY_X_SPACING - config.KEY_WIDTH),
-        h: h * config.KEY_Y_SPACING - (config.KEY_Y_SPACING - config.KEY_HEIGHT)
+        w:
+          w * this.config.KEY_X_SPACING -
+          (this.config.KEY_X_SPACING - this.config.KEY_WIDTH),
+        h:
+          h * this.config.KEY_Y_SPACING -
+          (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT)
       };
     },
-
     calcKeyKeymapPos(x, y) {
       return {
-        x: x * config.KEY_X_SPACING,
-        y: y * config.KEY_Y_SPACING
+        x: x * this.config.KEY_X_SPACING,
+        y: y * this.config.KEY_Y_SPACING
       };
     },
     getComponent(meta) {
-      debugger;
       switch (meta.type) {
         default:
           return BaseKey;
       }
+    },
+    setSize(max) {
+      this.width = max.x;
+      this.height = max.y;
     }
+  },
+  data() {
+    return {
+      width: 0,
+      height: 0
+    };
   },
   components: { BaseKey }
 };

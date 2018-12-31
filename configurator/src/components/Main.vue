@@ -8,7 +8,6 @@
     >
       Download QMK Toolbox
     </a>
-    <visualKeymap />
     <div class="split-content">
       <div class="left-side">
         <p><label>Layer:</label></p>
@@ -33,7 +32,7 @@
       </div>
       <div class="right-side">
         <p><label>Keymap:</label></p>
-        <div id="visual-keymap"></div>
+        <visualKeymap />
       </div>
     </div>
   </div>
