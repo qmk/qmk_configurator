@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import 'jquery-ui-bundle';
 import store from './store';
-import extend from 'lodash/extend';
 import escape from 'lodash/escape';
 import isNumber from 'lodash/isNumber';
 import partial from 'lodash/partial';
@@ -196,15 +195,8 @@ function assignKeycodeToSelectedKey(evt) {
 */
 
 function reset_keymap() {
-  config = resetConfig();
-  store.commit('keymap/clear');
-  store.commit('keymap/changeLayer', 0);
   $('.layer').removeClass('non-empty active');
   $('.layer.0').addClass('active non-empty');
-}
-
-function resetConfig(overrides) {
-  return extend(config, defaults, overrides);
 }
 
 //Function that takes in a keymap loops over it and fills populates the keymap variable
@@ -865,7 +857,6 @@ function getPreferredLayout(layouts) {
 export {
   init,
   reset_keymap,
-  resetConfig,
   load_converted_keymap,
   statusError,
   render_key,

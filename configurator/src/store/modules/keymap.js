@@ -177,6 +177,17 @@ const mutations = {
     state.config.SWAP_KEY_WIDTH *= state.config.SCALE;
     state.config.KEY_X_SPACING *= state.config.SCALE;
     state.config.KEY_Y_SPACING *= state.config.SCALE;
+  },
+  initKeymap: (state, { layout, layer }) => {
+    state.keymap[layer] = layout.map((key, index) => {
+      mutations.assignKey(state, {
+        _layer: 0,
+        index,
+        name: '',
+        code: 'KC_NO',
+        type: undefined
+      });
+    });
   }
 };
 

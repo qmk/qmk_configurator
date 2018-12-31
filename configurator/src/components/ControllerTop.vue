@@ -166,7 +166,6 @@ export default {
           return false;
         }
       }
-      // hard-coding planck as the only default right now
       let keyboardName = this.keyboard.replace('/', '_');
       let store = this.$store;
       axios
@@ -174,8 +173,6 @@ export default {
         .then(({ data, status }) => {
           if (status === 200) {
             console.log(data);
-            reset_keymap();
-
             this.updateLayout(data.layout);
             this.updateKeymapName(data.keymap);
             load_converted_keymap(data.layers);
