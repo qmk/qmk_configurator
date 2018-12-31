@@ -38,9 +38,6 @@ function init() {
   $visualKeymap = $('#visual-keymap2');
   $layer = $('.layer');
 
-  // click to assign keys to keymap
-  $visualKeymap.click(selectKeymapKey);
-
   $layer.click(changeLayer);
 
   offsetTop = $('.split-content').offset().top;
@@ -110,19 +107,6 @@ function generateKeypressHandler(keycode) {
       store.commit('keymap/setKeycode', meta.code);
     }
   };
-}
-
-function selectKeymapKey(evt) {
-  var $target = $(evt.target);
-  getSelectedKey().removeClass('keycode-select');
-  if ($target.hasClass('key')) {
-    $target.addClass('keycode-select');
-  }
-  store.commit('keymap/setSelected', $target.data('index'));
-}
-
-function getSelectedKey() {
-  return store.getters['keymap/getSelectedKey'];
 }
 
 /*
