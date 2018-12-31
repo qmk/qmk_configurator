@@ -12,30 +12,38 @@ export default {
   props: {
     id: Number,
     meta: Object,
-    width: Number,
-    height: Number,
-    top: Number,
-    left: Number,
-    unit: Number
+    w: Number,
+    h: Number,
+    y: Number,
+    x: Number
   },
   computed: {
-    myid: () => `key-${this.id}`,
-    displayName: () =>
-      this.meta.name.length === 1
+    myid() {
+      return `key-${this.id}`;
+    },
+    displayName() {
+      return this.meta.name.length === 1
         ? this.meta.name.toUpperCase()
-        : this.meta.name,
-    myclasses: () => {
+        : this.meta.name;
+    },
+    myclasses() {
       return '';
     },
-    mystyles: () => {
+    mystyles() {
       let styles = [];
-      if (this.width > 0) {
-        styles.push(`width: ${this.width * this.unit}px`);
+      if (this.w > 0) {
+        styles.push(`width: ${this.w}px;`);
       }
-      if (this.height > 0) {
-        styles.push(`height: ${this.width * this.unit}px`);
+      if (this.h > 0) {
+        styles.push(`height: ${this.h}px;`);
       }
-      return styles.join(' ');
+      if (this.y > 0) {
+        styles.push(`top: ${this.y}px;`);
+      }
+      if (this.x > 0) {
+        styles.push(`left: ${this.x}px;`);
+      }
+      return styles.join('');
     }
   },
   methods: {}

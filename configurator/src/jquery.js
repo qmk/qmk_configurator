@@ -36,7 +36,7 @@ let height;
 let compile_status = undefined;
 
 function init() {
-  $visualKeymap = $('#visual-keymap');
+  $visualKeymap = $('#visual-keymap2');
   $layer = $('.layer');
 
   // click to assign keys to keymap

@@ -53,7 +53,7 @@
 
 <script>
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -70,7 +70,7 @@ import {
   statusError,
   reset_keymap,
   load_converted_keymap,
-  render_layout,
+  // render_layout,
   getExclusionList,
   compileLayout,
   disableOtherButtons
@@ -154,6 +154,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('keymap', ['resizeConfig']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -178,9 +179,9 @@ export default {
             this.updateLayout(data.layout);
             this.updateKeymapName(data.keymap);
             load_converted_keymap(data.layers);
-            render_layout(
-              this.layouts[this.layout].map(v => Object.assign({}, v))
-            );
+            // render_layout(
+            //  this.layouts[this.layout].map(v => Object.assign({}, v))
+            // );
             store.commit('keymap/setDirty');
           }
         })
@@ -241,11 +242,12 @@ export default {
         .then(this.postUpdateKeyboard);
     },
     postUpdateKeyboard() {
+      this.$store.commit('status/clear');
       reset_keymap();
       this.$router.replace({
         path: `/${this.keyboard}/${this.layout}`
       });
-      render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
+      // render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
       this.$store.commit('status/clear');
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
@@ -257,12 +259,12 @@ export default {
      */
     updateLayout(e) {
       let newLayout = e.target ? e.target.value : e;
-      let render = e.target;
       this.$store.commit('app/setLayout', newLayout);
       reset_keymap();
       this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
-      render &&
-        render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
+      // let render = e.target;
+      // render &&
+      //  render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;
