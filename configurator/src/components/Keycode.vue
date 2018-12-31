@@ -53,11 +53,11 @@ export default {
     drag() {},
     dragstart(ev) {
       console.log('dragstarted on ', this.name);
-      let { name, keycode, type } = this;
+      let { name, code, type } = this;
       ev.dropEffect = 'copy';
       ev.dataTransfer.setData(
         'application/json',
-        JSON.stringify({ name, type, keycode })
+        JSON.stringify({ name, type, code })
       );
     },
     clicked() {
