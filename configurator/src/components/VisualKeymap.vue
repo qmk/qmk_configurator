@@ -16,10 +16,10 @@ export default {
     layout(newLayout, oldLayout) {
       if (newLayout !== oldLayout) {
         this.resetConfig();
-        this.$store.commit('keymap/clear');
-        this.$store.commit('keymap/changeLayer', 0);
-        this.$store.commit('keymap/initLayer', 0);
-        this.$store.commit('keymap/initKeymap', {
+        this.clear();
+        this.changeLayer(0);
+        this.initLayer(0);
+        this.initKeymap({
           layer: 0,
           layout: this.layouts[newLayout]
         });
@@ -37,6 +37,7 @@ export default {
     },
     currentLayer() {
       const layout = this.layouts[this.layout];
+      const keymap = this.getLayer(this.layer);
       // Calculate Max with given layout
       const max = reduce(
         layout,
@@ -63,13 +64,24 @@ export default {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-        return Object.assign({ id: index, layer: this.layer }, coor, dims);
+        return Object.assign(
+          { id: index, layer: this.layer, meta: keymap[index] },
+          coor,
+          dims
+        );
       });
       return curLayer;
     }
   },
   methods: {
-    ...mapMutations('keymap', ['resizeConfig', 'resetConfig']),
+    ...mapMutations('keymap', [
+      'changeLayer',
+      'clear',
+      'initKeymap',
+      'initLayer',
+      'resetConfig',
+      'resizeConfig'
+    ]),
     calcKeyKeymapDims(w, h) {
       return {
         w:
