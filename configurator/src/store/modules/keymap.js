@@ -163,20 +163,14 @@ const mutations = {
   initLayer: (state, _layer) => {
     if (_layer > 0) {
       // layer 0 is always initialized. Use it as a reference
-      let store = this;
-      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_NO');
-      let KC_NO = { name, code };
+      const KC_NO = { name: '', code: 'KC_NO' };
       Vue.set(
         state.keymap,
         _layer,
-        reduce(
-          state.keymap[0],
-          (acc, key, index) => {
-            acc[index] = KC_NO;
-            return acc;
-          },
-          {}
-        )
+        map(state.keymap[0], (acc, key, index) => {
+          acc[index] = KC_NO;
+          return acc;
+        })
       );
     } else {
       // TODO probably need to do something differently here
