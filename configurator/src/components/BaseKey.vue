@@ -21,7 +21,6 @@ export default {
   name: 'base-key',
   props: {
     id: Number,
-    layer: Number,
     meta: Object,
     w: Number,
     h: Number,
@@ -30,6 +29,7 @@ export default {
   },
   computed: {
     ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
+    ...mapGetters('keymap', { curLayer: 'layer' }),
     myid() {
       return `key-${this.id}`;
     },
@@ -90,7 +90,7 @@ export default {
       if (json.action === 'swap') {
         console.log(`swapping ${json.id} with ${this.id}`);
         this.swapKeys({
-          layer: this.layer,
+          layer: this.curLayer,
           srcIndex: json.id,
           dstIndex: this.id
         });

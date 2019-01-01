@@ -10,6 +10,7 @@ import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
+import LayerKey from '@/components/LayerKey';
 
 export default {
   name: 'visual-keymap',
@@ -121,6 +122,8 @@ export default {
     },
     getComponent(meta) {
       switch (meta.meta.type) {
+        case 'layer':
+          return LayerKey;
         case 'text':
           return AnyKey;
         default:
@@ -138,7 +141,7 @@ export default {
       height: 0
     };
   },
-  components: { BaseKey, AnyKey }
+  components: { BaseKey, AnyKey, LayerKey }
 };
 </script>
 <style>

@@ -83,9 +83,9 @@ const actions = {
     }
     return state.keymap[_layer][index];
   },
-  setKeycodeLayer({ state, commit }, { _layer, index, toLayer }) {
-    state.keymap[_layer][index].layer = toLayer;
-    if (toLayer !== _layer) {
+  setKeycodeLayer({ state, commit }, { layer, index, toLayer }) {
+    commit('setKeyLayer', { layer, index, toLayer });
+    if (toLayer !== layer) {
       if (state.keymap[toLayer] === undefined) {
         commit('initLayer', toLayer);
       }
@@ -116,6 +116,9 @@ const mutations = {
       code,
       type
     });
+    if (type === 'layer') {
+      Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
+    }
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);
   },
@@ -132,6 +135,9 @@ const mutations = {
     if (keycode.type === 'layer') {
       Vue.set(state.keymap[_layer][index], 'layer', 0);
     }
+  },
+  setKeyLayer(state, { layer, index, toLayer }) {
+    Vue.set(state.keymap[layer][index], 'layer', toLayer);
   },
   swapKeys(state, { layer, srcIndex, dstIndex }) {
     var temp = state.keymap[layer][srcIndex];
