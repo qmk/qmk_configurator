@@ -34,7 +34,6 @@ let height;
 let compile_status = undefined;
 
 function init() {
-  $visualKeymap = $('#visual-keymap2');
   offsetTop = $('.split-content').offset().top;
   height = $('.split-content').height();
 
