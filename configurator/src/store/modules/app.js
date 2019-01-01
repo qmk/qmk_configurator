@@ -19,7 +19,8 @@ const state = {
   enableDownloads: false,
   firmwareBinaryURL: [],
   firmwareSourceURL: [],
-  filter: ''
+  filter: '',
+  keypressListener: undefined
 };
 
 const getters = {
@@ -199,6 +200,18 @@ const mutations = {
       return state.layouts;
     }
     return {};
+  },
+  setKeypressListener(state, kpl) {
+    // store a function which returns a reference to avoid vuex
+    // complaints about modifying the original reference as it's
+    // a 3rd party library
+    state.keypressListener = kpl;
+  },
+  stopListening(state) {
+    state.keypressListener().stop_listening();
+  },
+  startListening(state) {
+    state.keypressListener().listen();
   }
 };
 

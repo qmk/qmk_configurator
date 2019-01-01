@@ -140,8 +140,8 @@ const mutations = {
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);
   },
-  setText(state, { _layer, index, text }) {
-    Vue.set(state.keymap[_layer][index], 'text', text);
+  setText(state, { layer, index, text }) {
+    Vue.set(state.keymap[layer][index], 'text', text);
   },
   setKey(state, { _layer, index, key }) {
     Vue.set(state.keymap[_layer], index, key);
