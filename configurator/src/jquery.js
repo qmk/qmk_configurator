@@ -29,17 +29,12 @@ let $visualKeymap;
 //let $keycodes;
 let keypressListener;
 let ignoreKeypressListener;
-let $layer;
 let offsetTop;
 let height;
 let compile_status = undefined;
 
 function init() {
   $visualKeymap = $('#visual-keymap2');
-  $layer = $('.layer');
-
-  $layer.click(changeLayer);
-
   offsetTop = $('.split-content').offset().top;
   height = $('.split-content').height();
 
@@ -70,17 +65,6 @@ function scrollHandler() {
     $('#keycodes-section').css('margin-top', '0px');
     $('.split-content').removeClass('fixed');
   }
-}
-
-function changeLayer(e) {
-  $('.layer.active').removeClass('active');
-  $(e.target).addClass('active');
-  let layer = e.target.innerHTML;
-  store.commit('keymap/changeLayer', layer);
-  setLayerToNonEmpty(layer);
-  let _layouts = store.getters['app/layouts'];
-  let _layout = store.getters['app/layout'];
-  render_layout(_layouts[_layout].map(v => Object.assign({}, v)));
 }
 
 // generate keypress combo list from the keycodes list
@@ -147,8 +131,8 @@ function assignKeycodeToSelectedKey(evt) {
 */
 
 function reset_keymap() {
-  $('.layer').removeClass('non-empty active');
-  $('.layer.0').addClass('active non-empty');
+  //$('.layer').removeClass('non-empty active');
+  //$('.layer.0').addClass('active non-empty');
 }
 
 //Function that takes in a keymap loops over it and fills populates the keymap variable
