@@ -18,6 +18,7 @@
       type="number"
       :value="value"
       @focus="focus"
+      @blur="blur"
       @input="input"
     /></div>
 </template>
@@ -47,9 +48,11 @@ export default {
           index: this.id,
           toLayer
         });
-        this.startListening();
-        this.setSelected(undefined);
       }
+    },
+    blur() {
+      this.startListening();
+      this.setSelected(undefined);
     },
     focus() {
       this.stopListening();
