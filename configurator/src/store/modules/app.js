@@ -64,6 +64,7 @@ const actions = {
       commit('disablePreview');
       commit('enableCompile');
       commit('setKeyboard', keyboard);
+      commit('setLayout', undefined);
       dispatch('loadLayouts').then(() => {
         console.log(getPreferredLayout(state.layouts));
         commit('setLayout', getPreferredLayout(state.layouts));

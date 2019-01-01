@@ -6,6 +6,7 @@
   </div>
 </template>
 <script>
+import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
 import reduce from 'lodash/reduce';
 import map from 'lodash/map';
@@ -14,7 +15,7 @@ import BaseKey from '@/components/BaseKey';
 export default {
   watch: {
     layout(newLayout, oldLayout) {
-      if (newLayout !== oldLayout) {
+      if (!isUndefined(newLayout) && newLayout !== oldLayout) {
         this.resetConfig();
         this.clear();
         this.changeLayer(0);
@@ -33,7 +34,7 @@ export default {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em`);
+      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
       return styles.join('');
     },
     currentLayer() {
@@ -66,7 +67,11 @@ export default {
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
-          { id: index, layer: this.layer, meta: keymap[index] },
+          {
+            id: index,
+            layer: this.layer,
+            meta: keymap[index]
+          },
           coor,
           dims
         );
@@ -113,8 +118,7 @@ export default {
   data() {
     return {
       width: 0,
-      height: 0,
-      fontsize: 1
+      height: 0
     };
   },
   components: { BaseKey }
