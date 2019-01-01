@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
-import map from 'lodash/map';
 import isUndefined from 'lodash/isUndefined';
 const defaults = {
   MAX_X: 775,
@@ -154,28 +153,11 @@ const mutations = {
     state.dirty = false;
   },
   clear(state) {
-    state.keymap = [];
+    state.keymap = Vue.set(state, 'keymap', [{}]);
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
     state.layer = newLayer;
-  },
-  initLayer: (state, _layer) => {
-    if (_layer > 0) {
-      // layer 0 is always initialized. Use it as a reference
-      const KC_NO = { name: '', code: 'KC_NO' };
-      Vue.set(
-        state.keymap,
-        _layer,
-        map(state.keymap[0], (acc, key, index) => {
-          acc[index] = KC_NO;
-          return acc;
-        })
-      );
-    } else {
-      // TODO probably need to do something differently here
-      Vue.set(state.keymap, _layer, {});
-    }
   },
   resetConfig: state => {
     state.config = Object.assign({}, state.defaults);
@@ -225,6 +207,15 @@ const mutations = {
         };
       })
     );
+  },
+  initLayer: (state, layer) => {
+    if (layer > 0) {
+      // layer 0 is always initialized. Use it as a reference
+      mutations.initKeymap(state, { layer: layer, layout: state.keymap[0] });
+    } else {
+      // TODO probably need to do something differently here
+      Vue.set(state.keymap, layer, {});
+    }
   }
 };
 
