@@ -171,7 +171,7 @@ const mutations = {
       KEY_X_SPACING,
       KEY_Y_SPACING
     } = state.config;
-    Vue.set(state.config, 'SCALE', defaults.MAX_X / max.x);
+    Vue.set(state.config, 'SCALE', (defaults.MAX_X / max.x).toFixed(3));
     Vue.set(state.config, 'KEY_WIDTH', (KEY_WIDTH *= state.config.SCALE));
     Vue.set(state.config, 'KEY_HEIGHT', (KEY_HEIGHT *= state.config.SCALE));
     Vue.set(

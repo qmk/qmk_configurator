@@ -8,23 +8,54 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
-import reduce from 'lodash/reduce';
-import map from 'lodash/map';
 import BaseKey from '@/components/BaseKey';
 
 export default {
+  name: 'visual-keymap',
+  props: {
+    profile: Boolean
+  },
   watch: {
     layout(newLayout, oldLayout) {
+      this.profile && console.time('layout');
       if (!isUndefined(newLayout) && newLayout !== oldLayout) {
+        this.profile && console.time('layout::reset');
         this.resetConfig();
         this.clear();
         this.changeLayer(0);
-        this.initLayer(0);
+        this.profile && console.time('layout::initkeymap');
         this.initKeymap({
           layer: 0,
           layout: this.layouts[newLayout]
         });
+        this.profile && console.timeEnd('layout::initkeymap');
+        this.profile && console.timeEnd('layout::reset');
+
+        this.profile && console.time('layout::scale');
+        const layout = this.layouts[this.layout];
+        const max = layout.reduce(
+          (acc, pos) => {
+            let _pos = Object.assign({ w: 1, h: 1 }, pos);
+            const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+            const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
+            acc.x = Math.max(acc.x, coor.x + dims.w);
+            acc.y = Math.max(acc.y, coor.y + dims.h);
+            return acc;
+          },
+          {
+            x: 0,
+            y: 0
+          }
+        );
+        if (max.x > this.defaults.MAX_X) {
+          this.resizeConfig(max);
+          max.x *= this.config.SCALE;
+          max.y *= this.config.SCALE;
+        }
+        this.setSize(max);
+        this.profile && console.timeEnd('layout::scale');
       }
+      this.profile && console.timeEnd('layout');
     }
   },
   computed: {
@@ -40,29 +71,12 @@ export default {
     currentLayer() {
       const layout = this.layouts[this.layout];
       const keymap = this.getLayer(this.layer);
-      // Calculate Max with given layout
-      const max = reduce(
-        layout,
-        (acc, pos) => {
-          let _pos = Object.assign({ w: 1, h: 1 }, pos);
-          const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
-          const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-          acc.x = Math.max(acc.x, coor.x + dims.w);
-          acc.y = Math.max(acc.y, coor.y + dims.h);
-          return acc;
-        },
-        {
-          x: 0,
-          y: 0
-        }
-      );
-      if (max.x > this.defaults.MAX_X) {
-        this.resizeConfig(max);
-        max.x *= this.config.SCALE;
-        max.y *= this.config.SCALE;
+      if (isUndefined(layout) || isUndefined(keymap)) {
+        return [];
       }
-      this.setSize(max);
-      let curLayer = map(layout, (pos, index) => {
+      // Calculate Max with given layout
+      this.profile && console.time('currentLayer');
+      let curLayer = layout.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
@@ -76,6 +90,7 @@ export default {
           dims
         );
       });
+      this.profile && console.timeEnd('currentLayer');
       return curLayer;
     }
   },
@@ -84,7 +99,6 @@ export default {
       'changeLayer',
       'clear',
       'initKeymap',
-      'initLayer',
       'resetConfig',
       'resizeConfig'
     ]),

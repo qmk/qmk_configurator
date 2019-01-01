@@ -12,7 +12,7 @@
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p><label>Keymap:</label></p>
-        <visualKeymap />
+        <visualKeymap :profile="true" />
       </div>
     </div>
   </div>
