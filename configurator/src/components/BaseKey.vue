@@ -1,14 +1,18 @@
 <template>
   <!-- prettier-ignore -->
   <div
+    draggable
     :id="myid"
     class="key"
     :class="myclasses"
     :style="mystyles"
     @click="clicked"
-    @drop="dropped"
+    @dragstart="dragstart"
+    @dragend="dragend"
+    @drop.stop="dropped"
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
+    @dragenter.prevent="dragenter"
     >{{ displayName }}</div>
 </template>
 <script>
@@ -18,21 +22,20 @@ export default {
   props: {
     id: Number,
     layer: Number,
+    meta: Object,
     w: Number,
     h: Number,
     y: Number,
     x: Number
   },
   computed: {
-    ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'lastChanged']),
+    ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
     myid() {
       return `key-${this.id}`;
     },
     displayName() {
-      if (this.lastChanged === this.id) {
-        let meta = this.getKey({ index: this.id });
-        this.setMeta(meta);
-        this.resetLastChanged();
+      if (this.meta === undefined) {
+        return;
       }
       return this.meta.name.length === 1
         ? this.meta.name.toUpperCase()
@@ -45,6 +48,9 @@ export default {
       }
       if (this.inHover) {
         classes.push('overme');
+      }
+      if (this.inSwap) {
+        classes.push('swapme');
       }
       return classes.join(' ');
     },
@@ -66,11 +72,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', [
-      'setSelected',
-      'setKeycode',
-      'resetLastChanged'
-    ]),
+    ...mapMutations('keymap', ['setSelected', 'setKeycode', 'swapKeys']),
     clicked() {
       let id = this.id;
       if (this.getSelectedKey === this.id) {
@@ -84,24 +86,56 @@ export default {
     dropped(ev) {
       this.setSelected(this.id);
       let json = JSON.parse(ev.dataTransfer.getData('application/json'));
-      this.setKeycode(json.code);
+      if (json.action === 'swap') {
+        console.log(`swapping ${json.id} with ${this.id}`);
+        this.swapKeys({
+          layer: this.layer,
+          srcIndex: json.id,
+          dstIndex: this.id
+        });
+      } else {
+        this.setKeycode(json.code);
+      }
       this.dragleave();
     },
+    dragend() {
+      this.inSwap = false;
+      this.inHover = false;
+      this.$el.style.opacity = '1';
+    },
     dragover() {
+      return false;
+    },
+    dragenter() {
       // only executed when dragged into drop
       this.inHover = true;
     },
     dragleave() {
       // only executed when dragged out of drop
       this.inHover = false;
+    },
+    dragstart(ev) {
+      // move elements
+      this.inSwap = true;
+      this.$el.style.opacity = '0.4';
+      let { id } = this;
+      ev.dropEffect = 'move';
+      ev.dataTransfer.dropEffect = 'move';
+      ev.dataTransfer.setData(
+        'application/json',
+        JSON.stringify({ action: 'swap', id })
+      );
     }
   },
   data() {
     return {
       inHover: false,
+      inSwap: false
+      /*
       meta: {
         name: ''
       }
+      */
     };
   }
 };
@@ -110,6 +144,9 @@ export default {
 .key.overme {
   background: #cceecc;
   border-radius: 4px;
+}
+.key.swapme {
+  transform: scale(0.8);
 }
 /*
 .key {

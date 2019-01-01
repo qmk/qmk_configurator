@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import map from 'lodash/map';
@@ -19,12 +20,10 @@ const state = {
   dirty: false,
   selectedIndex: undefined,
   defaults,
-  config: Object.assign({}, defaults),
-  lastChanged: undefined
+  config: Object.assign({}, defaults)
 };
 
 const getters = {
-  lastChanged: state => state.lastChanged,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
@@ -32,9 +31,7 @@ const getters = {
     state.keymap[_layer][index],
   layer: state => state.layer,
   getLayer: state => _layer => {
-    return map(state.keymap[_layer], key => {
-      return Object.assign({}, key);
-    });
+    return state.keymap[_layer];
   },
   size: state => _layer => {
     return size(state.keymap[_layer]);
@@ -95,7 +92,13 @@ const actions = {
       }
       let store = this;
       let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
-      state.keymap[toLayer][index] = { name, code };
+      commit('assignKey', {
+        _layer: toLayer,
+        index,
+        name,
+        code,
+        type: undefined
+      });
     }
   }
 };
@@ -103,45 +106,46 @@ const mutations = {
   setSelected(state, index) {
     state.selectedIndex = index;
   },
-  resetLastChanged(state) {
-    state.lastChanged = undefined;
-  },
   setKeycode(state, _code) {
     if (isUndefined(state.selectedIndex)) {
       return;
     }
     let store = this;
     let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
-    state.keymap[state.layer][state.selectedIndex] = { name, code, type };
-    state.lastChanged = state.selectedIndex;
+    Vue.set(state.keymap[state.layer], state.selectedIndex, {
+      name,
+      code,
+      type
+    });
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);
   },
   setContents(state, { index, key }) {
-    state.keymap[state.layer][index].contents = key;
+    Vue.set(state.keymap[state.layer][index], 'contents', key);
   },
   assignKey(state, { _layer, index, name, code, type }) {
-    state.keymap[_layer][index] = {
+    Vue.set(state.keymap[_layer], index, {
       name: name,
       code: code,
       type: type
-    };
+    });
     var keycode = state.keymap[_layer][index];
     if (keycode.type === 'layer') {
-      state.keymap[_layer][index].layer = 0;
+      Vue.set(state.keymap[_layer][index], 'layer', 0);
     }
   },
-  swapKeys(state, { _layer, srcIndex, dstIndex }) {
-    var temp = state.keymap[_layer][srcIndex];
-    state.keymap[_layer][srcIndex] = state.keymap[_layer][dstIndex];
-    state.keymap[_layer][dstIndex] = temp;
-    state.dirty = true;
+  swapKeys(state, { layer, srcIndex, dstIndex }) {
+    var temp = state.keymap[layer][srcIndex];
+    Vue.set(state.keymap[layer], srcIndex, state.keymap[layer][dstIndex]);
+    Vue.set(state.keymap[layer], dstIndex, temp);
+    mutations.setSelected(state, undefined);
+    mutations.setDirty(state);
   },
   setText(state, { _layer, index, text }) {
-    state.keymap[_layer][index].text = text;
+    Vue.set(state.keymap[_layer][index], 'text', text);
   },
   setKey(state, { _layer, index, key }) {
-    state.keymap[_layer][index] = key;
+    Vue.set(state.keymap[_layer], index, key);
   },
   setDirty(state) {
     state.dirty = true;
@@ -162,39 +166,71 @@ const mutations = {
       let store = this;
       let { name, code } = store.getters['keycodes/lookupKeycode']('KC_NO');
       let KC_NO = { name, code };
-      state.keymap[_layer] = reduce(
-        state.keymap[0],
-        (acc, key, index) => {
-          acc[index] = KC_NO;
-          return acc;
-        },
-        {}
+      Vue.set(
+        state.keymap,
+        _layer,
+        reduce(
+          state.keymap[0],
+          (acc, key, index) => {
+            acc[index] = KC_NO;
+            return acc;
+          },
+          {}
+        )
       );
     } else {
       // TODO probably need to do something differently here
-      state.keymap[_layer] = {};
+      Vue.set(state.keymap, _layer, {});
     }
   },
   resetConfig: state => {
     state.config = Object.assign({}, state.defaults);
   },
   resizeConfig: (state, max) => {
-    state.config.SCALE = defaults.MAX_X / max.x;
-    state.config.KEY_WIDTH *= state.config.SCALE;
-    state.config.KEY_HEIGHT *= state.config.SCALE;
-    state.config.SWAP_KEY_HEIGHT *= state.config.SCALE;
-    state.config.SWAP_KEY_WIDTH *= state.config.SCALE;
-    state.config.KEY_X_SPACING *= state.config.SCALE;
-    state.config.KEY_Y_SPACING *= state.config.SCALE;
+    let {
+      KEY_WIDTH,
+      KEY_HEIGHT,
+      SWAP_KEY_HEIGHT,
+      SWAP_KEY_WIDTH,
+      KEY_X_SPACING,
+      KEY_Y_SPACING
+    } = state.config;
+    Vue.set(state.config, 'SCALE', defaults.MAX_X / max.x);
+    Vue.set(state.config, 'KEY_WIDTH', (KEY_WIDTH *= state.config.SCALE));
+    Vue.set(state.config, 'KEY_HEIGHT', (KEY_HEIGHT *= state.config.SCALE));
+    Vue.set(
+      state.config,
+      'SWAP_KEY_HEIGHT',
+      (SWAP_KEY_HEIGHT *= state.config.SCALE)
+    );
+    Vue.set(
+      state.config,
+      'SWAP_KEY_WIDTH',
+      (SWAP_KEY_WIDTH *= state.config.SCALE)
+    );
+    Vue.set(
+      state.config,
+      'KEY_X_SPACING',
+      (KEY_X_SPACING *= state.config.SCALE)
+    );
+    Vue.set(
+      state.config,
+      'KEY_Y_SPACING',
+      (KEY_Y_SPACING *= state.config.SCALE)
+    );
   },
   initKeymap: (state, { layout, layer }) => {
-    state.keymap[layer] = layout.map(() => {
-      return {
-        name: '',
-        code: 'KC_NO',
-        type: undefined
-      };
-    });
+    Vue.set(
+      state.keymap,
+      layer,
+      layout.map(() => {
+        return {
+          name: '',
+          code: 'KC_NO',
+          type: undefined
+        };
+      })
+    );
   }
 };
 

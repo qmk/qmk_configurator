@@ -49,12 +49,16 @@ export default {
     return {};
   },
   methods: {
-    dragend() {},
+    dragend() {
+      this.$el.style.opacity = '1';
+    },
     drag() {},
     dragstart(ev) {
       console.log('dragstarted on ', this.name);
+      this.$el.style.opacity = '0.4';
       let { name, code, type } = this;
       ev.dropEffect = 'copy';
+      ev.dataTransfer.dropEffect = 'move';
       ev.dataTransfer.setData(
         'application/json',
         JSON.stringify({ name, type, code })
