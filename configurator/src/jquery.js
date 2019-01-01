@@ -49,6 +49,7 @@ function init() {
     }
   });
 
+  store.commit('app/setKeypressListener', () => keypressListener);
   ignoreKeypressListener = partial(rawIgnoreKeypressListener, keypressListener);
 }
 

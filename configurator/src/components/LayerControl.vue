@@ -2,6 +2,7 @@
   <div>
     <p><label>Layer:</label></p>
     <div id="layers">
+      <!-- prettier-ignore -->
       <div
         class="layer"
         :class="layer.clazz"

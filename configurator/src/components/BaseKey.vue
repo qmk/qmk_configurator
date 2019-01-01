@@ -73,6 +73,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['setSelected', 'setKeycode', 'swapKeys']),
+    ...mapMutations('app', ['stopListening', 'startListening']),
     clicked() {
       let id = this.id;
       if (this.getSelectedKey === this.id) {
@@ -131,11 +132,6 @@ export default {
     return {
       inHover: false,
       inSwap: false
-      /*
-      meta: {
-        name: ''
-      }
-      */
     };
   }
 };
