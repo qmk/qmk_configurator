@@ -33,6 +33,7 @@ export default {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
+      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em`);
       return styles.join('');
     },
     currentLayer() {
@@ -112,7 +113,8 @@ export default {
   data() {
     return {
       width: 0,
-      height: 0
+      height: 0,
+      fontsize: 1
     };
   },
   components: { BaseKey }
