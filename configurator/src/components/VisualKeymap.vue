@@ -11,6 +11,7 @@ import { mapGetters, mapMutations } from 'vuex';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
 import LayerKey from '@/components/LayerKey';
+import ContainerKey from '@/components/ContainerKey';
 
 export default {
   name: 'visual-keymap',
@@ -122,6 +123,8 @@ export default {
     },
     getComponent(meta) {
       switch (meta.meta.type) {
+        case 'container':
+          return ContainerKey;
         case 'layer':
           return LayerKey;
         case 'text':
@@ -141,7 +144,7 @@ export default {
       height: 0
     };
   },
-  components: { BaseKey, AnyKey, LayerKey }
+  components: { BaseKey, AnyKey, LayerKey, ContainerKey }
 };
 </script>
 <style>

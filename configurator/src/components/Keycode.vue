@@ -16,7 +16,7 @@
     @dragstart="dragstart"
     @dragend="dragend"
     @click="clicked"
-  >{{ displayName }}</div>
+    >{{ displayName }}</div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
@@ -39,23 +39,38 @@ export default {
       if (!isUndefined(this.type)) {
         classes.push(`keycode-${this.type}`);
       }
-      return classes;
+      if (this.dragging) {
+        classes.push('dragging');
+      }
+      return classes.join(' ');
     },
     displayName() {
       return this.name.length === 1 ? this.name.toUpperCase() : this.name;
     }
   },
   data() {
-    return {};
+    return {
+      dragging: false,
+      crt: undefined,
+      hidden: undefined
+    };
   },
   methods: {
     dragend() {
-      this.$el.style.opacity = '1';
+      console.log('finished dragging');
+      this.dragging = false;
+      this.hidden.removeChild(this.crt);
     },
     drag() {},
     dragstart(ev) {
       console.log('dragstarted on ', this.name);
-      this.$el.style.opacity = '0.4';
+
+      this.crt = this.$el.cloneNode(true);
+      this.crt.style.opacity = '0.4';
+      this.hidden.appendChild(this.crt);
+      ev.dataTransfer.setDragImage(this.crt, 0, 0);
+
+      this.dragging = true;
       let { name, code, type } = this;
       ev.dropEffect = 'copy';
       ev.dataTransfer.dropEffect = 'move';
@@ -67,6 +82,14 @@ export default {
     clicked() {
       this.$store.commit('keymap/setKeycode', this.code);
     }
+  },
+  mounted() {
+    this.hidden = document.getElementsByClassName('hidden')[0];
   }
 };
 </script>
+<style>
+.dragging {
+  opacity: 0.33;
+}
+</style>
