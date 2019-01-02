@@ -13,14 +13,14 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    >{{ displayName }}<br /><input
+    >{{ displayName }}<div><input
       class="key-layer-input"
       type="number"
       :value="value"
       @focus="focus"
       @blur="blur"
       @input="input"
-    /></div>
+      /></div></div>
 </template>
 <script>
 import isNumber from 'lodash/isNumber';

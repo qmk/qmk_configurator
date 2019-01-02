@@ -1,7 +1,13 @@
 <template>
   <div id="visual-keymap" :style="styles">
     <template v-for="meta in currentLayer">
-      <component v-bind:is="getComponent(meta)" v-bind="meta" :key="meta.id" />
+      <transition name="fade" appear :key="meta.id">
+        <component
+          v-bind:is="getComponent(meta)"
+          v-bind="meta"
+          :key="meta.id"
+        />
+      </transition>
     </template>
   </div>
 </template>
@@ -148,6 +154,14 @@ export default {
 };
 </script>
 <style>
-#visual-keymap2 {
+.fade-enter-active {
+  transition: all 0.5s ease;
+}
+.fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

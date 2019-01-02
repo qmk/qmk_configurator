@@ -905,7 +905,7 @@ button {
   width: 24px;
   height: 24px;
   border-radius: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid #22ffd8;
   margin: 0px auto;
   display: flex;
   align-items: center;
@@ -931,10 +931,10 @@ button {
 }
 
 .key-layer-input {
-  width: 22px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   border-radius: 2px;
-  border: 1px solid #ccc;
+  border: 1px solid purple;
   background: #eee;
   margin: 0px auto;
   box-sizing: border-box;
