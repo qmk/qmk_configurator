@@ -37,9 +37,7 @@ export default {
       if (this.meta === undefined) {
         return;
       }
-      return this.meta.name.length === 1
-        ? this.meta.name.toUpperCase()
-        : this.meta.name;
+      return this.formatName(this.meta.name);
     },
     myclasses() {
       let classes = [];
@@ -126,6 +124,9 @@ export default {
         'application/json',
         JSON.stringify({ action: 'swap', id })
       );
+    },
+    formatName(name) {
+      return name.length === 1 ? name.toUpperCase() : name;
     }
   },
   data() {
