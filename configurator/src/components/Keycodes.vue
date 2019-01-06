@@ -3,10 +3,30 @@
   @see https://css-tricks.com/fighting-the-space-between-inline-block-elements/
 -->
 <template>
-  <div id="keycodes">
-    <template v-for="(key, index) in keycodes">
-      <component v-bind:is="getComponent(key.code)" v-bind="key" :key="index" />
-    </template>
+  <div id="keycodes-section">
+    <div style="text-align: left; margin-left: 10px;">
+      <p>
+        <label>Keycodes:</label>
+        <span class="hint-right hint">
+          <a
+            href="https://docs.qmk.fm/#/keycodes"
+            title="Keycodes reference"
+            target="_blank"
+          >
+            Keycodes reference
+          </a>
+        </span>
+      </p>
+    </div>
+    <div id="keycodes">
+      <template v-for="(key, index) in keycodes">
+        <component
+          v-bind:is="getComponent(key.code)"
+          v-bind="key"
+          :key="index"
+        />
+      </template>
+    </div>
   </div>
 </template>
 <script>

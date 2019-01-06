@@ -34,10 +34,10 @@ let height;
 let compile_status = undefined;
 
 function init() {
-  offsetTop = $('.split-content').offset().top;
-  height = $('.split-content').height();
+  //offsetTop = $('.split-content').offset().top + 10;
+  //height = $('.split-content').height();
 
-  $(document).on('scroll', scrollHandler);
+  //$(document).on('scroll', scrollHandler);
 
   keypressListener = new keypress.Listener();
   keypressListener.register_many(
