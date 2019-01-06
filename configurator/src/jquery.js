@@ -1,10 +1,9 @@
-/*import $ from 'jquery';
+import $ from 'jquery';
+/*
 import 'jquery-ui-bundle';
 */
 import store from './store';
 import escape from 'lodash/escape';
-import isNumber from 'lodash/isNumber';
-import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';
 import includes from 'lodash/includes';
 import first from 'lodash/first';
@@ -13,33 +12,11 @@ import * as keypress from 'keypress.js';
 
 import { backend_compile_url } from './store/modules/constants';
 
-const defaults = {
-  MAX_X: 775,
-  KEY_WIDTH: 40,
-  KEY_HEIGHT: 40,
-  SWAP_KEY_WIDTH: 30,
-  SWAP_KEY_HEIGHT: 30,
-  KEY_X_SPACING: 45,
-  KEY_Y_SPACING: 45,
-  SCALE: 1
-};
-
-let config = {};
-
-let $visualKeymap;
 //let $keycodes;
 let keypressListener;
-let ignoreKeypressListener;
-let offsetTop;
-let height;
 let compile_status = undefined;
 
 function init() {
-  //offsetTop = $('.split-content').offset().top + 10;
-  //height = $('.split-content').height();
-
-  //$(document).on('scroll', scrollHandler);
-
   keypressListener = new keypress.Listener();
   keypressListener.register_many(
     generateKeypressCombos(store.getters['keycodes/keycodes'])
@@ -51,21 +28,6 @@ function init() {
   });
 
   store.commit('app/setKeypressListener', () => keypressListener);
-  ignoreKeypressListener = partial(rawIgnoreKeypressListener, keypressListener);
-}
-
-function rawIgnoreKeypressListener(listener, $element) {
-  $element.focus(() => listener.stop_listening()).blur(() => listener.listen());
-}
-
-function scrollHandler() {
-  if (offsetTop < $(document).scrollTop()) {
-    $('.split-content').addClass('fixed');
-    $('#keycodes-section').css('margin-top', height + 'px');
-  } else {
-    $('#keycodes-section').css('margin-top', '0px');
-    $('.split-content').removeClass('fixed');
-  }
 }
 
 // generate keypress combo list from the keycodes list
@@ -94,47 +56,7 @@ function generateKeypressHandler(keycode) {
   };
 }
 
-/*
-function assignKeycodeToSelectedKey(evt) {
-  let _keycode = $(evt.target).data('code');
-  if (_keycode === undefined) {
-    return;
-  }
-
-  let meta = store.getters['keycodes/lookupKeycode'](_keycode);
-  if (meta === undefined) {
-    return;
-  }
-
-  let $key = getSelectedKey();
-  let _index = $key.data('index');
-  if ($key === undefined || _index === undefined || !isNumber(_index)) {
-    return; // not a key
-  }
-  if ($key.hasClass('key-contents')) {
-    store.commit('keymap/setContents', {
-      _index,
-      key: newKey(meta, _keycode.data('code'))
-    });
-  } else {
-    store.commit('keymap/assignKey', {
-      _layer: store.getters['keymap/layer'],
-      index: _index,
-      name: meta.name,
-      code: meta.code,
-      type: meta.type
-    });
-  }
-  $key.removeClass('keycode-select'); // clear selection once assigned
-  render_key(store.getters['keymap/layer'], _index);
-  store.commit('keymap/setDirty');
-}
-*/
-
-function reset_keymap() {
-  //$('.layer').removeClass('non-empty active');
-  //$('.layer.0').addClass('active non-empty');
-}
+function reset_keymap() {}
 
 //Function that takes in a keymap loops over it and fills populates the keymap variable
 function load_converted_keymap(converted_keymap) {
@@ -261,350 +183,6 @@ function parseKeycode(keycode, stats) {
     return newAnyKey(keycode);
   }
   return newKey(metadata, keycode);
-}
-
-function calcKeyKeymapDims(w, h) {
-  return {
-    w: w * config.KEY_X_SPACING - (config.KEY_X_SPACING - config.KEY_WIDTH),
-    h: h * config.KEY_Y_SPACING - (config.KEY_Y_SPACING - config.KEY_HEIGHT)
-  };
-}
-
-function calcKeyKeymapPos(x, y) {
-  return {
-    x: x * config.KEY_X_SPACING,
-    y: y * config.KEY_Y_SPACING
-  };
-}
-
-function render_layout(_layout) {
-  $visualKeymap.find('*').remove();
-
-  var max = { x: 0, y: 0 };
-
-  $.each(_layout, function(k, d) {
-    // pre-calc size
-    if (!d.w) {
-      d.w = 1;
-    }
-    if (!d.h) {
-      d.h = 1;
-    }
-    var pos = calcKeyKeymapPos(d.x, d.y);
-    var dims = calcKeyKeymapDims(d.w, d.h);
-    max.x = Math.max(max.x, pos.x + dims.w);
-    max.y = Math.max(max.y, pos.y + dims.h);
-  });
-
-  if (max.x > defaults.MAX_X) {
-    config.SCALE = defaults.MAX_X / max.x;
-    config.KEY_WIDTH *= config.SCALE;
-    config.KEY_HEIGHT *= config.SCALE;
-    config.SWAP_KEY_HEIGHT *= config.SCALE;
-    config.SWAP_KEY_WIDTH *= config.SCALE;
-    config.KEY_X_SPACING *= config.SCALE;
-    config.KEY_Y_SPACING *= config.SCALE;
-    max.x *= config.SCALE;
-    max.y *= config.SCALE;
-  }
-
-  $.each(_layout, function(k, d) {
-    if (!d.w) {
-      d.w = 1;
-    }
-    if (!d.h) {
-      d.h = 1;
-    }
-    var pos = calcKeyKeymapPos(d.x, d.y);
-    var dims = calcKeyKeymapDims(d.w, d.h);
-    var key = $('<div>', {
-      class: 'key disabled',
-      style: [
-        'left: ',
-        pos.x,
-        'px; top: ',
-        pos.y,
-        'px; width: ',
-        dims.w,
-        'px; height: ',
-        dims.h,
-        'px'
-      ].join(''),
-      id: 'key-' + k,
-      'data-index': k,
-      'data-type': 'key',
-      'data-w': d.w,
-      'data-h': d.h
-    });
-    $(key).droppable(droppable_config(key, k));
-    $visualKeymap.append(key);
-    render_key(store.getters['keymap/layer'], k);
-  });
-  $visualKeymap.css({
-    width: max.x + 'px',
-    height: max.y + 'px'
-  });
-
-  $('.key').each(makeDraggable);
-}
-
-function makeDraggable(k, d) {
-  $(d).draggable({
-    zIndex: 100,
-    revert: true,
-    revertDuration: 100,
-    distance: 5,
-    drag: function() {
-      var $d = $(d);
-      if ($d.hasClass('key')) {
-        // reduce size of dragged key to indicate src
-        var w = $d.data('w');
-        var h = $d.data('h');
-        $d.css({
-          width: `${config.SWAP_KEY_WIDTH * w}px`,
-          height: `${config.SWAP_KEY_HEIGHT * h}px`
-        });
-      }
-      $d.draggable('option', 'revertDuration', 100);
-    },
-    start: function(event, ui) {
-      // center the key under the cursor - stackoverflow
-      $(this).draggable('instance').offset.click = {
-        left: Math.floor(ui.helper.width() / 2),
-        top: Math.floor(ui.helper.height() / 2)
-      };
-    },
-    stop: function() {
-      var $d = $(d);
-      $d.css({
-        'z-index': ''
-      });
-      if ($d.hasClass('key')) {
-        var w = $d.data('w');
-        var h = $d.data('h');
-        var dims = calcKeyKeymapDims(w, h);
-        $d.css({
-          width: `${dims.w}px`,
-          height: `${dims.h}px`
-        });
-      }
-    }
-  });
-}
-
-function droppable_config(t, key) {
-  return {
-    over: function(/* event, ui*/) {
-      $(t).addClass('active-key');
-      if ($(t).hasClass('key-contents')) {
-        $(t)
-          .parent()
-          .removeClass('active-key');
-      }
-    },
-    out: function(/* event, ui */) {
-      $(t).removeClass('active-key');
-      if ($(t).hasClass('key-contents')) {
-        $(t)
-          .parent()
-          .addClass('active-key');
-      }
-    },
-    drop: function(event, ui) {
-      var $target;
-      if ($(t).hasClass('active-key')) {
-        $target = $(t);
-      } else {
-        // this is probably a container
-        $target = $(t).find('.active-key');
-        if ($target.length === 0) {
-          // if we can't find a container
-          return;
-        }
-        $target = $($target[0]);
-      }
-      var srcKeycode = ui.helper[0];
-      $(srcKeycode).draggable('option', 'revertDuration', 0);
-      $target.removeClass('active-key');
-      setLayerToNonEmpty('active');
-      if ($(srcKeycode).hasClass('keycode')) {
-        $(t).attr('data-code', srcKeycode.dataset.code);
-        // $(t).draggable({revert: true, revertDuration: 100});
-        if ($target.hasClass('key-contents')) {
-          if (srcKeycode.dataset.type !== 'container') {
-            // we currently don't support nested containers
-            store.commit('keymap/setContents', {
-              index: key,
-              key: {
-                name: srcKeycode.innerHTML,
-                code: srcKeycode.dataset.code,
-                type: srcKeycode.dataset.type
-              }
-            });
-          }
-        } else {
-          store.commit('keymap/assignKey', {
-            _layer: store.getters['keymap/layer'],
-            index: key,
-            name: srcKeycode.innerHTML,
-            code: srcKeycode.dataset.code,
-            type: srcKeycode.dataset.type
-          });
-        }
-      } else {
-        // handle swapping keys in keymap
-        var $src = $(srcKeycode);
-        var $dst = $(t);
-        var srcIndex = $src.data('index');
-        var dstIndex = $dst.data('index');
-
-        // get src and dest positions for animation
-        var srcPrevPos = ui.draggable.data().uiDraggable.originalPosition;
-        var srcPos = {
-          left: `${srcPrevPos.left}px`,
-          top: `${srcPrevPos.top}px`
-        };
-        var dstPos = $dst.css(['left', 'top']);
-
-        // use promises to wait until animation finished
-        var deferSrc = $.Deferred();
-        var deferDst = $.Deferred();
-
-        // animate swapping
-        $src.animate(
-          { left: dstPos.left, top: dstPos.top },
-          150,
-          'linear',
-          () => {
-            deferSrc.resolve();
-          }
-        );
-        $dst.animate(
-          { left: srcPos.left, top: srcPos.top },
-          150,
-          'linear',
-          () => {
-            deferDst.resolve();
-          }
-        );
-
-        let animationsFinished = () => {
-          // restore original element positions just swap their data
-          $src.css({ left: srcPos.left, top: srcPos.top });
-          $dst.css({ left: dstPos.left, top: dstPos.top });
-
-          let layer = store.getters['keymap/layer'];
-          store.commit('keymap/swapKeys', {
-            _layer: layer,
-            srcIndex,
-            dstIndex
-          });
-
-          render_key(layer, srcIndex);
-          render_key(layer, key);
-        };
-
-        // wait until both animations are complete
-        $.when(deferSrc, deferDst).done(animationsFinished);
-        return;
-      }
-      store.commit('keymap/setDirty');
-      render_key(store.getters['keymap/layer'], key);
-    }
-  };
-}
-
-function render_key(_layer, k) {
-  var $key = $('#key-' + k);
-  var promise = store.dispatch('keymap/initKey', { _layer, index: k });
-  promise.then(keycode => {
-    if (!keycode) {
-      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_NO');
-      store.commit('keymap/assignKey', {
-        _layer,
-        index: k,
-        name,
-        code,
-        type: ''
-      });
-      keycode = store.getters['keymap/getKey']({ _layer, index: k });
-    }
-    const legend =
-      keycode.name.length === 1 ? keycode.name.toUpperCase() : keycode.name;
-    $key.html(legend);
-    if (keycode.type === 'container') {
-      $key.addClass('key-container');
-      var $container = $('<div>', {
-        class: 'key-contents'
-      });
-      if (keycode.contents) {
-        $container.html(keycode.contents.name);
-      }
-      $container.droppable(droppable_config($container, k));
-      $key.append($container);
-    } else if (keycode.type === 'layer') {
-      $key.addClass('key-layer');
-      $key.append($('<br/>'));
-      var layer_input1 = $('<input>', {
-        class: 'key-layer-input',
-        type: 'number',
-        val: keycode.layer
-      }).on('input', function() {
-        var val = $(this).val();
-        var toLayer = parseInt(val, 10);
-        if (isNumber(toLayer)) {
-          store
-            .dispatch('keymap/setKeycodeLayer', {
-              _layer,
-              index: k,
-              toLayer
-            })
-            .then(() => {
-              setLayerToNonEmpty(toLayer);
-            });
-        }
-      });
-      ignoreKeypressListener(layer_input1);
-      $key.append(layer_input1);
-    } else if (keycode.type === 'text') {
-      $key.addClass('key-layer');
-      var layer_input = $('<input>', {
-        class: 'key-layer-input',
-        val: keycode.text
-      }).on('input', function(/*e*/) {
-        store.commit('keymap/setText', {
-          _layer: store.getters['keymap/layer'],
-          index: k,
-          text: $(this).val()
-        });
-      });
-      ignoreKeypressListener(layer_input);
-      $key.append(layer_input);
-    } else {
-      $key.removeClass('key-container');
-      $key.removeClass('key-layer');
-    }
-    if (keycode.code !== 'KC_NO') {
-      var remove_keycode = $('<div>', {
-        class: 'remove',
-        html: '&#739;',
-        click: function(evt) {
-          let layer = store.getters['keymap/layer'];
-          evt.preventDefault();
-          evt.stopPropagation();
-          store.commit('keymap/assignKey', {
-            _layer: layer,
-            index: k,
-            name: '',
-            code: 'KC_NO',
-            type: ''
-          });
-          render_key(layer, k);
-        }
-      });
-      $key.append(remove_keycode);
-    }
-  });
 }
 
 function statusError(message) {
@@ -796,8 +374,6 @@ export {
   reset_keymap,
   load_converted_keymap,
   statusError,
-  render_key,
-  render_layout,
   getExclusionList,
   compileLayout,
   enableCompileButton,

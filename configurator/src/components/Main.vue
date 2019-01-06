@@ -8,7 +8,7 @@
     >
       Download QMK Toolbox
     </a>
-    <div class="split-content" :class="classes">
+    <div ref="splitcontent" class="split-content" :class="classes">
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p><label>Keymap:</label></p>
@@ -40,7 +40,8 @@ export default {
   },
   mounted() {
     jquery.init();
-    this.setVisualKeymapOffsetTop(this.$el.offsetTop);
+    const offsetTop = this.$refs.splitcontent.offsetTop;
+    this.setVisualKeymapOffsetTop(offsetTop);
     window.addEventListener('scroll', this.scrollHandler, { passive: true });
   },
   computed: {
