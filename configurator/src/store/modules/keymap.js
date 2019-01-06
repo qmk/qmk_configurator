@@ -19,10 +19,14 @@ const state = {
   dirty: false,
   selectedIndex: undefined,
   defaults,
-  config: Object.assign({}, defaults)
+  config: Object.assign({}, defaults),
+  visualKeymapOffsetTop: Number.MAX_SAFE_INTEGER,
+  visualKeymapFixed: false
 };
 
 const getters = {
+  vkOffsetTop: state => state.visualKeymapOffsetTop,
+  visualKeymapFixed: state => state.visualKeymapFixed,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
@@ -222,6 +226,12 @@ const mutations = {
       // TODO probably need to do something differently here
       Vue.set(state.keymap, layer, {});
     }
+  },
+  setVisualKeymapFixed: (state, nextState) => {
+    state.visualKeymapFixed = nextState;
+  },
+  setVisualKeymapOffsetTop: (state, offsetTop) => {
+    state.visualKeymapOffsetTop = offsetTop;
   }
 };
 
