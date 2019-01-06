@@ -1,5 +1,6 @@
-import $ from 'jquery';
+/*import $ from 'jquery';
 import 'jquery-ui-bundle';
+*/
 import store from './store';
 import escape from 'lodash/escape';
 import isNumber from 'lodash/isNumber';
