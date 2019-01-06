@@ -116,7 +116,6 @@ export default {
     dragstart(ev) {
       // move elements
       this.inSwap = true;
-      this.$el.style.opacity = '0.4';
       let { id } = this;
       ev.dropEffect = 'move';
       ev.dataTransfer.dropEffect = 'move';

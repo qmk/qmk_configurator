@@ -66,7 +66,6 @@ export default {
       console.log('dragstarted on ', this.name);
 
       this.crt = this.$el.cloneNode(true);
-      this.crt.style.opacity = '0.4';
       this.hidden.appendChild(this.crt);
       ev.dataTransfer.setDragImage(this.crt, 0, 0);
 
@@ -90,6 +89,5 @@ export default {
 </script>
 <style>
 .dragging {
-  opacity: 0.33;
 }
 </style>

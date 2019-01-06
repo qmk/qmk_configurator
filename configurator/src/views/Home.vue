@@ -1,20 +1,7 @@
 <template>
   <div>
     <div class="main"><Main /></div>
-
-    <div class="keycodes-section">
-      <label>Keycodes:</label>
-      <span class="hint-right hint">
-        <a
-          href="https://docs.qmk.fm/#/keycodes"
-          title="Keycodes reference"
-          target="_blank"
-        >
-          Keycodes reference
-        </a>
-      </span>
-      <keycodes />
-    </div>
+    <div><keycodes /></div>
   </div>
 </template>
 
