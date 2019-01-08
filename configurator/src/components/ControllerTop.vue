@@ -113,8 +113,9 @@ export default {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
             var old = this.$store.getters['app/layout'];
-            this.$store.commit('app/setLayout', ''); // force a refresh
-            Vue.nextTick(this.$store.commit('app/setLayout', old));
+            const setLayout = this.setLayout;
+            setLayout(''); // force a refresh
+            Vue.nextTick(() => setLayout(old));
             return false;
           }
         }
@@ -149,12 +150,19 @@ export default {
         if (!isUndefined(filter)) {
           this.updateFilter(filter);
           this.updateKeyboard(first(this.keyboards));
+          return;
+        }
+        if (to.params) {
+          this.setLayout(to.params.layoutP);
+          this.updateKeyboard(to.params.keyboardP);
+          return;
         }
       }
     }
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
+    ...mapMutations('app', ['setLayout']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -217,7 +225,7 @@ export default {
           }
         }
         _keyboard = first(this.keyboards);
-        let { keyboardP } = this.$route.params;
+        let { keyboardP, layoutP } = this.$route.params;
         if (
           isString(keyboardP) &&
           keyboardP !== '' &&
@@ -225,6 +233,7 @@ export default {
         ) {
           _keyboard = keyboardP;
         }
+        this.setLayout(layoutP);
         this.updateKeyboard(_keyboard);
       }
     },
@@ -256,7 +265,7 @@ export default {
      */
     updateLayout(e) {
       let newLayout = e.target ? e.target.value : e;
-      this.$store.commit('app/setLayout', newLayout);
+      this.setLayout(newLayout);
       reset_keymap();
       this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
       // let render = e.target;
