@@ -1,5 +1,6 @@
 const state = {
   keycodes: [
+    { label: 'Standard', width: 'label', group: true },
     { name: 'Esc', code: 'KC_ESC', keys: 'esc' },
     { width: 1000 },
     { name: 'F1', code: 'KC_F1' },

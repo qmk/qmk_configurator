@@ -1,6 +1,8 @@
 <template>
   <div>
-    <controllerTop /><statusPanel /><controllerBottom />
+    <div ref="console">
+      <controllerTop /><statusPanel /><controllerBottom />
+    </div>
     <a
       class="hint"
       target="_blank"
@@ -8,7 +10,7 @@
     >
       Download QMK Toolbox
     </a>
-    <div ref="splitcontent" class="split-content" :class="classes">
+    <div class="split-content" :class="classes">
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p><label>Keymap:</label></p>
@@ -38,11 +40,15 @@ export default {
     VisualKeymap,
     LayerControl
   },
+  data() {
+    return {
+      boundingRect: undefined
+    };
+  },
   mounted() {
     jquery.init();
-    const offsetTop = this.$refs.splitcontent.offsetTop;
-    this.setVisualKeymapOffsetTop(offsetTop);
-    window.addEventListener('scroll', this.scrollHandler, { passive: true });
+    this.boundingRect = this.$refs.console.getBoundingClientRect();
+    //  window.addEventListener('scroll', this.scrollHandler, { passive: true });
   },
   computed: {
     ...mapGetters('keymap', ['vkOffsetTop', 'visualKeymapFixed']),
@@ -59,17 +65,22 @@ export default {
       'setVisualKeymapFixed',
       'setVisualKeymapOffsetTop'
     ]),
+    isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      console.log(rect);
+      return rect.bottom >= 0;
+    },
     scrollHandler() {
       if (
         this.visualKeymapFixed === false &&
-        window.scrollY > this.vkOffsetTop
+        !this.isElementInViewport(this.$refs.console)
       ) {
         this.setVisualKeymapFixed(true);
       }
 
       if (
         this.visualKeymapFixed === true &&
-        window.scrollY < this.vkOffsetTop
+        this.isElementInViewport(this.$refs.console)
       ) {
         this.setVisualKeymapFixed(false);
       }

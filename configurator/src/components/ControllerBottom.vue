@@ -74,7 +74,6 @@ import { PREVIEW_LABEL } from '@/store/modules/constants';
 import {
   reset_keymap,
   load_converted_keymap,
-  render_layout,
   disableCompileButton,
   disableOtherButtons,
   getPreferredLayout
@@ -214,8 +213,6 @@ export default {
           this.$store.commit('status/clear');
           load_converted_keymap(data.layers);
 
-          let _layouts = this.$store.getters['app/layouts'];
-          render_layout(_layouts[data.layout].map(v => Object.assign({}, v)));
           this.$store.commit('keymap/setDirty');
           disableOtherButtons();
           this.$store.dispatch('status/viewReadme', data.keyboard);
@@ -251,9 +248,6 @@ export default {
         const layout = getPreferredLayout(this.$store.getters['app/layouts']);
         this.$store.commit('app/setLayout', layout);
         this.$store.commit('app/setKeymapName', 'info.json preview');
-
-        let _layouts = this.$store.getters['app/layouts'];
-        render_layout(_layouts[layout].map(v => Object.assign({}, v)));
       });
     }
   },
