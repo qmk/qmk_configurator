@@ -65,10 +65,15 @@ const actions = {
       commit('disablePreview');
       commit('enableCompile');
       commit('setKeyboard', keyboard);
+      const oldLayout = state.layout || '';
       commit('setLayout', undefined);
       dispatch('loadLayouts').then(() => {
+        let nextLayout = getPreferredLayout(state.layouts);
         console.log(getPreferredLayout(state.layouts));
-        commit('setLayout', getPreferredLayout(state.layouts));
+        if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
+          nextLayout = oldLayout;
+        }
+        commit('setLayout', nextLayout);
         resolve();
       });
     });
