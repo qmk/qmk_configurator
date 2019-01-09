@@ -24,7 +24,7 @@
         <span
           class="tab"
           :class="classes(index)"
-          v-for="(key, index) in keycodesByLabel"
+          v-for="(key, index) in keycodesByGroup"
           :key="index"
           @click="changeActive(index)"
         >
@@ -55,17 +55,17 @@ export default {
   props: {},
   data() {
     return {
-      active: 'Standard'
+      active: 'ANSI'
     };
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
     activeTab() {
-      return this.keycodesByLabel[this.active];
+      return this.keycodesByGroup[this.active];
     },
-    keycodesByLabel() {
+    keycodesByGroup() {
       let section = this.keycodes.reduce((acc, value) => {
-        if (value.label) {
+        if (value.group) {
           acc[value.label] = [];
           acc.current = value.label;
         } else {
@@ -122,8 +122,8 @@ export default {
   cursor: pointer;
 }
 .tab-area {
-  height: 300px;
-  padding: 5px;
+  height: 400px;
+  padding: 10px 5px;
   border: 1px solid #ccc;
   border-top: 0;
   background: #eee;
@@ -131,5 +131,11 @@ export default {
 .tab.active {
   opacity: 1;
   background: #eee;
+}
+.keycode.isoenter {
+  position: absolute;
+  left: 520px;
+  top: 115px;
+  height: 68px;
 }
 </style>

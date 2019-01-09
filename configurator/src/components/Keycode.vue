@@ -28,7 +28,8 @@ export default {
     code: String,
     title: String,
     width: null,
-    name: String
+    name: String,
+    classes: String
   },
   computed: {
     computedClass() {
@@ -41,6 +42,9 @@ export default {
       }
       if (this.dragging) {
         classes.push('dragging');
+      }
+      if (this.classes) {
+        classes.push(this.classes);
       }
       return classes.join(' ');
     },
