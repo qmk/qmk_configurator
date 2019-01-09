@@ -20,7 +20,12 @@
       @focus="focus"
       @blur="blur"
       @input="input"
-      /></div></div>
+      /></div><div
+        v-if="visible"
+        class="remove"
+        @click.stop="remove"
+      >x</div>
+  </div>
 </template>
 <script>
 import isNumber from 'lodash/isNumber';

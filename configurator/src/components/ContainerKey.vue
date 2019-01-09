@@ -18,8 +18,11 @@
       :class="contentClasses"
       @dragenter.prevent="dragenterContents"
       @dragleave.prevent="dragleaveContents"
-      >{{ contents }}</div>
-  </div>
+      >{{ contents }}</div><div
+        v-if="visible"
+        class="remove"
+        @click.stop="remove"
+      >x</div></div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';

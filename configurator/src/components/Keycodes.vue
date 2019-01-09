@@ -103,7 +103,7 @@ export default {
 .tabs {
   display: grid;
   background: #fff;
-  grid-template: auto / repeat(5, minmax(100px, 200px));
+  grid-template: auto / repeat(7, minmax(120px, 200px));
 }
 .tab {
   text-overflow: ellipsis;

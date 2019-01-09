@@ -1,6 +1,6 @@
 const state = {
   keycodes: [
-    { label: 'Standard', width: 'label', group: true },
+    { label: 'ANSI', width: 'label', group: true },
     { name: 'Esc', code: 'KC_ESC', keys: 'esc' },
     { width: 1000 },
     { name: 'F1', code: 'KC_F1' },
@@ -131,7 +131,7 @@ const state = {
     { name: '.', code: 'KC_PDOT', keys: 'num_decimal' },
     { name: 'Enter', code: 'KC_PENT', keys: 'num_enter' },
 
-    { label: 'International', width: 'label' },
+    { label: 'ISO', width: 'label' },
 
     { name: 'NUHS', code: 'KC_NUHS', title: 'Non-US # and ~' },
     { name: 'NUBS', code: 'KC_NUBS', title: 'Non-US \\ and |' },
