@@ -46,7 +46,7 @@ export default {
     ...mapMutations('keymap', ['setText']),
     ...mapActions('keymap', ['setKeycodeLayer']),
     input(e) {
-      const toLayer = parseInt(e.data, 10);
+      const toLayer = parseInt(e.target.value, 10);
       if (isNumber(toLayer)) {
         this.setKeycodeLayer({
           layer: this.curLayer,
