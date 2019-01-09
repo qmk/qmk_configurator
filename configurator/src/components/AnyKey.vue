@@ -17,7 +17,11 @@
     class="key-layer-input"
     @focus="focus"
     @blur="blur"
-    v-model="value" /></div>
+    v-model="value" /><div
+        v-if="visible"
+        class="remove"
+        @click.stop="remove"
+      >x</div></div>
 </template>
 <script>
 import { mapMutations } from 'vuex';
