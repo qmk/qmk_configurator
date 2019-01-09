@@ -13,9 +13,17 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    >{{ displayName }}</div>
+    >{{ displayName }}<template
+      v-if="visible">
+        <div
+          v-if="visible"
+          class="remove"
+          @click.stop="remove"
+        >x</div>
+    </template></div>
 </template>
 <script>
+import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'base-key',
@@ -33,8 +41,11 @@ export default {
     myid() {
       return `key-${this.id}`;
     },
+    visible() {
+      return this.meta.code !== 'KC_NO';
+    },
     displayName() {
-      if (this.meta === undefined) {
+      if (isUndefined(this.meta)) {
         return;
       }
       return this.formatName(this.meta.name);
@@ -126,6 +137,10 @@ export default {
     },
     formatName(name) {
       return name.length === 1 ? name.toUpperCase() : name;
+    },
+    remove() {
+      this.setSelected(this.id);
+      this.setKeycode('KC_NO');
     }
   },
   data() {
