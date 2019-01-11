@@ -2221,12 +2221,6 @@ $(document).ready(() => {
         title: 'LCTL + LALT + LGUI'
       },
       {
-        name: 'ALTG',
-        code: 'ALTG(kc)',
-        type: 'container',
-        title: 'RCTL + RALT'
-      },
-      {
         name: 'SGUI',
         code: 'SCMD(kc)',
         type: 'container',
