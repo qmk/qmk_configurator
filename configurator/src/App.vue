@@ -20,6 +20,7 @@
       <p class="random-potato">{{ potatoFact }}</p>
     </header>
     <router-view />
+    <spinner :isVisible="showSpinner" :status="spinnerMsg" />
   </div>
 </template>
 <script>
@@ -47,8 +48,13 @@ const potatoFacts = [
   'Potatoes are available year-round as they are harvested somewhere every month of the year.',
   'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.'
 ];
+import Spinner from '@/components/spinner';
+import { mapGetters } from 'vuex';
 export default {
   name: 'app',
+  components: {
+    Spinner
+  },
   data() {
     return {
       potatoFact: 'QMK for potatoes',
@@ -63,6 +69,9 @@ export default {
   },
   beforeDestroy() {
     clearInterval(this.interval);
+  },
+  computed: {
+    ...mapGetters('app', ['showSpinner', 'spinnerMsg'])
   },
   methods: {
     randomPotatoFact() {
