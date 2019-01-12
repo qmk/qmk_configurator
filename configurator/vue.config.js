@@ -1,3 +1,3 @@
 module.exports = {
-  baseUrl: process.env.NODE_ENV === 'production' ? './qmk_configurator' : '/'
+  baseUrl: process.env.NODE_ENV === 'production' ? '/qmk_configurator' : '/'
 };
