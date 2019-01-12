@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import axios from 'axios';
 /*
 import 'jquery-ui-bundle';
 */
@@ -106,7 +107,7 @@ function setLayerToNonEmpty(_layer) {
 function newAnyKey(keycode) {
   var anyKey = this.getters['keycodes/lookupKeycode']('text');
   // make a copy otherwise it uses a reference
-  return $.extend({}, anyKey, { text: keycode });
+  return Object.assign({}, anyKey, { text: keycode });
 }
 
 function newKey(metadata, keycode, obj) {
@@ -260,22 +261,26 @@ function compileLayout(_keyboard, _keymapName, _layout) {
   }
   store.commit(
     'status/append',
-    '* Sending ' + _keyboard + ':' + _keymapName + ' with ' + _layout
+    `* Sending ${_keyboard}:${_keymapName} with ${_layout}`
   );
-  $.ajax({
-    type: 'POST',
-    url: backend_compile_url,
-    contentType: 'application/json',
-    data: JSON.stringify(data),
-    dataType: 'json',
-    success: function(d) {
-      if (d.enqueued) {
-        store.commit('status/append', '\n* Received job_id: ' + d.job_id);
-        store.commit('app/setJobID', d.job_id);
-        check_status();
+  axios
+    .post(backend_compile_url, JSON.stringify(data))
+    .then(resp => {
+      const { status, data } = resp;
+      if (status === 200) {
+        if (data.enqueued) {
+          store.commit('status/append', `\n* Received job_id: ${data.job_id}`);
+          store.dispatch('status/scrollToEnd');
+          store.commit('app/setJobID', data.job_id);
+          check_status();
+        }
+      } else {
+        throw resp;
       }
-    }
-  });
+    })
+    .catch(err => {
+      window.alert('Unexpected error ', console.log(err));
+    });
 }
 
 function enableCompileButton() {
@@ -294,55 +299,73 @@ function disableOtherButtons() {
   store.commit('app/setDisableDownloads');
 }
 
+/**
+ * check_status waits for a compilation to happen and reports progress
+ *
+ * It interacts with the app store to update the application.
+ *
+ */
 function check_status() {
-  $.get(backend_compile_url + '/' + store.getters['app/jobID'], function(data) {
-    console.log(data);
-    let msg;
-    switch (data.status) {
-      case 'finished':
-        store.commit(
-          'status/append',
-          '\n* Finished:\n' + data.result.output.replace(/\[.*m/gi, '')
-        );
-        store.commit(
-          'app/setFirmwareBinaryURL',
-          data.result.firmware_binary_url
-        );
-        store.commit(
-          'app/setFirmwareSourceURL',
-          data.result.firmware_source_url
-        );
-        store.commit('app/setFirmwareFile', data.result.firmware_filename);
-        enableCompileButton();
-        enableOtherButtons();
-        break;
-      case 'queued':
-        msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
-        store.commit('status/append', msg);
-        setTimeout(check_status, 500);
-        break;
-      case 'running':
-        msg = compile_status === 'running' ? ' .' : '\n* Running';
-        store.commit('status/append', msg);
-        setTimeout(check_status, 500);
-        break;
-      case 'unknown':
-        enableCompileButton();
-        break;
-      case 'failed':
-        statusError('\n* Failed');
-        if (data.result) {
-          statusError('\n* Error:\n' + data.result.output);
-        }
-        enableCompileButton();
-        break;
-      default:
+  const url = `${backend_compile_url}/${store.getters['app/jobID']}`;
+  axios
+    .get(url)
+    .then(resp => {
+      console.log(resp);
+      let msg;
+      let { status, data } = resp;
+      if (status !== 200) {
         console.log('Unexpected status', data.status);
         enableCompileButton();
-    }
-    store.dispatch('status/scrollToEnd');
-    compile_status = data.status;
-  });
+      } else {
+        switch (data.status) {
+          case 'finished':
+            store.commit(
+              'status/append',
+              `\n* Finished:\n${data.result.output.replace(/\[.*m/gi, '')}`
+            );
+            store.commit(
+              'app/setFirmwareBinaryURL',
+              data.result.firmware_binary_url
+            );
+            store.commit(
+              'app/setFirmwareSourceURL',
+              data.result.firmware_source_url
+            );
+            store.commit('app/setFirmwareFile', data.result.firmware_filename);
+            enableCompileButton();
+            enableOtherButtons();
+            break;
+          case 'queued':
+            msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
+            store.commit('status/append', msg);
+            setTimeout(check_status, 500);
+            break;
+          case 'running':
+            msg = compile_status === 'running' ? ' .' : '\n* Running';
+            store.commit('status/append', msg);
+            setTimeout(check_status, 500);
+            break;
+          case 'unknown':
+            enableCompileButton();
+            break;
+          case 'failed':
+            statusError('\n* Failed\n');
+            if (data.result) {
+              statusError(`* Error:\n${data.result.output}`);
+            }
+            enableCompileButton();
+            break;
+          default:
+            console.log('Unexpected status', data.status);
+            enableCompileButton();
+        }
+      }
+      store.dispatch('status/scrollToEnd');
+      compile_status = data.status;
+    })
+    .catch(err => {
+      window.alert('Unexpected error while compiling ', console.log(err));
+    });
 }
 
 /**
