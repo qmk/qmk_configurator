@@ -16,6 +16,7 @@ import { backend_compile_url } from './store/modules/constants';
 //let $keycodes;
 let keypressListener;
 let compile_status = undefined;
+let baking = 'Baking';
 
 function init() {
   keypressListener = new keypress.Listener();
@@ -268,6 +269,7 @@ function compileLayout(_keyboard, _keymapName, _layout) {
     .then(resp => {
       const { status, data } = resp;
       if (status === 200) {
+        store.commit('app/setShowSpinner', true);
         if (data.enqueued) {
           store.commit('status/append', `\n* Received job_id: ${data.job_id}`);
           store.dispatch('status/scrollToEnd');
@@ -285,6 +287,7 @@ function compileLayout(_keyboard, _keymapName, _layout) {
 
 function enableCompileButton() {
   store.commit('app/enableCompile');
+  store.commit('app/setShowSpinner', false);
 }
 
 function disableCompileButton() {
@@ -305,7 +308,7 @@ function disableOtherButtons() {
  * It interacts with the app store to update the application.
  *
  */
-function check_status() {
+function check_status(state) {
   const url = `${backend_compile_url}/${store.getters['app/jobID']}`;
   axios
     .get(url)
@@ -319,6 +322,7 @@ function check_status() {
       } else {
         switch (data.status) {
           case 'finished':
+            store.commit('app/setSpinnerMsg', 'Done!');
             store.commit(
               'status/append',
               `\n* Finished:\n${data.result.output.replace(/\[.*m/gi, '')}`
@@ -336,19 +340,27 @@ function check_status() {
             enableOtherButtons();
             break;
           case 'queued':
+            store.commit('app/setSpinnerMsg', 'Waiting for Oven');
             msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
             store.commit('status/append', msg);
             setTimeout(check_status, 500);
             break;
           case 'running':
+            store.commit('app/setSpinnerMsg', baking);
+            baking += '.';
+            if (baking.length > 10) {
+              baking = baking.slice(0, 6);
+            }
             msg = compile_status === 'running' ? ' .' : '\n* Running';
             store.commit('status/append', msg);
             setTimeout(check_status, 500);
             break;
           case 'unknown':
+            store.commit('app/setSpinnerMsg', 'Abort! Abort!');
             enableCompileButton();
             break;
           case 'failed':
+            store.commit('app/setSpinnerMsg', 'Abort! Abort!');
             statusError('\n* Failed\n');
             if (data.result) {
               statusError(`* Error:\n${data.result.output}`);
@@ -356,6 +368,7 @@ function check_status() {
             enableCompileButton();
             break;
           default:
+            store.commit('app/setSpinnerMsg', 'Abort! Abort!');
             console.log('Unexpected status', data.status);
             enableCompileButton();
         }

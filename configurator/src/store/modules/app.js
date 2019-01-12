@@ -20,10 +20,14 @@ const state = {
   firmwareBinaryURL: [],
   firmwareSourceURL: [],
   filter: '',
-  keypressListener: undefined
+  keypressListener: undefined,
+  showSpinner: false,
+  spinnerMsg: ''
 };
 
 const getters = {
+  showSpinner: state => state.showSpinner,
+  spinnerMsg: state => state.spinnerMsg,
   keyboard: state => state.keyboard,
   keyboards: state => state.keyboards,
   layout: state => state.layout,
@@ -217,6 +221,12 @@ const mutations = {
   },
   startListening(state) {
     state.keypressListener().listen();
+  },
+  setShowSpinner(state, nextState) {
+    state.showSpinner = nextState;
+  },
+  setSpinnerMsg(state, nextMsg) {
+    state.spinnerMsg = nextMsg;
   }
 };
 
