@@ -39,7 +39,6 @@ export default {
   height: 600px;
   width: 600px;
   z-index: 5000;
-  opacity: 0.95;
   border-radius: 25%;
 }
 .space-potato {
