@@ -10,7 +10,7 @@
       <h1>
         <a href="/"
           ><img
-            src="/qmk_icon_512.png"
+            src="./../assets/qmk_icon_512.png"
             alt="QMK Logo"
             width="48"
             style="vertical-align: middle"

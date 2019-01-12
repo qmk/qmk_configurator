@@ -2,7 +2,12 @@
   <transition name="fade" appear>
     <div class="spinner" v-show="isVisible">
       <h1 class="status">{{ status }}</h1>
-      <div><img class="space-potato working" src="/food-potato.svg" /></div>
+      <div>
+        <img
+          class="space-potato working"
+          src="./../..//assets/food-potato.svg"
+        />
+      </div>
     </div>
   </transition>
 </template>
@@ -30,7 +35,7 @@ export default {
   left: 33%;
   justify-content: center;
   align-items: center;
-  background: url('/galaxy-infinity-milky-way-110854.jpg');
+  background: url('./../../assets/galaxy-infinity-milky-way-110854.jpg');
   height: 600px;
   width: 600px;
   z-index: 5000;
