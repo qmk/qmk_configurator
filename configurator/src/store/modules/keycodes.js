@@ -37,7 +37,13 @@ const state = {
     { name: ')\n0', code: 'KC_0', keys: '0', title: 'KC_0' },
     { name: '_\n-', code: 'KC_MINS', keys: '-', title: 'KC_MINS' },
     { name: '+\n=', code: 'KC_EQL', keys: '=', title: 'KC_EQL' },
-    { name: 'Back Space', code: 'KC_BSPC', keys: 'backspace', title: 'KC_BSPC', width: 2000 },
+    {
+      name: 'Back Space',
+      code: 'KC_BSPC',
+      keys: 'backspace',
+      title: 'KC_BSPC',
+      width: 2000
+    },
     { width: 250 },
     { name: 'Insert', code: 'KC_INS', keys: 'insert', title: 'KC_INS' },
     { name: 'Home', code: 'KC_HOME', keys: 'home', title: 'KC_HOME' },
@@ -62,7 +68,13 @@ const state = {
     { name: 'p', code: 'KC_P', keys: 'p', title: 'KC_P' },
     { name: '{\n[', code: 'KC_LBRC', keys: '[', title: 'KC_LBRC' },
     { name: '}\n]', code: 'KC_RBRC', keys: ']', title: 'KC_RBRC' },
-    { name: '|\n\\', code: 'KC_BSLS', keys: '\\', title: 'KC_BSLS', width: 1500 },
+    {
+      name: '|\n\\',
+      code: 'KC_BSLS',
+      keys: '\\',
+      title: 'KC_BSLS',
+      width: 1500
+    },
     { width: 250 },
     { name: 'Del', code: 'KC_DEL', keys: 'delete', title: 'KC_DEL' },
     { name: 'End', code: 'KC_END', keys: 'end', title: 'KC_END' },
@@ -74,7 +86,13 @@ const state = {
     { name: '+', code: 'KC_PPLS', keys: 'num_add', title: 'KC_PPLS' },
     { width: 0 },
 
-    { name: 'Caps Lock', code: 'KC_CAPS', keys: 'caps_lock', title: 'KC_CAPS', width: 1750 },
+    {
+      name: 'Caps Lock',
+      code: 'KC_CAPS',
+      keys: 'caps_lock',
+      title: 'KC_CAPS',
+      width: 1750
+    },
     { name: 'a', code: 'KC_A', keys: 'a', title: 'KC_A' },
     { name: 's', code: 'KC_S', keys: 's', title: 'KC_S' },
     { name: 'd', code: 'KC_D', keys: 'd', title: 'KC_D' },
@@ -86,7 +104,13 @@ const state = {
     { name: 'l', code: 'KC_L', keys: 'l', title: 'KC_L' },
     { name: ':\n;', code: 'KC_SCLN', keys: ';', title: 'KC_SCLN' },
     { name: '"\n\'', code: 'KC_QUOT', keys: "'", title: 'KC_QUOT' },
-    { name: 'Enter', code: 'KC_ENT', keys: 'enter', title: 'KC_ENT', width: 2250 },
+    {
+      name: 'Enter',
+      code: 'KC_ENT',
+      keys: 'enter',
+      title: 'KC_ENT',
+      width: 2250
+    },
     { width: 3500 },
     { name: '4', code: 'KC_P4', keys: 'num_4', title: 'KC_P4' },
     { name: '5', code: 'KC_P5', keys: 'num_5', title: 'KC_P5' },
@@ -94,7 +118,13 @@ const state = {
     { name: ',', code: 'KC_PCMM', title: 'KC_PCMM' },
     { width: 0 },
 
-    { name: 'Left Shift', code: 'KC_LSFT', keys: 'shift', title: 'KC_LSFT', width: 2250 },
+    {
+      name: 'Left Shift',
+      code: 'KC_LSFT',
+      keys: 'shift',
+      title: 'KC_LSFT',
+      width: 2250
+    },
     { name: 'z', code: 'KC_Z', keys: 'z', title: 'KC_Z' },
     { name: 'x', code: 'KC_X', keys: 'x', title: 'KC_X' },
     { name: 'c', code: 'KC_C', keys: 'c', title: 'KC_C' },
@@ -115,10 +145,34 @@ const state = {
     { name: '=', code: 'KC_PEQL', title: 'KC_PEQL' },
     { width: 0 },
 
-    { name: 'Left Ctrl', code: 'KC_LCTL', keys: 'ctrl', title: 'KC_LCTL', width: 1250 },
-    { name: 'Left OS', code: 'KC_LGUI', keys: 'cmd', title: 'KC_LGUI', width: 1250 },
-    { name: 'Left Alt', code: 'KC_LALT', keys: 'alt', title: 'KC_LALT', width: 1250 },
-    { name: 'Space', code: 'KC_SPC', keys: 'space', title: 'KC_SPC', width: 6250 },
+    {
+      name: 'Left Ctrl',
+      code: 'KC_LCTL',
+      keys: 'ctrl',
+      title: 'KC_LCTL',
+      width: 1250
+    },
+    {
+      name: 'Left OS',
+      code: 'KC_LGUI',
+      keys: 'cmd',
+      title: 'KC_LGUI',
+      width: 1250
+    },
+    {
+      name: 'Left Alt',
+      code: 'KC_LALT',
+      keys: 'alt',
+      title: 'KC_LALT',
+      width: 1250
+    },
+    {
+      name: 'Space',
+      code: 'KC_SPC',
+      keys: 'space',
+      title: 'KC_SPC',
+      width: 6250
+    },
     { name: 'Right Alt', code: 'KC_RALT', title: 'KC_RALT', width: 1250 },
     { name: 'Right OS', code: 'KC_RGUI', title: 'KC_RGUI', width: 1250 },
     { name: 'Menu', code: 'KC_APP', title: 'KC_APP', width: 1250 },
@@ -155,7 +209,6 @@ const state = {
     { name: '|', code: 'KC_PIPE', keys: '|', title: 'KC_PIPE' },
     { name: '?', code: 'KC_QUES', keys: '?', title: 'KC_QUES' },
     { name: '"', code: 'KC_DQUO', keys: '"', title: 'KC_DQUO' },
-
 
     { label: 'ISO/JIS', width: 'label', group: true },
 
@@ -195,7 +248,12 @@ const state = {
     { name: '_\n-', code: 'KC_MINS', keys: '-', title: 'KC_MINS' },
     { name: '+\n=', code: 'KC_EQL', keys: '=', title: 'KC_EQL' },
     { name: '|\n¥', code: 'KC_JYEN', title: 'KC_JYEN - JIS Yen and |' },
-    { name: 'Back Space', code: 'KC_BSPC', keys: 'backspace', title: 'KC_BSPC' },
+    {
+      name: 'Back Space',
+      code: 'KC_BSPC',
+      keys: 'backspace',
+      title: 'KC_BSPC'
+    },
     { width: 250 },
     { name: 'Insert', code: 'KC_INS', keys: 'insert', title: 'KC_INS' },
     { name: 'Home', code: 'KC_HOME', keys: 'home', title: 'KC_HOME' },
@@ -232,7 +290,13 @@ const state = {
     { name: '+', code: 'KC_PPLS', keys: 'num_add', title: 'KC_PPLS' },
     { width: 0 },
 
-    { name: 'Caps Lock', code: 'KC_CAPS', keys: 'caps_lock', title: 'KC_CAPS', width: 1750 },
+    {
+      name: 'Caps Lock',
+      code: 'KC_CAPS',
+      keys: 'caps_lock',
+      title: 'KC_CAPS',
+      width: 1750
+    },
     { name: 'a', code: 'KC_A', keys: 'a', title: 'KC_A' },
     { name: 's', code: 'KC_S', keys: 's', title: 'KC_S' },
     { name: 'd', code: 'KC_D', keys: 'd', title: 'KC_D' },
@@ -243,7 +307,7 @@ const state = {
     { name: 'k', code: 'KC_K', keys: 'k', title: 'KC_K' },
     { name: 'l', code: 'KC_L', keys: 'l', title: 'KC_L' },
     { name: ':\n;', code: 'KC_SCLN', keys: ';', title: 'KC_SCLN' },
-    { name: '@\n\'', code: 'KC_QUOT', keys: "'", title: 'KC_QUOT' },
+    { name: "@\n'", code: 'KC_QUOT', keys: "'", title: 'KC_QUOT' },
     { name: '~\n#', code: 'KC_NUHS', title: 'KC_NUHS - Non-US # and ~' },
     { width: 1250 },
     {
@@ -252,7 +316,7 @@ const state = {
       keys: 'enter',
       classes: 'isoenter',
       width: 1250,
-      title: 'KC_ENT',
+      title: 'KC_ENT'
     },
     { width: 3500 },
     { name: '4', code: 'KC_P4', keys: 'num_4', title: 'KC_P4' },
@@ -261,7 +325,13 @@ const state = {
     { name: ',', code: 'KC_PCMM', title: 'KC_PCMM' },
     { width: 0 },
 
-    { name: 'Left Shift', code: 'KC_LSFT', keys: 'shift', title: 'KC_LSFT', width: 1250 },
+    {
+      name: 'Left Shift',
+      code: 'KC_LSFT',
+      keys: 'shift',
+      title: 'KC_LSFT',
+      width: 1250
+    },
     { name: '|\n\\', code: 'KC_NUBS', title: 'KC_NUBS - Non-US \\ and |' },
     { name: 'z', code: 'KC_Z', keys: 'z', title: 'KC_Z' },
     { name: 'x', code: 'KC_X', keys: 'x', title: 'KC_X' },
@@ -284,12 +354,46 @@ const state = {
     { name: '=', code: 'KC_PEQL', title: 'KC_PEQL' },
     { width: 0 },
 
-    { name: 'Left Ctrl', code: 'KC_LCTL', keys: 'ctrl', title: 'KC_LCTL', width: 1250 },
-    { name: 'Left OS', code: 'KC_LGUI', keys: 'cmd', title: 'KC_LGUI', width: 1250 },
-    { name: 'Left Alt', code: 'KC_LALT', keys: 'alt', title: 'KC_LALT', width: 1250 },
-    { name: '無変換', code: 'KC_MHEN', title: 'KC_MHEN - JIS Muhenkan', width: 1250 },
-    { name: 'Space', code: 'KC_SPC', keys: 'space', title: 'KC_SPC', width: 4000 },
-    { name: '変換', code: 'KC_HENK', title: 'KC_HENK - JIS Henkan', width: 1250 },
+    {
+      name: 'Left Ctrl',
+      code: 'KC_LCTL',
+      keys: 'ctrl',
+      title: 'KC_LCTL',
+      width: 1250
+    },
+    {
+      name: 'Left OS',
+      code: 'KC_LGUI',
+      keys: 'cmd',
+      title: 'KC_LGUI',
+      width: 1250
+    },
+    {
+      name: 'Left Alt',
+      code: 'KC_LALT',
+      keys: 'alt',
+      title: 'KC_LALT',
+      width: 1250
+    },
+    {
+      name: '無変換',
+      code: 'KC_MHEN',
+      title: 'KC_MHEN - JIS Muhenkan',
+      width: 1250
+    },
+    {
+      name: 'Space',
+      code: 'KC_SPC',
+      keys: 'space',
+      title: 'KC_SPC',
+      width: 4000
+    },
+    {
+      name: '変換',
+      code: 'KC_HENK',
+      title: 'KC_HENK - JIS Henkan',
+      width: 1250
+    },
     {
       name: 'かな',
       code: 'KC_KANA',
@@ -337,7 +441,6 @@ const state = {
     { name: '?', code: 'KC_QUES', keys: '?', title: 'KC_QUES' },
     { name: '"', code: 'KC_DQUO', keys: '"', title: 'KC_DQUO' },
 
-
     { label: 'Quantum', width: 'label', group: true },
 
     { label: 'QMK specific', width: 'label' },
@@ -346,7 +449,12 @@ const state = {
     { name: '▽', code: 'KC_TRNS', title: 'KC_TRNS - Pass-through' },
     { name: 'Reset', code: 'RESET', title: 'RESET - Reset the keyboard' },
     { name: 'Debug', code: 'DEBUG', title: 'DEBUG - Toggle debug mode' },
-    { name: 'EEPROM Reset', code: 'EEP_RST', title: 'EEP_RST - Resets EEPROM state', width: 1250 },
+    {
+      name: 'EEPROM Reset',
+      code: 'EEP_RST',
+      title: 'EEP_RST - Resets EEPROM state',
+      width: 1250
+    },
 
     { width: 1000 },
     {
@@ -557,7 +665,6 @@ const state = {
       title: 'KC_RSPC - Right shift when held, ) when tapped'
     },
 
-
     { label: 'Keyboard Settings', group: true },
 
     { label: 'Keyboard settings (persistent)', width: 'label' },
@@ -687,12 +794,12 @@ const state = {
 
     {
       name: 'BL Toggle',
-      code: 'BL_TOGG' ,
+      code: 'BL_TOGG',
       title: 'BL_TOGG - Turn the backlight on or off'
     },
     {
       name: 'BL Cycle',
-      code: 'BL_STEP' ,
+      code: 'BL_STEP',
       title: 'BL_STEP - Cycle through backlight levels'
     },
     {
@@ -707,12 +814,12 @@ const state = {
     },
     {
       name: 'BL +',
-      code: 'BL_INC' ,
+      code: 'BL_INC',
       title: 'BL_INC - Increase the backlight level'
     },
     {
       name: 'BL -',
-      code: 'BL_DEC' ,
+      code: 'BL_DEC',
       title: 'BL_DEC - Decrease the backlight level'
     },
     {
@@ -723,26 +830,73 @@ const state = {
 
     { label: 'RGB Lighting settings', width: 'label' },
 
-    { name: 'RGB Toggle', code: 'RGB_TOG', title: 'RGB_TOG - Toggle RGB lighting on or off' },
+    {
+      name: 'RGB Toggle',
+      code: 'RGB_TOG',
+      title: 'RGB_TOG - Toggle RGB lighting on or off'
+    },
     { name: 'RGB Mode +', code: 'RGB_MOD', title: 'RGB_MOD - Next mode' },
     { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'RGB_RMOD - Previous mode' },
     { name: 'Hue +', code: 'RGB_HUI', title: 'RGB_HUI - Increase hue' },
     { name: 'Hue -', code: 'RGB_HUD', title: 'RGB_HUD - Decrease hue' },
     { name: 'Sat +', code: 'RGB_SAI', title: 'RGB_SAI - Increase saturation' },
     { name: 'Sat -', code: 'RGB_SAD', title: 'RGB_SAD - Decrease saturation' },
-    { name: 'Bright +', code: 'RGB_VAI', title: 'RGB_VAI - Increase value (brightness)' },
-    { name: 'Bright -', code: 'RGB_VAD', title: 'RGB_VAD - Decrease value (brightness)' },
-    { name: 'Effect +', code: 'RGB_SPI', title: 'RGB_SPI - Increase effect speed' },
-    { name: 'Effect -', code: 'RGB_SPD', title: 'RGB_SPD - Decrease effect speed' },
+    {
+      name: 'Bright +',
+      code: 'RGB_VAI',
+      title: 'RGB_VAI - Increase value (brightness)'
+    },
+    {
+      name: 'Bright -',
+      code: 'RGB_VAD',
+      title: 'RGB_VAD - Decrease value (brightness)'
+    },
+    {
+      name: 'Effect +',
+      code: 'RGB_SPI',
+      title: 'RGB_SPI - Increase effect speed'
+    },
+    {
+      name: 'Effect -',
+      code: 'RGB_SPD',
+      title: 'RGB_SPD - Decrease effect speed'
+    },
     { name: 'RGB Mode P', code: 'RGB_M_P', title: 'RGB_M_P - RGB Mode: Plain' },
-    { name: 'RGB Mode B', code: 'RGB_M_B', title: 'RGB_M_B - RGB Mode: Breathe' },
-    { name: 'RGB Mode R', code: 'RGB_M_R', title: 'RGB_M_R - RGB Mode: Rainbow' },
-    { name: 'RGB Mode SW', code: 'RGB_M_SW', title: 'RGB_M_SW - RGB Mode: Swirl' },
-    { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'RGB_M_SN - RGB Mode: Snake' },
-    { name: 'RGB Mode K', code: 'RGB_M_K', title: 'RGB_M_K - RGB Mode: Knight Rider' },
-    { name: 'RGB Mode X', code: 'RGB_M_X', title: 'RGB_M_X - RGB Mode: Christmas' },
-    { name: 'RGB Mode G', code: 'RGB_M_G', title: 'RGB_M_G - RGB Mode: Gradient' },
-
+    {
+      name: 'RGB Mode B',
+      code: 'RGB_M_B',
+      title: 'RGB_M_B - RGB Mode: Breathe'
+    },
+    {
+      name: 'RGB Mode R',
+      code: 'RGB_M_R',
+      title: 'RGB_M_R - RGB Mode: Rainbow'
+    },
+    {
+      name: 'RGB Mode SW',
+      code: 'RGB_M_SW',
+      title: 'RGB_M_SW - RGB Mode: Swirl'
+    },
+    {
+      name: 'RGB Mode SN',
+      code: 'RGB_M_SN',
+      title: 'RGB_M_SN - RGB Mode: Snake'
+    },
+    {
+      name: 'RGB Mode K',
+      code: 'RGB_M_K',
+      title: 'RGB_M_K - RGB Mode: Knight Rider'
+    },
+    {
+      name: 'RGB Mode X',
+      code: 'RGB_M_X',
+      title: 'RGB_M_X - RGB Mode: Christmas'
+    },
+    {
+      name: 'RGB Mode G',
+      code: 'RGB_M_G',
+      title: 'RGB_M_G - RGB Mode: Gradient'
+    },
 
     { label: 'App, Media, and Mouse', width: 'label', group: true },
 
@@ -783,14 +937,26 @@ const state = {
     { name: 'Vol -', code: 'KC__VOLDOWN', title: 'Volume Down (macOS)' },
     { name: 'Vol +', code: 'KC__VOLUP', title: 'Volume Up (macOS)' },
     { width: 250 },
-    { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)'},
+    { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)' },
 
     { label: 'Mouse Keys', width: 'label' },
 
     { name: 'Mouse Up', code: 'KC_MS_U', title: 'KC_MS_U - Mouse Cursor Up' },
-    { name: 'Mouse Down', code: 'KC_MS_D', title: 'KC_MS_D - Mouse Cursor Down' },
-    { name: 'Mouse Left', code: 'KC_MS_L', title: 'KC_MS_L - Mouse Cursor Left' },
-    { name: 'Mouse Right', code: 'KC_MS_R', title: 'KC_MS_R - Mouse Cursor Right' },
+    {
+      name: 'Mouse Down',
+      code: 'KC_MS_D',
+      title: 'KC_MS_D - Mouse Cursor Down'
+    },
+    {
+      name: 'Mouse Left',
+      code: 'KC_MS_L',
+      title: 'KC_MS_L - Mouse Cursor Left'
+    },
+    {
+      name: 'Mouse Right',
+      code: 'KC_MS_R',
+      title: 'KC_MS_R - Mouse Cursor Right'
+    },
     { width: 250 },
     { name: 'Mouse 1', code: 'KC_BTN1', title: 'KC_BTN1 - Mouse Button 1' },
     { name: 'Mouse 2', code: 'KC_BTN2', title: 'KC_BTN2 - Mouse Button 2' },
@@ -798,15 +964,42 @@ const state = {
     { name: 'Mouse 4', code: 'KC_BTN4', title: 'KC_BTN4 - Mouse Button 4' },
     { name: 'Mouse 5', code: 'KC_BTN5', title: 'KC_BTN5 - Mouse Button 5' },
     { width: 250 },
-    { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'KC_WH_U - Mouse Wheel Up' },
-    { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'KC_WH_D - Mouse Wheel Down' },
-    { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'KC_WH_L - Mouse Wheel Left' },
-    { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'KC_WH_R - Mouse Wheel Right' },
+    {
+      name: 'Mouse Wheel Up',
+      code: 'KC_WH_U',
+      title: 'KC_WH_U - Mouse Wheel Up'
+    },
+    {
+      name: 'Mouse Wheel Down',
+      code: 'KC_WH_D',
+      title: 'KC_WH_D - Mouse Wheel Down'
+    },
+    {
+      name: 'Mouse Wheel Left',
+      code: 'KC_WH_L',
+      title: 'KC_WH_L - Mouse Wheel Left'
+    },
+    {
+      name: 'Mouse Wheel Right',
+      code: 'KC_WH_R',
+      title: 'KC_WH_R - Mouse Wheel Right'
+    },
     { width: 250 },
-    { name: 'Mouse Accel 0', code: 'KC_ACL0', title: 'Set mouse acceleration to 0' },
-    { name: 'Mouse Accel 1', code: 'KC_ACL1', title: 'Set mouse acceleration to 1' },
-    { name: 'Mouse Accel 2', code: 'KC_ACL2', title: 'Set mouse acceleration to 2' }
-
+    {
+      name: 'Mouse Accel 0',
+      code: 'KC_ACL0',
+      title: 'Set mouse acceleration to 0'
+    },
+    {
+      name: 'Mouse Accel 1',
+      code: 'KC_ACL1',
+      title: 'Set mouse acceleration to 1'
+    },
+    {
+      name: 'Mouse Accel 2',
+      code: 'KC_ACL2',
+      title: 'Set mouse acceleration to 2'
+    }
   ]
 };
 
