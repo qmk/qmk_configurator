@@ -9,6 +9,7 @@
             src="./../..//assets/food-potato.svg"
           />
         </div>
+        <h3 class="message" v-html="message"></h3>
       </div>
     </div>
   </transition>
@@ -24,6 +25,10 @@ export default {
     status: {
       type: String,
       default: ''
+    },
+    message: {
+      type: String,
+      default: 'Brought to you with much &#x1F496; by QMK'
     }
   },
   methods: {
@@ -49,7 +54,7 @@ export default {
 }
 .spinner {
   display: grid;
-  grid-template: 10% 1fr / 1fr;
+  grid-template: 10% 1fr 10% / 1fr;
   background: url('./../../assets/galaxy-infinity-milky-way-110854.jpg');
   justify-items: center;
   align-items: center;
@@ -75,6 +80,10 @@ export default {
 .status {
   grid-row: 1;
   margin-top: 90px;
+  color: #eee;
+}
+.message {
+  grid-row: 3;
   color: #eee;
 }
 .fade-enter-active {
