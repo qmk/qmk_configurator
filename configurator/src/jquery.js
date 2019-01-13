@@ -287,7 +287,9 @@ function compileLayout(_keyboard, _keymapName, _layout) {
 
 function enableCompileButton() {
   store.commit('app/enableCompile');
-  store.commit('app/setShowSpinner', false);
+  setTimeout(() => {
+    store.commit('app/setShowSpinner', false);
+  }, 2000);
 }
 
 function disableCompileButton() {
@@ -308,7 +310,7 @@ function disableOtherButtons() {
  * It interacts with the app store to update the application.
  *
  */
-function check_status(state) {
+function check_status() {
   const url = `${backend_compile_url}/${store.getters['app/jobID']}`;
   axios
     .get(url)

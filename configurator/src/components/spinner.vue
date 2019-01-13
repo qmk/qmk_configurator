@@ -1,12 +1,14 @@
 <template>
   <transition name="fade" appear>
-    <div class="spinner" v-show="isVisible">
-      <h1 class="status">{{ status }}</h1>
-      <div>
-        <img
-          class="space-potato working"
-          src="./../..//assets/food-potato.svg"
-        />
+    <div class="spinner-container" v-show="isVisible" @click="clicked">
+      <div class="spinner">
+        <h1 class="status">{{ status }}</h1>
+        <div>
+          <img
+            class="space-potato working"
+            src="./../..//assets/food-potato.svg"
+          />
+        </div>
       </div>
     </div>
   </transition>
@@ -23,22 +25,36 @@ export default {
       type: String,
       default: ''
     }
+  },
+  methods: {
+    clicked(ev) {
+      this.$emit('click', ev);
+    }
   }
 };
 </script>
 <style scoped>
+.spinner-container {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  position: fixed;
+  top: 0;
+  left: 0;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 50000;
+  background: rgba(30, 30, 30, 0.3);
+}
 .spinner {
   display: grid;
   grid-template: 10% 1fr / 1fr;
-  position: fixed;
-  top: 15%;
-  left: 33%;
-  justify-content: center;
-  align-items: center;
   background: url('./../../assets/galaxy-infinity-milky-way-110854.jpg');
+  justify-items: center;
+  align-items: center;
   height: 600px;
   width: 600px;
-  z-index: 5000;
   border-radius: 25%;
 }
 .space-potato {
@@ -57,6 +73,7 @@ export default {
   }
 }
 .status {
+  grid-row: 1;
   margin-top: 90px;
   color: #eee;
 }

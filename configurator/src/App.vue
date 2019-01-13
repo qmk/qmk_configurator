@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" @click="dismiss">
     <!--
       div id="nav">
         <router-link to="/">Home</router-link> |
@@ -49,7 +49,7 @@ const potatoFacts = [
   'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.'
 ];
 import Spinner from '@/components/spinner';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'app',
   components: {
@@ -74,9 +74,13 @@ export default {
     ...mapGetters('app', ['showSpinner', 'spinnerMsg'])
   },
   methods: {
+    ...mapMutations('app', ['setShowSpinner']),
     randomPotatoFact() {
       this.potatoFact =
         potatoFacts[Math.floor(Math.random(Date.now()) * potatoFacts.length)];
+    },
+    dismiss() {
+      this.setShowSpinner(false);
     }
   }
 };
