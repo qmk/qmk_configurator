@@ -58,8 +58,6 @@ function generateKeypressHandler(keycode) {
   };
 }
 
-function reset_keymap() {}
-
 //Function that takes in a keymap loops over it and fills populates the keymap variable
 function load_converted_keymap(converted_keymap) {
   //Loop over each layer from the keymap
@@ -409,7 +407,6 @@ function getPreferredLayout(layouts) {
 
 export {
   init,
-  reset_keymap,
   load_converted_keymap,
   statusError,
   getExclusionList,
