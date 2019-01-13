@@ -27,6 +27,7 @@
           v-for="(key, index) in keycodesByGroup"
           :key="index"
           @click="changeActive(index)"
+          :title="index"
         >
           {{ index }}
         </span>
