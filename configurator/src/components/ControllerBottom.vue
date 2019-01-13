@@ -67,12 +67,11 @@
 <script>
 import Vue from 'vue';
 import first from 'lodash/first';
-import isUndefined from 'lodash/first';
+import isUndefined from 'lodash/isUndefined';
 const encoding = 'data:text/plain;charset=utf-8,';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 import {
-  reset_keymap,
   load_converted_keymap,
   disableCompileButton,
   disableOtherButtons,
@@ -197,8 +196,6 @@ export default {
         return;
       }
 
-      reset_keymap();
-
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store
         .dispatch('app/changeKeyboard', this.$store.getters['app/keyboard'])
@@ -240,8 +237,6 @@ export default {
         alert("Sorry, that doesn't appear to be a valid QMK info file.");
         return;
       }
-
-      reset_keymap();
 
       this.$store.commit('app/setKeyboard', PREVIEW_LABEL);
       this.$store.dispatch('app/loadLayouts', data).then(() => {

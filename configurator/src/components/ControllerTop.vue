@@ -68,7 +68,6 @@ import {
 
 import {
   statusError,
-  reset_keymap,
   load_converted_keymap,
   // render_layout,
   getExclusionList,
@@ -249,7 +248,6 @@ export default {
     },
     postUpdateKeyboard() {
       this.$store.commit('status/clear');
-      reset_keymap();
       this.$router.replace({
         path: `/${this.keyboard}/${this.layout}`
       });
@@ -266,7 +264,6 @@ export default {
     updateLayout(e) {
       let newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
-      reset_keymap();
       this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
       // let render = e.target;
       // render &&
