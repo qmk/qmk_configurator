@@ -62,29 +62,22 @@ function generateKeypressHandler(keycode) {
 function load_converted_keymap(converted_keymap) {
   //Loop over each layer from the keymap
   var stats = { count: 0, any: 0, layers: 0 };
-  $.each(converted_keymap, function(_layer /*, keys*/) {
+  console.log(converted_keymap);
+  let layers = [];
+  converted_keymap.forEach((layerData, _layer) => {
     //Add layer object for every layer that exists
     store.commit('keymap/initLayer', _layer);
     //Loop over each keycode in the layer
-    $.each(converted_keymap[_layer], function(index, keycode) {
-      store.commit('keymap/setKey', {
-        _layer,
-        index: index,
-        key: parseKeycode(keycode, stats)
-      });
-      let key = store.getters['keymap/getKey']({ _layer, index: index });
-      stats.count += 1;
-
-      if (key.name === 'Any') {
-        stats.any += 1;
-      }
-    });
-    if (store.getters['keymap/size'](_layer) > 0) {
-      setLayerToNonEmpty(_layer);
-    }
+    layers.push(
+      layerData.map(keycode => {
+        return parseKeycode(keycode, stats);
+      })
+    );
     stats.layers += 1;
   });
+  store.commit('keymap/setLayers', layers);
 
+  console.log('stat', stats);
   var msg = `\nLoaded ${stats.layers} layers and ${
     stats.count
   } keycodes. Defined ${stats.any} Any key keycodes\n`;
@@ -99,9 +92,11 @@ function stripANY(keycode) {
   return keycode;
 }
 
+/*
 function setLayerToNonEmpty(_layer) {
   $(`.layer.${_layer}`).addClass('non-empty');
 }
+*/
 
 function newAnyKey(keycode) {
   var anyKey = this.getters['keycodes/lookupKeycode']('text');

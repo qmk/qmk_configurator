@@ -30,8 +30,8 @@ export default {
       if (!isUndefined(newLayout) && newLayout !== oldLayout) {
         this.profile && console.time('layout::reset');
         this.resetConfig();
-        this.clear();
         this.changeLayer(0);
+        this.clear();
         this.profile && console.time('layout::initkeymap');
         this.initKeymap({
           layer: 0,
@@ -68,7 +68,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('keymap', ['layer', 'getLayer', 'defaults', 'config']),
+    ...mapGetters('keymap', [
+      'layer',
+      'getLayer',
+      'defaults',
+      'config',
+      'loadingKeymapPromise'
+    ]),
     ...mapGetters('app', ['layout', 'layouts']),
     styles() {
       let styles = [];
@@ -82,6 +88,10 @@ export default {
       const keymap = this.getLayer(this.layer);
       if (isUndefined(layout) || isUndefined(keymap)) {
         return [];
+      }
+      if (this.loadingKeymapPromise) {
+        this.loadingKeymapPromise();
+        this.setLoadingKeymapPromise(undefined);
       }
       // Calculate Max with given layout
       this.profile && console.time('currentLayer');
@@ -109,7 +119,8 @@ export default {
       'clear',
       'initKeymap',
       'resetConfig',
-      'resizeConfig'
+      'resizeConfig',
+      'setLoadingKeymapPromise'
     ]),
     calcKeyKeymapDims(w, h) {
       return {
