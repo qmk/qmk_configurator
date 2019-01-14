@@ -1,8 +1,4 @@
-import $ from 'jquery';
 import axios from 'axios';
-/*
-import 'jquery-ui-bundle';
-*/
 import store from './store';
 import escape from 'lodash/escape';
 import isUndefined from 'lodash/isUndefined';
@@ -112,7 +108,7 @@ function newKey(metadata, keycode, obj) {
   };
 
   if (obj !== undefined) {
-    key = $.extend(key, obj);
+    key = Object.assign({}, key, obj);
   }
 
   return key;
