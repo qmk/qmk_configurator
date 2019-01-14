@@ -20,13 +20,15 @@ const state = {
   selectedIndex: undefined,
   defaults,
   config: Object.assign({}, defaults),
-  visualKeymapOffsetTop: Number.MAX_SAFE_INTEGER,
-  visualKeymapFixed: false
+  // super hacky way to wait for visual keymap to be done
+  // basically when we load a keymap create a promise that will run the keymap loading code
+  // but let the visualkeymap signal when it is done and resolve the promise at that time
+  // otherwise they race against each other and the visual keymap erases the keymap data
+  loadingKeymapPromise: undefined
 };
 
 const getters = {
-  vkOffsetTop: state => state.visualKeymapOffsetTop,
-  visualKeymapFixed: state => state.visualKeymapFixed,
+  loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
@@ -66,7 +68,7 @@ const getters = {
                 keycode = compiler ? key.text : `ANY(${key.text})`;
               }
             } else {
-              console.log(`ERROR: unexpected keycode ${key}`, k, i, _layer);
+              console.error(`ERROR: unexpected keycode ${key}`, k, i, _layer);
             }
             acc.push(keycode);
             return acc;
@@ -156,6 +158,9 @@ const mutations = {
   setKey(state, { _layer, index, key }) {
     Vue.set(state.keymap[_layer], index, key);
   },
+  setLayers(state, layers) {
+    Vue.set(state, 'keymap', layers);
+  },
   setDirty(state) {
     state.dirty = true;
   },
@@ -163,7 +168,7 @@ const mutations = {
     state.dirty = false;
   },
   clear(state) {
-    state.keymap = Vue.set(state, 'keymap', [{}]);
+    state.keymap = Vue.set(state, 'keymap', []);
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
@@ -221,17 +226,14 @@ const mutations = {
   initLayer: (state, layer) => {
     if (layer > 0) {
       // layer 0 is always initialized. Use it as a reference
-      mutations.initKeymap(state, { layer: layer, layout: state.keymap[0] });
+      mutations.initKeymap(state, { layer, layout: state.keymap[0] });
     } else {
       // TODO probably need to do something differently here
-      Vue.set(state.keymap, layer, {});
+      Vue.set(state.keymap, layer, []);
     }
   },
-  setVisualKeymapFixed: (state, nextState) => {
-    state.visualKeymapFixed = nextState;
-  },
-  setVisualKeymapOffsetTop: (state, offsetTop) => {
-    state.visualKeymapOffsetTop = offsetTop;
+  setLoadingKeymapPromise(state, resolve) {
+    state.loadingKeymapPromise = resolve;
   }
 };
 

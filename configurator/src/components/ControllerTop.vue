@@ -251,8 +251,6 @@ export default {
       this.$router.replace({
         path: `/${this.keyboard}/${this.layout}`
       });
-      // render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
-      this.$store.commit('status/clear');
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
     },

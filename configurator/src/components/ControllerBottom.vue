@@ -196,6 +196,8 @@ export default {
         return;
       }
 
+      /* TODO Add check for keyboard name and layout */
+
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store
         .dispatch('app/changeKeyboard', this.$store.getters['app/keyboard'])
@@ -207,9 +209,11 @@ export default {
             path: `/${data.keyboard}/${data.layout}`
           });
 
-          this.$store.commit('status/clear');
-          load_converted_keymap(data.layers);
-
+          var store = this.$store;
+          let promise = new Promise(resolve =>
+            store.commit('keymap/setLoadingKeymapPromise', resolve)
+          );
+          promise.then(() => load_converted_keymap(data.layers));
           this.$store.commit('keymap/setDirty');
           disableOtherButtons();
           this.$store.dispatch('status/viewReadme', data.keyboard);
