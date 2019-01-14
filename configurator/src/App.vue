@@ -1,26 +1,28 @@
 <template>
   <div id="app" @click="dismiss">
-    <!--
-      div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-      </div
-    -->
-    <header>
-      <h1>
-        <a href="/"
-          ><img
-            src="./../assets/qmk_icon_512.png"
-            alt="QMK Logo"
-            width="48"
-            style="vertical-align: middle"
-          />QMK Configurator</a
-        >
-      </h1>
-      <p class="random-potato">{{ potatoFact }}</p>
-    </header>
-    <router-view />
-    <spinner :isVisible="showSpinner" :status="spinnerMsg" />
+    <div>
+      <!--
+        div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link>
+        </div
+      -->
+      <header>
+        <h1>
+          <a href="/"
+            ><img
+              src="./../assets/qmk_icon_512.png"
+              alt="QMK Logo"
+              width="48"
+              style="vertical-align: middle"
+            />QMK Configurator</a
+          >
+        </h1>
+        <p class="random-potato">{{ potatoFact }}</p>
+      </header>
+      <router-view />
+      <spinner :isVisible="showSpinner" :status="spinnerMsg" />
+    </div>
   </div>
 </template>
 <script>
@@ -87,6 +89,9 @@ export default {
 </script>
 <style lang="scss">
 #app {
+  display: grid;
+  grid-template: 1fr / minmax(1000px, 1300px);
+  justify-content: center;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

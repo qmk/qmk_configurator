@@ -123,7 +123,7 @@ export default {
   cursor: pointer;
 }
 .tab-area {
-  height: 400px;
+  height: 350px;
   padding: 10px 5px;
   border: 1px solid #ccc;
   border-top: 0;

@@ -299,7 +299,7 @@ export default {
 <style>
 .topctrl {
   display: grid;
-  grid-template: auto / 400px 400px auto;
+  grid-template: auto / 400px 360px auto;
   grid-row-gap: 0px;
 }
 #controller-top {
