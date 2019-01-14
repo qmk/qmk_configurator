@@ -73,7 +73,7 @@ const actions = {
       commit('setLayout', undefined);
       dispatch('loadLayouts').then(() => {
         let nextLayout = getPreferredLayout(state.layouts);
-        console.log(getPreferredLayout(state.layouts));
+        console.info(getPreferredLayout(state.layouts));
         if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
           nextLayout = oldLayout;
         }
