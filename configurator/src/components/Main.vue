@@ -10,7 +10,7 @@
     >
       Download QMK Toolbox
     </a>
-    <div class="split-content" :class="classes">
+    <div class="split-content">
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p><label>Keymap:</label></p>
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
@@ -50,16 +50,7 @@ export default {
     this.boundingRect = this.$refs.console.getBoundingClientRect();
     //  window.addEventListener('scroll', this.scrollHandler, { passive: true });
   },
-  computed: {
-    ...mapGetters('keymap', ['vkOffsetTop', 'visualKeymapFixed']),
-    classes() {
-      let classes = [];
-      if (this.visualKeymapFixed) {
-        classes.push('fixed');
-      }
-      return classes.join(' ');
-    }
-  },
+  computed: {},
   methods: {
     ...mapMutations('keymap', [
       'setVisualKeymapFixed',

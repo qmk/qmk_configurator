@@ -3,7 +3,7 @@ import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 const defaults = {
-  MAX_X: 775,
+  MAX_X: 888,
   KEY_WIDTH: 40,
   KEY_HEIGHT: 40,
   SWAP_KEY_WIDTH: 30,
