@@ -73,6 +73,7 @@ const actions = {
       commit('setLayout', undefined);
       dispatch('loadLayouts').then(() => {
         let nextLayout = getPreferredLayout(state.layouts);
+        // eslint-disable-next-line
         console.info(getPreferredLayout(state.layouts));
         if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
           nextLayout = oldLayout;
