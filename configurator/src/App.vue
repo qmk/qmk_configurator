@@ -23,6 +23,13 @@
       <router-view />
       <spinner :isVisible="showSpinner" :status="spinnerMsg" />
     </div>
+    <footer>
+      <p>
+        This project is maintained by QMK collaborators and contributors like
+        you!
+      </p>
+      <p>Hosted on GitHub Pages</p>
+    </footer>
   </div>
 </template>
 <script>
