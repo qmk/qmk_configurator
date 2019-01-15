@@ -203,7 +203,6 @@ export default {
         .dispatch('app/changeKeyboard', this.$store.getters['app/keyboard'])
         .then(() => {
           this.$store.commit('app/setLayout', data.layout);
-          this.$store.commit('app/setKeymapName', data.keymap);
           // todo validate these values
           this.$router.replace({
             path: `/${data.keyboard}/${data.layout}`
@@ -213,7 +212,10 @@ export default {
           let promise = new Promise(resolve =>
             store.commit('keymap/setLoadingKeymapPromise', resolve)
           );
-          promise.then(() => load_converted_keymap(data.layers));
+          promise.then(() => {
+            load_converted_keymap(data.layers);
+            store.commit('app/setKeymapName', data.keymap);
+          });
           this.$store.commit('keymap/setDirty');
           disableOtherButtons();
           this.$store.dispatch('status/viewReadme', data.keyboard);
