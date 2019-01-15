@@ -2,33 +2,36 @@
   <div id="controller-bottom" class="botctrl">
     <div class="botctrl-1-1">
       <button
+        class="fixed-size"
         id="toolbox"
         title="Load firmware file in QMK Toolbox"
         v-bind:disabled="disableDownloads"
       >
-        Open in QMK Toolbox
+        <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
       </button>
       <button
+        class="fixed-size"
         id="source"
         @click="downloadSource"
         title="Download QMK Firmware code"
         v-bind:disabled="disableDownloads"
       >
-        Download Source
+        <font-awesome-icon icon="download" size="lg" fixed-width /> Full Source
       </button>
       <button
         id="export"
         @click="exportJSON"
         title="Export QMK Keymap JSON file"
       >
-        Export Keymap
+        <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
+      <span class="label-button">Keymap.JSON</span>
       <button
         id="import"
         title="Import QMK Keymap JSON file"
         @click="importKeymap"
       >
-        Import Keymap
+        <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <input
         id="fileImport"
@@ -52,7 +55,7 @@
         title="Download firmware file for flashing"
         v-bind:disabled="disableDownloads"
       >
-        Download Firmware
+        <font-awesome-icon icon="download" size="lg" fixed-width /> Firmware
       </button>
     </div>
     <div v-if="downloadElementEnabled">
@@ -262,3 +265,30 @@ export default {
   }
 };
 </script>
+<style scoped>
+.fixed-size {
+  min-width: 150px;
+}
+#export {
+  border-radius: 4px 0 0 4px;
+  margin-right: 1px;
+}
+#import {
+  border-radius: 0 4px 4px 0;
+}
+.label-button {
+  line-height: 155%;
+  vertical-align: middle;
+  display: inline-block;
+  margin: -3px 1px 0 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #49ad4c;
+  color: white;
+  height: 19px;
+  border: 0px solid #000;
+  padding: 6px 12px 6px;
+  text-transform: uppercase;
+}
+</style>
