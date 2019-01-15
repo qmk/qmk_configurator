@@ -126,6 +126,7 @@ export default {
   height: 350px;
   padding: 10px 5px;
   border: 1px solid #ccc;
+  border-radius: 0 4px 8px 8px;
   border-top: 0;
   background: #eee;
 }
