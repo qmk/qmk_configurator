@@ -15,8 +15,10 @@
     @dragenter.prevent="dragenter"
   >{{ displayName }}<input
     class="key-layer-input"
-    @focus="focus"
-    @blur="blur"
+    @focus.prevent.stop="focus"
+    @blur.prevent.stop="blur"
+    @click.prevent.stop="clickignore"
+    ref="input"
     spellcheck="false"
     v-model="value" /><div
         v-if="visible"
@@ -47,6 +49,10 @@ export default {
       this.setSelected(undefined);
     },
     focus() {
+      this.stopListening();
+      this.$refs.input.selectionStart = this.$refs.input.selectionEnd = 1000;
+    },
+    clickignore() {
       this.stopListening();
     }
   }
