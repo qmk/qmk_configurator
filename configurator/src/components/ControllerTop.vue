@@ -17,6 +17,8 @@
           v-model="keymapName"
           placeholder="custom keymap name"
           spellcheck="false"
+          @focus="focus"
+          @blur="blur"
         />
       </div>
       <div class="topctrl-1-3">
@@ -162,7 +164,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('app', ['setLayout']),
+    ...mapMutations('app', ['setLayout', 'stopListening', 'startListening']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -284,6 +286,12 @@ export default {
     },
     updateFilter(filter) {
       this.$store.commit('app/setFilter', filter);
+    },
+    focus() {
+      this.stopListening();
+    },
+    blur() {
+      this.startListening();
     }
   },
   data: () => {
