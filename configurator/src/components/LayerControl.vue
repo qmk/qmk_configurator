@@ -1,7 +1,7 @@
 <template>
   <div>
     <p><label>Layer:</label></p>
-    <div id="layers">
+    <div class="layers">
       <!-- prettier-ignore -->
       <div
         class="layer"

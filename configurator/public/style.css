@@ -735,21 +735,10 @@ button {
   justify-self: start;
 }
 
-#layers {
+.layers {
   column-count: 2;
   padding-right: 10px;
   background: #fff;
-}
-
-#layers:before {
-  border-left: 1px dashed #ccc;
-  border-right: 1px dashed #ccc;
-  content: '';
-  height: 250px;
-  position: absolute;
-  left: 12px;
-  width: 38px;
-  z-index: -1;
 }
 
 .layer {
