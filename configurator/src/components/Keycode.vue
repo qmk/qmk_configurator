@@ -21,6 +21,7 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 
+const debug = false;
 export default {
   name: 'keycode',
   props: {
@@ -61,13 +62,13 @@ export default {
   },
   methods: {
     dragend() {
-      console.log('finished dragging');
+      debug && console.log('finished dragging');
       this.dragging = false;
       this.hidden.removeChild(this.crt);
     },
     drag() {},
     dragstart(ev) {
-      console.log('dragstarted on ', this.name);
+      debug && console.log('dragstarted on ', this.name);
 
       this.crt = this.$el.cloneNode(true);
       this.hidden.appendChild(this.crt);
