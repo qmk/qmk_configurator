@@ -95,7 +95,7 @@ function setLayerToNonEmpty(_layer) {
 */
 
 function newAnyKey(keycode) {
-  var anyKey = this.getters['keycodes/lookupKeycode']('text');
+  var anyKey = store.getters['keycodes/lookupKeycode']('text');
   // make a copy otherwise it uses a reference
   return Object.assign({}, anyKey, { text: keycode });
 }
