@@ -338,10 +338,6 @@ function check_status() {
             break;
           case 'running':
             store.commit('app/setSpinnerMsg', baking);
-            baking += '.';
-            if (baking.length > 10) {
-              baking = baking.slice(0, 6);
-            }
             msg = compile_status === 'running' ? ' .' : '\n* Running';
             store.commit('status/append', msg);
             setTimeout(check_status, 500);

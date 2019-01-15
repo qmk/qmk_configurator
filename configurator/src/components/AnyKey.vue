@@ -17,6 +17,7 @@
     class="key-layer-input"
     @focus="focus"
     @blur="blur"
+    spellcheck="false"
     v-model="value" /><div
         v-if="visible"
         class="remove"

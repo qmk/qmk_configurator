@@ -16,6 +16,7 @@
           type="text"
           v-model="keymapName"
           placeholder="custom keymap name"
+          spellcheck="false"
         />
       </div>
       <div class="topctrl-1-3">
