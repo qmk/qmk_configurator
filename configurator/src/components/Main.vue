@@ -17,7 +17,6 @@
         <visualKeymap :profile="true" />
       </div>
     </div>
-    <div style="display:hidden" class="hidden"></div>
   </div>
 </template>
 
