@@ -5,7 +5,7 @@
         class="fixed-size"
         id="toolbox"
         title="Load firmware file in QMK Toolbox"
-        v-bind:disabled="disableDownloads"
+        disabled="true"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
       </button>
