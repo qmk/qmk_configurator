@@ -4,7 +4,7 @@
       <button
         class="fixed-size"
         id="toolbox"
-        title="Load firmware file in QMK Toolbox"
+        title="Download keymap.c only"
         disabled="true"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
