@@ -21,7 +21,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
@@ -39,42 +38,8 @@ export default {
     VisualKeymap,
     LayerControl
   },
-  data() {
-    return {
-      boundingRect: undefined
-    };
-  },
   mounted() {
     jquery.init();
-    this.boundingRect = this.$refs.console.getBoundingClientRect();
-    //  window.addEventListener('scroll', this.scrollHandler, { passive: true });
-  },
-  computed: {},
-  methods: {
-    ...mapMutations('keymap', [
-      'setVisualKeymapFixed',
-      'setVisualKeymapOffsetTop'
-    ]),
-    isElementInViewport(el) {
-      var rect = el.getBoundingClientRect();
-      console.log(rect);
-      return rect.bottom >= 0;
-    },
-    scrollHandler() {
-      if (
-        this.visualKeymapFixed === false &&
-        !this.isElementInViewport(this.$refs.console)
-      ) {
-        this.setVisualKeymapFixed(true);
-      }
-
-      if (
-        this.visualKeymapFixed === true &&
-        this.isElementInViewport(this.$refs.console)
-      ) {
-        this.setVisualKeymapFixed(false);
-      }
-    }
   }
 };
 </script>
