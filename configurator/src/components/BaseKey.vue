@@ -13,7 +13,7 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    >{{ displayName }}<template
+    >{{ displayName }}<font-awesome-icon v-if="icon" size="lg" :icon="icon" /><template
       v-if="visible">
         <div
           v-if="visible"
@@ -25,6 +25,13 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
+
+const substitute = {
+  Up: 'arrow-up',
+  Down: 'arrow-down',
+  Left: 'arrow-left',
+  Right: 'arrow-right'
+};
 export default {
   name: 'base-key',
   props: {
@@ -49,7 +56,16 @@ export default {
       if (isUndefined(this.meta)) {
         return;
       }
-      return this.formatName(this.meta.name);
+      if (isUndefined(substitute[this.meta.name])) {
+        return this.formatName(this.meta.name);
+      }
+      return undefined;
+    },
+    icon() {
+      if (substitute[this.meta.name]) {
+        return substitute[this.meta.name];
+      }
+      return undefined;
     },
     myclasses() {
       let classes = [];
