@@ -26,20 +26,26 @@ export default {
   },
   watch: {
     layout(newLayout, oldLayout) {
+      // eslint-disable-next-line no-console
       this.profile && console.time('layout');
       if (!isUndefined(newLayout) && newLayout !== oldLayout) {
+        // eslint-disable-next-line no-console
         this.profile && console.time('layout::reset');
         this.resetConfig();
         this.changeLayer(0);
         this.clear();
+        // eslint-disable-next-line no-console
         this.profile && console.time('layout::initkeymap');
         this.initKeymap({
           layer: 0,
           layout: this.layouts[newLayout]
         });
+        // eslint-disable-next-line no-console
         this.profile && console.timeEnd('layout::initkeymap');
+        // eslint-disable-next-line no-console
         this.profile && console.timeEnd('layout::reset');
 
+        // eslint-disable-next-line no-console
         this.profile && console.time('layout::scale');
         const layout = this.layouts[this.layout];
         const max = layout.reduce(
@@ -62,8 +68,10 @@ export default {
           max.y *= this.config.SCALE;
         }
         this.setSize(max);
+        // eslint-disable-next-line no-console
         this.profile && console.timeEnd('layout::scale');
       }
+      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout');
     }
   },
@@ -94,6 +102,7 @@ export default {
         this.setLoadingKeymapPromise(undefined);
       }
       // Calculate Max with given layout
+      // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
       let curLayer = layout.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
@@ -109,6 +118,7 @@ export default {
           dims
         );
       });
+      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
       return curLayer;
     }
