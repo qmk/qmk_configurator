@@ -18,7 +18,8 @@ const colorways = [
   'modern-selectric',
   'danger-zone',
   'oblivion-hagoromo',
-  'gmk-merlin'
+  'gmk-merlin',
+  'carbon'
 ];
 const state = {
   keymap: [{}],
