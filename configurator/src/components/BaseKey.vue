@@ -61,8 +61,13 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta.name.length > 3) {
+      if (this.meta.name.length >= 2) {
         classes.push('smaller');
+      } else {
+        classes.push('thicker');
+      }
+      if (this.w > 40) {
+        classes.push('mod');
       }
       return classes.join(' ');
     },
@@ -155,6 +160,8 @@ export default {
 };
 </script>
 <style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 .key.overme {
   background: #cceecc;
   border-radius: 4px;
@@ -163,8 +170,23 @@ export default {
   transform: scale(0.8);
 }
 .key.smaller {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
+.key.thicker {
+}
+.key.mod {
+  background: #313F48;
+}
+.key {
+  border-radius: 4px;
+  background: #00234e;
+  font-family: 'Montserrat', sans-serif;
+  color: #f7d624;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 120%;
+}
+
 /*
 .key {
   color: #aaa;
