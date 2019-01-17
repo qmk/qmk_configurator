@@ -33,7 +33,8 @@ export default {
     w: Number,
     h: Number,
     y: Number,
-    x: Number
+    x: Number,
+    colorway: String
   },
   computed: {
     ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
@@ -68,6 +69,9 @@ export default {
       }
       if (this.w > 40 || this.h > 40) {
         classes.push('mod');
+        classes.push(`${this.colorway}-mod`);
+      } else {
+        classes.push(`${this.colorway}-key`);
       }
       return classes.join(' ');
     },
@@ -159,8 +163,12 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import '../scss/gmk-abs';
+@import '../scss/sp-abs';
+@import '../scss/sp-pbt';
+@import '../scss/colorways';
 
 .key.overme {
   background: #cceecc !important;
@@ -176,13 +184,10 @@ export default {
 .key.thicker {
 }
 .key.mod {
-  background: #313F48;
 }
 .key {
   border-radius: 4px;
-  background: #00234e;
   font-family: 'Montserrat', sans-serif;
-  color: #f7d624;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 120%;

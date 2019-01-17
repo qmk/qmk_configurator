@@ -13,6 +13,7 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
+import random from 'lodash/random';
 import { mapGetters, mapMutations } from 'vuex';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
@@ -104,6 +105,7 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
+      const colorway = this.colorway;
       let curLayer = layout.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
@@ -112,7 +114,8 @@ export default {
           {
             id: index,
             layer: this.layer,
-            meta: keymap[index]
+            meta: keymap[index],
+            colorway: colorway
           },
           coor,
           dims
@@ -166,9 +169,16 @@ export default {
     }
   },
   data() {
+    const colorways = [
+      'modern-selectric',
+      'danger-zone',
+      'oblivion-hagoromo',
+      'pulse'
+    ];
     return {
       width: 0,
-      height: 0
+      height: 0,
+      colorway: colorways[random(0, colorways.length - 1)]
     };
   },
   components: { BaseKey, AnyKey, LayerKey, ContainerKey }
