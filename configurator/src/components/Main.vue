@@ -14,7 +14,7 @@
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p>
-          <label title="Ctrl + N to cycle next colorway">
+          <label title="Ctrl + Alt + N to cycle next colorway">
             Keymap: {{ this.colorway }}
           </label>
         </p>

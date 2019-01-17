@@ -24,7 +24,7 @@ function init() {
       store.commit('app/requestPreview');
     }
   });
-  keypressListener.simple_combo('ctrl n', () => {
+  keypressListener.simple_combo('ctrl alt n', () => {
     store.commit('keymap/nextColorway');
   });
 
