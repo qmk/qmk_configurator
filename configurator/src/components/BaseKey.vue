@@ -44,7 +44,7 @@ export default {
     colorway: String
   },
   mounted() {
-    let icon = ['fab', 'windows'];
+    let icon = [];
     this.platform = window.navigator.platform;
     switch (this.platform) {
       case 'MacIntel':
@@ -60,9 +60,12 @@ export default {
         icon = ['fab', 'linux'];
         break;
       case 'Win32':
+        icon = ['fab', 'windows'];
+        break;
       default:
+        // fall back to text if we can't detect
+        icon = undefined;
     }
-    icon = ['fab', 'linux'];
 
     substitute = {
       ...substitute,
