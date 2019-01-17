@@ -957,7 +957,7 @@ $(document).ready(() => {
             }
           }
           // hard-coding planck as the only default right now
-          var keyboardName = this.keyboard.replace('/', '_');
+          var keyboardName = this.keyboard.replace(/\//g, '_');
           axios
             .get(`keymaps/${keyboardName}_default.json`)
             .then(({ data, status }) => {
