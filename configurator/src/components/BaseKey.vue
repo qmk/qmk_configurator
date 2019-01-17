@@ -13,7 +13,7 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    >{{ displayName }}<font-awesome-icon v-if="icon" size="lg" :icon="icon" /><template
+    >{{ displayName }}<font-awesome-icon v-if="icon" size="2x" :icon="icon" /><template
       v-if="visible">
         <div
           v-if="visible"
@@ -26,11 +26,11 @@
 import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
 
-const substitute = {
-  Up: 'arrow-up',
-  Down: 'arrow-down',
-  Left: 'arrow-left',
-  Right: 'arrow-right'
+let substitute = {
+  KC_UP: 'arrow-up',
+  KC_DOWN: 'arrow-down',
+  KC_LEFT: 'arrow-left',
+  KC_RGHT: 'arrow-right'
 };
 export default {
   name: 'base-key',
@@ -42,6 +42,33 @@ export default {
     y: Number,
     x: Number,
     colorway: String
+  },
+  mounted() {
+    let icon = ['fab', 'windows'];
+    this.platform = window.navigator.platform;
+    switch (this.platform) {
+      case 'MacIntel':
+      case 'Macintosh':
+      case 'MacPPC':
+      case 'iPhone':
+      case 'iPad':
+        icon = ['fab', 'apple'];
+        break;
+      case 'Linux i686':
+      case 'Linux x86_64':
+      case 'Linux armv7l':
+        icon = ['fab', 'linux'];
+        break;
+      case 'Win32':
+      default:
+    }
+    icon = ['fab', 'linux'];
+
+    substitute = {
+      ...substitute,
+      KC_LGUI: icon,
+      KC_RGUI: icon
+    };
   },
   computed: {
     ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
@@ -56,14 +83,14 @@ export default {
       if (isUndefined(this.meta)) {
         return;
       }
-      if (isUndefined(substitute[this.meta.name])) {
+      if (isUndefined(substitute[this.meta.code])) {
         return this.formatName(this.meta.name);
       }
       return undefined;
     },
     icon() {
-      if (substitute[this.meta.name]) {
-        return substitute[this.meta.name];
+      if (substitute[this.meta.code]) {
+        return substitute[this.meta.code];
       }
       return undefined;
     },
@@ -175,7 +202,8 @@ export default {
   data() {
     return {
       inHover: false,
-      inSwap: false
+      inSwap: false,
+      platform: undefined
     };
   }
 };

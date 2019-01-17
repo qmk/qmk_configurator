@@ -13,6 +13,11 @@ import {
   faArrowLeft,
   faArrowRight
 } from '@fortawesome/free-solid-svg-icons';
+import {
+  faApple,
+  faWindows,
+  faLinux
+} from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 library.add(faDownload);
@@ -21,6 +26,9 @@ library.add(faArrowUp);
 library.add(faArrowDown);
 library.add(faArrowLeft);
 library.add(faArrowRight);
+library.add(faApple);
+library.add(faWindows);
+library.add(faLinux);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
