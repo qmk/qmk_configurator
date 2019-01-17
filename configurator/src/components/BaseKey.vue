@@ -66,7 +66,7 @@ export default {
       } else {
         classes.push('thicker');
       }
-      if (this.w > 40) {
+      if (this.w > 40 || this.h > 40) {
         classes.push('mod');
       }
       return classes.join(' ');
