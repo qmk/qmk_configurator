@@ -67,7 +67,8 @@ export default {
       } else {
         classes.push('thicker');
       }
-      if (this.w > 40 || this.h > 40) {
+      const U = 40;
+      if (this.w <= U * 3 && (this.w > U || this.h > U)) {
         classes.push('mod');
         classes.push(`${this.colorway}-mod`);
       } else {
