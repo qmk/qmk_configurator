@@ -61,6 +61,9 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
+      if (this.meta.name.length > 3) {
+        classes.push('smaller');
+      }
       return classes.join(' ');
     },
     mystyles() {
@@ -158,6 +161,9 @@ export default {
 }
 .key.swapme {
   transform: scale(0.8);
+}
+.key.smaller {
+  font-size: 0.8rem;
 }
 /*
 .key {
