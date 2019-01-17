@@ -176,7 +176,7 @@ export default {
           return false;
         }
       }
-      let keyboardName = this.keyboard.replace('/', '_');
+      let keyboardName = this.keyboard.replace(/\//g, '_');
       let store = this.$store;
       axios
         .get(`keymaps/${keyboardName}_default.json`)
