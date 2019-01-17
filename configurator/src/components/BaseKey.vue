@@ -163,14 +163,15 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 .key.overme {
-  background: #cceecc;
+  background: #cceecc !important;
+  color: #333;
   border-radius: 4px;
 }
 .key.swapme {
   transform: scale(0.8);
 }
 .key.smaller {
-  font-size: 0.6rem;
+  font-size: 0.61rem;
 }
 .key.thicker {
 }
