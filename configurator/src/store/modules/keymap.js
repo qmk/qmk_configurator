@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import random from 'lodash/random';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
@@ -13,6 +14,7 @@ const defaults = {
   SCALE: 1
 };
 
+const colorways = ['modern-selectric', 'danger-zone', 'oblivion-hagoromo'];
 const state = {
   keymap: [{}],
   layer: 0,
@@ -24,10 +26,13 @@ const state = {
   // basically when we load a keymap create a promise that will run the keymap loading code
   // but let the visualkeymap signal when it is done and resolve the promise at that time
   // otherwise they race against each other and the visual keymap erases the keymap data
-  loadingKeymapPromise: undefined
+  loadingKeymapPromise: undefined,
+  colorways: colorways,
+  colorwayIndex: random(0, colorways.length - 1)
 };
 
 const getters = {
+  colorway: state => state.colorways[state.colorwayIndex],
   loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
@@ -235,6 +240,9 @@ const mutations = {
   },
   setLoadingKeymapPromise(state, resolve) {
     state.loadingKeymapPromise = resolve;
+  },
+  nextColorway(state) {
+    state.colorwayIndex = (state.colorwayIndex + 1) % state.colorways.length;
   }
 };
 
