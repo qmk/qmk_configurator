@@ -184,11 +184,13 @@ export default {
           if (status === 200) {
             console.log(data);
             this.updateLayout(data.layout);
-            this.updateKeymapName(data.keymap);
-            load_converted_keymap(data.layers);
-            // render_layout(
-            //  this.layouts[this.layout].map(v => Object.assign({}, v))
-            // );
+            let promise = new Promise(resolve =>
+              store.commit('keymap/setLoadingKeymapPromise', resolve)
+            );
+            promise.then(() => {
+              this.updateKeymapName(data.keymap);
+              load_converted_keymap(data.layers);
+            });
             store.commit('keymap/setDirty');
           }
         })
