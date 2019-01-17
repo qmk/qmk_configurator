@@ -14,7 +14,12 @@ const defaults = {
   SCALE: 1
 };
 
-const colorways = ['modern-selectric', 'danger-zone', 'oblivion-hagoromo'];
+const colorways = [
+  'modern-selectric',
+  'danger-zone',
+  'oblivion-hagoromo',
+  'gmk-merlin'
+];
 const state = {
   keymap: [{}],
   layer: 0,
