@@ -13,7 +13,6 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import random from 'lodash/random';
 import { mapGetters, mapMutations } from 'vuex';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
@@ -82,7 +81,8 @@ export default {
       'getLayer',
       'defaults',
       'config',
-      'loadingKeymapPromise'
+      'loadingKeymapPromise',
+      'colorway'
     ]),
     ...mapGetters('app', ['layout', 'layouts']),
     styles() {
@@ -169,16 +169,9 @@ export default {
     }
   },
   data() {
-    const colorways = [
-      'modern-selectric',
-      'danger-zone',
-      'oblivion-hagoromo',
-      'pulse'
-    ];
     return {
       width: 0,
-      height: 0,
-      colorway: colorways[random(0, colorways.length - 1)]
+      height: 0
     };
   },
   components: { BaseKey, AnyKey, LayerKey, ContainerKey }
