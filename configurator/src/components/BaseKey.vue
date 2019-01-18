@@ -26,41 +26,14 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapGetters, mapMutations } from 'vuex';
+import colorways from './colorways';
 
-let substitute = {
-  KC_UP: 'arrow-up',
-  KC_DOWN: 'arrow-down',
-  KC_LEFT: 'arrow-left',
-  KC_RGHT: 'arrow-right'
-};
+let substitute = Object.assign(
+  {},
+  colorways.iconCodes,
+  colorways.platformIcons(window.navigator.platform)
+);
 
-const mods = {
-  KC_F1: true,
-  KC_F2: true,
-  KC_F3: true,
-  KC_F4: true,
-  KC_F5: true,
-  KC_F6: true,
-  KC_F7: true,
-  KC_F8: true,
-  KC_F9: true,
-  KC_F10: true,
-  KC_F11: true,
-  KC_F12: true,
-  KC_LEFT: true,
-  KC_RGHT: true,
-  KC_UP: true,
-  KC_DOWN: true,
-  KC_PSCR: true,
-  KC_SLCK: true,
-  KC_PAUS: true,
-  KC_INS: true,
-  KC_DEL: true,
-  KC_HOME: true,
-  KC_END: true,
-  KC_PGUP: true,
-  KC_PGDN: true
-};
 export default {
   name: 'base-key',
   props: {
@@ -71,36 +44,6 @@ export default {
     y: Number,
     x: Number,
     colorway: String
-  },
-  mounted() {
-    let icon = [];
-    this.platform = window.navigator.platform;
-    switch (this.platform) {
-      case 'MacIntel':
-      case 'Macintosh':
-      case 'MacPPC':
-      case 'iPhone':
-      case 'iPad':
-        icon = ['fab', 'apple'];
-        break;
-      case 'Linux i686':
-      case 'Linux x86_64':
-      case 'Linux armv7l':
-        icon = ['fab', 'linux'];
-        break;
-      case 'Win32':
-        icon = ['fab', 'windows'];
-        break;
-      default:
-        // fall back to text if we can't detect
-        icon = undefined;
-    }
-
-    substitute = {
-      ...substitute,
-      KC_LGUI: icon,
-      KC_RGUI: icon
-    };
   },
   computed: {
     ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
@@ -144,7 +87,7 @@ export default {
       }
       const U = 40;
       if (
-        mods[this.meta.code] ||
+        colorways.modCodes[this.meta.code] ||
         (this.w <= U * 3 && (this.w > U || this.h > U))
       ) {
         classes.push('mod');
