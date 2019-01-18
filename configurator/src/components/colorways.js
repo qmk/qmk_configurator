@@ -9,6 +9,23 @@ export default {
     { name: 'gmk-olivia', override: { KC_SPC: 'space' } },
     { name: 'gmk-ta-royal-alpha' },
     { name: 'gmk-wob' },
+    {
+      name: 'gmk-metaverse',
+      override: {
+        KC_ESC: 'accent',
+        KC_ENT: 'accent',
+        KC_F5: 'accent',
+        KC_F6: 'accent',
+        KC_F7: 'accent',
+        KC_F8: 'accent',
+        KC_LGUI: 'accent',
+        KC_RGUI: 'accent',
+        KC_LEFT: 'accent',
+        KC_RGHT: 'accent',
+        KC_DOWN: 'accent',
+        KC_UP: 'accent'
+      }
+    },
     { name: 'modern-selectric' },
     { name: 'nantucket-selectric' },
     { name: 'oblivion-hagoromo' }
