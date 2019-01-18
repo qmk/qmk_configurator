@@ -15,12 +15,15 @@ const defaults = {
 };
 
 const colorways = [
-  'modern-selectric',
-  'danger-zone',
-  'oblivion-hagoromo',
-  'gmk-merlin',
   'carbon',
-  'drifter'
+  'danger-zone',
+  'drifter',
+  'gmk-dolch',
+  'gmk-merlin',
+  'gmk-wob',
+  'modern-selectric',
+  'nantucket-selectric',
+  'oblivion-hagoromo'
 ];
 const state = {
   keymap: [{}],
@@ -32,7 +35,7 @@ const state = {
   // super hacky way to wait for visual keymap to be done
   // basically when we load a keymap create a promise that will run the keymap loading code
   // but let the visualkeymap signal when it is done and resolve the promise at that time
-  // otherwise they race against each other and the visual keymap erases the keymap data
+  // otherwise they race against each other and the visual keymap erases the keymapd data
   loadingKeymapPromise: undefined,
   colorways: colorways,
   colorwayIndex: random(0, colorways.length - 1)
