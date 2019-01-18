@@ -1,3 +1,5 @@
+// Signature Plastics keysets
+
 .danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
@@ -13,6 +15,21 @@
   }
 }
 .danger-zone-kb {
+}
+
+.carbon-key {
+  background: $color-sp-abs-WBO;
+  color: $color-sp-abs-GQM;
+  input {
+    background: lighten($color-sp-abs-WBO, 40%);
+  }
+}
+.carbon-mod {
+  background: $color-sp-abs-GQM;
+  color: $color-sp-abs-OBC;
+  input {
+    background: lighten($color-sp-abs-GQM, 40%);
+  }
 }
 
 .modern-selectric-key {
@@ -32,6 +49,23 @@
 .modern-selectric-kb {
 }
 
+.nantucket-selectric-key {
+  background: $color-sp-abs-WV;
+  color: $color-sp-abs-BBI;
+  input {
+    background: lighten($color-sp-abs-WV, 40%);
+  }
+}
+.nantucket-selectric-mod {
+  background: $color-sp-abs-BBI;
+  color: $color-sp-abs-YCF;
+  input {
+    background: lighten($color-sp-abs-BBI, 40%);
+  }
+}
+.nantucket-selectric-kb {
+}
+
 .oblivion-hagoromo-key {
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
@@ -48,6 +82,8 @@
 }
 .oblivion-hagoromo-kb {
 }
+
+// GMK Keysets
 
 .gmk-merlin-key {
   background: $color-gmk-abs-CP;
@@ -66,22 +102,42 @@
 .gmk-merlin-kb {
 }
 
-.carbon-key {
-  background: $color-sp-abs-WBO;
-  color: $color-sp-abs-GQM;
+.gmk-wob-key {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
   input {
-    background: lighten($color-sp-abs-WBO, 40%);
+    background: lighten($color-gmk-abs-CR, 40%);
   }
 }
-.carbon-mod {
-  background: $color-sp-abs-GQM;
-  color: $color-sp-abs-OBC;
+.gmk-wob-mod {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
   input {
-    background: lighten($color-sp-abs-GQM, 40%);
+    background: lighten($color-gmk-abs-CR, 40%);
   }
 }
-.carbon-kb {
+.gmk-wob-kb {
 }
+
+.gmk-dolch-key {
+  background: $color-gmk-abs-CC;
+  color: $color-gmk-abs-WS1;
+  input {
+    background: lighten($color-gmk-abs-CC, 40%);
+  }
+}
+.gmk-dolch-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-WS1;
+  input {
+    background: lighten($color-gmk-abs-N9, 40%);
+  }
+}
+
+.gmk-dolch-kb {
+}
+
+// Keyreative
 
 .drifter-key {
   background: #e5e1e6;
@@ -99,6 +155,3 @@
 }
 .drifter-kb {
 }
-
-
-
