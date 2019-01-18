@@ -46,7 +46,12 @@ export default {
     colorway: String
   },
   computed: {
-    ...mapGetters('keymap', ['getKey', 'getSelectedKey']),
+    ...mapGetters('keymap', [
+      'getKey',
+      'getSelectedKey',
+      'colorwayOverride',
+      'config'
+    ]),
     ...mapGetters('keymap', { curLayer: 'layer' }),
     myid() {
       return `key-${this.id}`;
@@ -85,14 +90,21 @@ export default {
       } else {
         classes.push('thicker');
       }
-      const U = 40;
-      if (
+      const { KEY_WIDTH, KEY_HEIGHT } = this.config;
+      if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
+        // Colorway specific overrides by keycode
+        classes.push(
+          `${this.colorway}-${this.colorwayOverride[this.meta.code]}`
+        );
+      } else if (
+        // Mod keys
         colorways.modCodes[this.meta.code] ||
-        (this.w <= U * 3 && (this.w > U || this.h > U))
+        (this.w <= KEY_WIDTH * 3 && (this.w > KEY_WIDTH || this.h > KEY_HEIGHT))
       ) {
         classes.push('mod');
         classes.push(`${this.colorway}-mod`);
       } else {
+        // everything else
         classes.push(`${this.colorway}-key`);
       }
       return classes.join(' ');
