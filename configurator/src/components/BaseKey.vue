@@ -221,43 +221,14 @@ export default {
 .key.mod {
 }
 .key {
-  border-radius: 4px;
+  border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 120%;
+  box-shadow: 0px -1px 0px 3px inset rgba(0, 0, 0, 0.1),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-/*
-.key {
-  color: #aaa;
-  font: bold 9pt arial;
-  text-decoration: none;
-  text-align: center;
-  width: 44px;
-  height: 41px;
-  margin: 5px;
-  background: #eff0f2;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border-top: 1px solid #f5f5f5;
-  -webkit-box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9,
-    0 2px 3px #333;
-  -moz-box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9,
-    0 2px 3px #333;
-  box-shadow: inset 0 0 25px #e8e8e8, 0 1px 0 #c3c3c3, 0 2px 0 #c9c9c9,
-    0 2px 3px #333;
-  text-shadow: 0px 1px 0px #f5f5f5;
-}
-.key:active,
-.keydown {
-  color: #888;
-  background: #ebeced;
-  margin: 7px 5px 3px;
-  -webkit-box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
-  -moz-box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
-  box-shadow: inset 0 0 25px #ddd, 0 0 3px #333;
-  border-top: 1px solid #eee;
-}
-*/
 </style>

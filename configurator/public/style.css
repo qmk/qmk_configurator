@@ -837,21 +837,16 @@ button {
 }
 
 .key {
-  border: #ccc 1px solid;
-  border-radius: 2px;
-  position: absolute;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background: #fff;
-  line-height: 100%;
-  padding: 1px;
+  position: absolute;
+  box-sizing: border-box;
   white-space: pre-line;
   cursor: pointer;
+  line-height: 100%;
+  padding: 1px;
 }
 
 .key:empty {
