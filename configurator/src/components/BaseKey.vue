@@ -33,6 +33,34 @@ let substitute = {
   KC_LEFT: 'arrow-left',
   KC_RGHT: 'arrow-right'
 };
+
+const mods = {
+  KC_F1: true,
+  KC_F2: true,
+  KC_F3: true,
+  KC_F4: true,
+  KC_F5: true,
+  KC_F6: true,
+  KC_F7: true,
+  KC_F8: true,
+  KC_F9: true,
+  KC_F10: true,
+  KC_F11: true,
+  KC_F12: true,
+  KC_LEFT: true,
+  KC_RGHT: true,
+  KC_UP: true,
+  KC_DOWN: true,
+  KC_PSCR: true,
+  KC_SLCK: true,
+  KC_PAUS: true,
+  KC_INS: true,
+  KC_DEL: true,
+  KC_HOME: true,
+  KC_END: true,
+  KC_PGUP: true,
+  KC_PGDN: true
+};
 export default {
   name: 'base-key',
   props: {
@@ -115,7 +143,10 @@ export default {
         classes.push('thicker');
       }
       const U = 40;
-      if (this.w <= U * 3 && (this.w > U || this.h > U)) {
+      if (
+        mods[this.meta.code] ||
+        (this.w <= U * 3 && (this.w > U || this.h > U))
+      ) {
         classes.push('mod');
         classes.push(`${this.colorway}-mod`);
       } else {
