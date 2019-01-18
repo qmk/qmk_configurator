@@ -14,7 +14,7 @@
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p>
-          <label title="Ctrl + Alt + N to cycle next colorway">
+          <label @click="nextColorway" title="Ctrl + Alt + N to cycle next colorway">
             Keymap: {{ this.colorway }}
           </label>
         </p>
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
@@ -45,6 +45,9 @@ export default {
   },
   computed: {
     ...mapGetters('keymap', ['colorway'])
+  },
+  methods: {
+    ...mapMutations('keymap', ['nextColorway'])
   },
   mounted() {
     jquery.init();
