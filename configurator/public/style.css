@@ -847,6 +847,7 @@ button {
   cursor: pointer;
   line-height: 100%;
   padding: 1px;
+  padding-bottom: 3px;
 }
 
 .key:empty {
