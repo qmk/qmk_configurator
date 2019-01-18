@@ -3,6 +3,7 @@ import random from 'lodash/random';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
+import colorways from '@/components/colorways';
 const defaults = {
   MAX_X: 888,
   KEY_WIDTH: 40,
@@ -14,20 +15,6 @@ const defaults = {
   SCALE: 1
 };
 
-const colorways = [
-  'carbon',
-  'danger-zone',
-  'drifter',
-  'gmk-dolch',
-  'gmk-merlin',
-  'gmk-olivetti',
-  'gmk-olivia',
-  'gmk-ta-royal-alpha',
-  'gmk-wob',
-  'modern-selectric',
-  'nantucket-selectric',
-  'oblivion-hagoromo'
-];
 const state = {
   keymap: [{}],
   layer: 0,
@@ -40,12 +27,13 @@ const state = {
   // but let the visualkeymap signal when it is done and resolve the promise at that time
   // otherwise they race against each other and the visual keymap erases the keymapd data
   loadingKeymapPromise: undefined,
-  colorways: colorways,
-  colorwayIndex: random(0, colorways.length - 1)
+  colorways: colorways.list,
+  colorwayIndex: random(0, colorways.list.length - 1)
 };
 
 const getters = {
-  colorway: state => state.colorways[state.colorwayIndex],
+  colorway: state => state.colorways[state.colorwayIndex].name,
+  colorwayOverride: state => state.colorways[state.colorwayIndex].override,
   loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,

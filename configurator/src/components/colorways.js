@@ -1,4 +1,18 @@
 export default {
+  list: [
+    { name: 'carbon' },
+    { name: 'danger-zone' },
+    { name: 'drifter' },
+    { name: 'gmk-dolch' },
+    { name: 'gmk-merlin' },
+    { name: 'gmk-olivetti' },
+    { name: 'gmk-olivia', override: { KC_SPC: 'space' } },
+    { name: 'gmk-ta-royal-alpha' },
+    { name: 'gmk-wob' },
+    { name: 'modern-selectric' },
+    { name: 'nantucket-selectric' },
+    { name: 'oblivion-hagoromo' }
+  ],
   /*
    * List of codes we should use icons for instead of text
    */
