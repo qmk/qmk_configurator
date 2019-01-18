@@ -82,3 +82,23 @@
 }
 .carbon-kb {
 }
+
+.drifter-key {
+  background: #e5e1e6;
+  color: #222222;
+  input {
+    background: lighten(#e5e1e6, 40%);
+  }
+}
+.drifter-mod {
+  background: #9b2242;
+  color: #71dbd4;
+  input {
+    background: lighten(#9b2242, 40%);
+  }
+}
+.drifter-kb {
+}
+
+
+
