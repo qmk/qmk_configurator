@@ -133,8 +133,58 @@
     background: lighten($color-gmk-abs-N9, 40%);
   }
 }
-
 .gmk-dolch-kb {
+}
+
+.gmk-olivetti-key {
+  background: $color-gmk-abs-CP;
+  color: $color-gmk-abs-V4;
+  input {
+    background: lighten($color-gmk-abs-CP, 40%);
+  }
+}
+.gmk-olivetti-mod {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-V4;
+  input {
+    background: lighten($color-gmk-abs-U9, 40%);
+  }
+}
+.gmk-olivetti-kb {
+}
+
+.gmk-olivia-key {
+  background: $color-gmk-abs-CP;
+  color: #363434;
+  input {
+    background: lighten($color-gmk-abs-CP, 40%);
+  }
+}
+.gmk-olivia-mod {
+  background: #363434;
+  color: #e8c4b8;
+  input {
+    background: lighten(#363434, 40%);
+  }
+}
+.gmk-olivia-kb {
+}
+
+.gmk-ta-royal-alpha-key {
+  background: $color-gmk-abs-3K;
+  color: $color-gmk-abs-N7;
+  input {
+    background: lighten($color-gmk-abs-3K, 40%);
+  }
+}
+.gmk-ta-royal-alpha-mod {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-CP;
+  input {
+    background: lighten($color-gmk-abs-AE, 40%);
+  }
+}
+.gmk-ta-royal-alpha-kb {
 }
 
 // Keyreative
