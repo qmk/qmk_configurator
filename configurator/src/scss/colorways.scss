@@ -167,13 +167,12 @@
     background: lighten(#363434, 40%);
   }
 }
-
 .gmk-olivia-space {
   background: #e8c4b8;
 }
-
 .gmk-olivia-kb {
 }
+
 
 .gmk-ta-royal-alpha-key {
   background: $color-gmk-abs-3K;
@@ -190,6 +189,24 @@
   }
 }
 .gmk-ta-royal-alpha-kb {
+  // placeholder
+}
+
+
+.gmk-metaverse-key {
+  background: $color-gmk-abs-WS1;
+  color: $color-gmk-abs-CR;
+}
+.gmk-metaverse-mod {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-metaverse-accent {
+  background: $color-gmk-abs-RO2;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-metaverse-kb {
+  // placeholder
 }
 
 // Keyreative
