@@ -1,10 +1,16 @@
 .danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
+  input {
+    background: lighten($color-sp-abs-BFU, 40%);
+  }
 }
 .danger-zone-mod {
   background: $color-sp-abs-GSM;
   color: $color-sp-abs-YY;
+  input {
+    background: lighten($color-sp-abs-GSM, 40%);
+  }
 }
 .danger-zone-kb {
 }
@@ -12,10 +18,16 @@
 .modern-selectric-key {
   background: $color-sp-abs-NN;
   color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-sp-abs-NN, 40%);
+  }
 }
 .modern-selectric-mod {
   background: $color-sp-abs-BDH;
   color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-sp-abs-BDH, 40%);
+  }
 }
 .modern-selectric-kb {
 }
@@ -23,10 +35,16 @@
 .oblivion-hagoromo-key {
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
+  input {
+    background: lighten($color-sp-abs-WFK, 40%);
+  }
 }
 .oblivion-hagoromo-mod {
   background: $color-sp-abs-GD;
   color: $color-sp-abs-GAL;
+  input {
+    background: lighten($color-sp-abs-GD, 40%);
+  }
 }
 .oblivion-hagoromo-kb {
 }
@@ -34,10 +52,16 @@
 .gmk-merlin-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-TU1;
+  input {
+    background: lighten($color-gmk-abs-CP, 40%);
+  }
 }
 .gmk-merlin-mod {
   background: $color-gmk-abs-TU1;
   color: $color-gmk-abs-N6;
+  input {
+    background: lighten($color-gmk-abs-TU1, 40%);
+  }
 }
 .gmk-merlin-kb {
 }
@@ -45,10 +69,16 @@
 .carbon-key {
   background: $color-sp-abs-WBO;
   color: $color-sp-abs-GQM;
+  input {
+    background: lighten($color-sp-abs-WBO, 40%);
+  }
 }
 .carbon-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-OBC;
+  input {
+    background: lighten($color-sp-abs-GQM, 40%);
+  }
 }
 .carbon-kb {
 }
