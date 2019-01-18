@@ -19,7 +19,8 @@ const colorways = [
   'danger-zone',
   'oblivion-hagoromo',
   'gmk-merlin',
-  'carbon'
+  'carbon',
+  'drifter'
 ];
 const state = {
   keymap: [{}],
