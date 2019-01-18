@@ -6,6 +6,7 @@
     class="key"
     :class="myclasses"
     :style="mystyles"
+    :title="meta.code"
     @click="clicked"
     @dragstart="dragstart"
     @dragend="dragend"
