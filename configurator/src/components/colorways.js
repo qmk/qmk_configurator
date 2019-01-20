@@ -86,7 +86,24 @@ export default {
     'KC_HOME',
     'KC_END',
     'KC_PGUP',
-    'KC_PGDN'
+    'KC_PGDN',
+    'KC_LSFT',
+    'KC_RSFT',
+    'KC_TAB',
+    'KC_RGUI',
+    'KC_LGUI',
+    'KC_LALT',
+    'KC_RALT',
+    'KC_LCTL',
+    'KC_RCTL',
+    'KC_ENT',
+    'KC_BSPC',
+    'MO(layer)',
+    'TG(layer)',
+    'TO(layer)',
+    'TT(layer)',
+    'DF(layer)',
+    'OSL(layer)'
   ].reduce((acc, code) => {
     acc[code] = true;
     return acc;
