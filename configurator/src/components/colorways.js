@@ -103,7 +103,8 @@ export default {
     'TO(layer)',
     'TT(layer)',
     'DF(layer)',
-    'OSL(layer)'
+    'OSL(layer)',
+    'KC_ESC'
   ].reduce((acc, code) => {
     acc[code] = true;
     return acc;
