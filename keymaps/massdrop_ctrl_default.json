@@ -1,6 +1,7 @@
 {
   "keyboard": "massdrop/ctrl",
-  "keymap": "default-ish",
+  "keymap": "defaultish_67adc29",
+  "commit": "67adc29aa35719eea2de43bacf9cd5e8b5dfd79e",
   "layout": "LAYOUT",
   "layers": [
     [
