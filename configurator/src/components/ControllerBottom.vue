@@ -5,7 +5,8 @@
         class="fixed-size"
         id="toolbox"
         title="Download keymap.c only"
-        disabled="true"
+        @click="downloadKeymap"
+        v-bind:disabled="disableDownloads"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
       </button>
@@ -69,6 +70,7 @@
 </template>
 <script>
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 const encoding = 'data:text/plain;charset=utf-8,';
@@ -83,11 +85,9 @@ import {
 export default {
   name: 'bottom-controller',
   computed: {
+    ...mapGetters('app', ['previewRequested', 'keymapSourceURL']),
     disableDownloads() {
       return !this.$store.getters['app/enableDownloads'];
-    },
-    previewRequested() {
-      return this.$store.getters['app/previewRequested'];
     }
   },
   watch: {
@@ -144,6 +144,15 @@ export default {
     },
     downloadSource() {
       this.urlEncodedData = first(this.$store.getters['app/firmwareSourceURL']);
+      this.filename = 'source.zip';
+      this.downloadElementEnabled = true;
+      Vue.nextTick(() => {
+        this.$refs.downloadElement.click();
+        this.downloadElementEnabled = false;
+      });
+    },
+    downloadKeymap() {
+      this.urlEncodedData = first(this.keymapSourceURL);
       this.filename = 'source.zip';
       this.downloadElementEnabled = true;
       Vue.nextTick(() => {

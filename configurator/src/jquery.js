@@ -329,6 +329,10 @@ function check_status() {
               'app/setFirmwareSourceURL',
               data.result.firmware_source_url
             );
+            store.commit(
+              'app/setKeymapSourceURL',
+              data.result.firmware_keymap_url
+            );
             store.commit('app/setFirmwareFile', data.result.firmware_filename);
             enableCompileButton();
             enableOtherButtons();
