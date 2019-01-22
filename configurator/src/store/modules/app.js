@@ -19,6 +19,7 @@ const state = {
   enableDownloads: false,
   firmwareBinaryURL: [],
   firmwareSourceURL: [],
+  keymapSourceURL: [],
   filter: '',
   keypressListener: undefined,
   showSpinner: false,
@@ -54,7 +55,8 @@ const getters = {
   jobID: state => state.jobID,
   enableDownloads: state => state.enableDownloads,
   firmwareBinaryURL: state => state.firmwareBinaryURL,
-  firmwareSourceURL: state => state.firmwareSourceURL
+  firmwareSourceURL: state => state.firmwareSourceURL,
+  keymapSourceURL: state => state.keymapSourceURL
 };
 
 const actions = {
@@ -228,6 +230,9 @@ const mutations = {
   },
   setSpinnerMsg(state, nextMsg) {
     state.spinnerMsg = nextMsg;
+  },
+  setKeymapSourceURL(state, keymap) {
+    state.keymapSourceURL = keymap;
   }
 };
 
