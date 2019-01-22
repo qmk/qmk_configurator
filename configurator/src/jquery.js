@@ -222,6 +222,7 @@ function getExclusionList() {
     'minidox',
     'nyquist',
     'orthodox',
+    'pinky',
     'planck',
     'preonic',
     'ps2avrGB',
@@ -230,6 +231,7 @@ function getExclusionList() {
     'redox',
     'rorschach',
     's60_x',
+    'sol',
     'vitamins_included',
     'viterbi',
     'zen'
