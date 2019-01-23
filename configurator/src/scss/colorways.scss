@@ -109,6 +109,59 @@
 .sa-jukebox-kb {
 }
 
+.dsa-galaxy-class-key {
+  background: $color-sp-pbt-BFE;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-BFE, 40%);
+  }
+}
+.dsa-galaxy-class-mod {
+  // yellow
+  background: $color-pantone-141C;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-pantone-141C, 40%);
+  }
+}
+.dsa-galaxy-class-purple {
+  background: $color-sp-pbt-RCB;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-RCB, 40%);
+  }
+}
+.dsa-galaxy-class-darker-blue {
+  background: $color-sp-pbt-BDJ;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-BDJ, 40%);
+  }
+}
+.dsa-galaxy-class-pink {
+  background: $color-sp-pbt-RCA;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-RCA, 40%);
+  }
+}
+.dsa-galaxy-class-light-blue {
+  background: $color-sp-pbt-BFE;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-BFE, 40%);
+  }
+}
+.dsa-galaxy-class-gray {
+  background: $color-sp-pbt-GQT;
+  color: $color-sp-pbt-BLACK;
+  input {
+    background: lighten($color-sp-pbt-GQT, 40%);
+  }
+}
+.dsa-galaxy-class-kb {
+}
+
 
 // GMK Keysets
 
