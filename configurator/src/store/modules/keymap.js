@@ -33,7 +33,9 @@ const state = {
 
 const getters = {
   colorway: state => state.colorways[state.colorwayIndex].name,
+  colorways: state => state.colorways.map(colorway => colorway.name),
   colorwayOverride: state => state.colorways[state.colorwayIndex].override,
+  colorwayIndex: state => state.colorwayIndex,
   loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
   config: state => state.config,
@@ -242,8 +244,12 @@ const mutations = {
   setLoadingKeymapPromise(state, resolve) {
     state.loadingKeymapPromise = resolve;
   },
-  nextColorway(state) {
-    state.colorwayIndex = (state.colorwayIndex + 1) % state.colorways.length;
+  nextColorway(state, index) {
+    if (isUndefined(index)) {
+      state.colorwayIndex = (state.colorwayIndex + 1) % state.colorways.length;
+    } else {
+      state.colorwayIndex = index;
+    }
   }
 };
 
