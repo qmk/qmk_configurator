@@ -14,11 +14,18 @@
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p>
-          <label
-            @click="nextColorway"
-            title="Ctrl + Alt + N to cycle next colorway"
-          >
-            Keymap: {{ this.colorway }}
+          <label title="Ctrl + Alt + N to cycle next colorway">
+            Keymap:
+            <select id="colorway-select" v-model="curIndex">
+              <option
+                class="option"
+                v-for="(name, index) in displayColorways"
+                :key="index"
+                :value="index"
+              >
+                {{ name }}
+              </option>
+            </select>
           </label>
         </p>
         <visualKeymap :profile="false" />
@@ -28,6 +35,7 @@
 </template>
 
 <script>
+import capitalize from 'lodash/capitalize';
 import { mapGetters, mapMutations } from 'vuex';
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
@@ -47,7 +55,27 @@ export default {
     LayerControl
   },
   computed: {
-    ...mapGetters('keymap', ['colorway'])
+    ...mapGetters('keymap', ['colorwayIndex', 'colorways']),
+    curIndex: {
+      get() {
+        return this.colorwayIndex;
+      },
+      set(value) {
+        this.nextColorway(value);
+      }
+    },
+    displayColorways() {
+      return this.colorways.map(keyset => {
+        return keyset
+          .replace(/-/g, ' ')
+          .split(' ')
+          .map(word => capitalize(word))
+          .join(' ')
+          .replace(/Gmk/, 'GMK')
+          .replace(/Wob/, 'WOB')
+          .replace(/Ta/, 'TA');
+      });
+    }
   },
   methods: {
     ...mapMutations('keymap', ['nextColorway'])
@@ -58,12 +86,15 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style scoped>
 .Main {
 }
 .hint {
   display: grid;
   justify-content: start;
   align-content: start;
+}
+#colorway-select {
+  font-family: sans-serif;
 }
 </style>
