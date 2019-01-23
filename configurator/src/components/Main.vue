@@ -72,6 +72,8 @@ export default {
           .map(word => capitalize(word))
           .join(' ')
           .replace(/Gmk/, 'GMK')
+          .replace(/^Sa/, 'SA')
+          .replace(/^Dsa/, 'DSA')
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA');
       });

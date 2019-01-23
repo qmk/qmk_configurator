@@ -1,30 +1,30 @@
 // Signature Plastics keysets
 
-.danger-zone-key {
+.sa-danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
   input {
     background: lighten($color-sp-abs-BFU, 40%);
   }
 }
-.danger-zone-mod {
+.sa-danger-zone-mod {
   background: $color-sp-abs-GSM;
   color: $color-sp-abs-YY;
   input {
     background: lighten($color-sp-abs-GSM, 40%);
   }
 }
-.danger-zone-kb {
+.sa-danger-zone-kb {
 }
 
-.carbon-key {
+.sa-carbon-key {
   background: $color-sp-abs-WBO;
   color: $color-sp-abs-GQM;
   input {
     background: lighten($color-sp-abs-WBO, 40%);
   }
 }
-.carbon-mod {
+.sa-carbon-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-OBC;
   input {
@@ -32,56 +32,83 @@
   }
 }
 
-.modern-selectric-key {
+.sa-modern-selectric-key {
   background: $color-sp-abs-NN;
   color: $color-sp-abs-WFK;
   input {
     background: lighten($color-sp-abs-NN, 40%);
   }
 }
-.modern-selectric-mod {
+.sa-modern-selectric-mod {
   background: $color-sp-abs-BDH;
   color: $color-sp-abs-WFK;
   input {
     background: lighten($color-sp-abs-BDH, 40%);
   }
 }
-.modern-selectric-kb {
+.sa-modern-selectric-kb {
 }
 
-.nantucket-selectric-key {
+.sa-nantucket-selectric-key {
   background: $color-sp-abs-WV;
   color: $color-sp-abs-BBI;
   input {
     background: lighten($color-sp-abs-WV, 40%);
   }
 }
-.nantucket-selectric-mod {
+.sa-nantucket-selectric-mod {
   background: $color-sp-abs-BBI;
   color: $color-sp-abs-YCF;
   input {
     background: lighten($color-sp-abs-BBI, 40%);
   }
 }
-.nantucket-selectric-kb {
+.sa-nantucket-selectric-kb {
 }
 
-.oblivion-hagoromo-key {
+.sa-oblivion-hagoromo-key {
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
   input {
     background: lighten($color-sp-abs-WFK, 40%);
   }
 }
-.oblivion-hagoromo-mod {
+.sa-oblivion-hagoromo-mod {
   background: $color-sp-abs-GD;
   color: $color-sp-abs-GAL;
   input {
     background: lighten($color-sp-abs-GD, 40%);
   }
 }
-.oblivion-hagoromo-kb {
+.sa-oblivion-hagoromo-kb {
 }
+
+
+.sa-jukebox-key {
+  background: $color-sp-abs-TM;
+  color: $color-sp-abs-RN;
+  input {
+    background: lighten($color-sp-abs-TM, 40%);
+    color: $color-sp-abs-RN;
+  }
+}
+.sa-jukebox-mod {
+  background: $color-sp-abs-VCO;
+  color: $color-sp-abs-RN;
+  input {
+    background: lighten($color-sp-abs-VCO, 40%);
+  }
+}
+.sa-jukebox-accent {
+  background: $color-sp-abs-RN;
+  color: $color-sp-abs-TM;
+  input {
+    background: lighten($color-sp-abs-RN, 40%);
+  }
+}
+.sa-jukebox-kb {
+}
+
 
 // GMK Keysets
 
@@ -210,21 +237,48 @@
   // placeholder
 }
 
+
+.gmk-nautilus-key {
+  background: $color-pantone-534C;
+  color: $color-gmk-abs-TU2;
+  input {
+    background: lighten($color-pantone-534C, 40%);
+  }
+}
+.gmk-nautilus-mod {
+  background: $color-pantone-533C;
+  color: $color-gmk-abs-N6;
+  input {
+    background: lighten($color-pantone-533C, 40%);
+  }
+}
+.gmk-nautilus-accent {
+  background: $color-gmk-abs-N6;
+  color: $color-pantone-533C;
+  input {
+    background: lighten($color-gmk-abs-N6, 40%);
+  }
+}
+.gmk-nautilus-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
+
 // Keyreative
 
-.drifter-key {
+.dsa-drifter-key {
   background: #e5e1e6;
   color: #222222;
   input {
     background: lighten(#e5e1e6, 40%);
   }
 }
-.drifter-mod {
+.dsa-drifter-mod {
   background: #9b2242;
   color: #71dbd4;
   input {
     background: lighten(#9b2242, 40%);
   }
 }
-.drifter-kb {
+.dsa-drifter-kb {
 }

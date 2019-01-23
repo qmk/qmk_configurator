@@ -203,6 +203,7 @@ export default {
 @import '../scss/gmk-abs';
 @import '../scss/sp-abs';
 @import '../scss/sp-pbt';
+@import '../scss/pantone';
 @import '../scss/colorways';
 
 .key.overme {
