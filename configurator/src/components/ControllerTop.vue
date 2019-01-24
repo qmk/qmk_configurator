@@ -190,8 +190,8 @@ export default {
             promise.then(() => {
               this.updateKeymapName(data.keymap);
               load_converted_keymap(data.layers);
+              store.commit('keymap/setDirty');
             });
-            store.commit('keymap/setDirty');
           }
         })
         .catch(error => {
@@ -268,9 +268,6 @@ export default {
       let newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
       this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
-      // let render = e.target;
-      // render &&
-      //  render_layout(this.layouts[this.layout].map(v => Object.assign({}, v)));
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;

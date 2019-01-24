@@ -28,7 +28,11 @@ export default {
     layout(newLayout, oldLayout) {
       // eslint-disable-next-line no-console
       this.profile && console.time('layout');
-      if (!isUndefined(newLayout) && newLayout !== oldLayout) {
+      if (
+        !isUndefined(newLayout) &&
+        !this.isLayoutUIUpdate(newLayout, oldLayout) &&
+        newLayout !== oldLayout
+      ) {
         // eslint-disable-next-line no-console
         this.profile && console.time('layout::reset');
         this.resetConfig();
@@ -135,6 +139,16 @@ export default {
       'resizeConfig',
       'setLoadingKeymapPromise'
     ]),
+    /**
+     * Due to a quirk in how reactivity works we have to clear the layout
+     * name to reset the UI to it's old value.
+     * We should ignore these events to avoid updating the visual keymap.
+     * If either the existing or the new layout is empty string return true.
+     * We use a change in layout to decide whether to reset the keymap.
+     */
+    isLayoutUIUpdate(newLayout, oldLayout) {
+      return newLayout === '' || oldLayout === '';
+    },
     calcKeyKeymapDims(w, h) {
       return {
         w:
