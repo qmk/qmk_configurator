@@ -60,27 +60,28 @@ function generateKeypressHandler(keycode) {
 //Function that takes in a keymap loops over it and fills populates the keymap variable
 function load_converted_keymap(converted_keymap) {
   //Loop over each layer from the keymap
-  var stats = { count: 0, any: 0, layers: 0 };
   console.log(converted_keymap);
-  let layers = [];
-  converted_keymap.forEach((layerData, _layer) => {
-    //Add layer object for every layer that exists
-    store.commit('keymap/initLayer', _layer);
-    //Loop over each keycode in the layer
-    layers.push(
-      layerData.map(keycode => {
-        return parseKeycode(keycode, stats);
-      })
-    );
-    stats.layers += 1;
-  });
-  store.commit('keymap/setLayers', layers);
-
-  console.log('stat', stats);
-  var msg = `\nLoaded ${stats.layers} layers and ${
-    stats.count
-  } keycodes. Defined ${stats.any} Any key keycodes\n`;
-  store.commit('status/append', msg);
+  const acc = converted_keymap.reduce(
+    (acc, layerData, _layer) => {
+      //Add layer object for every layer that exists
+      store.commit('keymap/initLayer', _layer);
+      //Loop over each keycode in the layer
+      acc.layers.push(
+        layerData.map(keycode => {
+          return parseKeycode(keycode, acc.stats);
+        })
+      );
+      acc.stats.layers += 1;
+      return acc;
+    },
+    {
+      stats: { count: 0, any: 0, layers: 0 },
+      layers: []
+    }
+  );
+  store.commit('keymap/setLayers', acc.layers);
+  console.log('stat', acc.stats);
+  return acc.stats;
 }
 
 function stripANY(keycode) {
@@ -121,6 +122,7 @@ function parseKeycode(keycode, stats) {
   let metadata;
 
   keycode = stripANY(keycode);
+  stats.count += 1;
 
   // Check if the keycode is a complex/combo keycode ie. contains ()
   if (keycode.includes('(')) {
@@ -136,6 +138,7 @@ function parseKeycode(keycode, stats) {
       // combo keycode
       metadata = store.getters['keycodes/lookupKeycode'](internal);
       if (metadata === undefined) {
+        stats.any += 1;
         return newAnyKey(keycode);
       }
       let internalkeycode = newKey(metadata, internal);
