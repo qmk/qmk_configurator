@@ -1,6 +1,6 @@
 {
     "keyboard": "clueboard/card",
-    "keymap": "clueboard/card_layout_mine",
+    "keymap": "card_layout_mine",
     "layout": "LAYOUT",
     "layers": [
         [
