@@ -225,12 +225,15 @@ export default {
             store.commit('keymap/setLoadingKeymapPromise', resolve)
           );
           promise.then(() => {
-            load_converted_keymap(data.layers);
+            const stats = load_converted_keymap(data.layers);
+            const msg = `\nLoaded ${stats.layers} layers and ${
+              stats.count
+            } keycodes. Defined ${stats.any} Any key keycodes\n`;
+            store.commit('status/deferredMessage', msg);
             store.commit('app/setKeymapName', data.keymap);
+            store.commit('keymap/setDirty');
           });
-          this.$store.commit('keymap/setDirty');
           disableOtherButtons();
-          this.$store.dispatch('status/viewReadme', data.keyboard);
         });
     },
     infoPreviewChanged() {
