@@ -189,7 +189,11 @@ export default {
             );
             promise.then(() => {
               this.updateKeymapName(data.keymap);
-              load_converted_keymap(data.layers);
+              const stats = load_converted_keymap(data.layers);
+              const msg = `\nLoaded ${stats.layers} layers and ${
+                stats.count
+              } keycodes. Defined ${stats.any} Any key keycodes\n`;
+              store.commit('status/append', msg);
               store.commit('keymap/setDirty');
             });
           }

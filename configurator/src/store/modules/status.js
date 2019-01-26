@@ -4,7 +4,8 @@ import { backend_readme_url_template } from './constants';
 
 const state = {
   message: '',
-  scrollToLatest: false
+  scrollToLatest: false,
+  deferredMessage: ''
 };
 const getters = {
   message: state => state.message,
@@ -16,12 +17,14 @@ const actions = {
     // signal scroll buffer to lastest message
     commit('startScroll');
   },
-  viewReadme({ commit }, _keyboard) {
+  viewReadme({ state, commit }, _keyboard) {
     return axios
       .get(backend_readme_url_template({ keyboard: _keyboard }))
       .then(result => {
         if (result.status === 200) {
           commit('append', escape(result.data));
+          commit('append', escape(state.deferredMessage));
+          commit('deferredMessage', '');
         }
       });
   }
@@ -38,6 +41,9 @@ const mutations = {
   },
   startScroll(state) {
     state.scrollToLatest = true;
+  },
+  deferredMessage(state, dmsg) {
+    state.deferredMessage = dmsg;
   }
 };
 

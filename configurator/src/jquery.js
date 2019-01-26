@@ -60,7 +60,7 @@ function generateKeypressHandler(keycode) {
 //Function that takes in a keymap loops over it and fills populates the keymap variable
 function load_converted_keymap(converted_keymap) {
   //Loop over each layer from the keymap
-  console.log(converted_keymap);
+  console.log('converted_keymap', converted_keymap);
   const acc = converted_keymap.reduce(
     (acc, layerData, _layer) => {
       //Add layer object for every layer that exists
