@@ -69,6 +69,7 @@ $(document).ready(() => {
   );
 
   var vueStatus = checkStatus();
+  var beta = initBetaBanner();
 
   Vue.use(VueRouter);
   Vue.use(Vuex);
@@ -90,7 +91,8 @@ $(document).ready(() => {
   ignoreKeypressListener($('input[type=text]'));
   return {
     vueStatus,
-    vueInstance
+    vueInstance,
+    beta
   };
 
   ////////////////////////////////////////
@@ -1081,6 +1083,43 @@ $(document).ready(() => {
       mounted() {
         this.fetchKeyboards();
       }
+    });
+  }
+
+  function initBetaBanner() {
+    var betaBanner = Vue.component('beta-banner', {
+      template: `
+      <transition name="slideDown">
+      <div @click="hideMe" v-show="show" class="beta">
+        <p>Try out our new <a class="beta-link" href="https://yanfali.github.io/qmk_configurator" target="blank">beta Configurator</a> and let us know what you think.</p>
+        </div>
+        </transition>
+      `,
+      data: () => {
+        return {
+          show: false,
+          timer: undefined
+        };
+      },
+      methods: {
+        hideMe() {
+          this.show = false;
+        }
+      },
+      mounted() {
+        var instance = this;
+        this.timer = setTimeout(() => {
+          instance.show = true;
+          setTimeout(() => {
+            instance.show = false;
+          }, 57000);
+        }, 3000);
+      }
+    });
+    return new Vue({
+      el: '#beta-banner',
+      template: '<betaBanner />',
+      components: { betaBanner }
     });
   }
 

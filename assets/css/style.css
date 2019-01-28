@@ -1160,3 +1160,27 @@ input[type='number'] {
 .topctrl-3 {
   grid-column: 3;
 }
+
+.beta {
+  position: absolute;
+  top: 10px;
+  background: #add8e6;
+  width: 100%;
+  color: purple;
+  left: 0;
+  height: 36px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.slideDown-enter-active, .slideDown-leave-active {
+  max-height: 38px;
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slideDown-enter, .slideDown-leave-to {
+  max-height: 0;
+}
