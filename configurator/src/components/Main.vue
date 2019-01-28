@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="beta-feedback"><button class="beta-button"><a href="https://www.reddit.com/r/MechanicalKeyboards/comments/aio97b/qmk_configurator_updates_beta_need_your_input/" target="blank">Beta Feedback</a></button></div>
     <div ref="console">
       <controllerTop /><statusPanel /><controllerBottom />
     </div>
@@ -88,7 +89,7 @@ export default {
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .Main {
 }
 .hint {
@@ -98,5 +99,21 @@ export default {
 }
 #colorway-select {
   font-family: sans-serif;
+}
+.beta-feedback {
+  position: fixed;
+  right: 10px;
+  top: 30px;
+}
+.beta-button {
+  height: 30px;
+  font-size: 15px;
+  background: #4b0082;
+  border-radius: 9px;
+}
+
+a:link,
+a:visited {
+  color: #ffa500;
 }
 </style>
