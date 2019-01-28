@@ -345,7 +345,8 @@ export default {
 }
 .topctrl-2-1 {
   grid-row: 2;
-  grid-column: 1;
+  grid-column-start: 1;
+  grid-column-end: 3;
   justify-self: start;
 }
 .drop-label {
