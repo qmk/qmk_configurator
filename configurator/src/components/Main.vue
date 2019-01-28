@@ -1,6 +1,12 @@
 <template>
   <div>
-    <div class="beta-feedback"><button class="beta-button"><a href="https://www.reddit.com/r/MechanicalKeyboards/comments/aio97b/qmk_configurator_updates_beta_need_your_input/" target="blank">Beta Feedback</a></button></div>
+    <div class="beta-feedback">
+      <button class="beta-button">
+        <a target="_blank" :href="redditPost" rel="noopener">
+          Beta Feedback
+        </a>
+      </button>
+    </div>
     <div ref="console">
       <controllerTop /><statusPanel /><controllerBottom />
     </div>
@@ -78,6 +84,9 @@ export default {
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA');
       });
+    },
+    redditPost() {
+      return 'https://www.reddit.com/r/MechanicalKeyboards/comments/aio97b/qmk_configurator_updates_beta_need_your_input/';
     }
   },
   methods: {
