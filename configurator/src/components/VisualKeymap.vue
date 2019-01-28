@@ -86,7 +86,8 @@ export default {
       'defaults',
       'config',
       'loadingKeymapPromise',
-      'colorway'
+      'colorway',
+      'displaySizes'
     ]),
     ...mapGetters('app', ['layout', 'layouts']),
     styles() {
@@ -119,7 +120,8 @@ export default {
             id: index,
             layer: this.layer,
             meta: keymap[index],
-            colorway: colorway
+            colorway: colorway,
+            displaySizes: this.displaySizes
           },
           coor,
           dims
@@ -156,7 +158,8 @@ export default {
           (this.config.KEY_X_SPACING - this.config.KEY_WIDTH),
         h:
           h * this.config.KEY_Y_SPACING -
-          (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT)
+          (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT),
+        u: w
       };
     },
     calcKeyKeymapPos(x, y) {

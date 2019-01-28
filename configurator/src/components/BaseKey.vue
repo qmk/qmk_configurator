@@ -43,7 +43,12 @@ export default {
     h: Number,
     y: Number,
     x: Number,
-    colorway: String
+    u: Number,
+    colorway: String,
+    displaySizes: {
+      type: Boolean,
+      default: false
+    }
   },
   computed: {
     ...mapGetters('keymap', [
@@ -60,6 +65,9 @@ export default {
       return this.meta.code !== 'KC_NO';
     },
     displayName() {
+      if (this.displaySizes) {
+        return this.u;
+      }
       if (isUndefined(this.meta)) {
         return;
       }
