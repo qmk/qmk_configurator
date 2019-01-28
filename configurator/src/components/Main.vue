@@ -1,11 +1,9 @@
 <template>
   <div>
     <div class="beta-feedback">
-      <button class="beta-button">
-        <a target="_blank" :href="redditPost" rel="noopener">
-          Beta Feedback
-        </a>
-      </button>
+      <a target="_blank" :href="redditPost" rel="noopener">
+        <button class="beta-button">Beta Feedback</button>
+      </a>
     </div>
     <div ref="console">
       <controllerTop /><statusPanel /><controllerBottom />
@@ -119,10 +117,7 @@ export default {
   font-size: 15px;
   background: #4b0082;
   border-radius: 9px;
-}
-
-a:link,
-a:visited {
   color: #ffa500;
+  cursor: pointer;
 }
 </style>
