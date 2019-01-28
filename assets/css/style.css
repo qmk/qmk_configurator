@@ -1178,7 +1178,7 @@ input[type='number'] {
   overflow-y: hidden;
   transition-property: all;
   transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0, 1, 0.5. 1);
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
 .slideDown-enter, .slideDown-leave-to {
