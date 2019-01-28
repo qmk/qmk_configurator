@@ -28,10 +28,12 @@ const state = {
   // otherwise they race against each other and the visual keymap erases the keymapd data
   loadingKeymapPromise: undefined,
   colorways: colorways.list,
-  colorwayIndex: random(0, colorways.list.length - 1)
+  colorwayIndex: random(0, colorways.list.length - 1),
+  displaySizes: false
 };
 
 const getters = {
+  displaySizes: state => state.displaySizes,
   colorway: state => state.colorways[state.colorwayIndex].name,
   colorways: state => state.colorways.map(colorway => colorway.name),
   colorwayOverride: state => state.colorways[state.colorwayIndex].override,
@@ -250,6 +252,9 @@ const mutations = {
     } else {
       state.colorwayIndex = index;
     }
+  },
+  toggleDisplaySizes(state) {
+    state.displaySizes = !state.displaySizes;
   }
 };
 

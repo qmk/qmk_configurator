@@ -27,6 +27,9 @@ function init() {
   keypressListener.simple_combo('ctrl alt n', () => {
     store.commit('keymap/nextColorway');
   });
+  keypressListener.simple_combo('ctrl alt u', () => {
+    store.commit('keymap/toggleDisplaySizes');
+  });
 
   store.commit('app/setKeypressListener', () => keypressListener);
 }
