@@ -6,9 +6,12 @@ module.exports = {
     browser
       .url(process.env.VUE_DEV_SERVER_URL)
       .waitForElementVisible('#app', 5000)
-      .assert.elementPresent('.hello')
-      .assert.containsText('h1', 'Welcome to Your Vue.js App')
-      .assert.elementCount('img', 1)
+      .assert.elementPresent('.main')
+      .assert.containsText('.topctrl-1-1', 'KEYBOARD:')
+      .assert.containsText('.topctrl-2-1', 'LAYOUT:')
+      .assert.containsText('.topctrl-1-2', 'KEYMAP NAME:')
+      .assert.containsText('#load-default', 'LOAD DEFAULT')
+      .assert.containsText('#compile', 'COMPILE')
       .end();
   }
 };
