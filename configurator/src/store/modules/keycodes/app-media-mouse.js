@@ -100,5 +100,18 @@ export default [
     name: 'Mouse Accel 2',
     code: 'KC_ACL2',
     title: 'Set mouse acceleration to 2'
-  }
+  },
+  { label: 'Extra FN Keys' , width: 'label'},
+  { name: 'F13', code: 'KC_F13'},
+  { name: 'F14', code: 'KC_F14'},
+  { name: 'F15', code: 'KC_F15'},
+  { name: 'F16', code: 'KC_F16'},
+  { name: '17F', code: 'KC_F17'},
+  { name: 'F18', code: 'KC_F18'},
+  { name: 'F19', code: 'KC_F19'},
+  { name: 'F20', code: 'KC_F20'},
+  { name: 'F21', code: 'KC_F21'},
+  { name: 'F22', code: 'KC_F22'},
+  { name: 'F23', code: 'KC_F23'},
+  { name: 'F24', code: 'KC_F24'}
 ];
