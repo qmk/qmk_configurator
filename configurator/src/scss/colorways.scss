@@ -317,6 +317,22 @@
   background: $color-pantone-533C;
 }
 
+.gmk-space-cadet-key {
+  background: $color-sp-abs-GD;
+  color: $color-gmk-abs-CP;
+  input {
+    background: lighten($color-sp-abs-GD, 40%);
+  }
+}
+
+.gmk-space-cadet-mod {
+  background: $color-sp-abs-BFP;
+  color: $color-gmk-abs-CP;
+}
+
+.gmk-space-cadet-kb {
+}
+
 // Keyreative
 
 .dsa-drifter-key {

@@ -131,6 +131,7 @@ export default {
         KC_UP: 'accent'
       }
     },
+    { name: 'gmk-space-cadet' },
     { name: 'gmk-ta-royal-alpha' },
     { name: 'gmk-wob' }
     //,
