@@ -74,14 +74,14 @@ export default [
     width: 'label'
   },
 
-  { name: 'LSft', code: 'LSFT(kc)', type: 'container', title: 'LSFT(kc)' },
-  { name: 'LCtl', code: 'LCTL(kc)', type: 'container', title: 'LCTL(kc)' },
-  { name: 'LAlt', code: 'LALT(kc)', type: 'container', title: 'LALT(kc)' },
-  { name: 'LGui', code: 'LGUI(kc)', type: 'container', title: 'LGUI(kc)' },
-  { name: 'RSft', code: 'RSFT(kc)', type: 'container', title: 'RSFT(kc)' },
-  { name: 'RCtl', code: 'RCTL(kc)', type: 'container', title: 'RCTL(kc)' },
-  { name: 'RAlt', code: 'RALT(kc)', type: 'container', title: 'RALT(kc)' },
-  { name: 'RGui', code: 'RGUI(kc)', type: 'container', title: 'RGUI(kc)' },
+  { name: 'LSft', code: 'LSFT(kc)', type: 'container' },
+  { name: 'LCtl', code: 'LCTL(kc)', type: 'container' },
+  { name: 'LAlt', code: 'LALT(kc)', type: 'container' },
+  { name: 'LGui', code: 'LGUI(kc)', type: 'container' },
+  { name: 'RSft', code: 'RSFT(kc)', type: 'container' },
+  { name: 'RCtl', code: 'RCTL(kc)', type: 'container' },
+  { name: 'RAlt', code: 'RALT(kc)', type: 'container' },
+  { name: 'RGui', code: 'RGUI(kc)', type: 'container' },
   { width: 0 },
   {
     name: 'LSft_T',

@@ -11,7 +11,7 @@
     :class="computedClass"
     :data-type="type"
     :data-code="code"
-    :title="title"
+    :title="displayTitle"
     @drag="drag"
     @dragstart="dragstart"
     @dragend="dragend"
@@ -51,6 +51,9 @@ export default {
     },
     displayName() {
       return this.name.length === 1 ? this.name.toUpperCase() : this.name;
+    },
+    displayTitle() {
+      return this.title ? this.title : this.code;
     }
   },
   data() {
