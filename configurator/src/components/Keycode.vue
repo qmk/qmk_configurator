@@ -53,7 +53,7 @@ export default {
       return this.name.length === 1 ? this.name.toUpperCase() : this.name;
     },
     displayTitle() {
-      return this.title ? this.title : this.code;
+      return this.title ? `${this.code}\n${this.title}` : this.code;
     }
   },
   data() {
