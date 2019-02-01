@@ -11,12 +11,13 @@
     :class="computedClass"
     :data-type="type"
     :data-code="code"
-    :title="displayTitle"
     :style="computedStyles"
     @drag="drag"
     @dragstart="dragstart"
     @dragend="dragend"
     @click="clicked"
+    @mouseenter="$emit('mouseenter')"
+    @mouseleave="$emit('mouseleave')"
     >{{ displayName }}</div>
 </template>
 <script>

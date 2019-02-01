@@ -22,6 +22,7 @@
       </header>
       <router-view />
       <spinner :isVisible="showSpinner" :status="spinnerMsg" />
+      <InfoBar :msg="message" />
     </div>
     <footer>
       <p>
@@ -33,6 +34,7 @@
   </div>
 </template>
 <script>
+import InfoBar from '@/components/InfoBar';
 import potatoFacts from '@/potato-facts';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
@@ -40,12 +42,14 @@ import { mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'app',
   components: {
-    Spinner
+    Spinner,
+    InfoBar
   },
   data() {
     return {
       potatoFact: 'QMK for potatoes',
-      interval: 120000
+      interval: 120000,
+      msg: 'hello'
     };
   },
   mounted() {
@@ -58,7 +62,10 @@ export default {
     clearInterval(this.interval);
   },
   computed: {
-    ...mapGetters('app', ['showSpinner', 'spinnerMsg'])
+    ...mapGetters('app', ['showSpinner', 'spinnerMsg', 'message']),
+    showInfoBar() {
+      return this.message !== '';
+    }
   },
   methods: {
     ...mapMutations('app', ['setShowSpinner']),
