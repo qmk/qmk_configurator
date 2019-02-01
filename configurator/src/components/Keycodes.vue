@@ -38,6 +38,7 @@
             v-bind:is="getComponent(key.code)"
             v-bind="key"
             :key="index"
+            @mouseenter="message(key)"
           />
         </template>
       </div>
@@ -45,10 +46,11 @@
   </div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 import isUndefined from 'lodash/isUndefined';
 import Keycode from '@/components/Keycode';
 import Space from '@/components/Space';
+import store from '@/store';
 
 export default {
   name: 'keycodes',
@@ -56,7 +58,8 @@ export default {
   props: {},
   data() {
     return {
-      active: 'ANSI'
+      active: 'ANSI',
+      clearTimeout: undefined
     };
   },
   computed: {
@@ -79,6 +82,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('app', ['setMessage']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -91,6 +95,19 @@ export default {
     },
     changeActive(index) {
       this.active = index;
+    },
+    message(key) {
+      const msg = key.title ? `${key.code} - ${key.title}` : key.code;
+      this.setMessage(msg);
+      this.messageClear();
+    },
+    messageClear() {
+      if (this.clearTimeout) {
+        window.clearTimeout(this.clearTimeout);
+      }
+      this.clearTimeout = window.setTimeout(() => {
+        store.commit('app/setMessage', '');
+      }, 3000);
     }
   }
 };

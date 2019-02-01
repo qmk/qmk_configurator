@@ -23,10 +23,12 @@ const state = {
   filter: '',
   keypressListener: undefined,
   showSpinner: false,
-  spinnerMsg: ''
+  spinnerMsg: '',
+  message: ''
 };
 
 const getters = {
+  message: state => state.message,
   showSpinner: state => state.showSpinner,
   spinnerMsg: state => state.spinnerMsg,
   keyboard: state => state.keyboard,
@@ -233,6 +235,9 @@ const mutations = {
   },
   setKeymapSourceURL(state, keymap) {
     state.keymapSourceURL = keymap;
+  },
+  setMessage(state, msg) {
+    state.message = msg;
   }
 };
 
