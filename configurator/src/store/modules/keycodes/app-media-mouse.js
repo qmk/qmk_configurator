@@ -106,7 +106,7 @@ export default [
   { name: 'F14', code: 'KC_F14' },
   { name: 'F15', code: 'KC_F15' },
   { name: 'F16', code: 'KC_F16' },
-  { name: '17F', code: 'KC_F17' },
+  { name: 'F17', code: 'KC_F17' },
   { name: 'F18', code: 'KC_F18' },
   { name: 'F19', code: 'KC_F19' },
   { name: 'F20', code: 'KC_F20' },
