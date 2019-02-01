@@ -12,6 +12,7 @@
     :data-type="type"
     :data-code="code"
     :title="displayTitle"
+    :style="computedStyles"
     @drag="drag"
     @dragstart="dragstart"
     @dragend="dragend"
@@ -30,9 +31,16 @@ export default {
     title: String,
     width: null,
     name: String,
-    classes: String
+    classes: String,
+    styles: Object
   },
   computed: {
+    computedStyles() {
+      if (this.styles) {
+        return this.styles;
+      }
+      return '';
+    },
     computedClass() {
       let classes = [];
       if (!isUndefined(this.width)) {
