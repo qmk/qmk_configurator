@@ -129,12 +129,12 @@ export default [
   {
     name: 'BL Toggle',
     code: 'BL_TOGG',
-    title: 'BL_TOGG - Turn the backlight on or off'
+    title: 'Turn the backlight on or off'
   },
   {
     name: 'BL Cycle',
     code: 'BL_STEP',
-    title: 'BL_STEP - Cycle through backlight levels'
+    title: 'Cycle through backlight levels'
   },
   {
     name: 'BL On',
@@ -149,12 +149,12 @@ export default [
   {
     name: 'BL +',
     code: 'BL_INC',
-    title: 'BL_INC - Increase the backlight level'
+    title: 'Increase the backlight level'
   },
   {
     name: 'BL -',
     code: 'BL_DEC',
-    title: 'BL_DEC - Decrease the backlight level'
+    title: 'Decrease the backlight level'
   },
   {
     name: 'BL Breath',
@@ -167,68 +167,24 @@ export default [
   {
     name: 'RGB Toggle',
     code: 'RGB_TOG',
-    title: 'RGB_TOG - Toggle RGB lighting on or off'
+    title: 'Toggle RGB lighting on or off'
   },
-  { name: 'RGB Mode +', code: 'RGB_MOD', title: 'RGB_MOD - Next mode' },
-  { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'RGB_RMOD - Previous mode' },
-  { name: 'Hue +', code: 'RGB_HUI', title: 'RGB_HUI - Increase hue' },
-  { name: 'Hue -', code: 'RGB_HUD', title: 'RGB_HUD - Decrease hue' },
-  { name: 'Sat +', code: 'RGB_SAI', title: 'RGB_SAI - Increase saturation' },
-  { name: 'Sat -', code: 'RGB_SAD', title: 'RGB_SAD - Decrease saturation' },
-  {
-    name: 'Bright +',
-    code: 'RGB_VAI',
-    title: 'RGB_VAI - Increase value (brightness)'
-  },
-  {
-    name: 'Bright -',
-    code: 'RGB_VAD',
-    title: 'RGB_VAD - Decrease value (brightness)'
-  },
-  {
-    name: 'Effect +',
-    code: 'RGB_SPI',
-    title: 'RGB_SPI - Increase effect speed'
-  },
-  {
-    name: 'Effect -',
-    code: 'RGB_SPD',
-    title: 'RGB_SPD - Decrease effect speed'
-  },
-  { name: 'RGB Mode P', code: 'RGB_M_P', title: 'RGB_M_P - RGB Mode: Plain' },
-  {
-    name: 'RGB Mode B',
-    code: 'RGB_M_B',
-    title: 'RGB_M_B - RGB Mode: Breathe'
-  },
-  {
-    name: 'RGB Mode R',
-    code: 'RGB_M_R',
-    title: 'RGB_M_R - RGB Mode: Rainbow'
-  },
-  {
-    name: 'RGB Mode SW',
-    code: 'RGB_M_SW',
-    title: 'RGB_M_SW - RGB Mode: Swirl'
-  },
-  {
-    name: 'RGB Mode SN',
-    code: 'RGB_M_SN',
-    title: 'RGB_M_SN - RGB Mode: Snake'
-  },
-  {
-    name: 'RGB Mode K',
-    code: 'RGB_M_K',
-    title: 'RGB_M_K - RGB Mode: Knight Rider'
-  },
-  {
-    name: 'RGB Mode X',
-    code: 'RGB_M_X',
-    title: 'RGB_M_X - RGB Mode: Christmas'
-  },
-  {
-    name: 'RGB Mode G',
-    code: 'RGB_M_G',
-    title: 'RGB_M_G - RGB Mode: Gradient'
-  }
+  { name: 'RGB Mode +', code: 'RGB_MOD', title: 'Next RGB mode' },
+  { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'Previous RGB mode' },
+  { name: 'Hue +', code: 'RGB_HUI', title: 'Increase hue' },
+  { name: 'Hue -', code: 'RGB_HUD', title: 'Decrease hue' },
+  { name: 'Sat +', code: 'RGB_SAI', title: 'Increase saturation' },
+  { name: 'Sat -', code: 'RGB_SAD', title: 'Decrease saturation' },
+  { name: 'Bright +', code: 'RGB_VAI', title: 'Increase value' },
+  { name: 'Bright -', code: 'RGB_VAD', title: 'Decrease value' },
+  { name: 'Effect +', code: 'RGB_SPI', title: 'Increase RGB effect speed' },
+  { name: 'Effect -', code: 'RGB_SPD', title: 'Decrease RGB effect speed' },
+  { name: 'RGB Mode P', code: 'RGB_M_P', title: 'RGB Mode: Plain' },
+  { name: 'RGB Mode B', code: 'RGB_M_B', title: 'RGB Mode: Breathe' },
+  { name: 'RGB Mode R', code: 'RGB_M_R', title: 'RGB Mode: Rainbow' },
+  { name: 'RGB Mode SW', code: 'RGB_M_SW', title: 'RGB Mode: Swirl' },
+  { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'RGB Mode: Snake' },
+  { name: 'RGB Mode K', code: 'RGB_M_K', title: 'RGB Mode: Knight Rider' },
+  { name: 'RGB Mode X', code: 'RGB_M_X', title: 'RGB Mode: Christmas' },
+  { name: 'RGB Mode G', code: 'RGB_M_G', title: 'RGB Mode: Gradient' }
 ];

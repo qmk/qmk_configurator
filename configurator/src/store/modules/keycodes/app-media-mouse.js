@@ -3,9 +3,9 @@ export default [
 
   { label: 'Application', width: 'label' },
 
-  { name: 'Power', code: 'KC_PWR', title: 'KC_PWR - System Power Down' },
-  { name: 'Sleep', code: 'KC_SLEP', title: 'KC_SLEP - System Sleep' },
-  { name: 'Wake', code: 'KC_WAKE', title: 'KC_WAKE - System Wake' },
+  { name: 'Power', code: 'KC_PWR', title: 'System Power Down' },
+  { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' },
+  { name: 'Wake', code: 'KC_WAKE', title: 'System Wake' },
   { width: 250 },
   { name: 'Exec', code: 'KC_EXEC', title: 'KC_EXEC' },
   { name: 'Help', code: 'KC_HELP', title: 'KC_HELP' },
@@ -21,14 +21,13 @@ export default [
 
   { label: 'Multimedia Keys', width: 'label' },
 
-  { name: 'Previous', code: 'KC_MPRV', title: 'KC_MPRV - Media Previous' },
-  { name: 'Next', code: 'KC_MNXT', title: 'KC_MNXT - Media Next' },
-  { name: 'Mute', code: 'KC_MUTE', title: 'KC_MUTE - Mute Audio' },
-  { name: 'Vol -', code: 'KC_VOLD', title: 'KC_VOLD - Volume Down' },
-  { name: 'Vol +', code: 'KC_VOLU', title: 'KC_VOLU - Volume Up' },
-  { name: 'Media Stop', code: 'KC_MSTP', title: 'KC_MSTP - Media Stop' },
-  { name: 'Play', code: 'KC_MPLY', title: 'KC_MPLY - Play/Pause' },
-  { name: 'Sleep', code: 'KC_SLEP', title: 'KC_SLEP - System Sleep' },
+  { name: 'Previous', code: 'KC_MPRV', title: 'Previous Track' },
+  { name: 'Next', code: 'KC_MNXT', title: 'Next Track' },
+  { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
+  { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
+  { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
+  { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
+  { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
 
   { label: 'Multimedia Keys (macOS)', width: 'label' },
 
@@ -42,49 +41,21 @@ export default [
 
   { label: 'Mouse Keys', width: 'label' },
 
-  { name: 'Mouse Up', code: 'KC_MS_U', title: 'KC_MS_U - Mouse Cursor Up' },
-  {
-    name: 'Mouse Down',
-    code: 'KC_MS_D',
-    title: 'KC_MS_D - Mouse Cursor Down'
-  },
-  {
-    name: 'Mouse Left',
-    code: 'KC_MS_L',
-    title: 'KC_MS_L - Mouse Cursor Left'
-  },
-  {
-    name: 'Mouse Right',
-    code: 'KC_MS_R',
-    title: 'KC_MS_R - Mouse Cursor Right'
-  },
+  { name: 'Mouse Up', code: 'KC_MS_U', title: 'Mouse Cursor Up' },
+  { name: 'Mouse Down', code: 'KC_MS_D', title: 'Mouse Cursor Down' },
+  { name: 'Mouse Left', code: 'KC_MS_L', title: 'Mouse Cursor Left' },
+  { name: 'Mouse Right', code: 'KC_MS_R', title: 'Mouse Cursor Right' },
   { width: 250 },
-  { name: 'Mouse 1', code: 'KC_BTN1', title: 'KC_BTN1 - Mouse Button 1' },
-  { name: 'Mouse 2', code: 'KC_BTN2', title: 'KC_BTN2 - Mouse Button 2' },
-  { name: 'Mouse 3', code: 'KC_BTN3', title: 'KC_BTN3 - Mouse Button 3' },
-  { name: 'Mouse 4', code: 'KC_BTN4', title: 'KC_BTN4 - Mouse Button 4' },
-  { name: 'Mouse 5', code: 'KC_BTN5', title: 'KC_BTN5 - Mouse Button 5' },
+  { name: 'Mouse 1', code: 'KC_BTN1', title: 'Mouse Button 1' },
+  { name: 'Mouse 2', code: 'KC_BTN2', title: 'Mouse Button 2' },
+  { name: 'Mouse 3', code: 'KC_BTN3', title: 'Mouse Button 3' },
+  { name: 'Mouse 4', code: 'KC_BTN4', title: 'Mouse Button 4' },
+  { name: 'Mouse 5', code: 'KC_BTN5', title: 'Mouse Button 5' },
   { width: 250 },
-  {
-    name: 'Mouse Wheel Up',
-    code: 'KC_WH_U',
-    title: 'KC_WH_U - Mouse Wheel Up'
-  },
-  {
-    name: 'Mouse Wheel Down',
-    code: 'KC_WH_D',
-    title: 'KC_WH_D - Mouse Wheel Down'
-  },
-  {
-    name: 'Mouse Wheel Left',
-    code: 'KC_WH_L',
-    title: 'KC_WH_L - Mouse Wheel Left'
-  },
-  {
-    name: 'Mouse Wheel Right',
-    code: 'KC_WH_R',
-    title: 'KC_WH_R - Mouse Wheel Right'
-  },
+  { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'Mouse Wheel Up' },
+  { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'Mouse Wheel Down' },
+  { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
+  { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
   { width: 250 },
   {
     name: 'Mouse Accel 0',
@@ -101,7 +72,9 @@ export default [
     code: 'KC_ACL2',
     title: 'Set mouse acceleration to 2'
   },
+
   { label: 'Extra FN Keys', width: 'label' },
+
   { name: 'F13', code: 'KC_F13' },
   { name: 'F14', code: 'KC_F14' },
   { name: 'F15', code: 'KC_F15' },
