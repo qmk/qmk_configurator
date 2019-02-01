@@ -132,9 +132,10 @@ export default [
   { name: 'Space', code: 'KC_SPC', keys: 'space', width: 4000 },
   { name: '変換', code: 'KC_HENK', title: 'JIS Henkan', width: 1250 },
   {
-    name: 'かな',
+    name: 'カタカナ\nひらがな',
     code: 'KC_KANA',
     title: 'JIS Katakana/Hiragana',
+    styles: { 'font-size': '8px' },
     width: 1250
   },
   { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
@@ -149,10 +150,12 @@ export default [
   { name: '.', code: 'KC_PDOT', keys: 'num_decimal' },
   { name: 'Enter', code: 'KC_PENT', keys: 'num_enter' },
 
-  { label: 'Korean and Chinese', width: 'label' },
+  { label: 'Japanese, and Korean', width: 'label' },
 
   { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
   { name: '한영', code: 'KC_HAEN', title: 'Korean Han/Yeong' },
+  { name: 'かな', code: 'KC_LANG1', title: 'JP Mac Kana', width: 1250 },
+  { name: '英数', code: 'KC_LANG2', title: 'JP Mac Eisu', width: 1250 },
 
   { label: 'Shifted symbols', width: 'label' },
 
