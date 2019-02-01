@@ -2068,7 +2068,9 @@ $(document).ready(() => {
 
       { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan', width: 1250 },
       { name: '変換', code: 'KC_HENK', title: 'JIS Henkan', width: 1250 },
-      { name: 'かな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana', width: 1250 },
+      { name: 'カタカナ ひらがな', code: 'KC_KANA', title: 'JIS Katakana/Hiragana', width: 2500 },
+      { name: 'かな', code: 'KC_LANG1', title: 'JP Mac Kana', width: 1250 },
+      { name: '英数', code: 'KC_LANG2', title: 'JP Mac Eisu', width: 1250 },
       { width: 250 },
 
       { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
