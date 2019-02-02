@@ -109,6 +109,49 @@
 .sa-jukebox-kb {
 }
 
+.sa-vilebloom-key {
+  background: $color-pantone-7699C;
+  color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-pantone-7699C, 40%);
+  }
+}
+
+.sa-vilebloom-mod {
+  background: $color-pantone-7699C;
+  color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-pantone-7699C, 40%);
+  }
+}
+
+.sa-vilebloom-accent1 {
+  background: $color-pantone-474U;
+  color: $color-pantone-7699C;
+  input {
+    background: lighten($color-pantone-474U, 40%);
+  }
+}
+
+.sa-vilebloom-accent2 {
+  background: $color-pantone-177C;
+  color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-pantone-177C, 40%);
+  }
+}
+
+.sa-vilebloom-accent3 {
+  background: $color-pantone-2046U;
+  color: $color-sp-abs-WFK;
+  input {
+    background: lighten($color-pantone-2046U, 40%);
+  }
+}
+
+.sa-vilebloom-kb {
+}
+
 .dsa-galaxy-class-key {
   background: $color-sp-pbt-BFE;
   color: $color-sp-pbt-BLACK;
