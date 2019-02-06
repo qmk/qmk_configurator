@@ -1,6 +1,8 @@
 <template functional>
   <transition name="fade" appear>
-    <div class="veil-container" v-show="props.isVisible"><slot /></div>
+    <div class="veil-container" v-show="props.isVisible">
+      <slot name="contents">Something to Unveil</slot>
+    </div>
   </transition>
 </template>
 <script>
