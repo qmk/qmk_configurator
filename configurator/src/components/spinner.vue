@@ -1,22 +1,22 @@
-<template>
-  <Veil :isVisible="isVisible">
-    <div class="spinner">
-      <h1 class="status">{{ status }}</h1>
-      <div>
-        <img
-          class="space-potato working"
-          src="./../..//assets/food-potato.svg"
-        />
+<template functional>
+  <Veil :isVisible="props.isVisible">
+    <template #contents>
+      <div class="spinner">
+        <h1 class="status">{{ props.status }}</h1>
+        <div>
+          <img
+            class="space-potato working"
+            src="./../..//assets/food-potato.svg"
+          />
+        </div>
+        <h3 class="message" v-html="props.message"></h3>
       </div>
-      <h3 class="message" v-html="message"></h3>
-    </div>
+    </template>
   </Veil>
 </template>
 <script>
-import Veil from './Veil';
 export default {
   name: 'spinner',
-  components: { Veil },
   props: {
     isVisible: {
       type: Boolean,
