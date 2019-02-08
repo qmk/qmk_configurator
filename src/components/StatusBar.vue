@@ -34,7 +34,7 @@ export default {
           stat = stat === 'running' ? 'UP' : stat;
           this.status = escape(`${stat} @ ${localTime}`);
           this.version = data.version;
-          this.jobs = template('<%= queue_length %> job(s) running')(data);
+          this.jobs = template('<%= queue_length %> job(s) waiting')(data);
           this.hasError = false;
         })
         .catch(json => {
