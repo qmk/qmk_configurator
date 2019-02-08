@@ -80,7 +80,7 @@ export default {
       return undefined;
     },
     icon() {
-      if (this.meta && substitute[this.meta.code]) {
+      if (!this.displaySizes && this.meta && substitute[this.meta.code]) {
         return substitute[this.meta.code];
       }
       return undefined;
