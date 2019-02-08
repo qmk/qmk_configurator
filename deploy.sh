@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e # exit with nonzero exit code if anything fails
 
-npm test
+yarn lint
+yarn test
 
 if [ "${TRAVIS_PULL_REQUEST}"  != "false" ]; then
   # Exit if we're running a pull request
@@ -9,6 +10,7 @@ if [ "${TRAVIS_PULL_REQUEST}"  != "false" ]; then
 fi
 
 rm -rf .git
+cd dist
 git init
 git remote add origin https://github.com/${TRAVIS_REPO_SLUG}
 git pull origin config
