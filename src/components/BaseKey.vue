@@ -6,7 +6,7 @@
     class="key"
     :class="myclasses"
     :style="mystyles"
-    :title="meta.code"
+    :title="myTitle"
     @click="clicked"
     @dragstart="dragstart"
     @dragend="dragend"
@@ -58,11 +58,14 @@ export default {
       'config'
     ]),
     ...mapGetters('keymap', { curLayer: 'layer' }),
+    myTitle() {
+      return this.meta ? this.meta.code : '';
+    },
     myid() {
       return `key-${this.id}`;
     },
     visible() {
-      return this.meta.code !== 'KC_NO';
+      return this.meta ? this.meta.code !== 'KC_NO' : false;
     },
     displayName() {
       if (this.displaySizes) {
@@ -77,7 +80,7 @@ export default {
       return undefined;
     },
     icon() {
-      if (substitute[this.meta.code]) {
+      if (this.meta && substitute[this.meta.code]) {
         return substitute[this.meta.code];
       }
       return undefined;
@@ -93,27 +96,30 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta.name.length >= 2) {
+      if (this.meta && this.meta.name.length >= 2) {
         classes.push('smaller');
       } else {
         classes.push('thicker');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
-        // Colorway specific overrides by keycode
-        classes.push(
-          `${this.colorway}-${this.colorwayOverride[this.meta.code]}`
-        );
-      } else if (
-        // Mod keys
-        colorways.modCodes[this.meta.code] ||
-        (this.w <= KEY_WIDTH * 3 && (this.w > KEY_WIDTH || this.h > KEY_HEIGHT))
-      ) {
-        classes.push('mod');
-        classes.push(`${this.colorway}-mod`);
-      } else {
-        // everything else
-        classes.push(`${this.colorway}-key`);
+      if (!isUndefined(this.meta)) {
+        if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
+          // Colorway specific overrides by keycode
+          classes.push(
+            `${this.colorway}-${this.colorwayOverride[this.meta.code]}`
+          );
+        } else if (
+          // Mod keys
+          colorways.modCodes[this.meta.code] ||
+          (this.w <= KEY_WIDTH * 3 &&
+            (this.w > KEY_WIDTH || this.h > KEY_HEIGHT))
+        ) {
+          classes.push('mod');
+          classes.push(`${this.colorway}-mod`);
+        } else {
+          // everything else
+          classes.push(`${this.colorway}-key`);
+        }
       }
       return classes.join(' ');
     },
