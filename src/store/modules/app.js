@@ -97,6 +97,7 @@ const actions = {
    */
   loadLayouts({ commit, state }, preview) {
     if (!isUndefined(preview)) {
+      preview.layouts['  '] = { layout: [] };
       let p = new Promise(resolve => {
         let fake = {
           keyboards: {}

@@ -156,7 +156,11 @@ export default {
         }
         if (to.params) {
           this.setLayout(to.params.layoutP);
-          this.updateKeyboard(to.params.keyboardP);
+          if (!this.previewRequested) {
+            // don't update the keyboard if we are in preview mode
+            // otherwise we can't select the different layouts
+            this.updateKeyboard(to.params.keyboardP);
+          }
           return;
         }
       }
@@ -164,7 +168,12 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('app', ['setLayout', 'stopListening', 'startListening']),
+    ...mapMutations('app', [
+      'setLayout',
+      'stopListening',
+      'startListening',
+      'previewRequested'
+    ]),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
