@@ -70,7 +70,7 @@
 </template>
 <script>
 import Vue from 'vue';
-import { mapGetters } from 'vuex';
+import { mapGetters, mapMutations } from 'vuex';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 const encoding = 'data:text/plain;charset=utf-8,';
@@ -85,9 +85,13 @@ import {
 export default {
   name: 'bottom-controller',
   computed: {
-    ...mapGetters('app', ['previewRequested', 'keymapSourceURL']),
+    ...mapGetters('app', [
+      'previewRequested',
+      'keymapSourceURL',
+      'enableDownloads'
+    ]),
     disableDownloads() {
-      return !this.$store.getters['app/enableDownloads'];
+      return !this.enableDownloads;
     }
   },
   watch: {
@@ -100,11 +104,12 @@ export default {
     previewRequested(newValue) {
       if (newValue) {
         this.$refs.infoPreviewElement.click();
-        window.setTimeout(() => this.$store.commit('app/dismissPreview'));
+        window.setTimeout(() => this.dismissPreview());
       }
     }
   },
   methods: {
+    ...mapMutations('app', ['dismissPreview']),
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
       let layers = this.$store.getters['keymap/exportLayers']({
@@ -260,10 +265,33 @@ export default {
       }
 
       this.$store.commit('app/setKeyboard', PREVIEW_LABEL);
+      /*
+       * Preview Mode State hack
+       * When we load a info.json preview we are bypassing the normal XHR request to the backend for
+       * layouts and supplying an in memory data structure.
+       * Due to a quirk in how the keymap is rendered we use a change in layout to detect changes in Visual
+       * Keymap and reset the keymap there.
+       * This does not always work if the layout we are transitioning too has the same name as the current layout.
+       * To work around this we have to set the layout to something else temporarily to force a re-render.
+       *
+       * The preview code works around this problem by creating a fake keyboard layout called '  ',
+       * and temporarily sets the keyboard to this value. Then it waits until the next scheduler tick and sets
+       * the value to the correct one. Info.json preview mode was always a hack and needs some redesign.
+       *
+       * TODO come up with a better way of resetting keymap than depending on visual keymap change detection
+       */
       this.$store.dispatch('app/loadLayouts', data).then(() => {
-        const layout = getPreferredLayout(this.$store.getters['app/layouts']);
-        this.$store.commit('app/setLayout', layout);
-        this.$store.commit('app/setKeymapName', 'info.json preview');
+        this.$store.commit('app/setLayout', '  ');
+        Vue.nextTick(() => {
+          const layout = getPreferredLayout(this.$store.getters['app/layouts']);
+          this.$store.commit('app/setLayout', layout);
+          this.$store.commit('app/setKeymapName', 'info.json preview');
+          this.$store.commit('status/clear');
+          this.$store.commit(
+            'status/append',
+            'Preview info.json mode\n\nFor Developers only, working on new keyboards.'
+          );
+        });
       });
     }
   },
