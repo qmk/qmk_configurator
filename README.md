@@ -10,10 +10,7 @@ The QMK Configurator allows simple keymap creation and saving via .json keymap f
 
 This project is very much a work in progress. To begin contributing, please refer to the following:
 
-[Issues](https://github.com/qmk/qmk_configurator/issues)
-[Development Environment Setup](https://github.com/qmk/qmk_configurator/blob/master/assets/js/development.md)
-[Deploying an instance of the Configurator to GitHub Pages](https://github.com/qmk/qmk_configurator/blob/master/assets/js/gh-pages_setup.md)
-
+ * [Issues](https://github.com/qmk/qmk_configurator/issues)
 
 ## Development
 
