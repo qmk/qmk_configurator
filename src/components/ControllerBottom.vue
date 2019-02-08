@@ -289,7 +289,13 @@ export default {
           this.$store.commit('status/clear');
           this.$store.commit(
             'status/append',
-            'Preview info.json mode\n\nFor Developers only, working on new keyboards.'
+            [
+              'Preview info.json mode\n',
+              'For Developers only, working on new keyboards.\n',
+              '\tctrl, alt, u - see key sizes',
+              '\tctrl, alt, n - cycle colorways',
+              '\tlayout drop down to preview layouts'
+            ].join('\n')
           );
         });
       });
