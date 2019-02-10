@@ -1,5 +1,6 @@
 # Quantum Mechanical Keyboard Configurator
 
+[![Build Status](https://travis-ci.org/qmk/qmk_configurator.svg?branch=master)](https://travis-ci.org/qmk/qmk_configurator)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_configurator.svg)](https://github.com/qmk/qmk_configurator/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_configurator.svg?style=social&label=Fork)](https://github.com/qmk/qmk_configurator/)
