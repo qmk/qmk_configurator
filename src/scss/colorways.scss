@@ -360,6 +360,32 @@
   background: $color-pantone-533C;
 }
 
+.gmk-serika-key {
+  background: #ece4d0;
+  color: #333732;
+  input {
+    background: lighten(#ece4d0, 40%);
+  }
+}
+.gmk-serika-mod {
+  background: #ffcd00;
+  color: #333732;
+  input {
+    background: lighten(#ffcd00, 40%);
+  }
+}
+.gmk-serika-accent {
+  background: #333732;
+  color: #ece4d0;
+  input {
+    background: lighten(#333732, 40%);
+  }
+}
+.gmk-serika-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
+
 .gmk-space-cadet-key {
   background: $color-sp-abs-GD;
   color: $color-gmk-abs-CP;
