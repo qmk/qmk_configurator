@@ -409,13 +409,8 @@
 .gmk-serika-accent {
   background: #333732;
   color: #ece4d0;
-  input {
-    background: lighten(#333732, 40%);
-  }
 }
 .gmk-serika-kb {
-  // placeholder
-  background: $color-pantone-533C;
 }
 
 .gmk-space-cadet-key {
