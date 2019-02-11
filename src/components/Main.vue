@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div class="beta-feedback">
-      <a target="_blank" :href="redditPost" rel="noopener">
-        <button class="beta-button">Beta Feedback</button>
-      </a>
-    </div>
     <div ref="console">
       <controllerTop /><statusPanel /><controllerBottom />
     </div>
