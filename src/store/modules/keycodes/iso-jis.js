@@ -150,7 +150,7 @@ export default [
   { name: '.', code: 'KC_PDOT', keys: 'num_decimal' },
   { name: 'Enter', code: 'KC_PENT', keys: 'num_enter' },
 
-  { label: 'Japanese, and Korean', width: 'label' },
+  { label: 'Japanese and Korean', width: 'label' },
 
   { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
   { name: '한영', code: 'KC_HAEN', title: 'Korean Han/Yeong' },
