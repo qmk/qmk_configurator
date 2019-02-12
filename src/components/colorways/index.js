@@ -22,6 +22,7 @@ export default {
     saVilebloom,
 
     { name: 'gmk-dolch' },
+    { name: 'gmk-jamon' },
     { name: 'gmk-merlin' },
     {
       name: 'gmk-metaverse',
@@ -49,6 +50,7 @@ export default {
     },
     { name: 'gmk-olivetti' },
     gmkOlivia,
+    { name: 'gmk-serika' },
     { name: 'gmk-space-cadet' },
     { name: 'gmk-ta-royal-alpha' },
     { name: 'gmk-wob' }
