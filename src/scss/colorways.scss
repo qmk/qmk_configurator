@@ -222,6 +222,13 @@
     background: lighten($color-gmk-abs-TU1, 40%);
   }
 }
+.gmk-merlin-accent {
+  background: $color-gmk-abs-N6;
+  color: $color-gmk-abs-TU1;
+  input {
+    background: lighten($color-gmk-abs-N6, 40%);
+  }
+}
 .gmk-merlin-kb {
 }
 
@@ -333,6 +340,31 @@
   // placeholder
 }
 
+.gmk-jamon-key {
+  background: #84172c;
+  color: #ece4d0;
+  input {
+    background: lighten(#84172c, 40%);
+  }
+}
+.gmk-jamon-mod {
+  background: #ac2c32;
+  color: #ece4d0;
+  input {
+    background: lighten(#ac2c32, 40%);
+  }
+}
+.gmk-jamon-accent {
+  background: #ece4d0;
+  color: #313337;
+  input {
+    background: lighten(#ece4d0, 40%);
+  }
+}
+.gmk-jamon-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
 
 .gmk-nautilus-key {
   background: $color-pantone-534C;
@@ -358,6 +390,27 @@
 .gmk-nautilus-kb {
   // placeholder
   background: $color-pantone-533C;
+}
+
+.gmk-serika-key {
+  background: #ece4d0;
+  color: #333732;
+  input {
+    background: lighten(#ece4d0, 40%);
+  }
+}
+.gmk-serika-mod {
+  background: #ffcd00;
+  color: #333732;
+  input {
+    background: lighten(#ffcd00, 40%);
+  }
+}
+.gmk-serika-accent {
+  background: #333732;
+  color: #ece4d0;
+}
+.gmk-serika-kb {
 }
 
 .gmk-space-cadet-key {
