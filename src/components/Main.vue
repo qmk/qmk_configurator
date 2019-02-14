@@ -5,23 +5,20 @@
     </div>
     <div class="hint">
       <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        Get QMK Toolbox
+        {{ $t('message.downloadToolbox.label') }}
       </a>
     </div>
     <div class="split-content">
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p>
-          <label
-            class="keymap--label"
-            title="Ctrl + Alt + N to cycle next colorway"
-          >
+          <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
               fixed-width
             />
-            Keymap:
+            {{ $t('message.keymap.label') }}:
           </label>
           &nbsp;
           <!-- maintain spacing for paragraph -->

@@ -1,14 +1,16 @@
 <template>
   <div class="settings-panel">
-    <h2>Configurator Settings</h2>
+    <h2>{{ $t('message.settingsPanel.title') }}</h2>
+
     <div class="settings-panel--toggles">
       <div>
         <label
-          title="ctrl + alt + f"
+          :title="$t('message.settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-          >Fast Input</label
         >
+          {{ $t('message.settingsPanel.fastInput.label') }}
+        </label>
       </div>
       <div>
         <toggle-button
@@ -20,11 +22,12 @@
       </div>
       <div>
         <label
-          title="ctrl + alt + u"
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
-          >Show Key Sizes</label
+          :title="$t('message.settingsPanel.displaySizes.title')"
         >
+          {{ $t('message.settingsPanel.displaySizes.label') }}
+        </label>
       </div>
       <div>
         <toggle-button
@@ -47,7 +50,10 @@ export default {
   name: 'settings-panel',
   data() {
     return {
-      labels: { checked: 'On', unchecked: 'Off' },
+      labels: {
+        checked: this.$t('message.settingsPanel.on.label'),
+        unchecked: this.$t('message.settingsPanel.off.label')
+      },
       helpText: undefined,
       clearTextTimer: undefined
     };
@@ -61,11 +67,10 @@ export default {
     help(key) {
       switch (key) {
         case 'fastInput':
-          this.helpText =
-            'Input keys via keyboard without clicking each position.';
+          this.helpText = this.$t('message.settingsPanel.fastInput.help');
           break;
         case 'displaySizes':
-          this.helpText = 'Show keycap sizes in Key Units';
+          this.helpText = this.$t('message.settingsPanel.displaySizes.help');
           break;
       }
 

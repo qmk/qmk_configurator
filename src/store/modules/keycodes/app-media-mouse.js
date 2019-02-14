@@ -1,5 +1,5 @@
 export default [
-  { label: 'App, Media, and Mouse', width: 'label', group: true },
+  { label: 'AppMediaMouse', width: 'label', group: true },
 
   { label: 'Application', width: 'label' },
 

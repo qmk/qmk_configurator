@@ -2,7 +2,7 @@
   <div id="controller-top">
     <div class="topctrl">
       <div class="topctrl-keyboards">
-        <label class="drop-label">Keyboard:</label>
+        <label class="drop-label">{{ $t('message.keyboard.label') }}:</label>
         <v-select
           @search:focus="focus"
           @search:blur="blur"
@@ -13,12 +13,12 @@
         ></v-select>
       </div>
       <div class="topctrl-keymap-name">
-        <label class="drop-label">Keymap Name:</label>
+        <label class="drop-label">{{ $t('message.keymapName.label') }}:</label>
         <input
           id="keymap-name"
           type="text"
           v-model="keymapName"
-          placeholder="custom keymap name"
+          :placeholder="$t('message.keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
           @blur="blur"
@@ -27,18 +27,18 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          title="Load default keymap from QMK Firmware"
+          :title="$t('message.loadDefault.title')"
           @click="loadDefault"
         >
-          Load Default
+          {{ $t('message.loadDefault.label') }}
         </button>
         <button
           id="compile"
-          title="Compile keymap"
+          :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >
-          Compile
+          {{ $t('message.compile.label') }}
         </button>
       </div>
       <div class="topctrl-layouts">

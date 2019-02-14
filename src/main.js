@@ -6,6 +6,18 @@ import StatusBar from '@/components/StatusBar';
 import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
 import VueSlideoutPanel from 'vue2-slideout-panel';
+import VueI18n from 'vue-i18n';
+
+Vue.use(VueI18n);
+
+import messages from '@/i18n';
+
+const i18n = new VueI18n({
+  locale: 'ja',
+  fallbackLocale: 'en',
+  messages
+});
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faDownload,
@@ -52,6 +64,7 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
+  i18n,
   render: h => h(App)
 }).$mount('#app');
 

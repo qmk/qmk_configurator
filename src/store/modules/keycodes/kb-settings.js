@@ -1,5 +1,5 @@
 export default [
-  { label: 'Keyboard Settings', group: true },
+  { label: 'KeyboardSettings', group: true },
 
   { label: 'Keyboard settings (persistent)', width: 'label' },
 

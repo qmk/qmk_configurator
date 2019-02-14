@@ -1,6 +1,8 @@
 <template>
   <div>
-    <p><label>Layer:</label></p>
+    <p>
+      <label>{{ $t('message.layer.label') }}:</label>
+    </p>
     <div class="layers">
       <!-- prettier-ignore -->
       <div
