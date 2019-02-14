@@ -13,7 +13,7 @@ Vue.use(VueI18n);
 import messages from '@/i18n';
 
 const i18n = new VueI18n({
-  locale: 'ja',
+  locale: 'zh',
   fallbackLocale: 'en',
   messages
 });
