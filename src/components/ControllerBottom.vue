@@ -6,7 +6,7 @@
         id="toolbox"
         title="Download keymap.c only"
         @click="downloadKeymap"
-        v-bind:disabled="disableDownloads"
+        v-bind:disabled="disableDownloadKeymap"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
       </button>
@@ -15,7 +15,7 @@
         id="source"
         @click="downloadSource"
         title="Download QMK Firmware code"
-        v-bind:disabled="disableDownloads"
+        v-bind:disabled="disableDownloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Full Source
       </button>
@@ -54,7 +54,7 @@
         id="fwFile"
         @click="downloadFirmware"
         title="Download firmware file for flashing"
-        v-bind:disabled="disableDownloads"
+        v-bind:disabled="disableDownloadBinary"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width /> Firmware
       </button>
@@ -86,12 +86,27 @@ export default {
   name: 'bottom-controller',
   computed: {
     ...mapGetters('app', [
-      'previewRequested',
+      'enableDownloads',
+      'exportKeymapName',
+      'firmwareBinaryURL',
+      'firmwareSourceURL',
+      'keyboard',
       'keymapSourceURL',
-      'enableDownloads'
+      'layout',
+      'previewRequested'
     ]),
-    disableDownloads() {
-      return !this.enableDownloads;
+    disableDownloadKeymap() {
+      return !this.enableDownloads && this.keymapSourceURL !== '';
+    },
+    disableDownloadSource() {
+      return !this.enableDownloads && this.firmwareSourceURL !== '';
+    },
+    disableDownloadBinary() {
+      return (
+        !this.enableDownloads ||
+        isUndefined(this.firmwareBinaryURL) ||
+        this.firmwareBinaryURL === ''
+      );
     }
   },
   watch: {
@@ -118,9 +133,9 @@ export default {
 
       //API payload format
       let data = {
-        keyboard: this.$store.getters['app/keyboard'],
-        keymap: this.$store.getters['app/exportKeymapName'],
-        layout: this.$store.getters['app/layout'],
+        keyboard: this.keyboard,
+        keymap: this.exportKeymapName,
+        layout: this.layout,
         layers: layers
       };
 
@@ -139,7 +154,7 @@ export default {
       });
     },
     downloadFirmware() {
-      this.urlEncodedData = first(this.$store.getters['app/firmwareBinaryURL']);
+      this.urlEncodedData = first(this.firmwareBinaryURL);
       this.filename = this.$store.getters['app/firmwareFile'];
       this.downloadElementEnabled = true;
       Vue.nextTick(() => {
@@ -148,7 +163,7 @@ export default {
       });
     },
     downloadSource() {
-      this.urlEncodedData = first(this.$store.getters['app/firmwareSourceURL']);
+      this.urlEncodedData = first(this.firmwareSourceURL);
       this.filename = 'source.zip';
       this.downloadElementEnabled = true;
       Vue.nextTick(() => {
