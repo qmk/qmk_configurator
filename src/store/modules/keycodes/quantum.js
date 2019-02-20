@@ -1,12 +1,11 @@
 // make a Layer Tap Key Keycode Definition
 function makeLT(layer) {
   return {
-    name: `LT(${layer},kc)`,
+    name: `LT ${layer}`,
     code: `LT(${layer},kc)`,
     type: 'layer-container',
     layer: layer,
-    title: `kc on tap, switch to layer ${layer} while held`,
-    width: 1250
+    title: `kc on tap, switch to layer ${layer} while held`
   };
 }
 export default [

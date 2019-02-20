@@ -983,12 +983,14 @@ button {
 }
 
 .keycode-container,
-.keycode-layer {
+.keycode-layer,
+.keycode-layer-container {
   font-size: 10px;
   display: block;
 }
 
 .keycode-container:after,
+.keycode-layer-container:after,
 .keycode-layer:after {
   content: '';
   width: 14px;
