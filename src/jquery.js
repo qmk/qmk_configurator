@@ -102,7 +102,7 @@ function setLayerToNonEmpty(_layer) {
 */
 
 function newAnyKey(keycode) {
-  var anyKey = store.getters['keycodes/lookupKeycode']('text');
+  const anyKey = store.getters['keycodes/lookupKeycode']('text');
   // make a copy otherwise it uses a reference
   return Object.assign({}, anyKey, { text: keycode });
 }
@@ -119,6 +119,22 @@ function newKey(metadata, keycode, obj) {
   }
 
   return key;
+}
+
+// newLayerContainerKey combines aspects of a layer and a container key
+// We pre-assign the layers to make the UI easier to implement.
+function newLayerContainerKey(keycode, internal) {
+  const internals = internal.split(',');
+  const LCKey = store.getters['keycodes/lookupKeycode'](
+    `${keycode}(${internals[0]},kc)`
+  );
+
+  let contents = store.getters['keycodes/lookupKeycode'](internals[1]);
+  if (isUndefined(contents)) {
+    contents = store.getters['keycodes/lookupKeycode']('KC_NO');
+  }
+  let { code, layer, name, type } = LCKey;
+  return Object.assign({ code, layer, name, type, contents: contents });
 }
 
 function parseKeycode(keycode, stats) {
@@ -138,6 +154,10 @@ function parseKeycode(keycode, stats) {
 
     //Check whether it is a layer switching code or combo keycode
     if (internal.includes('KC')) {
+      // Layer Tap keycode
+      if (maincode === 'LT') {
+        return newLayerContainerKey(maincode, internal);
+      }
       // combo keycode
       metadata = store.getters['keycodes/lookupKeycode'](internal);
       if (metadata === undefined) {
