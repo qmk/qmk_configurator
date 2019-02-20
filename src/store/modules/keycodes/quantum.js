@@ -77,7 +77,7 @@ export default [
     title: 'Switch to layer for one keypress'
   },
 
-  { width: 1000 },
+  { width: 500 },
 
   makeLT(0),
   makeLT(1),
@@ -87,6 +87,7 @@ export default [
   makeLT(5),
   makeLT(6),
   makeLT(7),
+  { width: 250 },
   makeLT(8),
   makeLT(9),
   makeLT(10),
