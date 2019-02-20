@@ -6,6 +6,7 @@
     class="key key-container"
     :class="myclasses"
     :style="mystyles"
+    :title="mytitle"
     @click="clicked"
     @dragstart="dragstart"
     @dragend="dragend"
@@ -38,6 +39,11 @@ export default {
     };
   },
   computed: {
+    mytitle() {
+      const contents =
+        (this.meta.contents && this.meta.contents.code) || 'KC_NO';
+      return `LT(${this.meta.layer}, ${contents})`;
+    },
     contents() {
       if (this.meta.contents) {
         return this.formatName(this.meta.contents.name);
