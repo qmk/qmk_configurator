@@ -55,7 +55,7 @@ function generateKeypressHandler(keycode) {
         return;
       }
 
-      store.commit('keymap/setKeycode', meta.code);
+      store.commit('keymap/setKeycode', { _code: meta.code });
     }
   };
 }
