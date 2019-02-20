@@ -62,7 +62,10 @@ const getters = {
           function(acc, key, i) {
             var keycode = key.code;
             if (keycode) {
-              if (keycode.indexOf('(kc)') !== -1) {
+              if (
+                keycode.indexOf('(kc)') !== -1 ||
+                keycode.indexOf(',kc)') !== -1
+              ) {
                 if (key.contents) {
                   keycode = keycode.replace('kc', key.contents.code);
                 } else {
