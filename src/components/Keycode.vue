@@ -33,7 +33,8 @@ export default {
     width: null,
     name: String,
     classes: String,
-    styles: Object
+    styles: Object,
+    layer: Number
   },
   computed: {
     computedStyles() {
@@ -87,16 +88,19 @@ export default {
       ev.dataTransfer.setDragImage(this.crt, 0, 0);
 
       this.dragging = true;
-      let { name, code, type } = this;
+      let { name, code, type, layer } = this;
       ev.dropEffect = 'copy';
       ev.dataTransfer.dropEffect = 'move';
       ev.dataTransfer.setData(
         'application/json',
-        JSON.stringify({ name, type, code })
+        JSON.stringify({ name, type, code, layer })
       );
     },
     clicked() {
-      this.$store.commit('keymap/setKeycode', this.code);
+      this.$store.commit('keymap/setKeycode', {
+        _code: this.code,
+        layer: this.layer
+      });
     }
   },
   mounted() {

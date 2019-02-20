@@ -236,6 +236,11 @@
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
   input {
+    color: $color-gmk-abs-CR;
+    background: lighten($color-gmk-abs-CR, 60%);
+  }
+  .key-contents {
+    color: $color-gmk-abs-CR;
     background: lighten($color-gmk-abs-CR, 40%);
   }
 }
@@ -243,6 +248,11 @@
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
   input {
+    color: $color-gmk-abs-CR;
+    background: lighten($color-gmk-abs-CR, 40%);
+  }
+  .key-contents {
+    color: $color-gmk-abs-CR;
     background: lighten($color-gmk-abs-CR, 40%);
   }
 }

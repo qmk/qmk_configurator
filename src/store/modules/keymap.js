@@ -122,7 +122,7 @@ const mutations = {
   setSelected(state, index) {
     state.selectedIndex = index;
   },
-  setKeycode(state, _code) {
+  setKeycode(state, { _code, layer }) {
     if (isUndefined(state.selectedIndex)) {
       return;
     }
@@ -135,6 +135,9 @@ const mutations = {
     });
     if (type === 'layer') {
       Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
+    }
+    if (type === 'layer-container') {
+      Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
     }
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);

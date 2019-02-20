@@ -164,7 +164,7 @@ export default {
           dstIndex: this.id
         });
       } else {
-        this.setKeycode(json.code);
+        this.setKeycode({ _code: json.code, layer: json.layer });
       }
       this.dragleave();
     },
@@ -200,7 +200,7 @@ export default {
     },
     remove() {
       this.setSelected(this.id);
-      this.setKeycode('KC_NO');
+      this.setKeycode({ _code: 'KC_NO' });
     }
   },
   data() {

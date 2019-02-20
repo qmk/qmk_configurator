@@ -18,6 +18,7 @@ import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
 import LayerKey from '@/components/LayerKey';
 import ContainerKey from '@/components/ContainerKey';
+import LayerContainerKey from '@/components/LayerContainerKey';
 
 export default {
   name: 'visual-keymap',
@@ -139,6 +140,8 @@ export default {
           return ContainerKey;
         case 'layer':
           return LayerKey;
+        case 'layer-container':
+          return LayerContainerKey;
         case 'text':
           return AnyKey;
         default:

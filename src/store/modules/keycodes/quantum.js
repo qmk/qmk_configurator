@@ -1,3 +1,14 @@
+// make a Layer Tap Key Keycode Definition
+function makeLT(layer) {
+  return {
+    name: `LT(${layer},kc)`,
+    code: `LT(${layer},kc)`,
+    type: 'layer-container',
+    layer: layer,
+    title: `kc on tap, switch to layer ${layer} while held`,
+    width: 1250
+  };
+}
 export default [
   { label: 'Quantum', width: 'label', group: true },
 
@@ -21,7 +32,7 @@ export default [
     title: 'Manually enter any QMK keycode'
   },
 
-  { label: 'Layer functions', width: 'label' },
+  { label: 'Layer and Layer Tap functions', width: 'label' },
 
   {
     name: 'MO',
@@ -66,6 +77,25 @@ export default [
     layer: 0,
     title: 'Switch to layer for one keypress'
   },
+
+  { width: 1000 },
+
+  makeLT(0),
+  makeLT(1),
+  makeLT(2),
+  makeLT(3),
+  makeLT(4),
+  makeLT(5),
+  makeLT(6),
+  makeLT(7),
+  makeLT(8),
+  makeLT(9),
+  makeLT(10),
+  makeLT(11),
+  makeLT(12),
+  makeLT(13),
+  makeLT(14),
+  makeLT(15),
 
   {
     label:
