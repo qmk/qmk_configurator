@@ -137,6 +137,9 @@ const mutations = {
       Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
     }
     if (type === 'layer-container') {
+      if (state.keymap[layer] === undefined) {
+        mutations.initLayer(state, layer);
+      }
       Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
     }
     mutations.setSelected(state, undefined);
