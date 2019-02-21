@@ -235,14 +235,16 @@
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
-  input {
-    background: lighten($color-gmk-abs-CR, 40%);
+  input, .key-contents {
+    color: $color-gmk-abs-CR;
+    background: lighten($color-gmk-abs-CR, 60%);
   }
 }
 .gmk-wob-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
-  input {
+  input, .key-contents {
+    color: $color-gmk-abs-CR;
     background: lighten($color-gmk-abs-CR, 40%);
   }
 }
@@ -269,14 +271,14 @@
 .gmk-olivetti-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
-  input {
+  input, .key-contents {
     background: lighten($color-gmk-abs-CP, 40%);
   }
 }
 .gmk-olivetti-mod {
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-V4;
-  input {
+  input, .key-contents {
     background: lighten($color-gmk-abs-U9, 40%);
   }
 }
@@ -286,14 +288,15 @@
 .gmk-olivia-key {
   background: $color-gmk-abs-CP;
   color: #363434;
-  input {
+  input, .key-contents {
     background: lighten($color-gmk-abs-CP, 40%);
   }
 }
 .gmk-olivia-mod {
   background: #363434;
   color: #e8c4b8;
-  input {
+  input, .key-contents {
+    color: lighten(#e8c4b8, 20%);
     background: lighten(#363434, 40%);
   }
 }
@@ -327,10 +330,18 @@
 .gmk-metaverse-key {
   background: $color-gmk-abs-WS1;
   color: $color-gmk-abs-CR;
+  input, .key-contents {
+    background: $color-gmk-abs-WS1;
+    color: $color-gmk-abs-CR;
+  }
 }
 .gmk-metaverse-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
+  input, .key-contents {
+    color: $color-gmk-abs-WS1;
+    background: lighten($color-gmk-abs-CR, 40%);
+  }
 }
 .gmk-metaverse-accent {
   background: $color-gmk-abs-RO2;

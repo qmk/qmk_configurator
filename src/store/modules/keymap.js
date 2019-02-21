@@ -62,7 +62,10 @@ const getters = {
           function(acc, key, i) {
             var keycode = key.code;
             if (keycode) {
-              if (keycode.indexOf('(kc)') !== -1) {
+              if (
+                keycode.indexOf('(kc)') !== -1 ||
+                keycode.indexOf(',kc)') !== -1
+              ) {
                 if (key.contents) {
                   keycode = keycode.replace('kc', key.contents.code);
                 } else {
@@ -122,7 +125,7 @@ const mutations = {
   setSelected(state, index) {
     state.selectedIndex = index;
   },
-  setKeycode(state, _code) {
+  setKeycode(state, { _code, layer }) {
     if (isUndefined(state.selectedIndex)) {
       return;
     }
@@ -135,6 +138,12 @@ const mutations = {
     });
     if (type === 'layer') {
       Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
+    }
+    if (type === 'layer-container') {
+      if (state.keymap[layer] === undefined) {
+        mutations.initLayer(state, layer);
+      }
+      Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
     }
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);
