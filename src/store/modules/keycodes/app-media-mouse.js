@@ -6,7 +6,7 @@ export default [
   { name: 'Power', code: 'KC_PWR', title: 'System Power Down' },
   { name: 'Sleep', code: 'KC_SLEP', title: 'System Sleep' },
   { name: 'Wake', code: 'KC_WAKE', title: 'System Wake' },
-  { width: 250 },
+  { width: 1250 },
   { name: 'Exec', code: 'KC_EXEC', title: 'Execute' },
   { name: 'Help', code: 'KC_HELP', title: 'Help' },
   { name: 'Menu', code: 'KC_MENU', title: 'Menu' },
@@ -18,6 +18,70 @@ export default [
   { name: 'Copy', code: 'KC_COPY', title: 'Copy' },
   { name: 'Paste', code: 'KC_PSTE', title: 'Paste' },
   { name: 'Find', code: 'KC_FIND', title: 'Find' },
+  { width: 0 },
+  {
+    name: 'Calc',
+    code: 'KC_CALC',
+    title: 'Launch Calculator (Windows)'
+  },
+  {
+    name: 'Mail',
+    code: 'KC_MAIL',
+    title: 'Launch Mail (Windows)'
+  },
+  {
+    name: 'Media Player',
+    code: 'KC_MSEL',
+    title: 'Launch Media Player (Windows)'
+  },
+  {
+    name: 'My PC',
+    code: 'KC_MYCM',
+    title: 'Launch My Computer (Windows)'
+  },
+  { width: 250 },
+  {
+    name: 'Browser Search',
+    code: 'KC_WSCH',
+    title: 'Browser Search (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Home',
+    code: 'KC_WHOM',
+    title: 'Browser Home (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Back',
+    code: 'KC_WBAK',
+    title: 'Browser Back (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Forward',
+    code: 'KC_WFWD',
+    title: 'Browser Forward (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Stop',
+    code: 'KC_WSTP',
+    title: 'Browser Stop (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Refresh',
+    code: 'KC_WREF',
+    title: 'Browser Refresh (Windows)',
+    width: 1500
+  },
+  {
+    name: 'Browser Favorites',
+    code: 'KC_WFAV',
+    title: 'Browser Favorites (Windows)',
+    width: 1500
+  },
 
   { label: 'Multimedia Keys', width: 'label' },
 
