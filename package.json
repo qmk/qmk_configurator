@@ -34,6 +34,8 @@
     "babel-jest": "^24.0.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "growl": "^1.10.0",
+    "https-proxy-agent": "^2.2.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",
     "vue-template-compiler": "^2.5.17"
