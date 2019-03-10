@@ -429,12 +429,21 @@
   color: $color-gmk-abs-CP;
   input {
     background: lighten($color-sp-abs-GD, 40%);
+    color: darken($color-gmk-abs-CP, 60%);
+  }
+  .key-contents {
+    background: lighten($color-sp-abs-GD, 40%);
+    color: darken($color-gmk-abs-CP, 60%);
   }
 }
 
 .gmk-space-cadet-mod {
   background: $color-sp-abs-BFP;
   color: $color-gmk-abs-CP;
+  input, .key-contents {
+    background: lighten($color-sp-abs-BFP, 10%);
+    color: $color-gmk-abs-CP;
+  }
 }
 
 .gmk-space-cadet-kb {
