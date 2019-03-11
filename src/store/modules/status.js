@@ -22,6 +22,7 @@ const actions = {
       .get(backend_readme_url_template({ keyboard: _keyboard }))
       .then(result => {
         if (result.status === 200) {
+          commit('clear');
           commit('append', escape(result.data));
           commit('append', escape(state.deferredMessage));
           commit('deferredMessage', '');

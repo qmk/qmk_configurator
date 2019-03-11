@@ -65,8 +65,9 @@ export default {
         return [];
       }
       if (this.loadingKeymapPromise) {
-        this.loadingKeymapPromise();
+        const _promise = this.loadingKeymapPromise;
         this.setLoadingKeymapPromise(undefined);
+        _promise();
       }
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
