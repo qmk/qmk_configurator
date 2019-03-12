@@ -364,4 +364,7 @@ export default {
   padding-right: 5px;
   min-width: 90px;
 }
+#keyboard {
+  max-width: 18rem;
+}
 </style>
