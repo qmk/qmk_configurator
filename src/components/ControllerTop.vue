@@ -1,7 +1,7 @@
 <template>
   <div id="controller-top">
     <div class="topctrl">
-      <div class="topctrl-1-1">
+      <div class="topctrl-keyboards">
         <label class="drop-label">Keyboard:</label>
         <select id="keyboard" v-bind:style="width" v-model="keyboard">
           <option v-for="keeb in keyboards" :key="keeb" v-bind:value="keeb">
@@ -9,7 +9,7 @@
           </option>
         </select>
       </div>
-      <div class="topctrl-1-2">
+      <div class="topctrl-keymap-name">
         <label class="drop-label">Keymap Name:</label>
         <input
           id="keymap-name"
@@ -21,7 +21,7 @@
           @blur="blur"
         />
       </div>
-      <div class="topctrl-1-3">
+      <div class="topctrl-controls">
         <button
           id="load-default"
           title="Load default keymap from QMK Firmware"
@@ -38,7 +38,7 @@
           Compile
         </button>
       </div>
-      <div class="topctrl-2-1">
+      <div class="topctrl-layouts">
         <label class="drop-label">Layout:</label>
         <select id="layout" v-model="layout">
           <option
@@ -337,22 +337,22 @@ export default {
   overflow: hidden;
   line-height: 100%;
 }
-.topctrl-1-1 {
+.topctrl-keyboards {
   grid-row: top;
   grid-column: left;
   justify-self: start;
 }
-.topctrl-1-2 {
+.topctrl-keymap-name {
   grid-row: top;
   grid-column: middle;
   justify-self: start;
 }
-.topctrl-1-3 {
+.topctrl-controls {
   grid-row: top;
   grid-column: right;
   justify-self: end;
 }
-.topctrl-2-1 {
+.topctrl-layouts {
   grid-row: bottom;
   grid-column-start: left;
   grid-column-end: right;
