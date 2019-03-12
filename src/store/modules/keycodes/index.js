@@ -5,7 +5,7 @@ import settings from './kb-settings';
 import media from './app-media-mouse';
 import steno from './steno';
 const state = {
-  keycodes: [...ansi, ...iso_jis, ...quantum, ...settings, ...media, ...steno]
+  keycodes: [...ansi, ...iso_jis, ...quantum, ...settings, ...media]
 };
 
 const getters = {
@@ -21,7 +21,21 @@ const getters = {
 };
 
 const actions = {};
-const mutations = {};
+const mutations = {
+  enableSteno(state) {
+    state.keycodes = [
+      ...ansi,
+      ...iso_jis,
+      ...quantum,
+      ...settings,
+      ...media,
+      ...steno
+    ];
+  },
+  disableSteno(state) {
+    state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+  }
+};
 
 export default {
   namespaced: true,
