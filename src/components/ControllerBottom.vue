@@ -250,8 +250,10 @@ export default {
               stats.count
             } keycodes. Defined ${stats.any} Any key keycodes\n`;
             store.commit('status/deferredMessage', msg);
-            store.commit('app/setKeymapName', data.keymap);
-            store.commit('keymap/setDirty');
+            store.dispatch('status/viewReadme', this.keyboard).then(() => {
+              store.commit('app/setKeymapName', data.keymap);
+              store.commit('keymap/setDirty');
+            });
           });
           disableOtherButtons();
         });
