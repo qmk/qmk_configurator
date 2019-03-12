@@ -1,15 +1,15 @@
 <template>
   <div id="controller-top">
     <div class="topctrl">
-      <div class="topctrl-1-1">
+      <div class="topctrl-keyboards">
         <label class="drop-label">Keyboard:</label>
-        <select id="keyboard" v-bind:style="width" v-model="keyboard">
+        <select id="keyboard" v-model="keyboard">
           <option v-for="keeb in keyboards" :key="keeb" v-bind:value="keeb">
             {{ keeb }}
           </option>
         </select>
       </div>
-      <div class="topctrl-1-2">
+      <div class="topctrl-keymap-name">
         <label class="drop-label">Keymap Name:</label>
         <input
           id="keymap-name"
@@ -21,7 +21,7 @@
           @blur="blur"
         />
       </div>
-      <div class="topctrl-1-3">
+      <div class="topctrl-controls">
         <button
           id="load-default"
           title="Load default keymap from QMK Firmware"
@@ -38,7 +38,7 @@
           Compile
         </button>
       </div>
-      <div class="topctrl-2-1">
+      <div class="topctrl-layouts">
         <label class="drop-label">Layout:</label>
         <select id="layout" v-model="layout">
           <option
@@ -308,8 +308,7 @@ export default {
   },
   data: () => {
     return {
-      keymapName: '',
-      width: 0
+      keymapName: ''
     };
   },
   mounted() {
@@ -320,7 +319,7 @@ export default {
 <style>
 .topctrl {
   display: grid;
-  grid-template: auto / 400px 360px auto;
+  grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
   grid-row-gap: 0px;
 }
 #controller-top {
@@ -337,25 +336,25 @@ export default {
   overflow: hidden;
   line-height: 100%;
 }
-.topctrl-1-1 {
-  grid-row: 1;
-  grid-column: 1;
+.topctrl-keyboards {
+  grid-row: top;
+  grid-column: left;
   justify-self: start;
 }
-.topctrl-1-2 {
-  grid-row: 1;
-  grid-column: 2;
+.topctrl-keymap-name {
+  grid-row: top;
+  grid-column: middle;
   justify-self: start;
 }
-.topctrl-1-3 {
-  grid-row: 1;
-  grid-column: 3;
+.topctrl-controls {
+  grid-row: top;
+  grid-column: right;
   justify-self: end;
 }
-.topctrl-2-1 {
-  grid-row: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
+.topctrl-layouts {
+  grid-row: bottom;
+  grid-column-start: left;
+  grid-column-end: right;
   justify-self: start;
 }
 .drop-label {
@@ -363,5 +362,8 @@ export default {
   text-align: right;
   padding-right: 5px;
   min-width: 90px;
+}
+#keyboard {
+  max-width: 18rem;
 }
 </style>
