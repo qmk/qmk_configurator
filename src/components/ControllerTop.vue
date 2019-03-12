@@ -3,7 +3,7 @@
     <div class="topctrl">
       <div class="topctrl-keyboards">
         <label class="drop-label">Keyboard:</label>
-        <select id="keyboard" v-bind:style="width" v-model="keyboard">
+        <select id="keyboard" v-model="keyboard">
           <option v-for="keeb in keyboards" :key="keeb" v-bind:value="keeb">
             {{ keeb }}
           </option>
@@ -308,8 +308,7 @@ export default {
   },
   data: () => {
     return {
-      keymapName: '',
-      width: 'max-width: 18rem'
+      keymapName: ''
     };
   },
   mounted() {
@@ -363,5 +362,8 @@ export default {
   text-align: right;
   padding-right: 5px;
   min-width: 90px;
+}
+#keyboard {
+  max-width: 18rem;
 }
 </style>
