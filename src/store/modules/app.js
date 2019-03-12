@@ -27,6 +27,8 @@ const state = {
   message: ''
 };
 
+const steno_keyboards = ['gergo'];
+
 const getters = {
   message: state => state.message,
   showSpinner: state => state.showSpinner,
@@ -83,6 +85,17 @@ const actions = {
           nextLayout = oldLayout;
         }
         commit('setLayout', nextLayout);
+
+        // enable and disable steno in keycode UI
+        const stenoCheck = steno_keyboards.reduce((acc, keeb) => {
+          return { [keeb]: true };
+        }, {});
+        if (stenoCheck[keyboard]) {
+          this.commit('keycodes/enableSteno');
+        } else {
+          this.commit('keycodes/disableSteno');
+        }
+
         resolve();
       });
     });
