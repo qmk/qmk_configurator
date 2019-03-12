@@ -309,7 +309,7 @@ export default {
   data: () => {
     return {
       keymapName: '',
-      width: 0
+      width: 'max-width: 18rem'
     };
   },
   mounted() {
@@ -320,7 +320,7 @@ export default {
 <style>
 .topctrl {
   display: grid;
-  grid-template: auto / 400px 360px auto;
+  grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
   grid-row-gap: 0px;
 }
 #controller-top {
@@ -338,24 +338,24 @@ export default {
   line-height: 100%;
 }
 .topctrl-1-1 {
-  grid-row: 1;
-  grid-column: 1;
+  grid-row: top;
+  grid-column: left;
   justify-self: start;
 }
 .topctrl-1-2 {
-  grid-row: 1;
-  grid-column: 2;
+  grid-row: top;
+  grid-column: middle;
   justify-self: start;
 }
 .topctrl-1-3 {
-  grid-row: 1;
-  grid-column: 3;
+  grid-row: top;
+  grid-column: right;
   justify-self: end;
 }
 .topctrl-2-1 {
-  grid-row: 2;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  grid-row: bottom;
+  grid-column-start: left;
+  grid-column-end: right;
   justify-self: start;
 }
 .drop-label {
