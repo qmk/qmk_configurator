@@ -1,6 +1,7 @@
 # Quantum Mechanical Keyboard Configurator
 
 [![Build Status](https://travis-ci.org/qmk/qmk_configurator.svg?branch=master)](https://travis-ci.org/qmk/qmk_configurator)
+[![Known Vulnerabilities](https://snyk.io/test/github/qmk/qmk_configurator/badge.svg)](https://snyk.io/test/github/qmk/qmk_configurator)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_configurator.svg)](https://github.com/qmk/qmk_configurator/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_configurator.svg?style=social&label=Fork)](https://github.com/qmk/qmk_configurator/)
@@ -14,6 +15,13 @@ This project is very much a work in progress. To begin contributing, please refe
  * [Issues](https://github.com/qmk/qmk_configurator/issues)
 
 ## Development
+
+We recommend you install and use [NVM](https://github.com/creationix/nvm) to manage node versions. There is a .nvmrc file in the root of the project directory that has been tested with our dependencies.
+
+### Select node version
+```shell
+nvm use
+```
 
 ### Project setup
 ```
