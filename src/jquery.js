@@ -215,6 +215,7 @@ function getExclusionList() {
     '40percentclub/i75',
     'atom47',
     'bigseries',
+    'cannonkeys/satisfaction75',
     'chibios_test',
     'christmas_tree',
     'converter/palm_usb',
