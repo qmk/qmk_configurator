@@ -1084,6 +1084,7 @@ button {
   width: 100%;
   clear: both;
   height: 20px;
+  font-size: 12px;
   justify-content: left;
 }
 
