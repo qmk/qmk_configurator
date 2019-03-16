@@ -47,12 +47,29 @@ function generateKeypressCombos(_keycodes) {
 
 // generate a keypress combo handler per keycode
 function generateKeypressHandler(keycode) {
+  const mods = {
+    KC_LSFT: 'KC_RSFT',
+    KC_LCTL: 'KC_RCTL',
+    KC_LGUI: 'KC_RGUI',
+    KC_LALT: 'KC_RALT'
+  };
   return {
     keys: keycode.keys,
-    on_keydown: () => {
-      const meta = store.getters['keycodes/lookupKeyPressCode'](keycode.keys);
+    on_keydown: ev => {
+      let meta = store.getters['keycodes/lookupKeyPressCode'](keycode.keys);
       if (isUndefined(meta)) {
         return;
+      }
+      // detect left and right mods
+      switch (meta.code) {
+        case 'KC_LSFT':
+        case 'KC_LGUI':
+        case 'KC_LALT':
+        case 'KC_LCTL':
+          if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+            meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+          }
+          break;
       }
 
       store.commit('keymap/setKeycode', { _code: meta.code });
