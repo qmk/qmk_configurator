@@ -281,15 +281,19 @@
 .gmk-dolch-key {
   background: $color-gmk-abs-CC;
   color: $color-gmk-abs-WS1;
-  input {
-    background: lighten($color-gmk-abs-CC, 40%);
+  input, .key-contents {
+    background: darken($color-gmk-abs-CC, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
   }
 }
 .gmk-dolch-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-WS1;
-  input {
-    background: lighten($color-gmk-abs-N9, 40%);
+  input, .key-contents {
+    background: darken($color-gmk-abs-N9, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
   }
 }
 .gmk-dolch-kb {
