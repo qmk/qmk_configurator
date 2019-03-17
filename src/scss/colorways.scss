@@ -182,16 +182,20 @@
 .dsa-galaxy-class-key {
   background: $color-sp-pbt-BFE;
   color: $color-sp-pbt-BLACK;
-  input {
-    background: lighten($color-sp-pbt-BFE, 40%);
+  input, .key-contents {
+    background: lighten($color-sp-pbt-BFE, 10%);
+    color: $color-sp-pbt-BLACK;
+    border-color: mix($color-sp-pbt-BFE, $color-sp-pbt-BLACK);
   }
 }
 .dsa-galaxy-class-mod {
   // yellow
   background: $color-pantone-141C;
   color: $color-sp-pbt-BLACK;
-  input {
-    background: lighten($color-pantone-141C, 40%);
+  input, .key-contents {
+    background: lighten($color-pantone-141C, 10%);
+    color: $color-sp-pbt-BLACK;
+    border-color: mix(lighten($color-pantone-141C, 10%), $color-sp-pbt-BLACK);
   }
 }
 .dsa-galaxy-class-purple {
