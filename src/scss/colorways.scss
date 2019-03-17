@@ -422,15 +422,19 @@
 .gmk-nautilus-key {
   background: $color-pantone-534C;
   color: $color-gmk-abs-TU2;
-  input {
-    background: lighten($color-pantone-534C, 40%);
+  input, .key-contents {
+    background: darken($color-pantone-534C, 10%);
+    color: lighten($color-gmk-abs-TU2, 5%);
+    border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
   }
 }
 .gmk-nautilus-mod {
   background: $color-pantone-533C;
   color: $color-gmk-abs-N6;
-  input {
-    background: lighten($color-pantone-533C, 40%);
+  input, .key-contents {
+    background: darken($color-pantone-533C, 10%);
+    color: $color-gmk-abs-N6;
+    border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
   }
 }
 .gmk-nautilus-accent {
