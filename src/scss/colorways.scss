@@ -328,15 +328,18 @@
   background: $color-gmk-abs-CP;
   color: #363434;
   input, .key-contents {
-    background: lighten($color-gmk-abs-CP, 40%);
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: #363434;
+    border-color: mix($color-gmk-abs-CP, #363434);
   }
 }
 .gmk-olivia-mod {
   background: #363434;
   color: #e8c4b8;
   input, .key-contents {
-    color: lighten(#e8c4b8, 20%);
-    background: lighten(#363434, 40%);
+    color: #e8c4b8;
+    background: darken(#363434, 10%);
+    border-color: mix(#363434, #e8c4b8);
   }
 }
 .gmk-olivia-accent {
