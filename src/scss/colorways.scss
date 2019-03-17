@@ -366,8 +366,9 @@
   background: $color-gmk-abs-WS1;
   color: $color-gmk-abs-CR;
   input, .key-contents {
-    background: $color-gmk-abs-WS1;
+    background: lighten($color-gmk-abs-WS1, 10%);
     color: $color-gmk-abs-CR;
+    border-color: mix($color-gmk-abs-WS1, $color-gmk-abs-CR);
   }
 }
 .gmk-metaverse-mod {
@@ -375,7 +376,9 @@
   color: $color-gmk-abs-WS1;
   input, .key-contents {
     color: $color-gmk-abs-WS1;
-    background: lighten($color-gmk-abs-CR, 40%);
+    background: lighten($color-gmk-abs-CR, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
   }
 }
 .gmk-metaverse-accent {
