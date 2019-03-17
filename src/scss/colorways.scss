@@ -85,15 +85,19 @@
 .sa-oblivion-hagoromo-key {
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
-  input {
-    background: lighten($color-sp-abs-WFK, 40%);
+  input, .key-contents {
+    background: lighten($color-sp-abs-WFK, 10%);
+    color: darken($color-sp-abs-GD, 10%);
+    border-color: mix($color-sp-abs-WFK, darken($color-sp-abs-GD, 10%));
   }
 }
 .sa-oblivion-hagoromo-mod {
   background: $color-sp-abs-GD;
   color: $color-sp-abs-GAL;
-  input {
-    background: lighten($color-sp-abs-GD, 40%);
+  input, .key-contents {
+    background: darken($color-sp-abs-GD, 10%);
+    color: lighten($color-sp-abs-GAL, 17%);
+    border-color: mix($color-sp-abs-GD, lighten($color-sp-abs-GAL, 17%));
   }
 }
 .sa-oblivion-hagoromo-kb {
