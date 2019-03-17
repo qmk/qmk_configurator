@@ -459,15 +459,19 @@
 .gmk-serika-key {
   background: #ece4d0;
   color: #333732;
-  input {
-    background: lighten(#ece4d0, 40%);
+  input, .key-contents {
+    background: lighten(#ece4d0, 10%);
+    color: #333732;
+    border-color: mix(#ece4d0, #333732);
   }
 }
 .gmk-serika-mod {
   background: #ffcd00;
   color: #333732;
-  input {
-    background: lighten(#ffcd00, 40%);
+  input, .key-contents {
+    background: lighten(#ffcd00, 10%);
+    color: #333732;
+    border-color: mix(#ffcd00, #333732);
   }
 }
 .gmk-serika-accent {
