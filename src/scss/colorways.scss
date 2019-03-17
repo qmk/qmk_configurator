@@ -64,15 +64,19 @@
 .sa-nantucket-selectric-key {
   background: $color-sp-abs-WV;
   color: $color-sp-abs-BBI;
-  input {
-    background: lighten($color-sp-abs-WV, 40%);
+  input, .key-contents {
+    background: lighten($color-sp-abs-WV, 10%);
+    color: $color-sp-abs-BBI;
+    border-color: mix($color-sp-abs-WV, $color-sp-abs-BBI);
   }
 }
 .sa-nantucket-selectric-mod {
   background: $color-sp-abs-BBI;
   color: $color-sp-abs-YCF;
-  input {
-    background: lighten($color-sp-abs-BBI, 40%);
+  input, .key-contents {
+    background: darken($color-sp-abs-BBI, 10%);
+    color: $color-sp-abs-YCF;
+    border-color: mix($color-sp-abs-BBI, $color-sp-abs-YCF);
   }
 }
 .sa-nantucket-selectric-kb {
