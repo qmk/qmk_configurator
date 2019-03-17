@@ -135,16 +135,20 @@
 .sa-vilebloom-key {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
-  input {
-    background: lighten($color-pantone-7699C, 40%);
+  input, .key-contents {
+    background: darken($color-pantone-7699C, 10%);
+    color: $color-sp-abs-WFK;
+    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
   }
 }
 
 .sa-vilebloom-mod {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
-  input {
-    background: lighten($color-pantone-7699C, 40%);
+  input, .key-contents {
+    background: darken($color-pantone-7699C, 10%);
+    color: $color-sp-abs-WFK;
+    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
   }
 }
 
