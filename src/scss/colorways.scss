@@ -3,15 +3,19 @@
 .sa-danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
-  input {
-    background: lighten($color-sp-abs-BFU, 40%);
+  input, .key-contents {
+    background: darken($color-sp-abs-BFU, 10%);
+    color: $color-sp-abs-YY;
+    border-color: mix($color-sp-abs-BFU, $color-sp-abs-YY);
   }
 }
 .sa-danger-zone-mod {
   background: $color-sp-abs-GSM;
   color: $color-sp-abs-YY;
-  input {
-    background: lighten($color-sp-abs-GSM, 40%);
+  input, .key-contents {
+    background: darken($color-sp-abs-GSM, 10%);
+    color: $color-sp-abs-YY;
+    border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
   }
 }
 .sa-danger-zone-kb {
