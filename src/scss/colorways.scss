@@ -307,14 +307,18 @@
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
   input, .key-contents {
-    background: lighten($color-gmk-abs-CP, 40%);
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: darken($color-gmk-abs-V4, 5%);
+    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
   }
 }
 .gmk-olivetti-mod {
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-V4;
   input, .key-contents {
-    background: lighten($color-gmk-abs-U9, 40%);
+    background: lighten($color-gmk-abs-U9, 10%);
+    color: darken($color-gmk-abs-V4, 15%);
+    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
   }
 }
 .gmk-olivetti-kb {
