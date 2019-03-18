@@ -185,6 +185,7 @@ function parseKeycode(keycode, stats) {
       outerKeycode = maincode + '(kc)';
       metadata = store.getters['keycodes/lookupKeycode'](outerKeycode);
       if (metadata === undefined) {
+        stats.any += 1;
         return newAnyKey(keycode);
       }
 
@@ -196,6 +197,7 @@ function parseKeycode(keycode, stats) {
     outerKeycode = maincode + '(layer)';
     metadata = store.getters['keycodes/lookupKeycode'](outerKeycode);
     if (metadata === undefined) {
+      stats.any += 1;
       return newAnyKey(keycode);
     }
     key = newKey(metadata, keycode, { layer: internal });
@@ -216,6 +218,7 @@ function parseKeycode(keycode, stats) {
   // regular keycode
   metadata = store.getters['keycodes/lookupKeycode'](keycode);
   if (metadata === undefined) {
+    stats.any += 1;
     return newAnyKey(keycode);
   }
   return newKey(metadata, keycode);
