@@ -29,6 +29,7 @@
 </template>
 <script>
 import isNumber from 'lodash/isNumber';
+import isNaN from 'lodash/isNaN';
 import { mapGetters, mapMutations, mapActions } from 'vuex';
 import BaseKey from './BaseKey';
 export default {
@@ -47,7 +48,7 @@ export default {
     ...mapActions('keymap', ['setKeycodeLayer']),
     input(e) {
       const toLayer = parseInt(e.target.value, 10);
-      if (isNumber(toLayer)) {
+      if (!isNaN(toLayer) && isNumber(toLayer)) {
         this.setKeycodeLayer({
           layer: this.curLayer,
           index: this.id,
