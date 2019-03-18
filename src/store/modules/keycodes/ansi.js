@@ -133,7 +133,7 @@ export default [
 
   { label: 'Shifted symbols', width: 'label' },
 
-  { name: '~', code: 'KC_TILD', keys: '`' },
+  { name: '~', code: 'KC_TILD', keys: '~' },
   { name: '!', code: 'KC_EXLM', keys: '!' },
   { name: '@', code: 'KC_AT', keys: '@' },
   { name: '#', code: 'KC_HASH', keys: '#' },
