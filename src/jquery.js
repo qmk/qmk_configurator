@@ -41,21 +41,37 @@ function generateKeypressCombos(_keycodes) {
       // only keycodes with keys members
       return !isUndefined(keys);
     })
-    .map(keycode => generateKeypressHandler(keycode));
+    .map(generateKeypressHandler);
   return combos;
 }
 
+const mods = {
+  KC_LSFT: 'KC_RSFT',
+  KC_LCTL: 'KC_RCTL',
+  KC_LGUI: 'KC_RGUI',
+  KC_LALT: 'KC_RALT'
+};
+
 // generate a keypress combo handler per keycode
 function generateKeypressHandler(keycode) {
+  const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
   return {
     keys: keycode.keys,
-    on_keydown: () => {
-      const meta = store.getters['keycodes/lookupKeyPressCode'](keycode.keys);
-      if (isUndefined(meta)) {
-        return;
+    on_keydown: ev => {
+      let _meta = meta;
+      // detect left and right mods
+      switch (meta.code) {
+        case 'KC_LSFT':
+        case 'KC_LGUI':
+        case 'KC_LALT':
+        case 'KC_LCTL':
+          if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+            _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+          }
+          break;
       }
 
-      store.commit('keymap/setKeycode', { _code: meta.code });
+      store.commit('keymap/setKeycode', { _code: _meta.code });
     }
   };
 }
