@@ -37,7 +37,7 @@ export default [
     iconClass: 'warning',
     width: 'label',
     title:
-      'Note: Layer keys override the position on the target layer to TRNS to avoid layer lock'
+      'Note: Layer keys overwrite the key on the target layer to KC_TRNS to avoid layer lock'
   },
 
   {
