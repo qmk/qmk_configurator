@@ -14,7 +14,8 @@ import {
   faArrowUp,
   faArrowDown,
   faArrowLeft,
-  faArrowRight
+  faArrowRight,
+  faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -32,6 +33,7 @@ library.add(faArrowRight);
 library.add(faApple);
 library.add(faWindows);
 library.add(faLinux);
+library.add(faExclamationTriangle);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;

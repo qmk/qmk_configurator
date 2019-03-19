@@ -31,7 +31,14 @@ export default [
     title: 'Manually enter any QMK keycode'
   },
 
-  { label: 'Layer and Layer Tap functions', width: 'label' },
+  {
+    label: 'Layer and Layer Tap functions',
+    icon: 'exclamation-triangle',
+    iconClass: 'warning',
+    width: 'label',
+    title:
+      'Note: Layer keys overwrite the key on the target layer to KC_TRNS to avoid layer lock'
+  },
 
   {
     name: 'MO',

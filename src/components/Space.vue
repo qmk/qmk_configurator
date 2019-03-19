@@ -4,7 +4,8 @@
     class="space"
     :class="computedClass"
     :title="label"
-  >{{ label }}</div>
+    @mouseenter="$emit('mouseenter')"
+    >{{ label }}&nbsp;<span :class="iconClass" v-if="icon"><font-awesome-icon :icon="icon" fixed-width /></span></div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
@@ -12,7 +13,15 @@ export default {
   name: 'space',
   props: {
     label: String,
-    width: null
+    width: null,
+    icon: {
+      type: String,
+      default: ''
+    },
+    iconClass: {
+      type: String,
+      default: ''
+    }
   },
   computed: {
     computedClass() {
@@ -35,5 +44,8 @@ export default {
   height: 20px;
   justify-content: left;
   font-weight: bold;
+}
+.warning {
+  color: orange;
 }
 </style>

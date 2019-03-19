@@ -97,7 +97,12 @@ export default {
       this.active = index;
     },
     message(key) {
-      const msg = key.title ? `${key.code} - ${key.title}` : key.code;
+      let msg = '';
+      if (isUndefined(key.code)) {
+        msg = key.title ? key.title : '';
+      } else {
+        msg = key.title ? `${key.code} - ${key.title}` : key.code;
+      }
       this.setMessage(msg);
       this.messageClear();
     },
