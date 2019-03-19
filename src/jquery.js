@@ -189,7 +189,7 @@ function parseKeycode(keycode, stats) {
         return newAnyKey(keycode);
       }
 
-      key = newKey(metadata, keycode, { contents: internalkeycode });
+      key = newKey(metadata, outerKeycode, { contents: internalkeycode });
       return key;
     }
 
@@ -200,7 +200,7 @@ function parseKeycode(keycode, stats) {
       stats.any += 1;
       return newAnyKey(keycode);
     }
-    key = newKey(metadata, keycode, { layer: internal });
+    key = newKey(metadata, outerKeycode, { layer: internal });
     return key;
   }
 
