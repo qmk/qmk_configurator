@@ -3,11 +3,14 @@
     <div class="topctrl">
       <div class="topctrl-keyboards">
         <label class="drop-label">Keyboard:</label>
-        <select id="keyboard" v-model="keyboard">
-          <option v-for="keeb in keyboards" :key="keeb" v-bind:value="keeb">
-            {{ keeb }}
-          </option>
-        </select>
+        <v-select
+          style="font-family: monospace;"
+          @search:focus="focus"
+          @search:blur="blur"
+          maxHeight="600px"
+          v-model="keyboard"
+          :options="keyboards"
+        ></v-select>
       </div>
       <div class="topctrl-keymap-name">
         <label class="drop-label">Keymap Name:</label>
@@ -82,7 +85,6 @@ import { clearKeymapTemplate } from '@/common';
 
 export default {
   name: 'ControllerTop',
-  props: {},
   computed: {
     ...mapGetters('keymap', ['isDirty']),
     ...mapGetters('app', ['keyboards', 'layouts', 'compileDisabled']),
@@ -320,7 +322,7 @@ export default {
 .topctrl {
   display: grid;
   grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
-  grid-row-gap: 0px;
+  grid-row-gap: 5px;
 }
 #controller-top {
   padding: 5px;
@@ -333,7 +335,7 @@ export default {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  overflow: hidden;
+  /*  overflow: hidden;*/
   line-height: 100%;
 }
 .topctrl-keyboards {
@@ -345,6 +347,7 @@ export default {
   grid-row: top;
   grid-column: middle;
   justify-self: start;
+  padding-top: 5px;
 }
 .topctrl-controls {
   grid-row: top;
@@ -365,5 +368,12 @@ export default {
 }
 #keyboard {
   max-width: 18rem;
+}
+.v-select {
+  display: inline-block;
+  width: 18rem;
+}
+.topctrl-keyboards .v-select .dropdown-toggle {
+  background: white;
 }
 </style>
