@@ -347,6 +347,7 @@ export default {
   grid-row: top;
   grid-column: middle;
   justify-self: start;
+  padding-top: 5px;
 }
 .topctrl-controls {
   grid-row: top;
@@ -371,5 +372,8 @@ export default {
 .v-select {
   display: inline-block;
   width: 18rem;
+}
+.topctrl-keyboards .v-select .dropdown-toggle {
+  background: white;
 }
 </style>
