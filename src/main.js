@@ -4,8 +4,10 @@ import router from './router';
 import store from './store';
 import StatusBar from '@/components/StatusBar';
 import Veil from '@/components/Veil';
+import vSelect from 'vue-select';
 
 Vue.component('Veil', Veil);
+Vue.component('v-select', vSelect);
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
