@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - 10
 before_script:
+  - git clone --single-branch --branch config https://github.com/qmk/qmk_configurator config
+  - cp config/ga-production.js src/
   - yarn install
   - yarn build
 script: bash ./deploy.sh
