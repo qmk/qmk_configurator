@@ -4,10 +4,14 @@ import config from './ga-development';
 
 export default {
   init() {
-    if (process.env.NODE_ENV === 'production') {
-      Vue.use(VueAnalytics, {
-        id: config.id
-      });
-    }
+    Vue.use(VueAnalytics, {
+      id: config.id,
+      autoTracking: {
+        screenview: true
+      },
+      debug: {
+        sendHitTask: process.env.NODE_ENV === 'production'
+      }
+    });
   }
 };

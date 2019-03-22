@@ -290,6 +290,12 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'compilation',
+        eventLabel: 'keyboard',
+        eventValue: this.keyboard
+      });
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store

@@ -1,3 +1,3 @@
 export default {
-  id: ''
+  id: 'UA-XXX-X'
 };
