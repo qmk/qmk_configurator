@@ -293,8 +293,7 @@ export default {
       this.$ga.event({
         eventCategory: 'apicall',
         eventAction: 'compilation',
-        eventLabel: 'keyboard',
-        eventValue: this.keyboard
+        eventLabel: this.keyboard
       });
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
