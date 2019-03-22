@@ -16,7 +16,6 @@ git remote add origin https://github.com/${TRAVIS_REPO_SLUG}
 git pull origin config
 
 rm -rf .git
-mv ga-production.js src/
 git init
 
 # inside this git repo we'll pretend to be a new user
