@@ -5,6 +5,9 @@ import store from './store';
 import StatusBar from '@/components/StatusBar';
 import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
+import ga from './ga';
+
+ga.init();
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);

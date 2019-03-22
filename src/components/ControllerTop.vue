@@ -263,6 +263,11 @@ export default {
      * @return {object} promise when it has been done or error
      */
     updateKeyboard(newKeyboard) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'changeKeyboard',
+        eventLabel: newKeyboard
+      });
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
         .then(this.postUpdateKeyboard);
@@ -290,6 +295,11 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'compilation',
+        eventLabel: this.keyboard
+      });
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store

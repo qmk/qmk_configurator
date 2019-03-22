@@ -11,10 +11,15 @@ import Main from '@/components/Main';
 import Keycodes from '@/components/Keycodes';
 
 export default {
-  name: 'home',
+  name: 'configurator',
   components: {
     Main,
     Keycodes
+  },
+  methods: {
+    track() {
+      this.$ga.page('/');
+    }
   }
 };
 </script>
