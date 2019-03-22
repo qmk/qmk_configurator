@@ -263,6 +263,11 @@ export default {
      * @return {object} promise when it has been done or error
      */
     updateKeyboard(newKeyboard) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'changeKeyboard',
+        eventLabel: newKeyboard
+      });
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
         .then(this.postUpdateKeyboard);
