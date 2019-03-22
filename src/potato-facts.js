@@ -1,8 +1,8 @@
 export default [
   'A potato is about 80% water and 20% solid.',
   'Henry Spalding first planted potatoes in Idaho in 1837',
-  '“French Fries” were introduced to America when Thomas Jefferson served them at a Whitehouse dinner.',
-  'United States potato lovers consumed more than 4 million tons of French Fries in various shapes and sizes.',
+  '“French Fries” were introduced to America when Thomas Jefferson served them at a White House dinner.',
+  'American potato lovers consumed more than 4 million tons of French Fries in various shapes and sizes in 2017.',
   'Potatoes are a powerful aphrodisiac, says a physician in Ireland.',
   'The average American eats 140 pounds of potatoes per year. Germans eat more than 200 pounds per year.',
   'The largest potato grown was 18 pounds and 4 ounces according to the Guinness Book of World Records. It was grown in England in 1795.',
@@ -23,7 +23,7 @@ export default [
   'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.',
   'August 19th and October 27th are National Potato Day.',
   'Potatoes are also used to brew alcoholic beverages such as vodka, potcheen, or akvavit.',
-  'Potatoes are among most environmentally friendly vegetables. They’re easy to grow, and don’t require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do.',
+  'Potatoes are among the most environmentally friendly vegetables. They’re easy to grow, and don’t require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do.',
   'The potato originated in the region of southern Peru where it was first domesticated between 8000 BC and 5000 BC.',
   'The word potato comes from the Spanish word patata.',
   'Potato plants are usually pollinated by insects such as bumblebees.'
