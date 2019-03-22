@@ -9,6 +9,7 @@
           @search:blur="blur"
           maxHeight="600px"
           v-model="keyboard"
+          :clearable="false"
           :options="keyboards"
         ></v-select>
       </div>
