@@ -348,7 +348,12 @@ export default {
   grid-row: top;
   grid-column: middle;
   justify-self: start;
-  padding-top: 5px;
+}
+#keymap-name {
+  width: 220px;
+  padding: 7px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
 }
 .topctrl-controls {
   grid-row: top;
@@ -360,6 +365,12 @@ export default {
   grid-column-start: left;
   grid-column-end: right;
   justify-self: start;
+}
+#layout {
+  padding: 5px 4px;
+  border-radius: 4px;
+  border: 1px solid #cdcdcd;
+  width: 288px;
 }
 .drop-label {
   display: inline-block;
