@@ -15,6 +15,11 @@ export default {
   components: {
     Main,
     Keycodes
+  },
+  methods: {
+    track() {
+      this.$ga.page('/');
+    }
   }
 };
 </script>
