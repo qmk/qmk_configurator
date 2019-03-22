@@ -20,5 +20,11 @@ export default [
   'During the Alaskan Klondike gold rush, (1897-1898) potatoes were practically worth their weight in gold.',
   'Sir Walter Raleigh introduced potatoes to Ireland in 1589 on the 40,000 acres of land near Cork.',
   'Potatoes are available year-round as they are harvested somewhere every month of the year.',
-  'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.'
+  'Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds.',
+  'August 19th and October 27th are National Potato Day.',
+  'Potatoes are also used to brew alcoholic beverages such as vodka, potcheen, or akvavit.',
+  'Potatoes are among most environmentally friendly vegetables. They’re easy to grow, and don’t require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do.',
+  'The potato originated in the region of southern Peru where it was first domesticated between 8000 BC and 5000 BC.',
+  'The word potato comes from the Spanish word patata.',
+  'Potato plants are usually pollinated by insects such as bumblebees.'
 ];
