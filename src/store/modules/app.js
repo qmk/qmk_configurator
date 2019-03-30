@@ -27,7 +27,7 @@ const state = {
   message: ''
 };
 
-const steno_keyboards = ['gergo'];
+const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
   message: state => state.message,
