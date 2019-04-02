@@ -46,7 +46,7 @@ function generateKeypressCombos(_keycodes) {
 }
 
 const keyLUT = {
-  'ContextMenu': 'KC_APP'
+  ContextMenu: 'KC_APP'
 };
 
 const mods = {
@@ -65,7 +65,7 @@ function generateKeypressHandler(keycode) {
       let _meta = meta;
 
       // handle special cases eg. ContextMenu
-      const special = keyLUT(ev.key);
+      const special = keyLUT[ev.key];
       if (!isUndefined(special)) {
         _meta = store.getters['keycodes/lookupKeycode'](special);
       } else {
