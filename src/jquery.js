@@ -45,6 +45,10 @@ function generateKeypressCombos(_keycodes) {
   return combos;
 }
 
+const keyLUT = {
+  'ContextMenu': 'KC_APP'
+};
+
 const mods = {
   KC_LSFT: 'KC_RSFT',
   KC_LCTL: 'KC_RCTL',
@@ -59,21 +63,23 @@ function generateKeypressHandler(keycode) {
     keys: keycode.keys,
     on_keydown: ev => {
       let _meta = meta;
-      // detect left and right mods
-      switch (meta.code) {
-        case 'KC_LSFT':
-        case 'KC_LGUI':
-        case 'KC_LALT':
-        case 'KC_LCTL':
-          // Keypress reports this keycode as Left GUI because they (sometimes) have the same event keyCode
-          if (ev.key === 'ContextMenu') {
-            _meta = store.getters['keycodes/lookupKeycode']('KC_APP');
+
+      // handle special cases eg. ContextMenu
+      const special = keyLUT(ev.key);
+      if (!isUndefined(special)) {
+        _meta = store.getters['keycodes/lookupKeycode'](special);
+      } else {
+        // detect left and right mods
+        switch (meta.code) {
+          case 'KC_LSFT':
+          case 'KC_LGUI':
+          case 'KC_LALT':
+          case 'KC_LCTL':
+            if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+              _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+            }
             break;
-          }
-          if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-            _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
-          }
-          break;
+        }
       }
 
       store.commit('keymap/setKeycode', { _code: _meta.code });
