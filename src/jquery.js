@@ -65,6 +65,11 @@ function generateKeypressHandler(keycode) {
         case 'KC_LGUI':
         case 'KC_LALT':
         case 'KC_LCTL':
+          // Keypress reports this keycode as Left GUI because they (sometimes) have the same event keyCode
+          if (ev.key === 'ContextMenu') {
+            _meta = store.getters['keycodes/lookupKeycode']('KC_APP');
+            break;
+          }
           if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
             _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
           }
