@@ -190,6 +190,7 @@ export default {
       }
       let keyboardName = this.keyboard.replace(/\//g, '_');
       let store = this.$store;
+      // TODO move this to store
       axios
         .get(`keymaps/${keyboardName}_default.json`)
         .then(({ data, status }) => {
@@ -200,6 +201,8 @@ export default {
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             );
             promise.then(() => {
+              this.logLoadDefaultSuccess(keyboardName);
+
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
               const msg = `\nLoaded ${stats.layers} layers and ${
@@ -211,6 +214,7 @@ export default {
           }
         })
         .catch(error => {
+          this.logLoadDefaultFail(keyboardName);
           statusError(
             `\n* Sorry there is no default for the ${
               this.keyboard
@@ -263,11 +267,10 @@ export default {
      * @return {object} promise when it has been done or error
      */
     updateKeyboard(newKeyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'changeKeyboard',
-        eventLabel: newKeyboard
-      });
+      if (!this.firstRun) {
+        this.firstRun = false;
+        this.logChangeKeyboard(newKeyboard);
+      }
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
         .then(this.postUpdateKeyboard);
@@ -295,11 +298,7 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'compilation',
-        eventLabel: this.keyboard
-      });
+      this.logCompile(this.keyboard);
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store
@@ -317,11 +316,40 @@ export default {
     },
     blur() {
       this.startListening();
+    },
+    logCompile(keyboard) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'compilation',
+        eventLabel: keyboard
+      });
+    },
+    logLoadDefaultSuccess(keyboardName) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'loadDefaultSuccess',
+        eventLabel: keyboardName
+      });
+    },
+    logLoadDefaultFail(keyboardName) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'loadDefaultFail',
+        eventLabel: keyboardName
+      });
+    },
+    logChangeKeyboard(newKeyboard) {
+      this.$ga.event({
+        eventCategory: 'apicall',
+        eventAction: 'changeKeyboard',
+        eventLabel: newKeyboard
+      });
     }
   },
   data: () => {
     return {
-      keymapName: ''
+      keymapName: '',
+      firstRun: true
     };
   },
   mounted() {
