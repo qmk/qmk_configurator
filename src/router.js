@@ -6,7 +6,7 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
-    { path: '/:keyboardP(.+)/:layoutP(.+)', component: Home },
-    { path: '/', component: Home }
+    { path: '/:keyboardP(.+)/:layoutP(.+)', component: Home, name: 'home' },
+    { path: '/', component: Home, name: 'home' }
   ]
 });

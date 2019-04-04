@@ -7,7 +7,7 @@ import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
 import ga from './ga';
 
-ga.init();
+ga.init(router);
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
