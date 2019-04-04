@@ -255,7 +255,9 @@ export default {
           keyboardP !== '' &&
           keyboardP !== PREVIEW_LABEL
         ) {
+          // if someone loads a specific keyboard log it
           _keyboard = keyboardP;
+          this.firstRun = false;
         }
         this.setLayout(layoutP);
         this.updateKeyboard(_keyboard);
@@ -267,8 +269,10 @@ export default {
      * @return {object} promise when it has been done or error
      */
     updateKeyboard(newKeyboard) {
-      if (!this.firstRun) {
+      if (this.firstRun) {
+        // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
+      } else {
         this.logChangeKeyboard(newKeyboard);
       }
       return this.$store
