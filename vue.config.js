@@ -7,7 +7,7 @@ module.exports = {
   publicPath: process.env.NODE_ENV === 'production' ? '.' : '/',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
-      if (fs.existsSync(global.appRoot + '/ga-production.js')) {
+      if (fs.existsSync(global.appRoot + '/src/ga-production.js')) {
         console.log(global.appRoot);
         config.plugins.push(
           new webpack.NormalModuleReplacementPlugin(
