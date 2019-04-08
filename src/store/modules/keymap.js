@@ -52,30 +52,61 @@ const getters = {
     return size(state.keymap[_layer]);
   },
   isDirty: state => state.dirty,
+  /**
+   * Convert internal representation of keycodes into QMK keycodes for export or compilation
+   * @param {boolean} compiler is the target
+   */
   exportLayers: state => ({ compiler }) => {
+    var highestActiveLayer = state.keymap.reduce((acc, layer, index) => {
+      if (!isUndefined(layer)) {
+        return index;
+      }
+      return acc;
+    }, 0);
+
     return reduce(
       state.keymap,
-      function(layers, _layer, k) {
-        layers[k] = [];
+      function convertALayer(exportedLayers, _layer, currentLayerIdx) {
+        // Ignore Empty layers if there are no layers above this layer
+        if (currentLayerIdx > highestActiveLayer) {
+          return exportedLayers;
+        }
+
+        exportedLayers[currentLayerIdx] = [];
+        // Work around backend not handling sparse keymaps
+        // insert an dummy layer filled with KC_TRNS
+        if (
+          compiler &&
+          currentLayerIdx < highestActiveLayer &&
+          (isUndefined(_layer) || _layer.length === 0)
+        ) {
+          _layer = state.keymap[0].map(() => {
+            return {
+              name: '',
+              code: 'KC_TRNS',
+              type: undefined
+            };
+          });
+        }
+
+        // Convert internal representation to QMK keycodes
+        // lodash/reduce handles null/undefined safely and returns empty array
         var aLayer = reduce(
           _layer,
-          function(acc, key, i) {
+          function exportQMKKeycode(newLayer, key, i) {
             var keycode = key.code;
             if (keycode) {
-              if (
-                keycode.indexOf('(kc)') !== -1 ||
-                keycode.indexOf(',kc)') !== -1
-              ) {
+              if (keycode.endsWith('(kc)') || keycode.endsWith(',kc)')) {
                 if (key.contents) {
                   keycode = keycode.replace('kc', key.contents.code);
                 } else {
                   keycode = keycode.replace('kc', 'KC_NO');
                 }
               }
-              if (keycode.indexOf('(layer)') !== -1) {
+              if (keycode.endsWith('(layer)')) {
                 keycode = keycode.replace('layer', key.layer);
               }
-              if (keycode.indexOf('text') !== -1) {
+              if (keycode === 'text') {
                 // add a special ANY marker to keycodes that were defined using ANY
                 // This will be stripped back off on import.
                 keycode = compiler ? key.text : `ANY(${key.text})`;
@@ -84,13 +115,13 @@ const getters = {
               // eslint-disable-next-line
               console.error(`ERROR: unexpected keycode ${key}`, k, i, _layer);
             }
-            acc.push(keycode);
-            return acc;
+            newLayer.push(keycode);
+            return newLayer;
           },
           []
         );
-        layers[k] = aLayer;
-        return layers;
+        exportedLayers[currentLayerIdx] = aLayer;
+        return exportedLayers;
       },
       []
     );
@@ -192,6 +223,16 @@ const mutations = {
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
+    if (state.layer !== 0) {
+      // Only make a layer active if there are actual keys on it
+      const activeKeys = state.keymap[state.layer].filter(
+        k => k.code !== 'KC_NO'
+      );
+      if (activeKeys.length === 0) {
+        // clear empty layers because this is confusing to users
+        Vue.set(state.keymap, state.layer, undefined);
+      }
+    }
     state.layer = newLayer;
   },
   resetConfig: state => {
@@ -230,14 +271,14 @@ const mutations = {
       (KEY_Y_SPACING *= state.config.SCALE)
     );
   },
-  initKeymap: (state, { layout, layer }) => {
+  initKeymap: (state, { layout, layer, code = 'KC_NO' }) => {
     Vue.set(
       state.keymap,
       layer,
       layout.map(() => {
         return {
           name: '',
-          code: 'KC_NO',
+          code,
           type: undefined
         };
       })
