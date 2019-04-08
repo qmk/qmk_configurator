@@ -1,10 +1,12 @@
 import axios from 'axios';
 import store from './store';
 import escape from 'lodash/escape';
+import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';
 import includes from 'lodash/includes';
 import first from 'lodash/first';
 import keys from 'lodash/keys';
+import values from 'lodash/values';
 import * as keypress from 'keypress.js';
 
 import { backend_compile_url } from './store/modules/constants';
@@ -16,9 +18,8 @@ let baking = 'Baking';
 
 function init() {
   keypressListener = new keypress.Listener();
-  keypressListener.register_many(
-    generateKeypressCombos(store.getters['keycodes/keycodes'])
-  );
+  const conf = generateKeypressCombos(store.getters['keycodes/keycodes']);
+  keypressListener.register_many(conf);
   keypressListener.simple_combo('ctrl shift i', () => {
     if (!store.getters['app/isPreview']) {
       store.commit('app/requestPreview');
@@ -41,8 +42,15 @@ function generateKeypressCombos(_keycodes) {
       // only keycodes with keys members
       return !isUndefined(keys);
     })
-    .map(generateKeypressHandler);
-  return combos;
+    .reduce((acc, keycode) => {
+      // de-dupe keypress.js registrations
+      if (isUndefined(acc[keycode.keys])) {
+        acc[keycode.keys] = keycode;
+      }
+      return acc;
+    }, {});
+
+  return values(combos).map(generateKeypressHandler);
 }
 
 const keyLUT = {
@@ -56,34 +64,38 @@ const mods = {
   KC_LALT: 'KC_RALT'
 };
 
+// Share the code between keydown handlers
+// Use currying to bind the meta parameter at runtime.
+function keydownHandler(meta, ev) {
+  let _meta = meta;
+
+  // handle special cases eg. ContextMenu
+  const special = keyLUT[ev.key];
+  if (!isUndefined(special)) {
+    _meta = store.getters['keycodes/lookupKeycode'](special);
+  } else {
+    // detect left and right mods
+    switch (meta.code) {
+      case 'KC_LSFT':
+      case 'KC_LGUI':
+      case 'KC_LALT':
+      case 'KC_LCTL':
+        if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+          _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+        }
+        break;
+    }
+  }
+
+  store.commit('keymap/setKeycode', { _code: _meta.code });
+}
+
 // generate a keypress combo handler per keycode
 function generateKeypressHandler(keycode) {
   const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
   return {
     keys: keycode.keys,
-    on_keydown: ev => {
-      let _meta = meta;
-
-      // handle special cases eg. ContextMenu
-      const special = keyLUT[ev.key];
-      if (!isUndefined(special)) {
-        _meta = store.getters['keycodes/lookupKeycode'](special);
-      } else {
-        // detect left and right mods
-        switch (meta.code) {
-          case 'KC_LSFT':
-          case 'KC_LGUI':
-          case 'KC_LALT':
-          case 'KC_LCTL':
-            if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-              _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
-            }
-            break;
-        }
-      }
-
-      store.commit('keymap/setKeycode', { _code: _meta.code });
-    }
+    on_keydown: partial(keydownHandler, meta)
   };
 }
 
