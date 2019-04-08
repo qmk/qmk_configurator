@@ -344,7 +344,6 @@ export default {
   vertical-align: middle;
   display: inline-block;
   margin: -3px 1px 0 0;
-  font-family: sans-serif;
   font-size: 14px;
   font-weight: bold;
   background-color: #49ad4c;
