@@ -11,7 +11,6 @@ import * as keypress from 'keypress.js';
 
 import { backend_compile_url } from './store/modules/constants';
 
-//let $keycodes;
 let keypressListener;
 let compile_status = undefined;
 let baking = 'Baking';
@@ -30,6 +29,12 @@ function init() {
   });
   keypressListener.simple_combo('ctrl alt u', () => {
     store.commit('keymap/toggleDisplaySizes');
+  });
+  keypressListener.simple_combo('ctrl alt f', () => {
+    store.commit('keymap/toggleContinuousInput');
+  });
+  keypressListener.simple_combo('ctrl alt s', () => {
+    store.commit('app/toggleSettingsPanel');
   });
 
   store.commit('app/setKeypressListener', () => keypressListener);

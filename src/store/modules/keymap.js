@@ -29,10 +29,12 @@ const state = {
   loadingKeymapPromise: undefined,
   colorways: colorways.list,
   colorwayIndex: random(0, colorways.list.length - 1),
-  displaySizes: false
+  displaySizes: false,
+  continuousInput: false
 };
 
 const getters = {
+  continuousInput: state => state.continuousInput,
   displaySizes: state => state.displaySizes,
   colorway: state => state.colorways[state.colorwayIndex].name,
   colorways: state => state.colorways.map(colorway => colorway.name),
@@ -176,7 +178,12 @@ const mutations = {
       }
       Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
     }
-    mutations.setSelected(state, undefined);
+    if (state.continuousInput) {
+      const nextIndex = (state.selectedIndex + 1) % state.keymap[0].length;
+      mutations.setSelected(state, nextIndex);
+    } else {
+      mutations.setSelected(state, undefined);
+    }
     mutations.setDirty(state);
   },
   setContents(state, { index, key }) {
@@ -305,6 +312,9 @@ const mutations = {
   },
   toggleDisplaySizes(state) {
     state.displaySizes = !state.displaySizes;
+  },
+  toggleContinuousInput(state) {
+    state.continuousInput = !state.continuousInput;
   }
 };
 

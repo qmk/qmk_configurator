@@ -15,6 +15,11 @@
       <div class="right-side">
         <p>
           <label title="Ctrl + Alt + N to cycle next colorway">
+            <font-awesome-icon
+              v-if="continuousInput"
+              icon="keyboard"
+              fixed-width
+            />
             Keymap:
             <select id="colorway-select" v-model="curIndex">
               <option
@@ -55,7 +60,7 @@ export default {
     LayerControl
   },
   computed: {
-    ...mapGetters('keymap', ['colorwayIndex', 'colorways']),
+    ...mapGetters('keymap', ['colorwayIndex', 'colorways', 'continuousInput']),
     curIndex: {
       get() {
         return this.colorwayIndex;
@@ -100,7 +105,7 @@ export default {
   align-content: start;
 }
 #colorway-select {
-  font-family: sans-serif;
+  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .beta-feedback {
   position: fixed;

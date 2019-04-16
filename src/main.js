@@ -5,13 +5,7 @@ import store from './store';
 import StatusBar from '@/components/StatusBar';
 import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
-import ga from './ga';
-
-ga.init(router);
-
-Vue.component('Veil', Veil);
-Vue.component('v-select', vSelect);
-
+import VueSlideoutPanel from 'vue2-slideout-panel';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faDownload,
@@ -20,7 +14,10 @@ import {
   faArrowDown,
   faArrowLeft,
   faArrowRight,
-  faExclamationTriangle
+  faExclamationTriangle,
+  faCog,
+  faKeyboard,
+  faChevronLeft
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -28,6 +25,13 @@ import {
   faLinux
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+import ga from './ga';
+
+Vue.component('Veil', Veil);
+Vue.component('v-select', vSelect);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.use(VueSlideoutPanel);
 
 library.add(faDownload);
 library.add(faUpload);
@@ -38,8 +42,12 @@ library.add(faArrowRight);
 library.add(faApple);
 library.add(faWindows);
 library.add(faLinux);
+library.add(faCog);
+library.add(faKeyboard);
 library.add(faExclamationTriangle);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+library.add(faChevronLeft);
+
+ga.init(router);
 
 Vue.config.productionTip = false;
 new Vue({

@@ -4,7 +4,6 @@
       <div class="topctrl-keyboards">
         <label class="drop-label">Keyboard:</label>
         <v-select
-          style="font-family: monospace;"
           @search:focus="focus"
           @search:blur="blur"
           maxHeight="600px"
@@ -427,7 +426,10 @@ export default {
   display: inline-block;
   width: 18rem;
 }
-.topctrl-keyboards .v-select .dropdown-toggle {
+.topctrl-keyboards .v-select {
   background: white;
+  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
 }
 </style>
