@@ -25,7 +25,6 @@ import {
   faLinux
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-
 import ga from './ga';
 
 Vue.component('Veil', Veil);

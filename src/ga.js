@@ -6,6 +6,7 @@ export default {
   init(router) {
     Vue.use(VueAnalytics, {
       id: config.id,
+      disabled: true,
       router
     });
   }
