@@ -16,7 +16,7 @@ export default [
   'If a potato is exposed to light while growing, it will turn green and become poisonous.',
   'It takes 10,000 pounds of potatoes to make 2,500 pounds of potato chips.',
   'Today there are more than 4000 different kinds of potatoes.',
-  'Potatoes belong to a small family, the Nightshade or Solanaceous family.',
+  'Potatoes belong to a small family, the Nightshade or Solanaceae family.',
   'During the Alaskan Klondike gold rush, (1897-1898) potatoes were practically worth their weight in gold.',
   'Sir Walter Raleigh introduced potatoes to Ireland in 1589 on the 40,000 acres of land near Cork.',
   'Potatoes are available year-round as they are harvested somewhere every month of the year.',
