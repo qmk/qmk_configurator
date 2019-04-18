@@ -19,6 +19,7 @@ const state = {
   enableDownloads: false,
   firmwareBinaryURL: [],
   firmwareSourceURL: [],
+  firmwareFile: '',
   keymapSourceURL: [],
   filter: '',
   keypressListener: undefined,
@@ -31,6 +32,7 @@ const state = {
 const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
+  firmwareFile: state => state.firmwareFile,
   settingsPanelVisible: state => state.settingsPanelVisible,
   message: state => state.message,
   showSpinner: state => state.showSpinner,
