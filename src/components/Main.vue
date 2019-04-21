@@ -3,35 +3,42 @@
     <div ref="console">
       <controllerTop /><statusPanel /><controllerBottom />
     </div>
-    <a
-      class="hint"
-      target="_blank"
-      href="https://github.com/qmk/qmk_toolbox/releases"
-    >
-      Download QMK Toolbox
-    </a>
+    <div class="hint">
+      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
+        Get QMK Toolbox
+      </a>
+    </div>
     <div class="split-content">
       <div class="left-side"><layerControl /></div>
       <div class="right-side">
         <p>
-          <label title="Ctrl + Alt + N to cycle next colorway">
+          <label
+            class="keymap--label"
+            title="Ctrl + Alt + N to cycle next colorway"
+          >
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
               fixed-width
             />
             Keymap:
-            <select id="colorway-select" v-model="curIndex">
-              <option
-                class="option"
-                v-for="(name, index) in displayColorways"
-                :key="index"
-                :value="index"
-              >
-                {{ name }}
-              </option>
-            </select>
           </label>
+          &nbsp;
+          <!-- maintain spacing for paragraph -->
+          <select
+            class="keymap--keyset"
+            id="colorway-select"
+            v-model="curIndex"
+          >
+            <option
+              class="option"
+              v-for="(name, index) in displayColorways"
+              :key="index"
+              :value="index"
+            >
+              {{ name }}
+            </option>
+          </select>
         </p>
         <visualKeymap :profile="false" />
       </div>
@@ -101,8 +108,7 @@ export default {
 }
 .hint {
   display: grid;
-  justify-content: start;
-  align-content: start;
+  justify-content: end;
 }
 #colorway-select {
   font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -119,5 +125,11 @@ export default {
   border-radius: 9px;
   color: #ffa500;
   cursor: pointer;
+}
+.keymap--label {
+  float: left;
+}
+.keymap--keyset {
+  float: right;
 }
 </style>
