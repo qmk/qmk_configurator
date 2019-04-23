@@ -35,8 +35,8 @@
   </div>
 </template>
 <script>
+import size from 'lodash/size';
 import InfoBar from '@/components/InfoBar';
-import potatoFacts from '@/potato-facts';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
@@ -81,7 +81,8 @@ export default {
   methods: {
     ...mapMutations('app', ['setShowSpinner', 'setSettingsPanel']),
     randomPotatoFact() {
-      this.potatoFact = potatoFacts[random(0, potatoFacts.length - 1)];
+      const len = size(this.$t('message.potato')) - 1;
+      this.potatoFact = this.$t('message.potato.' + random(0, len));
     },
     dismiss() {
       this.setShowSpinner(false);

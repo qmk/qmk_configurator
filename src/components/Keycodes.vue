@@ -6,14 +6,14 @@
   <div id="keycodes-section">
     <div style="text-align: left; margin-left: 10px;">
       <p>
-        <label>Keycodes:</label>
+        <label>{{ $t('message.keycodes.label') }}:</label>
         <span class="hint-right hint">
           <a
             href="https://docs.qmk.fm/#/keycodes"
             title="Keycodes reference"
             target="_blank"
           >
-            Keycodes reference
+            {{ $t('message.keycodesRef.label') }}
           </a>
         </span>
       </p>
@@ -29,7 +29,7 @@
           @click="changeActive(index)"
           :title="index"
         >
-          {{ index }}
+          {{ $t('message.keycodesTab.' + index + '.label') }}
         </span>
       </div>
       <div class="tab-area">

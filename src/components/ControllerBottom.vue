@@ -4,32 +4,36 @@
       <button
         class="fixed-size"
         id="toolbox"
-        title="Download keymap.c only"
+        :title="$t('message.downloadKeymap.title')"
         @click="downloadKeymap"
         v-bind:disabled="disableDownloadKeymap"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width /> Keymap Only
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.downloadKeymap.label') }}
       </button>
       <button
         class="fixed-size"
         id="source"
         @click="downloadSource"
-        title="Download QMK Firmware code"
+        :title="$t('message.downloadSource.title')"
         v-bind:disabled="disableDownloadSource"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width /> Full Source
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.downloadSource.label') }}
       </button>
       <button
         id="export"
         @click="exportJSON"
-        title="Export QMK Keymap JSON file"
+        :title="$t('message.downloadJSON.title')"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
-      <span class="label-button">Keymap.JSON</span>
+      <span class="label-button">
+        {{ $t('message.downloadJSON.label') }}
+      </span>
       <button
         id="import"
-        title="Import QMK Keymap JSON file"
+        :title="$t('message.importJSON.title')"
         @click="importKeymap"
       >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
@@ -53,10 +57,11 @@
       <button
         id="fwFile"
         @click="downloadFirmware"
-        title="Download firmware file for flashing"
+        :title="$t('message.downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width /> Firmware
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
@@ -207,14 +212,12 @@ export default {
         data = JSON.parse(jsonText);
       } catch (error) {
         console.log(error);
-        alert("Sorry, that doesn't appear to be a valid QMK keymap file.");
+        alert(this.$t('message.errors.invalidQMKKeymap'));
         return;
       }
 
       if (data.version && data.keyboard && data.keyboard.settings) {
-        alert(
-          "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files."
-        );
+        alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
         return;
       }
 
@@ -224,7 +227,7 @@ export default {
         isUndefined(data.layout) ||
         isUndefined(data.layers)
       ) {
-        alert("Sorry, this doesn't appear to be a QMK keymap file.");
+        alert(this.$t('message.errors.unknownJSON'));
         return;
       }
 
@@ -246,9 +249,7 @@ export default {
           );
           promise.then(() => {
             const stats = load_converted_keymap(data.layers);
-            const msg = `\nLoaded ${stats.layers} layers and ${
-              stats.count
-            } keycodes. Defined ${stats.any} Any key keycodes\n`;
+            const msg = this.$t('messages.statsTemplate', stats);
             store.commit('status/deferredMessage', msg);
             store.dispatch('status/viewReadme', this.keyboard).then(() => {
               store.commit('app/setKeymapName', data.keymap);
