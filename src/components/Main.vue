@@ -13,12 +13,12 @@
       <div class="right-side">
         <p>
           <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
+            {{ $t('message.keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
               fixed-width
             />
-            {{ $t('message.keymap.label') }}:
           </label>
           &nbsp;
           <!-- maintain spacing for paragraph -->
