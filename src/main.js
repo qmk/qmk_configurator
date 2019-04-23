@@ -13,7 +13,7 @@ Vue.use(VueI18n);
 import messages from '@/i18n';
 
 const i18n = new VueI18n({
-  locale: window.navigator.language,
+  locale: window.navigator.language.slice(0, 2),
   fallbackLocale: 'en',
   messages
 });
