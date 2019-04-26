@@ -265,6 +265,7 @@ function getExclusionList() {
     'cannonkeys/satisfaction75',
     'chibios_test',
     'christmas_tree',
+    'claw44',
     'converter/palm_usb',
     'converter/sun_usb',
     'converter/usb_usb',
@@ -309,6 +310,7 @@ function getExclusionList() {
     'redox',
     'sentraq/s60_x',
     'sol',
+    'treadstone48',
     'vitamins_included',
     'zen',
     'zinc'
