@@ -1,7 +1,7 @@
 export default {
   potato: {
     1: 'Henry Spalding a été le premier à cultiver les patates en Idaho,US en 1837.',
-    2: 'Les frites ont été introduite aux Etats-Unis par le Président Thomas Jefferson en les servant aux dinners à la Maison Blanche.',
+    2: 'Les frites ont été introduites aux Etats-Unis par le Président Thomas Jefferson en les servant aux dinners à la Maison Blanche.',
     3: '4 millions de tonnes de frites ont été consommé en 2017 aux Etats-Unis.',
     4: 'La patate est un puissant aphrodisiaque, selon un physicien en Irlande.',
     5: 'Un Américain moyen consomme 63kg de pommes-de-terre par an. Un Allemand en consomme plus de 90kg par an.',
@@ -27,6 +27,13 @@ export default {
     25: 'La pomme-de-terre vient d\'une région du sud du Pérou actuel, où elle a été domestiqué entre 8000 av.J-C et 5000 av.J-C.',
     26: 'Le mot patate vient du mot espagnol patata.',
     27: 'Les fleurs de la plante de la pomme-de-terre sont généralement pollinisées par les insectes comme le bourdon.',
-    28: 'La patate posséde un ratio d\'environ 80% d\'eau pour 20% de matière sèche.'
+    28: 'La patate possède un ratio d\'environ 80% d\'eau pour 20% de matière sèche.',
+    29: 'Du point de vue botanique la patate n’est pas un légume racine mais un légume tige : les tubercules sont des tiges souterraines transformées.',
+    30: 'En 1630 en France, la culture de la patate est interdite au motif que cette "racine" serait un vecteur de la lèpre.',
+    31: 'La poutine est un plat copieux de pommes frites, avec du fromage en grains frais et une sauce chaude. Plat du Québec apparu dans les années 1950, la poutine s’est diffusée dans l’ensemble du Canada.',
+    32: 'Environ 12 % de la production mondiale de pommes-de-terre sert à nourrir les animaux.',
+    33: 'La patatogravure est une activité manuelle qui consiste à sculpter dans des pommes-de-terre coupées en deux des motifs variés afin de s’en servir comme tampons, une fois trempées dans de la peinture ou de l’encre.',
+    34: 'Brevetée en 1903, la plaque autochrome, premier procédé de photographie en couleur inventé par Louis Lumière, utilise pour capter la lumière des grains de fécule de pomme-de-terre teintés.',
+    35: 'Selon Alexandre Dumas, les feuilles de pommes-de-terre séchées peuvent fournir une excellente alternative au tabac.'
   }
 };

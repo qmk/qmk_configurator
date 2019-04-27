@@ -7,15 +7,15 @@ export default {
         label: 'clavier'
       },
       layout: {
-        label: 'disposition des touches'
+        label: 'disposition'
       },
       keymapName: {
-        label: 'Nom de l\'arrangement des touches',
+        label: 'Nom de l\'arrangement',
         placeholder: 'arrangement personnalisé'
       },
       loadDefault: {
-        label: 'Charger l\'arrangement des touches par défaut',
-        title: 'Charger l\'arrangement des touches par défaut du firmware QMK'
+        label: 'Charger l\'arrangement par défaut',
+        title: 'Charger l\'arrangement par défaut de QMK'
       },
       compile: {
         label: 'Compiler',
@@ -26,15 +26,15 @@ export default {
         label: 'arrangement seulement'
       },
       downloadSource: {
-        title: 'Télécharger le code du Firmware QMK',
-        label: 'Source complète'
+        title: 'Télécharger le code de QMK',
+        label: 'Code Source'
       },
       downloadJSON: {
-        title: 'Exporter le fichier JSON QMK d\'arrangement des touches',
+        title: 'Exporter le fichier JSON de l\'arrangement',
         label: 'Arrangement.JSON'
       },
       importJSON: {
-        title: 'Importer un fichier JSON QMK d\'arrangement des touches'
+        title: 'Importer un fichier JSON d\'arrangement'
       },
       downloadFirmware: {
         label: 'Firmware',
@@ -53,7 +53,7 @@ export default {
         label: 'Obternir la boite à outils de QMK'
       },
       keycodes: {
-        label: 'Codes des touches'
+        label: 'Codes pour les touches'
       },
       keycodesRef: {
         label: 'Référence des codes pour les touches'
