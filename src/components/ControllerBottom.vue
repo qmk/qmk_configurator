@@ -76,7 +76,7 @@
 <script>
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
-const { mapGetters, mapMutations, mapState } = createNamespacedHelpers('app');
+const { mapMutations, mapState } = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 const encoding = 'data:text/plain;charset=utf-8,';
@@ -91,15 +91,15 @@ import {
 export default {
   name: 'bottom-controller',
   computed: {
-    ...mapState(['keyboard']),
-    ...mapGetters([
+    ...mapState([
+      'keyboard',
+      'layout',
+      'previewRequested',
       'enableDownloads',
       'exportKeymapName',
       'firmwareBinaryURL',
       'firmwareSourceURL',
-      'keymapSourceURL',
-      'layout',
-      'previewRequested'
+      'keymapSourceURL'
     ]),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';

@@ -65,7 +65,7 @@
 
 <script>
 import Vue from 'vue';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -93,7 +93,7 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
-    ...mapGetters('app', ['keyboards', 'layouts', 'compileDisabled']),
+    ...mapState('app', ['keyboards', 'layouts', 'compileDisabled']),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
@@ -117,12 +117,12 @@ export default {
     },
     layout: {
       get() {
-        return this.$store.getters['app/layout'];
+        return this.$store.state.app.layout;
       },
       set(value) {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
-            var old = this.$store.getters['app/layout'];
+            var old = this.$store.state.app.layout;
             const setLayout = this.setLayout;
             setLayout(''); // force a refresh
             Vue.nextTick(() => setLayout(old));

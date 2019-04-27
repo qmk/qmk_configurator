@@ -50,7 +50,7 @@ export default {
       'colorway',
       'defaults'
     ]),
-    ...mapGetters('app', ['layout', 'layouts', 'previewRequested']),
+    ...mapState('app', ['layout', 'layouts', 'previewRequested']),
     styles() {
       let styles = [];
       styles.push(`width: ${this.width}px;`);

@@ -37,9 +37,6 @@ const getters = {
   message: state => state.message,
   showSpinner: state => state.showSpinner,
   spinnerMsg: state => state.spinnerMsg,
-  keyboards: state => state.keyboards,
-  layout: state => state.layout,
-  layouts: state => state.layouts,
   filter: state => state.filter,
   /**
    * keymapName
@@ -58,14 +55,8 @@ const getters = {
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
   },
-  compileDisabled: state => state.compileDisabled,
   isPreview: state => state.isPreview,
-  previewRequested: state => state.previewRequested,
-  jobID: state => state.jobID,
-  enableDownloads: state => state.enableDownloads,
-  firmwareBinaryURL: state => state.firmwareBinaryURL,
-  firmwareSourceURL: state => state.firmwareSourceURL,
-  keymapSourceURL: state => state.keymapSourceURL
+  jobID: state => state.jobID
 };
 
 const actions = {
