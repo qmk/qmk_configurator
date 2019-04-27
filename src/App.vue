@@ -63,7 +63,7 @@ export default {
       this.randomPotatoFact();
     }, this.interval);
     this.destroyWatcher = this.$store.watch(
-      (state, getters) => getters['app/settingsPanelVisible'],
+      state => state.app.settingsPanelVisible,
       this.toggleSettingsPanel
     );
   },

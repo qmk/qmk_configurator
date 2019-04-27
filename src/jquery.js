@@ -20,7 +20,7 @@ function init() {
   const conf = generateKeypressCombos(store.getters['keycodes/keycodes']);
   keypressListener.register_many(conf);
   keypressListener.simple_combo('ctrl shift i', () => {
-    if (!store.getters['app/isPreview']) {
+    if (!store.state.app.isPreview) {
       store.commit('app/requestPreview');
     }
   });
@@ -387,7 +387,7 @@ function disableOtherButtons() {
  *
  */
 function check_status() {
-  const url = `${backend_compile_url}/${store.getters['app/jobID']}`;
+  const url = `${backend_compile_url}/${store.state.app.jobID}`;
   axios
     .get(url)
     .then(resp => {

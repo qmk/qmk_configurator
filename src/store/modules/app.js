@@ -33,7 +33,6 @@ const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
   firmwareFile: state => state.firmwareFile,
-  settingsPanelVisible: state => state.settingsPanelVisible,
   filter: state => state.filter,
   /**
    * keymapName
@@ -51,9 +50,7 @@ const getters = {
     // issue #331 whitelist what we send to API for keymapName and save to disk
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
-  },
-  isPreview: state => state.isPreview,
-  jobID: state => state.jobID
+  }
 };
 
 const actions = {
