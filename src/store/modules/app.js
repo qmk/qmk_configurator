@@ -37,7 +37,6 @@ const getters = {
   message: state => state.message,
   showSpinner: state => state.showSpinner,
   spinnerMsg: state => state.spinnerMsg,
-  keyboard: state => state.keyboard,
   keyboards: state => state.keyboards,
   layout: state => state.layout,
   layouts: state => state.layouts,

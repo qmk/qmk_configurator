@@ -75,7 +75,8 @@
 </template>
 <script>
 import Vue from 'vue';
-import { mapGetters, mapMutations } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapGetters, mapMutations, mapState } = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 const encoding = 'data:text/plain;charset=utf-8,';
@@ -90,12 +91,12 @@ import {
 export default {
   name: 'bottom-controller',
   computed: {
-    ...mapGetters('app', [
+    ...mapState(['keyboard']),
+    ...mapGetters([
       'enableDownloads',
       'exportKeymapName',
       'firmwareBinaryURL',
       'firmwareSourceURL',
-      'keyboard',
       'keymapSourceURL',
       'layout',
       'previewRequested'
@@ -129,7 +130,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('app', ['dismissPreview']),
+    ...mapMutations(['dismissPreview']),
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
       let layers = this.$store.getters['keymap/exportLayers']({
@@ -234,30 +235,28 @@ export default {
       /* TODO Add check for keyboard name and layout */
 
       this.$store.commit('app/setKeyboard', data.keyboard);
-      this.$store
-        .dispatch('app/changeKeyboard', this.$store.getters['app/keyboard'])
-        .then(() => {
-          this.$store.commit('app/setLayout', data.layout);
-          // todo validate these values
-          this.$router.replace({
-            path: `/${data.keyboard}/${data.layout}`
-          });
-
-          var store = this.$store;
-          let promise = new Promise(resolve =>
-            store.commit('keymap/setLoadingKeymapPromise', resolve)
-          );
-          promise.then(() => {
-            const stats = load_converted_keymap(data.layers);
-            const msg = this.$t('message.statsTemplate', stats);
-            store.commit('status/deferredMessage', msg);
-            store.dispatch('status/viewReadme', this.keyboard).then(() => {
-              store.commit('app/setKeymapName', data.keymap);
-              store.commit('keymap/setDirty');
-            });
-          });
-          disableOtherButtons();
+      this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
+        this.$store.commit('app/setLayout', data.layout);
+        // todo validate these values
+        this.$router.replace({
+          path: `/${data.keyboard}/${data.layout}`
         });
+
+        var store = this.$store;
+        let promise = new Promise(resolve =>
+          store.commit('keymap/setLoadingKeymapPromise', resolve)
+        );
+        promise.then(() => {
+          const stats = load_converted_keymap(data.layers);
+          const msg = this.$t('message.statsTemplate', stats);
+          store.commit('status/deferredMessage', msg);
+          store.dispatch('status/viewReadme', this.keyboard).then(() => {
+            store.commit('app/setKeymapName', data.keymap);
+            store.commit('keymap/setDirty');
+          });
+        });
+        disableOtherButtons();
+      });
     },
     infoPreviewChanged() {
       var files = this.$refs.infoPreviewElement.files;

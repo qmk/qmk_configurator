@@ -99,14 +99,14 @@ export default {
     },
     keyboard: {
       get() {
-        return this.$store.getters['app/keyboard'];
+        return this.$store.state.app.keyboard;
       },
       set(value) {
         if (this.isDirty) {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
           ) {
-            var old = this.$store.getters['app/keyboard'];
+            var old = this.$store.state.app.keyboard;
             this.$store.commit('app/setKeyboard', ''); // force a refresh
             Vue.nextTick(this.$store.commit('app/setKeyboard', old));
             return false;
@@ -233,6 +233,7 @@ export default {
           console.log('error loadDefault', error);
         });
     },
+    // TODO this should be an action
     fetchKeyboards() {
       console.log(backend_keyboards_url);
       axios.get(backend_keyboards_url).then(this.initializeKeyboards);
