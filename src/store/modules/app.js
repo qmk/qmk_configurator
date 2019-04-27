@@ -34,9 +34,6 @@ const steno_keyboards = ['gergo', 'georgi'];
 const getters = {
   firmwareFile: state => state.firmwareFile,
   settingsPanelVisible: state => state.settingsPanelVisible,
-  message: state => state.message,
-  showSpinner: state => state.showSpinner,
-  spinnerMsg: state => state.spinnerMsg,
   filter: state => state.filter,
   /**
    * keymapName

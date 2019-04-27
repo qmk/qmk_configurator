@@ -40,7 +40,8 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { mapGetters, mapMutations } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 export default {
   name: 'app',
@@ -73,13 +74,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('app', ['showSpinner', 'spinnerMsg', 'message']),
+    ...mapState(['showSpinner', 'spinnerMsg', 'message']),
     showInfoBar() {
       return this.message !== '';
     }
   },
   methods: {
-    ...mapMutations('app', ['setShowSpinner', 'setSettingsPanel']),
+    ...mapMutations(['setShowSpinner', 'setSettingsPanel']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
