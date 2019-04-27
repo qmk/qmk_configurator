@@ -45,9 +45,7 @@
 </template>
 <script>
 import { createNamespacedHelpers } from 'vuex';
-const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
-  'keymap'
-);
+const { mapState, mapMutations } = createNamespacedHelpers('keymap');
 import { ToggleButton } from 'vue-js-toggle-button';
 export default {
   name: 'settings-panel',
@@ -63,8 +61,7 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState(['continuousInput']),
-    ...mapGetters(['displaySizes'])
+    ...mapState(['continuousInput', 'displaySizes'])
   },
   methods: {
     ...mapMutations(['toggleDisplaySizes', 'toggleContinuousInput']),
