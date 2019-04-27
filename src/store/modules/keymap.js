@@ -127,7 +127,7 @@ const getters = {
   }
 };
 const actions = {
-  initKey: ({ state, commit }, { _layer, index }) => {
+  initKey({ state, commit }, { _layer, index }) {
     if (state.keymap[_layer] === undefined) {
       commit('initLayer', _layer);
     }
@@ -239,10 +239,10 @@ const mutations = {
     }
     state.layer = newLayer;
   },
-  resetConfig: state => {
+  resetConfig(state) {
     state.config = Object.assign({}, state.defaults);
   },
-  resizeConfig: (state, max) => {
+  resizeConfig(state, max) {
     let {
       KEY_WIDTH,
       KEY_HEIGHT,
@@ -275,7 +275,7 @@ const mutations = {
       (KEY_Y_SPACING *= state.config.SCALE)
     );
   },
-  initKeymap: (state, { layout, layer, code = 'KC_NO' }) => {
+  initKeymap(state, { layout, layer, code = 'KC_NO' }) {
     Vue.set(
       state.keymap,
       layer,
@@ -288,7 +288,7 @@ const mutations = {
       })
     );
   },
-  initLayer: (state, layer) => {
+  initLayer(state, layer) {
     if (layer > 0) {
       // layer 0 is always initialized. Use it as a reference
       mutations.initKeymap(state, { layer, layout: state.keymap[0] });
