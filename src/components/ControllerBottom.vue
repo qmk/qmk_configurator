@@ -249,7 +249,7 @@ export default {
           );
           promise.then(() => {
             const stats = load_converted_keymap(data.layers);
-            const msg = this.$t('messages.statsTemplate', stats);
+            const msg = this.$t('message.statsTemplate', stats);
             store.commit('status/deferredMessage', msg);
             store.dispatch('status/viewReadme', this.keyboard).then(() => {
               store.commit('app/setKeymapName', data.keymap);

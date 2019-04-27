@@ -102,7 +102,7 @@ export default {
         unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file."
       },
       statsTemplate:
-        '\nLoaded ${layers} layers and ${count} keycodes. Defined ${any} Any key keycodes\n'
+        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n'
     }
   }
 };
