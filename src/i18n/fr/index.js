@@ -7,34 +7,34 @@ export default {
         label: 'clavier'
       },
       layout: {
-        label: 'disposition'
+        label: 'agencement'
       },
       keymapName: {
-        label: 'Nom de l\'arrangement',
-        placeholder: 'arrangement personnalisé'
+        label: 'Nom de la disposition',
+        placeholder: 'disposition personnalisé'
       },
       loadDefault: {
-        label: 'Charger l\'arrangement par défaut',
-        title: 'Charger l\'arrangement par défaut de QMK'
+        label: 'Charger la disposition par défaut',
+        title: 'Charger la disposition par défaut de QMK'
       },
       compile: {
         label: 'Compiler',
-        title: 'Compiler l\'arrangement'
+        title: 'Compiler la disposition'
       },
       downloadKeymap: {
         title: 'Télécharger seulement keymap.c',
-        label: 'arrangement seulement'
+        label: 'disposition seulement'
       },
       downloadSource: {
-        title: 'Télécharger le code de QMK',
+        title: 'Télécharger le code source de QMK',
         label: 'Code Source'
       },
       downloadJSON: {
-        title: 'Exporter le fichier JSON de l\'arrangement',
-        label: 'Arrangement.JSON'
+        title: 'Exporter le fichier JSON de la disposition actuelle',
+        label: 'Disposition.JSON'
       },
       importJSON: {
-        title: 'Importer un fichier JSON d\'arrangement'
+        title: 'Importer un fichier de disposition JSON'
       },
       downloadFirmware: {
         label: 'Firmware',
@@ -44,16 +44,16 @@ export default {
         title: 'Ctrl + Alt + N pour changer de coloris'
       },
       layer: {
-        label: 'Couche'
+        label: 'Strate'
       },
       keymap: {
-        label: 'Arrangement des touches'
+        label: 'Disposition'
       },
       downloadToolbox: {
         label: 'Obternir la boite à outils de QMK'
       },
       keycodes: {
-        label: 'Codes pour les touches'
+        label: 'Codes des touches'
       },
       keycodesRef: {
         label: 'Référence des codes pour les touches'
@@ -85,7 +85,7 @@ export default {
         displaySizes: {
           label: 'Montrer la taille des touches',
           title: 'ctrl + alt + u',
-          help: 'Montre la taille des touches en unité u (une touche classique = 1 u)'
+          help: 'Montre la taille des touches (une touche classique = 1 u)'
         },
         on: {
           label: 'On'
@@ -96,13 +96,13 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Désolé, cela ne semble pas être un fichier QMK d\'arrangement des touches valide.",
+          "Désolé, cela ne semble pas être un fichier de disposition QMK valide.",
         kbfirmwareJSONUnsupported:
           "Désolé, le Configurateur QMK ne supporte pas l\'importation des fichiers JSON de kbfirmware.",
-        unknownJSON: "Désolé, cela ne semble pas être un fichier QMK d\'arrangement des touches."
+        unknownJSON: "Désolé, cela ne semble pas être un fichier de disposition QMK."
       },
       statsTemplate:
-        '\n{layers} couches et {count} touches chargées. {any} emplacements vides definis\n'
+        '\n{layers} strates et {count} touches chargées. {any} emplacements vides definis\n'
     }
   }
 };
