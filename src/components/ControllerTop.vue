@@ -42,7 +42,7 @@
         </button>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label">Layout:</label>
+        <label class="drop-label">{{ $t('message.layout.label') }}:</label>
         <select id="layout" v-model="layout">
           <option
             v-for="(aLayout, layoutName) in layouts"
