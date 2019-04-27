@@ -33,20 +33,17 @@ const state = {
   continuousInput: false
 };
 
+// Use for computed properties
 const getters = {
-  continuousInput: state => state.continuousInput,
-  displaySizes: state => state.displaySizes,
   colorway: state => state.colorways[state.colorwayIndex].name,
   colorways: state => state.colorways.map(colorway => colorway.name),
   colorwayOverride: state => state.colorways[state.colorwayIndex].override,
   colorwayIndex: state => state.colorwayIndex,
   loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
-  config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
   getKey: state => ({ _layer = state.layer, index }) =>
     state.keymap[_layer][index],
-  layer: state => state.layer,
   getLayer: state => _layer => {
     return state.keymap[_layer];
   },

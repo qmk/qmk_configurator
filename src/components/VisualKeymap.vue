@@ -13,7 +13,8 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import BaseKeymap from '@/components/BaseKeymap';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
 import LayerKey from '@/components/LayerKey';
@@ -22,6 +23,7 @@ import LayerContainerKey from '@/components/LayerContainerKey';
 
 export default {
   name: 'visual-keymap',
+  extends: BaseKeymap,
   props: {
     profile: Boolean
   },
@@ -41,14 +43,12 @@ export default {
     }
   },
   computed: {
+    ...mapState('keymap', ['config', 'displaySizes', 'layer']),
     ...mapGetters('keymap', [
-      'layer',
       'getLayer',
-      'defaults',
-      'config',
       'loadingKeymapPromise',
       'colorway',
-      'displaySizes'
+      'defaults'
     ]),
     ...mapGetters('app', ['layout', 'layouts', 'previewRequested']),
     styles() {
@@ -112,23 +112,6 @@ export default {
      */
     isLayoutUIUpdate(newLayout, oldLayout) {
       return newLayout === '' || oldLayout === '';
-    },
-    calcKeyKeymapDims(w, h) {
-      return {
-        w:
-          w * this.config.KEY_X_SPACING -
-          (this.config.KEY_X_SPACING - this.config.KEY_WIDTH),
-        h:
-          h * this.config.KEY_Y_SPACING -
-          (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT),
-        u: h > w ? h : w
-      };
-    },
-    calcKeyKeymapPos(x, y) {
-      return {
-        x: x * this.config.KEY_X_SPACING,
-        y: y * this.config.KEY_Y_SPACING
-      };
     },
     getComponent(key) {
       const { meta } = key;

@@ -25,7 +25,7 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 import colorways from './colorways';
 
 let substitute = Object.assign(
@@ -51,13 +51,9 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('keymap', [
-      'getKey',
-      'getSelectedKey',
-      'colorwayOverride',
-      'config'
-    ]),
-    ...mapGetters('keymap', { curLayer: 'layer' }),
+    ...mapState('keymap', ['config']),
+    ...mapState('keymap', { curLayer: 'layer' }),
+    ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'colorwayOverride']),
     myTitle() {
       return this.meta ? this.meta.code : '';
     },
