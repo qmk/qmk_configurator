@@ -204,9 +204,7 @@ export default {
 
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
-              const msg = `\nLoaded ${stats.layers} layers and ${
-                stats.count
-              } keycodes. Defined ${stats.any} Any key keycodes\n`;
+              const msg = this.$t('message.statsTemplate', stats);
               store.commit('status/append', msg);
               store.commit('keymap/setDirty');
             });
