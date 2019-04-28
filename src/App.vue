@@ -81,8 +81,8 @@ export default {
   methods: {
     ...mapMutations('app', ['setShowSpinner', 'setSettingsPanel']),
     randomPotatoFact() {
-      const len = size(this.$t('message.potato')) - 1;
-      this.potatoFact = this.$t('message.potato.' + random(0, len));
+      const len = size(this.$t('message.potato'));
+      this.potatoFact = this.$t('message.potato.' + random(1, len));
     },
     dismiss() {
       this.setShowSpinner(false);
