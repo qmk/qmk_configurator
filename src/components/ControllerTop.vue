@@ -13,7 +13,12 @@
         ></v-select>
       </div>
       <div class="topctrl-keymap-name">
-        <label class="drop-label">{{ $t('message.keymapName.label') }}:</label>
+        <label
+          class="drop-label"
+          :class="fontAdjustClasses"
+          :title="$t('message.keymapName.label')"
+          >{{ $t('message.keymapName.label') }}:</label
+        >
         <input
           id="keymap-name"
           type="text"
@@ -125,6 +130,13 @@ export default {
         }
         this.updateLayout({ target: { value } });
       }
+    },
+    fontAdjustClasses() {
+      let classes = [];
+      if (this.$t('message.keymapName.label').length > 12) {
+        classes.push('half-size');
+      }
+      return classes.join(' ');
     }
   },
   watch: {
@@ -382,6 +394,7 @@ export default {
   grid-row: top;
   grid-column: left;
   justify-self: start;
+  height: 2.5rem;
 }
 .topctrl-keymap-name {
   grid-row: top;
@@ -416,6 +429,13 @@ export default {
   text-align: right;
   padding-right: 5px;
   min-width: 90px;
+  max-width: 110px;
+}
+
+.half-size {
+  font-size: 11px;
+  text-overflow: '';
+  vertical-align: middle;
 }
 #keyboard {
   max-width: 18rem;
