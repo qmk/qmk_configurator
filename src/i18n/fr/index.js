@@ -7,38 +7,38 @@ export default {
         label: 'clavier'
       },
       layout: {
-        label: 'agencement'
+        label: 'version'
       },
       keymapName: {
         label: 'Nom de la disposition',
-        placeholder: 'disposition personnalisé'
+        placeholder: 'Disposition Personnalisée'
       },
       loadDefault: {
-        label: 'Charger la disposition par défaut',
-        title: 'Charger la disposition par défaut de QMK'
+        label: 'Disposition par défaut',
+        title: 'Charge la disposition des touches par défaut de QMK'
       },
       compile: {
         label: 'Compiler',
-        title: 'Compiler la disposition'
+        title: 'Compile la disposition des touches actuelle'
       },
       downloadKeymap: {
-        title: 'Télécharger seulement keymap.c',
+        title: 'Télécharge seulement le fichier de disposition des touches keymap.c',
         label: 'disposition seulement'
       },
       downloadSource: {
-        title: 'Télécharger le code source de QMK',
+        title: 'Télécharge le code source de qmk.fm',
         label: 'Code Source'
       },
       downloadJSON: {
-        title: 'Exporter le fichier JSON de la disposition actuelle',
+        title: 'Exporte le fichier .JSON de la disposition des touches actuelle',
         label: 'Disposition.JSON'
       },
       importJSON: {
-        title: 'Importer un fichier de disposition JSON'
+        title: 'Importer un fichier .JSON de disposition des touches'
       },
       downloadFirmware: {
         label: 'Firmware',
-        title: 'Télécharger le fichier du firmware à flash'
+        title: 'Télécharge le fichier du firmware à flash'
       },
       ColorwayTip: {
         title: 'Ctrl + Alt + N pour changer de coloris'
@@ -50,13 +50,13 @@ export default {
         label: 'Disposition'
       },
       downloadToolbox: {
-        label: 'Obternir la boite à outils de QMK'
+        label: 'Obternir QMK Toolbox'
       },
       keycodes: {
         label: 'Codes des touches'
       },
       keycodesRef: {
-        label: 'Référence des codes pour les touches'
+        label: 'Référence'
       },
       keycodesTab: {
         ANSI: {
@@ -72,7 +72,7 @@ export default {
           label: 'Paramètres du clavier'
         },
         AppMediaMouse: {
-          label: 'Applications, Médias et Souris'
+          label: 'Apps, Médias et Souris'
         }
       },
       settingsPanel: {
@@ -83,7 +83,7 @@ export default {
           help: 'Permet d\'entrer les touches via votre clavier sans cliquer sur chaque positions.'
         },
         displaySizes: {
-          label: 'Montrer la taille des touches',
+          label: 'Taille des touches',
           title: 'ctrl + alt + u',
           help: 'Montre la taille des touches (une touche classique = 1 u)'
         },
