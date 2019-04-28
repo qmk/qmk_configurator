@@ -22,7 +22,8 @@ export default {
         title: 'Compile la disposition des touches actuelle'
       },
       downloadKeymap: {
-        title: 'Télécharge seulement le fichier de disposition des touches keymap.c',
+        title:
+          'Télécharge seulement le fichier de disposition des touches keymap.c',
         label: 'disposition seulement'
       },
       downloadSource: {
@@ -30,7 +31,8 @@ export default {
         label: 'Code Source'
       },
       downloadJSON: {
-        title: 'Exporte le fichier .JSON de la disposition des touches actuelle',
+        title:
+          'Exporte le fichier .JSON de la disposition des touches actuelle',
         label: 'Disposition.JSON'
       },
       importJSON: {
@@ -80,7 +82,8 @@ export default {
         fastInput: {
           label: 'Entrée Rapide',
           title: 'ctrl + alt + f',
-          help: 'Permet d\'entrer les touches via votre clavier sans cliquer sur chaque positions.'
+          help:
+            "Permet d'entrer les touches via votre clavier sans cliquer sur chaque positions."
         },
         displaySizes: {
           label: 'Taille des touches',
@@ -96,10 +99,11 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Désolé, cela ne semble pas être un fichier de disposition QMK valide.",
+          'Désolé, cela ne semble pas être un fichier de disposition QMK valide.',
         kbfirmwareJSONUnsupported:
-          "Désolé, le Configurateur QMK ne supporte pas l\'importation des fichiers JSON de kbfirmware.",
-        unknownJSON: "Désolé, cela ne semble pas être un fichier de disposition QMK."
+          "Désolé, le Configurateur QMK ne supporte pas l'importation des fichiers JSON de kbfirmware.",
+        unknownJSON:
+          'Désolé, cela ne semble pas être un fichier de disposition QMK.'
       },
       statsTemplate:
         '\n{layers} strates et {count} touches chargées. {any} emplacements vides definis\n'
