@@ -231,6 +231,9 @@ const mutations = {
   startListening(state) {
     state.keypressListener().listen();
   },
+  resetListener(state) {
+    state.keypressListener().reset();
+  },
   setShowSpinner(state, nextState) {
     state.showSpinner = nextState;
   },

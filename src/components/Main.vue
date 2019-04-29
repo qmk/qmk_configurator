@@ -45,7 +45,7 @@
 
 <script>
 import capitalize from 'lodash/capitalize';
-import { createNamespacedHelpers } from 'vuex';
+import { mapMutations as _mapMutations, createNamespacedHelpers } from 'vuex';
 const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
   'keymap'
 );
@@ -96,10 +96,14 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['nextColorway'])
+    ...mapMutations(['nextColorway']),
+    ..._mapMutations('app', ['resetListener'])
   },
   mounted() {
     jquery.init();
+  },
+  beforeDestroy() {
+    this.resetListener();
   }
 };
 </script>
