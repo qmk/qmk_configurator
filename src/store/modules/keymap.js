@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import random from 'lodash/random';
+import findIndex from 'lodash/findIndex';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
@@ -124,6 +125,23 @@ const getters = {
       },
       []
     );
+  },
+  activeLayers(state) {
+    const active = state.keymap.reduce(
+      (active, layer, idx) => {
+        if (idx === 0) {
+          // layer 0 is always active
+          return active;
+        }
+        const hasKeys = layer.filter(key => key.code !== 'KC_NO').length > 0;
+        if (hasKeys) {
+          active.push(idx);
+        }
+        return active;
+      },
+      [0]
+    );
+    return active;
   }
 };
 const actions = {

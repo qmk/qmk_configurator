@@ -8,7 +8,7 @@ Vue.use(Router);
 export default new Router({
   routes: [
     { path: '/:keyboardP(.+)/:layoutP(.+)', component: Home, name: 'home' },
-    { path: '/', component: Home, name: 'home' },
-    { path: '/print', component: Print, name: 'print' }
+    { path: '/print', component: Print, name: 'print' },
+    { path: '*', component: Home }
   ]
 });
