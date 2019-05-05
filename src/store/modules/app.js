@@ -262,6 +262,12 @@ const mutations = {
   },
   toggleSettingsPanel(state) {
     state.settingsPanelVisible = !state.settingsPanelVisible;
+  },
+  setHasErrors(state) {
+    mutations.disableCompile(state);
+  },
+  setHasNoErrors(state) {
+    mutations.enableCompile(state);
   }
 };
 
