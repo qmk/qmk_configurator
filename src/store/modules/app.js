@@ -55,6 +55,8 @@ const getters = {
     if (exportName === '') {
       exportName = `${state.keyboard}_${state.layout}_mine`.toLowerCase();
     }
+    // issue #331 whitelist what we send to API for keymapName and save to disk
+    exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
   },
   compileDisabled: state => state.compileDisabled,
