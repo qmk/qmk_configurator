@@ -15,6 +15,7 @@
     @dragenter.prevent="dragenter"
     >{{ displayName }}<div><input
       class="key-layer-input"
+      :class="errorClasses"
       type="number"
       :value="value"
       @focus="focus"
@@ -35,25 +36,43 @@ import BaseKey from './BaseKey';
 export default {
   name: 'layer-key',
   extends: BaseKey,
+  data() {
+    return {
+      error: false
+    };
+  },
   computed: {
     ...mapGetters('keymap', {
       curLayer: 'layer'
     }),
     value() {
       return this.meta.layer;
+    },
+    errorClasses() {
+      if (this.error) {
+        return 'input-error';
+      }
+      return '';
     }
   },
   methods: {
+    ...mapMutations('app', ['setHasErrors', 'setHasNoErrors']),
     ...mapMutations('keymap', ['setText']),
     ...mapActions('keymap', ['setKeycodeLayer']),
     input(e) {
       const toLayer = parseInt(e.target.value, 10);
       if (!isNaN(toLayer) && isNumber(toLayer)) {
+        this.error = toLayer < 0 || toLayer > 15;
         this.setKeycodeLayer({
           layer: this.curLayer,
           index: this.id,
           toLayer
         });
+      }
+      if (this.error) {
+        this.setHasErrors();
+      } else {
+        this.setHasNoErrors();
       }
     },
     blur() {
@@ -66,3 +85,9 @@ export default {
   }
 };
 </script>
+<style>
+.key-layer-input.input-error {
+  outline-color: red;
+  border-color: red;
+}
+</style>
