@@ -20,6 +20,9 @@ export default {
       return `key-${this.layer}-${this.id}`;
     },
     displayName() {
+      if (this.meta.type === 'layer') {
+        return this.meta.code.replace('layer', this.meta.layer);
+      }
       return this.formatName(this.meta.name);
     }
   }

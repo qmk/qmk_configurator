@@ -3,8 +3,8 @@
     <h3>Printable View</h3>
     <button @click="gohome">Configurator</button>
     <template v-for="idx in activeLayers">
-      <h3 :key="idx">Layer {{ idx }}</h3>
       <div :key="idx">
+        <h3>Layer {{ idx }}</h3>
         <PrintKeymap :layer="idx"></PrintKeymap>
       </div>
     </template>
