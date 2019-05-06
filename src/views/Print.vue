@@ -13,11 +13,27 @@
         </tr>
         <tr>
           <th>Author</th>
-          <td>&nbsp;</td>
+          <td><input type="text" placeholder="Optionally Your Name" /></td>
         </tr>
-        <tr>
+        <tr @click="toggleDate">
           <th>Last Generated</th>
           <td>{{ today }}</td>
+        </tr>
+        <tr>
+          <th>Source Code</th>
+          <td>
+            <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
+          </td>
+        </tr>
+        <tr>
+          <th>Notes</th>
+          <td>
+            <textarea
+              cols="80"
+              rows="5"
+              placeholder="Notes about this configuration"
+            />
+          </td>
         </tr>
       </table>
     </div>
@@ -40,7 +56,17 @@ export default {
     ...mapState('app', ['keyboard', 'layout', 'layouts']),
     ...mapGetters('keymap', ['activeLayers']),
     today() {
-      return new Date(Date.now()).toISOString();
+      const date = new Date(Date.now());
+      if (this.dateToggle) {
+        return `${date.toLocaleDateString()} ${date.toLocaleTimeString()}`;
+      }
+      return `${date.toISOString()}`;
+    },
+    firmwareURL() {
+      const keeb = this.keyboard.split('/');
+      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${
+        keeb[0]
+      }`;
     }
   },
   components: { PrintKeymap },
@@ -50,12 +76,20 @@ export default {
   methods: {
     gohome() {
       this.$router.push(`/${this.keyboard}/${this.layout}`);
+    },
+    toggleDate() {
+      this.dateToggle = !this.dateToggle;
     }
+  },
+  data() {
+    return {
+      dateToggle: true
+    };
   }
 };
 </script>
 <style>
 .meta-info {
-  max-width: 500px;
+  max-width: 800px;
 }
 </style>
