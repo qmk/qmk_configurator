@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import random from 'lodash/random';
-import findIndex from 'lodash/findIndex';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';

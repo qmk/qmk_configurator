@@ -18,6 +18,9 @@ export default {
   computed: {
     myid() {
       return `key-${this.layer}-${this.id}`;
+    },
+    displayName() {
+      return this.formatName(this.meta.name);
     }
   }
 };
