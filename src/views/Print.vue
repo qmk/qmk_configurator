@@ -1,6 +1,26 @@
 <template>
   <div>
-    <h3>Printable View</h3>
+    <h3>Layers</h3>
+    <div class="meta-info">
+      <table>
+        <tr>
+          <th>Keyboard</th>
+          <td>{{ keyboard }}</td>
+        </tr>
+        <tr>
+          <th>Layout</th>
+          <td>{{ layout }}</td>
+        </tr>
+        <tr>
+          <th>Author</th>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <th>Last Generated</th>
+          <td>{{ today }}</td>
+        </tr>
+      </table>
+    </div>
     <button @click="gohome">Configurator</button>
     <template v-for="idx in activeLayers">
       <div :key="idx">
@@ -18,7 +38,10 @@ export default {
   name: 'printerator',
   computed: {
     ...mapState('app', ['keyboard', 'layout', 'layouts']),
-    ...mapGetters('keymap', ['activeLayers'])
+    ...mapGetters('keymap', ['activeLayers']),
+    today() {
+      return new Date(Date.now()).toISOString();
+    }
   },
   components: { PrintKeymap },
   mounted() {
@@ -31,4 +54,8 @@ export default {
   }
 };
 </script>
-<style></style>
+<style>
+.meta-info {
+  max-width: 500px;
+}
+</style>

@@ -5,6 +5,7 @@
     class="key"
     :class="myclasses"
     :style="mystyles"
+    :title="displayName"
   >{{ displayName }}</div>
 </template>
 <script>
@@ -22,6 +23,9 @@ export default {
     displayName() {
       if (this.meta.type === 'layer') {
         return this.meta.code.replace('layer', this.meta.layer);
+      }
+      if (this.meta.type === 'text') {
+        return this.formatName(this.meta.text);
       }
       return this.formatName(this.meta.name);
     }
