@@ -2,7 +2,7 @@ export default {
   /*
    * List of keycodes that considered mods
    */
-  modCodes: [
+  ... [
     'KC_F1',
     'KC_F2',
     'KC_F3',
