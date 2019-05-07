@@ -267,6 +267,52 @@
 .gmk-merlin-kb {
 }
 
+.gmk-mizu-key {
+  background: #c2d9e4;
+  color: #444f58;
+  input, .key-contents {
+    background: darken(#c2d9e4, 10%);
+    color: #444f58;
+    border-color: mix(#c2d9e4, #444f58);
+  }
+}
+.gmk-mizu-mod {
+  background: #444f58;
+  color: #f7eee3;
+  input, .key-contents {
+    background: darken(#444f58, 5%);
+    color: #f7eee3;
+    border-color: mix(#444f58, #f7eee3);
+  }
+}
+.gmk-mizu-accent {
+  background: #f7eee3;
+  color: #444f58;
+}
+
+.gmk-striker-key {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input, .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-mod {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input, .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-accent {
+  background: #002e51;
+  color: $color-gmk-abs-WS1;
+}
+
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
