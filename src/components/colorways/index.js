@@ -69,6 +69,15 @@ export default {
     gmkOlivia,
     { name: 'gmk-serika' },
     { name: 'gmk-space-cadet' },
+    {
+      name: 'gmk-striker',
+      override: {
+        KC_ESC: 'accent',
+        KC_ENT: 'accent',
+        KC_PENT: 'accent',
+        KC_SPC: 'accent'
+      }
+    },
     { name: 'gmk-ta-royal-alpha' },
     { name: 'gmk-wob' }
   ],

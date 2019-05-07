@@ -290,6 +290,29 @@
   color: #444f58;
 }
 
+.gmk-striker-key {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input, .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-mod {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input, .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-accent {
+  background: #002e51;
+  color: $color-gmk-abs-WS1;
+}
+
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
