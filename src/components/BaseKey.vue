@@ -109,6 +109,11 @@ export default {
             `${this.colorway}-${this.colorwayOverride[this.meta.code]}`
           );
         } else if (
+          // Large alpha keys (like Numpad 0)
+          colorways.alphaCodes[this.meta.code]
+        ) {
+          classes.push(`${this.colorway}-key`);
+        } else if (
           // Mod keys
           colorways.modCodes[this.meta.code] ||
           (this.w <= KEY_WIDTH * 3 &&

@@ -1,9 +1,11 @@
 import dsaGalaxyClass from './dsa-galaxy-class';
 import gmkOlivia from './gmk-olivia';
 import saVilebloom from './sa-vilebloom';
+import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
 
 export default {
+  alphaCodes,
   modCodes,
   list: [
     dsaGalaxyClass,
