@@ -267,6 +267,29 @@
 .gmk-merlin-kb {
 }
 
+.gmk-mizu-key {
+  background: #c2d9e4;
+  color: #444f58;
+  input, .key-contents {
+    background: darken(#c2d9e4, 10%);
+    color: #444f58;
+    border-color: mix(#c2d9e4, #444f58);
+  }
+}
+.gmk-mizu-mod {
+  background: #444f58;
+  color: #f7eee3;
+  input, .key-contents {
+    background: darken(#444f58, 5%);
+    color: #f7eee3;
+    border-color: mix(#444f58, #f7eee3);
+  }
+}
+.gmk-mizu-accent {
+  background: #f7eee3;
+  color: #444f58;
+}
+
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
