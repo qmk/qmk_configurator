@@ -17,6 +17,7 @@ import gmk_serika from './gmk_serika';
 import gmk_space_cadet from './gmk_space_cadet';
 import gmk_striker from './gmk_striker';
 import gmk_ta_royal_alpha from './gmk_ta_royal_alpha';
+import gmk_wob from './gmk_wob';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
@@ -46,7 +47,7 @@ export default {
     gmk_space_cadet,
     gmk_striker,
     gmk_ta_royal_alpha,
-    { name: 'gmk-wob' }
+    gmk_wob
   ],
   /*
    * List of codes we should use icons for instead of text
