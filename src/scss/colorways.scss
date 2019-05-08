@@ -39,6 +39,10 @@
     border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
   }
 }
+.sa-carbon-accent {
+  background: $color-sp-abs-OBC;
+  color: $color-sp-abs-GQM;
+}
 
 .sa-modern-selectric-key {
   background: $color-sp-abs-NN;
