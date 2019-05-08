@@ -1,6 +1,7 @@
 import dsa_galaxy_class from './dsa_galaxy_class';
 import sa_carbon from './sa_carbon';
 import sa_danger_zone from './sa_danger_zone';
+import sa_jukebox from './sa_jukebox';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -13,21 +14,7 @@ export default {
     dsa_galaxy_class,
     sa_carbon,
     sa_danger_zone,
-    {
-      name: 'sa-jukebox',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent',
-        KC_F1: 'key',
-        KC_F2: 'key',
-        KC_F3: 'key',
-        KC_F4: 'key',
-        KC_F9: 'key',
-        KC_F10: 'key',
-        KC_F11: 'key',
-        KC_F12: 'key'
-      }
-    },
+    sa_jukebox,
     { name: 'sa-modern-selectric' },
     { name: 'sa-nantucket-selectric' },
     { name: 'sa-oblivion-hagoromo' },
