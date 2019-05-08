@@ -24,6 +24,7 @@ export default {
     KC_CAPS: 'accent1',
     KC_A: 'accent1',
     KC_LSFT: 'accent1',
+    KC_NUBS: 'accent1',
     KC_LCTL: 'accent1',
     KC_E: 'accent2',
     KC_R: 'accent2',
