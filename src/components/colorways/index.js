@@ -1,4 +1,5 @@
 import dsa_galaxy_class from './dsa_galaxy_class';
+import sa_carbon from './sa_carbon';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -9,24 +10,7 @@ export default {
   modCodes,
   list: [
     dsa_galaxy_class,
-    {
-      name: 'sa-carbon',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent',
-        KC_F5: 'accent',
-        KC_F6: 'accent',
-        KC_F7: 'accent',
-        KC_F8: 'accent',
-        KC_PSCR: 'accent',
-        KC_SLCK: 'accent',
-        KC_PAUS: 'accent',
-        KC_UP: 'accent',
-        KC_LEFT: 'accent',
-        KC_DOWN: 'accent',
-        KC_RGHT: 'accent'
-      }
-    },
+    sa_carbon,
     { name: 'sa-danger-zone' },
     {
       name: 'sa-jukebox',
