@@ -6,6 +6,7 @@ import sa_modern_selectric from './sa_modern_selectric';
 import sa_nantucket_selectric from './sa_nantucket_selectric';
 import sa_oblivion_hagoromo from './sa_oblivion_hagoromo';
 import gmk_dolch from './gmk_dolch';
+import gmk_jamon from './gmk_jamon';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -25,7 +26,7 @@ export default {
     sa_vilebloom,
 
     gmk_dolch,
-    { name: 'gmk-jamon' },
+    gmk_jamon,
     { name: 'gmk-merlin' },
     {
       name: 'gmk-metaverse',
