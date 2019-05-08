@@ -3,6 +3,7 @@ import sa_carbon from './sa_carbon';
 import sa_danger_zone from './sa_danger_zone';
 import sa_jukebox from './sa_jukebox';
 import sa_modern_selectric from './sa_modern_selectric';
+import sa_nantucket_selectric from './sa_nantucket_selectric';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -17,7 +18,7 @@ export default {
     sa_danger_zone,
     sa_jukebox,
     sa_modern_selectric,
-    { name: 'sa-nantucket-selectric' },
+    sa_nantucket_selectric,
     { name: 'sa-oblivion-hagoromo' },
     sa_vilebloom,
 
