@@ -14,6 +14,7 @@ import gmk_nautilus from './gmk_nautilus';
 import gmk_olivetti from './gmk_olivetti';
 import gmk_olivia from './gmk_olivia';
 import gmk_serika from './gmk_serika';
+import gmk_space_cadet from './gmk_space_cadet';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
@@ -40,7 +41,7 @@ export default {
     gmk_olivetti,
     gmk_olivia,
     gmk_serika,
-    { name: 'gmk-space-cadet' },
+    gmk_space_cadet,
     {
       name: 'gmk-striker',
       override: {
