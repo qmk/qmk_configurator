@@ -389,6 +389,10 @@
     border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
   }
 }
+.gmk-olivetti-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-CP;
+}
 .gmk-olivetti-kb {
 }
 
