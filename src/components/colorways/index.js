@@ -1,6 +1,6 @@
-import dsaGalaxyClass from './dsa-galaxy-class';
-import gmkOlivia from './gmk-olivia';
-import saVilebloom from './sa-vilebloom';
+import dsa_galaxy_class from './dsa_galaxy_class';
+import gmk_olivia from './gmk_olivia';
+import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
 
@@ -8,7 +8,7 @@ export default {
   alphaCodes,
   modCodes,
   list: [
-    dsaGalaxyClass,
+    dsa_galaxy_class,
     { name: 'sa-carbon' },
     { name: 'sa-danger-zone' },
     {
@@ -21,7 +21,7 @@ export default {
     { name: 'sa-modern-selectric' },
     { name: 'sa-nantucket-selectric' },
     { name: 'sa-oblivion-hagoromo' },
-    saVilebloom,
+    sa_vilebloom,
 
     { name: 'gmk-dolch' },
     { name: 'gmk-jamon' },
@@ -68,7 +68,7 @@ export default {
       }
     },
     { name: 'gmk-olivetti' },
-    gmkOlivia,
+    gmk_olivia,
     { name: 'gmk-serika' },
     { name: 'gmk-space-cadet' },
     {
