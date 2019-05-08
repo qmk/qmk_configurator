@@ -104,13 +104,17 @@
   }
 }
 .sa-oblivion-hagoromo-mod {
-  background: $color-sp-abs-GD;
+  background: $color-sp-abs-GQM;
   color: $color-sp-abs-GAL;
   input, .key-contents {
-    background: darken($color-sp-abs-GD, 10%);
+    background: darken($color-sp-abs-GQM, 10%);
     color: lighten($color-sp-abs-GAL, 17%);
-    border-color: mix($color-sp-abs-GD, lighten($color-sp-abs-GAL, 17%));
+    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-GAL, 17%));
   }
+}
+.sa-oblivion-hagoromo-accent {
+  background: $color-sp-abs-RAS;
+  color: $color-sp-abs-GAL;
 }
 .sa-oblivion-hagoromo-kb {
 }
