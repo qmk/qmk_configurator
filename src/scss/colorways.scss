@@ -441,6 +441,10 @@
     border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
   }
 }
+.gmk-ta-royal-alpha-accent {
+  background: $color-gmk-abs-N7;
+  color: $color-gmk-abs-CP;
+}
 .gmk-ta-royal-alpha-kb {
   // placeholder
 }

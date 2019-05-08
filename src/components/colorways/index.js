@@ -16,6 +16,7 @@ import gmk_olivia from './gmk_olivia';
 import gmk_serika from './gmk_serika';
 import gmk_space_cadet from './gmk_space_cadet';
 import gmk_striker from './gmk_striker';
+import gmk_ta_royal_alpha from './gmk_ta_royal_alpha';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
@@ -44,7 +45,7 @@ export default {
     gmk_serika,
     gmk_space_cadet,
     gmk_striker,
-    { name: 'gmk-ta-royal-alpha' },
+    gmk_ta_royal_alpha,
     { name: 'gmk-wob' }
   ],
   /*
