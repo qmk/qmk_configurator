@@ -8,6 +8,7 @@ import sa_oblivion_hagoromo from './sa_oblivion_hagoromo';
 import gmk_dolch from './gmk_dolch';
 import gmk_jamon from './gmk_jamon';
 import gmk_merlin from './gmk_merlin';
+import gmk_metaverse from './gmk_metaverse';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -29,23 +30,7 @@ export default {
     gmk_dolch,
     gmk_jamon,
     gmk_merlin,
-    {
-      name: 'gmk-metaverse',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent',
-        KC_F5: 'accent',
-        KC_F6: 'accent',
-        KC_F7: 'accent',
-        KC_F8: 'accent',
-        KC_LGUI: 'accent',
-        KC_RGUI: 'accent',
-        KC_LEFT: 'accent',
-        KC_RGHT: 'accent',
-        KC_DOWN: 'accent',
-        KC_UP: 'accent'
-      }
-    },
+    gmk_metaverse,
     {
       name: 'gmk-mizu',
       override: {
