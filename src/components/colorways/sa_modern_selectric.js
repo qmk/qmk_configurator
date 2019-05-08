@@ -1,4 +1,4 @@
-export default{
+export default {
   name: 'sa-modern-selectric',
   override: {
     KC_F1: 'mod',
@@ -8,6 +8,6 @@ export default{
     KC_F9: 'mod',
     KC_F10: 'mod',
     KC_F11: 'mod',
-    KC_F12: 'mod',
+    KC_F12: 'mod'
   }
 };
