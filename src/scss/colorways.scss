@@ -18,6 +18,14 @@
     border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
   }
 }
+.sa-danger-zone-accent-yellow {
+  background: $color-sp-abs-YY;
+  color: $color-sp-abs-BFU;
+}
+.sa-danger-zone-accent-red {
+  background: $color-sp-abs-RAS;
+  color: $color-sp-abs-YY;
+}
 .sa-danger-zone-kb {
 }
 
