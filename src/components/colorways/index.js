@@ -10,6 +10,7 @@ import gmk_jamon from './gmk_jamon';
 import gmk_merlin from './gmk_merlin';
 import gmk_metaverse from './gmk_metaverse';
 import gmk_mizu from './gmk_mizu';
+import gmk_nautilus from './gmk_nautilus';
 import gmk_olivia from './gmk_olivia';
 import sa_vilebloom from './sa_vilebloom';
 import alphaCodes from './alphaCodes';
@@ -33,13 +34,7 @@ export default {
     gmk_merlin,
     gmk_metaverse,
     gmk_mizu,
-    {
-      name: 'gmk-nautilus',
-      override: {
-        KC_ENT: 'accent',
-        KC_ESC: 'accent'
-      }
-    },
+    gmk_nautilus,
     { name: 'gmk-olivetti' },
     gmk_olivia,
     { name: 'gmk-serika' },
