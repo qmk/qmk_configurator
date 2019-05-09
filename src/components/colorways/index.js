@@ -1,6 +1,24 @@
-import dsaGalaxyClass from './dsa-galaxy-class';
-import gmkOlivia from './gmk-olivia';
-import saVilebloom from './sa-vilebloom';
+import dsa_galaxy_class from './dsa/galaxy_class';
+import sa_carbon from './sa/carbon';
+import sa_danger_zone from './sa/danger_zone';
+import sa_jukebox from './sa/jukebox';
+import sa_modern_selectric from './sa/modern_selectric';
+import sa_nantucket_selectric from './sa/nantucket_selectric';
+import sa_oblivion_hagoromo from './sa/oblivion_hagoromo';
+import gmk_dolch from './gmk/dolch';
+import gmk_jamon from './gmk/jamon';
+import gmk_merlin from './gmk/merlin';
+import gmk_metaverse from './gmk/metaverse';
+import gmk_mizu from './gmk/mizu';
+import gmk_nautilus from './gmk/nautilus';
+import gmk_olivetti from './gmk/olivetti';
+import gmk_olivia from './gmk/olivia';
+import gmk_serika from './gmk/serika';
+import gmk_space_cadet from './gmk/space_cadet';
+import gmk_striker from './gmk/striker';
+import gmk_ta_royal_alpha from './gmk/ta_royal_alpha';
+import gmk_wob from './gmk/wob';
+import sa_vilebloom from './sa/vilebloom';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
 
@@ -8,80 +26,28 @@ export default {
   alphaCodes,
   modCodes,
   list: [
-    dsaGalaxyClass,
-    { name: 'sa-carbon' },
-    { name: 'sa-danger-zone' },
-    {
-      name: 'sa-jukebox',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent'
-      }
-    },
-    { name: 'sa-modern-selectric' },
-    { name: 'sa-nantucket-selectric' },
-    { name: 'sa-oblivion-hagoromo' },
-    saVilebloom,
+    dsa_galaxy_class,
+    sa_carbon,
+    sa_danger_zone,
+    sa_jukebox,
+    sa_modern_selectric,
+    sa_nantucket_selectric,
+    sa_oblivion_hagoromo,
+    sa_vilebloom,
 
-    { name: 'gmk-dolch' },
-    { name: 'gmk-jamon' },
-    { name: 'gmk-merlin' },
-    {
-      name: 'gmk-metaverse',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent',
-        KC_F5: 'accent',
-        KC_F6: 'accent',
-        KC_F7: 'accent',
-        KC_F8: 'accent',
-        KC_LGUI: 'accent',
-        KC_RGUI: 'accent',
-        KC_LEFT: 'accent',
-        KC_RGHT: 'accent',
-        KC_DOWN: 'accent',
-        KC_UP: 'accent'
-      }
-    },
-    {
-      name: 'gmk-mizu',
-      override: {
-        KC_ESC: 'accent',
-        KC_F1: 'key',
-        KC_F2: 'key',
-        KC_F3: 'key',
-        KC_F4: 'key',
-        KC_F9: 'key',
-        KC_F10: 'key',
-        KC_F11: 'key',
-        KC_F12: 'key',
-        KC_BSLS: 'key',
-        KC_ENT: 'accent',
-        KC_PENT: 'accent'
-      }
-    },
-    {
-      name: 'gmk-nautilus',
-      override: {
-        KC_ENT: 'accent',
-        KC_ESC: 'accent'
-      }
-    },
-    { name: 'gmk-olivetti' },
-    gmkOlivia,
-    { name: 'gmk-serika' },
-    { name: 'gmk-space-cadet' },
-    {
-      name: 'gmk-striker',
-      override: {
-        KC_ESC: 'accent',
-        KC_ENT: 'accent',
-        KC_PENT: 'accent',
-        KC_SPC: 'accent'
-      }
-    },
-    { name: 'gmk-ta-royal-alpha' },
-    { name: 'gmk-wob' }
+    gmk_dolch,
+    gmk_jamon,
+    gmk_merlin,
+    gmk_metaverse,
+    gmk_mizu,
+    gmk_nautilus,
+    gmk_olivetti,
+    gmk_olivia,
+    gmk_serika,
+    gmk_space_cadet,
+    gmk_striker,
+    gmk_ta_royal_alpha,
+    gmk_wob
   ],
   /*
    * List of codes we should use icons for instead of text

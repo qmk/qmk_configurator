@@ -32,6 +32,7 @@ export default {
     KC_MINS: 'mod',
     KC_EQL: 'mod',
     KC_TAB: 'purple',
+    KC_BSLS: 'mod',
     KC_CAPS: 'purple',
     KC_LSFT: 'purple',
     KC_LCTL: 'purple',

@@ -18,6 +18,14 @@
     border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
   }
 }
+.sa-danger-zone-accent-yellow {
+  background: $color-sp-abs-YY;
+  color: $color-sp-abs-BFU;
+}
+.sa-danger-zone-accent-red {
+  background: $color-sp-abs-RAS;
+  color: $color-sp-abs-YY;
+}
 .sa-danger-zone-kb {
 }
 
@@ -38,6 +46,10 @@
     color: lighten($color-sp-abs-OBC, 19%);
     border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
   }
+}
+.sa-carbon-accent {
+  background: $color-sp-abs-OBC;
+  color: $color-sp-abs-GQM;
 }
 
 .sa-modern-selectric-key {
@@ -92,13 +104,17 @@
   }
 }
 .sa-oblivion-hagoromo-mod {
-  background: $color-sp-abs-GD;
+  background: $color-sp-abs-GQM;
   color: $color-sp-abs-GAL;
   input, .key-contents {
-    background: darken($color-sp-abs-GD, 10%);
+    background: darken($color-sp-abs-GQM, 10%);
     color: lighten($color-sp-abs-GAL, 17%);
-    border-color: mix($color-sp-abs-GD, lighten($color-sp-abs-GAL, 17%));
+    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-GAL, 17%));
   }
+}
+.sa-oblivion-hagoromo-accent {
+  background: $color-sp-abs-RAS;
+  color: $color-sp-abs-GAL;
 }
 .sa-oblivion-hagoromo-kb {
 }
@@ -373,6 +389,10 @@
     border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
   }
 }
+.gmk-olivetti-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-CP;
+}
 .gmk-olivetti-kb {
 }
 
@@ -420,6 +440,10 @@
     color: lighten($color-gmk-abs-CP, 10%);
     border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
   }
+}
+.gmk-ta-royal-alpha-accent {
+  background: $color-gmk-abs-N7;
+  color: $color-gmk-abs-CP;
 }
 .gmk-ta-royal-alpha-kb {
   // placeholder
