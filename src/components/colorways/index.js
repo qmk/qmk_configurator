@@ -7,7 +7,7 @@ import modCodes from './modCodes';
 export default {
   alphaCodes,
   modCodes,
-  list: [dsa_galaxy_class, ...gmk, ...sa],
+  list: [dsa_galaxy_class, ...sa, ...gmk],
   /*
    * List of codes we should use icons for instead of text
    */
