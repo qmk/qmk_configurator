@@ -309,12 +309,13 @@ function getExclusionList() {
     'ps2avrGB',
     'qwertyydox',
     'redox',
+    'rgbkb/sol',
+    'rgbkb/zen',
+    'rgbkb/zygomorph',
     'sentraq/s60_x',
-    'sol',
     'treadstone48',
     'vitamins_included',
     'yosino58',
-    'zen',
     'zinc'
   ].reduce((acc, k) => {
     acc[k] = true;
