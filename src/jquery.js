@@ -262,6 +262,7 @@ function getExclusionList() {
     '40percentclub/i75',
     'atom47',
     'bigseries',
+    'boston_meetup',
     'cannonkeys/satisfaction75',
     'chibios_test',
     'christmas_tree',
@@ -312,6 +313,7 @@ function getExclusionList() {
     'sol',
     'treadstone48',
     'vitamins_included',
+    'yosino58',
     'zen',
     'zinc'
   ].reduce((acc, k) => {
