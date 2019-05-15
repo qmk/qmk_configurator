@@ -112,4 +112,8 @@ export default {
   components: { BaseKey, PrintKey }
 };
 </script>
-<style></style>
+<style>
+.print-keymap {
+  break-inside: avoid-page;
+}
+</style>

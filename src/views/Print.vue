@@ -38,9 +38,9 @@
       </table>
     </div>
     <button @click="gohome">Configurator</button>
-    <div class="keyboard-layers">
+    <div>
       <template v-for="idx in activeLayers">
-        <div :key="idx">
+        <div class="layer-output" :key="idx">
           <h3>Layer {{ idx }}</h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
@@ -99,9 +99,7 @@ export default {
 .meta-info {
   max-width: 800px;
 }
-.keyboard-layers {
-  display: grid;
-  justify-items: center;
-  grid-template: repeat(auto-fill, 1fr) / 1fr;
+.layer-output {
+  page-break-inside: avoid;
 }
 </style>
