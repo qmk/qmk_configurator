@@ -1,6 +1,6 @@
 {
   "keyboard": "rgbkb/zygomorph/rev1",
-  "keymap": "default",
+  "keymap": "default_4cdb86c",
   "commit": "4cdb86c730528c8ca5ff90f5b9b01c395d31fc0e",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
