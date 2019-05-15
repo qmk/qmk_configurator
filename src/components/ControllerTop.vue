@@ -129,6 +129,7 @@ export default {
             return false;
           }
         }
+        this.$store.commit('keymap/clear');
         this.updateLayout({ target: { value } });
       }
     },

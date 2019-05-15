@@ -24,7 +24,11 @@ export default {
     profile: Boolean,
     layer: Number
   },
+  mounted() {
+    this.setSize(this.calculateMax(this.layout));
+  },
   computed: {
+    ...mapState('app', ['layout', 'displaySizes']),
     ...mapState('keymap', ['config', 'displaySizes']),
     ...mapGetters('keymap', [
       'getLayer',
@@ -97,61 +101,15 @@ export default {
     },
     getComponent() {
       return PrintKey;
-    },
-    setSize(max) {
-      this.width = max.x;
-      this.height = max.y;
-    },
-    recalcEverything(newLayout) {
-      // eslint-disable-next-line no-console
-      this.profile && console.time('layout::reset');
-      this.resetConfig();
-      this.changeLayer(0);
-      this.clear();
-      // eslint-disable-next-line no-console
-      this.profile && console.time('layout::initkeymap');
-      this.initKeymap({
-        layer: 0,
-        layout: this.layouts[newLayout]
-      });
-      // eslint-disable-next-line no-console
-      this.profile && console.timeEnd('layout::initkeymap');
-      // eslint-disable-next-line no-console
-      this.profile && console.timeEnd('layout::reset');
-
-      // eslint-disable-next-line no-console
-      this.profile && console.time('layout::scale');
-      const layout = this.layouts[this.layout];
-      const max = layout.reduce(
-        (acc, pos) => {
-          let _pos = Object.assign({ w: 1, h: 1 }, pos);
-          const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
-          const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-          acc.x = Math.max(acc.x, coor.x + dims.w);
-          acc.y = Math.max(acc.y, coor.y + dims.h);
-          return acc;
-        },
-        {
-          x: 0,
-          y: 0
-        }
-      );
-      if (max.x > this.defaults.MAX_X) {
-        this.resizeConfig(max);
-        max.x *= this.config.SCALE;
-        max.y *= this.config.SCALE;
-      }
-      this.setSize(max);
-      // eslint-disable-next-line no-console
-      this.profile && console.timeEnd('layout::scale');
     }
   },
   data() {
     return {
-      width: 600,
-      height: 300
+      width: 0,
+      height: 0
     };
   },
   components: { BaseKey, PrintKey }
 };
 </script>
+<style></style>

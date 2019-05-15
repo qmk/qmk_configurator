@@ -61,9 +61,13 @@ const actions = {
    *  @return {object} promise that will be fulfilled once action is complete
    */
   changeKeyboard({ state, commit, dispatch }, keyboard) {
+    const store = this;
     let promise = new Promise(resolve => {
       commit('disablePreview');
       commit('enableCompile');
+      if (state.keyboard !== keyboard) {
+        store.commit('keymap/clear');
+      }
       commit('setKeyboard', keyboard);
       const oldLayout = state.layout || '';
       commit('setLayout', undefined);

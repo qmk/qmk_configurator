@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="print-layout">
     <h3>Layers</h3>
     <div class="meta-info">
       <table>
@@ -38,12 +38,14 @@
       </table>
     </div>
     <button @click="gohome">Configurator</button>
-    <template v-for="idx in activeLayers">
-      <div :key="idx">
-        <h3>Layer {{ idx }}</h3>
-        <PrintKeymap :layer="idx"></PrintKeymap>
-      </div>
-    </template>
+    <div class="keyboard-layers">
+      <template v-for="idx in activeLayers">
+        <div :key="idx">
+          <h3>Layer {{ idx }}</h3>
+          <PrintKeymap :layer="idx"></PrintKeymap>
+        </div>
+      </template>
+    </div>
   </div>
 </template>
 
@@ -89,7 +91,17 @@ export default {
 };
 </script>
 <style>
+.print-layout {
+  display: grid;
+  justify-items: center;
+  grid-template: repeat(auto-fill, 1fr) / 1fr;
+}
 .meta-info {
   max-width: 800px;
+}
+.keyboard-layers {
+  display: grid;
+  justify-items: center;
+  grid-template: repeat(auto-fill, 1fr) / 1fr;
 }
 </style>

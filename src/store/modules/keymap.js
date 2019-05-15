@@ -5,7 +5,7 @@ import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 const defaults = {
-  MAX_X: 888,
+  MAX_X: 800,
   KEY_WIDTH: 40,
   KEY_HEIGHT: 40,
   SWAP_KEY_WIDTH: 30,

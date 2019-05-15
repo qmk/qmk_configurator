@@ -37,6 +37,12 @@ export default {
         newLayout !== oldLayout
       ) {
         this.recalcEverything(newLayout);
+      } else if (
+        isUndefined(newLayout) &&
+        !isUndefined(oldLayout) &&
+        oldLayout !== ''
+      ) {
+        this.recalcEverything(oldLayout);
       }
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout');
@@ -55,7 +61,7 @@ export default {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
+      styles.push(`font-size: ${this.fontsize * 0.4}rem;`);
       return styles.join('');
     },
     currentLayer() {
@@ -141,13 +147,14 @@ export default {
       this.profile && console.time('layout::reset');
       this.resetConfig();
       this.changeLayer(0);
-      this.clear();
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::initkeymap');
-      this.initKeymap({
-        layer: 0,
-        layout: this.layouts[newLayout]
-      });
+      if (this.$store.state.keymap.keymap.length === 0) {
+        this.initKeymap({
+          layer: 0,
+          layout: this.layouts[newLayout]
+        });
+      }
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::initkeymap');
       // eslint-disable-next-line no-console
@@ -155,7 +162,7 @@ export default {
 
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::scale');
-      const layout = this.layouts[this.layout];
+      const layout = this.layouts[newLayout];
       const max = layout.reduce(
         (acc, pos) => {
           let _pos = Object.assign({ w: 1, h: 1 }, pos);
