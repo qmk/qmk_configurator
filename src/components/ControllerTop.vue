@@ -4,8 +4,9 @@
       <div class="topctrl-keyboards">
         <label class="drop-label">{{ $t('message.keyboard.label') }}:</label>
         <v-select
-          @search:focus="focus"
+          @search:focus="opened"
           @search:blur="blur"
+          ref="select"
           maxHeight="600px"
           v-model="keyboard"
           :clearable="false"
@@ -323,6 +324,15 @@ export default {
     },
     updateFilter(filter) {
       this.$store.commit('app/setFilter', filter);
+    },
+    opened() {
+      this.stopListening();
+      Vue.nextTick(() => {
+        const active = this.$refs.select.$el.querySelector(".dropdown-menu .active");
+        if (active) {
+          active.scrollIntoView({behavior: "auto", block: "center", inline: "nearest"});
+        }
+      });
     },
     focus() {
       this.stopListening();
