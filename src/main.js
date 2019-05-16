@@ -5,6 +5,7 @@ import store from './store';
 import StatusBar from '@/components/StatusBar';
 import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
+import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
 
