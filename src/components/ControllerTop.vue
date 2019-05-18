@@ -332,7 +332,7 @@ export default {
         if (active) {
           // subtract height so we can see the previous value as well
           var offsetTop = active.offsetTop - active.offsetHeight;
-          this.$refs.select.typeAheadPointer = Math.round(active.offsetTop / active.offsetHeight);
+          this.$refs.select.typeAheadPointer = this.keyboards.indexOf(this.keyboard);
           this.$refs.select.scrollTo(offsetTop > 0 ? offsetTop : 0, 0);
         }
       });
