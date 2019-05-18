@@ -328,11 +328,15 @@ export default {
     opened() {
       this.stopListening();
       Vue.nextTick(() => {
-        const active = this.$refs.select.$el.querySelector(".vs__dropdown-menu .vs__dropdown-option--selected");
+        const active = this.$refs.select.$el.querySelector(
+          '.vs__dropdown-menu .vs__dropdown-option--selected'
+        );
         if (active) {
           // subtract height so we can see the previous value as well
           var offsetTop = active.offsetTop - active.offsetHeight;
-          this.$refs.select.typeAheadPointer = this.keyboards.indexOf(this.keyboard);
+          this.$refs.select.typeAheadPointer = this.keyboards.indexOf(
+            this.keyboard
+          );
           this.$refs.select.scrollTo(offsetTop > 0 ? offsetTop : 0, 0);
         }
       });
