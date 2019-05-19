@@ -1069,6 +1069,16 @@ input[type='number'] {
   font-size: small;
 }
 
+@media print {
+  .backend-status, .random-potato, .openSettings, .print-controls, footer {
+    display: none;
+  }
+  input, textarea {
+    border-width: 0;
+  }
+}
+
+
 .bes-title {
   justify-self: start;
 }

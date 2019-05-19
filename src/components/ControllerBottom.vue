@@ -79,6 +79,7 @@ import { createNamespacedHelpers } from 'vuex';
 const { mapMutations, mapState } = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
+import escape from 'lodash/escape';
 const encoding = 'data:text/plain;charset=utf-8,';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
@@ -99,7 +100,9 @@ export default {
       'exportKeymapName',
       'firmwareBinaryURL',
       'firmwareSourceURL',
-      'keymapSourceURL'
+      'keymapSourceURL',
+      'author',
+      'notes'
     ]),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
@@ -142,7 +145,9 @@ export default {
         keyboard: this.keyboard,
         keymap: this.exportKeymapName,
         layout: this.layout,
-        layers: layers
+        layers: layers,
+        author: this.author,
+        notes: this.notes
       };
 
       this.download(
@@ -234,6 +239,11 @@ export default {
 
       /* TODO Add check for keyboard name and layout */
 
+      if (!isUndefined(data.author)) {
+        const { author, notes } = data;
+        this.$store.commit('app/setAuthor', escape(author));
+        this.$store.commit('app/setNotes', escape(notes));
+      }
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
         this.$store.commit('app/setLayout', data.layout);

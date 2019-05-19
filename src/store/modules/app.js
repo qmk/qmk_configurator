@@ -26,7 +26,9 @@ const state = {
   showSpinner: false,
   spinnerMsg: '',
   message: '',
-  settingsPanelVisible: false
+  settingsPanelVisible: false,
+  author: '',
+  notes: ''
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -261,6 +263,12 @@ const mutations = {
   },
   setHasNoErrors(state) {
     mutations.enableCompile(state);
+  },
+  setAuthor(state, newAuthor) {
+    state.author = newAuthor;
+  },
+  setNotes(state, newNotes) {
+    state.notes = newNotes;
   }
 };
 

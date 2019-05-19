@@ -1,6 +1,5 @@
 <template>
   <div class="print-layout">
-    <h3>Layers</h3>
     <div class="meta-info">
       <table>
         <tr>
@@ -13,14 +12,20 @@
         </tr>
         <tr>
           <th>Author</th>
-          <td><input type="text" placeholder="Optionally Your Name" /></td>
+          <td>
+            <input
+              type="text"
+              v-model="_author"
+              placeholder="Optionally Your Name"
+            />
+          </td>
         </tr>
         <tr @click="toggleDate">
-          <th>Last Generated</th>
+          <th>Date</th>
           <td>{{ today }}</td>
         </tr>
         <tr>
-          <th>Source Code</th>
+          <th>Source</th>
           <td>
             <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
           </td>
@@ -29,19 +34,23 @@
           <th>Notes</th>
           <td>
             <textarea
+              v-model="_notes"
+              class="optional-notes"
               cols="80"
-              rows="5"
+              rows="3"
               placeholder="Notes about this configuration"
             />
           </td>
         </tr>
       </table>
     </div>
-    <button @click="gohome">Configurator</button>
+    <div class="print-controls">
+      <button @click="gohome">Configurator</button>
+    </div>
     <div>
       <template v-for="idx in activeLayers">
         <div class="layer-output" :key="idx">
-          <h3>Layer {{ idx }}</h3>
+          <h3 class="layer-output-title">Layer {{ idx }}</h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
       </template>
@@ -55,7 +64,7 @@ import { mapState, mapGetters } from 'vuex';
 export default {
   name: 'printerator',
   computed: {
-    ...mapState('app', ['keyboard', 'layout', 'layouts']),
+    ...mapState('app', ['keyboard', 'layout', 'layouts', 'author', 'notes']),
     ...mapGetters('keymap', ['activeLayers']),
     today() {
       const date = new Date(Date.now());
@@ -69,6 +78,22 @@ export default {
       return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${
         keeb[0]
       }`;
+    },
+    _author: {
+      set(value) {
+        this.$store.commit('app/setAuthor', value);
+      },
+      get() {
+        return this.author;
+      }
+    },
+    _notes: {
+      set(value) {
+        this.$store.commit('app/setNotes', value);
+      },
+      get() {
+        return this.notes;
+      }
     }
   },
   components: { PrintKeymap },
@@ -101,5 +126,17 @@ export default {
 }
 .layer-output {
   page-break-inside: avoid;
+}
+.layer-output-title {
+  margin-top: 15px;
+}
+table > tr > th {
+  vertical-align: top;
+}
+textarea.optional-notes {
+  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
+  font-size: 12pt;
 }
 </style>
