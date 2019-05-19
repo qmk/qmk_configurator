@@ -38,6 +38,14 @@
       >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
+      <button
+        id="printkeymaps"
+        :title="$t('message.printKeymap.title')"
+        @click="PrinterKeymaps"
+      >
+        <font-awesome-icon icon="print" size="lg" fixed-width />
+        {{ $t('message.printKeymap.label') }}
+      </button>
       <input
         id="fileImport"
         type="file"
@@ -76,7 +84,7 @@
 <script>
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
-const { mapMutations, mapState } = createNamespacedHelpers('app');
+const { mapMutations, mapState, mapGetters } = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import escape from 'lodash/escape';
@@ -97,13 +105,13 @@ export default {
       'layout',
       'previewRequested',
       'enableDownloads',
-      'exportKeymapName',
       'firmwareBinaryURL',
       'firmwareSourceURL',
       'keymapSourceURL',
       'author',
       'notes'
     ]),
+    ...mapGetters(['exportKeymapName']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -326,6 +334,9 @@ export default {
           );
         });
       });
+    },
+    PrinterKeymaps() {
+      this.$router.push('/print');
     }
   },
   data: () => {
