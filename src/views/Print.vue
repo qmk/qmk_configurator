@@ -66,6 +66,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import PrintKeymap from '@/components/PrintKeymap';
 import { mapState, mapGetters } from 'vuex';
 export default {
@@ -115,7 +116,16 @@ export default {
       this.dateToggle = !this.dateToggle;
     },
     print() {
-      window.print();
+      debugger;
+      if (this._notes === '') {
+        this._notes = 'My awesome keymap';
+      }
+      if (this._author === '') {
+        this._author = 'Anonymous';
+      }
+      Vue.nextTick(() => {
+        window.print();
+      });
     },
     firefoxOnly(idx) {
       if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
