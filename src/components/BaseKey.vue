@@ -48,6 +48,10 @@ export default {
     displaySizes: {
       type: Boolean,
       default: false
+    },
+    printable: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -98,7 +102,7 @@ export default {
         classes.push('thicker');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      if (!isUndefined(this.meta)) {
+      if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode
           classes.push(

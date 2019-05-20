@@ -6,6 +6,7 @@
         v-bind:is="getComponent(meta)"
         v-bind="meta"
         :key="meta.id"
+        :printable="true"
       />
     </template>
   </div>

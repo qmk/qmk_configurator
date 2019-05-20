@@ -1,5 +1,11 @@
 <template>
   <div class="print-layout">
+    <div class="print-controls">
+      <button id="leavePrint" @click="gohome">
+        <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
+        Configurator
+      </button>
+    </div>
     <div class="meta-info">
       <table>
         <tr>
@@ -43,9 +49,6 @@
           </td>
         </tr>
       </table>
-    </div>
-    <div class="print-controls">
-      <button @click="gohome">Configurator</button>
     </div>
     <div>
       <template v-for="idx in activeLayers">
@@ -138,5 +141,8 @@ textarea.optional-notes {
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
   font-size: 12pt;
+}
+.print-controls {
+  padding-bottom: 20px;
 }
 </style>

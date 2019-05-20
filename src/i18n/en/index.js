@@ -38,7 +38,7 @@ export default {
       },
       printKeymap: {
         title: 'Print Keymap Layers',
-        label: 'Print'
+        label: 'Print Keymap'
       },
       downloadFirmware: {
         label: 'Firmware',
