@@ -56,7 +56,7 @@
     </div>
     <div>
       <template v-for="idx in activeLayers">
-        <div class="layer-output" :key="idx">
+        <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
           <h3 class="layer-output-title">Layer {{ idx }}</h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
@@ -116,6 +116,14 @@ export default {
     },
     print() {
       window.print();
+    },
+    firefoxOnly(idx) {
+      if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+        if ((idx / 3) % 3 == 0) {
+          return 'layout-output-firefox';
+        }
+      }
+      return '';
     }
   },
   data() {
@@ -136,6 +144,9 @@ export default {
 }
 .layer-output {
   page-break-inside: avoid;
+}
+.layout-output-firefox {
+  page-break-before: always;
 }
 .layer-output-title {
   margin-top: 15px;
