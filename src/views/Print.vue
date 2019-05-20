@@ -3,7 +3,11 @@
     <div class="print-controls">
       <button id="leavePrint" @click="gohome">
         <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
-        Configurator
+        Back
+      </button>
+      <button id="leavePrint" @click="print()">
+        <font-awesome-icon icon="print" size="lg" fixed-width />
+        Print
       </button>
     </div>
     <div class="meta-info">
@@ -109,6 +113,9 @@ export default {
     },
     toggleDate() {
       this.dateToggle = !this.dateToggle;
+    },
+    print() {
+      window.print();
     }
   },
   data() {
