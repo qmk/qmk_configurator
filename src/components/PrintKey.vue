@@ -29,12 +29,12 @@ export default {
       }
       if (this.meta.type === 'layer-container') {
         return this.formatName(
-          `${this.meta.name},\n ${this.meta.contents.name}`
+          `${this.meta.name.toUpperCase()},\n ${this.meta.contents.name}`
         );
       }
       if (this.meta.type === 'container') {
         return this.formatName(
-          `${this.meta.name}(\n${this.meta.contents.name})`
+          `${this.meta.name.toUpperCase()}(\n${this.meta.contents.name})`
         );
       }
       return this.formatName(this.meta.name);
