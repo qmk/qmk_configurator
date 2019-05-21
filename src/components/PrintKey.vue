@@ -27,6 +27,16 @@ export default {
       if (this.meta.type === 'text') {
         return this.formatName(this.meta.text);
       }
+      if (this.meta.type === 'layer-container') {
+        return this.formatName(
+          `${this.meta.name},\n ${this.meta.contents.name}`
+        );
+      }
+      if (this.meta.type === 'container') {
+        return this.formatName(
+          `${this.meta.name}(\n${this.meta.contents.name})`
+        );
+      }
       return this.formatName(this.meta.name);
     }
   }
