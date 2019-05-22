@@ -30,7 +30,8 @@ import {
   faExclamationTriangle,
   faCog,
   faKeyboard,
-  faChevronLeft
+  faChevronLeft,
+  faPrint
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -58,6 +59,7 @@ library.add(faCog);
 library.add(faKeyboard);
 library.add(faExclamationTriangle);
 library.add(faChevronLeft);
+library.add(faPrint);
 
 ga.init(router);
 

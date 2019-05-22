@@ -36,6 +36,10 @@ export default {
       importJSON: {
         title: 'Import QMK Keymap JSON file'
       },
+      printKeymap: {
+        title: 'Print Keymap Layers',
+        label: 'Print Keymap'
+      },
       downloadFirmware: {
         label: 'Firmware',
         title: 'Download firmware file for flashing'

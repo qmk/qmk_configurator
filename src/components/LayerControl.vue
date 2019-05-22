@@ -18,11 +18,15 @@
 <script>
 import rangeRight from 'lodash/rangeRight';
 import isUndefined from 'lodash/isUndefined';
-import { mapGetters, mapMutations } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
+  'keymap'
+);
 export default {
   name: 'layer-control',
   computed: {
-    ...mapGetters('keymap', ['layer', 'getLayer']),
+    ...mapState(['layer']),
+    ...mapGetters(['getLayer']),
     layers() {
       let layers = rangeRight(16).map(layer => {
         let clazz = [layer];
@@ -44,7 +48,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['changeLayer', 'initLayer']),
+    ...mapMutations(['changeLayer', 'initLayer']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer(id);

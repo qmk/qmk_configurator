@@ -13,7 +13,8 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import BaseKeymap from '@/components/BaseKeymap';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
 import LayerKey from '@/components/LayerKey';
@@ -22,6 +23,7 @@ import LayerContainerKey from '@/components/LayerContainerKey';
 
 export default {
   name: 'visual-keymap',
+  extends: BaseKeymap,
   props: {
     profile: Boolean
   },
@@ -35,27 +37,31 @@ export default {
         newLayout !== oldLayout
       ) {
         this.recalcEverything(newLayout);
+      } else if (
+        isUndefined(newLayout) &&
+        !isUndefined(oldLayout) &&
+        oldLayout !== ''
+      ) {
+        this.recalcEverything(oldLayout);
       }
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout');
     }
   },
   computed: {
+    ...mapState('keymap', ['config', 'displaySizes', 'layer']),
     ...mapGetters('keymap', [
-      'layer',
       'getLayer',
-      'defaults',
-      'config',
       'loadingKeymapPromise',
       'colorway',
-      'displaySizes'
+      'defaults'
     ]),
-    ...mapGetters('app', ['layout', 'layouts', 'previewRequested']),
+    ...mapState('app', ['layout', 'layouts', 'previewRequested']),
     styles() {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
+      styles.push(`font-size: ${this.fontsize * 0.4}rem;`);
       return styles.join('');
     },
     currentLayer() {
@@ -113,23 +119,6 @@ export default {
     isLayoutUIUpdate(newLayout, oldLayout) {
       return newLayout === '' || oldLayout === '';
     },
-    calcKeyKeymapDims(w, h) {
-      return {
-        w:
-          w * this.config.KEY_X_SPACING -
-          (this.config.KEY_X_SPACING - this.config.KEY_WIDTH),
-        h:
-          h * this.config.KEY_Y_SPACING -
-          (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT),
-        u: h > w ? h : w
-      };
-    },
-    calcKeyKeymapPos(x, y) {
-      return {
-        x: x * this.config.KEY_X_SPACING,
-        y: y * this.config.KEY_Y_SPACING
-      };
-    },
     getComponent(key) {
       const { meta } = key;
       if (meta === undefined) {
@@ -158,13 +147,14 @@ export default {
       this.profile && console.time('layout::reset');
       this.resetConfig();
       this.changeLayer(0);
-      this.clear();
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::initkeymap');
-      this.initKeymap({
-        layer: 0,
-        layout: this.layouts[newLayout]
-      });
+      if (this.$store.state.keymap.keymap.length === 0) {
+        this.initKeymap({
+          layer: 0,
+          layout: this.layouts[newLayout]
+        });
+      }
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::initkeymap');
       // eslint-disable-next-line no-console
@@ -172,7 +162,7 @@ export default {
 
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::scale');
-      const layout = this.layouts[this.layout];
+      const layout = this.layouts[newLayout];
       const max = layout.reduce(
         (acc, pos) => {
           let _pos = Object.assign({ w: 1, h: 1 }, pos);

@@ -26,21 +26,15 @@ const state = {
   showSpinner: false,
   spinnerMsg: '',
   message: '',
-  settingsPanelVisible: false
+  settingsPanelVisible: false,
+  author: '',
+  notes: ''
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
   firmwareFile: state => state.firmwareFile,
-  settingsPanelVisible: state => state.settingsPanelVisible,
-  message: state => state.message,
-  showSpinner: state => state.showSpinner,
-  spinnerMsg: state => state.spinnerMsg,
-  keyboard: state => state.keyboard,
-  keyboards: state => state.keyboards,
-  layout: state => state.layout,
-  layouts: state => state.layouts,
   filter: state => state.filter,
   /**
    * keymapName
@@ -58,15 +52,7 @@ const getters = {
     // issue #331 whitelist what we send to API for keymapName and save to disk
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
-  },
-  compileDisabled: state => state.compileDisabled,
-  isPreview: state => state.isPreview,
-  previewRequested: state => state.previewRequested,
-  jobID: state => state.jobID,
-  enableDownloads: state => state.enableDownloads,
-  firmwareBinaryURL: state => state.firmwareBinaryURL,
-  firmwareSourceURL: state => state.firmwareSourceURL,
-  keymapSourceURL: state => state.keymapSourceURL
+  }
 };
 
 const actions = {
@@ -77,9 +63,13 @@ const actions = {
    *  @return {object} promise that will be fulfilled once action is complete
    */
   changeKeyboard({ state, commit, dispatch }, keyboard) {
+    const store = this;
     let promise = new Promise(resolve => {
       commit('disablePreview');
       commit('enableCompile');
+      if (state.keyboard !== keyboard) {
+        store.commit('keymap/clear');
+      }
       commit('setKeyboard', keyboard);
       const oldLayout = state.layout || '';
       commit('setLayout', undefined);
@@ -247,6 +237,9 @@ const mutations = {
   startListening(state) {
     state.keypressListener().listen();
   },
+  resetListener(state) {
+    state.keypressListener().reset();
+  },
   setShowSpinner(state, nextState) {
     state.showSpinner = nextState;
   },
@@ -270,6 +263,12 @@ const mutations = {
   },
   setHasNoErrors(state) {
     mutations.enableCompile(state);
+  },
+  setAuthor(state, newAuthor) {
+    state.author = newAuthor;
+  },
+  setNotes(state, newNotes) {
+    state.notes = newNotes;
   }
 };
 

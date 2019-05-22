@@ -38,6 +38,14 @@
       >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
+      <button
+        id="printkeymaps"
+        :title="$t('message.printKeymap.title')"
+        @click="PrinterKeymaps"
+      >
+        <font-awesome-icon icon="print" size="lg" fixed-width />
+        {{ $t('message.printKeymap.label') }}
+      </button>
       <input
         id="fileImport"
         type="file"
@@ -75,9 +83,11 @@
 </template>
 <script>
 import Vue from 'vue';
-import { mapGetters, mapMutations } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapMutations, mapState, mapGetters } = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
+import escape from 'lodash/escape';
 const encoding = 'data:text/plain;charset=utf-8,';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
@@ -90,16 +100,18 @@ import {
 export default {
   name: 'bottom-controller',
   computed: {
-    ...mapGetters('app', [
+    ...mapState([
+      'keyboard',
+      'layout',
+      'previewRequested',
       'enableDownloads',
-      'exportKeymapName',
       'firmwareBinaryURL',
       'firmwareSourceURL',
-      'keyboard',
       'keymapSourceURL',
-      'layout',
-      'previewRequested'
+      'author',
+      'notes'
     ]),
+    ...mapGetters(['exportKeymapName']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -129,7 +141,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('app', ['dismissPreview']),
+    ...mapMutations(['dismissPreview']),
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
       let layers = this.$store.getters['keymap/exportLayers']({
@@ -141,7 +153,9 @@ export default {
         keyboard: this.keyboard,
         keymap: this.exportKeymapName,
         layout: this.layout,
-        layers: layers
+        layers: layers,
+        author: this.author,
+        notes: this.notes
       };
 
       this.download(
@@ -233,31 +247,34 @@ export default {
 
       /* TODO Add check for keyboard name and layout */
 
+      if (!isUndefined(data.author)) {
+        const { author, notes } = data;
+        this.$store.commit('app/setAuthor', escape(author));
+        this.$store.commit('app/setNotes', escape(notes));
+      }
       this.$store.commit('app/setKeyboard', data.keyboard);
-      this.$store
-        .dispatch('app/changeKeyboard', this.$store.getters['app/keyboard'])
-        .then(() => {
-          this.$store.commit('app/setLayout', data.layout);
-          // todo validate these values
-          this.$router.replace({
-            path: `/${data.keyboard}/${data.layout}`
-          });
-
-          var store = this.$store;
-          let promise = new Promise(resolve =>
-            store.commit('keymap/setLoadingKeymapPromise', resolve)
-          );
-          promise.then(() => {
-            const stats = load_converted_keymap(data.layers);
-            const msg = this.$t('message.statsTemplate', stats);
-            store.commit('status/deferredMessage', msg);
-            store.dispatch('status/viewReadme', this.keyboard).then(() => {
-              store.commit('app/setKeymapName', data.keymap);
-              store.commit('keymap/setDirty');
-            });
-          });
-          disableOtherButtons();
+      this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
+        this.$store.commit('app/setLayout', data.layout);
+        // todo validate these values
+        this.$router.replace({
+          path: `/${data.keyboard}/${data.layout}`
         });
+
+        var store = this.$store;
+        let promise = new Promise(resolve =>
+          store.commit('keymap/setLoadingKeymapPromise', resolve)
+        );
+        promise.then(() => {
+          const stats = load_converted_keymap(data.layers);
+          const msg = this.$t('message.statsTemplate', stats);
+          store.commit('status/deferredMessage', msg);
+          store.dispatch('status/viewReadme', this.keyboard).then(() => {
+            store.commit('app/setKeymapName', data.keymap);
+            store.commit('keymap/setDirty');
+          });
+        });
+        disableOtherButtons();
+      });
     },
     infoPreviewChanged() {
       var files = this.$refs.infoPreviewElement.files;
@@ -317,6 +334,9 @@ export default {
           );
         });
       });
+    },
+    PrinterKeymaps() {
+      this.$router.push('/print');
     }
   },
   data: () => {

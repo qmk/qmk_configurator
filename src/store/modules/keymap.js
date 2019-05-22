@@ -5,7 +5,7 @@ import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 const defaults = {
-  MAX_X: 888,
+  MAX_X: 800,
   KEY_WIDTH: 40,
   KEY_HEIGHT: 40,
   SWAP_KEY_WIDTH: 30,
@@ -33,20 +33,17 @@ const state = {
   continuousInput: false
 };
 
+// Use for computed properties
 const getters = {
-  continuousInput: state => state.continuousInput,
-  displaySizes: state => state.displaySizes,
   colorway: state => state.colorways[state.colorwayIndex].name,
   colorways: state => state.colorways.map(colorway => colorway.name),
   colorwayOverride: state => state.colorways[state.colorwayIndex].override,
   colorwayIndex: state => state.colorwayIndex,
   loadingKeymapPromise: state => state.loadingKeymapPromise,
   defaults: state => Object.assign({}, state.defaults),
-  config: state => state.config,
   getSelectedKey: state => state.selectedIndex,
   getKey: state => ({ _layer = state.layer, index }) =>
     state.keymap[_layer][index],
-  layer: state => state.layer,
   getLayer: state => _layer => {
     return state.keymap[_layer];
   },
@@ -127,10 +124,27 @@ const getters = {
       },
       []
     );
+  },
+  activeLayers(state) {
+    const active = state.keymap.reduce(
+      (active, layer, idx) => {
+        if (idx === 0) {
+          // layer 0 is always active
+          return active;
+        }
+        const hasKeys = layer.filter(key => key.code !== 'KC_NO').length > 0;
+        if (hasKeys) {
+          active.push(idx);
+        }
+        return active;
+      },
+      [0]
+    );
+    return active;
   }
 };
 const actions = {
-  initKey: ({ state, commit }, { _layer, index }) => {
+  initKey({ state, commit }, { _layer, index }) {
     if (state.keymap[_layer] === undefined) {
       commit('initLayer', _layer);
     }
@@ -242,10 +256,10 @@ const mutations = {
     }
     state.layer = newLayer;
   },
-  resetConfig: state => {
+  resetConfig(state) {
     state.config = Object.assign({}, state.defaults);
   },
-  resizeConfig: (state, max) => {
+  resizeConfig(state, max) {
     let {
       KEY_WIDTH,
       KEY_HEIGHT,
@@ -278,7 +292,7 @@ const mutations = {
       (KEY_Y_SPACING *= state.config.SCALE)
     );
   },
-  initKeymap: (state, { layout, layer, code = 'KC_NO' }) => {
+  initKeymap(state, { layout, layer, code = 'KC_NO' }) {
     Vue.set(
       state.keymap,
       layer,
@@ -291,7 +305,7 @@ const mutations = {
       })
     );
   },
-  initLayer: (state, layer) => {
+  initLayer(state, layer) {
     if (layer > 0) {
       // layer 0 is always initialized. Use it as a reference
       mutations.initKeymap(state, { layer, layout: state.keymap[0] });

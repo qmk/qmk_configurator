@@ -65,7 +65,7 @@
 
 <script>
 import Vue from 'vue';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -93,20 +93,20 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
-    ...mapGetters('app', ['keyboards', 'layouts', 'compileDisabled']),
+    ...mapState('app', ['keyboards', 'layouts', 'compileDisabled']),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
     keyboard: {
       get() {
-        return this.$store.getters['app/keyboard'];
+        return this.$store.state.app.keyboard;
       },
       set(value) {
         if (this.isDirty) {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
           ) {
-            var old = this.$store.getters['app/keyboard'];
+            var old = this.$store.state.app.keyboard;
             this.$store.commit('app/setKeyboard', ''); // force a refresh
             Vue.nextTick(this.$store.commit('app/setKeyboard', old));
             return false;
@@ -117,18 +117,19 @@ export default {
     },
     layout: {
       get() {
-        return this.$store.getters['app/layout'];
+        return this.$store.state.app.layout;
       },
       set(value) {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
-            var old = this.$store.getters['app/layout'];
+            var old = this.$store.state.app.layout;
             const setLayout = this.setLayout;
             setLayout(''); // force a refresh
             Vue.nextTick(() => setLayout(old));
             return false;
           }
         }
+        this.$store.commit('keymap/clear');
         this.updateLayout({ target: { value } });
       }
     },
@@ -233,6 +234,7 @@ export default {
           console.log('error loadDefault', error);
         });
     },
+    // TODO this should be an action
     fetchKeyboards() {
       console.log(backend_keyboards_url);
       axios.get(backend_keyboards_url).then(this.initializeKeyboards);

@@ -17,7 +17,7 @@
       <router-view />
       <spinner :isVisible="showSpinner" :status="spinnerMsg" />
       <InfoBar :msg="message" />
-      <div class="openSettings">
+      <div class="openSettings" :class="settingsClasses">
         <button @click="showSettings">
           <font-awesome-icon icon="chevron-left" size="lg" />
           <font-awesome-icon icon="cog" size="lg" />
@@ -40,7 +40,8 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { mapGetters, mapMutations } from 'vuex';
+import { createNamespacedHelpers } from 'vuex';
+const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 export default {
   name: 'app',
@@ -53,8 +54,14 @@ export default {
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,
-      panel: undefined
+      panel: undefined,
+      settingsClasses: ''
     };
+  },
+  watch: {
+    $route: function(to) {
+      this.settingsClasses = to.name === 'print' ? 'hideSettings' : '';
+    }
   },
   mounted() {
     this.randomPotatoFact();
@@ -62,7 +69,7 @@ export default {
       this.randomPotatoFact();
     }, this.interval);
     this.destroyWatcher = this.$store.watch(
-      (state, getters) => getters['app/settingsPanelVisible'],
+      state => state.app.settingsPanelVisible,
       this.toggleSettingsPanel
     );
   },
@@ -73,13 +80,13 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('app', ['showSpinner', 'spinnerMsg', 'message']),
+    ...mapState(['showSpinner', 'spinnerMsg', 'message']),
     showInfoBar() {
       return this.message !== '';
     }
   },
   methods: {
-    ...mapMutations('app', ['setShowSpinner', 'setSettingsPanel']),
+    ...mapMutations(['setShowSpinner', 'setSettingsPanel']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
@@ -127,5 +134,8 @@ export default {
 }
 div.openSettings > button {
   cursor: pointer;
+}
+.hideSettings {
+  display: none;
 }
 </style>

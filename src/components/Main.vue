@@ -45,7 +45,10 @@
 
 <script>
 import capitalize from 'lodash/capitalize';
-import { mapGetters, mapMutations } from 'vuex';
+import { mapMutations as _mapMutations, createNamespacedHelpers } from 'vuex';
+const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
+  'keymap'
+);
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
@@ -64,7 +67,8 @@ export default {
     LayerControl
   },
   computed: {
-    ...mapGetters('keymap', ['colorwayIndex', 'colorways', 'continuousInput']),
+    ...mapState(['continuousInput']),
+    ...mapGetters(['colorwayIndex', 'colorways']),
     curIndex: {
       get() {
         return this.colorwayIndex;
@@ -92,10 +96,14 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['nextColorway'])
+    ...mapMutations(['nextColorway']),
+    ..._mapMutations('app', ['resetListener'])
   },
   mounted() {
     jquery.init();
+  },
+  beforeDestroy() {
+    this.resetListener();
   }
 };
 </script>
