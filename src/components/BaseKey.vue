@@ -201,10 +201,6 @@ export default {
       );
     },
     formatName(name) {
-      if (this.u < 1.75) {
-        name = name.replace(' ', '\n');
-        name = name.replace('_', '_\n');
-      }
       return name.length === 1 ? name.toUpperCase() : name;
     },
     remove() {

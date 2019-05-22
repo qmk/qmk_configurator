@@ -29,15 +29,28 @@ export default {
       }
       if (this.meta.type === 'layer-container') {
         return this.formatName(
-          `${this.meta.name.toUpperCase()},\n ${this.meta.contents.name}`
+          `${this.meta.name.toUpperCase()},\n ${this.breakLines(
+            this.meta.contents.name
+          )}`
         );
       }
       if (this.meta.type === 'container') {
         return this.formatName(
-          `${this.meta.name.toUpperCase()}(\n${this.meta.contents.name})`
+          `${this.meta.name.toUpperCase()}(\n${this.breakLines(
+            this.meta.contents.name
+          )})`
         );
       }
-      return this.formatName(this.meta.name);
+      return this.formatName(this.breakLines(this.meta.name));
+    }
+  },
+  methods: {
+    breakLines(name) {
+      if (this.u < 1.75) {
+        name = name.replace(' ', '\n');
+        name = name.replace('_', '_\n');
+      }
+      return name;
     }
   }
 };
