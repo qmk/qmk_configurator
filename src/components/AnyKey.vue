@@ -32,19 +32,23 @@ import BaseKey from './BaseKey';
 export default {
   name: 'any-key',
   extends: BaseKey,
-  data() {
-    return {
-      value: this.meta.text
-    };
+  computed: {
+    value: {
+      get() {
+        return this.meta.text;
+      },
+      set(value) {
+        this.setText({
+          layer: this.$store.state.keymap.layer,
+          index: this.id,
+          text: value
+        });
+      }
+    }
   },
   methods: {
     ...mapMutations('keymap', ['setText']),
     blur() {
-      this.setText({
-        layer: this.$store.state.keymap.layer,
-        index: this.id,
-        text: this.value
-      });
       this.startListening();
       this.setSelected(undefined);
     },
