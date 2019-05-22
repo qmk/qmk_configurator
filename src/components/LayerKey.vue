@@ -31,7 +31,7 @@
 <script>
 import isNumber from 'lodash/isNumber';
 import isNaN from 'lodash/isNaN';
-import { mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapState, mapMutations, mapActions } from 'vuex';
 import BaseKey from './BaseKey';
 export default {
   name: 'layer-key',
@@ -42,7 +42,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters('keymap', {
+    ...mapState('keymap', {
       curLayer: 'layer'
     }),
     value() {

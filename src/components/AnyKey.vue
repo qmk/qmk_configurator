@@ -41,7 +41,7 @@ export default {
     ...mapMutations('keymap', ['setText']),
     blur() {
       this.setText({
-        layer: this.$store.getters['keymap/layer'],
+        layer: this.$store.state.keymap.layer,
         index: this.id,
         text: this.value
       });
