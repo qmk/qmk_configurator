@@ -25,7 +25,7 @@ export default {
         return this.meta.code.replace('layer', this.meta.layer);
       }
       if (this.meta.type === 'text') {
-        return this.formatName(this.meta.text);
+        return this.formatName(this.breakLines(this.meta.text));
       }
       if (this.meta.type === 'layer-container') {
         return this.formatName(
@@ -47,8 +47,7 @@ export default {
   methods: {
     breakLines(name) {
       if (this.u < 1.75) {
-        name = name.replace(' ', '\n');
-        name = name.replace('_', '_\n');
+        name = name.replace(' ', '\n').replace('_', '_\n');
       }
       return name;
     }
