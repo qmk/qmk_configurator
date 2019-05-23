@@ -9,7 +9,7 @@ before_script:
   - cp config/ga-production.js src/
   - yarn install
   - yarn build
-script: xvfb-run bash ./deploy.sh
+script: bash ./deploy.sh
 branches:
   only:
     - master
