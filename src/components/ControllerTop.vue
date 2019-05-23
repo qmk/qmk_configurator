@@ -392,7 +392,7 @@ export default {
 <style>
 .topctrl {
   display: grid;
-  grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
+  grid-template: [top] 1fr [bottom] 1fr / [left] 464px [middle] 360px [right] auto;
   grid-row-gap: 5px;
 }
 #controller-top {
@@ -441,7 +441,7 @@ export default {
   padding: 5px 4px;
   border-radius: 4px;
   border: 1px solid #cdcdcd;
-  width: 288px;
+  width: 352px;
 }
 .drop-label {
   display: inline-block;
@@ -457,11 +457,11 @@ export default {
   vertical-align: middle;
 }
 #keyboard {
-  max-width: 18rem;
+  max-width: 22rem;
 }
 .v-select {
   display: inline-block;
-  width: 18rem;
+  width: 22rem;
 }
 .topctrl-keyboards .v-select {
   background: white;
