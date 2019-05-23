@@ -1,3 +1,6 @@
+dist: xenial
+services:
+  - xvfb
 language: node_js
 node_js:
   - 11.12
@@ -6,7 +9,7 @@ before_script:
   - cp config/ga-production.js src/
   - yarn install
   - yarn build
-script: bash ./deploy.sh
+script: xvfb-run bash ./deploy.sh
 branches:
   only:
     - master
