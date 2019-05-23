@@ -392,8 +392,9 @@ export default {
 <style>
 .topctrl {
   display: grid;
-  grid-template: [top] 1fr [bottom] 1fr / [left] 464px [middle] 360px [right] auto;
-  grid-row-gap: 5px;
+  grid-template: [top] 1fr [bottom] 1fr / [left] 1fr [right] 1fr;
+  grid-gap: 5px;
+  gap: 5px;
 }
 #controller-top {
   padding: 5px;
@@ -408,6 +409,7 @@ export default {
   -webkit-box-sizing: border-box;
   /*  overflow: hidden;*/
   line-height: 100%;
+  text-align: left;
 }
 .topctrl-keyboards {
   grid-row: top;
@@ -417,31 +419,30 @@ export default {
 }
 .topctrl-keymap-name {
   grid-row: top;
-  grid-column: middle;
+  grid-column: right;
   justify-self: start;
 }
 #keymap-name {
-  width: 220px;
+  width: calc(15rem - 16px);
   padding: 7px;
   border: 1px solid #cdcdcd;
   border-radius: 4px;
 }
 .topctrl-controls {
-  grid-row: top;
+  grid-row: bottom;
   grid-column: right;
   justify-self: end;
 }
 .topctrl-layouts {
   grid-row: bottom;
-  grid-column-start: left;
-  grid-column-end: right;
+  grid-column: left;
   justify-self: start;
 }
 #layout {
   padding: 5px 4px;
   border-radius: 4px;
   border: 1px solid #cdcdcd;
-  width: 352px;
+  width: 22rem;
 }
 .drop-label {
   display: inline-block;
