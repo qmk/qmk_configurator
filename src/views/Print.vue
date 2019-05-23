@@ -116,7 +116,6 @@ export default {
       this.dateToggle = !this.dateToggle;
     },
     print() {
-      debugger;
       if (this._notes === '') {
         this._notes = 'My awesome keymap';
       }

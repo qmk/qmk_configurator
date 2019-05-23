@@ -1,6 +1,9 @@
+dist: xenial
+services:
+  - xvfb  # adds X server for nightwatch/selenium/chromedriver
 language: node_js
 node_js:
-  - 10
+  - 11.12 # need this version for Jest 24, prior versions have SYMBOL bugs
 before_script:
   - git clone --single-branch --branch config https://github.com/qmk/qmk_configurator config
   - cp config/ga-production.js src/
