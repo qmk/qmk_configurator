@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10
+  - 11.12
 before_script:
   - git clone --single-branch --branch config https://github.com/qmk/qmk_configurator config
   - cp config/ga-production.js src/
