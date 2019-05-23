@@ -3,6 +3,7 @@ set -e # exit with nonzero exit code if anything fails
 
 yarn lint
 yarn test:unit
+yarn test:e2e
 
 if [ "${TRAVIS_PULL_REQUEST}"  != "false" ]; then
   # Exit if we're running a pull request
