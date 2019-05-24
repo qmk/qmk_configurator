@@ -65,11 +65,14 @@ const actions = {
    */
   changeKeyboard({ state, commit, dispatch }, keyboard) {
     const store = this;
+    let clearKeymap = false;
     let promise = new Promise(resolve => {
       commit('disablePreview');
       commit('enableCompile');
       if (state.keyboard !== keyboard) {
-        store.commit('keymap/clear');
+        // wait until the layouts have loaded to clear the
+        // keymap to get the correct number of positions.
+        clearKeymap = true;
       }
       commit('setKeyboard', keyboard);
       const oldLayout = state.layout || '';
@@ -91,6 +94,10 @@ const actions = {
           this.commit('keycodes/enableSteno');
         } else {
           this.commit('keycodes/disableSteno');
+        }
+
+        if (clearKeymap) {
+          store.commit('keymap/clear');
         }
 
         resolve();
