@@ -38,6 +38,10 @@ export default {
       importJSON: {
         title: 'Importer un fichier .JSON de disposition des touches'
       },
+      printKeymap: {
+        title: 'Imprimer les strates de la disposition',
+        label: 'Imprimer Disposition'
+      },
       downloadFirmware: {
         label: 'Firmware',
         title: 'Télécharge le fichier du firmware à flash'
