@@ -39,8 +39,8 @@ export default {
         title: 'Importer un fichier .JSON de disposition des touches'
       },
       printKeymap: {
-        title: 'Imprimer les strates de la disposition',
-        label: 'Imprimer Disposition'
+        title: 'Imprime les strates de la disposition',
+        label: 'Imprimer la disposition'
       },
       downloadFirmware: {
         label: 'Firmware',
