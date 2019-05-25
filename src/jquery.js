@@ -103,6 +103,15 @@ const functionKeys = [
   'KC_F12'
 ];
 
+// Used exclusively to detect mods on Keyup so we can support modded input
+function keyupHandler(meta, ev) {
+  let _meta = meta;
+  if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+    _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+  }
+  store.commit('keymap/setKeycode', { _code: _meta.code });
+}
+
 // Share the code between keydown handlers
 // Use currying to bind the meta parameter at runtime.
 function keydownHandler(meta, ev) {
@@ -118,14 +127,6 @@ function keydownHandler(meta, ev) {
   } else {
     // detect left and right mods & numpad
     switch (meta.code) {
-      case 'KC_LSFT':
-      case 'KC_LGUI':
-      case 'KC_LALT':
-      case 'KC_LCTL':
-        if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-          _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
-        }
-        break;
       case 'KC_0':
       case 'KC_1':
       case 'KC_2':
@@ -155,10 +156,21 @@ function keydownHandler(meta, ev) {
 // generate a keypress combo handler per keycode
 function generateKeypressHandler(keycode) {
   const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
-  return {
-    keys: keycode.keys,
-    on_keydown: partial(keydownHandler, meta)
-  };
+  switch (meta.code) {
+    case 'KC_LSFT':
+    case 'KC_LGUI':
+    case 'KC_LALT':
+    case 'KC_LCTL':
+      return {
+        keys: keycode.keys,
+        on_keyup: partial(keyupHandler, meta)
+      };
+    default:
+      return {
+        keys: keycode.keys,
+        on_keydown: partial(keydownHandler, meta)
+      };
+  }
 }
 
 //Function that takes in a keymap loops over it and fills populates the keymap variable
@@ -294,7 +306,7 @@ function parseKeycode(keycode, stats) {
     store.commit(
       'status/append',
       `Found an unexpected keycode '${escape(keycode)}' on layer ${
-      stats.layers
+        stats.layers
       } in keymap. Setting to KC_TRNS\n`
     );
     return store.getters['keycodes/lookupKeycode']('KC_TRNS');
