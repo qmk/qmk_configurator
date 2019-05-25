@@ -106,6 +106,8 @@ const functionKeys = [
 // Used exclusively to detect mods on Keyup so we can support modded input
 function keyupHandler(meta, ev) {
   let _meta = meta;
+
+  // detect left and right mods
   if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
     _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
   }
@@ -125,7 +127,7 @@ function keydownHandler(meta, ev) {
   if (!isUndefined(special)) {
     _meta = store.getters['keycodes/lookupKeycode'](special);
   } else {
-    // detect left and right mods & numpad
+    // detect numpad
     switch (meta.code) {
       case 'KC_0':
       case 'KC_1':
