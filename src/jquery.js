@@ -79,7 +79,13 @@ const numPad = {
   KC_6: 'KC_P6',
   KC_7: 'KC_P7',
   KC_8: 'KC_P8',
-  KC_9: 'KC_P9'
+  KC_9: 'KC_P9',
+  KC_SLSH: 'KC_PSLS',
+  KC_MINS: 'KC_PMNS',
+  KC_PLUS: 'KC_PPLS',
+  KC_ENT: 'KC_PENT',
+  KC_DOT: 'KC_PDOT',
+  KC_EQL: 'KC_PEQL'
 };
 
 const functionKeys = [
@@ -130,6 +136,12 @@ function keydownHandler(meta, ev) {
       case 'KC_7':
       case 'KC_8':
       case 'KC_9':
+      case 'KC_SLSH':
+      case 'KC_MINS':
+      case 'KC_PLUS':
+      case 'KC_ENT':
+      case 'KC_DOT':
+      case 'KC_EQL':
         if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
           _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
         }
@@ -282,7 +294,7 @@ function parseKeycode(keycode, stats) {
     store.commit(
       'status/append',
       `Found an unexpected keycode '${escape(keycode)}' on layer ${
-        stats.layers
+      stats.layers
       } in keymap. Setting to KC_TRNS\n`
     );
     return store.getters['keycodes/lookupKeycode']('KC_TRNS');
