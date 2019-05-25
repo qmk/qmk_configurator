@@ -84,7 +84,8 @@ export default {
         fastInput: {
           label: 'schnelle Eingabe',
           title: 'ctrl + alt + f',
-          help: 'Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken'
+          help:
+            'Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken'
         },
         displaySizes: {
           label: 'zeige Tastengröße',
@@ -100,10 +101,11 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Leider scheint dies keine gültige QMK-Keymap-Datei zu sein.",
+          'Leider scheint dies keine gültige QMK-Keymap-Datei zu sein.',
         kbfirmwareJSONUnsupported:
-          "Entschuldigung, QMK Configurator unterstützt das Importieren von kbfirmware JSON-Dateien nicht.",
-        unknownJSON: "Es tut uns leid, dies scheint keine QMK-Keymap-Datei zu sein."
+          'Entschuldigung, QMK Configurator unterstützt das Importieren von kbfirmware JSON-Dateien nicht.',
+        unknownJSON:
+          'Es tut uns leid, dies scheint keine QMK-Keymap-Datei zu sein.'
       },
       statsTemplate:
         '\n{layers} Ebenen und {count} keycodes. Es wurden {any} Freie Keycodes Definiert\n'
