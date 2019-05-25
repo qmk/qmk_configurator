@@ -69,17 +69,48 @@ const mods = {
   KC_LALT: 'KC_RALT'
 };
 
+const numPad = {
+  KC_0: 'KC_P0',
+  KC_1: 'KC_P1',
+  KC_2: 'KC_P2',
+  KC_3: 'KC_P3',
+  KC_4: 'KC_P4',
+  KC_5: 'KC_P5',
+  KC_6: 'KC_P6',
+  KC_7: 'KC_P7',
+  KC_8: 'KC_P8',
+  KC_9: 'KC_P9'
+};
+
+const functionKeys = [
+  'KC_F1',
+  'KC_F2',
+  'KC_F3',
+  'KC_F4',
+  'KC_F5',
+  'KC_F6',
+  'KC_F7',
+  'KC_F8',
+  'KC_F9',
+  'KC_F10',
+  'KC_F11',
+  'KC_F12'
+];
+
 // Share the code between keydown handlers
 // Use currying to bind the meta parameter at runtime.
 function keydownHandler(meta, ev) {
   let _meta = meta;
-
+  // prevent default behavior for function row
+  if (includes(functionKeys, meta.code)) {
+    ev.preventDefault();
+  }
   // handle special cases eg. ContextMenu
   const special = keyLUT[ev.key];
   if (!isUndefined(special)) {
     _meta = store.getters['keycodes/lookupKeycode'](special);
   } else {
-    // detect left and right mods
+    // detect left and right mods & numpad
     switch (meta.code) {
       case 'KC_LSFT':
       case 'KC_LGUI':
@@ -87,6 +118,20 @@ function keydownHandler(meta, ev) {
       case 'KC_LCTL':
         if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
           _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+        }
+        break;
+      case 'KC_0':
+      case 'KC_1':
+      case 'KC_2':
+      case 'KC_3':
+      case 'KC_4':
+      case 'KC_5':
+      case 'KC_6':
+      case 'KC_7':
+      case 'KC_8':
+      case 'KC_9':
+        if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
+          _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
         }
         break;
     }
