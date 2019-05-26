@@ -88,23 +88,8 @@ const numPad = {
   KC_EQL: 'KC_PEQL'
 };
 
-const functionKeys = [
-  'KC_F1',
-  'KC_F2',
-  'KC_F3',
-  'KC_F4',
-  'KC_F5',
-  'KC_F6',
-  'KC_F7',
-  'KC_F8',
-  'KC_F9',
-  'KC_F10',
-  'KC_F11',
-  'KC_F12'
-];
-
-// Used exclusively to detect mods on Keyup so we can support modded input
-function keyupHandler(meta, ev) {
+// Used exclusively to detect mods on so we can support modded input
+function modHandler(meta, ev) {
   let _meta = meta;
 
   if (store.state.keymap.ignoreMod) {
@@ -164,13 +149,18 @@ function keydownHandler(meta, ev) {
 function generateKeypressHandler(keycode) {
   const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
   switch (meta.code) {
-    case 'KC_LSFT':
     case 'KC_LGUI':
     case 'KC_LALT':
     case 'KC_LCTL':
       return {
         keys: keycode.keys,
-        on_keyup: partial(keyupHandler, meta),
+        on_keydown: partial(modHandler, meta),
+        prevent_default: true
+      };
+    case 'KC_LSFT':
+      return {
+        keys: keycode.keys,
+        on_keyup: partial(modHandler, meta),
         prevent_default: true
       };
     default:
