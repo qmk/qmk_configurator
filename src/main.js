@@ -46,6 +46,22 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ga from './ga';
+// Electron specific Code
+if (
+  typeof navigator === 'object' &&
+  typeof navigator.userAgent === 'string' &&
+  navigator.userAgent.indexOf('Electron') >= 0
+) {
+  window.electron = true; //We set a global value to be used later
+  //We use the Bridge as a way to share functions between electron and vue
+  window.Bridge.statusAppend = txt => {
+    store.commit('status/append', txt);
+    store.dispatch('status/scrollToEnd');
+  };
+} else {
+  window.electron = false;
+}
+// End of electon specific code
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
