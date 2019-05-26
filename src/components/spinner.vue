@@ -6,7 +6,7 @@
         <div>
           <img
             class="space-potato working"
-            src="./../..//assets/food-potato.svg"
+            src="./../../assets/food-potato.svg"
           />
         </div>
         <h3 class="message" v-html="props.message"></h3>

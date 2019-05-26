@@ -15,7 +15,6 @@
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap';
-import BaseKey from '@/components/BaseKey';
 import PrintKey from '@/components/PrintKey';
 
 export default {
@@ -90,16 +89,6 @@ export default {
       this.profile && console.timeEnd('currentLayer');
       return curLayer;
     },
-    /**
-     * Due to a quirk in how reactivity works we have to clear the layout
-     * name to reset the UI to it's old value.
-     * We should ignore these events to avoid updating the visual keymap.
-     * If either the existing or the new layout is empty string return true.
-     * We use a change in layout to decide whether to reset the keymap.
-     */
-    isLayoutUIUpdate(newLayout, oldLayout) {
-      return newLayout === '' || oldLayout === '';
-    },
     getComponent() {
       return PrintKey;
     }
@@ -110,7 +99,7 @@ export default {
       height: 0
     };
   },
-  components: { BaseKey, PrintKey }
+  components: { PrintKey }
 };
 </script>
 <style>
