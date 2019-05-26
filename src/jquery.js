@@ -107,9 +107,15 @@ const functionKeys = [
 function keyupHandler(meta, ev) {
   let _meta = meta;
 
-  // detect left and right mods
-  if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-    _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+  // handle special cases eg. ContextMenu
+  const special = keyLUT[ev.key];
+  if (!isUndefined(special)) {
+    _meta = store.getters['keycodes/lookupKeycode'](special);
+  } else {
+    // detect left and right mods
+    if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+      _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
+    }
   }
   store.commit('keymap/setKeycode', { _code: _meta.code });
 }
@@ -118,38 +124,29 @@ function keyupHandler(meta, ev) {
 // Use currying to bind the meta parameter at runtime.
 function keydownHandler(meta, ev) {
   let _meta = meta;
-  // prevent default behavior for function row
-  if (includes(functionKeys, meta.code)) {
-    ev.preventDefault();
-  }
-  // handle special cases eg. ContextMenu
-  const special = keyLUT[ev.key];
-  if (!isUndefined(special)) {
-    _meta = store.getters['keycodes/lookupKeycode'](special);
-  } else {
-    // detect numpad
-    switch (meta.code) {
-      case 'KC_0':
-      case 'KC_1':
-      case 'KC_2':
-      case 'KC_3':
-      case 'KC_4':
-      case 'KC_5':
-      case 'KC_6':
-      case 'KC_7':
-      case 'KC_8':
-      case 'KC_9':
-      case 'KC_SLSH':
-      case 'KC_MINS':
-      case 'KC_PLUS':
-      case 'KC_ENT':
-      case 'KC_DOT':
-      case 'KC_EQL':
-        if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
-          _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
-        }
-        break;
-    }
+
+  // detect numpad
+  switch (meta.code) {
+    case 'KC_0':
+    case 'KC_1':
+    case 'KC_2':
+    case 'KC_3':
+    case 'KC_4':
+    case 'KC_5':
+    case 'KC_6':
+    case 'KC_7':
+    case 'KC_8':
+    case 'KC_9':
+    case 'KC_SLSH':
+    case 'KC_MINS':
+    case 'KC_PLUS':
+    case 'KC_ENT':
+    case 'KC_DOT':
+    case 'KC_EQL':
+      if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
+        _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
+      }
+      break;
   }
 
   store.commit('keymap/setKeycode', { _code: _meta.code });
@@ -165,12 +162,14 @@ function generateKeypressHandler(keycode) {
     case 'KC_LCTL':
       return {
         keys: keycode.keys,
-        on_keyup: partial(keyupHandler, meta)
+        on_keyup: partial(keyupHandler, meta),
+        prevent_default: true
       };
     default:
       return {
         keys: keycode.keys,
-        on_keydown: partial(keydownHandler, meta)
+        on_keydown: partial(keydownHandler, meta),
+        prevent_default: true
       };
   }
 }
