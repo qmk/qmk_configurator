@@ -140,7 +140,7 @@ function keydownHandler(meta, ev) {
   }
 
   store.commit('keymap/setKeycode', { _code: _meta.code });
-  if (ev.shiftKey || ev.metaKey || ev.ctrlKey) {
+  if (ev.shiftKey) {
     store.commit('keymap/ignoreNextMod');
   }
 }
