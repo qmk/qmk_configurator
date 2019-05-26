@@ -88,77 +88,88 @@ const numPad = {
   KC_EQL: 'KC_PEQL'
 };
 
-const functionKeys = [
-  'KC_F1',
-  'KC_F2',
-  'KC_F3',
-  'KC_F4',
-  'KC_F5',
-  'KC_F6',
-  'KC_F7',
-  'KC_F8',
-  'KC_F9',
-  'KC_F10',
-  'KC_F11',
-  'KC_F12'
-];
-
-// Share the code between keydown handlers
-// Use currying to bind the meta parameter at runtime.
-function keydownHandler(meta, ev) {
+// Used exclusively to detect mods on so we can support modded input
+function modHandler(meta, ev) {
   let _meta = meta;
-  // prevent default behavior for function row
-  if (includes(functionKeys, meta.code)) {
-    ev.preventDefault();
+
+  if (store.state.keymap.ignoreMod) {
+    store.commit('keymap/acceptNextMod');
+    return;
   }
+
   // handle special cases eg. ContextMenu
   const special = keyLUT[ev.key];
   if (!isUndefined(special)) {
     _meta = store.getters['keycodes/lookupKeycode'](special);
   } else {
-    // detect left and right mods & numpad
-    switch (meta.code) {
-      case 'KC_LSFT':
-      case 'KC_LGUI':
-      case 'KC_LALT':
-      case 'KC_LCTL':
-        if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-          _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
-        }
-        break;
-      case 'KC_0':
-      case 'KC_1':
-      case 'KC_2':
-      case 'KC_3':
-      case 'KC_4':
-      case 'KC_5':
-      case 'KC_6':
-      case 'KC_7':
-      case 'KC_8':
-      case 'KC_9':
-      case 'KC_SLSH':
-      case 'KC_MINS':
-      case 'KC_PLUS':
-      case 'KC_ENT':
-      case 'KC_DOT':
-      case 'KC_EQL':
-        if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
-          _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
-        }
-        break;
+    // detect left and right mods
+    if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
+      _meta = store.getters['keycodes/lookupKeycode'](mods[meta.code]);
     }
+  }
+  store.commit('keymap/setKeycode', { _code: _meta.code });
+}
+
+// Share the code between keydown handlers
+// Use currying to bind the meta parameter at runtime.
+function keydownHandler(meta, ev) {
+  let _meta = meta;
+
+  // detect numpad
+  switch (meta.code) {
+    case 'KC_0':
+    case 'KC_1':
+    case 'KC_2':
+    case 'KC_3':
+    case 'KC_4':
+    case 'KC_5':
+    case 'KC_6':
+    case 'KC_7':
+    case 'KC_8':
+    case 'KC_9':
+    case 'KC_SLSH':
+    case 'KC_MINS':
+    case 'KC_PLUS':
+    case 'KC_ENT':
+    case 'KC_DOT':
+    case 'KC_EQL':
+      if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
+        _meta = store.getters['keycodes/lookupKeycode'](numPad[meta.code]);
+      }
+      break;
   }
 
   store.commit('keymap/setKeycode', { _code: _meta.code });
+  if (ev.shiftKey) {
+    store.commit('keymap/ignoreNextMod');
+  }
 }
 
 // generate a keypress combo handler per keycode
 function generateKeypressHandler(keycode) {
   const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
-  return {
-    keys: keycode.keys,
-    on_keydown: partial(keydownHandler, meta)
-  };
+  switch (meta.code) {
+    case 'KC_LGUI':
+    case 'KC_LALT':
+    case 'KC_LCTL':
+      return {
+        keys: keycode.keys,
+        on_keydown: partial(modHandler, meta),
+        prevent_default: true
+      };
+    case 'KC_LSFT':
+      return {
+        keys: keycode.keys,
+        on_keyup: partial(modHandler, meta),
+        prevent_default: true
+      };
+    default:
+      return {
+        keys: keycode.keys,
+        on_keydown: partial(keydownHandler, meta),
+        prevent_default: true
+      };
+  }
 }
 
 //Function that takes in a keymap loops over it and fills populates the keymap variable
@@ -294,7 +305,7 @@ function parseKeycode(keycode, stats) {
     store.commit(
       'status/append',
       `Found an unexpected keycode '${escape(keycode)}' on layer ${
-      stats.layers
+        stats.layers
       } in keymap. Setting to KC_TRNS\n`
     );
     return store.getters['keycodes/lookupKeycode']('KC_TRNS');
