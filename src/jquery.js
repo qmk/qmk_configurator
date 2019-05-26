@@ -107,6 +107,11 @@ const functionKeys = [
 function keyupHandler(meta, ev) {
   let _meta = meta;
 
+  if (store.state.keymap.ignoreMod) {
+    store.commit('keymap/acceptNextMod');
+    return;
+  }
+
   // handle special cases eg. ContextMenu
   const special = keyLUT[ev.key];
   if (!isUndefined(special)) {
@@ -150,6 +155,9 @@ function keydownHandler(meta, ev) {
   }
 
   store.commit('keymap/setKeycode', { _code: _meta.code });
+  if (ev.shiftKey || ev.metaKey || ev.ctrlKey) {
+    store.commit('keymap/ignoreNextMod');
+  }
 }
 
 // generate a keypress combo handler per keycode

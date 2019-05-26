@@ -30,7 +30,8 @@ const state = {
   colorways: colorways.list,
   colorwayIndex: random(0, colorways.list.length - 1),
   displaySizes: false,
-  continuousInput: false
+  continuousInput: false,
+  ignoreMod: false
 };
 
 // Use for computed properties
@@ -329,6 +330,12 @@ const mutations = {
   },
   toggleContinuousInput(state) {
     state.continuousInput = !state.continuousInput;
+  },
+  ignoreNextMod(state) {
+    state.ignoreMod = true;
+  },
+  acceptNextMod(state) {
+    state.ignoreMod = false;
   }
 };
 
