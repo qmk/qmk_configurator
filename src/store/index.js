@@ -4,6 +4,7 @@ import app from './modules/app';
 import status from './modules/status';
 import keymap from './modules/keymap';
 import keycodes from './modules/keycodes';
+import tester from './modules/tester';
 
 Vue.use(Vuex);
 
@@ -12,7 +13,8 @@ export default new Vuex.Store({
     app,
     status,
     keymap,
-    keycodes
+    keycodes,
+    tester
   },
   state: {},
   mutations: {},
