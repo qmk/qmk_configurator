@@ -315,14 +315,19 @@ export default {
        *
        * TODO come up with a better way of resetting keymap than depending on visual keymap change detection
        */
+      const store = this.$store;
       this.$store.dispatch('app/loadLayouts', data).then(() => {
+        // This is a special hack to get around change detection
         this.$store.commit('app/setLayout', '  ');
         Vue.nextTick(() => {
-          const layout = getPreferredLayout(this.$store.getters['app/layouts']);
-          this.$store.commit('app/setLayout', layout);
-          this.$store.commit('app/setKeymapName', 'info.json preview');
-          this.$store.commit('status/clear');
-          this.$store.commit(
+          const layout = getPreferredLayout(store.state.app.layouts);
+          store.commit('keymap/clear');
+          store.commit('app/setLayout', layout);
+          // clear the keymap data is now responsibility of code that changes layout
+          store.commit('keymap/clear');
+          store.commit('app/setKeymapName', 'info.json preview');
+          store.commit('status/clear');
+          store.commit(
             'status/append',
             [
               'Preview info.json mode\n',
