@@ -197,7 +197,6 @@ const actions = {
         'KC_P5',
         'KC_P6',
         'KC_LSFT',
-        'KC_NUBS',
         'KC_Z',
         'KC_X',
         'KC_C',
