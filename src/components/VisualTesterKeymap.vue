@@ -1,13 +1,18 @@
 <template>
-  <div class="visual-tester-keymap" :style="styles">
-    <template v-for="meta in testerLayer">
-      <component
-        :layer="0"
-        v-bind:is="getComponent(meta)"
-        v-bind="meta"
-        :key="meta.id"
-      />
-    </template>
+  <div>
+    <div class="visual-tester-keymap" :style="styles">
+      <template v-for="meta in testerLayer">
+        <component
+          :layer="0"
+          v-bind:is="getComponent(meta)"
+          v-bind="meta"
+          :key="meta.id"
+        />
+      </template>
+    </div>
+    <div class="info">
+      <textarea cols="120" row="5" ref="keycodes" />
+    </div>
   </div>
 </template>
 <script>
@@ -84,7 +89,9 @@ export default {
     keyup(ev) {
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[ev.code];
+      console.log(ev.code);
+      this.keycode = '';
+      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       if (!isUndefined(pos)) {
         this.setDetected(pos);
       }
@@ -92,16 +99,30 @@ export default {
     keydown(ev) {
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[ev.code];
+      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
+      this.keycode = ev.code;
       if (!isUndefined(pos)) {
         this.setActive(pos);
+      }
+    },
+    firefoxKeys(code) {
+      switch (code) {
+        case 'OSLeft':
+          return 'MetaLeft';
+        case 'OSRight':
+          return 'MetaRight';
+        case 'Help':
+          return 'Insert';
+        default:
+          return code;
       }
     }
   },
   data() {
     return {
       width: 0,
-      height: 0
+      height: 0,
+      keycode: ''
     };
   },
   components: { TesterKey }
@@ -110,5 +131,8 @@ export default {
 <style>
 .visual-tester-keymap {
   position: relative;
+}
+.info {
+  margin-top: 10px;
 }
 </style>
