@@ -60,7 +60,7 @@ const codeToPosition = [
   'Numpad8',
   'Numpad9',
   'NumpadAdd',
-  'Capslock',
+  'CapsLock',
   'KeyA',
   'KeyS',
   'KeyD',
