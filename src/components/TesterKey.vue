@@ -3,7 +3,7 @@
   <div
     :id="myid"
     class="key"
-    :class="myclasses"
+    :class="localClasses"
     :style="mystyles"
     :title="displayName"
   >{{ displayName }}</div>
@@ -11,7 +11,7 @@
 <script>
 import BaseKey from './BaseKey';
 export default {
-  name: 'print-key',
+  name: 'tester-key',
   props: {
     layer: Number
   },
@@ -22,6 +22,16 @@ export default {
     },
     displayName() {
       return this.formatName(this.breakLines(this.meta.name));
+    },
+    localClasses() {
+      let classes = [];
+      if (this.meta.active) {
+        classes = 'active';
+      }
+      if (this.meta.detected) {
+        classes = 'detected';
+      }
+      return `${this.myclasses} ${classes}`;
     }
   },
   methods: {
@@ -34,4 +44,11 @@ export default {
   }
 };
 </script>
-<style></style>
+<style>
+.active {
+  background: green;
+}
+.detected {
+  background: lightgreen;
+}
+</style>

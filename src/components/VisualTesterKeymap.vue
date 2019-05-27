@@ -11,6 +11,7 @@
   </div>
 </template>
 <script>
+import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap';
 import TesterKey from '@/components/TesterKey';
@@ -19,8 +20,14 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
+    document.addEventListener('keydown', this.keydown);
+    document.addEventListener('keyup', this.keyup);
     await this.init();
     this.setSize(this.calculateMax(this.layout));
+  },
+  beforeDestroy() {
+    document.removeEventListener('keydown', this.keydown);
+    document.removeEventListener('keyup', this.keyup);
   },
   computed: {
     ...mapState('tester', [
@@ -28,7 +35,8 @@ export default {
       'defaults',
       'layouts',
       'config',
-      'keymap'
+      'keymap',
+      'codeToPosition'
     ]),
     ...mapGetters('keymap', ['colorway']),
     styles() {
@@ -47,7 +55,6 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      const colorway = this.colorway;
       let curLayer = layout.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
@@ -69,9 +76,26 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
+    ...mapMutations('tester', ['setActive', 'setDetected']),
     ...mapActions('tester', ['init']),
     getComponent() {
       return TesterKey;
+    },
+    keyup(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const pos = this.codeToPosition[ev.code];
+      if (!isUndefined(pos)) {
+        this.setDetected(pos);
+      }
+    },
+    keydown(ev) {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const pos = this.codeToPosition[ev.code];
+      if (!isUndefined(pos)) {
+        this.setActive(pos);
+      }
     }
   },
   data() {
