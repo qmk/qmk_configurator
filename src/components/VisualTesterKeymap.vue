@@ -104,12 +104,12 @@ export default {
       }
     },
     keydown(ev) {
-      this.timing[ev.code] = performance.now();
-      ev.preventDefault();
-      ev.stopPropagation();
       if (ev.repeat) {
         return;
       }
+      this.timing[ev.code] = performance.now();
+      ev.preventDefault();
+      ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(`KEYDOWN ${this.formatKeyEvent(ev)}`);
       if (!isUndefined(pos)) {
