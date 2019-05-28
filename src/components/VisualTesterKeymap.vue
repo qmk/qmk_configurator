@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tester">
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
         <component
@@ -11,7 +11,14 @@
       </template>
     </div>
     <div class="info">
-      <textarea cols="120" row="5" ref="keycodes" />
+      <h3>Keycodes Detected</h3>
+      <textarea
+        id="terminal"
+        ref="status"
+        cols="120"
+        rows="5"
+        v-model="status"
+      />
     </div>
   </div>
 </template>
@@ -87,23 +94,44 @@ export default {
       return TesterKey;
     },
     keyup(ev) {
+      const endTS = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
-      console.log(ev.code);
-      this.keycode = '';
+      this.writeToStatus(`KEYUP ${this.formatKeyEvent(ev, endTS)}`);
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       if (!isUndefined(pos)) {
         this.setDetected(pos);
       }
     },
     keydown(ev) {
+      this.timing[ev.code] = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
+      if (ev.repeat) {
+        return;
+      }
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
-      this.keycode = ev.code;
+      this.writeToStatus(`KEYDOWN ${this.formatKeyEvent(ev)}`);
       if (!isUndefined(pos)) {
         this.setActive(pos);
       }
+    },
+    scrollToEnd() {
+      let status = this.$refs.status;
+      this.$nextTick(() => {
+        status.scrollTop = status.scrollHeight;
+      });
+    },
+    writeToStatus(msg) {
+      this.status += msg + '\n';
+      this.scrollToEnd();
+    },
+    formatKeyEvent(ev, endTS) {
+      let msg = [`KEY: ${ev.key} CODE: ${ev.code} KEYCODE: ${ev.keyCode}`];
+      if (endTS) {
+        msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
+      }
+      return msg.join(' ');
     },
     firefoxKeys(code) {
       switch (code) {
@@ -122,17 +150,23 @@ export default {
     return {
       width: 0,
       height: 0,
-      keycode: ''
+      status: '',
+      timing: {}
     };
   },
   components: { TesterKey }
 };
 </script>
 <style>
+.tester {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr;
+  justify-items: center;
+}
 .visual-tester-keymap {
   position: relative;
 }
 .info {
-  margin-top: 10px;
+  margin-top: 40px;
 }
 </style>
