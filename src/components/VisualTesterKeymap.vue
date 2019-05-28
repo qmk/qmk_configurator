@@ -95,10 +95,11 @@ export default {
     },
     keyup(ev) {
       const endTS = performance.now();
+      const evStr = this.formatKeyEvent(ev, endTS);
       ev.preventDefault();
       ev.stopPropagation();
-      this.writeToStatus(`KEYUP ${this.formatKeyEvent(ev, endTS)}`);
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
+      this.writeToStatus(`KEY-UP ---- QMK: '${this.getQMKCode(pos)}' ${evStr}`);
       if (!isUndefined(pos)) {
         this.setDetected(pos);
       }
@@ -111,7 +112,9 @@ export default {
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
-      this.writeToStatus(`KEYDOWN ${this.formatKeyEvent(ev)}`);
+      this.writeToStatus(
+        `KEY-DOWN -- QMK: '${this.getQMKCode(pos)}' ${this.formatKeyEvent(ev)}`
+      );
       if (!isUndefined(pos)) {
         this.setActive(pos);
       }
@@ -127,11 +130,17 @@ export default {
       this.scrollToEnd();
     },
     formatKeyEvent(ev, endTS) {
-      let msg = [`KEY: ${ev.key} CODE: ${ev.code} KEYCODE: ${ev.keyCode}`];
+      let msg = [];
       if (endTS) {
         msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
       }
+      msg.unshift(
+        `Event key: '${ev.key}', Code: ${ev.code}, keyCode: ${ev.keyCode}`
+      );
       return msg.join(' ');
+    },
+    getQMKCode(pos) {
+      return this.$store.state.tester.keymap[0][pos].code;
     },
     firefoxKeys(code) {
       switch (code) {
