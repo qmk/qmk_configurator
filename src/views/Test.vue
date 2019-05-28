@@ -1,6 +1,6 @@
 <template>
   <div class="visual-tester">
-    <h3>Keycode Tester</h3>
+    <h2>Keyboard Tester</h2>
     <VisualTesterKeymap></VisualTesterKeymap>
   </div>
 </template>
