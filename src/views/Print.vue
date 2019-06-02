@@ -119,7 +119,7 @@ export default {
     },
     print() {
       if (this._notes === '') {
-        this._notes = this.$t('message.layer.empty');
+        this._notes = this.$t('message.notes.empty');
       }
       if (this._author === '') {
         this._author = this.$t('message.anonymous.label');
