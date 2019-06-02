@@ -3,52 +3,52 @@
     <div class="print-controls">
       <button id="leavePrint" @click="gohome">
         <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
-        Back
+        {{$t('message.back.title')}}
       </button>
       <button id="leavePrint" @click="print()">
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        Print
+        {{$t('message.print.title')}}
       </button>
     </div>
     <div class="meta-info">
       <table>
         <tr>
-          <th>Keyboard</th>
+          <th>{{$t('message.keyboard.label') }}</th>
           <td>{{ keyboard }}</td>
         </tr>
         <tr>
-          <th>Layout</th>
+          <th>{{$t('message.layout.label') }}</th>
           <td>{{ layout }}</td>
         </tr>
         <tr>
-          <th>Author</th>
+          <th>{{$t('message.author.title')}}</th>
           <td>
             <input
               type="text"
               v-model="_author"
-              placeholder="Optionally Your Name"
+              :placeholder="$t('message.author.placeholder')"
             />
           </td>
         </tr>
         <tr @click="toggleDate">
-          <th>Date</th>
+          <th>{{$t('message.date.title')}}</th>
           <td>{{ today }}</td>
         </tr>
         <tr>
-          <th>Source</th>
+          <th>{{$t('message.source.title')}}</th>
           <td>
             <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
           </td>
         </tr>
         <tr>
-          <th>Notes</th>
+          <th>{{$t('message.notes.title')}}</th>
           <td>
             <textarea
               v-model="_notes"
               class="optional-notes"
               cols="80"
               rows="3"
-              placeholder="Notes about this configuration"
+              :placeholder="$t('message.notes.placeholder')"
             />
           </td>
         </tr>
@@ -57,7 +57,7 @@
     <div>
       <template v-for="idx in activeLayers">
         <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
-          <h3 class="layer-output-title">Layer {{ idx }}</h3>
+          <h3 class="layer-output-title">{{$t('message.layer.label')}} {{ idx }}</h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
       </template>
@@ -117,10 +117,10 @@ export default {
     },
     print() {
       if (this._notes === '') {
-        this._notes = 'My awesome keymap';
+        this._notes = $t('message.layer.empty');
       }
       if (this._author === '') {
-        this._author = 'Anonymous';
+        this._author = $t('message.anonymous.label');
       }
       Vue.nextTick(() => {
         window.print();
@@ -150,6 +150,9 @@ export default {
 }
 .meta-info {
   max-width: 800px;
+}
+.meta-info th:first-letter{
+  text-transform: uppercase;
 }
 .layer-output {
   page-break-inside: avoid;
