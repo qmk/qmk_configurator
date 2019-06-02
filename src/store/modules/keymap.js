@@ -20,6 +20,7 @@ const state = {
   layer: 0,
   dirty: false,
   selectedIndex: undefined,
+  selectedContent: false,
   defaults,
   config: Object.assign({}, defaults),
   // super hacky way to wait for visual keymap to be done
@@ -172,6 +173,15 @@ const actions = {
 const mutations = {
   setSelected(state, index) {
     state.selectedIndex = index;
+    state.selectedContent = false;
+  },
+  setSelectedContent(state, index) {
+    if (state.selectedIndex === index) {
+      state.selectedContent = state.selectedContent ? false : true;
+    } else {
+      state.selectedContent = true;
+    }
+    state.selectedIndex = index;
   },
   setKeycode(state, { _code, layer }) {
     if (isUndefined(state.selectedIndex)) {
@@ -179,25 +189,37 @@ const mutations = {
     }
     let store = this;
     let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
-    Vue.set(state.keymap[state.layer], state.selectedIndex, {
-      name,
-      code,
-      type
-    });
-    if (type === 'layer') {
-      Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
-    }
-    if (type === 'layer-container') {
-      if (state.keymap[layer] === undefined) {
-        mutations.initLayer(state, layer);
-      }
-      Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
-    }
-    if (state.continuousInput) {
-      const nextIndex = (state.selectedIndex + 1) % state.keymap[0].length;
-      mutations.setSelected(state, nextIndex);
+
+    if (state.selectedContent) {
+      // only set values on contents not container, does not support continuous input
+      mutations.setContents(state, {
+        index: state.selectedIndex,
+        key: { name, code, type, layer }
+      });
+      state.selectedIndex = undefined;
+      state.selectedContent = false;
     } else {
-      mutations.setSelected(state, undefined);
+      // normal key selected
+      Vue.set(state.keymap[state.layer], state.selectedIndex, {
+        name,
+        code,
+        type
+      });
+      if (type === 'layer') {
+        Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
+      }
+      if (type === 'layer-container') {
+        if (state.keymap[layer] === undefined) {
+          mutations.initLayer(state, layer);
+        }
+        Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
+      }
+      if (state.continuousInput) {
+        const nextIndex = (state.selectedIndex + 1) % state.keymap[0].length;
+        mutations.setSelected(state, nextIndex);
+      } else {
+        mutations.setSelected(state, undefined);
+      }
     }
     mutations.setDirty(state);
   },

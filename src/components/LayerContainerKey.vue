@@ -19,6 +19,7 @@
       :class="contentClasses"
       @dragenter.prevent="dragenterContents"
       @dragleave.prevent="dragleaveContents"
+      @click.prevent.stop="clickContents"
       >{{ contents }}</div><div
         v-if="visible"
         class="remove"
@@ -54,6 +55,9 @@ export default {
       let classes = [];
       if (this.contentsInHover) {
         classes.push('overme');
+      }
+      if (this.isContentSelected) {
+        classes.push('keycode-select');
       }
       console.log('contentClasses ', classes);
       return classes.join(' ');

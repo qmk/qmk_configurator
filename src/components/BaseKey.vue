@@ -85,9 +85,22 @@ export default {
       }
       return undefined;
     },
+    isSelected() {
+      // only true if outer key is clicked
+      return (
+        this.id === this.getSelectedKey &&
+        !this.$store.state.keymap.selectedContent
+      );
+    },
+    isContentSelected() {
+      return (
+        this.$store.state.keymap.selectedContent &&
+        this.id === this.getSelectedKey
+      );
+    },
     myclasses() {
       let classes = [];
-      if (this.id === this.getSelectedKey) {
+      if (this.isSelected) {
         classes.push('keycode-select');
       }
       if (this.inHover) {
@@ -146,11 +159,17 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['setSelected', 'setKeycode', 'swapKeys']),
+    ...mapMutations('keymap', [
+      'setSelected',
+      'setKeycode',
+      'swapKeys',
+      'setSelectedContent'
+    ]),
     ...mapMutations('app', ['stopListening', 'startListening']),
     clicked() {
       let id = this.id;
-      if (this.getSelectedKey === this.id) {
+      if (this.isSelected) {
+        // unselect this key
         id = undefined;
       }
       this.setSelected(id);
@@ -206,6 +225,15 @@ export default {
     remove() {
       this.setSelected(this.id);
       this.setKeycode({ _code: 'KC_NO' });
+    },
+    clickContents() {
+      // if you click inner content highlight it
+      let id = this.id;
+      if (this.isContentSelected) {
+        // unselect content if we have previously selected it
+        id = undefined;
+      }
+      this.setSelectedContent(id);
     }
   },
   data() {
