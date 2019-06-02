@@ -3,25 +3,25 @@
     <div class="print-controls">
       <button id="leavePrint" @click="gohome">
         <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
-        {{$t('message.back.title')}}
+        {{ $t('message.back.title') }}
       </button>
       <button id="leavePrint" @click="print()">
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        {{$t('message.print.title')}}
+        {{ $t('message.print.title') }}
       </button>
     </div>
     <div class="meta-info">
       <table>
         <tr>
-          <th>{{$t('message.keyboard.label') }}</th>
+          <th>{{ $t('message.keyboard.label') }}</th>
           <td>{{ keyboard }}</td>
         </tr>
         <tr>
-          <th>{{$t('message.layout.label') }}</th>
+          <th>{{ $t('message.layout.label') }}</th>
           <td>{{ layout }}</td>
         </tr>
         <tr>
-          <th>{{$t('message.author.title')}}</th>
+          <th>{{ $t('message.author.title') }}</th>
           <td>
             <input
               type="text"
@@ -31,17 +31,17 @@
           </td>
         </tr>
         <tr @click="toggleDate">
-          <th>{{$t('message.date.title')}}</th>
+          <th>{{ $t('message.date.title') }}</th>
           <td>{{ today }}</td>
         </tr>
         <tr>
-          <th>{{$t('message.source.title')}}</th>
+          <th>{{ $t('message.source.title') }}</th>
           <td>
             <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
           </td>
         </tr>
         <tr>
-          <th>{{$t('message.notes.title')}}</th>
+          <th>{{ $t('message.notes.title') }}</th>
           <td>
             <textarea
               v-model="_notes"
@@ -57,7 +57,9 @@
     <div>
       <template v-for="idx in activeLayers">
         <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
-          <h3 class="layer-output-title">{{$t('message.layer.label')}} {{ idx }}</h3>
+          <h3 class="layer-output-title">
+            {{ $t('message.layer.label') }} {{ idx }}
+          </h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
       </template>
@@ -117,10 +119,10 @@ export default {
     },
     print() {
       if (this._notes === '') {
-        this._notes = $t('message.layer.empty');
+        this._notes = this.$t('message.layer.empty');
       }
       if (this._author === '') {
-        this._author = $t('message.anonymous.label');
+        this._author = this.$t('message.anonymous.label');
       }
       Vue.nextTick(() => {
         window.print();
@@ -151,7 +153,7 @@ export default {
 .meta-info {
   max-width: 800px;
 }
-.meta-info th:first-letter{
+.meta-info th:first-letter {
   text-transform: uppercase;
 }
 .layer-output {
