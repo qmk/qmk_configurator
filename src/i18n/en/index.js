@@ -102,25 +102,25 @@ export default {
         }
       },
       author: {
-        title:'Author',
-        placeholder:'Optionally Your Name'
+        title: 'Author',
+        placeholder: 'Optionally Your Name'
       },
       date: {
-        title:'Date',
+        title: 'Date'
       },
       source: {
-        title:'Source',
+        title: 'Source'
       },
       print: {
-        title:'Print',
+        title: 'Print'
       },
       back: {
-        title:'Back',
+        title: 'Back'
       },
       notes: {
-        title:'Notes',
-        placeholder:'Notes about this configuration',
-        empty:'My awesome keymap'
+        title: 'Notes',
+        placeholder: 'Notes about this configuration',
+        empty: 'My awesome keymap'
       },
       errors: {
         invalidQMKKeymap:
