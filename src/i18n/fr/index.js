@@ -56,7 +56,7 @@ export default {
         label: 'Disposition'
       },
       downloadToolbox: {
-        label: 'Obternir QMK Toolbox'
+        label: 'Obtenir QMK Toolbox'
       },
       keycodes: {
         label: 'Codes des touches'
