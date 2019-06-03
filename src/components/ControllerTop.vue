@@ -112,7 +112,9 @@ export default {
             return false;
           }
         }
-        this.updateKeyboard(value);
+        this.updateKeyboard(value).then(() => {
+          this.loadDefault(true);
+        });
       }
     },
     layout: {
@@ -193,9 +195,10 @@ export default {
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
+     * @param {boolean} isAutoInit If the method is called by the code
      * @return {object} promise when it has completed
      */
-    loadDefault() {
+    loadDefault(isAutoInit = false) {
       if (this.isDirty) {
         if (!confirm(clearKeymapTemplate({ action: 'load default keymap' }))) {
           return false;
@@ -220,7 +223,9 @@ export default {
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('message.statsTemplate', stats);
               store.commit('status/append', msg);
-              store.commit('keymap/setDirty');
+              if (!isAutoInit) {
+                store.commit('keymap/setDirty');
+              }
             });
           }
         })
@@ -237,7 +242,7 @@ export default {
     // TODO this should be an action
     fetchKeyboards() {
       console.log(backend_keyboards_url);
-      axios.get(backend_keyboards_url).then(this.initializeKeyboards);
+      return axios.get(backend_keyboards_url).then(this.initializeKeyboards);
     },
     /**
      * initializeKeyboards - parse the keyboard list from the API response
@@ -272,7 +277,7 @@ export default {
           this.firstRun = false;
         }
         this.setLayout(layoutP);
-        this.updateKeyboard(_keyboard);
+        return this.updateKeyboard(_keyboard);
       }
     },
     /**
@@ -385,7 +390,9 @@ export default {
     };
   },
   mounted() {
-    this.fetchKeyboards();
+    this.fetchKeyboards().then(() => {
+      this.loadDefault(true);
+    });
   }
 };
 </script>
