@@ -1,5 +1,6 @@
 <template>
-  <div id="browser-warn" v-show="isNotSupported">
+  <div id="browser-warn" v-show="isNotSupported && !isDimissed">
+    <a class="dismiss" title="dismiss" v-on:click="dismiss">X</a>
     {{ $t('message.errors.unsupportedBrowser') }}
     <a href="https://www.google.com/intl/en_us/chrome/" target="_blank"
       >Google Chrome</a
@@ -14,6 +15,14 @@
 <script>
 export default {
   name: 'browser-warn-bar',
+  data() {
+    return { isDimissed: false };
+  },
+  methods: {
+    dismiss() {
+      this.isDimissed = true;
+    }
+  },
   computed: {
     isNotSupported() {
       const isChrome =
@@ -28,8 +37,8 @@ export default {
 
 <style>
 #browser-warn {
+  padding: 0 5px;
   z-index: 3001;
-  display: grid;
   position: fixed;
   top: 20px;
   left: 0;
@@ -40,5 +49,8 @@ export default {
 #browser-warn a {
   color: #e0e0e0;
   font-weight: bold;
+}
+a.dismiss {
+  cursor: pointer;
 }
 </style>
