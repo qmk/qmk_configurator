@@ -6,6 +6,7 @@ root = true
 [*]
 indent_style = space
 indent_size = 2
+end_of_line = lf
 
 # We recommend you to keep these unchanged
 charset = utf-8
@@ -33,6 +34,9 @@ end_of_line = lf
 end_of_line = lf
 
 [*.js]
+end_of_line = lf
+
+[*.vue]
 end_of_line = lf
 
 # The gitattributes file will handle the line endings conversion properly according to the operating system settings for other files
