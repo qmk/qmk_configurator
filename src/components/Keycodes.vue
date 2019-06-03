@@ -12,9 +12,7 @@
             href="https://docs.qmk.fm/#/keycodes"
             title="Keycodes reference"
             target="_blank"
-          >
-            {{ $t('message.keycodesRef.label') }}
-          </a>
+          >{{ $t('message.keycodesRef.label') }}</a>
         </span>
       </p>
     </div>
@@ -28,9 +26,7 @@
           :key="index"
           @click="changeActive(index)"
           :title="index"
-        >
-          {{ $t('message.keycodesTab.' + index + '.label') }}
-        </span>
+        >{{ $t('message.keycodesTab.' + index + '.label') }}</span>
       </div>
       <div class="tab-area">
         <template v-for="(key, index) in activeTab">
@@ -57,8 +53,13 @@ export default {
   components: { Keycode, Space },
   props: {},
   data() {
+    const userLang = navigator.language || navigator.userLanguage;
+    let active = 'ANSI';
+    if (userLang.toLowerCase().indexOf('en') < 0) {
+      active = 'ISO/JIS';
+    }
     return {
-      active: 'ANSI',
+      active: active,
       clearTimeout: undefined
     };
   },
