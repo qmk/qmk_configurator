@@ -1,13 +1,12 @@
 import potato from './potato';
+import print from './print';
 export default {
   en: {
     message: {
       ...potato,
+      ...print,
       keyboard: {
         label: 'keyboard'
-      },
-      anonymous: {
-        label: 'Anonymous'
       },
       layout: {
         label: 'layout'
@@ -100,27 +99,6 @@ export default {
         off: {
           label: 'Off'
         }
-      },
-      author: {
-        title: 'Author',
-        placeholder: 'Optionally Your Name'
-      },
-      date: {
-        title: 'Date'
-      },
-      source: {
-        title: 'Source'
-      },
-      print: {
-        title: 'Print'
-      },
-      back: {
-        title: 'Back'
-      },
-      notes: {
-        title: 'Notes',
-        placeholder: 'Notes about this configuration',
-        empty: 'My awesome keymap'
       },
       errors: {
         invalidQMKKeymap:
