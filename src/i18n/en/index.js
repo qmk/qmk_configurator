@@ -1,8 +1,10 @@
 import potato from './potato';
+import print from './print';
 export default {
   en: {
     message: {
       ...potato,
+      ...print,
       keyboard: {
         label: 'keyboard'
       },
