@@ -178,7 +178,7 @@ const mutations = {
   setSelectedContent(state, index) {
     if (state.selectedIndex === index) {
       // key already selected - toggle inner content selection
-      state.selectedContent = state.selectedContent ? false : true;
+      state.selectedContent = !state.selectedContent;
     } else {
       // select content
       state.selectedContent = true;
