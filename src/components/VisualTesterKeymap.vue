@@ -11,7 +11,7 @@
       </template>
     </div>
     <div class="info">
-      <h3>Keycodes Detected</h3>
+      <h3>{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <textarea
         id="terminal"
         ref="status"

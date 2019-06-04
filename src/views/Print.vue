@@ -3,25 +3,25 @@
     <div class="print-controls">
       <button id="leavePrint" @click="gohome">
         <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
-        {{ $t('message.back.title') }}
+        {{ i18n('back.title') }}
       </button>
       <button id="leavePrint" @click="print()">
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        {{ $t('message.print.title') }}
+        {{ i18n('print.title') }}
       </button>
     </div>
     <div class="meta-info">
       <table>
         <tr>
-          <th>{{ $t('message.keyboard.label') }}</th>
+          <th>{{ i18n('keyboard.label') }}</th>
           <td>{{ keyboard }}</td>
         </tr>
         <tr>
-          <th>{{ $t('message.layout.label') }}</th>
+          <th>{{ i18n('layout.label') }}</th>
           <td>{{ layout }}</td>
         </tr>
         <tr>
-          <th>{{ $t('message.author.title') }}</th>
+          <th>{{ i18n('author.title') }}</th>
           <td>
             <input
               type="text"
@@ -31,24 +31,24 @@
           </td>
         </tr>
         <tr @click="toggleDate">
-          <th>{{ $t('message.date.title') }}</th>
+          <th>{{ i18n('date.title') }}</th>
           <td>{{ today }}</td>
         </tr>
         <tr>
-          <th>{{ $t('message.source.title') }}</th>
+          <th>{{ i18n('source.title') }}</th>
           <td>
             <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
           </td>
         </tr>
         <tr>
-          <th>{{ $t('message.notes.title') }}</th>
+          <th>{{ i18n('notes.title') }}</th>
           <td>
             <textarea
               v-model="_notes"
               class="optional-notes"
               cols="80"
               rows="3"
-              :placeholder="$t('message.notes.placeholder')"
+              :placeholder="i18n('notes.placeholder')"
             />
           </td>
         </tr>
@@ -58,7 +58,7 @@
       <template v-for="idx in activeLayers">
         <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
           <h3 class="layer-output-title">
-            {{ $t('message.layer.label') }} {{ idx }}
+            {{ i18n('layer.label') }} {{ idx }}
           </h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
@@ -111,6 +111,9 @@ export default {
     console.log('Active layers', this.activeLayers);
   },
   methods: {
+    i18n(postfix) {
+      return this.$t(`message.print.${postfix}`);
+    },
     gohome() {
       this.$router.push(`/${this.keyboard}/${this.layout}`);
     },

@@ -41,10 +41,18 @@
       <button
         id="printkeymaps"
         :title="$t('message.printKeymap.title')"
-        @click="PrinterKeymaps"
+        @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
         {{ $t('message.printKeymap.label') }}
+      </button>
+      <button
+        id="testkeys"
+        :title="$t('message.testKeys.title')"
+        @click="testKeys"
+      >
+        <font-awesome-icon icon="keyboard" size="lg" fixed-width />
+        {{ $t('message.testKeys.label') }}
       </button>
       <input
         id="fileImport"
@@ -340,8 +348,11 @@ export default {
         });
       });
     },
-    PrinterKeymaps() {
+    printKeymaps() {
       this.$router.push('/print');
+    },
+    testKeys() {
+      this.$router.push('/test');
     }
   },
   data: () => {

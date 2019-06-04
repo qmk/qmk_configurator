@@ -360,6 +360,11 @@ const mutations = {
   setDetected(state, pos) {
     Vue.set(state.keymap[0][pos], 'active', false);
     Vue.set(state.keymap[0][pos], 'detected', true);
+  },
+  reset(state) {
+    state.keymap[0].map((v, idx) => {
+      Vue.set(state.keymap[0][idx], 'detected', false);
+    });
   }
 };
 

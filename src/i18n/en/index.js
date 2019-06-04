@@ -1,10 +1,12 @@
 import potato from './potato';
 import print from './print';
+import tester from './tester';
 export default {
   en: {
     message: {
       ...potato,
-      ...print,
+      print: { ...print },
+      tester: { ...tester },
       keyboard: {
         label: 'keyboard'
       },
@@ -41,6 +43,10 @@ export default {
       printKeymap: {
         title: 'Print Keymap Layers',
         label: 'Print Keymap'
+      },
+      testKeys: {
+        title: 'Test Keyboard Input',
+        label: 'Test Keyboard'
       },
       downloadFirmware: {
         label: 'Firmware',

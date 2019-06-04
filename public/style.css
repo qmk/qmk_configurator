@@ -586,7 +586,10 @@ a img {
 #import,
 #settings,
 #printkeymaps,
+#testkeys,
 #leavePrint,
+#leaveTest,
+#resetTest,
 #load-default {
   line-height: 120%;
   margin: 0px 4px 0px 0px;
