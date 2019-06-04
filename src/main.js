@@ -3,6 +3,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import StatusBar from '@/components/StatusBar';
+import BrowserWarn from '@/components/BrowserWarn';
 import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
@@ -74,3 +75,8 @@ new Vue({
 new Vue({
   render: h => h(StatusBar)
 }).$mount('#status-app');
+
+new Vue({
+  i18n,
+  render: h => h(BrowserWarn)
+}).$mount('#browser-warn-container');

@@ -105,7 +105,8 @@ export default {
           "Sorry, that doesn't appear to be a valid QMK keymap file.",
         kbfirmwareJSONUnsupported:
           "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files.",
-        unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file."
+        unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file.",
+        unsupportedBrowser: "You're using a non supported browser. Please use"
       },
       statsTemplate:
         '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n'
