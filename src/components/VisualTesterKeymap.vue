@@ -146,6 +146,9 @@ export default {
       return msg.join(' ');
     },
     getQMKCode(pos) {
+      if (pos === undefined) {
+        return '';
+      }
       return this.$store.state.tester.keymap[0][pos].code;
     },
     firefoxKeys(code) {
