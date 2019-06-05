@@ -110,7 +110,13 @@ export default {
           'Désolé, cela ne semble pas être un fichier de disposition QMK.'
       },
       statsTemplate:
-        '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n'
+        '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n',
+      maintain:
+        'Ce projet est maintenu par les collaborateurs QMK et des contributeurs comme vous!',
+      hostedOn: 'Hébergé sur GitHub Pages',
+      serverStatus: 'Statut du serveur',
+      apiVersion: `Version de l'API`,
+      jobsWaiting: 'tâche(s) en attente'
     }
   }
 };
