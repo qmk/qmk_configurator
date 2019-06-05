@@ -3,14 +3,14 @@
     <div>
       <header>
         <h1>
-          <a href="/"
-            ><img
+          <a href="/">
+            <img
               src="./../assets/qmk_icon_512.png"
               alt="QMK Logo"
               width="48"
               style="vertical-align: middle"
-            />QMK Configurator</a
-          >
+            />QMK Configurator
+          </a>
         </h1>
         <p class="random-potato">{{ potatoFact }}</p>
       </header>
@@ -26,11 +26,8 @@
     </div>
     <slideout-panel></slideout-panel>
     <footer>
-      <p>
-        This project is maintained by QMK collaborators and contributors like
-        you!
-      </p>
-      <p>Hosted on GitHub Pages</p>
+      <p>{{ $t('message.maintain') }}</p>
+      <p>{{ $t('message.hostedOn') }}</p>
     </footer>
   </div>
 </template>
