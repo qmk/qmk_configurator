@@ -1,3 +1,4 @@
+import gmk_aero from './aero';
 import gmk_dolch from './dolch';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
@@ -13,6 +14,7 @@ import gmk_ta_royal_alpha from './ta_royal_alpha';
 import gmk_wob from './wob';
 
 export default [
+  gmk_aero,
   gmk_dolch,
   gmk_jamon,
   gmk_merlin,
