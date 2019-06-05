@@ -537,6 +537,19 @@
   background: $color-pantone-533C;
 }
 
+.gmk-plum-key {
+  color: #736b7c;
+  background: #ded0af;
+}
+.gmk-plum-mod {
+  color:#ded0af;
+  background: #736b7c;
+}
+.gmk-plum-accent {
+  color:#ded0af;
+  background: #863f48;
+}
+
 .gmk-serika-key {
   background: #ece4d0;
   color: #333732;
@@ -585,6 +598,19 @@
 .gmk-space-cadet-kb {
 }
 
+.gmk-yuri-key {
+  background:#c7e6f5;
+  color:#f54730;
+}
+.gmk-yuri-mod {
+  color:#f54730;
+  background:#2d394c;
+}
+.gmk-yuri-accent {
+  background: #f54730;
+  color:#2d394c;
+}
+
 // Keyreative
 
 .dsa-drifter-key {
@@ -602,17 +628,4 @@
   }
 }
 .dsa-drifter-kb {
-}
-
-.gmk-yuri-key {
-  background:#c7e6f5;
-  color:#f54730;
-}
-.gmk-yuri-mod {
-  color:#f54730;
-  background:#2d394c;
-}
-.gmk-yuri-accent {
-  background: #f54730;
-  color:#2d394c;
 }
