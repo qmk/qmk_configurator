@@ -392,7 +392,7 @@ export default {
 }
 .hide-small {
 }
-@media (max-width: 1290px) {
+@media (max-width: 90rem) {
   .hide-small {
     display: none;
   }
