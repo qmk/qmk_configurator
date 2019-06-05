@@ -25,11 +25,11 @@
           </label>
           {{ lastCode }}
         </div>
-        <div class="letter-key-code">
+        <div class="letter-key-code" @click="togglehex">
           <label class="keycode-label">
             {{ $t('message.tester.letters.keycode.label') }}
           </label>
-          {{ lastKeyCode }}
+          {{ displayKeyCode }}
         </div>
       </div>
       <textarea
@@ -105,6 +105,11 @@ export default {
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
       return curLayer;
+    },
+    displayKeyCode() {
+      return this.displayHex
+        ? `0x${this.lastKeyCode.toString(16)}`
+        : this.lastKeyCode;
     }
   },
   methods: {
@@ -186,6 +191,9 @@ export default {
         default:
           return code;
       }
+    },
+    togglehex() {
+      this.displayHex = !this.displayHex;
     }
   },
   data() {
@@ -196,7 +204,8 @@ export default {
       timing: {},
       lastKey: '',
       lastCode: '',
-      lastKeyCode: ''
+      lastKeyCode: '',
+      displayHex: false
     };
   },
   components: { TesterKey }
