@@ -41,6 +41,17 @@
         v-model="status"
       />
     </div>
+    <p>
+      {{ $t('message.tester.docs.paragraph') }}
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
+        >Code</a
+      >,
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key"
+        >Key</a
+      >
+    </p>
   </div>
 </template>
 <script>

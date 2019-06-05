@@ -23,5 +23,9 @@ export default {
     key: {
       label: 'key'
     }
+  },
+  docs: {
+    paragraph:
+      'Note: Detected Key and Code may differ depending on your locale. Docs'
   }
 };
