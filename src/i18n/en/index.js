@@ -109,7 +109,13 @@ export default {
         unsupportedBrowser: "You're using a non supported browser. Please use"
       },
       statsTemplate:
-        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n'
+        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n',
+      maintain:
+        'This project is maintained by QMK collaborators and contributors like you!',
+      hostedOn: 'Hosted on GitHub Pages',
+      serverStatus: 'Server Status',
+      apiVersion: 'API Version',
+      jobsWaiting: 'job(s) waiting'
     }
   }
 };

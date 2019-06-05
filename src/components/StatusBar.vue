@@ -1,11 +1,12 @@
 <template>
   <div class="backend-status">
-    <div class="bes-title">Server Status:</div>
+    <div class="bes-title">{{ $t('message.serverStatus') }}:</div>
     <div :class="{ 'bes-status': true, 'bes-error': hasError }">
       {{ status }}
     </div>
     <div class="bes-version">
-      API Version:<span class="version-num">{{ version }}</span>
+      {{ $t('message.apiVersion') }}:
+      <span class="version-num">{{ version }}</span>
     </div>
     <div class="bes-jobs">{{ jobs }}</div>
   </div>
@@ -34,7 +35,9 @@ export default {
           stat = stat === 'running' ? 'UP' : stat;
           this.status = escape(`${stat} @ ${localTime}`);
           this.version = data.version;
-          this.jobs = template('<%= queue_length %> job(s) waiting')(data);
+          this.jobs = template(
+            `<%= queue_length %> ${this.$t('message.jobsWaiting')}`
+          )(data);
           this.hasError = false;
         })
         .catch(json => {

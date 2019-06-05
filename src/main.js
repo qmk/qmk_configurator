@@ -73,6 +73,7 @@ new Vue({
 }).$mount('#app');
 
 new Vue({
+  i18n,
   render: h => h(StatusBar)
 }).$mount('#status-app');
 

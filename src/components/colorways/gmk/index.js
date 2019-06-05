@@ -6,15 +6,18 @@ import gmk_mizu from './mizu';
 import gmk_nautilus from './nautilus';
 import gmk_olivetti from './olivetti';
 import gmk_olivia from './olivia';
+import gmk_plum from './plum';
 import gmk_serika from './serika';
 import gmk_space_cadet from './space_cadet';
 import gmk_striker from './striker';
 import gmk_terminal from './terminal';
 import gmk_ta_royal_alpha from './ta_royal_alpha';
 import gmk_wob from './wob';
+import gmk_yuri from './yuri';
 
 export default [
   gmk_dolch,
+  gmk_plum,
   gmk_jamon,
   gmk_merlin,
   gmk_metaverse,
@@ -27,5 +30,6 @@ export default [
   gmk_striker,
   gmk_ta_royal_alpha,
   gmk_terminal,
-  gmk_wob
+  gmk_wob,
+  gmk_yuri
 ];
