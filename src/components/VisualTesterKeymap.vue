@@ -14,12 +14,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
+          <label class="key-label"
+            >{{ $t('message.tester.letters.key.label') }}
+          </label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
+          <label class="code-label">
+            {{ $t('message.tester.letters.code.label') }}
+          </label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code">
+          <label class="keycode-label">
+            {{ $t('message.tester.letters.keycode.label') }}
+          </label>
           {{ lastKeyCode }}
         </div>
       </div>
@@ -222,21 +231,33 @@ export default {
     monospace;
 }
 .letter-key {
+  position: relative;
   border: 1px solid rgba(0, 0, 0, 0.7);
   grid-column: letter-mid;
   grid-row: letter;
 }
 .letter-code {
+  position: relative;
   grid-column: letter-left;
   grid-row: letter;
   border: 1px solid rgba(0, 0, 0, 0.7);
 }
 .letter-key-code {
+  position: relative;
   grid-column: letter-right;
   grid-row: letter;
   border: 1px solid rgba(0, 0, 0, 0.7);
 }
 .status-log {
   grid-row: info-bottom;
+}
+.key-label,
+.keycode-label,
+.code-label {
+  position: absolute;
+  font-size: 8px;
+  right: 2px;
+  bottom: 2px;
+  color: rgba(0, 0, 0, 0.5);
 }
 </style>

@@ -12,5 +12,16 @@ export default {
   reset: {
     label: 'Reset',
     title: 'Reset detected keys'
+  },
+  letters: {
+    keycode: {
+      label: 'keycode'
+    },
+    code: {
+      label: 'code'
+    },
+    key: {
+      label: 'key'
+    }
   }
 };
