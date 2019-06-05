@@ -11,8 +11,20 @@
       </template>
     </div>
     <div class="info">
-      <h3>{{ $t('message.tester.keycodeStatus.label') }}</h3>
+      <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
+      <div class="letter-display">
+        <div class="letter-key">
+          {{ lastKey }}
+        </div>
+        <div class="letter-code">
+          {{ lastCode }}
+        </div>
+        <div class="letter-key-code">
+          {{ lastKeyCode }}
+        </div>
+      </div>
       <textarea
+        class="status-log"
         id="terminal"
         ref="status"
         cols="120"
@@ -115,6 +127,9 @@ export default {
       this.writeToStatus(
         `KEY-DOWN -- QMK: '${this.getQMKCode(pos)}' ${this.formatKeyEvent(ev)}`
       );
+      this.lastKey = ev.key === ' ' ? ev.code : ev.key;
+      this.lastCode = ev.code;
+      this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
         this.setActive(pos);
       }
@@ -169,7 +184,10 @@ export default {
       width: 0,
       height: 0,
       status: '',
-      timing: {}
+      timing: {},
+      lastKey: '',
+      lastCode: '',
+      lastKeyCode: ''
     };
   },
   components: { TesterKey }
@@ -185,6 +203,40 @@ export default {
   position: relative;
 }
 .info {
-  margin-top: 40px;
+  margin-top: 10px;
+  display: grid;
+  grid-template: [info-title] 30px [info-top] 4rem [info-bottom] 13rem / 1fr;
+}
+.info-title {
+  grid-row: info-title;
+}
+.letter-display {
+  color: rgba(0, 0, 0, 0.7);
+  grid-row: info-top;
+  display: grid;
+  grid-template: [letter] 3rem / [letter-left] 1fr [letter-mid] 1fr [letter-right] 1fr;
+  grid-column-gap: 10px;
+  font-size: 2rem;
+  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
+}
+.letter-key {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  grid-column: letter-mid;
+  grid-row: letter;
+}
+.letter-code {
+  grid-column: letter-left;
+  grid-row: letter;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+.letter-key-code {
+  grid-column: letter-right;
+  grid-row: letter;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+.status-log {
+  grid-row: info-bottom;
 }
 </style>
