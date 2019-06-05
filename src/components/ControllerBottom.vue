@@ -44,7 +44,7 @@
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        {{ $t('message.printKeymap.label') }}
+        <span class="hide-small"> {{ $t('message.printKeymap.label') }}</span>
       </button>
       <button
         id="testkeys"
@@ -52,7 +52,7 @@
         @click="testKeys"
       >
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
-        {{ $t('message.testKeys.label') }}
+        <span class="hide-small"> {{ $t('message.testKeys.label') }}</span>
       </button>
       <input
         id="fileImport"
@@ -389,5 +389,12 @@ export default {
   border: 0px solid #000;
   padding: 6px 12px 6px;
   text-transform: uppercase;
+}
+.hide-small {
+}
+@media (max-width: 1290px) {
+  .hide-small {
+    display: none;
+  }
 }
 </style>
