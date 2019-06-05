@@ -257,7 +257,7 @@ export default {
   position: absolute;
   font-size: 8px;
   right: 2px;
-  bottom: 2px;
+  bottom: 1px;
   color: rgba(0, 0, 0, 0.5);
 }
 </style>
