@@ -11,6 +11,7 @@ import gmk_serika from './serika';
 import gmk_space_cadet from './space_cadet';
 import gmk_striker from './striker';
 import gmk_ta_royal_alpha from './ta_royal_alpha';
+import gmk_yuri from './yuri';
 import gmk_wob from './wob';
 
 export default [
@@ -27,5 +28,6 @@ export default [
   gmk_space_cadet,
   gmk_striker,
   gmk_ta_royal_alpha,
+  gmk_yuri,
   gmk_wob
 ];
