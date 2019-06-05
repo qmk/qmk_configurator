@@ -39,7 +39,7 @@ export default {
         title: 'Importer un fichier .JSON de disposition des touches'
       },
       printKeymap: {
-        title: 'Imprime les strates de la disposition',
+        title: 'Imprime les calques de la disposition',
         label: 'Imprimer la disposition'
       },
       downloadFirmware: {
@@ -50,7 +50,7 @@ export default {
         title: 'Ctrl + Alt + N pour changer de coloris'
       },
       layer: {
-        label: 'Strate'
+        label: 'Calque'
       },
       keymap: {
         label: 'Disposition'
@@ -110,7 +110,7 @@ export default {
           'Désolé, cela ne semble pas être un fichier de disposition QMK.'
       },
       statsTemplate:
-        '\n{layers} strates et {count} touches chargées. {any} emplacements vides definis\n'
+        '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n'
     }
   }
 };
