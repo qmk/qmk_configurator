@@ -256,6 +256,7 @@ export default {
   grid-column: letter-right;
   grid-row: letter;
   border: 1px solid rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
 .status-log {
   grid-row: info-bottom;
