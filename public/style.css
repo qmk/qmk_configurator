@@ -989,7 +989,7 @@ button {
 }
 
 .keycode-select {
-  border: solid 2px green;
+  border: solid 2px green !important;
 }
 
 .space {
