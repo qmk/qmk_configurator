@@ -29,7 +29,8 @@ export default {
       const isChrome =
         (usrAgent.indexOf('chrome') !== -1 ||
           usrAgent.indexOf('chromium') !== -1) &&
-        !(usrAgent.indexOf('edge') === -1 || usrAgent.indexOf('opr') === -1);
+        usrAgent.indexOf('edge') === -1 &&
+        usrAgent.indexOf('opr') === -1;
       const isFirefox = usrAgent.indexOf('firefox') !== -1;
       return !(isChrome || isFirefox);
     }
