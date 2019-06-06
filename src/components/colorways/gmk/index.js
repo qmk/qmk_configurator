@@ -11,9 +11,10 @@ import gmk_plum from './plum';
 import gmk_serika from './serika';
 import gmk_space_cadet from './space_cadet';
 import gmk_striker from './striker';
+import gmk_terminal from './terminal';
 import gmk_ta_royal_alpha from './ta_royal_alpha';
-import gmk_yuri from './yuri';
 import gmk_wob from './wob';
+import gmk_yuri from './yuri';
 
 export default [
   gmk_bento,
@@ -30,6 +31,7 @@ export default [
   gmk_space_cadet,
   gmk_striker,
   gmk_ta_royal_alpha,
-  gmk_yuri,
-  gmk_wob
+  gmk_terminal,
+  gmk_wob,
+  gmk_yuri
 ];

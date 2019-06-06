@@ -254,6 +254,18 @@
 
 
 // GMK Keysets
+.gmk-bento-key {
+  background: #fff3ef;
+  color:#3e728f;
+}
+.gmk-bento-mod {
+  background:#3e728f;
+  color:#fb7279;
+}
+.gmk-bento-accent {
+  background:#fb7279;
+  color:#fff3ef;
+}
 
 .gmk-merlin-key {
   background: $color-gmk-abs-CP;
@@ -598,6 +610,19 @@
 .gmk-space-cadet-kb {
 }
 
+.gmk-terminal-key {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-AE;
+}
+.gmk-terminal-accent {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-N9;
+}
+.gmk-terminal-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-AE;
+}
+
 .gmk-yuri-key {
   background:#c7e6f5;
   color:#f54730;
@@ -630,15 +655,3 @@
 .dsa-drifter-kb {
 }
 
-.gmk-bento-key {
-  background: #fff3ef;
-  color:#3e728f;
-}
-.gmk-bento-mod {
-  background:#3e728f;
-  color:#fb7279;
-}
-.gmk-bento-accent {
-  background:#fb7279;
-  color:#fff3ef;
-}
