@@ -12,7 +12,7 @@
       <font-awesome-icon icon="undo" size="lg" fixed-width />
       {{ $t('message.tester.reset.label') }}
     </button>
-    <h2 class="keyboardTesterTitle">{{ $t('message.tester.page.label') }}</h2>
+    <!--h2 class="keyboardTesterTitle">{{ $t('message.tester.page.label') }}</h2-->
     <VisualTesterKeymap></VisualTesterKeymap>
   </div>
 </template>
@@ -34,8 +34,4 @@ export default {
   }
 };
 </script>
-<style>
-.keyboardTesterTitle {
-  margin-top: 10px;
-}
-</style>
+<style></style>

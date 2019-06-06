@@ -224,6 +224,7 @@ export default {
 </script>
 <style>
 .tester {
+  margin-top: 35px;
   display: grid;
   grid-template: 1fr 1fr / 1fr;
   justify-items: center;
