@@ -1,0 +1,10 @@
+export default {
+  MAX_X: 800,
+  KEY_WIDTH: 40,
+  KEY_HEIGHT: 40,
+  SWAP_KEY_WIDTH: 30,
+  SWAP_KEY_HEIGHT: 30,
+  KEY_X_SPACING: 45,
+  KEY_Y_SPACING: 45,
+  SCALE: 1
+};

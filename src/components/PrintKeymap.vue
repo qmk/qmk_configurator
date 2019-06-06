@@ -46,24 +46,12 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', [
-      'changeLayer',
-      'clear',
-      'initKeymap',
-      'resetConfig',
-      'resizeConfig',
-      'setLoadingKeymapPromise'
-    ]),
+    ...mapMutations('keymap', ['resizeConfig']),
     currentLayer(layerIDX) {
       const layout = this.layouts[this.layout];
       const keymap = this.getLayer(layerIDX);
       if (isUndefined(layout) || isUndefined(keymap)) {
         return [];
-      }
-      if (this.loadingKeymapPromise) {
-        const _promise = this.loadingKeymapPromise;
-        this.setLoadingKeymapPromise(undefined);
-        _promise();
       }
       // Calculate Max with given layout
       // eslint-disable-next-line no-console

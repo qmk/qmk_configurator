@@ -41,10 +41,18 @@
       <button
         id="printkeymaps"
         :title="$t('message.printKeymap.title')"
-        @click="PrinterKeymaps"
+        @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        {{ $t('message.printKeymap.label') }}
+        <span class="hide-small"> {{ $t('message.printKeymap.label') }}</span>
+      </button>
+      <button
+        id="testkeys"
+        :title="$t('message.testKeys.title')"
+        @click="testKeys"
+      >
+        <font-awesome-icon icon="keyboard" size="lg" fixed-width />
+        <span class="hide-small"> {{ $t('message.testKeys.label') }}</span>
       </button>
       <input
         id="fileImport"
@@ -340,8 +348,11 @@ export default {
         });
       });
     },
-    PrinterKeymaps() {
+    printKeymaps() {
       this.$router.push('/print');
+    },
+    testKeys() {
+      this.$router.push('/test');
     }
   },
   data: () => {
@@ -378,5 +389,12 @@ export default {
   border: 0px solid #000;
   padding: 6px 12px 6px;
   text-transform: uppercase;
+}
+.hide-small {
+}
+@media (max-width: 90rem) {
+  .hide-small {
+    display: none;
+  }
 }
 </style>

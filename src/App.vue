@@ -57,7 +57,8 @@ export default {
   },
   watch: {
     $route: function(to) {
-      this.settingsClasses = to.name === 'print' ? 'hideSettings' : '';
+      this.settingsClasses =
+        to.name === 'print' || to.name === 'test' ? 'hideSettings' : '';
     }
   },
   mounted() {
