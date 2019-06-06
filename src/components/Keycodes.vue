@@ -140,19 +140,19 @@ export default {
   border-right: 1px solid #ccc;
   padding: 2px;
   margin-right: 2px;
-  border-radius: 4px 0px 0 0;
+  border-radius: 4px 4px 0 0;
   background: #eee;
   display: inline-block;
   opacity: 0.55;
   z-index: 100;
   cursor: pointer;
+  margin-bottom: -1px;
 }
 .tab-area {
   height: 350px;
   padding: 10px 5px;
   border: 1px solid #ccc;
   border-radius: 0 4px 4px 4px;
-  border-top: 0;
   background: #eee;
 }
 .tab.active {

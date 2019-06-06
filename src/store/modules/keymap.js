@@ -4,16 +4,7 @@ import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
-const defaults = {
-  MAX_X: 800,
-  KEY_WIDTH: 40,
-  KEY_HEIGHT: 40,
-  SWAP_KEY_WIDTH: 30,
-  SWAP_KEY_HEIGHT: 30,
-  KEY_X_SPACING: 45,
-  KEY_Y_SPACING: 45,
-  SCALE: 1
-};
+import defaults from './config';
 
 const state = {
   keymap: [{}],

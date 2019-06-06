@@ -1,0 +1,12 @@
+{
+  "keyboard": "dozen0",
+  "keymap": "default_a1de199",
+  "commit": "a1de199aa9d86d0c325985825e07d5d769a5d786",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LCTL(KC_X)", "LCTL(KC_C)", "LCTL(KC_V)", "KC_UP",   "KC_DEL",  "KC_BSPC",
+      "KC_LCTL",    "KC_LSFT",    "KC_LEFT",    "KC_DOWN", "KC_RGHT", "KC_ENT"
+    ]
+  ]
+}

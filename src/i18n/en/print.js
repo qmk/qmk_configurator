@@ -1,4 +1,13 @@
 export default {
+  keyboard: {
+    label: 'Keyboard'
+  },
+  layout: {
+    label: 'Layout'
+  },
+  layer: {
+    label: 'Layer'
+  },
   anonymous: {
     label: 'Anonymous'
   },

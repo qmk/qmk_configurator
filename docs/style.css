@@ -585,6 +585,11 @@ a img {
 #export,
 #import,
 #settings,
+#printkeymaps,
+#testkeys,
+#leavePrint,
+#leaveTest,
+#resetTest,
 #load-default {
   line-height: 120%;
   margin: 0px 4px 0px 0px;
@@ -987,7 +992,7 @@ button {
 }
 
 .keycode-select {
-  border: solid 2px green;
+  border: solid 2px green !important;
 }
 
 .space {
@@ -1068,6 +1073,16 @@ input[type='number'] {
   align-items: center;
   font-size: small;
 }
+
+@media print {
+  .backend-status, .random-potato, .openSettings, .print-controls, footer {
+    display: none;
+  }
+  input, textarea {
+    border-width: 0;
+  }
+}
+
 
 .bes-title {
   justify-self: start;

@@ -32,7 +32,8 @@ import {
   faCog,
   faKeyboard,
   faChevronLeft,
-  faPrint
+  faPrint,
+  faUndo
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -61,6 +62,7 @@ library.add(faKeyboard);
 library.add(faExclamationTriangle);
 library.add(faChevronLeft);
 library.add(faPrint);
+library.add(faUndo);
 
 ga.init(router);
 
@@ -73,6 +75,7 @@ new Vue({
 }).$mount('#app');
 
 new Vue({
+  i18n,
   render: h => h(StatusBar)
 }).$mount('#status-app');
 

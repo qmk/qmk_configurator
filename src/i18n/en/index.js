@@ -1,10 +1,12 @@
 import potato from './potato';
 import print from './print';
+import tester from './tester';
 export default {
   en: {
     message: {
       ...potato,
-      ...print,
+      print: { ...print },
+      tester: { ...tester },
       keyboard: {
         label: 'keyboard'
       },
@@ -41,6 +43,10 @@ export default {
       printKeymap: {
         title: 'Print Keymap Layers',
         label: 'Print Keymap'
+      },
+      testKeys: {
+        title: 'Test Keyboard Input',
+        label: 'Test Keyboard'
       },
       downloadFirmware: {
         label: 'Firmware',
@@ -109,7 +115,13 @@ export default {
         unsupportedBrowser: "You're using a non supported browser. Please use"
       },
       statsTemplate:
-        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n'
+        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n',
+      maintain:
+        'This project is maintained by QMK collaborators and contributors like you!',
+      hostedOn: 'Hosted on GitHub Pages',
+      serverStatus: 'Server Status',
+      apiVersion: 'API Version',
+      jobsWaiting: 'job(s) waiting'
     }
   }
 };
