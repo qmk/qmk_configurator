@@ -25,10 +25,12 @@ export default {
   },
   computed: {
     isNotSupported() {
+      const usrAgent = window.navigator.userAgent.toLowerCase();
       const isChrome =
-        !!window.chrome &&
-        (!!window.chrome.webstore || !!window.chrome.runtime);
-      const isFirefox = typeof InstallTrigger !== 'undefined';
+        (usrAgent.indexOf('chrome') !== -1 ||
+          usrAgent.indexOf('chromium') !== -1) &&
+        usrAgent.indexOf('edge') === -1;
+      const isFirefox = usrAgent.indexOf('firefox') !== -1;
       return !(isChrome || isFirefox);
     }
   }
