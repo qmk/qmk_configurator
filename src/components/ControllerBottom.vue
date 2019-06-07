@@ -1,5 +1,24 @@
 <template>
   <div id="controller-bottom" class="botctrl">
+    <Veil :isVisible="isVeilOpened">
+      <template #contents>
+        <div class="input-url-modal">
+          <div>
+            <label for="url-import-field">Url:</label>
+            <input
+              ref="urlimport"
+              id="url-import-field"
+              type="text"
+              v-model="urlImport"
+            />
+          </div>
+          <div>
+            <button @click="closeVeil">cancel</button>
+            <button @click="importUrlkeymap">Load</button>
+          </div>
+        </div>
+      </template>
+    </Veil>
     <div class="botctrl-1-1">
       <button
         class="fixed-size"
@@ -39,7 +58,7 @@
       <button
         id="import-url"
         :title="$t('message.importUrlJSON.title')"
-        @click="importUrlkeymap"
+        @click="openVeil"
       >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
@@ -155,10 +174,9 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['dismissPreview']),
+    ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
     importUrlkeymap: function() {
-      // TODO : replace with a modal
-      const url = prompt('Enter the URL');
+      const url = this.urlImport;
       axios
         .get(url)
         .then(r => {
@@ -172,6 +190,19 @@ export default {
         .catch(() => {
           alert('Seems like there is an issue trying to get the file');
         });
+      this.closeVeil();
+    },
+    openVeil: function() {
+      this.isVeilOpened = true;
+      this.stopListening();
+      Vue.nextTick(() => {
+        this.$refs.urlimport.focus();
+      });
+    },
+    closeVeil: function() {
+      this.startListening();
+      this.urlImport = '';
+      this.isVeilOpened = false;
     },
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
@@ -380,15 +411,24 @@ export default {
   },
   data: () => {
     return {
+      isVeilOpened: false,
       downloadElementEnabled: false,
       urlEncodedData: '',
       filename: '',
+      urlImport: '',
       reader: undefined
     };
   }
 };
 </script>
 <style scoped>
+.input-url-modal {
+  background-color: #eee;
+  border-color: #ccc;
+  border-radius: 5px;
+  width: 400px;
+  min-height: 400px;
+}
 .fixed-size {
   min-width: 150px;
 }
