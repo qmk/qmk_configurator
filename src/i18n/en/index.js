@@ -40,6 +40,9 @@ export default {
       importJSON: {
         title: 'Import QMK Keymap JSON file'
       },
+      importUrlJSON: {
+        title: 'Import QMK Keymap JSON from Url'
+      },
       printKeymap: {
         title: 'Print Keymap Layers',
         label: 'Print Keymap'
