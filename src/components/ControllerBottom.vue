@@ -422,6 +422,9 @@ export default {
 };
 </script>
 <style scoped>
+#controller-bottom button {
+  margin-top: 4px;
+}
 .input-url-modal {
   background-color: #eee;
   padding: 5px;
@@ -436,9 +439,11 @@ export default {
   border-radius: 4px 0 0 4px;
   margin-right: 1px;
 }
-#import,
-#import-url {
+#import {
   border-radius: 0 4px 4px 0;
+}
+#import-url {
+  border-radius: 4px;
 }
 .input-url-modal label {
   padding-right: 5px;
