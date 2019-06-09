@@ -1,5 +1,24 @@
 <template>
   <div id="controller-bottom" class="botctrl">
+    <Veil :isVisible="isVeilOpened">
+      <template #contents>
+        <div class="input-url-modal">
+          <div>
+            <label for="url-import-field">Url:</label>
+            <input
+              ref="urlimport"
+              id="url-import-field"
+              type="text"
+              v-model="urlImport"
+            />
+          </div>
+          <div>
+            <button @click="importUrlkeymap">Load</button>
+            <button @click="closeVeil">cancel</button>
+          </div>
+        </div>
+      </template>
+    </Veil>
     <div class="botctrl-1-1">
       <button
         class="fixed-size"
@@ -28,9 +47,7 @@
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
-      <span class="label-button">
-        {{ $t('message.downloadJSON.label') }}
-      </span>
+      <span class="label-button">{{ $t('message.downloadJSON.label') }}</span>
       <button
         id="import"
         :title="$t('message.importJSON.title')"
@@ -39,12 +56,19 @@
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <button
+        id="import-url"
+        :title="$t('message.importUrlJSON.title')"
+        @click="openVeil"
+      >
+        <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
+      </button>
+      <button
         id="printkeymaps"
         :title="$t('message.printKeymap.title')"
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        <span class="hide-small"> {{ $t('message.printKeymap.label') }}</span>
+        <span class="hide-small">{{ $t('message.printKeymap.label') }}</span>
       </button>
       <button
         id="testkeys"
@@ -52,7 +76,7 @@
         @click="testKeys"
       >
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
-        <span class="hide-small"> {{ $t('message.testKeys.label') }}</span>
+        <span class="hide-small">{{ $t('message.testKeys.label') }}</span>
       </button>
       <input
         id="fileImport"
@@ -90,6 +114,7 @@
   </div>
 </template>
 <script>
+import axios from 'axios';
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
 const { mapMutations, mapState, mapGetters } = createNamespacedHelpers('app');
@@ -149,7 +174,36 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['dismissPreview']),
+    ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
+    importUrlkeymap: function() {
+      const url = this.urlImport;
+      axios
+        .get(url)
+        .then(r => {
+          this.reader = new FileReader();
+          this.reader.onload = this.importJSONOnLoad;
+          const b = new Blob([JSON.stringify(r.data)], {
+            type: 'application/json'
+          });
+          this.reader.readAsText(b);
+        })
+        .catch(() => {
+          alert('Seems like there is an issue trying to get the file');
+        });
+      this.closeVeil();
+    },
+    openVeil: function() {
+      this.isVeilOpened = true;
+      this.stopListening();
+      Vue.nextTick(() => {
+        this.$refs.urlimport.focus();
+      });
+    },
+    closeVeil: function() {
+      this.startListening();
+      this.urlImport = '';
+      this.isVeilOpened = false;
+    },
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
       let layers = this.$store.getters['keymap/exportLayers']({
@@ -357,15 +411,27 @@ export default {
   },
   data: () => {
     return {
+      isVeilOpened: false,
       downloadElementEnabled: false,
       urlEncodedData: '',
       filename: '',
+      urlImport: '',
       reader: undefined
     };
   }
 };
 </script>
 <style scoped>
+#controller-bottom button {
+  margin-top: 4px;
+}
+.input-url-modal {
+  background-color: #eee;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+}
 .fixed-size {
   min-width: 150px;
 }
@@ -375,6 +441,31 @@ export default {
 }
 #import {
   border-radius: 0 4px 4px 0;
+}
+#import-url {
+  border-radius: 4px;
+}
+.input-url-modal label {
+  padding-right: 5px;
+}
+.input-url-modal div:nth-child(2) {
+  margin-top: 5px;
+}
+.input-url-modal button {
+  background-color: #49ad4c;
+  color: #fff;
+  line-height: 120%;
+  padding: 6px 12px;
+  border-width: 0;
+  border-radius: 3px;
+  margin: 0 0 0 4px;
+  cursor: pointer;
+}
+#url-import-field {
+  width: 340px;
+  padding: 7px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
 }
 .label-button {
   line-height: 155%;

@@ -30,6 +30,7 @@ import {
   faArrowRight,
   faExclamationTriangle,
   faCog,
+  faCloudUploadAlt,
   faKeyboard,
   faChevronLeft,
   faPrint,
@@ -49,6 +50,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueSlideoutPanel);
 
 library.add(faDownload);
+library.add(faCloudUploadAlt);
 library.add(faUpload);
 library.add(faArrowUp);
 library.add(faArrowDown);
