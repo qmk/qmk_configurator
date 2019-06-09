@@ -13,8 +13,8 @@
             />
           </div>
           <div>
-            <button @click="closeVeil">cancel</button>
             <button @click="importUrlkeymap">Load</button>
+            <button @click="closeVeil">cancel</button>
           </div>
         </div>
       </template>
@@ -424,10 +424,10 @@ export default {
 <style scoped>
 .input-url-modal {
   background-color: #eee;
-  border-color: #ccc;
+  padding: 5px;
+  border: 1px solid #ccc;
   border-radius: 5px;
   width: 400px;
-  min-height: 400px;
 }
 .fixed-size {
   min-width: 150px;
@@ -439,6 +439,28 @@ export default {
 #import,
 #import-url {
   border-radius: 0 4px 4px 0;
+}
+.input-url-modal label {
+  padding-right: 5px;
+}
+.input-url-modal div:nth-child(2) {
+  margin-top: 5px;
+}
+.input-url-modal button {
+  background-color: #49ad4c;
+  color: #fff;
+  line-height: 120%;
+  padding: 6px 12px;
+  border-width: 0;
+  border-radius: 3px;
+  margin: 0 0 0 4px;
+  cursor: pointer;
+}
+#url-import-field {
+  width: 340px;
+  padding: 7px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
 }
 .label-button {
   line-height: 155%;
