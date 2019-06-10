@@ -14,30 +14,28 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label"
-            >{{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{
+            $t('message.tester.letters.key.label')
+          }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('message.tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('message.tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
       <div
         class="status-log"
-        id="terminal"
         ref="status"
         spellcheck="false"
-        style="width:869px;text-align:left;"
         v-html="status"
       ></div>
     </div>
@@ -130,14 +128,15 @@ export default {
     getComponent() {
       return TesterKey;
     },
+    greenMarkup(text, padlen) {
+      return `<span class="log-green">${text.padEnd(padlen, ' ')}</span>`;
+    },
     formatLog(keyEventStr, pos, evStr) {
-      return `${keyEventStr.padEnd(
-        8,
-        ' '
-      )} - QMK: <span class="log-green">${this.getQMKCode(pos).padEnd(
-        7,
-        ' '
-      )}</span> ${evStr}`;
+      const qmkCode = this.getQMKCode(pos);
+      return `${keyEventStr.padEnd(8, ' ')} - QMK: ${this.greenMarkup(
+        qmkCode,
+        7
+      )} ${evStr}`;
     },
     keyup(ev) {
       const endTS = performance.now();
@@ -190,13 +189,10 @@ export default {
         msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
       }
       msg.unshift(
-        `Event key: <span class="log-green">${ev.key.padEnd(
-          10,
-          ' '
-        )}</span> Code: <span class="log-green">${ev.code.padEnd(
-          11,
-          ' '
-        )}</span> KeyCode: <span class="log-green">${ev.keyCode}</span>`
+        `Event key: ${this.greenMarkup(ev.key, 10)} Code: ${this.greenMarkup(
+          ev.code,
+          11
+        )} KeyCode: ${ev.keyCode}`
       );
       return msg.join(' ');
     },
@@ -290,6 +286,24 @@ span.log-green {
 }
 .status-log {
   grid-row: info-bottom;
+  padding: 2px 5px;
+  width: 869px;
+  text-align: left;
+  background: #272822;
+  color: #f8f8f2;
+  border: 1px solid #000;
+  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  height: 200px;
+  font-size: 12px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
 }
 .key-label,
 .keycode-label,
