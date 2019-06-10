@@ -38,6 +38,7 @@
         ref="status"
         cols="120"
         rows="5"
+        spellcheck="false"
         v-model="status"
       />
     </div>
@@ -130,13 +131,18 @@ export default {
     getComponent() {
       return TesterKey;
     },
+    formatLog(keyEventStr, pos, evStr) {
+      return `${keyEventStr.padEnd(8, ' ')} - QMK: ${this.getQMKCode(
+        pos
+      ).padEnd(7, ' ')} ${evStr}`;
+    },
     keyup(ev) {
       const endTS = performance.now();
       const evStr = this.formatKeyEvent(ev, endTS);
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
-      this.writeToStatus(`KEY-UP ---- QMK: '${this.getQMKCode(pos)}' ${evStr}`);
+      this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
         this.setDetected(pos);
       }
@@ -150,7 +156,7 @@ export default {
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
-        `KEY-DOWN -- QMK: '${this.getQMKCode(pos)}' ${this.formatKeyEvent(ev)}`
+        this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
       );
       this.lastKey = ev.key === ' ' ? ev.code : ev.key;
       this.lastCode = ev.code;
@@ -181,7 +187,10 @@ export default {
         msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
       }
       msg.unshift(
-        `Event key: '${ev.key}', Code: ${ev.code}, keyCode: ${ev.keyCode}`
+        `Event key: ${ev.key.padEnd(10, ' ')} Code: ${ev.code.padEnd(
+          11,
+          ' '
+        )} KeyCode: ${ev.keyCode}`
       );
       return msg.join(' ');
     },
