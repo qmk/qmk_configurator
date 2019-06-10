@@ -14,8 +14,8 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label"
-            >{{ $t('message.tester.letters.key.label') }}
+          <label class="key-label">
+            {{ $t('message.tester.letters.key.label') }}
           </label>
           {{ lastKey }}
         </div>
@@ -32,14 +32,12 @@
           {{ displayKeyCode }}
         </div>
       </div>
-      <textarea
+      <div
         class="status-log"
-        id="terminal"
         ref="status"
-        cols="120"
-        rows="5"
-        v-model="status"
-      />
+        spellcheck="false"
+        v-html="status"
+      ></div>
     </div>
     <p>
       {{ $t('message.tester.docs.paragraph') }}
@@ -130,13 +128,25 @@ export default {
     getComponent() {
       return TesterKey;
     },
+    greenMarkup(text, padlen) {
+      return `<span class="log-green">${text.padEnd(padlen, ' ')}</span>`;
+    },
+    formatLog(keyEventStr, pos, evStr) {
+      const qmkCode = this.getQMKCode(pos);
+      return [
+        keyEventStr.padEnd(8, ' '),
+        '- QMK:',
+        this.greenMarkup(qmkCode, 7),
+        evStr
+      ].join(' ');
+    },
     keyup(ev) {
       const endTS = performance.now();
       const evStr = this.formatKeyEvent(ev, endTS);
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
-      this.writeToStatus(`KEY-UP ---- QMK: '${this.getQMKCode(pos)}' ${evStr}`);
+      this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
         this.setDetected(pos);
       }
@@ -150,7 +160,7 @@ export default {
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
-        `KEY-DOWN -- QMK: '${this.getQMKCode(pos)}' ${this.formatKeyEvent(ev)}`
+        this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
       );
       this.lastKey = ev.key === ' ' ? ev.code : ev.key;
       this.lastCode = ev.code;
@@ -181,7 +191,14 @@ export default {
         msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
       }
       msg.unshift(
-        `Event key: '${ev.key}', Code: ${ev.code}, keyCode: ${ev.keyCode}`
+        [
+          'Event key:',
+          this.greenMarkup(ev.key, 10),
+          'Code:',
+          this.greenMarkup(ev.code, 11),
+          'KeyCode:',
+          ev.keyCode
+        ].join(' ')
       );
       return msg.join(' ');
     },
@@ -223,6 +240,9 @@ export default {
 };
 </script>
 <style>
+span.log-green {
+  color: lightgreen;
+}
 .tester {
   margin-top: 35px;
   display: grid;
@@ -272,6 +292,24 @@ export default {
 }
 .status-log {
   grid-row: info-bottom;
+  padding: 2px 5px;
+  width: 869px;
+  text-align: left;
+  background: #272822;
+  color: #f8f8f2;
+  border: 1px solid #000;
+  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  height: 200px;
+  font-size: 12px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
 }
 .key-label,
 .keycode-label,
