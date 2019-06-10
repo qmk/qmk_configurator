@@ -32,15 +32,14 @@
           {{ displayKeyCode }}
         </div>
       </div>
-      <textarea
+      <div
         class="status-log"
         id="terminal"
         ref="status"
-        cols="120"
-        rows="5"
         spellcheck="false"
-        v-model="status"
-      />
+        style="width:869px;text-align:left;"
+        v-html="status"
+      ></div>
     </div>
     <p>
       {{ $t('message.tester.docs.paragraph') }}
@@ -132,9 +131,13 @@ export default {
       return TesterKey;
     },
     formatLog(keyEventStr, pos, evStr) {
-      return `${keyEventStr.padEnd(8, ' ')} - QMK: ${this.getQMKCode(
-        pos
-      ).padEnd(7, ' ')} ${evStr}`;
+      return `${keyEventStr.padEnd(
+        8,
+        ' '
+      )} - QMK: <span class="log-green">${this.getQMKCode(pos).padEnd(
+        7,
+        ' '
+      )}</span> ${evStr}`;
     },
     keyup(ev) {
       const endTS = performance.now();
@@ -187,10 +190,13 @@ export default {
         msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
       }
       msg.unshift(
-        `Event key: ${ev.key.padEnd(10, ' ')} Code: ${ev.code.padEnd(
+        `Event key: <span class="log-green">${ev.key.padEnd(
+          10,
+          ' '
+        )}</span> Code: <span class="log-green">${ev.code.padEnd(
           11,
           ' '
-        )} KeyCode: ${ev.keyCode}`
+        )}</span> KeyCode: <span class="log-green">${ev.keyCode}</span>`
       );
       return msg.join(' ');
     },
@@ -232,6 +238,9 @@ export default {
 };
 </script>
 <style>
+span.log-green {
+  color: lightgreen;
+}
 .tester {
   margin-top: 35px;
   display: grid;
