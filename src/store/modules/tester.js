@@ -105,7 +105,8 @@ const codeToPosition = [
   'ArrowDown',
   'ArrowRight',
   'Numpad0',
-  'NumpadDecimal'
+  'NumpadDecimal',
+  'IntlBackslash'
 ].reduce((acc, code, idx) => {
   acc[code] = idx;
   return acc;
@@ -222,7 +223,8 @@ const state = {
       { label: '\u2193', x: 16.25, y: 5.5 },
       { label: '\u2192', x: 17.25, y: 5.5 },
       { label: '0', x: 18.5, y: 5.5, w: 2 },
-      { label: '.', x: 20.5, y: 5.5 }
+      { label: '.', x: 20.5, y: 5.5 },
+      { label: 'IntlBackslash', x: 0, y: 6.5 }
     ]
   }
 };
@@ -337,7 +339,8 @@ const actions = {
         'KC_DOWN',
         'KC_RGHT',
         'KC_P0',
-        'KC_PDOT'
+        'KC_PDOT',
+        'KC_NUBS'
       ].map(code => {
         const meta = store.getters['keycodes/lookupKeycode'](code);
         return {

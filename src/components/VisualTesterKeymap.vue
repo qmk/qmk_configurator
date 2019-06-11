@@ -193,9 +193,9 @@ export default {
       msg.unshift(
         [
           'Event key:',
-          this.greenMarkup(ev.key, 10),
+          this.greenMarkup(ev.key, 11),
           'Code:',
-          this.greenMarkup(ev.code, 11),
+          this.greenMarkup(ev.code, 13),
           'KeyCode:',
           ev.keyCode
         ].join(' ')
@@ -203,6 +203,7 @@ export default {
       return msg.join(' ');
     },
     getQMKCode(pos) {
+      console.log(pos);
       if (pos === undefined) {
         return '';
       }
