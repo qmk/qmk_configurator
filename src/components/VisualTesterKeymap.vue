@@ -203,7 +203,6 @@ export default {
       return msg.join(' ');
     },
     getQMKCode(pos) {
-      console.log(pos);
       if (pos === undefined) {
         return '';
       }
