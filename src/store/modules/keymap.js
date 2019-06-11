@@ -260,6 +260,9 @@ const mutations = {
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
+    if (newLayer === state.layer) {
+      return;
+    }
     if (state.layer !== 0) {
       // Only make a layer active if there are actual keys on it
       const activeKeys = state.keymap[state.layer].filter(
@@ -322,7 +325,7 @@ const mutations = {
     );
   },
   initLayer(state, layer) {
-    if (layer > 0) {
+    if (layer > 0 && state.keymap[0]) {
       // layer 0 is always initialized. Use it as a reference
       mutations.initKeymap(state, { layer, layout: state.keymap[0] });
     } else {
