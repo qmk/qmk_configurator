@@ -260,6 +260,9 @@ const mutations = {
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
+    if (newLayer === state.layer) {
+      return;
+    }
     if (state.layer !== 0) {
       // Only make a layer active if there are actual keys on it
       const activeKeys = state.keymap[state.layer].filter(
