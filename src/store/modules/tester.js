@@ -14,7 +14,6 @@ const codeToPosition = {
   ANSI: reduceCodeToPos(ANSIcodeToPos),
   ISO: reduceCodeToPos(ISOcodeToPos)
 };
-console.log(codeToPosition.ISO);
 const state = {
   defaults,
   codeToPosition,
