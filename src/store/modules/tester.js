@@ -286,7 +286,6 @@ const state = {
         { label: 'P', x: 10.5, y: 2.5 },
         { label: '{', x: 11.5, y: 2.5 },
         { label: '}', x: 12.5, y: 2.5 },
-        // { label: '|', x: 13.5, y: 2.5, w: 1.5 },
         { label: 'Enter', x: 13.75, y: 2.5, w: 1.25, h: 2 },
         { label: 'Delete', x: 15.25, y: 2.5 },
         { label: 'End', x: 16.25, y: 2.5 },
