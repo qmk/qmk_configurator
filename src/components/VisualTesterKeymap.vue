@@ -1,5 +1,16 @@
 <template>
   <div class="tester">
+    <div class="layout-selector-container">
+      <label for="tester-layout">Layout:</label>
+      <select id="tester-layout" v-model="layout">
+        <option
+          v-for="_layout in availableLayouts"
+          :key="_layout"
+          :value="_layout"
+          >{{ _layout }}</option
+        >
+      </select>
+    </div>
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
         <component
@@ -14,21 +25,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">
-            {{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{
+            $t('message.tester.letters.key.label')
+          }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('message.tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('message.tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -62,10 +73,11 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
+    this.availableLayouts = Object.keys(this.layouts).sort();
     document.addEventListener('keydown', this.keydown);
     document.addEventListener('keyup', this.keyup);
     await this.init();
-    this.setSize(this.calculateMax(this.layout));
+    this.setSize(this.calculateMaxFromLayout(this.layouts[this.layout].layout));
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.keydown);
@@ -73,7 +85,7 @@ export default {
   },
   computed: {
     ...mapState('tester', [
-      'layout',
+      // 'layout',
       'defaults',
       'layouts',
       'config',
@@ -88,12 +100,21 @@ export default {
       styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
       return styles.join('');
     },
+    layout: {
+      get() {
+        return this.$store.state.tester.layout;
+      },
+      set(value) {
+        this.$store.commit('tester/setLayout', value);
+      }
+    },
     testerLayer() {
       if (this.keymap.length === 0) {
         return [];
       }
-      const layout = this.layouts[this.layout];
-      const keymap = this.keymap[0];
+      const layoutObj = this.layouts[this.layout];
+      const layout = layoutObj.layout;
+      const keymap = this.keymap[layoutObj.keymapIdx];
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
@@ -145,10 +166,13 @@ export default {
       const evStr = this.formatKeyEvent(ev, endTS);
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
+      const pos = this.codeToPosition[this.layout][this.firefoxKeys(ev.code)];
       this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
-        this.setDetected(pos);
+        this.setDetected({
+          keymapIdx: this.layouts[this.layout].keymapIdx,
+          pos
+        });
       }
     },
     keydown(ev) {
@@ -158,7 +182,7 @@ export default {
       this.timing[ev.code] = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
+      const pos = this.codeToPosition[this.layout][this.firefoxKeys(ev.code)];
       this.writeToStatus(
         this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
       );
@@ -166,7 +190,7 @@ export default {
       this.lastCode = ev.code;
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
-        this.setActive(pos);
+        this.setActive({ keymapIdx: this.layouts[this.layout].keymapIdx, pos });
       }
     },
     scrollToEnd() {
@@ -206,7 +230,9 @@ export default {
       if (pos === undefined) {
         return '';
       }
-      return this.$store.state.tester.keymap[0][pos].code;
+      return this.$store.state.tester.keymap[
+        this.layouts[this.layout].keymapIdx
+      ][pos].code;
     },
     firefoxKeys(code) {
       switch (code) {
@@ -230,6 +256,7 @@ export default {
       height: 0,
       status: '',
       timing: {},
+      availableLayouts: [],
       lastKey: '',
       lastCode: '',
       lastKeyCode: '',
@@ -240,13 +267,24 @@ export default {
 };
 </script>
 <style>
+.layout-selector-container {
+  text-align: left;
+  width: 100%;
+  margin-left: 140px;
+}
+.layout-selector-container select {
+  padding: 5px 4px;
+  border-radius: 4px;
+  border: 1px solid #cdcdcd;
+  margin-left: 10px;
+}
 span.log-green {
   color: lightgreen;
 }
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: 40px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {
