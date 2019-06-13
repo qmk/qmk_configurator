@@ -18,11 +18,21 @@ const codeToPosition = {
   ANSI: reduceCodeToPos(codeToPos.ANSI),
   ISO: reduceCodeToPos(codeToPos.ISO)
 };
+
+function getDefaultLayout() {
+  const userLang = navigator.language || navigator.userLanguage;
+  let layout = 'ANSI';
+  if (userLang.toLowerCase().indexOf('en') < 0) {
+    layout = 'ISO';
+  }
+  return layout;
+}
+
 const state = {
   defaults,
   codeToPosition,
   config: Object.assign({}, defaults),
-  layout: 'ISO',
+  layout: getDefaultLayout(),
   keymap: {},
   layouts: {
     ISO: layouts.ISO,
@@ -32,7 +42,7 @@ const state = {
 
 const getters = {
   availableLayouts(state) {
-    return keys(state.layouts);
+    return keys(state.layouts).sort();
   },
   getQMKCode(state) {
     return pos => {

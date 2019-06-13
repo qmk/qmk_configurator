@@ -2,64 +2,54 @@
   <div class="tester">
     <div class="layout-selector-container">
       <label for="tester-layout">Layout:</label>
-      <select id="tester-layout" v-model="layout">
-        <option
-          v-for="_layout in availableLayouts"
-          :key="_layout"
-          :value="_layout"
-          >{{ _layout }}</option
-        >
-      </select>
+      <div class="layout-selector-radios">
+        <slot v-for="_layout in availableLayouts">
+          <input :key="_layout" :value="_layout" v-model="layout" type="radio">
+          <label :key="_layout">{{_layout}}</label>
+        </slot>
+      </div>
     </div>
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
-        <component
-          :layer="0"
-          v-bind:is="getComponent(meta)"
-          v-bind="meta"
-          :key="meta.id"
-        />
+        <component :layer="0" v-bind:is="getComponent(meta)" v-bind="meta" :key="meta.id"/>
       </template>
     </div>
     <div class="info">
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">{{
+          <label class="key-label">
+            {{
             $t('message.tester.letters.key.label')
-          }}</label>
+            }}
+          </label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">{{
+          <label class="code-label">
+            {{
             $t('message.tester.letters.code.label')
-          }}</label>
+            }}
+          </label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">{{
+          <label class="keycode-label">
+            {{
             $t('message.tester.letters.keycode.label')
-          }}</label>
+            }}
+          </label>
           {{ displayKeyCode }}
         </div>
       </div>
-      <div
-        class="status-log"
-        ref="status"
-        spellcheck="false"
-        v-html="status"
-      ></div>
+      <div class="status-log" ref="status" spellcheck="false" v-html="status"></div>
     </div>
     <p>
       {{ $t('message.tester.docs.paragraph') }}
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
-        >Code</a
-      >,
-      <a
-        href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key"
-        >Key</a
-      >
+      >Code</a>,
+      <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key">Key</a>
     </p>
   </div>
 </template>
@@ -274,7 +264,7 @@ span.log-green {
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 40px 1fr 1fr / 1fr;
+  grid-template: 60px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {
