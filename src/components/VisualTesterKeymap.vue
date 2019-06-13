@@ -2,8 +2,14 @@
   <div class="tester">
     <div class="layout-selector-radios">
       <slot v-for="_layout in availableLayouts">
-        <input :key="_layout" :value="_layout" v-model="layout" type="radio" />
-        <label :key="_layout">{{ _layout }}</label>
+        <input
+          :id="_layout"
+          :key="_layout"
+          :value="_layout"
+          v-model="layout"
+          type="radio"
+        />
+        <label :for="_layout" :key="_layout">{{ _layout }}</label>
       </slot>
     </div>
     <div class="visual-tester-keymap" :style="styles">
