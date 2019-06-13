@@ -1,5 +1,17 @@
 <template>
   <div class="tester">
+    <div class="layout-selector-radios">
+      <slot v-for="_layout in availableLayouts">
+        <input
+          :id="_layout"
+          :key="_layout"
+          :value="_layout"
+          v-model="layout"
+          type="radio"
+        />
+        <label :for="_layout" :key="_layout">{{ _layout }}</label>
+      </slot>
+    </div>
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
         <component
@@ -72,15 +84,15 @@ export default {
     document.removeEventListener('keyup', this.keyup);
   },
   computed: {
-    ...mapState('tester', [
-      'layout',
-      'defaults',
-      'layouts',
-      'config',
-      'keymap',
+    ...mapState('tester', ['defaults', 'layouts', 'config', 'keymap']),
+    ...mapGetters('keymap', ['colorway']),
+    ...mapGetters('tester', [
+      'availableLayouts',
+      'getQMKCode',
+      'activeKeymap',
+      'activeLayoutMeta',
       'codeToPosition'
     ]),
-    ...mapGetters('keymap', ['colorway']),
     styles() {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
@@ -88,16 +100,25 @@ export default {
       styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
       return styles.join('');
     },
+    layout: {
+      get() {
+        return this.$store.state.tester.layout;
+      },
+      set(value) {
+        this.$store.commit('tester/reset', value);
+        this.$store.commit('tester/setLayout', value);
+      }
+    },
     testerLayer() {
-      if (this.keymap.length === 0) {
+      const keymap = this.activeKeymap;
+      if (isUndefined(keymap)) {
         return [];
       }
-      const layout = this.layouts[this.layout];
-      const keymap = this.keymap[0];
+
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      let curLayer = layout.map((pos, index) => {
+      let curLayer = this.activeLayoutMeta.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
@@ -148,7 +169,9 @@ export default {
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
-        this.setDetected(pos);
+        this.setDetected({
+          pos
+        });
       }
     },
     keydown(ev) {
@@ -166,7 +189,7 @@ export default {
       this.lastCode = ev.code;
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
-        this.setActive(pos);
+        this.setActive({ pos });
       }
     },
     scrollToEnd() {
@@ -193,22 +216,17 @@ export default {
       msg.unshift(
         [
           'Event key:',
-          this.greenMarkup(ev.key, 10),
+          this.greenMarkup(ev.key, 11),
           'Code:',
-          this.greenMarkup(ev.code, 11),
+          this.greenMarkup(ev.code, 13),
           'KeyCode:',
           ev.keyCode
         ].join(' ')
       );
       return msg.join(' ');
     },
-    getQMKCode(pos) {
-      if (pos === undefined) {
-        return '';
-      }
-      return this.$store.state.tester.keymap[0][pos].code;
-    },
     firefoxKeys(code) {
+      // Remap certain codes on Firefox for consistency
       switch (code) {
         case 'OSLeft':
           return 'MetaLeft';
@@ -240,13 +258,19 @@ export default {
 };
 </script>
 <style>
+.layout-selector-container select {
+  padding: 5px 4px;
+  border-radius: 4px;
+  border: 1px solid #cdcdcd;
+  margin-left: 10px;
+}
 span.log-green {
   color: lightgreen;
 }
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: 30px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {

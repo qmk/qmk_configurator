@@ -23,9 +23,9 @@ export default {
       this.width = max.x;
       this.height = max.y;
     },
-    calculateMax(newLayout) {
-      const layout = this.layouts[newLayout];
-      const max = layout.reduce(
+    calculateMax(layout) {
+      const layoutArray = this.layouts[layout];
+      const max = layoutArray.reduce(
         (acc, pos) => {
           let _pos = Object.assign({ w: 1, h: 1 }, pos);
           const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
