@@ -1,18 +1,10 @@
 <template>
   <div class="tester">
-    <div class="layout-selector-container">
-      <label for="tester-layout">Layout:</label>
-      <div class="layout-selector-radios">
-        <slot v-for="_layout in availableLayouts">
-          <input
-            :key="_layout"
-            :value="_layout"
-            v-model="layout"
-            type="radio"
-          />
-          <label :key="_layout">{{ _layout }}</label>
-        </slot>
-      </div>
+    <div class="layout-selector-radios">
+      <slot v-for="_layout in availableLayouts">
+        <input :key="_layout" :value="_layout" v-model="layout" type="radio" />
+        <label :key="_layout">{{ _layout }}</label>
+      </slot>
     </div>
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
@@ -260,11 +252,6 @@ export default {
 };
 </script>
 <style>
-.layout-selector-container {
-  text-align: left;
-  width: 100%;
-  margin-left: 140px;
-}
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;
@@ -277,7 +264,7 @@ span.log-green {
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 60px 1fr 1fr / 1fr;
+  grid-template: 30px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {
