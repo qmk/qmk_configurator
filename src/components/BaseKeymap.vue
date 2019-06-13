@@ -23,7 +23,8 @@ export default {
       this.width = max.x;
       this.height = max.y;
     },
-    _calculateMax(layoutArray) {
+    calculateMax(layout) {
+      const layoutArray = this.layouts[layout];
       const max = layoutArray.reduce(
         (acc, pos) => {
           let _pos = Object.assign({ w: 1, h: 1 }, pos);
@@ -44,13 +45,6 @@ export default {
         max.y *= this.config.SCALE;
       }
       return max;
-    },
-    calculateMaxFromLayout(layout) {
-      return this._calculateMax(layout);
-    },
-    calculateMax(newLayout) {
-      const layout = this.layouts[newLayout];
-      return this._calculateMax(layout);
     }
   }
 };

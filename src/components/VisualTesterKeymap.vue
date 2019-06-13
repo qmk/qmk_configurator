@@ -73,26 +73,25 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
-    this.availableLayouts = Object.keys(this.layouts).sort();
     document.addEventListener('keydown', this.keydown);
     document.addEventListener('keyup', this.keyup);
     await this.init();
-    this.setSize(this.calculateMaxFromLayout(this.layouts[this.layout].layout));
+    this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
     document.removeEventListener('keydown', this.keydown);
     document.removeEventListener('keyup', this.keyup);
   },
   computed: {
-    ...mapState('tester', [
-      // 'layout',
-      'defaults',
-      'layouts',
-      'config',
-      'keymap',
+    ...mapState('tester', ['defaults', 'layouts', 'config', 'keymap']),
+    ...mapGetters('keymap', ['colorway']),
+    ...mapGetters('tester', [
+      'availableLayouts',
+      'getQMKCode',
+      'activeKeymap',
+      'activeLayoutMeta',
       'codeToPosition'
     ]),
-    ...mapGetters('keymap', ['colorway']),
     styles() {
       let styles = [];
       styles.push(`width: ${this.width}px;`);
@@ -105,20 +104,20 @@ export default {
         return this.$store.state.tester.layout;
       },
       set(value) {
+        this.$store.commit('tester/reset', value);
         this.$store.commit('tester/setLayout', value);
       }
     },
     testerLayer() {
-      if (this.keymap.length === 0) {
+      const keymap = this.activeKeymap;
+      if (isUndefined(keymap)) {
         return [];
       }
-      const layoutObj = this.layouts[this.layout];
-      const layout = layoutObj.layout;
-      const keymap = this.keymap[layoutObj.keymapIdx];
+
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      let curLayer = layout.map((pos, index) => {
+      let curLayer = this.activeLayoutMeta.map((pos, index) => {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
@@ -166,11 +165,10 @@ export default {
       const evStr = this.formatKeyEvent(ev, endTS);
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[this.layout][this.firefoxKeys(ev.code)];
+      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
         this.setDetected({
-          keymapIdx: this.layouts[this.layout].keymapIdx,
           pos
         });
       }
@@ -182,7 +180,7 @@ export default {
       this.timing[ev.code] = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
-      const pos = this.codeToPosition[this.layout][this.firefoxKeys(ev.code)];
+      const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
         this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
       );
@@ -190,7 +188,7 @@ export default {
       this.lastCode = ev.code;
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
-        this.setActive({ keymapIdx: this.layouts[this.layout].keymapIdx, pos });
+        this.setActive({ pos });
       }
     },
     scrollToEnd() {
@@ -226,15 +224,8 @@ export default {
       );
       return msg.join(' ');
     },
-    getQMKCode(pos) {
-      if (pos === undefined) {
-        return '';
-      }
-      return this.$store.state.tester.keymap[
-        this.layouts[this.layout].keymapIdx
-      ][pos].code;
-    },
     firefoxKeys(code) {
+      // Remap certain codes on Firefox for consistency
       switch (code) {
         case 'OSLeft':
           return 'MetaLeft';
@@ -256,7 +247,6 @@ export default {
       height: 0,
       status: '',
       timing: {},
-      availableLayouts: [],
       lastKey: '',
       lastCode: '',
       lastKeyCode: '',
