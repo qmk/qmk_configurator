@@ -65,6 +65,7 @@ const ROW3 = [
   'NumpadAdd'
 ];
 
+// ISO Row 3 is different from ANSI by replacing Backslash with Enter
 const ISO_ROW3 = [
   ...ROW3.slice(0, ROW3.indexOf('Backslash')),
   'Enter',
@@ -90,6 +91,7 @@ const ROW4 = [
   'Numpad6'
 ];
 
+// ISO Row 4 replaces Enter with Backslash
 const ISO_ROW4 = [
   ...ROW4.slice(0, ROW4.indexOf('Enter')),
   'Backslash',
@@ -116,6 +118,7 @@ const ROW5 = [
   'NumpadEnter'
 ];
 
+// ISO Row 5 has an extra key Non-US Backslash after left shift
 const ISO_ROW5 = [ROW5[0], 'IntlBackslash', ...ROW5.slice(1)];
 
 const ROW6 = [
