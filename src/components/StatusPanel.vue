@@ -1,6 +1,12 @@
 <template>
   <div id="status">
-    <textarea id="terminal" v-model="message" ref="terminal" readonly />
+    <textarea
+      id="terminal"
+      v-model="message"
+      ref="terminal"
+      v-show="isTerminalVisible"
+      readonly
+    />
   </div>
 </template>
 <script>
@@ -25,7 +31,12 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('status', ['message', 'scrollToLatest'])
+    ...mapGetters('status', ['message', 'scrollToLatest']),
+    isTerminalVisible: {
+      get() {
+        return this.$store.state.app.terminalVisible;
+      }
+    }
   },
   data: () => {
     return {};

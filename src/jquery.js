@@ -436,6 +436,14 @@ function enableCompileButton() {
   }, 2000);
 }
 
+function hideTerminal() {
+  store.commit('app/setTerminalVisibility', false);
+}
+
+function showTerminal() {
+  store.commit('app/setTerminalVisibility', true);
+}
+
 function disableCompileButton() {
   store.commit('app/disableCompile');
 }
@@ -561,5 +569,7 @@ export {
   disableCompileButton,
   enableOtherButtons,
   disableOtherButtons,
-  getPreferredLayout
+  getPreferredLayout,
+  showTerminal,
+  hideTerminal
 };

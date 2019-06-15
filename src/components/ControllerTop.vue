@@ -66,7 +66,7 @@
 <script>
 import Vue from 'vue';
 import { mapState, mapGetters, mapMutations } from 'vuex';
-
+import { showTerminal, hideTerminal } from '@/jquery';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
@@ -204,6 +204,7 @@ export default {
           return false;
         }
       }
+      hideTerminal();
       let keyboardName = this.keyboard.replace(/\//g, '_');
       let store = this.$store;
       // TODO move this to store
@@ -319,6 +320,7 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
+      showTerminal();
       this.logCompile(this.keyboard);
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];

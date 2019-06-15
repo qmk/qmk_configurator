@@ -28,7 +28,8 @@ const state = {
   message: '',
   settingsPanelVisible: false,
   author: '',
-  notes: ''
+  notes: '',
+  terminalVisible: false
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -174,6 +175,9 @@ const mutations = {
   },
   setEnableDownloads(state) {
     state.enableDownloads = true;
+  },
+  setTerminalVisibility(state, visible) {
+    state.terminalVisible = visible;
   },
   setDisableDownloads(state) {
     state.enableDownloads = false;
