@@ -4,13 +4,13 @@
       id="terminal"
       v-model="message"
       ref="terminal"
-      v-show="isTerminalVisible"
+      v-show="terminalVisible"
       readonly
     />
   </div>
 </template>
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapGetters, mapState, mapMutations } from 'vuex';
 export default {
   name: 'status-panel',
   watch: {
@@ -32,11 +32,7 @@ export default {
   },
   computed: {
     ...mapGetters('status', ['message', 'scrollToLatest']),
-    isTerminalVisible: {
-      get() {
-        return this.$store.state.app.terminalVisible;
-      }
-    }
+    ...mapState('app', ['terminalVisible'])
   },
   data: () => {
     return {};
