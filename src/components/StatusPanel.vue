@@ -1,15 +1,19 @@
 <template>
   <div id="status">
-    <div id="terminal" v-on:click="showTerminal" v-show="!terminalVisible">
-      ^ Expand terminal ^
-    </div>
-    <textarea
-      id="terminal"
-      v-model="message"
-      ref="terminal"
-      v-show="terminalVisible"
-      readonly
-    />
+    <transition name="terminal-fade">
+      <div id="terminal" v-on:click="showTerminal" v-show="!terminalVisible">
+        <span>^ Expand terminal ^</span>
+      </div>
+    </transition>
+    <transition name="terminal-fade">
+      <textarea
+        id="terminal"
+        v-model="message"
+        ref="terminal"
+        v-show="terminalVisible"
+        readonly
+      />
+    </transition>
   </div>
 </template>
 <script>
@@ -46,6 +50,16 @@ export default {
 };
 </script>
 <style>
+.terminal-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.terminal-fade-leave-active {
+  transition: all 0.4s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.terminal-fade-enter,
+.terminal-fade-leave-to {
+  opacity: 0;
+}
 div#terminal {
   height: 27px;
   cursor: pointer;
