@@ -59,7 +59,9 @@ export default {
         title: 'Ctrl + Alt + N to cycle next colorway'
       },
       layer: {
-        label: 'Layer'
+        label: 'Layer',
+        confirm: 'Are you sure you want to clear layer?',
+        title: 'Clear Layer'
       },
       keymap: {
         label: 'Keymap'

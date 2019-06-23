@@ -13,6 +13,13 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
+    <button
+      class="clear-button"
+      :title="$t('message.layer.title')"
+      @click="clearLayer"
+    >
+      <font-awesome-icon icon="trash" size="lg" fixed-width />
+    </button>
   </div>
 </template>
 <script>
@@ -54,7 +61,24 @@ export default {
         this.initLayer(id);
       }
       this.changeLayer(id);
+    },
+    clearLayer() {
+      if (confirm(this.$t('message.layer.confirm'))) {
+        this.initLayer(this.layer);
+      }
     }
   }
 };
 </script>
+<style scoped>
+.clear-button {
+  line-height: 100%;
+  margin: 0;
+  border-radius: 3px;
+  background-color: #49ad4c;
+  color: #fff;
+  border: 0px solid #000;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+</style>
