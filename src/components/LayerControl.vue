@@ -69,12 +69,12 @@ export default {
 <style scoped>
 .clear-button {
   line-height: 100%;
-  margin: 4px 0;
+  margin: 0;
   border-radius: 3px;
   background-color: #49ad4c;
   color: #fff;
   border: 0px solid #000;
-  padding: 6px 12px;
+  padding: 6px 8px;
   cursor: pointer;
 }
 </style>
