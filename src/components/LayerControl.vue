@@ -13,7 +13,11 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
-    <button class="clear-button" title="Clear layer" @click="clearLayer">
+    <button
+      class="clear-button"
+      :title="$t('message.layer.title')"
+      @click="clearLayer"
+    >
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
   </div>
