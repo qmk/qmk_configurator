@@ -25,7 +25,11 @@ export default {
   name: 'visual-keymap',
   extends: BaseKeymap,
   props: {
-    profile: Boolean
+    profile: Boolean,
+    debug: {
+      type: Boolean,
+      default: false
+    }
   },
   watch: {
     layout(newLayout, oldLayout) {
@@ -122,7 +126,7 @@ export default {
     getComponent(key) {
       const { meta } = key;
       if (meta === undefined) {
-        console.log(`key ${key.id} has undefined metadata`);
+        this.debug && console.log(`key ${key.id} has undefined metadata`);
         return BaseKey;
       }
       switch (meta.type) {
