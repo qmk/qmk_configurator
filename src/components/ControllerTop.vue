@@ -2,7 +2,9 @@
   <div id="controller-top">
     <div class="topctrl">
       <div class="topctrl-keyboards">
-        <label class="drop-label">{{ $t('message.keyboard.label') }}:</label>
+        <label class="drop-label v-step-0"
+          >{{ $t('message.keyboard.label') }}:</label
+        >
         <v-select
           @search:focus="opened"
           @search:blur="blur"
@@ -39,6 +41,7 @@
           {{ $t('message.loadDefault.label') }}
         </button>
         <button
+          class="v-step-4"
           id="compile"
           :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
@@ -49,15 +52,15 @@
       </div>
       <div class="topctrl-layouts">
         <label class="drop-label">{{ $t('message.layout.label') }}:</label>
-        <select id="layout" v-model="layout">
+        <select id="layout" class="v-step-1" v-model="layout">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
+            >{{ layoutName }}</option
           >
-            {{ layoutName }}
-          </option>
         </select>
+        <div id="v-step-1"></div>
       </div>
     </div>
   </div>

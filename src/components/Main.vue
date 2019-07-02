@@ -10,7 +10,7 @@
     </div>
     <div class="split-content">
       <div class="left-side"><layerControl /></div>
-      <div class="right-side">
+      <div class="right-side v-step-2">
         <p>
           <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
             {{ $t('message.keymap.label') }}:

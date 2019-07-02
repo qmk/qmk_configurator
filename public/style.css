@@ -1111,3 +1111,6 @@ input[type='number'] {
   left: -1000px;
 }
 
+.v-step{
+  background-color: #49ad4c !important;
+}

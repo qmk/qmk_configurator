@@ -9,8 +9,12 @@ import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
+import VueTour from 'vue-tour';
+
+require('vue-tour/dist/vue-tour.css');
 
 Vue.use(VueI18n);
+Vue.use(VueTour);
 
 import messages from '@/i18n';
 

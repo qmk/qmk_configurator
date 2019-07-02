@@ -41,6 +41,7 @@
         {{ $t('message.downloadSource.label') }}
       </button>
       <button
+        class="v-step-3"
         id="export"
         @click="exportJSON"
         :title="$t('message.downloadJSON.title')"
@@ -95,6 +96,7 @@
     </div>
     <div class="botctrl-1-2">
       <button
+        class="v-step-5"
         id="fwFile"
         @click="downloadFirmware"
         :title="$t('message.downloadFirmware.title')"
