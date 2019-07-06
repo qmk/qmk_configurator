@@ -30,7 +30,7 @@
       <p>{{ $t('message.hostedOn') }}</p>
     </footer>
     <iframe
-      v-show="tutorialEnabled"
+      v-if="tutorialEnabled"
       class="embedded-tutorial"
       width="560"
       height="315"

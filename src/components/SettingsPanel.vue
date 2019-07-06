@@ -48,7 +48,7 @@
       </div>
       <div>
         <toggle-button
-          :value="tutorialVisible"
+          :value="tutorialEnabled"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -77,7 +77,8 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState('keymap', ['continuousInput', 'displaySizes'])
+    ...mapState('keymap', ['continuousInput', 'displaySizes']),
+    ...mapState('app', ['continuousInput', 'tutorialEnabled'])
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
