@@ -104,6 +104,10 @@ export default {
           title: 'ctrl + alt + u',
           help: 'Show keycap sizes in Key Units'
         },
+        toggleTutorial: {
+          label: 'Video Tutorial',
+          help: 'Mechmerlin video guide'
+        },
         on: {
           label: 'On'
         },

@@ -29,6 +29,16 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
     </footer>
+    <iframe
+      v-show="tutorialEnabled"
+      class="embedded-tutorial"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/tx54jkRC9ZY"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
 </template>
 <script>
@@ -78,7 +88,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['showSpinner', 'spinnerMsg', 'message']),
+    ...mapState(['showSpinner', 'spinnerMsg', 'message', 'tutorialEnabled']),
     showInfoBar() {
       return this.message !== '';
     }
@@ -135,5 +145,11 @@ div.openSettings > button {
 }
 .hideSettings {
   display: none;
+}
+.embedded-tutorial {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 4000;
 }
 </style>

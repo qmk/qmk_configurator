@@ -37,6 +37,23 @@
           @change="toggleDisplaySizes"
         />
       </div>
+      <div>
+        <label
+          class="settings-panel--text"
+          @mouseover="help('displaySizes')"
+          :title="$t('message.settingsPanel.displaySizes.title')"
+        >
+          {{ $t('message.settingsPanel.toggleTutorial.label') }}
+        </label>
+      </div>
+      <div>
+        <toggle-button
+          :value="tutorialVisible"
+          :sync="true"
+          :labels="labels"
+          @change="toggleTutorial"
+        />
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">
       {{ helpText }}
@@ -44,8 +61,7 @@
   </div>
 </template>
 <script>
-import { createNamespacedHelpers } from 'vuex';
-const { mapState, mapMutations } = createNamespacedHelpers('keymap');
+import { mapMutations, mapState } from 'vuex';
 import { ToggleButton } from 'vue-js-toggle-button';
 export default {
   name: 'settings-panel',
@@ -61,10 +77,11 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState(['continuousInput', 'displaySizes'])
+    ...mapState('keymap', ['continuousInput', 'displaySizes'])
   },
   methods: {
-    ...mapMutations(['toggleDisplaySizes', 'toggleContinuousInput']),
+    ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
+    ...mapMutations('app', ['toggleTutorial']),
     help(key) {
       switch (key) {
         case 'fastInput':
