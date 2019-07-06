@@ -2,14 +2,14 @@
   <div class="tester">
     <div class="layout-selector-radios">
       <slot v-for="_layout in availableLayouts">
-        <input
-          :id="_layout"
+        <button
+          class="layout-btn-select"
+          v-on:click="layout = _layout"
           :key="_layout"
-          :value="_layout"
-          v-model="layout"
-          type="radio"
-        />
-        <label :for="_layout" :key="_layout">{{ _layout }}</label>
+          :class="{ active: _layout === layout }"
+        >
+          {{ _layout }}
+        </button>
       </slot>
     </div>
     <div class="visual-tester-keymap" :style="styles">
@@ -270,7 +270,7 @@ span.log-green {
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 30px 1fr 1fr / 1fr;
+  grid-template: 45px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {
@@ -343,5 +343,19 @@ span.log-green {
   right: 2px;
   bottom: 1px;
   color: rgba(0, 0, 0, 0.5);
+}
+.layout-btn-select {
+  line-height: 120%;
+  margin: 0px 4px 0px 0px;
+  border-radius: 3px;
+  background-color: #c3c3c3;
+  color: white;
+  border: 0px solid #000;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.layout-btn-select.active {
+  background-color: #49ad4c;
 }
 </style>
