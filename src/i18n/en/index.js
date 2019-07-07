@@ -6,7 +6,7 @@ export default {
     message: {
       ...potato,
       help: {
-        label: 'Wizard Power'
+        label: 'Summon Wizard'
       },
       print: { ...print },
       tester: { ...tester },
