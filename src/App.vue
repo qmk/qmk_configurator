@@ -29,7 +29,13 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
     </footer>
-    <div class="help" @click="toggleTutorial" :title="$t('message.help.label')">
+    <div
+      class="help"
+      @click="toggleTutorial"
+      :title="$t('message.help.label')"
+      @mouseenter="setMessage($t('message.help.label'))"
+      @mouseleave="setMessage('')"
+    >
       <font-awesome-icon icon="hat-wizard" transform="rotate-22" size="3x" />
     </div>
     <iframe
@@ -97,7 +103,12 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setShowSpinner', 'setSettingsPanel', 'toggleTutorial']),
+    ...mapMutations([
+      'setShowSpinner',
+      'setSettingsPanel',
+      'toggleTutorial',
+      'setMessage'
+    ]),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
