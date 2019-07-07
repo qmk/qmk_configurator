@@ -78,7 +78,7 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['continuousInput', 'tutorialEnabled'])
+    ...mapState('app', ['tutorialEnabled'])
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
