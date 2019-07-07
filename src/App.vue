@@ -31,10 +31,17 @@
     </footer>
     <div
       class="help"
+      :class="helpClasses"
       @click="toggleTutorial"
       :title="$t('message.help.label')"
-      @mouseenter="setMessage($t('message.help.label'))"
-      @mouseleave="setMessage('')"
+      @mouseenter="
+        setMessage($t('message.help.label'));
+        hover = true;
+      "
+      @mouseleave="
+        setMessage('');
+        hover = false;
+      "
     >
       <font-awesome-icon icon="hat-wizard" transform="rotate-22" size="3x" />
     </div>
@@ -71,7 +78,8 @@ export default {
       interval: 120000,
       destroyWatcher: undefined,
       panel: undefined,
-      settingsClasses: ''
+      settingsClasses: '',
+      hover: false
     };
   },
   watch: {
@@ -100,6 +108,13 @@ export default {
     ...mapState(['showSpinner', 'spinnerMsg', 'message', 'tutorialEnabled']),
     showInfoBar() {
       return this.message !== '';
+    },
+    helpClasses() {
+      var classes = [];
+      if (this.hover) {
+        classes.push('faa-tada', 'animated-hover');
+      }
+      return classes.join(' ');
     }
   },
   methods: {
@@ -174,5 +189,44 @@ div.openSettings > button {
   opacity: 0.7;
   cursor: pointer;
   color: blue;
+}
+/* TADA - from https://l-lin.github.io/font-awesome-animation/ */
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-8deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: scale(1.3) rotate(8deg);
+  }
+  40%,
+  60% {
+    transform: scale(1.3) rotate(-8deg);
+  }
+  80%,
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.faa-tada.animated,
+.faa-tada.animated-hover:hover,
+.faa-parent.animated-hover:hover > .faa-tada {
+  animation: tada 2s linear infinite;
+}
+.faa-tada.animated.faa-fast,
+.faa-tada.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover > .faa-tada.faa-fast {
+  animation: tada 1s linear infinite;
+}
+.faa-tada.animated.faa-slow,
+.faa-tada.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
 }
 </style>
