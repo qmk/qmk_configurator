@@ -5,6 +5,9 @@ export default {
   en: {
     message: {
       ...potato,
+      help: {
+        label: 'Wizard Power'
+      },
       print: { ...print },
       tester: { ...tester },
       keyboard: {

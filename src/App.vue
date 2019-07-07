@@ -29,6 +29,9 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
     </footer>
+    <div class="help" @click="toggleTutorial" :title="$t('message.help.label')">
+      <font-awesome-icon icon="hat-wizard" transform="rotate-22" size="3x" />
+    </div>
     <iframe
       v-if="tutorialEnabled"
       class="embedded-tutorial"
@@ -94,7 +97,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['setShowSpinner', 'setSettingsPanel']),
+    ...mapMutations(['setShowSpinner', 'setSettingsPanel', 'toggleTutorial']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
@@ -151,5 +154,14 @@ div.openSettings > button {
   bottom: 20px;
   right: 20px;
   z-index: 4000;
+}
+
+.help {
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  opacity: 0.7;
+  cursor: pointer;
+  color: blue;
 }
 </style>

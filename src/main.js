@@ -35,7 +35,8 @@ import {
   faChevronLeft,
   faPrint,
   faUndo,
-  faTrash
+  faTrash,
+  faHatWizard
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -67,6 +68,7 @@ library.add(faChevronLeft);
 library.add(faPrint);
 library.add(faUndo);
 library.add(faTrash);
+library.add(faHatWizard);
 
 ga.init(router);
 
