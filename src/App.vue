@@ -43,7 +43,18 @@
         hover = false;
       "
     >
-      <font-awesome-icon icon="hat-wizard" transform="rotate-22" size="3x" />
+      <font-awesome-icon
+        v-show="!tutorialEnabled"
+        icon="hat-wizard"
+        transform="rotate-22"
+        size="3x"
+      />
+      <font-awesome-icon
+        v-show="tutorialEnabled"
+        icon="magic"
+        transform="rotate-185"
+        size="3x"
+      />
     </div>
     <iframe
       v-if="tutorialEnabled"

@@ -36,7 +36,8 @@ import {
   faPrint,
   faUndo,
   faTrash,
-  faHatWizard
+  faHatWizard,
+  faMagic
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -69,6 +70,7 @@ library.add(faPrint);
 library.add(faUndo);
 library.add(faTrash);
 library.add(faHatWizard);
+library.add(faMagic);
 
 ga.init(router);
 
