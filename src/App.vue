@@ -191,6 +191,10 @@ div.openSettings > button {
   bottom: 20px;
   right: 20px;
   z-index: 4000;
+  background-color: #ddd;
+  padding: 6px;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #0009;
 }
 
 .help {
