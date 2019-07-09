@@ -28,7 +28,8 @@ const state = {
   message: '',
   settingsPanelVisible: false,
   author: '',
-  notes: ''
+  notes: '',
+  tutorialEnabled: false
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -277,6 +278,9 @@ const mutations = {
   },
   setNotes(state, newNotes) {
     state.notes = newNotes;
+  },
+  toggleTutorial(state) {
+    state.tutorialEnabled = !state.tutorialEnabled;
   }
 };
 

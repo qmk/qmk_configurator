@@ -5,6 +5,9 @@ export default {
   en: {
     message: {
       ...potato,
+      help: {
+        label: 'Summon Wizard'
+      },
       print: { ...print },
       tester: { ...tester },
       keyboard: {
@@ -103,6 +106,10 @@ export default {
           label: 'Show Key Sizes',
           title: 'ctrl + alt + u',
           help: 'Show keycap sizes in Key Units'
+        },
+        toggleTutorial: {
+          label: 'Video Tutorial',
+          help: 'Mechmerlin video guide'
         },
         on: {
           label: 'On'
