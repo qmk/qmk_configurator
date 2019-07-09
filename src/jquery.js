@@ -370,6 +370,7 @@ function getExclusionList() {
     'lets_split_eh',
     'lily58',
     'maxipad',
+    'mechllama/g35',
     'mechmini',
     'meira',
     'minidox',
