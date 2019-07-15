@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "postinstall": "opencollective-postinstall || true"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
@@ -18,6 +19,7 @@
     "jest": "24",
     "keypress.js": "^2.1.5",
     "lodash": "^4.17.11",
+    "opencollective-postinstall": "^2.0.2",
     "vue": "2.6",
     "vue-analytics": "^5.16.4",
     "vue-i18n": "^8.10.0",
@@ -49,5 +51,9 @@
     "selenium": "^2.20.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.5.17"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/qmk-config"
   }
 }
