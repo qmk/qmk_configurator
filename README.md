@@ -1,7 +1,7 @@
 # Quantum Mechanical Keyboard Configurator
 
 [![Build Status](https://travis-ci.org/qmk/qmk_configurator.svg?branch=master)](https://travis-ci.org/qmk/qmk_configurator)
-[![Known Vulnerabilities](https://snyk.io/test/github/qmk/qmk_configurator/badge.svg)](https://snyk.io/test/github/qmk/qmk_configurator)
+[![Financial Contributors on Open Collective](https://opencollective.com/qmk-config/all/badge.svg?label=financial+contributors)](https://opencollective.com/qmk-config) [![Known Vulnerabilities](https://snyk.io/test/github/qmk/qmk_configurator/badge.svg)](https://snyk.io/test/github/qmk/qmk_configurator)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_configurator.svg)](https://github.com/qmk/qmk_configurator/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_configurator.svg?style=social&label=Fork)](https://github.com/qmk/qmk_configurator/)
@@ -60,3 +60,33 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/qmk/qmk_configurator/graphs/contributors"><img src="https://opencollective.com/qmk-config/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/qmk-config/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/qmk-config"><img src="https://opencollective.com/qmk-config/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/qmk-config/contribute)]
+
+<a href="https://opencollective.com/qmk-config/organization/0/website"><img src="https://opencollective.com/qmk-config/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/1/website"><img src="https://opencollective.com/qmk-config/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/2/website"><img src="https://opencollective.com/qmk-config/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/3/website"><img src="https://opencollective.com/qmk-config/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/4/website"><img src="https://opencollective.com/qmk-config/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/5/website"><img src="https://opencollective.com/qmk-config/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/6/website"><img src="https://opencollective.com/qmk-config/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/7/website"><img src="https://opencollective.com/qmk-config/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/8/website"><img src="https://opencollective.com/qmk-config/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/qmk-config/organization/9/website"><img src="https://opencollective.com/qmk-config/organization/9/avatar.svg"></a>
