@@ -17,7 +17,7 @@
     "axios": "0.19",
     "jest": "24",
     "keypress.js": "^2.1.5",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.13",
     "vue": "2.6",
     "vue-analytics": "^5.16.4",
     "vue-i18n": "^8.10.0",
