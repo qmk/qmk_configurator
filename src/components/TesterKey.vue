@@ -52,6 +52,6 @@ export default {
   background: lightgreen;
 }
 div {
-  cursor: pointer;
+  cursor: default;
 }
 </style>
