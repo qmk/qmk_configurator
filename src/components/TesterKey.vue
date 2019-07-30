@@ -24,7 +24,7 @@ export default {
       return this.formatName(this.breakLines(this.meta.name));
     },
     localClasses() {
-      let classes = ['ignore-cursor'];
+      let classes = '';
       if (this.meta.active) {
         classes = 'active';
       }
@@ -51,7 +51,10 @@ export default {
 .detected {
   background: lightgreen;
 }
-.ignore-cursor {
+/* .ignore-cursor {
   cursor: auto;
+} */
+div {
+  cursor: pointer;
 }
 </style>
