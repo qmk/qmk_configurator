@@ -51,9 +51,6 @@ export default {
 .detected {
   background: lightgreen;
 }
-/* .ignore-cursor {
-  cursor: auto;
-} */
 div {
   cursor: pointer;
 }
