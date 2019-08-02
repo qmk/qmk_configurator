@@ -584,6 +584,7 @@ a img {
 #source,
 #export,
 #import,
+#import-url,
 #settings,
 #printkeymaps,
 #testkeys,
@@ -692,7 +693,8 @@ button {
 
 .layers {
   column-count: 2;
-  padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 9px;
   background: #fff;
 }
 
