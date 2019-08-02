@@ -17,6 +17,8 @@
       class="key-layer-input"
       :class="errorClasses"
       type="number"
+      min="0"
+      max="15"
       :value="value"
       @focus="focus"
       @blur="blur"
@@ -63,11 +65,14 @@ export default {
       const toLayer = parseInt(e.target.value, 10);
       if (!isNaN(toLayer) && isNumber(toLayer)) {
         this.error = toLayer < 0 || toLayer > 15;
-        this.setKeycodeLayer({
-          layer: this.curLayer,
-          index: this.id,
-          toLayer
-        });
+        if (!this.error) {
+          // don't set keycode layer if error
+          this.setKeycodeLayer({
+            layer: this.curLayer,
+            index: this.id,
+            toLayer
+          });
+        }
       }
       if (this.error) {
         this.setHasErrors();
