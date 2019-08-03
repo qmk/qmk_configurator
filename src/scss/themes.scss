@@ -161,17 +161,55 @@ html {
     .key-contents:empty:before {
       color: #ccc;
     }
-
+    .bottom-fixed {
+      background: #add8e6;
+      color: #222;
+    }
     .key-contents.active-key {
       background: #d4f9d1;
     }
-
+    .settings-panel--help-text {
+      background: #add8e6;
+      color: #222;
+    }
+    .input-url-modal {
+      background-color: #eee;
+      border-color: #ccc;
+      button {
+        background-color: #49ad4c;
+        color: #fff;
+      }
+    }
+    #url-import-field {
+      border-color: #cdcdcd;
+    }
+    .label-button {
+      background-color: #49ad4c;
+      color: white;
+      border-color: #000;
+    }
+    .spinner {
+      &.message,
+      &.status {
+        color: #eee;
+      }
+    }
+    .key-layer-input.input-error {
+      outline-color: red;
+      border-color: red;
+    }
+    .warning {
+      color: orange;
+    }
     .key-contents:empty {
       background: #eee;
     }
     .key-contents {
       border-color: #22ffd8;
       background: #fff;
+      &.overme {
+        background: #cceecc;
+      }
     }
     .key.active-key {
       background: #d4f9d1;
@@ -183,6 +221,25 @@ html {
     .key-layer-input {
       border-color: purple;
     }
+    #controller-top {
+      background: #eee;
+      border-color: #ccc;
+    }
+    #keymap-name {
+      border-color: #cdcdcd;
+    }
+    #layout {
+      border-color: #cdcdcd;
+    }
+    .topctrl-keyboards .v-select {
+      background: white;
+    }
+
+    .print-keymap {
+      background: #fff;
+      border-color: #fff;
+    }
+
     #compile,
     #fwFile,
     #toolbox,

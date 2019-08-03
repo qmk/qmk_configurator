@@ -8,9 +8,7 @@
           :title="$t('message.settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-        >
-          {{ $t('message.settingsPanel.fastInput.label') }}
-        </label>
+        >{{ $t('message.settingsPanel.fastInput.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -25,9 +23,7 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
-        >
-          {{ $t('message.settingsPanel.displaySizes.label') }}
-        </label>
+        >{{ $t('message.settingsPanel.displaySizes.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -42,9 +38,7 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
-        >
-          {{ $t('message.settingsPanel.toggleTutorial.label') }}
-        </label>
+        >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -55,9 +49,7 @@
         />
       </div>
     </div>
-    <div v-if="helpText" class="settings-panel--help-text">
-      {{ helpText }}
-    </div>
+    <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
 </template>
 <script>
@@ -118,13 +110,11 @@ export default {
 }
 .settings-panel--help-text {
   position: absolute;
-  align-text: center;
+  text-align: center;
   font-size: 16px;
   width: 100%;
-  background: #add8e6;
   height: 80px;
   bottom: 0;
-  color: #222;
   padding: 5px;
   box-sizing: border-box;
   text-overflow: none;

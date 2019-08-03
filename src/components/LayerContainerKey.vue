@@ -14,17 +14,17 @@
     @dragover.prevent="dragover"
     @dragenter="dragenter"
     @dragleave="dragleave"
-    >LT {{ meta.layer }}<div
+  >
+    LT {{ meta.layer }}
+    <div
       class="key-contents"
       :class="contentClasses"
       @dragenter.prevent="dragenterContents"
       @dragleave.prevent="dragleaveContents"
       @click.prevent.stop="clickContents"
-      >{{ contents }}</div><div
-        v-if="visible"
-        class="remove"
-        @click.stop="remove"
-      >x</div></div>
+    >{{ contents }}</div>
+    <div v-if="visible" class="remove" @click.stop="remove">x</div>
+  </div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
@@ -101,7 +101,6 @@ export default {
 </script>
 <style>
 .key-contents.overme {
-  background: #cceecc;
   border-radius: 4px;
 }
 </style>

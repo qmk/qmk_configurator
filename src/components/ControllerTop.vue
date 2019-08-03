@@ -18,8 +18,7 @@
           class="drop-label"
           :class="fontAdjustClasses"
           :title="$t('message.keymapName.label')"
-          >{{ $t('message.keymapName.label') }}:</label
-        >
+        >{{ $t('message.keymapName.label') }}:</label>
         <input
           id="keymap-name"
           type="text"
@@ -35,17 +34,13 @@
           id="load-default"
           :title="$t('message.loadDefault.title')"
           @click="loadDefault"
-        >
-          {{ $t('message.loadDefault.label') }}
-        </button>
+        >{{ $t('message.loadDefault.label') }}</button>
         <button
           id="compile"
           :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
-        >
-          {{ $t('message.compile.label') }}
-        </button>
+        >{{ $t('message.compile.label') }}</button>
       </div>
       <div class="topctrl-layouts">
         <label class="drop-label">{{ $t('message.layout.label') }}:</label>
@@ -54,9 +49,7 @@
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-          >
-            {{ layoutName }}
-          </option>
+          >{{ layoutName }}</option>
         </select>
       </div>
     </div>
@@ -232,9 +225,7 @@ export default {
         .catch(error => {
           this.logLoadDefaultFail(keyboardName);
           statusError(
-            `\n* Sorry there is no default for the ${
-              this.keyboard
-            } keyboard... yet!`
+            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
           console.log('error loadDefault', error);
         });
@@ -405,8 +396,6 @@ export default {
 #controller-top {
   padding: 5px;
   border-radius: 5px 5px 0px 0px;
-  background: #eee;
-  border-color: #ccc;
   border-style: solid;
   border-width: 1px 1px 0px 1px;
   margin: 0px auto;
@@ -430,7 +419,7 @@ export default {
 #keymap-name {
   width: 220px;
   padding: 7px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   border-radius: 4px;
 }
 .topctrl-controls {
@@ -447,7 +436,7 @@ export default {
 #layout {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   width: 288px;
 }
 .drop-label {
@@ -471,7 +460,6 @@ export default {
   width: 18rem;
 }
 .topctrl-keyboards .v-select {
-  background: white;
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;

@@ -90,9 +90,3 @@ export default {
   }
 };
 </script>
-<style>
-.key-layer-input.input-error {
-  outline-color: red;
-  border-color: red;
-}
-</style>

@@ -282,7 +282,6 @@ export default {
   grid-row: info-title;
 }
 .letter-display {
-  /* color: rgba(0, 0, 0, 0.7); */
   grid-row: info-top;
   display: grid;
   grid-template: [letter] 3rem / [letter-left] 1fr [letter-mid] 1fr [letter-right] 1fr;
