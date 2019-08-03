@@ -80,6 +80,7 @@ html {
       }
     }
     .tester-key {
+      background: $qmk-grey-light;
       cursor: default;
       &.active {
         background: green;
@@ -102,6 +103,7 @@ html {
     .letter-key-code,
     .letter-code,
     .letter-key {
+      background-color: $qmk-grey-light;
       border-color: rgba(0, 0, 0, 0.7);
     }
     .status-log {
@@ -335,6 +337,45 @@ html {
 html[data-theme='dark'] {
   body {
     color: $qmk-white;
+    background-color: $qmk-dark-bg;
+  }
+  header h1 a {
+    color: $qmk-grey-light;
+    &:hover {
+      color: $qmk-grey;
+    }
+  }
+  #controller-top {
+    color: #2c3e50;
+  }
+  .tester-key {
+    background: #0c0c0c;
+    &.detected {
+      color: $qmk-black;
+    }
+  }
+  .info-title {
+    color: $qmk-grey-light;
+  }
+  .help {
+    color: #1db6ff;
+  }
+  .letter-key-code,
+  .letter-code,
+  .letter-key {
+    background-color: #424242;
+    color: $qmk-grey-light;
+  }
+  #app {
+    color: $qmk-grey-light;
+  }
+  .tab {
+    color: #777;
+  }
+  .keycode {
+    color: $qmk-black;
+  }
+  .layers {
     background-color: $qmk-dark-bg;
   }
 }
