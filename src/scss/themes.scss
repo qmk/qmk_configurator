@@ -63,15 +63,67 @@ html {
       border-left-color: rgba(0, 0, 0, 0);
       border-top-color: #fff;
     }
-    .tab {
-      background: #fff;
+    .beta-button {
+      background: #4b0082;
+      color: #ffa500;
+    }
+    .clear-button {
+      background-color: #49ad4c;
+      color: #fff;
+      border-color: #000;
     }
     .tab {
-      background: #eee;
+      background: #fff;
       border-color: #ccc;
       &.active {
         background: #eee;
       }
+    }
+    .tester-key {
+      cursor: default;
+      &.active {
+        background: green;
+      }
+      &.detected {
+        background: lightgreen;
+      }
+    }
+    .layout-selector-container {
+      select {
+        border-color: #cdcdcd;
+      }
+    }
+    .letter-display {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .veil-container {
+      background: rgba(30, 30, 30, 0.3);
+    }
+    .letter-key-code,
+    .letter-code,
+    .letter-key {
+      border-color: rgba(0, 0, 0, 0.7);
+    }
+    .status-log {
+      background: #272822;
+      color: #f8f8f2;
+      border-color: #000;
+    }
+    .key-label,
+    .keycode-label,
+    .code-label {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .layout-btn-select {
+      background-color: #c3c3c3;
+      color: white;
+      border-color: #000;
+      &.active {
+        background-color: #49ad4c;
+      }
+    }
+    span.log-green {
+      color: lightgreen;
     }
     .key.overme {
       background: #cceecc !important;

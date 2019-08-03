@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <div
     :id="myid"
-    class="key"
+    class="key tester-key"
     :class="localClasses"
     :style="mystyles"
     :title="displayName"
@@ -44,14 +44,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.active {
-  background: green;
-}
-.detected {
-  background: lightgreen;
-}
-div {
-  cursor: default;
-}
-</style>

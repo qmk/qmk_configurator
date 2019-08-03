@@ -70,14 +70,12 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 .clear-button {
   line-height: 100%;
   margin: 0;
   border-radius: 3px;
-  background-color: #49ad4c;
-  color: #fff;
-  border: 0px solid #000;
+  border: 0px solid ;
   padding: 6px 8px;
   cursor: pointer;
 }
