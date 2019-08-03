@@ -4,11 +4,7 @@
       <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
       {{ $t('message.tester.back.label') }}
     </button>
-    <button
-      id="resetTest"
-      @click="reset()"
-      :title="$t('message.tester.reset.title')"
-    >
+    <button id="resetTest" @click="reset()" :title="$t('message.tester.reset.title')">
       <font-awesome-icon icon="undo" size="lg" fixed-width />
       {{ $t('message.tester.reset.label') }}
     </button>
@@ -34,4 +30,3 @@ export default {
   }
 };
 </script>
-<style></style>

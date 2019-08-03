@@ -23,11 +23,7 @@
         <tr>
           <th>{{ i18n('author.title') }}</th>
           <td>
-            <input
-              type="text"
-              v-model="_author"
-              :placeholder="$t('message.author.placeholder')"
-            />
+            <input type="text" v-model="_author" :placeholder="$t('message.author.placeholder')" />
           </td>
         </tr>
         <tr @click="toggleDate">
@@ -57,9 +53,7 @@
     <div>
       <template v-for="idx in activeLayers">
         <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
-          <h3 class="layer-output-title">
-            {{ i18n('layer.label') }} {{ idx }}
-          </h3>
+          <h3 class="layer-output-title">{{ i18n('layer.label') }} {{ idx }}</h3>
           <PrintKeymap :layer="idx"></PrintKeymap>
         </div>
       </template>
