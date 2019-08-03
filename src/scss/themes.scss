@@ -1,0 +1,231 @@
+@import './qmk_colors';
+// default theme
+html {
+  body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #222;
+    }
+    h2 {
+      color: #393939;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #494949;
+    }
+    th,
+    td {
+      border-color: #e5e5e5;
+    }
+    blockquote {
+      border-color: #e5e5e5;
+    }
+    background-color: $qmk-white;
+    color: #333;
+    #app {
+      color: #2c3e50;
+    }
+    .embedded-tutorial {
+      background-color: #ddd;
+    }
+    .help {
+      color: blue;
+    }
+    .fixed p {
+      background: #fff;
+    }
+
+    .key:empty {
+      background: #eee;
+    }
+
+    .key:empty:before {
+      color: #ccc;
+    }
+
+    .key .remove {
+      color: #ccc;
+    }
+    .key-layer-input {
+      background: #fff;
+    }
+    .keycode {
+      background: #fff;
+      border-color: #ccc;
+    }
+    .keycode[title]:before {
+      border-left-color: rgba(0, 0, 0, 0);
+      border-top-color: #fff;
+    }
+    .tab {
+      background: #fff;
+    }
+    .tab {
+      background: #eee;
+      border-color: #ccc;
+      &.active {
+        background: #eee;
+      }
+    }
+    .key.overme {
+      background: #cceecc !important;
+      color: #333;
+    }
+    .tab-area {
+      background: #eee;
+      border-color: #ccc;
+    }
+    .keycode-select {
+      border-color: green !important;
+    }
+    .keycode-container:after,
+    .keycode-layer-container:after,
+    .keycode-layer:after {
+      border-color: #ccc;
+      background: #eee;
+    }
+    .backend-status {
+      background: #222;
+      color: #bbb;
+    }
+    #keycodes {
+      background: #fff;
+      border-color: #ccc;
+    }
+
+    .bes-status {
+      color: lightgreen;
+    }
+
+    .bes-error {
+      color: red;
+    }
+    .key-contents:empty:before {
+      color: #ccc;
+    }
+
+    .key-contents.active-key {
+      background: #d4f9d1;
+    }
+
+    .key-contents:empty {
+      background: #eee;
+    }
+    .key-contents {
+      border-color: #22ffd8;
+      background: #fff;
+    }
+    .key.active-key {
+      background: #d4f9d1;
+    }
+    #visual-keymap {
+      background: #fff;
+      border-color: #fff;
+    }
+    .key-layer-input {
+      border-color: purple;
+    }
+    #compile,
+    #fwFile,
+    #toolbox,
+    #source,
+    #export,
+    #import,
+    #import-url,
+    #settings,
+    #printkeymaps,
+    #testkeys,
+    #leavePrint,
+    #leaveTest,
+    #resetTest,
+    #load-default {
+      background-color: #49ad4c;
+      color: white;
+      border-color: #000;
+    }
+    #compile:disabled,
+    #fwFile:disabled,
+    #toolbox:disabled,
+    #source:disabled {
+      background: #ccc;
+      color: #999;
+    }
+    #terminal {
+      background: #272822;
+      border-color: #000;
+      color: #f8f8f2;
+    }
+    #controller-bottom {
+      background: #eee;
+      border-color: #ccc;
+    }
+    .layers {
+      background: #fff;
+    }
+    .layer {
+      background: #fff;
+      color: #ccc;
+      border-color: #ccc;
+
+      &:hover {
+        background: #eee;
+      }
+      &.active {
+        background: #ccc;
+        color: #fff;
+      }
+      &.non-empty {
+        color: #000;
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+    header h1 a {
+      color: inherit;
+    }
+
+    pre {
+      color: #666;
+      background-color: #f8f8f8;
+      border-color: #e5e5e5;
+    }
+    dt {
+      color: #444;
+    }
+    th {
+      color: #444;
+    }
+    strong {
+      color: #222;
+    }
+    hr {
+      background: #e5e5e5;
+    }
+    a {
+      color: #39c;
+      &:hover {
+        color: #069;
+      }
+      small {
+        color: #777;
+        &:hover {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+// Dark theme
+html[data-theme='dark'] {
+  body {
+    color: $qmk-white;
+    background-color: $qmk-dark-bg;
+  }
+}

@@ -254,8 +254,6 @@ export default {
 @import '../scss/colorways';
 
 .key.overme {
-  background: #cceecc !important;
-  color: #333;
   border-radius: 4px;
 }
 .key.swapme {
@@ -263,10 +261,6 @@ export default {
 }
 .key.smaller {
   font-size: 0.61rem;
-}
-.key.thicker {
-}
-.key.mod {
 }
 .key {
   border-radius: 6px;

@@ -166,6 +166,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import './scss/style.scss';
 #app {
   display: grid;
   grid-template: 1fr / minmax(1000px, 1300px);
@@ -173,7 +174,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 .openSettings {
   position: fixed;
@@ -191,7 +191,6 @@ div.openSettings > button {
   bottom: 20px;
   right: 20px;
   z-index: 4000;
-  background-color: #ddd;
   padding: 6px;
   border-radius: 3px;
   box-shadow: 0 0 3px #0009;
@@ -203,7 +202,6 @@ div.openSettings > button {
   right: 10px;
   opacity: 0.7;
   cursor: pointer;
-  color: blue;
 }
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
 @keyframes tada {
