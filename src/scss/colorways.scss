@@ -618,17 +618,18 @@
   // placeholder
 }
 
-.gmk-terminal-key {
+.gmk-terminal-key, .gmk-terminal-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-AE;
+  input, .key-contents {
+    background: darken($color-gmk-abs-N9, 10%);
+    color: lighten($color-gmk-abs-AE, 9%);
+    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 9%));
+  }
 }
 .gmk-terminal-accent {
   background: $color-gmk-abs-AE;
   color: $color-gmk-abs-N9;
-}
-.gmk-terminal-mod {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-AE;
 }
 
 .gmk-wob-key {
