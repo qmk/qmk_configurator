@@ -311,6 +311,36 @@
 .gmk-dolch-kb {
 }
 
+.gmk-jamon-key {
+  background: #84172c;
+  color: #ece4d0;
+  input, .key-contents {
+    background: darken(#84172c, 10%);
+    color: #ece4d0;
+    border-color: mix(#84172c, #ece4d0);
+  }
+}
+.gmk-jamon-mod {
+  background: #ac2c32;
+  color: #ece4d0;
+  input, .key-contents {
+    background: darken(#ac2c32, 10%);
+    color: #ece4d0;
+    border-color: mix(darken(#ac2c32, 10%), #ece4d0);
+  }
+}
+.gmk-jamon-accent {
+  background: #ece4d0;
+  color: #313337;
+  input {
+    background: lighten(#ece4d0, 40%);
+  }
+}
+.gmk-jamon-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
+
 .gmk-merlin-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-TU1;
@@ -510,36 +540,6 @@
 }
 .gmk-metaverse-kb {
   // placeholder
-}
-
-.gmk-jamon-key {
-  background: #84172c;
-  color: #ece4d0;
-  input, .key-contents {
-    background: darken(#84172c, 10%);
-    color: #ece4d0;
-    border-color: mix(#84172c, #ece4d0);
-  }
-}
-.gmk-jamon-mod {
-  background: #ac2c32;
-  color: #ece4d0;
-  input, .key-contents {
-    background: darken(#ac2c32, 10%);
-    color: #ece4d0;
-    border-color: mix(darken(#ac2c32, 10%), #ece4d0);
-  }
-}
-.gmk-jamon-accent {
-  background: #ece4d0;
-  color: #313337;
-  input {
-    background: lighten(#ece4d0, 40%);
-  }
-}
-.gmk-jamon-kb {
-  // placeholder
-  background: $color-pantone-533C;
 }
 
 .gmk-nautilus-key {
