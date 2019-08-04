@@ -474,6 +474,31 @@
 .gmk-olivetti-kb {
 }
 
+.gmk-olivia-key {
+  background: $color-gmk-abs-CP;
+  color: #363434;
+  input, .key-contents {
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: #363434;
+    border-color: mix($color-gmk-abs-CP, #363434);
+  }
+}
+.gmk-olivia-mod {
+  background: #363434;
+  color: #e8c4b8;
+  input, .key-contents {
+    color: #e8c4b8;
+    background: darken(#363434, 10%);
+    border-color: mix(#363434, #e8c4b8);
+  }
+}
+.gmk-olivia-accent {
+  background: #e8c4b8;
+  color: #363434;
+}
+.gmk-olivia-kb {
+}
+
 .gmk-striker-key {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
@@ -516,31 +541,6 @@
   }
 }
 .gmk-wob-kb {
-}
-
-.gmk-olivia-key {
-  background: $color-gmk-abs-CP;
-  color: #363434;
-  input, .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
-    color: #363434;
-    border-color: mix($color-gmk-abs-CP, #363434);
-  }
-}
-.gmk-olivia-mod {
-  background: #363434;
-  color: #e8c4b8;
-  input, .key-contents {
-    color: #e8c4b8;
-    background: darken(#363434, 10%);
-    border-color: mix(#363434, #e8c4b8);
-  }
-}
-.gmk-olivia-accent {
-  background: #e8c4b8;
-  color: #363434;
-}
-.gmk-olivia-kb {
 }
 
 
