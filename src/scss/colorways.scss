@@ -659,10 +659,20 @@
 .gmk-yuri-key {
   background:#c7e6f5;
   color:#f54730;
+  input, .key-contents {
+    background: lighten(#c7e6f5, 5%);
+    color: darken(#f54730, 26%);
+    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+  }
 }
 .gmk-yuri-mod {
   color:#f54730;
   background:#2d394c;
+  input, .key-contents {
+    background: darken(#2d394c, 14%);
+    color: lighten(#f54730, 14%);
+    border-color: mix(#2d394c, lighten(#f54730, 14%));
+  }
 }
 .gmk-yuri-accent {
   background: #f54730;
