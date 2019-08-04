@@ -449,6 +449,31 @@
   background: $color-pantone-533C;
 }
 
+.gmk-olivetti-key {
+  background: $color-gmk-abs-CP;
+  color: $color-gmk-abs-V4;
+  input, .key-contents {
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: darken($color-gmk-abs-V4, 5%);
+    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
+  }
+}
+.gmk-olivetti-mod {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-V4;
+  input, .key-contents {
+    background: lighten($color-gmk-abs-U9, 10%);
+    color: darken($color-gmk-abs-V4, 15%);
+    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
+  }
+}
+.gmk-olivetti-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-CP;
+}
+.gmk-olivetti-kb {
+}
+
 .gmk-striker-key {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
@@ -491,31 +516,6 @@
   }
 }
 .gmk-wob-kb {
-}
-
-.gmk-olivetti-key {
-  background: $color-gmk-abs-CP;
-  color: $color-gmk-abs-V4;
-  input, .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
-    color: darken($color-gmk-abs-V4, 5%);
-    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
-  }
-}
-.gmk-olivetti-mod {
-  background: $color-gmk-abs-U9;
-  color: $color-gmk-abs-V4;
-  input, .key-contents {
-    background: lighten($color-gmk-abs-U9, 10%);
-    color: darken($color-gmk-abs-V4, 15%);
-    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
-  }
-}
-.gmk-olivetti-accent {
-  background: $color-gmk-abs-V4;
-  color: $color-gmk-abs-CP;
-}
-.gmk-olivetti-kb {
 }
 
 .gmk-olivia-key {
