@@ -57,6 +57,29 @@
 .dsa-galaxy-class-kb {
 }
 
+.sa-carbon-key {
+  background: $color-sp-abs-WBO;
+  color: $color-sp-abs-GQM;
+  input, .key-contents {
+    background: lighten($color-sp-abs-WBO, 10%);
+    color: $color-sp-abs-GQM;
+    border-color: mix($color-sp-abs-WBO, $color-sp-abs-GQM);
+  }
+}
+.sa-carbon-mod {
+  background: $color-sp-abs-GQM;
+  color: $color-sp-abs-OBC;
+  input, .key-contents {
+    background: darken($color-sp-abs-GQM, 12%);
+    color: lighten($color-sp-abs-OBC, 19%);
+    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
+  }
+}
+.sa-carbon-accent {
+  background: $color-sp-abs-OBC;
+  color: $color-sp-abs-GQM;
+}
+
 .sa-danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
@@ -84,29 +107,6 @@
   color: $color-sp-abs-YY;
 }
 .sa-danger-zone-kb {
-}
-
-.sa-carbon-key {
-  background: $color-sp-abs-WBO;
-  color: $color-sp-abs-GQM;
-  input, .key-contents {
-    background: lighten($color-sp-abs-WBO, 10%);
-    color: $color-sp-abs-GQM;
-    border-color: mix($color-sp-abs-WBO, $color-sp-abs-GQM);
-  }
-}
-.sa-carbon-mod {
-  background: $color-sp-abs-GQM;
-  color: $color-sp-abs-OBC;
-  input, .key-contents {
-    background: darken($color-sp-abs-GQM, 12%);
-    color: lighten($color-sp-abs-OBC, 19%);
-    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
-  }
-}
-.sa-carbon-accent {
-  background: $color-sp-abs-OBC;
-  color: $color-sp-abs-GQM;
 }
 
 .sa-modern-selectric-key {
