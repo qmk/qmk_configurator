@@ -49,12 +49,7 @@
         transform="rotate-22"
         size="3x"
       />
-      <font-awesome-icon
-        v-show="tutorialEnabled"
-        icon="magic"
-        transform="rotate-185"
-        size="3x"
-      />
+      <font-awesome-icon v-show="tutorialEnabled" icon="magic" transform="rotate-185" size="3x" />
     </div>
     <iframe
       v-if="tutorialEnabled"
@@ -74,7 +69,7 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { createNamespacedHelpers } from 'vuex';
+import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 export default {
@@ -100,6 +95,7 @@ export default {
     }
   },
   mounted() {
+    this.loadDarkMode();
     this.randomPotatoFact();
     this.interval = setInterval(() => {
       this.randomPotatoFact();
@@ -135,9 +131,13 @@ export default {
       'toggleTutorial',
       'setMessage'
     ]),
+    ...mapActions('app', ['toggleDarkMode']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
+    },
+    loadDarkMode() {
+      this.toggleDarkMode(true);
     },
     dismiss() {
       this.setShowSpinner(false);

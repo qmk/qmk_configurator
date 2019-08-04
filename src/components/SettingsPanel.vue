@@ -48,12 +48,28 @@
           @change="toggleTutorial"
         />
       </div>
+
+      <div>
+        <label
+          class="settings-panel--text"
+          @mouseover="help('darkmode')"
+          :title="$t('message.settingsPanel.darkmode.title')"
+        >{{ $t('message.settingsPanel.darkmode.title') }}</label>
+      </div>
+      <div>
+        <toggle-button
+          :value="darkmodeEnabled"
+          :sync="true"
+          :labels="labels"
+          @change="darkMode"
+        />
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
 </template>
 <script>
-import { mapMutations, mapState } from 'vuex';
+import { mapMutations, mapState, mapActions } from 'vuex';
 import { ToggleButton } from 'vue-js-toggle-button';
 export default {
   name: 'settings-panel',
@@ -70,11 +86,15 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled'])
+    ...mapState('app', ['tutorialEnabled', 'darkmodeEnabled'])
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial']),
+    ...mapActions('app', ['toggleDarkMode']),
+    darkMode(){
+      this.toggleDarkMode();
+    },
     help(key) {
       switch (key) {
         case 'fastInput':

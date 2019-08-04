@@ -111,6 +111,10 @@ export default {
           label: 'Video Tutorial',
           help: 'Mechmerlin video guide'
         },
+        darkmode: {
+          label: 'Toggle Darkmode',
+          title: 'Dark mode'
+        },
         on: {
           label: 'On'
         },

@@ -5,6 +5,19 @@ import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
 import { getPreferredLayout } from '@/jquery';
 
+// TODO: (Zekth) export it in an external wrapper
+function localStorageLoad(key) {
+  if (localStorage) {
+    return localStorage.getItem(key);
+  }
+  return null;
+}
+function localStorageSet(key, value) {
+  if (localStorage) {
+    localStorage.setItem(key, value);
+  }
+}
+
 const state = {
   keyboard: '',
   keyboards: [],
@@ -29,7 +42,8 @@ const state = {
   settingsPanelVisible: false,
   author: '',
   notes: '',
-  tutorialEnabled: false
+  tutorialEnabled: false,
+  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -132,6 +146,21 @@ const actions = {
         commit('processLayouts', resp);
         return resp;
       });
+  },
+  // if init state we just load and not toggling
+  toggleDarkMode({ commit, state }, init) {
+    let darkStatus = state.darkmodeEnabled;
+    if (!init) {
+      darkStatus = !darkStatus;
+    }
+    if (darkStatus) {
+      localStorageSet('darkmode', '1');
+      document.getElementsByTagName('html')[0].dataset.theme = 'dark';
+    } else {
+      localStorageSet('darkmode', '0');
+      document.getElementsByTagName('html')[0].dataset.theme = '';
+    }
+    commit('setDarkmode', darkStatus);
   }
 };
 
@@ -281,6 +310,9 @@ const mutations = {
   },
   toggleTutorial(state) {
     state.tutorialEnabled = !state.tutorialEnabled;
+  },
+  setDarkmode(state, enabled) {
+    state.darkmodeEnabled = enabled;
   }
 };
 
