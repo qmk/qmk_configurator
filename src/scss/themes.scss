@@ -345,8 +345,11 @@ html[data-theme='dark'] {
       color: $qmk-grey;
     }
   }
-  #controller-top {
-    color: #2c3e50;
+  #controller-top,
+  #controller-bottom {
+    background-color: $qmk-grey-dark;
+    color: $qmk-grey-light;
+    border-color: #0e0e0e;
   }
   .tester-key {
     background: #0c0c0c;
@@ -354,28 +357,84 @@ html[data-theme='dark'] {
       color: $qmk-black;
     }
   }
+  #visual-keymap {
+    background: $qmk-grey-dark;
+    border-color: $qmk-grey-dark;
+  }
   .info-title {
     color: $qmk-grey-light;
   }
   .help {
     color: #1db6ff;
   }
+  #keycodes {
+    background-color: inherit;
+  }
+  .tab-area {
+    background: $qmk-grey-dark;
+    border-color: #2f2f2f;
+  }
   .letter-key-code,
   .letter-code,
   .letter-key {
-    background-color: #424242;
+    background-color: $qmk-grey-dark;
     color: $qmk-grey-light;
   }
   #app {
     color: $qmk-grey-light;
   }
   .tab {
+    border-color: #2f2f2f;
     color: #777;
+    &.active {
+      color: $qmk-grey-light;
+      background-color: #464646;
+    }
   }
+
   .keycode {
-    color: $qmk-black;
+    background: #0c0c0c;
+    color: white;
+    border-color: #0e0e0e;
   }
   .layers {
     background-color: $qmk-dark-bg;
+  }
+  .key {
+    &:empty {
+      background: #0c0c0c;
+    }
+    &:empty:before {
+      color: #ccc;
+    }
+  }
+  .slideout-panel .slideout-wrapper .slideout {
+    background-color: $qmk-grey-dark;
+    color: $qmk-grey-light;
+    h2 {
+      color: $qmk-grey-light;
+    }
+  }
+  .layer {
+    background: $qmk-grey-dark;
+    border-color: #5a5a5a;
+    color: #0e0e0e;
+    &:hover {
+      background: #eee;
+      color: #000;
+    }
+    &.active {
+      background: #ccc;
+      color: #000;
+      &.non-empty {
+        color: #000;
+      }
+    }
+    &.non-empty {
+      color: $qmk-grey-light;
+      &:hover {
+        color: #000;
+      }
+    }
   }
 }
