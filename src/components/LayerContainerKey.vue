@@ -14,9 +14,7 @@
     @dragover.prevent="dragover"
     @dragenter="dragenter"
     @dragleave="dragleave"
-  >
-    LT {{ meta.layer }}
-    <div
+  >LT {{ meta.layer }}<div
       class="key-contents"
       :class="contentClasses"
       @dragenter.prevent="dragenterContents"
