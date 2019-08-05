@@ -231,9 +231,7 @@ export default {
         .catch(error => {
           this.logLoadDefaultFail(keyboardName);
           statusError(
-            `\n* Sorry there is no default for the ${
-              this.keyboard
-            } keyboard... yet!`
+            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
           console.log('error loadDefault', error);
         });
