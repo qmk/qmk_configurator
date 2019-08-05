@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="main"><Main /></div>
-    <div><keycodes /></div>
+    <div class="main">
+      <Main />
+    </div>
+    <div>
+      <keycodes />
+    </div>
   </div>
 </template>
 

@@ -1,15 +1,19 @@
 <template>
   <div>
     <div ref="console">
-      <controllerTop /><statusPanel /><controllerBottom />
+      <controllerTop />
+      <statusPanel />
+      <controllerBottom />
     </div>
     <div class="hint">
-      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        {{ $t('message.downloadToolbox.label') }}
-      </a>
+      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">{{
+        $t('message.downloadToolbox.label')
+      }}</a>
     </div>
     <div class="split-content">
-      <div class="left-side"><layerControl /></div>
+      <div class="left-side">
+        <layerControl />
+      </div>
       <div class="right-side">
         <p>
           <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
@@ -32,9 +36,8 @@
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
+              >{{ name }}</option
             >
-              {{ name }}
-            </option>
           </select>
         </p>
         <visualKeymap :profile="false" />
@@ -107,10 +110,7 @@ export default {
   }
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.Main {
-}
+<style>
 .hint {
   display: grid;
   justify-content: end;
@@ -126,9 +126,7 @@ export default {
 .beta-button {
   height: 30px;
   font-size: 15px;
-  background: #4b0082;
   border-radius: 9px;
-  color: #ffa500;
   cursor: pointer;
 }
 .keymap--label {

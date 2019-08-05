@@ -1,0 +1,441 @@
+@import './qmk_colors';
+// default theme
+html {
+  body {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #222;
+    }
+    h2 {
+      color: #393939;
+    }
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #494949;
+    }
+    th,
+    td {
+      border-color: #e5e5e5;
+    }
+    blockquote {
+      border-color: #e5e5e5;
+    }
+    background-color: $qmk-white;
+    color: #333;
+    #app {
+      color: #2c3e50;
+    }
+    .embedded-tutorial {
+      background-color: #ddd;
+    }
+    .help {
+      color: blue;
+    }
+    .fixed p {
+      background: #fff;
+    }
+
+    .key:empty {
+      background: #eee;
+    }
+
+    .key:empty:before {
+      color: #ccc;
+    }
+
+    .key .remove {
+      color: #ccc;
+    }
+    .key-layer-input {
+      background: #fff;
+      color: $qmk-grey-dark;
+    }
+    .keycode {
+      background: #fff;
+      border-color: #ccc;
+    }
+    .keycode[title]:before {
+      border-left-color: rgba(0, 0, 0, 0);
+      border-top-color: #fff;
+    }
+    .beta-button {
+      background: #4b0082;
+      color: #ffa500;
+    }
+    .clear-button {
+      background-color: #49ad4c;
+      color: #fff;
+      border-color: #000;
+    }
+    .tab {
+      background: #fff;
+      border-color: #ccc;
+      &.active {
+        background: #eee;
+      }
+    }
+    .tester-key {
+      background: $qmk-grey-light;
+      cursor: default;
+      &.active {
+        background: green;
+      }
+      &.detected {
+        background: lightgreen;
+      }
+    }
+    .layout-selector-container {
+      select {
+        border-color: #cdcdcd;
+      }
+    }
+    .letter-display {
+      color: rgba(0, 0, 0, 0.7);
+    }
+    .veil-container {
+      background: rgba(30, 30, 30, 0.3);
+    }
+    .letter-key-code,
+    .letter-code,
+    .letter-key {
+      background-color: $qmk-grey-light;
+      border-color: rgba(0, 0, 0, 0.7);
+    }
+    .status-log {
+      background: #272822;
+      color: #f8f8f2;
+      border-color: #000;
+    }
+    .key-label,
+    .keycode-label,
+    .code-label {
+      color: rgba(0, 0, 0, 0.5);
+    }
+    .layout-btn-select {
+      background-color: #c3c3c3;
+      color: white;
+      border-color: #000;
+      &.active {
+        background-color: #49ad4c;
+      }
+    }
+    span.log-green {
+      color: lightgreen;
+    }
+    .key.overme {
+      background: #cceecc !important;
+      color: #333;
+    }
+    .tab-area {
+      background: #eee;
+      border-color: #ccc;
+    }
+    .keycode-select {
+      border-color: green !important;
+    }
+    .keycode-container:after,
+    .keycode-layer-container:after,
+    .keycode-layer:after {
+      border-color: #ccc;
+      background: #eee;
+    }
+    .backend-status {
+      background: #222;
+      color: #bbb;
+    }
+    #keycodes {
+      background: #fff;
+      border-color: #ccc;
+    }
+
+    .bes-status {
+      color: lightgreen;
+    }
+
+    .bes-error {
+      color: red;
+    }
+    .key-contents:empty:before {
+      color: #ccc;
+    }
+    .bottom-fixed {
+      background: #add8e6;
+      color: #222;
+    }
+    .key-contents.active-key {
+      background: #d4f9d1;
+    }
+    .settings-panel--help-text {
+      background: #add8e6;
+      color: #222;
+    }
+    .input-url-modal {
+      background-color: #eee;
+      border-color: #ccc;
+      button {
+        background-color: #49ad4c;
+        color: #fff;
+      }
+    }
+    #url-import-field {
+      border-color: #cdcdcd;
+    }
+    .label-button {
+      background-color: #49ad4c;
+      color: white;
+      border-color: #000;
+    }
+    .spinner {
+      &.message,
+      &.status {
+        color: #eee;
+      }
+    }
+    .key-layer-input.input-error {
+      outline-color: red;
+      border-color: red;
+    }
+    .warning {
+      color: orange;
+    }
+    .key-contents:empty {
+      background: #eee;
+    }
+    .key-contents {
+      border-color: #22ffd8;
+      background: #fff;
+      &.overme {
+        background: #cceecc;
+      }
+    }
+    .key.active-key {
+      background: #d4f9d1;
+    }
+    #visual-keymap {
+      background: #fff;
+      border-color: #fff;
+    }
+    .key-layer-input {
+      border-color: purple;
+    }
+    #controller-top {
+      background: #eee;
+      border-color: #ccc;
+    }
+    #keymap-name {
+      border-color: #cdcdcd;
+    }
+    #layout {
+      border-color: #cdcdcd;
+    }
+    .topctrl-keyboards .v-select {
+      background: white;
+    }
+
+    .print-keymap {
+      background: #fff;
+      border-color: #fff;
+    }
+
+    #compile,
+    #fwFile,
+    #toolbox,
+    #source,
+    #export,
+    #import,
+    #import-url,
+    #settings,
+    #printkeymaps,
+    #testkeys,
+    #leavePrint,
+    #leaveTest,
+    #resetTest,
+    #load-default {
+      background-color: #49ad4c;
+      color: white;
+      border-color: #000;
+    }
+    #compile:disabled,
+    #fwFile:disabled,
+    #toolbox:disabled,
+    #source:disabled {
+      background: #ccc;
+      color: #999;
+    }
+    #terminal {
+      background: #272822;
+      border-color: #000;
+      color: #f8f8f2;
+    }
+    #controller-bottom {
+      background: #eee;
+      border-color: #ccc;
+    }
+    .layers {
+      background: #fff;
+    }
+    .layer {
+      background: #fff;
+      color: #ccc;
+      border-color: #ccc;
+
+      &:hover {
+        background: #eee;
+      }
+      &.active {
+        background: #ccc;
+        color: #fff;
+      }
+      &.non-empty {
+        color: #000;
+        &.active {
+          color: #fff;
+        }
+      }
+    }
+    header h1 a {
+      color: inherit;
+    }
+
+    pre {
+      color: #666;
+      background-color: #f8f8f8;
+      border-color: #e5e5e5;
+    }
+    dt {
+      color: #444;
+    }
+    th {
+      color: #444;
+    }
+    strong {
+      color: #222;
+    }
+    hr {
+      background: #e5e5e5;
+    }
+    a {
+      color: #39c;
+      &:hover {
+        color: #069;
+      }
+      small {
+        color: #777;
+        &:hover {
+          color: #777;
+        }
+      }
+    }
+  }
+}
+// Dark theme
+html[data-theme='dark'] {
+  body {
+    color: $qmk-white;
+    background-color: $qmk-dark-bg;
+  }
+  header h1 a {
+    color: $qmk-grey-light;
+    &:hover {
+      color: $qmk-grey;
+    }
+  }
+  #controller-top,
+  #controller-bottom {
+    background-color: $qmk-grey-dark;
+    color: $qmk-grey-light;
+    border-color: #0e0e0e;
+  }
+  .tester-key {
+    background: #0c0c0c;
+    &.detected {
+      color: $qmk-black;
+    }
+  }
+  #visual-keymap {
+    background: $qmk-grey-dark;
+    border-color: $qmk-grey-dark;
+  }
+  .info-title {
+    color: $qmk-grey-light;
+  }
+  .help {
+    color: #1db6ff;
+  }
+  #keycodes {
+    background-color: inherit;
+  }
+  .tab-area {
+    background: $qmk-grey-dark;
+    border-color: #2f2f2f;
+  }
+  .letter-key-code,
+  .letter-code,
+  .letter-key {
+    background-color: $qmk-grey-dark;
+    color: $qmk-grey-light;
+  }
+  #app {
+    color: $qmk-grey-light;
+  }
+  .tab {
+    border-color: #2f2f2f;
+    color: #777;
+    &.active {
+      color: $qmk-grey-light;
+      background-color: #464646;
+    }
+  }
+
+  .keycode {
+    background: #0c0c0c;
+    color: white;
+    border-color: #0e0e0e;
+  }
+  .layers {
+    background-color: $qmk-dark-bg;
+  }
+  .key {
+    &:empty {
+      background: #0c0c0c;
+    }
+    &:empty:before {
+      color: #ccc;
+    }
+  }
+  .slideout-panel .slideout-wrapper .slideout {
+    background-color: $qmk-grey-dark;
+    color: $qmk-grey-light;
+    h2 {
+      color: $qmk-grey-light;
+    }
+  }
+  .layer {
+    background: $qmk-grey-dark;
+    border-color: #5a5a5a;
+    color: #0e0e0e;
+    &:hover {
+      background: #eee;
+      color: #000;
+    }
+    &.active {
+      background: #ccc;
+      color: #000;
+      &.non-empty {
+        color: #000;
+      }
+    }
+    &.non-empty {
+      color: $qmk-grey-light;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}

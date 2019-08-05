@@ -74,7 +74,7 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { createNamespacedHelpers } from 'vuex';
+import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 export default {
@@ -100,6 +100,7 @@ export default {
     }
   },
   mounted() {
+    this.loadDarkMode();
     this.randomPotatoFact();
     this.interval = setInterval(() => {
       this.randomPotatoFact();
@@ -135,9 +136,13 @@ export default {
       'toggleTutorial',
       'setMessage'
     ]),
+    ...mapActions('app', ['toggleDarkMode']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
+    },
+    loadDarkMode() {
+      this.toggleDarkMode(true);
     },
     dismiss() {
       this.setShowSpinner(false);
@@ -166,6 +171,7 @@ export default {
 };
 </script>
 <style lang="scss">
+@import './scss/style.scss';
 #app {
   display: grid;
   grid-template: 1fr / minmax(1000px, 1300px);
@@ -173,7 +179,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 .openSettings {
   position: fixed;
@@ -191,7 +196,6 @@ div.openSettings > button {
   bottom: 20px;
   right: 20px;
   z-index: 4000;
-  background-color: #ddd;
   padding: 6px;
   border-radius: 3px;
   box-shadow: 0 0 3px #0009;
@@ -203,7 +207,6 @@ div.openSettings > button {
   right: 10px;
   opacity: 0.7;
   cursor: pointer;
-  color: blue;
 }
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
 @keyframes tada {

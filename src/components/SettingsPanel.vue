@@ -8,9 +8,8 @@
           :title="$t('message.settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
+          >{{ $t('message.settingsPanel.fastInput.label') }}</label
         >
-          {{ $t('message.settingsPanel.fastInput.label') }}
-        </label>
       </div>
       <div>
         <toggle-button
@@ -25,9 +24,8 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
+          >{{ $t('message.settingsPanel.displaySizes.label') }}</label
         >
-          {{ $t('message.settingsPanel.displaySizes.label') }}
-        </label>
       </div>
       <div>
         <toggle-button
@@ -42,9 +40,8 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
+          >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
         >
-          {{ $t('message.settingsPanel.toggleTutorial.label') }}
-        </label>
       </div>
       <div>
         <toggle-button
@@ -54,14 +51,29 @@
           @change="toggleTutorial"
         />
       </div>
+
+      <div>
+        <label
+          class="settings-panel--text"
+          @mouseover="help('darkmode')"
+          :title="$t('message.settingsPanel.darkmode.title')"
+          >{{ $t('message.settingsPanel.darkmode.title') }}</label
+        >
+      </div>
+      <div>
+        <toggle-button
+          :value="darkmodeEnabled"
+          :sync="true"
+          :labels="labels"
+          @change="darkMode"
+        />
+      </div>
     </div>
-    <div v-if="helpText" class="settings-panel--help-text">
-      {{ helpText }}
-    </div>
+    <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
 </template>
 <script>
-import { mapMutations, mapState } from 'vuex';
+import { mapMutations, mapState, mapActions } from 'vuex';
 import { ToggleButton } from 'vue-js-toggle-button';
 export default {
   name: 'settings-panel',
@@ -78,11 +90,15 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled'])
+    ...mapState('app', ['tutorialEnabled', 'darkmodeEnabled'])
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial']),
+    ...mapActions('app', ['toggleDarkMode']),
+    darkMode() {
+      this.toggleDarkMode();
+    },
     help(key) {
       switch (key) {
         case 'fastInput':
@@ -118,13 +134,11 @@ export default {
 }
 .settings-panel--help-text {
   position: absolute;
-  align-text: center;
+  text-align: center;
   font-size: 16px;
   width: 100%;
-  background: #add8e6;
   height: 80px;
   bottom: 0;
-  color: #222;
   padding: 5px;
   box-sizing: border-box;
   text-overflow: none;

@@ -122,26 +122,23 @@ export default {
 </script>
 <style>
 #keycodes {
-  background: #fff;
   border: none;
   margin-bottom: 20px;
 }
 .tabs {
   display: grid;
-  background: #fff;
   grid-template: auto / repeat(7, minmax(120px, 200px));
 }
 .tab {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  border-top: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
   padding: 2px;
   margin-right: 2px;
   border-radius: 4px 4px 0 0;
-  background: #eee;
   display: inline-block;
   opacity: 0.55;
   z-index: 100;
@@ -151,13 +148,11 @@ export default {
 .tab-area {
   height: 350px;
   padding: 10px 5px;
-  border: 1px solid #ccc;
+  border: 1px solid;
   border-radius: 0 4px 4px 4px;
-  background: #eee;
 }
 .tab.active {
   opacity: 1;
-  background: #eee;
 }
 .keycode.isoenter {
   position: absolute;
