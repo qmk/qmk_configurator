@@ -6,10 +6,9 @@
       <controllerBottom />
     </div>
     <div class="hint">
-      <a
-        target="_blank"
-        href="https://github.com/qmk/qmk_toolbox/releases"
-      >{{ $t('message.downloadToolbox.label') }}</a>
+      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">{{
+        $t('message.downloadToolbox.label')
+      }}</a>
     </div>
     <div class="split-content">
       <div class="left-side">
@@ -19,17 +18,26 @@
         <p>
           <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
             {{ $t('message.keymap.label') }}:
-            <font-awesome-icon v-if="continuousInput" icon="keyboard" fixed-width />
+            <font-awesome-icon
+              v-if="continuousInput"
+              icon="keyboard"
+              fixed-width
+            />
           </label>
           &nbsp;
           <!-- maintain spacing for paragraph -->
-          <select class="keymap--keyset" id="colorway-select" v-model="curIndex">
+          <select
+            class="keymap--keyset"
+            id="colorway-select"
+            v-model="curIndex"
+          >
             <option
               class="option"
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
-            >{{ name }}</option>
+              >{{ name }}</option
+            >
           </select>
         </p>
         <visualKeymap :profile="false" />

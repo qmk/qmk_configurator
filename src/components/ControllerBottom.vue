@@ -5,7 +5,12 @@
         <div class="input-url-modal">
           <div>
             <label for="url-import-field">Url:</label>
-            <input ref="urlimport" id="url-import-field" type="text" v-model="urlImport" />
+            <input
+              ref="urlimport"
+              id="url-import-field"
+              type="text"
+              v-model="urlImport"
+            />
           </div>
           <div>
             <button @click="importUrlkeymap">Load</button>
@@ -35,21 +40,41 @@
         <font-awesome-icon icon="download" size="lg" fixed-width />
         {{ $t('message.downloadSource.label') }}
       </button>
-      <button id="export" @click="exportJSON" :title="$t('message.downloadJSON.title')">
+      <button
+        id="export"
+        @click="exportJSON"
+        :title="$t('message.downloadJSON.title')"
+      >
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
       <span class="label-button">{{ $t('message.downloadJSON.label') }}</span>
-      <button id="import" :title="$t('message.importJSON.title')" @click="importKeymap">
+      <button
+        id="import"
+        :title="$t('message.importJSON.title')"
+        @click="importKeymap"
+      >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
-      <button id="import-url" :title="$t('message.importUrlJSON.title')" @click="openVeil">
+      <button
+        id="import-url"
+        :title="$t('message.importUrlJSON.title')"
+        @click="openVeil"
+      >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
-      <button id="printkeymaps" :title="$t('message.printKeymap.title')" @click="printKeymaps">
+      <button
+        id="printkeymaps"
+        :title="$t('message.printKeymap.title')"
+        @click="printKeymaps"
+      >
         <font-awesome-icon icon="print" size="lg" fixed-width />
         <span class="hide-small">{{ $t('message.printKeymap.label') }}</span>
       </button>
-      <button id="testkeys" :title="$t('message.testKeys.title')" @click="testKeys">
+      <button
+        id="testkeys"
+        :title="$t('message.testKeys.title')"
+        @click="testKeys"
+      >
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
         <span class="hide-small">{{ $t('message.testKeys.label') }}</span>
       </button>
@@ -80,7 +105,11 @@
       </button>
     </div>
     <div v-if="downloadElementEnabled">
-      <a ref="downloadElement" v-bind:href="urlEncodedData" v-bind:download="filename" />
+      <a
+        ref="downloadElement"
+        v-bind:href="urlEncodedData"
+        v-bind:download="filename"
+      />
     </div>
   </div>
 </template>
@@ -392,7 +421,7 @@ export default {
   }
 };
 </script>
-<style >
+<style>
 #controller-bottom button {
   margin-top: 4px;
 }

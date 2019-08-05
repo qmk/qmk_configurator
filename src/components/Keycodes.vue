@@ -133,7 +133,7 @@ export default {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  border-top: 1px solid ;
+  border-top: 1px solid;
   border-left: 1px solid;
   border-right: 1px solid;
   padding: 2px;
@@ -148,7 +148,7 @@ export default {
 .tab-area {
   height: 350px;
   padding: 10px 5px;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 0 4px 4px 4px;
 }
 .tab.active {

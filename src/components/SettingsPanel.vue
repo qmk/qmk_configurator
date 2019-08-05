@@ -8,7 +8,8 @@
           :title="$t('message.settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-        >{{ $t('message.settingsPanel.fastInput.label') }}</label>
+          >{{ $t('message.settingsPanel.fastInput.label') }}</label
+        >
       </div>
       <div>
         <toggle-button
@@ -23,7 +24,8 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
-        >{{ $t('message.settingsPanel.displaySizes.label') }}</label>
+          >{{ $t('message.settingsPanel.displaySizes.label') }}</label
+        >
       </div>
       <div>
         <toggle-button
@@ -38,7 +40,8 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
-        >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label>
+          >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
+        >
       </div>
       <div>
         <toggle-button
@@ -54,7 +57,8 @@
           class="settings-panel--text"
           @mouseover="help('darkmode')"
           :title="$t('message.settingsPanel.darkmode.title')"
-        >{{ $t('message.settingsPanel.darkmode.title') }}</label>
+          >{{ $t('message.settingsPanel.darkmode.title') }}</label
+        >
       </div>
       <div>
         <toggle-button
@@ -92,7 +96,7 @@ export default {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial']),
     ...mapActions('app', ['toggleDarkMode']),
-    darkMode(){
+    darkMode() {
       this.toggleDarkMode();
     },
     help(key) {

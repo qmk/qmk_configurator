@@ -75,7 +75,7 @@ export default {
   line-height: 100%;
   margin: 0;
   border-radius: 3px;
-  border: 0px solid ;
+  border: 0px solid;
   padding: 6px 8px;
   cursor: pointer;
 }

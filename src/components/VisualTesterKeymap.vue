@@ -261,7 +261,7 @@ export default {
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid ;
+  border: 1px solid;
   margin-left: 10px;
 }
 .tester {
@@ -293,7 +293,7 @@ export default {
 }
 .letter-key {
   position: relative;
-  border: 1px solid ;
+  border: 1px solid;
   grid-column: letter-mid;
   grid-row: letter;
 }
@@ -301,13 +301,13 @@ export default {
   position: relative;
   grid-column: letter-left;
   grid-row: letter;
-  border: 1px solid ;
+  border: 1px solid;
 }
 .letter-key-code {
   position: relative;
   grid-column: letter-right;
   grid-row: letter;
-  border: 1px solid ;
+  border: 1px solid;
   cursor: pointer;
 }
 .status-log {
@@ -341,7 +341,7 @@ export default {
   line-height: 120%;
   margin: 0px 4px 0px 0px;
   border-radius: 3px;
-  border: 0px solid ;
+  border: 0px solid;
   padding: 6px 12px;
   cursor: pointer;
   margin-bottom: 10px;
