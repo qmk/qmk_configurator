@@ -14,7 +14,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 .bottom-fixed {
   position: fixed;
   z-index: 500;
@@ -22,8 +22,6 @@ export default {
   left: 0;
   width: 100%;
   text-align: center;
-  background: #add8e6;
-  color: #222;
   line-height: 250%;
   font-size: 150%;
   opacity: 0.8;

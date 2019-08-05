@@ -421,14 +421,13 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 #controller-bottom button {
   margin-top: 4px;
 }
 .input-url-modal {
-  background-color: #eee;
   padding: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid;
   border-radius: 5px;
   width: 400px;
 }
@@ -452,8 +451,6 @@ export default {
   margin-top: 5px;
 }
 .input-url-modal button {
-  background-color: #49ad4c;
-  color: #fff;
   line-height: 120%;
   padding: 6px 12px;
   border-width: 0;
@@ -464,7 +461,7 @@ export default {
 #url-import-field {
   width: 340px;
   padding: 7px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   border-radius: 4px;
 }
 .label-button {
@@ -474,14 +471,10 @@ export default {
   margin: -3px 1px 0 0;
   font-size: 14px;
   font-weight: bold;
-  background-color: #49ad4c;
-  color: white;
   height: 19px;
-  border: 0px solid #000;
+  border: 0px solid;
   padding: 6px 12px 6px;
   text-transform: uppercase;
-}
-.hide-small {
 }
 @media (max-width: 90rem) {
   .hide-small {

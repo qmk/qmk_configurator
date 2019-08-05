@@ -28,7 +28,6 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 50000;
-  background: rgba(30, 30, 30, 0.3);
 }
 .fade-enter-active {
   transition: all 0.5s ease;

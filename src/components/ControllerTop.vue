@@ -54,9 +54,8 @@
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
+            >{{ layoutName }}</option
           >
-            {{ layoutName }}
-          </option>
         </select>
       </div>
     </div>
@@ -405,8 +404,6 @@ export default {
 #controller-top {
   padding: 5px;
   border-radius: 5px 5px 0px 0px;
-  background: #eee;
-  border-color: #ccc;
   border-style: solid;
   border-width: 1px 1px 0px 1px;
   margin: 0px auto;
@@ -430,7 +427,7 @@ export default {
 #keymap-name {
   width: 220px;
   padding: 7px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   border-radius: 4px;
 }
 .topctrl-controls {
@@ -447,7 +444,7 @@ export default {
 #layout {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   width: 288px;
 }
 .drop-label {
@@ -471,7 +468,6 @@ export default {
   width: 18rem;
 }
 .topctrl-keyboards .v-select {
-  background: white;
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;

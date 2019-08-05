@@ -261,11 +261,8 @@ export default {
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   margin-left: 10px;
-}
-span.log-green {
-  color: lightgreen;
 }
 .tester {
   margin-top: 35px;
@@ -285,7 +282,6 @@ span.log-green {
   grid-row: info-title;
 }
 .letter-display {
-  color: rgba(0, 0, 0, 0.7);
   grid-row: info-top;
   display: grid;
   grid-template: [letter] 3rem / [letter-left] 1fr [letter-mid] 1fr [letter-right] 1fr;
@@ -297,7 +293,7 @@ span.log-green {
 }
 .letter-key {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
   grid-column: letter-mid;
   grid-row: letter;
 }
@@ -305,13 +301,13 @@ span.log-green {
   position: relative;
   grid-column: letter-left;
   grid-row: letter;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
 }
 .letter-key-code {
   position: relative;
   grid-column: letter-right;
   grid-row: letter;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
   cursor: pointer;
 }
 .status-log {
@@ -319,9 +315,7 @@ span.log-green {
   padding: 2px 5px;
   width: 869px;
   text-align: left;
-  background: #272822;
-  color: #f8f8f2;
-  border: 1px solid #000;
+  border: 1px solid;
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
@@ -342,20 +336,14 @@ span.log-green {
   font-size: 8px;
   right: 2px;
   bottom: 1px;
-  color: rgba(0, 0, 0, 0.5);
 }
 .layout-btn-select {
   line-height: 120%;
   margin: 0px 4px 0px 0px;
   border-radius: 3px;
-  background-color: #c3c3c3;
-  color: white;
-  border: 0px solid #000;
+  border: 0px solid;
   padding: 6px 12px;
   cursor: pointer;
   margin-bottom: 10px;
-}
-.layout-btn-select.active {
-  background-color: #49ad4c;
 }
 </style>

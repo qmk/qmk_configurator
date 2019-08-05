@@ -33,7 +33,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 .spinner {
   display: grid;
   grid-template: 10% 1fr 10% / 1fr;
@@ -44,11 +44,11 @@ export default {
   width: 600px;
   border-radius: 25%;
 }
-.space-potato {
+.spinner .space-potato {
   width: 400px;
   height: 200px;
 }
-.working {
+.spinner .working {
   animation: rotation 12s infinite linear;
 }
 @keyframes rotation {
@@ -59,13 +59,11 @@ export default {
     transform: rotate(359deg);
   }
 }
-.status {
+.spinner .status {
   grid-row: 1;
   margin-top: 90px;
-  color: #eee;
 }
-.message {
+.spinner .message {
   grid-row: 3;
-  color: #eee;
 }
 </style>

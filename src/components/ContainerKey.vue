@@ -94,7 +94,6 @@ export default {
 </script>
 <style>
 .key-contents.overme {
-  background: #cceecc;
   border-radius: 4px;
 }
 </style>
