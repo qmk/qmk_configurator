@@ -52,10 +52,6 @@ html {
     .key .remove {
       color: #ccc;
     }
-    .key-layer-input {
-      background: #fff;
-      color: $qmk-grey-dark;
-    }
     .keycode {
       background: #fff;
       border-color: #ccc;
@@ -220,9 +216,6 @@ html {
     #visual-keymap {
       background: #fff;
       border-color: #fff;
-    }
-    .key-layer-input {
-      border-color: purple;
     }
     #controller-top {
       background: #eee;

@@ -19,7 +19,6 @@ import gmk_yuri from './yuri';
 export default [
   gmk_bento,
   gmk_dolch,
-  gmk_plum,
   gmk_jamon,
   gmk_merlin,
   gmk_metaverse,
@@ -27,6 +26,7 @@ export default [
   gmk_nautilus,
   gmk_olivetti,
   gmk_olivia,
+  gmk_plum,
   gmk_serika,
   gmk_space_cadet,
   gmk_striker,
