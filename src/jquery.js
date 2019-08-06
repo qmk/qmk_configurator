@@ -329,7 +329,6 @@ function getExclusionList() {
   return [
     '40percentclub/i75',
     '8pack',
-    'atom47',
     'bigseries',
     'boston_meetup',
     'business_card',
@@ -369,6 +368,7 @@ function getExclusionList() {
     'lets_split',
     'lets_split_eh',
     'lily58',
+    'maartenwut/atom47',
     'maxipad',
     'mechllama/g35',
     'mechmini',
