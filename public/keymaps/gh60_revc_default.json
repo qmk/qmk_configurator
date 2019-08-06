@@ -1,7 +1,7 @@
 {
-  "keyboard": "gh60",
-  "keymap": "default_3082759",
-  "commit": "308275909d081398231b4aa766846b63ffe7381a",
+  "keyboard": "gh60/revc",
+  "keymap": "default_7f8922a",
+  "commit": "7f8922ae7bc6c52bd22d3953b8eda9e87c664cf9",
   "layout": "LAYOUT_all",
   "layers": [
     [

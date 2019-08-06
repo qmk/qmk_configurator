@@ -1,7 +1,7 @@
 {
-  "keyboard": "satan",
-  "keymap": "default_95ebe90",
-  "commit": "95ebe9018514b4ff7c06fc7dec1bf302a36474f2",
+  "keyboard": "gh60/satan",
+  "keymap": "default_7f8922a",
+  "commit": "7f8922ae7bc6c52bd22d3953b8eda9e87c664cf9",
   "layout": "LAYOUT_60_ansi",
   "layers": [
 	[
