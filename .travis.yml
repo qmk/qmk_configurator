@@ -13,7 +13,7 @@ script:
   - yarn run test:unit
   - yarn run test:e2e
   - yarn run build
-  - echo config.qmk.fm > dist/CNAME
+  - echo "config.qmk.fm" > dist/CNAME
 
 deploy:
   provider: pages
