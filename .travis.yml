@@ -13,7 +13,6 @@ script:
   - yarn run test:unit
   - yarn run test:e2e
   - yarn run build
-  - echo "config.qmk.fm" > dist/CNAME
 
 deploy:
   provider: pages
@@ -21,6 +20,7 @@ deploy:
   local_dir: dist
   github_token: $GH_TOKEN
   keep_history: false
+  fqdn: config.qmk.fm
   on:
     branch: master
 
