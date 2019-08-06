@@ -1,6 +1,7 @@
 {
-  "keyboard":"wasdat",
-  "keymap":"wasdat_default",
+  "keyboard": "maartenwut/wasdat",
+  "keymap": "default_209b6ba",
+  "commit": "209b6baaa8fd49d5df34e0c10da8930e3271e5f1",
   "layout":"LAYOUT_fullsize_ansi",
   "layers":[
      [
