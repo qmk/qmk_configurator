@@ -19,7 +19,8 @@ deploy:
   skip_cleanup: true
   local_dir: dist
   github_token: $GH_TOKEN
-  keep_history: true
+  keep_history: false
+  fqdn: config.qmk.fm
   on:
     branch: master
 
