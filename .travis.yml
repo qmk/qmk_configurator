@@ -4,15 +4,24 @@ services:
 language: node_js
 node_js:
   - 11.12 # need this version for Jest 24, prior versions have SYMBOL bugs
-before_script:
-  - git clone --single-branch --branch config https://github.com/qmk/qmk_configurator config
-  - cp config/ga-production.js src/
+
+install:
   - yarn install
-  - yarn build
-script: bash ./deploy.sh
-branches:
-  only:
-    - master
+
+script:
+  - yarn run lint
+  - yarn run test:unit
+  - yarn run test:e2e
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: dist
+  github_token: $GH_TOKEN
+  keep_history: true
+  on:
+    branch: master
+
 notifications:
   webhooks:
     urls:
