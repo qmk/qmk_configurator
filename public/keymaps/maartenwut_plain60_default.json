@@ -1,7 +1,7 @@
 {
-  "keyboard": "plain60",
-  "keymap": "default_09ee7da",
-  "commit": "09ee7da6deb50a3ff5f808cc47daebe94f5a3f3a",
+  "keyboard": "maartenwut/plain60",
+  "keymap": "default_209b6ba",
+  "commit": "209b6baaa8fd49d5df34e0c10da8930e3271e5f1",
   "layout": "LAYOUT",
   "layers": [
     [
