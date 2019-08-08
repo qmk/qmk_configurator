@@ -1,7 +1,7 @@
 {
-  "keyboard": "alice",
-  "keymap": "default_ad6a7e9",
-  "commit": "ad6a7e9cec0d733f86a976439625cf30be7e7af9",
+  "keyboard": "tgr/alice",
+  "keymap": "default_2c0c25d",
+  "commit": "2c0c25d0140d75e0cd005b10aa5bc35837c363f5",
   "layout": "LAYOUT",
   "layers": [
     [
