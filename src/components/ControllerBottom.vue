@@ -118,10 +118,15 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
-const { mapMutations, mapState, mapGetters } = createNamespacedHelpers('app');
+const {
+  mapMutations,
+  mapActions,
+  mapState,
+  mapGetters
+} = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import escape from 'lodash/escape';
@@ -184,14 +189,14 @@ export default {
   },
   methods: {
     ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
+    ...mapActions(['loadKeymapFromUrl']),
     importUrlkeymap: function() {
       const url = this.urlImport;
-      axios
-        .get(url)
-        .then(r => {
+      this.loadKeymapFromUrl(url)
+        .then(data => {
           this.reader = new FileReader();
           this.reader.onload = this.importJSONOnLoad;
-          const b = new Blob([JSON.stringify(r.data)], {
+          const b = new Blob([JSON.stringify(data)], {
             type: 'application/json'
           });
           this.reader.readAsText(b);

@@ -37,7 +37,8 @@ import {
   faUndo,
   faTrash,
   faHatWizard,
-  faMagic
+  faMagic,
+  faStar
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -63,6 +64,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueSlideoutPanel);
 
 library.add(faDownload);
+library.add(faStar);
 library.add(faCloudUploadAlt);
 library.add(faUpload);
 library.add(faArrowUp);

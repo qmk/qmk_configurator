@@ -101,7 +101,7 @@ export default {
     }
   },
   mounted() {
-    this.loadDarkMode();
+    this.appLoad();
     this.randomPotatoFact();
     this.interval = setInterval(() => {
       this.randomPotatoFact();
@@ -137,13 +137,13 @@ export default {
       'toggleTutorial',
       'setMessage'
     ]),
-    ...mapActions('app', ['toggleDarkMode']),
+    ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
     },
-    loadDarkMode() {
-      this.toggleDarkMode(true);
+    appLoad() {
+      this.loadApplicationState();
     },
     dismiss() {
       this.setShowSpinner(false);

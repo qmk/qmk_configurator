@@ -4,22 +4,12 @@ import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
 import { getPreferredLayout } from '@/jquery';
-
-// TODO: (Zekth) export it in an external wrapper
-function localStorageLoad(key) {
-  if (localStorage) {
-    return localStorage.getItem(key);
-  }
-  return null;
-}
-function localStorageSet(key, value) {
-  if (localStorage) {
-    localStorage.setItem(key, value);
-  }
-}
+import { localStorageSet, localStorageLoad, CONSTS } from '../localStorage';
+import { getExclusionList } from '@/jquery';
 
 const state = {
   keyboard: '',
+  favoriteKeyboard: localStorageLoad(CONSTS.favoriteKeyboard),
   keyboards: [],
   _keyboards: [],
   layout: '',
@@ -73,6 +63,24 @@ const getters = {
 };
 
 const actions = {
+  fetchKeyboards({ commit }) {
+    return axios.get(backend_keyboards_url).then(r => {
+      if (r.status === 200) {
+        const exclude = getExclusionList();
+        commit(
+          'setKeyboards',
+          r.data.filter(keeb => {
+            return isUndefined(exclude[keeb]);
+          })
+        );
+      }
+    });
+  },
+  loadKeymapFromUrl(_, url) {
+    return axios.get(url).then(r => {
+      return r.data;
+    });
+  },
   /**
    *  changeKeyboard - change the keyboard state
    *  @param {object} internal store state
@@ -82,7 +90,7 @@ const actions = {
   changeKeyboard({ state, commit, dispatch }, keyboard) {
     const store = this;
     let clearKeymap = false;
-    let promise = new Promise(resolve => {
+    const promise = new Promise(resolve => {
       commit('disablePreview');
       commit('enableCompile');
       if (state.keyboard !== keyboard) {
@@ -162,6 +170,15 @@ const actions = {
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
+  },
+  loadApplicationState({ dispatch }) {
+    dispatch('toggleDarkMode', true);
+    dispatch('loadFavoriteKeyboard');
+  },
+  loadFavoriteKeyboard({ state, commit }) {
+    if (state.favoriteKeyboard) {
+      commit('setKeyboard', state.favoriteKeyboard);
+    }
   }
 };
 
@@ -192,6 +209,10 @@ const mutations = {
   },
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
+  },
+  setFavoriteKeyboard(state, _keyboard) {
+    state.favoriteKeyboard = _keyboard;
+    localStorageSet('favoriteKeyboard', _keyboard);
   },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;

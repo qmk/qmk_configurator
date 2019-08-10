@@ -2,7 +2,14 @@
   <div id="controller-top">
     <div class="topctrl">
       <div class="topctrl-keyboards">
-        <label class="drop-label">{{ $t('message.keyboard.label') }}:</label>
+        <a
+          id="favorite-keyboard"
+          v-on:click="favKeyboard"
+          v-bind:class="{ active: keyboard === favoriteKeyboard }"
+        >
+          <font-awesome-icon icon="star" size="lg" fixed-width />
+        </a>
+        <label class="drop-label" id="drop-label-keyboard">{{ $t('message.keyboard.label') }}:</label>
         <v-select
           @search:focus="opened"
           @search:blur="blur"
@@ -18,8 +25,7 @@
           class="drop-label"
           :class="fontAdjustClasses"
           :title="$t('message.keymapName.label')"
-          >{{ $t('message.keymapName.label') }}:</label
-        >
+        >{{ $t('message.keymapName.label') }}:</label>
         <input
           id="keymap-name"
           type="text"
@@ -35,27 +41,22 @@
           id="load-default"
           :title="$t('message.loadDefault.title')"
           @click="loadDefault"
-        >
-          {{ $t('message.loadDefault.label') }}
-        </button>
+        >{{ $t('message.loadDefault.label') }}</button>
         <button
           id="compile"
           :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
-        >
-          {{ $t('message.compile.label') }}
-        </button>
+        >{{ $t('message.compile.label') }}</button>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label">{{ $t('message.layout.label') }}:</label>
+        <label class="drop-label" id="drop-label-version">{{ $t('message.layout.label') }}:</label>
         <select id="layout" v-model="layout">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-            >{{ layoutName }}</option
-          >
+          >{{ layoutName }}</option>
         </select>
       </div>
     </div>
@@ -64,24 +65,20 @@
 
 <script>
 import Vue from 'vue';
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
 
 import axios from 'axios';
-
-import {
-  backend_keyboards_url,
-  PREVIEW_LABEL
-} from '@/store/modules/constants';
+import { PREVIEW_LABEL } from '@/store/modules/constants';
 
 import {
   statusError,
   load_converted_keymap,
   // render_layout,
-  getExclusionList,
+  // getExclusionList,
   compileLayout,
   disableOtherButtons
 } from '@/jquery';
@@ -92,7 +89,13 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
-    ...mapState('app', ['keyboards', 'layouts', 'compileDisabled']),
+    ...mapState('app', [
+      'keyboard',
+      'keyboards',
+      'layouts',
+      'compileDisabled',
+      'favoriteKeyboard'
+    ]),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
@@ -165,7 +168,7 @@ export default {
     },
     $route: function(to /*, from*/) {
       if (to.query) {
-        let filter = to.query.filter;
+        const filter = to.query.filter;
         if (!isUndefined(filter)) {
           this.updateFilter(filter);
           this.updateKeyboard(first(this.keyboards));
@@ -191,6 +194,7 @@ export default {
       'startListening',
       'previewRequested'
     ]),
+    ...mapActions('app', ['fetchKeyboards']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -236,46 +240,51 @@ export default {
           console.log('error loadDefault', error);
         });
     },
-    // TODO this should be an action
-    fetchKeyboards() {
-      console.log(backend_keyboards_url);
-      return axios.get(backend_keyboards_url).then(this.initializeKeyboards);
-    },
+    // TODO: This needs to be moved in an action
+    // selectInitialKeyboard
     /**
      * initializeKeyboards - parse the keyboard list from the API response
      * @param {object} the API Response
      * @returns {undefined}
      */
-    initializeKeyboards({ data, status }) {
+    initializeKeyboards() {
       let _keyboard = '';
-      if (status === 200) {
-        let exclude = getExclusionList();
-        this.$store.commit(
-          'app/setKeyboards',
-          data.filter(keeb => {
-            return isUndefined(exclude[keeb]);
-          })
-        );
-        if (this.$route.query) {
-          let filter = this.$route.query.filter;
-          if (!isUndefined(filter)) {
-            this.updateFilter(filter);
-          }
+      if (this.$route.query) {
+        let filter = this.$route.query.filter;
+        if (!isUndefined(filter)) {
+          this.updateFilter(filter);
         }
-        _keyboard = first(this.keyboards);
-        let { keyboardP, layoutP } = this.$route.params;
-        if (
-          isString(keyboardP) &&
-          keyboardP !== '' &&
-          keyboardP !== PREVIEW_LABEL
-        ) {
-          // if someone loads a specific keyboard log it
-          _keyboard = keyboardP;
-          this.firstRun = false;
-        }
-        this.setLayout(layoutP);
-        return this.updateKeyboard(_keyboard);
       }
+
+      // if the store is initialized with a keyboard
+      // we set it.
+      // But if there is paramets in the URL we prioritize it
+      if (this.$store.state.app.keyboard) {
+        _keyboard = this.$store.state.app.keyboard;
+        console.info(`Loading keyboard from store:${_keyboard}`);
+      } else {
+        _keyboard = first(this.keyboards);
+      }
+
+      // WIP:
+      // if there is a url in the string we
+      // load the keyboard by fetching the url
+      // if (this.$route.query.url) {
+      // }
+
+      let { keyboardP, layoutP } = this.$route.params;
+      if (
+        isString(keyboardP) &&
+        keyboardP !== '' &&
+        keyboardP !== PREVIEW_LABEL
+      ) {
+        // if someone loads a specific keyboard log it
+        _keyboard = keyboardP;
+        this.firstRun = false;
+      }
+
+      this.setLayout(layoutP);
+      return this.updateKeyboard(_keyboard);
     },
     /**
      * updateKeyboard - triggers a keyboard update action on the store
@@ -292,6 +301,13 @@ export default {
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
         .then(this.postUpdateKeyboard);
+    },
+    favKeyboard() {
+      if (this.keyboard === this.favoriteKeyboard) {
+        this.$store.commit('app/setFavoriteKeyboard', '');
+      } else {
+        this.$store.commit('app/setFavoriteKeyboard', this.keyboard);
+      }
     },
     postUpdateKeyboard() {
       this.$store.commit('status/clear');
@@ -387,16 +403,27 @@ export default {
     };
   },
   mounted() {
-    this.fetchKeyboards().then(() => {
-      this.loadDefault(true);
-    });
+    this.fetchKeyboards()
+      .then(this.initializeKeyboards)
+      .then(() => {
+        this.loadDefault(true);
+      });
   }
 };
 </script>
 <style>
+#drop-label-keyboard {
+  min-width: 87px;
+}
+#drop-label-version {
+  min-width: 110px;
+}
+#favorite-keyboard {
+  cursor: pointer;
+}
 .topctrl {
   display: grid;
-  grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
+  grid-template: [top] 1fr [bottom] 1fr / [left] 440px [middle] 360px [right] auto;
   grid-row-gap: 5px;
 }
 #controller-top {
