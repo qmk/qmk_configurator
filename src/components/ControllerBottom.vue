@@ -191,8 +191,7 @@ export default {
     ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
     ...mapActions(['loadKeymapFromUrl', 'checkValidKeymap']),
     importUrlkeymap: function() {
-      const url = this.urlImport;
-      this.loadKeymapFromUrl(url)
+      this.loadKeymapFromUrl(this.urlImport)
         .then(data => {
           this.reader = new FileReader();
           this.reader.onload = this.importJSONOnLoad;
@@ -360,8 +359,8 @@ export default {
       this.$refs.infoPreviewElement.value = ''; // clear value for chrome issue #83
     },
     previewInfoOnLoad() {
-      var jsonText = this.reader.result;
-      var data;
+      const jsonText = this.reader.result;
+      let data;
       try {
         data = JSON.parse(jsonText);
       } catch (error) {
