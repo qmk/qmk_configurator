@@ -118,7 +118,6 @@
   </div>
 </template>
 <script>
-// import axios from 'axios';
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
 const {

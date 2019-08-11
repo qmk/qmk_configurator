@@ -87,6 +87,13 @@ const actions = {
       }
     });
   },
+  loadDefaultKeymap(_, keyboardName) {
+    return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
+      if (r.status === 200) {
+        return r.data;
+      }
+    });
+  },
   loadKeymapFromUrl(_, url) {
     return axios.get(url).then(r => {
       return r.data;

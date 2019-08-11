@@ -81,14 +81,11 @@ import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
 
-import axios from 'axios';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 
 import {
   statusError,
   load_converted_keymap,
-  // render_layout,
-  // getExclusionList,
   compileLayout,
   disableOtherButtons
 } from '@/jquery';
@@ -204,7 +201,7 @@ export default {
       'startListening',
       'previewRequested'
     ]),
-    ...mapActions('app', ['fetchKeyboards']),
+    ...mapActions('app', ['fetchKeyboards', 'loadDefaultKeymap']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -217,13 +214,11 @@ export default {
           return false;
         }
       }
-      let keyboardName = this.keyboard.replace(/\//g, '_');
-      let store = this.$store;
-      // TODO move this to store
-      axios
-        .get(`keymaps/${keyboardName}_default.json`)
-        .then(({ data, status }) => {
-          if (status === 200) {
+      const keyboardName = this.keyboard.replace(/\//g, '_');
+      const store = this.$store;
+      this.loadDefaultKeymap(keyboardName)
+        .then(data => {
+          if (data) {
             console.log(data);
             this.updateLayout(data.layout);
             let promise = new Promise(resolve =>
@@ -333,7 +328,7 @@ export default {
      * @return {undefined}
      */
     updateLayout(e) {
-      let newLayout = e.target ? e.target.value : e;
+      const newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
       this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
     },
