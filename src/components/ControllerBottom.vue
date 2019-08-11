@@ -189,7 +189,7 @@ export default {
   },
   methods: {
     ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
-    ...mapActions(['loadKeymapFromUrl']),
+    ...mapActions(['loadKeymapFromUrl', 'checkValidKeymap']),
     importUrlkeymap: function() {
       const url = this.urlImport;
       this.loadKeymapFromUrl(url)
@@ -311,12 +311,7 @@ export default {
         return;
       }
 
-      if (
-        isUndefined(data.keyboard) ||
-        isUndefined(data.keymap) ||
-        isUndefined(data.layout) ||
-        isUndefined(data.layers)
-      ) {
+      if (!this.checkValidKeymap(data)) {
         alert(this.$t('message.errors.unknownJSON'));
         return;
       }

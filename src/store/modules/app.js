@@ -63,6 +63,17 @@ const getters = {
 };
 
 const actions = {
+  checkValidKeymap(_, keymap) {
+    if (
+      isUndefined(keymap.keyboard) ||
+      isUndefined(keymap.keymap) ||
+      isUndefined(keymap.layout) ||
+      isUndefined(keymap.layers)
+    ) {
+      return false;
+    }
+    return true;
+  },
   fetchKeyboards({ commit }) {
     return axios.get(backend_keyboards_url).then(r => {
       if (r.status === 200) {
