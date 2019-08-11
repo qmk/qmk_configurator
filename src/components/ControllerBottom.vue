@@ -193,12 +193,7 @@ export default {
     importUrlkeymap: function() {
       this.loadKeymapFromUrl(this.urlImport)
         .then(data => {
-          this.reader = new FileReader();
-          this.reader.onload = this.importJSONOnLoad;
-          const b = new Blob([JSON.stringify(data)], {
-            type: 'application/json'
-          });
-          this.reader.readAsText(b);
+          this.loadJsonData(data);
         })
         .catch(() => {
           alert('Seems like there is an issue trying to get the file');
@@ -293,18 +288,7 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
-    importJSONOnLoad() {
-      let jsonText = this.reader.result;
-
-      let data;
-      try {
-        data = JSON.parse(jsonText);
-      } catch (error) {
-        console.log(error);
-        alert(this.$t('message.errors.invalidQMKKeymap'));
-        return;
-      }
-
+    loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
         alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
         return;
@@ -345,6 +329,16 @@ export default {
         });
         disableOtherButtons();
       });
+    },
+    importJSONOnLoad() {
+      try {
+        const data = JSON.parse(this.reader.result);
+        this.loadJsonData(data);
+      } catch (error) {
+        console.log(error);
+        alert(this.$t('message.errors.invalidQMKKeymap'));
+        return;
+      }
     },
     infoPreviewChanged() {
       var files = this.$refs.infoPreviewElement.files;
