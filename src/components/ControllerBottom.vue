@@ -95,21 +95,22 @@
     </div>
     <div v-if="electron" class="botctrl-1-2">
       <button
-       class="fixed-size"
+        class="fixed-size"
         id="fwFile"
         @click="autoFlashFirmware"
-        title="Automaticly Flash Firmware to MCU"
+        title="Automaticly Flash compiled Firmware to MCU"
         v-bind:disabled="disableDownloadBinary"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width/>Auto-Flash
+        <font-awesome-icon icon="download" size="lg" fixed-width />Auto-Flash
       </button>
       <button
+        class="fixed-size"
         id="fwFile"
         @click="flashFirmware"
-        title="Flash Firmware to MCU"
-        v-bind:disabled="disableDownloadBinary"
+        title="Flash User Selected file to MCU"
+        v-bind:disabled="disableFlashFile"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width/>Flash
+        <font-awesome-icon icon="download" size="lg" fixed-width />Custom-Flash
       </button>
     </div>
     <div v-else class="botctrl-1-2">
@@ -119,7 +120,7 @@
         :title="$t('message.downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width/>{{ $t('message.downloadFirmware.label') }}
+        <font-awesome-icon icon="download" size="lg" fixed-width />{{ $t('message.downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
@@ -172,6 +173,16 @@ export default {
     disableDownloadBinary() {
       return (
         !this.enableDownloads ||
+        isUndefined(this.firmwareBinaryURL) ||
+        this.firmwareBinaryURL === ''
+      );
+    },
+    disableFlashFile() {
+      return !window.Bridge.enableFlashing;
+    },
+    disableFlashSource() {
+      return (
+        !window.Bridge.enableFlashing ||
         isUndefined(this.firmwareBinaryURL) ||
         this.firmwareBinaryURL === ''
       );
@@ -266,11 +277,7 @@ export default {
     },
     flashFirmware() {
       window.Bridge.autoFlash = false;
-      window.Bridge.flashURL(
-        first(this.firmwareBinaryURL),
-        this.$store.getters['app/keyboard'],
-        this.$store.getters['app/firmwareFile']
-      );
+      window.Bridge.flashFile();
     },
     autoFlashFirmware() {
       window.Bridge.autoFlash = true;
