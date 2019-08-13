@@ -211,7 +211,7 @@ export default {
         this.setDetected({
           pos
         });
-        if (elapsedTime < this.chatterThreshold) {
+        if (Number(elapsedTime) < this.chatterThreshold) {
           this.setChatterDetected({ pos });
         }
       }
