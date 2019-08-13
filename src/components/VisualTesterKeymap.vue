@@ -26,21 +26,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">
-            {{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{
+            $t('message.tester.letters.key.label')
+          }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('message.tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('message.tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -50,6 +50,22 @@
         spellcheck="false"
         v-html="status"
       ></div>
+      <div id="chatter-container">
+        <label>Chatter Threshold:</label>
+        <input
+          id="chatter-threshold"
+          @focus="disableCatchKeys"
+          @blur="enableCatchKeys"
+          type="number"
+          v-model="chatterThreshold"
+          min="1"
+          max="100"
+          step="1"
+        />
+        <span id="chatter-alert" v-show="chatterDetected"
+          >CHATTER HAS BEEN DETECTED!</span
+        >
+      </div>
     </div>
     <p>
       {{ $t('message.tester.docs.paragraph') }}
@@ -84,7 +100,13 @@ export default {
     document.removeEventListener('keyup', this.keyup);
   },
   computed: {
-    ...mapState('tester', ['defaults', 'layouts', 'config', 'keymap']),
+    ...mapState('tester', [
+      'defaults',
+      'layouts',
+      'config',
+      'keymap',
+      'chatterDetected'
+    ]),
     ...mapGetters('keymap', ['colorway']),
     ...mapGetters('tester', [
       'availableLayouts',
@@ -144,7 +166,11 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('tester', ['setActive', 'setDetected']),
+    ...mapMutations('tester', [
+      'setActive',
+      'setDetected',
+      'setChatterDetected'
+    ]),
     ...mapActions('tester', ['init']),
     getComponent() {
       return TesterKey;
@@ -161,9 +187,22 @@ export default {
         evStr
       ].join(' ');
     },
+    getElapsedTime(ev, endTs) {
+      return (endTs - this.timing[ev.code]).toFixed(3);
+    },
+    enableCatchKeys() {
+      this.catchKey = true;
+    },
+    disableCatchKeys() {
+      this.catchKey = false;
+    },
     keyup(ev) {
+      if (!this.catchKey) {
+        return;
+      }
       const endTS = performance.now();
-      const evStr = this.formatKeyEvent(ev, endTS);
+      const elapsedTime = this.getElapsedTime(ev, endTS);
+      const evStr = this.formatKeyEvent(ev, elapsedTime);
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
@@ -172,10 +211,13 @@ export default {
         this.setDetected({
           pos
         });
+        if (elapsedTime < this.chatterThreshold) {
+          this.setChatterDetected({ pos });
+        }
       }
     },
     keydown(ev) {
-      if (ev.repeat) {
+      if (ev.repeat || !this.catchKey) {
         return;
       }
       this.timing[ev.code] = performance.now();
@@ -208,10 +250,10 @@ export default {
       }
       this.scrollToEnd();
     },
-    formatKeyEvent(ev, endTS) {
+    formatKeyEvent(ev, time) {
       let msg = [];
-      if (endTS) {
-        msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
+      if (time) {
+        msg.push(`in ${time}ms`);
       }
       msg.unshift(
         [
@@ -244,6 +286,8 @@ export default {
   },
   data() {
     return {
+      catchKey: true,
+      chatterThreshold: 8,
       width: 0,
       height: 0,
       status: '',
@@ -258,6 +302,22 @@ export default {
 };
 </script>
 <style>
+#chatter-alert {
+  font-weight: bold;
+  color: red;
+}
+#chatter-container {
+  text-align: left;
+}
+#chatter-threshold {
+  margin: 0 5px;
+  width: 50px;
+}
+#chatter-threshold::-webkit-inner-spin-button,
+#chatter-threshold::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
+}
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;

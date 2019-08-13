@@ -31,6 +31,13 @@ html {
     #app {
       color: #2c3e50;
     }
+    #chatter-threshold {
+      background-color: #EEEEEE;
+      border:none;
+    }
+    .chatter-detected {
+      background-color: rgb(233, 107, 107) !important;
+    }
     .embedded-tutorial {
       background-color: #ddd;
     }
