@@ -26,21 +26,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">{{
-            $t('message.tester.letters.key.label')
-          }}</label>
+          <label class="key-label">
+            {{ $t('message.tester.letters.key.label') }}
+          </label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">{{
-            $t('message.tester.letters.code.label')
-          }}</label>
+          <label class="code-label">
+            {{ $t('message.tester.letters.code.label') }}
+          </label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">{{
-            $t('message.tester.letters.keycode.label')
-          }}</label>
+          <label class="keycode-label">
+            {{ $t('message.tester.letters.keycode.label') }}
+          </label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -54,8 +54,8 @@
         <label>Chatter Threshold:</label>
         <input
           id="chatter-threshold"
-          @focus="disableCatchKeys"
-          @blur="enableCatchKeys"
+          @focus="destroyKeyListenners"
+          @blur="createKeyListenners"
           type="number"
           v-model="chatterThreshold"
           min="1"
@@ -90,14 +90,12 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
-    document.addEventListener('keydown', this.keydown);
-    document.addEventListener('keyup', this.keyup);
+    this.createKeyListenners();
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
-    document.removeEventListener('keydown', this.keydown);
-    document.removeEventListener('keyup', this.keyup);
+    this.destroyKeyListenners();
   },
   computed: {
     ...mapState('tester', [
@@ -116,7 +114,7 @@ export default {
       'codeToPosition'
     ]),
     styles() {
-      let styles = [];
+      const styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
       styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
@@ -140,8 +138,8 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      let curLayer = this.activeLayoutMeta.map((pos, index) => {
-        let _pos = Object.assign({ w: 1, h: 1 }, pos);
+      const curLayer = this.activeLayoutMeta.map((pos, index) => {
+        const _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
@@ -190,16 +188,15 @@ export default {
     getElapsedTime(ev, endTs) {
       return (endTs - this.timing[ev.code]).toFixed(3);
     },
-    enableCatchKeys() {
-      this.catchKey = true;
+    createKeyListenners() {
+      document.addEventListener('keydown', this.keydown);
+      document.addEventListener('keyup', this.keyup);
     },
-    disableCatchKeys() {
-      this.catchKey = false;
+    destroyKeyListenners() {
+      document.removeEventListener('keydown', this.keydown);
+      document.removeEventListener('keyup', this.keyup);
     },
     keyup(ev) {
-      if (!this.catchKey) {
-        return;
-      }
       const endTS = performance.now();
       const elapsedTime = this.getElapsedTime(ev, endTS);
       const evStr = this.formatKeyEvent(ev, elapsedTime);
@@ -217,7 +214,7 @@ export default {
       }
     },
     keydown(ev) {
-      if (ev.repeat || !this.catchKey) {
+      if (ev.repeat) {
         return;
       }
       this.timing[ev.code] = performance.now();
@@ -251,7 +248,7 @@ export default {
       this.scrollToEnd();
     },
     formatKeyEvent(ev, time) {
-      let msg = [];
+      const msg = [];
       if (time) {
         msg.push(`in ${time}ms`);
       }
@@ -286,7 +283,6 @@ export default {
   },
   data() {
     return {
-      catchKey: true,
       chatterThreshold: 8,
       width: 0,
       height: 0,
