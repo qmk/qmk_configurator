@@ -58,6 +58,14 @@ export default {
         label: 'Firmware',
         title: 'Download firmware file for flashing'
       },
+      flashFirmware: {
+        label: 'Auto-Flash',
+        title: 'Automaticly Flash compiled Firmware to MCU'
+      },
+      flashFile: {
+        label: 'Custom-Flash',
+        title: 'Flash User Selected file to MCU'
+      },
       ColorwayTip: {
         title: 'Ctrl + Alt + N to cycle next colorway'
       },
