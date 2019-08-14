@@ -98,19 +98,21 @@
         class="fixed-size"
         id="fwFile"
         @click="autoFlashFirmware"
-        title="Automaticly Flash compiled Firmware to MCU"
+        :title="$t('message.flashFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width />Auto-Flash
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.flashFirmware.label') }}
       </button>
       <button
         class="fixed-size"
         id="fwFile"
         @click="flashFirmware"
-        title="Flash User Selected file to MCU"
+        :title="$t('message.flashFile.title')"
         v-bind:disabled="disableFlashFile"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width />Custom-Flash
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.flashFile.label') }}
       </button>
     </div>
     <div v-else class="botctrl-1-2">
@@ -120,7 +122,8 @@
         :title="$t('message.downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width />{{ $t('message.downloadFirmware.label') }}
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('message.downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
