@@ -54,17 +54,17 @@
         <label>Chatter Threshold:</label>
         <input
           id="chatter-threshold"
-          @focus="destroyKeyListenners"
-          @blur="createKeyListenners"
+          @focus="destroyKeyListeners"
+          @blur="createKeyListeners"
           type="number"
           v-model="chatterThreshold"
           min="1"
           max="100"
           step="1"
         />
-        <span id="chatter-alert" v-show="chatterDetected"
-          >CHATTER HAS BEEN DETECTED!</span
-        >
+        <span id="chatter-alert" v-show="chatterDetected">{{
+          $t('message.tester.chatter.detectedAlert')
+        }}</span>
       </div>
     </div>
     <p>
@@ -90,12 +90,12 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
-    this.createKeyListenners();
+    this.createKeyListeners();
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
-    this.destroyKeyListenners();
+    this.destroyKeyListeners();
   },
   computed: {
     ...mapState('tester', [
@@ -188,11 +188,11 @@ export default {
     getElapsedTime(ev, endTs) {
       return (endTs - this.timing[ev.code]).toFixed(3);
     },
-    createKeyListenners() {
+    createKeyListeners() {
       document.addEventListener('keydown', this.keydown);
       document.addEventListener('keyup', this.keyup);
     },
-    destroyKeyListenners() {
+    destroyKeyListeners() {
       document.removeEventListener('keydown', this.keydown);
       document.removeEventListener('keyup', this.keyup);
     },
@@ -299,6 +299,7 @@ export default {
 </script>
 <style>
 #chatter-alert {
+  text-transform: uppercase;
   font-weight: bold;
   color: red;
 }
