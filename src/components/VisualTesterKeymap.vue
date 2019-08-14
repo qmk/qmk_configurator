@@ -51,7 +51,7 @@
         v-html="status"
       ></div>
       <div id="chatter-container">
-        <label>Chatter Threshold:</label>
+        <label>{{ $t('message.tester.chatter.label') }}:</label>
         <input
           id="chatter-threshold"
           @focus="destroyKeyListeners"

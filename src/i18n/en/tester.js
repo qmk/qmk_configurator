@@ -29,6 +29,7 @@ export default {
       'Note: Detected Key and Code may differ depending on your locale. Docs'
   },
   chatter: {
+    label: 'Chatter threshold (ms)',
     detectedAlert: 'chatter has been detected!'
   }
 };
