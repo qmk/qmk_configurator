@@ -60,7 +60,7 @@ export default {
       },
       flashFirmware: {
         label: 'Auto-Flash',
-        title: 'Automaticly Flash compiled Firmware to MCU'
+        title: 'Automatically Flash compiled Firmware to MCU'
       },
       flashFile: {
         label: 'Custom-Flash',
