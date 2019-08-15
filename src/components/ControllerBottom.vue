@@ -166,7 +166,7 @@ export default {
       'author',
       'notes'
     ]),
-    ...mapGetters(['exportKeymapName']),
+    ...mapGetters(['exportKeymapName', 'firmwareFile']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -286,8 +286,8 @@ export default {
       window.Bridge.autoFlash = true;
       window.Bridge.flashURL(
         first(this.firmwareBinaryURL),
-        this.$store.getters['app/keyboard'],
-        this.$store.getters['app/firmwareFile']
+        this.keyboard,
+        this.firmwareFile
       );
     },
     downloadSource() {
