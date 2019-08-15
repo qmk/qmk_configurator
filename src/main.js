@@ -46,7 +46,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ga from './ga';
-import { initElectron } from './electron';
+import electron from './electron';
 // Find out if we are are running inside electon
 window.electron = false;
 if (
@@ -55,7 +55,7 @@ if (
   navigator.userAgent.indexOf('Electron') >= 0
 ) {
   window.electron = true; //We set a global value to be used later
-  initElectron(); // initializes code specific for the electron app
+  electron.init(); // initializes code specific for the electron app
 }
 
 Vue.component('Veil', Veil);
