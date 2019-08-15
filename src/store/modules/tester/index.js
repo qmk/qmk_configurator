@@ -37,7 +37,8 @@ const state = {
   layouts: {
     ISO: layouts.ISO,
     ANSI: layouts.ANSI
-  }
+  },
+  chatterDetected: false
 };
 
 const getters = {
@@ -99,9 +100,15 @@ const mutations = {
     Vue.set(state.keymap[state.layout][pos], 'active', false);
     Vue.set(state.keymap[state.layout][pos], 'detected', true);
   },
+  setChatterDetected(state, { pos }) {
+    state.chatterDetected = true;
+    Vue.set(state.keymap[state.layout][pos], 'chatter', true);
+  },
   reset(state) {
+    state.chatterDetected = false;
     state.keymap[state.layout].forEach((v, idx) => {
       Vue.set(state.keymap[state.layout][idx], 'detected', false);
+      Vue.set(state.keymap[state.layout][idx], 'chatter', false);
     });
   }
 };

@@ -50,6 +50,22 @@
         spellcheck="false"
         v-html="status"
       ></div>
+      <div id="chatter-container">
+        <label>{{ $t('message.tester.chatter.label') }}:</label>
+        <input
+          id="chatter-threshold"
+          @focus="destroyKeyListeners"
+          @blur="createKeyListeners"
+          type="number"
+          v-model="chatterThreshold"
+          min="1"
+          max="100"
+          step="1"
+        />
+        <span id="chatter-alert" v-show="chatterDetected">{{
+          $t('message.tester.chatter.detectedAlert')
+        }}</span>
+      </div>
     </div>
     <p>
       {{ $t('message.tester.docs.paragraph') }}
@@ -74,17 +90,21 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
-    document.addEventListener('keydown', this.keydown);
-    document.addEventListener('keyup', this.keyup);
+    this.createKeyListeners();
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
-    document.removeEventListener('keydown', this.keydown);
-    document.removeEventListener('keyup', this.keyup);
+    this.destroyKeyListeners();
   },
   computed: {
-    ...mapState('tester', ['defaults', 'layouts', 'config', 'keymap']),
+    ...mapState('tester', [
+      'defaults',
+      'layouts',
+      'config',
+      'keymap',
+      'chatterDetected'
+    ]),
     ...mapGetters('keymap', ['colorway']),
     ...mapGetters('tester', [
       'availableLayouts',
@@ -94,7 +114,7 @@ export default {
       'codeToPosition'
     ]),
     styles() {
-      let styles = [];
+      const styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
       styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
@@ -118,8 +138,8 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      let curLayer = this.activeLayoutMeta.map((pos, index) => {
-        let _pos = Object.assign({ w: 1, h: 1 }, pos);
+      const curLayer = this.activeLayoutMeta.map((pos, index) => {
+        const _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
@@ -144,7 +164,11 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('tester', ['setActive', 'setDetected']),
+    ...mapMutations('tester', [
+      'setActive',
+      'setDetected',
+      'setChatterDetected'
+    ]),
     ...mapActions('tester', ['init']),
     getComponent() {
       return TesterKey;
@@ -161,9 +185,21 @@ export default {
         evStr
       ].join(' ');
     },
+    getElapsedTime(ev, endTs) {
+      return (endTs - this.timing[ev.code]).toFixed(3);
+    },
+    createKeyListeners() {
+      document.addEventListener('keydown', this.keydown);
+      document.addEventListener('keyup', this.keyup);
+    },
+    destroyKeyListeners() {
+      document.removeEventListener('keydown', this.keydown);
+      document.removeEventListener('keyup', this.keyup);
+    },
     keyup(ev) {
       const endTS = performance.now();
-      const evStr = this.formatKeyEvent(ev, endTS);
+      const elapsedTime = this.getElapsedTime(ev, endTS);
+      const evStr = this.formatKeyEvent(ev, elapsedTime);
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
@@ -172,6 +208,9 @@ export default {
         this.setDetected({
           pos
         });
+        if (Number(elapsedTime) < this.chatterThreshold) {
+          this.setChatterDetected({ pos });
+        }
       }
     },
     keydown(ev) {
@@ -208,10 +247,10 @@ export default {
       }
       this.scrollToEnd();
     },
-    formatKeyEvent(ev, endTS) {
-      let msg = [];
-      if (endTS) {
-        msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
+    formatKeyEvent(ev, time) {
+      const msg = [];
+      if (time) {
+        msg.push(`in ${time}ms`);
       }
       msg.unshift(
         [
@@ -244,6 +283,7 @@ export default {
   },
   data() {
     return {
+      chatterThreshold: 8,
       width: 0,
       height: 0,
       status: '',
@@ -258,6 +298,23 @@ export default {
 };
 </script>
 <style>
+#chatter-alert {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: red;
+}
+#chatter-container {
+  text-align: left;
+}
+#chatter-threshold {
+  margin: 0 5px;
+  width: 50px;
+}
+#chatter-threshold::-webkit-inner-spin-button,
+#chatter-threshold::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
+}
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;

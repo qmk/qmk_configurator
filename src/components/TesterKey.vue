@@ -24,14 +24,17 @@ export default {
       return this.formatName(this.breakLines(this.meta.name));
     },
     localClasses() {
-      let classes = '';
+      const classes = [];
       if (this.meta.active) {
-        classes = 'active';
+        classes.push('active');
+      }
+      if (this.meta.chatter) {
+        classes.push('chatter-detected');
       }
       if (this.meta.detected) {
-        classes = 'detected';
+        classes.push('detected');
       }
-      return `${this.myclasses} ${classes}`;
+      return `${this.myclasses} ${classes.join(' ')}`;
     }
   },
   methods: {
