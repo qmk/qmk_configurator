@@ -109,7 +109,7 @@ export default {
         },
         toggleTutorial: {
           label: 'Video Tutorial',
-          title: 'Mechmerlin howto video on Configurator',
+          title: 'MechMerlin how-to video on Configurator',
           help: 'Mechmerlin video guide'
         },
         darkmode: {
