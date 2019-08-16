@@ -251,12 +251,12 @@ export default [
   {
     name: 'LS/(',
     code: 'KC_LSPO',
-    title: 'Left shift when held, ( when tapped'
+    title: 'Left Shift when held, ( when tapped'
   },
   {
     name: 'RS/)',
     code: 'KC_RSPC',
-    title: 'Right shift when held, ) when tapped'
+    title: 'Right Shift when held, ) when tapped'
   },
   {
     name: 'LC/(',
