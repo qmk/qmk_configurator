@@ -93,7 +93,7 @@
         @change="infoPreviewChanged"
       />
     </div>
-    <div v-if="electron" class="botctrl-1-2">
+    <div v-if="this.electron" class="botctrl-1-2">
       <ElectronBottomControls :disableDownloadBinary="disableDownloadBinary">
       </ElectronBottomControls>
     </div>
@@ -152,7 +152,7 @@ export default {
       'author',
       'notes'
     ]),
-    ...mapGetters(['exportKeymapName', 'firmwareFile']),
+    ...mapGetters(['exportKeymapName', 'firmwareFile', 'electron']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -166,9 +166,6 @@ export default {
         this.firmwareBinaryURL === ''
       );
     },
-    electron() {
-      return window.electron;
-    }
   },
   watch: {
     /**

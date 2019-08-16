@@ -43,7 +43,8 @@ const state = {
   author: '',
   notes: '',
   tutorialEnabled: false,
-  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false
+  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false,
+  electron: false
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -52,6 +53,7 @@ const getters = {
   firmwareFile: state => state.firmwareFile,
   filter: state => state.filter,
   keyboard: state => state.keyboard,
+  electron: state => state.electron,
   /**
    * keymapName
    * @param {object} state of store
@@ -171,6 +173,9 @@ const mutations = {
   },
   disableCompile(state) {
     state.compileDisabled = true;
+  },
+  enableElectron(state) {
+    state.electron = true;
   },
   requestPreview(state) {
     state.previewRequested = true;

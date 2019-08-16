@@ -48,15 +48,12 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ga from './ga';
 import electron from './electron';
 // Find out if we are are running inside electon
-window.electron = false;
 if (
   typeof navigator === 'object' &&
   typeof navigator.userAgent === 'string' &&
   navigator.userAgent.indexOf('Electron') >= 0
-) {
-  window.electron = true; //We set a global value to be used later
-  electron.init(); // initializes code specific for the electron app
-}
+) electron.init(); // initializes code specific for the electron app
+
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
