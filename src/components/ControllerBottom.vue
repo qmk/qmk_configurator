@@ -150,9 +150,10 @@ export default {
       'firmwareSourceURL',
       'keymapSourceURL',
       'author',
-      'notes'
+      'notes',
+      'electron'
     ]),
-    ...mapGetters(['exportKeymapName', 'firmwareFile', 'electron']),
+    ...mapGetters(['exportKeymapName', 'firmwareFile']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },

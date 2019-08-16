@@ -52,8 +52,6 @@ const steno_keyboards = ['gergo', 'georgi'];
 const getters = {
   firmwareFile: state => state.firmwareFile,
   filter: state => state.filter,
-  keyboard: state => state.keyboard,
-  electron: state => state.electron,
   /**
    * keymapName
    * @param {object} state of store
