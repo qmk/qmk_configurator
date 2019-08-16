@@ -46,14 +46,15 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ga from './ga';
+import { isObject, isString } from 'lodash';
 import electron from './electron';
 // Find out if we are are running inside electon
 if (
-  typeof navigator === 'object' &&
-  typeof navigator.userAgent === 'string' &&
-  navigator.userAgent.indexOf('Electron') >= 0
-) electron.init(); // initializes code specific for the electron app
-
+  isObject(navigator) &&
+  isString(navigator.userAgent) &&
+  navigator.userAgent.includes('Electron')
+)
+  electron.init(); // initializes code specific for the electron app
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
