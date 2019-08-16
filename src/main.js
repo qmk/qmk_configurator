@@ -46,6 +46,16 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import ga from './ga';
+import isObject from 'lodash/isObject';
+import isString from 'lodash/isString';
+import electron from './electron';
+// Find out if we are are running inside electon
+if (
+  isObject(navigator) &&
+  isString(navigator.userAgent) &&
+  navigator.userAgent.includes('Electron')
+)
+  electron.init(); // initializes code specific for the electron app
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);

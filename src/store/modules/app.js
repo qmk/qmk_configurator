@@ -43,7 +43,8 @@ const state = {
   author: '',
   notes: '',
   tutorialEnabled: false,
-  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false
+  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false,
+  electron: false
 };
 
 const steno_keyboards = ['gergo', 'georgi'];
@@ -170,6 +171,9 @@ const mutations = {
   },
   disableCompile(state) {
     state.compileDisabled = true;
+  },
+  enableElectron(state) {
+    state.electron = true;
   },
   requestPreview(state) {
     state.previewRequested = true;

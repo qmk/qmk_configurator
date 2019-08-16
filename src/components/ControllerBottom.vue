@@ -93,7 +93,11 @@
         @change="infoPreviewChanged"
       />
     </div>
-    <div class="botctrl-1-2">
+    <div v-if="this.electron" class="botctrl-1-2">
+      <ElectronBottomControls :disableDownloadBinary="disableDownloadBinary">
+      </ElectronBottomControls>
+    </div>
+    <div v-else class="botctrl-1-2">
       <button
         id="fwFile"
         @click="downloadFirmware"
@@ -130,8 +134,12 @@ import {
   disableOtherButtons,
   getPreferredLayout
 } from '@/jquery';
+
+import ElectronBottomControls from './ElectronBottomControls';
+
 export default {
   name: 'bottom-controller',
+  components: { ElectronBottomControls },
   computed: {
     ...mapState([
       'keyboard',
@@ -142,9 +150,10 @@ export default {
       'firmwareSourceURL',
       'keymapSourceURL',
       'author',
-      'notes'
+      'notes',
+      'electron'
     ]),
-    ...mapGetters(['exportKeymapName']),
+    ...mapGetters(['exportKeymapName', 'firmwareFile']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -157,7 +166,7 @@ export default {
         isUndefined(this.firmwareBinaryURL) ||
         this.firmwareBinaryURL === ''
       );
-    }
+    },
   },
   watch: {
     /**
