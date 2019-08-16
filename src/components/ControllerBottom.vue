@@ -94,26 +94,8 @@
       />
     </div>
     <div v-if="electron" class="botctrl-1-2">
-      <button
-        class="fixed-size"
-        id="fwFile"
-        @click="autoFlashFirmware"
-        :title="$t('message.flashFirmware.title')"
-        v-bind:disabled="disableDownloadBinary"
-      >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.flashFirmware.label') }}
-      </button>
-      <button
-        class="fixed-size"
-        id="fwFile"
-        @click="flashFirmware"
-        :title="$t('message.flashFile.title')"
-        v-bind:disabled="disableFlashFile"
-      >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.flashFile.label') }}
-      </button>
+      <ElectronBottomControls :disableDownloadBinary="disableDownloadBinary">
+      </ElectronBottomControls>
     </div>
     <div v-else class="botctrl-1-2">
       <button
@@ -152,8 +134,12 @@ import {
   disableOtherButtons,
   getPreferredLayout
 } from '@/jquery';
+
+import ElectronBottomControls from './ElectronBottomControls';
+
 export default {
   name: 'bottom-controller',
+  components: { ElectronBottomControls },
   computed: {
     ...mapState([
       'keyboard',
@@ -180,17 +166,7 @@ export default {
         this.firmwareBinaryURL === ''
       );
     },
-    disableFlashFile() {
-      return !window.Bridge.enableFlashing;
-    },
-    disableFlashSource() {
-      return (
-        !window.Bridge.enableFlashing ||
-        isUndefined(this.firmwareBinaryURL) ||
-        this.firmwareBinaryURL === ''
-      );
-    },
-    electron: function() {
+    electron() {
       return window.electron;
     }
   },
@@ -277,18 +253,6 @@ export default {
         this.$refs.downloadElement.click();
         this.downloadElementEnabled = false;
       });
-    },
-    flashFirmware() {
-      window.Bridge.autoFlash = false;
-      window.Bridge.flashFile();
-    },
-    autoFlashFirmware() {
-      window.Bridge.autoFlash = true;
-      window.Bridge.flashURL(
-        first(this.firmwareBinaryURL),
-        this.keyboard,
-        this.firmwareFile
-      );
     },
     downloadSource() {
       this.urlEncodedData = first(this.firmwareSourceURL);
