@@ -7,6 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
+    "test:cypress": "cypress run",
+    "test:cypress:ci": "start-server-and-test serve http://localhost:8080 test:cypress",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
@@ -40,6 +42,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
     "chromedriver": "^74.0.0",
+    "cypress": "^3.4.1",
     "eslint": "^5.8.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0-0",
@@ -50,6 +53,7 @@
     "prettier": "^1.18.2",
     "sass-loader": "^7.0.1",
     "selenium": "^2.20.0",
+    "start-server-and-test": "^1.10.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.5.17"
   }
