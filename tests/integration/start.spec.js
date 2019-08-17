@@ -19,7 +19,7 @@ describe('Simple browsing', function() {
     cy.get('#status').should('be.visible');
     cy.get('#keycodes-section').should('be.visible');
     cy.get('.openSettings').click();
-    cy.get('.settings-panel', { timeout: 500 }).should('be.visible');
+    cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
     cy.get('.slideout-panel-bg').click();
     cy.get('#testkeys').click();
     cy.get('.visual-tester-keymap').should('be.visible');

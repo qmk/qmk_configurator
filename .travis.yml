@@ -1,12 +1,23 @@
-dist: xenial
-services:
-  - xvfb  # adds X server for nightwatch/selenium/chromedriver
+addons:
+  apt:
+    packages:
+      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+      - libgconf-2-4
 language: node_js
 node_js:
   - 11.12 # need this version for Jest 24, prior versions have SYMBOL bugs
 
+cache:
+  # Caches $HOME/.npm when npm ci is default script command
+  # Caches node_modules in all other cases
+  npm: true
+  directories:
+    # we also need to cache folder with Cypress binary
+    - ~/.cache
+
 install:
   - yarn install
+  - npx cypress install
 
 script:
   - yarn run lint
@@ -28,6 +39,6 @@ notifications:
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/428080202c6aa8650101
-    on_success: always  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: never     # options: [always|never|change] default: always
+    on_success: always # options: [always|never|change] default: always
+    on_failure: always # options: [always|never|change] default: always
+    on_start: never # options: [always|never|change] default: always
