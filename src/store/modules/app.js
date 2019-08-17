@@ -3,14 +3,35 @@ import isUndefined from 'lodash/isUndefined';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
-import { getPreferredLayout } from '@/jquery';
+import { getPreferredLayout, getExclusionList } from '@/jquery';
 import { localStorageSet, localStorageLoad, CONSTS } from '../localStorage';
-import { getExclusionList } from '@/jquery';
+
+function setDefaultConfiguratorSettings() {
+  const initialConfig = {
+    version: CONSTS.configuratorSettingsVersion,
+    darkmodeEnabled: false,
+    favoriteKeyboard: ''
+  };
+  localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
+}
+
+function loadSettings() {
+  try {
+    let conf = JSON.parse(localStorageLoad(CONSTS.configuratorSettings));
+    if (!conf) {
+      return setDefaultConfiguratorSettings();
+    }
+    return conf;
+  } catch {
+    return setDefaultConfiguratorSettings();
+  }
+}
 
 const state = {
   keyboard: '',
-  favoriteKeyboard: localStorageLoad(CONSTS.favoriteKeyboard),
+  configuratorSettings: loadSettings(),
   keyboards: [],
+  appInitialized: false,
   _keyboards: [],
   layout: '',
   layouts: {},
@@ -33,7 +54,6 @@ const state = {
   author: '',
   notes: '',
   tutorialEnabled: false,
-  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false,
   electron: false
 };
 
@@ -74,18 +94,22 @@ const actions = {
     }
     return true;
   },
-  fetchKeyboards({ commit }) {
-    return axios.get(backend_keyboards_url).then(r => {
-      if (r.status === 200) {
-        const exclude = getExclusionList();
-        commit(
-          'setKeyboards',
-          r.data.filter(keeb => {
-            return isUndefined(exclude[keeb]);
-          })
-        );
-      }
-    });
+  validateKeyboard({ state }, keyboard) {
+    const valid = state.keyboards.includes(keyboard);
+    console.info(`Validate keyboard:${keyboard} valid:${valid}`);
+    return valid;
+  },
+  async fetchKeyboards({ commit }) {
+    const r = await axios.get(backend_keyboards_url);
+    if (r.status === 200) {
+      const exclude = getExclusionList();
+      commit(
+        'setKeyboards',
+        r.data.filter(keeb => {
+          return isUndefined(exclude[keeb]);
+        })
+      );
+    }
   },
   loadDefaultKeymap(_, keyboardName) {
     return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
@@ -174,28 +198,56 @@ const actions = {
         return resp;
       });
   },
+  saveConfiguratorSettings({ state }) {
+    localStorageSet(
+      CONSTS.configuratorSettings,
+      JSON.stringify(state.configuratorSettings)
+    );
+  },
   // if init state we just load and not toggling
-  toggleDarkMode({ commit, state }, init) {
-    let darkStatus = state.darkmodeEnabled;
+  toggleDarkMode({ commit, state, dispatch }, init) {
+    let darkStatus = state.configuratorSettings.darkmodeEnabled;
     if (!init) {
       darkStatus = !darkStatus;
     }
     if (darkStatus) {
-      localStorageSet('darkmode', '1');
       document.getElementsByTagName('html')[0].dataset.theme = 'dark';
     } else {
-      localStorageSet('darkmode', '0');
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
+    dispatch('saveConfiguratorSettings');
   },
-  loadApplicationState({ dispatch }) {
+  setFavoriteKeyboard({ commit, dispatch }, keyboard) {
+    commit('setFavoriteKeyboard', keyboard);
+    dispatch('saveConfiguratorSettings');
+  },
+  async loadApplicationState({ commit, dispatch }) {
+    console.log('loadApplicationState Start');
+    await dispatch('fetchKeyboards');
+    await dispatch('loadFavoriteKeyboard');
     dispatch('toggleDarkMode', true);
-    dispatch('loadFavoriteKeyboard');
+    console.log('loadApplicationState End');
+    commit('setAppInitialized', true);
   },
-  loadFavoriteKeyboard({ state, commit }) {
-    if (state.favoriteKeyboard) {
-      commit('setKeyboard', state.favoriteKeyboard);
+  async loadFavoriteKeyboard({ dispatch, state, commit }) {
+    if (state.configuratorSettings.favoriteKeyboard) {
+      if (
+        await dispatch(
+          'validateKeyboard',
+          state.configuratorSettings.favoriteKeyboard
+        )
+      ) {
+        console.info(
+          `setKeyboard ${state.configuratorSettings.favoriteKeyboard}`
+        );
+        commit('setKeyboard', state.configuratorSettings.favoriteKeyboard);
+      } else {
+        console.info('erase wrong keyboard');
+        commit('setFavoriteKeyboard', '');
+        dispatch('saveConfiguratorSettings');
+        // localStoreRemove(CONSTS.favoriteKeyboard);
+      }
     }
   }
 };
@@ -229,8 +281,7 @@ const mutations = {
     state.keyboard = _keyboard;
   },
   setFavoriteKeyboard(state, _keyboard) {
-    state.favoriteKeyboard = _keyboard;
-    localStorageSet('favoriteKeyboard', _keyboard);
+    state.configuratorSettings.favoriteKeyboard = _keyboard;
   },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;
@@ -306,6 +357,9 @@ const mutations = {
     }
     return {};
   },
+  setAppInitialized(state, status) {
+    state.appInitialized = status;
+  },
   setKeypressListener(state, kpl) {
     // store a function which returns a reference to avoid vuex
     // complaints about modifying the original reference as it's
@@ -355,7 +409,7 @@ const mutations = {
     state.tutorialEnabled = !state.tutorialEnabled;
   },
   setDarkmode(state, enabled) {
-    state.darkmodeEnabled = enabled;
+    state.configuratorSettings.darkmodeEnabled = enabled;
   }
 };
 

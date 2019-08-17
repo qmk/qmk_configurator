@@ -5,7 +5,9 @@
         <a
           id="favorite-keyboard"
           v-on:click="favKeyboard"
-          v-bind:class="{ active: keyboard === favoriteKeyboard }"
+          v-bind:class="{
+            active: keyboard === configuratorSettings.favoriteKeyboard
+          }"
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
@@ -100,8 +102,8 @@ export default {
       'keyboard',
       'keyboards',
       'layouts',
-      'compileDisabled',
-      'favoriteKeyboard'
+      'configuratorSettings',
+      'compileDisabled'
     ]),
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
@@ -201,7 +203,11 @@ export default {
       'startListening',
       'previewRequested'
     ]),
-    ...mapActions('app', ['fetchKeyboards', 'loadDefaultKeymap']),
+    ...mapActions('app', [
+      'fetchKeyboards',
+      'loadDefaultKeymap',
+      'setFavoriteKeyboard'
+    ]),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -240,7 +246,9 @@ export default {
         .catch(error => {
           this.logLoadDefaultFail(keyboardName);
           statusError(
-            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+            `\n* Sorry there is no default for the ${
+              this.keyboard
+            } keyboard... yet!`
           );
           console.log('error loadDefault', error);
         });
@@ -253,6 +261,7 @@ export default {
      * @returns {undefined}
      */
     initializeKeyboards() {
+      console.info(`initializeKeyboards: ${this.keyboard}`);
       let _keyboard = '';
       if (this.$route.query) {
         let filter = this.$route.query.filter;
@@ -263,13 +272,14 @@ export default {
 
       // if the store is initialized with a keyboard
       // we set it.
-      // But if there is paramets in the URL we prioritize it
-      if (this.$store.state.app.keyboard) {
-        _keyboard = this.$store.state.app.keyboard;
+      // But if there is parameters in the URL we prioritize it
+      if (this.keyboard) {
+        _keyboard = this.keyboard;
         console.info(`Loading keyboard from store:${_keyboard}`);
       } else {
         _keyboard = first(this.keyboards);
       }
+      console.log(`_keyboard:${_keyboard}`);
 
       // WIP:
       // if there is a url in the string we
@@ -308,10 +318,10 @@ export default {
         .then(this.postUpdateKeyboard);
     },
     favKeyboard() {
-      if (this.keyboard === this.favoriteKeyboard) {
-        this.$store.commit('app/setFavoriteKeyboard', '');
+      if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
+        this.setFavoriteKeyboard('');
       } else {
-        this.$store.commit('app/setFavoriteKeyboard', this.keyboard);
+        this.setFavoriteKeyboard(this.keyboard);
       }
     },
     postUpdateKeyboard() {
@@ -408,11 +418,11 @@ export default {
     };
   },
   mounted() {
-    this.fetchKeyboards()
-      .then(this.initializeKeyboards)
-      .then(() => {
-        this.loadDefault(true);
-      });
+    console.info('mounted start');
+    this.initializeKeyboards().then(() => {
+      this.loadDefault(true);
+    });
+    console.info('mounted end');
   }
 };
 </script>

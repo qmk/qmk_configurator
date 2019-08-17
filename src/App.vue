@@ -100,8 +100,10 @@ export default {
         to.name === 'print' || to.name === 'test' ? 'hideSettings' : '';
     }
   },
+  async beforeMount() {
+    await this.appLoad();
+  },
   mounted() {
-    this.appLoad();
     this.randomPotatoFact();
     this.interval = setInterval(() => {
       this.randomPotatoFact();
@@ -142,8 +144,8 @@ export default {
       const len = size(this.$t('message.potato'));
       this.potatoFact = this.$t('message.potato.' + random(1, len));
     },
-    appLoad() {
-      this.loadApplicationState();
+    async appLoad() {
+      await this.loadApplicationState();
     },
     dismiss() {
       this.setShowSpinner(false);

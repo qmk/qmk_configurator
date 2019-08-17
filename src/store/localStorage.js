@@ -1,6 +1,6 @@
 const CONSTS = {
-  favoriteKeyboard: 'favoriteKeyboard',
-  darkmode: 'darkmode'
+  configuratorSettings: 'configuratorSettings',
+  configuratorSettingsVersion: 1
 };
 
 function localStorageLoad(key) {
@@ -16,8 +16,15 @@ function localStorageSet(key, value) {
   }
 }
 
+function localStoreRemove(key) {
+  if (localStorage) {
+    localStorage.removeItem(key);
+  }
+}
+
 module.exports = {
   localStorageLoad,
   localStorageSet,
+  localStoreRemove,
   CONSTS
 };
