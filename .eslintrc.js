@@ -10,6 +10,7 @@ module.exports = {
     'plugin:cypress/recommended'
   ],
   rules: {
+    'cypress/no-unnecessary-waiting': 'off',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
