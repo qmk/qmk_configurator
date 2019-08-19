@@ -117,7 +117,8 @@ export default {
         },
         toggleTutorial: {
           label: 'Video Tutorial',
-          help: 'Mechmerlin video guide'
+          title: 'MechMerlin how-to video on Configurator',
+           help: 'MechMerlin video guide'
         },
         darkmode: {
           label: 'Toggle Darkmode',

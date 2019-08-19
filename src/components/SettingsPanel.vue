@@ -39,7 +39,7 @@
         <label
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.displaySizes.title')"
+          :title="$t('message.settingsPanel.toggleTutorial.title')"
           >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
