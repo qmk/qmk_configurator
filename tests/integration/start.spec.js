@@ -31,6 +31,7 @@ describe('Simple browsing', function() {
     cy.get('.slideout-panel-bg').click();
   });
   it('Tester should be accessible and instanciated', function() {
+    cy.wait(1000);
     cy.get('#testkeys').click();
     cy.get('.visual-tester-keymap', { timeout: 5000 }).should('be.visible');
   });
