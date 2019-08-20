@@ -3,7 +3,8 @@
 .dsa-galaxy-class-key {
   background: $color-sp-pbt-BFE;
   color: $color-sp-pbt-BLACK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-pbt-BFE, 10%);
     color: $color-sp-pbt-BLACK;
     border-color: mix($color-sp-pbt-BFE, $color-sp-pbt-BLACK);
@@ -13,7 +14,8 @@
   // yellow
   background: $color-pantone-141C;
   color: $color-sp-pbt-BLACK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-pantone-141C, 10%);
     color: $color-sp-pbt-BLACK;
     border-color: mix(lighten($color-pantone-141C, 10%), $color-sp-pbt-BLACK);
@@ -60,7 +62,8 @@
 .sa-carbon-key {
   background: $color-sp-abs-WBO;
   color: $color-sp-abs-GQM;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-WBO, 10%);
     color: $color-sp-abs-GQM;
     border-color: mix($color-sp-abs-WBO, $color-sp-abs-GQM);
@@ -69,7 +72,8 @@
 .sa-carbon-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-OBC;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-GQM, 12%);
     color: lighten($color-sp-abs-OBC, 19%);
     border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
@@ -83,7 +87,8 @@
 .sa-danger-zone-key {
   background: $color-sp-abs-BFU;
   color: $color-sp-abs-YY;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-BFU, 10%);
     color: $color-sp-abs-YY;
     border-color: mix($color-sp-abs-BFU, $color-sp-abs-YY);
@@ -92,7 +97,8 @@
 .sa-danger-zone-mod {
   background: $color-sp-abs-GSM;
   color: $color-sp-abs-YY;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-GSM, 10%);
     color: $color-sp-abs-YY;
     border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
@@ -112,7 +118,8 @@
 .sa-jukebox-key {
   background: $color-sp-abs-TM;
   color: $color-sp-abs-RN;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-TM, 10%);
     color: darken($color-sp-abs-RN, 10%);
     border-color: mix($color-sp-abs-TM, darken($color-sp-abs-RN, 10%));
@@ -121,7 +128,8 @@
 .sa-jukebox-mod {
   background: $color-sp-abs-VCO;
   color: $color-sp-abs-RN;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-VCO, 12%);
     color: darken($color-sp-abs-RN, 10%);
     border-color: mix($color-sp-abs-VCO, darken($color-sp-abs-RN, 10%));
@@ -140,7 +148,8 @@
 .sa-modern-selectric-key {
   background: $color-sp-abs-NN;
   color: $color-sp-abs-WFK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-NN, 10%);
     color: $color-sp-abs-WFK;
     border-color: mix($color-sp-abs-NN, $color-sp-abs-WFK);
@@ -149,7 +158,8 @@
 .sa-modern-selectric-mod {
   background: $color-sp-abs-BDH;
   color: $color-sp-abs-WFK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-BDH, 10%);
     color: $color-sp-abs-WFK;
     border-color: mix($color-sp-abs-BDH, $color-sp-abs-WFK);
@@ -161,7 +171,8 @@
 .sa-nantucket-selectric-key {
   background: $color-sp-abs-WV;
   color: $color-sp-abs-BBI;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-WV, 10%);
     color: $color-sp-abs-BBI;
     border-color: mix($color-sp-abs-WV, $color-sp-abs-BBI);
@@ -170,7 +181,8 @@
 .sa-nantucket-selectric-mod {
   background: $color-sp-abs-BBI;
   color: $color-sp-abs-YCF;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-BBI, 10%);
     color: $color-sp-abs-YCF;
     border-color: mix($color-sp-abs-BBI, $color-sp-abs-YCF);
@@ -182,7 +194,8 @@
 .sa-oblivion-hagoromo-key {
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-sp-abs-WFK, 10%);
     color: darken($color-sp-abs-GD, 10%);
     border-color: mix($color-sp-abs-WFK, darken($color-sp-abs-GD, 10%));
@@ -191,7 +204,8 @@
 .sa-oblivion-hagoromo-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-GAL;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-GQM, 10%);
     color: lighten($color-sp-abs-GAL, 17%);
     border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-GAL, 17%));
@@ -207,7 +221,8 @@
 .sa-vilebloom-key {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-pantone-7699C, 10%);
     color: $color-sp-abs-WFK;
     border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
@@ -217,7 +232,8 @@
 .sa-vilebloom-mod {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-pantone-7699C, 10%);
     color: $color-sp-abs-WFK;
     border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
@@ -251,12 +267,12 @@
 .sa-vilebloom-kb {
 }
 
-
 // GMK Keysets
 .gmk-bento-key {
   background: #fff3ef;
   color: #3e728f;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: #fff3ef;
     color: darken(#3e728f, 9%);
     border-color: mix(#fff3ef, darken(#3e728f, 9%));
@@ -265,7 +281,8 @@
 .gmk-bento-mod {
   background: #3e728f;
   color: #fb7279;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#3e728f, 17%);
     color: lighten(#fb7279, 17%);
     border-color: mix(#3e728f, lighten(#fb7279, 17%));
@@ -278,21 +295,22 @@
 
 .gmk-bento-key {
   background: #fff3ef;
-  color:#3e728f;
+  color: #3e728f;
 }
 .gmk-bento-mod {
-  background:#3e728f;
-  color:#fb7279;
+  background: #3e728f;
+  color: #fb7279;
 }
 .gmk-bento-accent {
-  background:#fb7279;
-  color:#fff3ef;
+  background: #fb7279;
+  color: #fff3ef;
 }
 
 .gmk-dolch-key {
   background: $color-gmk-abs-CC;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-gmk-abs-CC, 10%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
@@ -301,7 +319,8 @@
 .gmk-dolch-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-gmk-abs-N9, 10%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
@@ -313,7 +332,8 @@
 .gmk-jamon-key {
   background: #84172c;
   color: #ece4d0;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#84172c, 10%);
     color: #ece4d0;
     border-color: mix(#84172c, #ece4d0);
@@ -322,7 +342,8 @@
 .gmk-jamon-mod {
   background: #ac2c32;
   color: #ece4d0;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#ac2c32, 10%);
     color: #ece4d0;
     border-color: mix(darken(#ac2c32, 10%), #ece4d0);
@@ -343,7 +364,8 @@
 .gmk-merlin-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-TU1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-CP, 10%);
     color: darken($color-gmk-abs-TU1, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-TU1, 5%));
@@ -352,7 +374,8 @@
 .gmk-merlin-mod {
   background: $color-gmk-abs-TU1;
   color: $color-gmk-abs-N6;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-gmk-abs-TU1, 10%);
     color: $color-gmk-abs-N6;
     border-color: mix($color-gmk-abs-TU1, $color-gmk-abs-N6);
@@ -371,7 +394,8 @@
 .gmk-metaverse-key {
   background: $color-gmk-abs-WS1;
   color: $color-gmk-abs-CR;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-WS1, 10%);
     color: $color-gmk-abs-CR;
     border-color: mix($color-gmk-abs-WS1, $color-gmk-abs-CR);
@@ -380,7 +404,8 @@
 .gmk-metaverse-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     color: $color-gmk-abs-WS1;
     background: lighten($color-gmk-abs-CR, 10%);
     color: $color-gmk-abs-WS1;
@@ -398,7 +423,8 @@
 .gmk-mizu-key {
   background: #c2d9e4;
   color: #444f58;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#c2d9e4, 10%);
     color: #444f58;
     border-color: mix(#c2d9e4, #444f58);
@@ -407,7 +433,8 @@
 .gmk-mizu-mod {
   background: #444f58;
   color: #f7eee3;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#444f58, 5%);
     color: #f7eee3;
     border-color: mix(#444f58, #f7eee3);
@@ -421,7 +448,8 @@
 .gmk-nautilus-key {
   background: $color-pantone-534C;
   color: $color-gmk-abs-TU2;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-pantone-534C, 10%);
     color: lighten($color-gmk-abs-TU2, 5%);
     border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
@@ -430,7 +458,8 @@
 .gmk-nautilus-mod {
   background: $color-pantone-533C;
   color: $color-gmk-abs-N6;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-pantone-533C, 10%);
     color: $color-gmk-abs-N6;
     border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
@@ -451,7 +480,8 @@
 .gmk-olivetti-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-CP, 10%);
     color: darken($color-gmk-abs-V4, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
@@ -460,7 +490,8 @@
 .gmk-olivetti-mod {
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-V4;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-U9, 10%);
     color: darken($color-gmk-abs-V4, 15%);
     border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
@@ -476,7 +507,8 @@
 .gmk-olivia-key {
   background: $color-gmk-abs-CP;
   color: #363434;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-CP, 10%);
     color: #363434;
     border-color: mix($color-gmk-abs-CP, #363434);
@@ -485,7 +517,8 @@
 .gmk-olivia-mod {
   background: #363434;
   color: #e8c4b8;
-  input, .key-contents {
+  input,
+  .key-contents {
     color: #e8c4b8;
     background: darken(#363434, 10%);
     border-color: mix(#363434, #e8c4b8);
@@ -501,7 +534,8 @@
 .gmk-plum-key {
   background: #ded0af;
   color: #736b7c;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten(#ded0af, 13%);
     color: darken(#736b7c, 13%);
     border-color: mix(#ded0af, darken(#736b7c, 13%));
@@ -510,7 +544,8 @@
 .gmk-plum-mod {
   background: #736b7c;
   color: #ded0af;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#736b7c, 13%);
     color: lighten(#ded0af, 13%);
     border-color: mix(#736b7c, lighten(#ded0af, 13%));
@@ -524,7 +559,8 @@
 .gmk-serika-key {
   background: #ece4d0;
   color: #333732;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten(#ece4d0, 10%);
     color: #333732;
     border-color: mix(#ece4d0, #333732);
@@ -533,7 +569,8 @@
 .gmk-serika-mod {
   background: #ffcd00;
   color: #333732;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten(#ffcd00, 10%);
     color: #333732;
     border-color: mix(#ffcd00, #333732);
@@ -549,7 +586,8 @@
 .gmk-space-cadet-key {
   background: $color-sp-abs-GD;
   color: $color-gmk-abs-CP;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-GD, 10%);
     color: lighten($color-gmk-abs-CP, 10%);
     border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 10%));
@@ -559,7 +597,8 @@
 .gmk-space-cadet-mod {
   background: $color-sp-abs-BFP;
   color: $color-gmk-abs-CP;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-sp-abs-BFP, 10%);
     color: lighten($color-gmk-abs-CP, 10%);
     border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 10%));
@@ -571,7 +610,8 @@
 .gmk-striker-key {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#004d7c, 5%);
     color: $color-gmk-abs-WS1;
     border-color: mix(#004d7c, $color-gmk-abs-WS1);
@@ -580,7 +620,8 @@
 .gmk-striker-mod {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#004d7c, 5%);
     color: $color-gmk-abs-WS1;
     border-color: mix(#004d7c, $color-gmk-abs-WS1);
@@ -594,17 +635,18 @@
 .gmk-ta-royal-alpha-key {
   background: $color-gmk-abs-3K;
   color: $color-gmk-abs-N7;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-3K, 10%);
     color: darken($color-gmk-abs-N7, 10%);
     border-color: mix($color-gmk-abs-3K, darken($color-gmk-abs-N7, 10%));
-
   }
 }
 .gmk-ta-royal-alpha-mod {
   background: $color-gmk-abs-AE;
   color: $color-gmk-abs-CP;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-gmk-abs-AE, 17%);
     color: lighten($color-gmk-abs-CP, 10%);
     border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
@@ -618,10 +660,12 @@
   // placeholder
 }
 
-.gmk-terminal-key, .gmk-terminal-mod {
+.gmk-terminal-key,
+.gmk-terminal-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-AE;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken($color-gmk-abs-N9, 10%);
     color: lighten($color-gmk-abs-AE, 9%);
     border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 9%));
@@ -635,7 +679,8 @@
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-CR, 10%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
@@ -644,7 +689,8 @@
 .gmk-wob-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten($color-gmk-abs-CR, 10%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
@@ -656,7 +702,8 @@
 .gmk-yuri-key {
   background: #c7e6f5;
   color: #f54730;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: lighten(#c7e6f5, 5%);
     color: darken(#f54730, 26%);
     border-color: mix(#c7e6f5, darken(#f54730, 26%));
@@ -665,7 +712,8 @@
 .gmk-yuri-mod {
   background: #2d394c;
   color: #f54730;
-  input, .key-contents {
+  input,
+  .key-contents {
     background: darken(#2d394c, 14%);
     color: lighten(#f54730, 14%);
     border-color: mix(#2d394c, lighten(#f54730, 14%));
@@ -675,7 +723,6 @@
   background: #f54730;
   color: #2d394c;
 }
-
 
 // Keyreative
 
@@ -694,4 +741,25 @@
   }
 }
 .dsa-drifter-kb {
+}
+
+.dsa-milkshake-key,
+.dsa-milkshake-mod {
+  background: white;
+  color: #232d43;
+}
+.dsa-milkshake-esc {
+  background: #f0849e;
+}
+.dsa-milkshake-backspace {
+  background: #f1ed8a;
+}
+.dsa-milkshake-enter {
+  background: #8ce1ce;
+}
+.dsa-milkshake-alt {
+  background: #75cde8;
+}
+.dsa-milkshake-os {
+  background: #c091ed;
 }
