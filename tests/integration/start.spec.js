@@ -13,7 +13,7 @@ describe('Simple browsing', function() {
     ]);
     cy.visit('/');
   });
-  it('Top Controller should be instanciated and visible', function() {
+  it('Top Controller should be instantiated and visible', function() {
     cy.get('#controller-top').should('be.visible');
   });
   it('Visual Keymap should be visible', function() {
@@ -30,7 +30,7 @@ describe('Simple browsing', function() {
     cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
     cy.get('.slideout-panel-bg').click();
   });
-  it('Tester should be accessible and instanciated', function() {
+  it('Tester should be accessible and instantiated', function() {
     cy.wait(1000);
     cy.get('#testkeys').click();
     cy.get('.visual-tester-keymap', { timeout: 5000 }).should('be.visible');
