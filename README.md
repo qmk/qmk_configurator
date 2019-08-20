@@ -49,8 +49,9 @@ yarn run lint
 ```
 
 ### Run your end-to-end tests
+Start the server separatly
 ```
-yarn run test:e2e
+yarn run test:cypress
 ```
 
 ### Run your unit tests
