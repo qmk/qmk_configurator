@@ -13,6 +13,7 @@ function setDefaultConfiguratorSettings() {
     favoriteKeyboard: ''
   };
   localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
+  return initialConfig;
 }
 
 function loadSettings() {
