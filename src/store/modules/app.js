@@ -90,7 +90,7 @@ const getters = {
 
 const actions = {
   checkValidKeymap(_, keymap) {
-    if (
+    return isUndefined(keymap.keyboard) || isUndefined(keymap.keymap)  || isUndefined(keymap.layout) || isUndefined(keymap.layers);
       isUndefined(keymap.keyboard) ||
       isUndefined(keymap.keymap) ||
       isUndefined(keymap.layout) ||
