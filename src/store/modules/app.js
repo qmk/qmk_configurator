@@ -62,6 +62,11 @@ const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
   firmwareFile: state => state.firmwareFile,
+  validateKeyboard: state => keyboard => {
+    const valid = state.keyboards.includes(keyboard);
+    console.info(`Validate keyboard:${keyboard} valid:${valid}`);
+    return valid;
+  },
   filter: state => state.filter,
   /**
    * keymapName
@@ -94,11 +99,6 @@ const actions = {
       return false;
     }
     return true;
-  },
-  validateKeyboard({ state }, keyboard) {
-    const valid = state.keyboards.includes(keyboard);
-    console.info(`Validate keyboard:${keyboard} valid:${valid}`);
-    return valid;
   },
   async fetchKeyboards({ commit }) {
     const r = await axios.get(backend_keyboards_url);
@@ -231,13 +231,10 @@ const actions = {
     console.log('loadApplicationState End');
     commit('setAppInitialized', true);
   },
-  async loadFavoriteKeyboard({ dispatch, state, commit }) {
+  async loadFavoriteKeyboard({ dispatch, state, getters, commit }) {
     if (state.configuratorSettings.favoriteKeyboard) {
       if (
-        await dispatch(
-          'validateKeyboard',
-          state.configuratorSettings.favoriteKeyboard
-        )
+        getters.validateKeyboard(state.configuratorSettings.favoriteKeyboard)
       ) {
         console.info(
           `setKeyboard ${state.configuratorSettings.favoriteKeyboard}`
