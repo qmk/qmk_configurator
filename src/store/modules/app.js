@@ -104,13 +104,13 @@ const actions = {
     const r = await axios.get(backend_keyboards_url);
     if (r.status === 200) {
       const exclude = getExclusionList();
-      commit(
-        'setKeyboards',
-        r.data.filter(keeb => {
-          return isUndefined(exclude[keeb]);
-        })
-      );
+      const results = r.data.filter(keeb => {
+        return isUndefined(exclude[keeb]);
+      });
+      commit('setKeyboards', results);
+      return results;
     }
+    return [];
   },
   loadDefaultKeymap(_, keyboardName) {
     return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
@@ -206,7 +206,7 @@ const actions = {
     );
   },
   // if init state we just load and not toggling
-  toggleDarkMode({ commit, state, dispatch }, init) {
+  async toggleDarkMode({ commit, state, dispatch }, init) {
     let darkStatus = state.configuratorSettings.darkmodeEnabled;
     if (!init) {
       darkStatus = !darkStatus;
@@ -217,17 +217,17 @@ const actions = {
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
-    dispatch('saveConfiguratorSettings');
+    await dispatch('saveConfiguratorSettings');
   },
-  setFavoriteKeyboard({ commit, dispatch }, keyboard) {
+  async setFavoriteKeyboard({ commit, dispatch }, keyboard) {
     commit('setFavoriteKeyboard', keyboard);
-    dispatch('saveConfiguratorSettings');
+    await dispatch('saveConfiguratorSettings');
   },
   async loadApplicationState({ commit, dispatch }) {
     console.log('loadApplicationState Start');
     await dispatch('fetchKeyboards');
     await dispatch('loadFavoriteKeyboard');
-    dispatch('toggleDarkMode', true);
+    await dispatch('toggleDarkMode', true);
     console.log('loadApplicationState End');
     commit('setAppInitialized', true);
   },
@@ -244,10 +244,11 @@ const actions = {
         );
         commit('setKeyboard', state.configuratorSettings.favoriteKeyboard);
       } else {
-        console.info('erase wrong keyboard');
+        console.info(
+          'Invalid keyboard favorited. Removing setting from local storage'
+        );
         commit('setFavoriteKeyboard', '');
-        dispatch('saveConfiguratorSettings');
-        // localStoreRemove(CONSTS.favoriteKeyboard);
+        await dispatch('saveConfiguratorSettings');
       }
     }
   }
