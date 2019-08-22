@@ -293,7 +293,7 @@ export default {
         keyboardP !== '' &&
         keyboardP !== PREVIEW_LABEL
       ) {
-        // if someone loads a specific keyboard log it
+        // if someone loads a specific keyboard load it
         _keyboard = keyboardP;
         this.firstRun = false;
       }
