@@ -223,9 +223,8 @@ export default {
           return false;
         }
       }
-      const keyboardName = this.keyboard.replace(/\//g, '_');
       const store = this.$store;
-      this.loadDefaultKeymap(keyboardName)
+      this.loadDefaultKeymap()
         .then(data => {
           if (data) {
             console.log(data);
@@ -234,8 +233,6 @@ export default {
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             );
             promise.then(() => {
-              this.logLoadDefaultSuccess(keyboardName);
-
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('message.statsTemplate', stats);
@@ -247,7 +244,6 @@ export default {
           }
         })
         .catch(error => {
-          this.logLoadDefaultFail(keyboardName);
           statusError(
             `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
@@ -311,8 +307,6 @@ export default {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
-      } else {
-        this.logChangeKeyboard(newKeyboard);
       }
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
@@ -348,7 +342,6 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
-      this.logCompile(this.keyboard);
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store
@@ -382,34 +375,6 @@ export default {
     },
     blur() {
       this.startListening();
-    },
-    logCompile(keyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'compilation',
-        eventLabel: keyboard
-      });
-    },
-    logLoadDefaultSuccess(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultSuccess',
-        eventLabel: keyboardName
-      });
-    },
-    logLoadDefaultFail(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultFail',
-        eventLabel: keyboardName
-      });
-    },
-    logChangeKeyboard(newKeyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'changeKeyboard',
-        eventLabel: newKeyboard
-      });
     }
   },
   data: () => {

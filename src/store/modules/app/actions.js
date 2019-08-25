@@ -7,6 +7,9 @@ import { localStorageSet, CONSTS } from '@/store/localStorage';
 const steno_keyboards = ['gergo', 'georgi'];
 
 const actions = {
+  /**
+   * fetchKeyboards - fetch keyboard list from API
+   */
   async fetchKeyboards({ commit }) {
     const r = await axios.get(backend_keyboards_url);
     if (r.status === 200) {
@@ -19,13 +22,20 @@ const actions = {
     }
     return [];
   },
-  loadDefaultKeymap(_, keyboardName) {
+  /**
+   * load the default keymap for the currently selected keyboard
+   */
+  loadDefaultKeymap({ state }) {
+    const keyboardName = state.keyboard.replace(/\//g, '_');
     return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
       if (r.status === 200) {
         return r.data;
       }
     });
   },
+  /**
+   * load keymap from the selected URL
+   */
   loadKeymapFromUrl(_, url) {
     return axios.get(url).then(r => {
       return r.data;
