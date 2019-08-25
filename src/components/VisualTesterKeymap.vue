@@ -26,21 +26,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">
-            {{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{
+            $t('message.tester.letters.key.label')
+          }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('message.tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('message.tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -62,9 +62,9 @@
           max="100"
           step="1"
         />
-        <span id="chatter-alert" v-show="chatterDetected">{{
-          $t('message.tester.chatter.detectedAlert')
-        }}</span>
+        <span id="chatter-alert" v-show="chatterDetected">
+          {{ $t('message.tester.chatter.detectedAlert') }}
+        </span>
       </div>
     </div>
     <p>
@@ -189,10 +189,12 @@ export default {
       return (endTs - this.timing[ev.code]).toFixed(3);
     },
     createKeyListeners() {
+      this.lastKeyHit = {};
       document.addEventListener('keydown', this.keydown);
       document.addEventListener('keyup', this.keyup);
     },
     destroyKeyListeners() {
+      this.lastKeyHit = {};
       document.removeEventListener('keydown', this.keydown);
       document.removeEventListener('keyup', this.keyup);
     },
@@ -208,10 +210,11 @@ export default {
         this.setDetected({
           pos
         });
-        if (Number(elapsedTime) < this.chatterThreshold) {
-          this.setChatterDetected({ pos });
-        }
       }
+      this.lastKeyDown = {
+        pos,
+        time: endTS
+      };
     },
     keydown(ev) {
       if (ev.repeat) {
@@ -229,6 +232,13 @@ export default {
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
         this.setActive({ pos });
+      }
+      if (
+        this.lastKeyDown &&
+        pos === this.lastKeyDown.pos &&
+        this.timing[ev.code] - this.lastKeyDown.time < this.chatterThreshold
+      ) {
+        this.setChatterDetected({ pos });
       }
     },
     scrollToEnd() {
@@ -284,6 +294,7 @@ export default {
   data() {
     return {
       chatterThreshold: 8,
+      lastKeyHit: {},
       width: 0,
       height: 0,
       status: '',
