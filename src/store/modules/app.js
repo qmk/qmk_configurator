@@ -3,24 +3,36 @@ import isUndefined from 'lodash/isUndefined';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL, backend_keyboards_url } from './constants';
-import { getPreferredLayout } from '@/jquery';
+import { getPreferredLayout, getExclusionList } from '@/jquery';
+import { localStorageSet, localStorageLoad, CONSTS } from '../localStorage';
 
-// TODO: (Zekth) export it in an external wrapper
-function localStorageLoad(key) {
-  if (localStorage) {
-    return localStorage.getItem(key);
-  }
-  return null;
+function setDefaultConfiguratorSettings() {
+  const initialConfig = {
+    version: CONSTS.configuratorSettingsVersion,
+    darkmodeEnabled: false,
+    favoriteKeyboard: ''
+  };
+  localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
+  return initialConfig;
 }
-function localStorageSet(key, value) {
-  if (localStorage) {
-    localStorage.setItem(key, value);
+
+function loadSettings() {
+  try {
+    let conf = JSON.parse(localStorageLoad(CONSTS.configuratorSettings));
+    if (!conf) {
+      return setDefaultConfiguratorSettings();
+    }
+    return conf;
+  } catch {
+    return setDefaultConfiguratorSettings();
   }
 }
 
 const state = {
   keyboard: '',
+  configuratorSettings: loadSettings(),
   keyboards: [],
+  appInitialized: false,
   _keyboards: [],
   layout: '',
   layouts: {},
@@ -43,7 +55,6 @@ const state = {
   author: '',
   notes: '',
   tutorialEnabled: false,
-  darkmodeEnabled: localStorageLoad('darkmode') === '1' || false,
   electron: false
 };
 
@@ -51,6 +62,11 @@ const steno_keyboards = ['gergo', 'georgi'];
 
 const getters = {
   firmwareFile: state => state.firmwareFile,
+  validateKeyboard: state => keyboard => {
+    const valid = state.keyboards.includes(keyboard);
+    console.info(`Validate keyboard:${keyboard} valid:${valid}`);
+    return valid;
+  },
   filter: state => state.filter,
   /**
    * keymapName
@@ -73,6 +89,33 @@ const getters = {
 };
 
 const actions = {
+  checkValidKeymap(_, keymap) {
+    return isUndefined(keymap.keyboard) || isUndefined(keymap.keymap)  || isUndefined(keymap.layout) || isUndefined(keymap.layers);
+  },
+  async fetchKeyboards({ commit }) {
+    const r = await axios.get(backend_keyboards_url);
+    if (r.status === 200) {
+      const exclude = getExclusionList();
+      const results = r.data.filter(keeb => {
+        return isUndefined(exclude[keeb]);
+      });
+      commit('setKeyboards', results);
+      return results;
+    }
+    return [];
+  },
+  loadDefaultKeymap(_, keyboardName) {
+    return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
+      if (r.status === 200) {
+        return r.data;
+      }
+    });
+  },
+  loadKeymapFromUrl(_, url) {
+    return axios.get(url).then(r => {
+      return r.data;
+    });
+  },
   /**
    *  changeKeyboard - change the keyboard state
    *  @param {object} internal store state
@@ -82,7 +125,7 @@ const actions = {
   changeKeyboard({ state, commit, dispatch }, keyboard) {
     const store = this;
     let clearKeymap = false;
-    let promise = new Promise(resolve => {
+    const promise = new Promise(resolve => {
       commit('disablePreview');
       commit('enableCompile');
       if (state.keyboard !== keyboard) {
@@ -148,20 +191,55 @@ const actions = {
         return resp;
       });
   },
+  saveConfiguratorSettings({ state }) {
+    localStorageSet(
+      CONSTS.configuratorSettings,
+      JSON.stringify(state.configuratorSettings)
+    );
+  },
   // if init state we just load and not toggling
-  toggleDarkMode({ commit, state }, init) {
-    let darkStatus = state.darkmodeEnabled;
+  async toggleDarkMode({ commit, state, dispatch }, init) {
+    let darkStatus = state.configuratorSettings.darkmodeEnabled;
     if (!init) {
       darkStatus = !darkStatus;
     }
     if (darkStatus) {
-      localStorageSet('darkmode', '1');
       document.getElementsByTagName('html')[0].dataset.theme = 'dark';
     } else {
-      localStorageSet('darkmode', '0');
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
+    await dispatch('saveConfiguratorSettings');
+  },
+  async setFavoriteKeyboard({ commit, dispatch }, keyboard) {
+    commit('setFavoriteKeyboard', keyboard);
+    await dispatch('saveConfiguratorSettings');
+  },
+  async loadApplicationState({ commit, dispatch }) {
+    console.log('loadApplicationState Start');
+    await dispatch('fetchKeyboards');
+    await dispatch('loadFavoriteKeyboard');
+    await dispatch('toggleDarkMode', true);
+    console.log('loadApplicationState End');
+    commit('setAppInitialized', true);
+  },
+  async loadFavoriteKeyboard({ dispatch, state, getters, commit }) {
+    if (state.configuratorSettings.favoriteKeyboard) {
+      if (
+        getters.validateKeyboard(state.configuratorSettings.favoriteKeyboard)
+      ) {
+        console.info(
+          `setKeyboard ${state.configuratorSettings.favoriteKeyboard}`
+        );
+        commit('setKeyboard', state.configuratorSettings.favoriteKeyboard);
+      } else {
+        console.info(
+          'Invalid keyboard favorited. Removing setting from local storage'
+        );
+        commit('setFavoriteKeyboard', '');
+        await dispatch('saveConfiguratorSettings');
+      }
+    }
   }
 };
 
@@ -192,6 +270,9 @@ const mutations = {
   },
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
+  },
+  setFavoriteKeyboard(state, _keyboard) {
+    state.configuratorSettings.favoriteKeyboard = _keyboard;
   },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;
@@ -267,6 +348,9 @@ const mutations = {
     }
     return {};
   },
+  setAppInitialized(state, status) {
+    state.appInitialized = status;
+  },
   setKeypressListener(state, kpl) {
     // store a function which returns a reference to avoid vuex
     // complaints about modifying the original reference as it's
@@ -316,7 +400,7 @@ const mutations = {
     state.tutorialEnabled = !state.tutorialEnabled;
   },
   setDarkmode(state, enabled) {
-    state.darkmodeEnabled = enabled;
+    state.configuratorSettings.darkmodeEnabled = enabled;
   }
 };
 

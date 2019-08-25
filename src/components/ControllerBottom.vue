@@ -118,10 +118,14 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
 import Vue from 'vue';
 import { createNamespacedHelpers } from 'vuex';
-const { mapMutations, mapState, mapGetters } = createNamespacedHelpers('app');
+const {
+  mapMutations,
+  mapActions,
+  mapState,
+  mapGetters
+} = createNamespacedHelpers('app');
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import escape from 'lodash/escape';
@@ -184,17 +188,11 @@ export default {
   },
   methods: {
     ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
+    ...mapActions(['loadKeymapFromUrl', 'checkValidKeymap']),
     importUrlkeymap: function() {
-      const url = this.urlImport;
-      axios
-        .get(url)
-        .then(r => {
-          this.reader = new FileReader();
-          this.reader.onload = this.importJSONOnLoad;
-          const b = new Blob([JSON.stringify(r.data)], {
-            type: 'application/json'
-          });
-          this.reader.readAsText(b);
+      this.loadKeymapFromUrl(this.urlImport)
+        .then(data => {
+          this.loadJsonData(data);
         })
         .catch(() => {
           alert('Seems like there is an issue trying to get the file');
@@ -289,29 +287,13 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
-    importJSONOnLoad() {
-      let jsonText = this.reader.result;
-
-      let data;
-      try {
-        data = JSON.parse(jsonText);
-      } catch (error) {
-        console.log(error);
-        alert(this.$t('message.errors.invalidQMKKeymap'));
-        return;
-      }
-
+    loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
         alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
         return;
       }
 
-      if (
-        isUndefined(data.keyboard) ||
-        isUndefined(data.keymap) ||
-        isUndefined(data.layout) ||
-        isUndefined(data.layers)
-      ) {
+      if (!this.checkValidKeymap(data)) {
         alert(this.$t('message.errors.unknownJSON'));
         return;
       }
@@ -347,6 +329,16 @@ export default {
         disableOtherButtons();
       });
     },
+    importJSONOnLoad() {
+      try {
+        const data = JSON.parse(this.reader.result);
+        this.loadJsonData(data);
+      } catch (error) {
+        console.log(error);
+        alert(this.$t('message.errors.invalidQMKKeymap'));
+        return;
+      }
+    },
     infoPreviewChanged() {
       var files = this.$refs.infoPreviewElement.files;
       if (files.length === 0) {
@@ -360,8 +352,8 @@ export default {
       this.$refs.infoPreviewElement.value = ''; // clear value for chrome issue #83
     },
     previewInfoOnLoad() {
-      var jsonText = this.reader.result;
-      var data;
+      const jsonText = this.reader.result;
+      let data;
       try {
         data = JSON.parse(jsonText);
       } catch (error) {

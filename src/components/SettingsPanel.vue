@@ -62,7 +62,7 @@
       </div>
       <div>
         <toggle-button
-          :value="darkmodeEnabled"
+          :value="configuratorSettings.darkmodeEnabled"
           :sync="true"
           :labels="labels"
           @change="darkMode"
@@ -90,7 +90,7 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled', 'darkmodeEnabled'])
+    ...mapState('app', ['tutorialEnabled', 'configuratorSettings'])
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),

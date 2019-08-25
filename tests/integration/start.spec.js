@@ -1,5 +1,5 @@
 describe('Simple browsing', function() {
-  beforeEach(() => {
+  before(() => {
     cy.viewport('macbook-15');
     cy.server();
     cy.route('https://api.qmk.fm/v1/keyboards', [
@@ -11,6 +11,8 @@ describe('Simple browsing', function() {
       '2_milk',
       '30wer'
     ]);
+  });
+  beforeEach(() => {
     cy.visit('/');
   });
   it('Top Controller should be instantiated and visible', function() {

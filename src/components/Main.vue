@@ -1,14 +1,14 @@
 <template>
   <div>
     <div ref="console">
-      <controllerTop />
+      <controllerTop v-if="appInitialized" />
       <statusPanel />
       <controllerBottom />
     </div>
     <div class="hint">
-      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">{{
-        $t('message.downloadToolbox.label')
-      }}</a>
+      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
+        {{ $t('message.downloadToolbox.label') }}
+      </a>
     </div>
     <div class="split-content">
       <div class="left-side">
@@ -48,7 +48,11 @@
 
 <script>
 import capitalize from 'lodash/capitalize';
-import { mapMutations as _mapMutations, createNamespacedHelpers } from 'vuex';
+import {
+  mapMutations as _mapMutations,
+  createNamespacedHelpers,
+  mapState as _mapState
+} from 'vuex';
 const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
   'keymap'
 );
@@ -71,6 +75,7 @@ export default {
   },
   computed: {
     ...mapState(['continuousInput']),
+    ..._mapState('app', ['appInitialized']),
     ...mapGetters(['colorwayIndex', 'colorways']),
     curIndex: {
       get() {
