@@ -11,7 +11,9 @@
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
-        <label class="drop-label" id="drop-label-keyboard">{{ $t('message.keyboard.label') }}:</label>
+        <label class="drop-label" id="drop-label-keyboard"
+          >{{ $t('message.keyboard.label') }}:</label
+        >
         <v-select
           @search:focus="opened"
           @search:blur="blur"
@@ -27,7 +29,8 @@
           class="drop-label"
           :class="fontAdjustClasses"
           :title="$t('message.keymapName.label')"
-        >{{ $t('message.keymapName.label') }}:</label>
+          >{{ $t('message.keymapName.label') }}:</label
+        >
         <input
           id="keymap-name"
           type="text"
@@ -43,22 +46,29 @@
           id="load-default"
           :title="$t('message.loadDefault.title')"
           @click="loadDefault"
-        >{{ $t('message.loadDefault.label') }}</button>
+        >
+          {{ $t('message.loadDefault.label') }}
+        </button>
         <button
           id="compile"
           :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
-        >{{ $t('message.compile.label') }}</button>
+        >
+          {{ $t('message.compile.label') }}
+        </button>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label" id="drop-label-version">{{ $t('message.layout.label') }}:</label>
+        <label class="drop-label" id="drop-label-version"
+          >{{ $t('message.layout.label') }}:</label
+        >
         <select id="layout" v-model="layout">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-          >{{ layoutName }}</option>
+            >{{ layoutName }}</option
+          >
         </select>
       </div>
     </div>
