@@ -11,7 +11,7 @@ module.exports = {
   ],
   rules: {
     'cypress/no-unnecessary-waiting': 'off',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
   parserOptions: {
