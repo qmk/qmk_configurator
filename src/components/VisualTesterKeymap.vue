@@ -26,21 +26,21 @@
       <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">
-            {{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{
+            $t('message.tester.letters.key.label')
+          }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('message.tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('message.tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -62,9 +62,9 @@
           max="100"
           step="1"
         />
-        <span id="chatter-alert" v-show="chatterDetected">{{
-          $t('message.tester.chatter.detectedAlert')
-        }}</span>
+        <span id="chatter-alert" v-show="chatterDetected">
+          {{ $t('message.tester.chatter.detectedAlert') }}
+        </span>
       </div>
     </div>
     <p>
@@ -186,7 +186,7 @@ export default {
       ].join(' ');
     },
     getElapsedTime(ev, endTs) {
-      return (endTs - this.timing[ev.code]).toFixed(3);
+      return (endTs - this.timingKeyDown[ev.code]).toFixed(3);
     },
     createKeyListeners() {
       document.addEventListener('keydown', this.keydown);
@@ -198,6 +198,7 @@ export default {
     },
     keyup(ev) {
       const endTS = performance.now();
+      this.timingKeyUp[ev.code] = endTS;
       const elapsedTime = this.getElapsedTime(ev, endTS);
       const evStr = this.formatKeyEvent(ev, elapsedTime);
       ev.preventDefault();
@@ -208,18 +209,15 @@ export default {
         this.setDetected({
           pos
         });
-        if (Number(elapsedTime) < this.chatterThreshold) {
-          this.setChatterDetected({ pos });
-        }
       }
     },
     keydown(ev) {
       if (ev.repeat) {
         return;
       }
-      this.timing[ev.code] = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
+      this.timingKeyDown[ev.code] = performance.now();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
         this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
@@ -229,6 +227,19 @@ export default {
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
         this.setActive({ pos });
+
+        // Chatter detection is triggered when a switch
+        // triggers an event too quickly after the last
+        // keyUp of the switch. Which means the switch
+        // may be broken. QMK command LT() will not trigger
+        // it because it only sends one signal
+        if (
+          this.timingKeyUp[ev.code] &&
+          this.timingKeyDown[ev.code] - this.timingKeyUp[ev.code] <
+            this.chatterThreshold
+        ) {
+          this.setChatterDetected({ pos });
+        }
       }
     },
     scrollToEnd() {
@@ -287,7 +298,8 @@ export default {
       width: 0,
       height: 0,
       status: '',
-      timing: {},
+      timingKeyUp: {},
+      timingKeyDown: {},
       lastKey: '',
       lastCode: '',
       lastKeyCode: '',
