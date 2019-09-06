@@ -72,7 +72,7 @@ export default {
         title: 'Ctrl + Alt + N pour changer de coloris'
       },
       layer: {
-        label: 'Calque'
+        label: 'Calque',
         confirm: 'Etes-vous sur de vouloir effacer ce calque?',
         title: 'Efface le calque'
       },
