@@ -26,10 +26,10 @@ export default {
   },
   docs: {
     paragraph:
-      'Note: La touche et le code détecté.es peuvent varier selon votre localisation. Docs'
+      'Note: La touche et le code détectées peuvent varier selon votre localisation. Docs'
   },
   chatter: {
-    label: 'Seuil de détection d\'activations répétées (ms)',
-    detectedAlert: 'Activations répétées détectées'
+    label: 'Seuil de détection d\'activations répétées (chatter)(ms)',
+    detectedAlert: 'Activations répétées détectées (chatter)'
   }
 };
