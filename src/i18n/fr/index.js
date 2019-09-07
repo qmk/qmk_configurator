@@ -119,9 +119,9 @@ export default {
           help: 'Montre la taille des touches (une touche classique = 1 u)'
         },
         toggleTutorial: {
-          label: 'Vidéo Guide',
-          title: 'Vidéo guide de MechMerlin sur le configurateur (en Anglais)',
-           help: 'Vidéo guide de MechMerlin (en Anglais)'
+          label: 'Guide Vidéo',
+          title: 'Guide vidéo de MechMerlin sur le configurateur (en Anglais)',
+           help: 'Guide vidéo de MechMerlin (en Anglais)'
         },
         darkmode: {
           label: 'Mode Sombre',
