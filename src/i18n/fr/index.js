@@ -1,8 +1,15 @@
 import potato from './potato';
+import print from './print';
+import tester from './tester';
 export default {
   fr: {
     message: {
       ...potato,
+      help: {
+        label : 'Invoque le Sorcier'
+      },
+      print: { ...print },
+      tester: { ...tester },
       keyboard: {
         label: 'clavier'
       },
@@ -36,21 +43,38 @@ export default {
         label: 'Disposition.JSON'
       },
       importJSON: {
-        title: 'Importer un fichier .JSON de disposition des touches'
+        title: 'Importe un fichier .JSON de disposition des touches'
+      },
+      importUrlJSON: {
+        title: 'Importe une disposition QMK .JSON d\'une URL'
       },
       printKeymap: {
         title: 'Imprime les calques de la disposition',
         label: 'Imprimer la disposition'
       },
+      testKeys: {
+        title: 'Teste le clavier',
+        label: 'Testeur de clavier'
+      },
       downloadFirmware: {
         label: 'Firmware',
         title: 'Télécharge le fichier du firmware à flash'
+      },
+      flashFirmware: {
+        label: 'Flash Automatique',
+        title: 'Flash automatiquement le firmware compilé'
+      },
+      flashFile: {
+        label: 'Flash Manuel',
+        title: 'Flash le fichier selectionné'
       },
       ColorwayTip: {
         title: 'Ctrl + Alt + N pour changer de coloris'
       },
       layer: {
-        label: 'Calque'
+        label: 'Calque',
+        confirm: 'Etes-vous sur de vouloir effacer ce calque?',
+        title: 'Efface le calque'
       },
       keymap: {
         label: 'Disposition'
@@ -94,6 +118,15 @@ export default {
           title: 'ctrl + alt + u',
           help: 'Montre la taille des touches (une touche classique = 1 u)'
         },
+        toggleTutorial: {
+          label: 'Guide Vidéo',
+          title: 'Guide vidéo de MechMerlin sur le configurateur (en Anglais)',
+           help: 'Guide vidéo de MechMerlin (en Anglais)'
+        },
+        darkmode: {
+          label: 'Mode Sombre',
+          title: 'Active/Désactive le mode sombre'
+        },
         on: {
           label: 'On'
         },
@@ -107,7 +140,8 @@ export default {
         kbfirmwareJSONUnsupported:
           "Désolé, le Configurateur QMK ne supporte pas l'importation des fichiers JSON de kbfirmware.",
         unknownJSON:
-          'Désolé, cela ne semble pas être un fichier de disposition QMK.'
+          'Désolé, cela ne semble pas être un fichier de disposition QMK.',
+        unsupportedBrowser: "Vous utilisez un navigateur non-supporté. Utilisez s'il vous plait"
       },
       statsTemplate:
         '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n',
