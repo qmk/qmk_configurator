@@ -6,7 +6,7 @@ export default {
     message: {
       ...potato,
       help: {
-        label : 'Invoque le Sorcier'
+        label: 'Invoque le Sorcier'
       },
       print: { ...print },
       tester: { ...tester },
@@ -46,7 +46,7 @@ export default {
         title: 'Importe un fichier .JSON de disposition des touches'
       },
       importUrlJSON: {
-        title: 'Importe une disposition QMK .JSON d\'une URL'
+        title: "Importe une disposition QMK .JSON d'une URL"
       },
       printKeymap: {
         title: 'Imprime les calques de la disposition',
@@ -121,7 +121,7 @@ export default {
         toggleTutorial: {
           label: 'Guide Vidéo',
           title: 'Guide vidéo de MechMerlin sur le configurateur (en Anglais)',
-           help: 'Guide vidéo de MechMerlin (en Anglais)'
+          help: 'Guide vidéo de MechMerlin (en Anglais)'
         },
         darkmode: {
           label: 'Mode Sombre',
@@ -141,7 +141,8 @@ export default {
           "Désolé, le Configurateur QMK ne supporte pas l'importation des fichiers JSON de kbfirmware.",
         unknownJSON:
           'Désolé, cela ne semble pas être un fichier de disposition QMK.',
-        unsupportedBrowser: "Vous utilisez un navigateur non-supporté. Utilisez s'il vous plait"
+        unsupportedBrowser:
+          "Vous utilisez un navigateur non-supporté. Utilisez s'il vous plait"
       },
       statsTemplate:
         '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n',
