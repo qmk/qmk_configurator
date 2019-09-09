@@ -11,7 +11,9 @@
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
-        <label class="drop-label" id="drop-label-keyboard">{{ $t('message.keyboard.label') }}:</label>
+        <label class="drop-label" id="drop-label-keyboard"
+          >{{ $t('message.keyboard.label') }}:</label
+        >
         <v-select
           @search:focus="opened"
           @search:blur="blur"
@@ -27,7 +29,8 @@
           class="drop-label"
           :class="fontAdjustClasses"
           :title="$t('message.keymapName.label')"
-        >{{ $t('message.keymapName.label') }}:</label>
+          >{{ $t('message.keymapName.label') }}:</label
+        >
         <input
           id="keymap-name"
           type="text"
@@ -43,22 +46,29 @@
           id="load-default"
           :title="$t('message.loadDefault.title')"
           @click="loadDefault"
-        >{{ $t('message.loadDefault.label') }}</button>
+        >
+          {{ $t('message.loadDefault.label') }}
+        </button>
         <button
           id="compile"
           :title="$t('message.compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
-        >{{ $t('message.compile.label') }}</button>
+        >
+          {{ $t('message.compile.label') }}
+        </button>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label" id="drop-label-version">{{ $t('message.layout.label') }}:</label>
+        <label class="drop-label" id="drop-label-version"
+          >{{ $t('message.layout.label') }}:</label
+        >
         <select id="layout" v-model="layout">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-          >{{ layoutName }}</option>
+            >{{ layoutName }}</option
+          >
         </select>
       </div>
     </div>
@@ -213,9 +223,8 @@ export default {
           return false;
         }
       }
-      const keyboardName = this.keyboard.replace(/\//g, '_');
       const store = this.$store;
-      this.loadDefaultKeymap(keyboardName)
+      this.loadDefaultKeymap()
         .then(data => {
           if (data) {
             console.log(data);
@@ -224,8 +233,6 @@ export default {
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             );
             promise.then(() => {
-              this.logLoadDefaultSuccess(keyboardName);
-
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('message.statsTemplate', stats);
@@ -237,7 +244,6 @@ export default {
           }
         })
         .catch(error => {
-          this.logLoadDefaultFail(keyboardName);
           statusError(
             `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
@@ -301,8 +307,6 @@ export default {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
-      } else {
-        this.logChangeKeyboard(newKeyboard);
       }
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
@@ -338,7 +342,6 @@ export default {
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
-      this.logCompile(this.keyboard);
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store
@@ -372,34 +375,6 @@ export default {
     },
     blur() {
       this.startListening();
-    },
-    logCompile(keyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'compilation',
-        eventLabel: keyboard
-      });
-    },
-    logLoadDefaultSuccess(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultSuccess',
-        eventLabel: keyboardName
-      });
-    },
-    logLoadDefaultFail(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultFail',
-        eventLabel: keyboardName
-      });
-    },
-    logChangeKeyboard(newKeyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'changeKeyboard',
-        eventLabel: newKeyboard
-      });
     }
   },
   data: () => {

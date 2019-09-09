@@ -136,7 +136,8 @@ import {
   load_converted_keymap,
   disableCompileButton,
   disableOtherButtons,
-  getPreferredLayout
+  getPreferredLayout,
+  checkValidKeymap
 } from '@/jquery';
 
 import ElectronBottomControls from './ElectronBottomControls';
@@ -170,7 +171,7 @@ export default {
         isUndefined(this.firmwareBinaryURL) ||
         this.firmwareBinaryURL === ''
       );
-    },
+    }
   },
   watch: {
     /**
@@ -188,7 +189,7 @@ export default {
   },
   methods: {
     ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
-    ...mapActions(['loadKeymapFromUrl', 'checkValidKeymap']),
+    ...mapActions(['loadKeymapFromUrl']),
     importUrlkeymap: function() {
       this.loadKeymapFromUrl(this.urlImport)
         .then(data => {
@@ -293,7 +294,7 @@ export default {
         return;
       }
 
-      if (!this.checkValidKeymap(data)) {
+      if (!checkValidKeymap(data)) {
         alert(this.$t('message.errors.unknownJSON'));
         return;
       }

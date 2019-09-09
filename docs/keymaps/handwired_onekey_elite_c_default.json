@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/elite_c",
+  "keymap": "default_090c302",
+  "commit": "090c30212e13b5c21d78f600425a28b4b7ff0e37",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

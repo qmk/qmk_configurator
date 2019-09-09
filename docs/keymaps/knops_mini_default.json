@@ -1,0 +1,24 @@
+{
+  "keyboard": "knops/mini",
+  "keymap": "default_5dc60c0",
+  "commit": "5dc60c06a9f513b177e3f432648265953fa14cd4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(3,KC_MSTP)", "KC_VOLU", "KC_MPLY",
+      "KC_MPRV",       "KC_VOLD", "KC_MNXT"
+    ],
+    [
+      "LT(3,KC_ESC)", "LCTL(KC_Z)", "LCTL(LSFT(KC_Z))",
+      "LCTL(KC_X)",   "LCTL(KC_C)", "LCTL(KC_V)"
+    ],
+    [
+      "LT(3,KC_1)", "KC_2",    "KC_3",
+      "KC_4",       "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "RESET",
+      "TO(0)",   "TO(1)",   "TO(2)"
+    ]
+  ]
+}

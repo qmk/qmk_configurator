@@ -29,7 +29,7 @@ export default {
       'Note: La touche et le code détectées peuvent varier selon votre localisation. Docs'
   },
   chatter: {
-    label: 'Seuil de détection d\'activations répétées (chatter)(ms)',
+    label: "Seuil de détection d'activations répétées (chatter)(ms)",
     detectedAlert: 'Activations répétées détectées (chatter)'
   }
 };
