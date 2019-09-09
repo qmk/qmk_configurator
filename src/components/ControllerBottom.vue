@@ -137,7 +137,7 @@ import {
   disableCompileButton,
   disableOtherButtons,
   getPreferredLayout,
-  checkValidKeymap
+  checkInvalidKeymap
 } from '@/jquery';
 
 import ElectronBottomControls from './ElectronBottomControls';
@@ -294,7 +294,7 @@ export default {
         return;
       }
 
-      if (!checkValidKeymap(data)) {
+      if (checkInvalidKeymap(data)) {
         alert(this.$t('message.errors.unknownJSON'));
         return;
       }

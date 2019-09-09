@@ -557,13 +557,13 @@ function getPreferredLayout(layouts) {
   return first(mykeys);
 }
 
-function checkValidKeymap(keymap) {
-  return (
+function checkInvalidKeymap(keymap) {
+  const res =
     isUndefined(keymap.keyboard) ||
     isUndefined(keymap.keymap) ||
     isUndefined(keymap.layout) ||
-    isUndefined(keymap.layers)
-  );
+    isUndefined(keymap.layers);
+  return res;
 }
 
 export {
@@ -577,5 +577,5 @@ export {
   enableOtherButtons,
   disableOtherButtons,
   getPreferredLayout,
-  checkValidKeymap
+  checkInvalidKeymap
 };
