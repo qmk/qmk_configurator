@@ -264,6 +264,19 @@ function parseKeycode(keycode, stats) {
     let internal = splitcode[1];
     internal = internal.split(')')[0];
 
+    // check for an OSM keycode
+    if (maincode === 'OSM') {
+      // ok we know it's OSM, check that's a valid OSM code
+      metadata = store.getters['keycodes/lookupKeycode'](keycode);
+      if (metadata === undefined) {
+        // it's not valid - return an ANY key
+        stats.any += 1;
+        return newAnyKey(keycode);
+      }
+      // it's valid  return a keycode
+      return newKey(metadata, keycode);
+    }
+
     //Check whether it is a layer switching code or combo keycode
     if (internal.includes('KC')) {
       // Layer Tap keycode

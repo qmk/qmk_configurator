@@ -8,6 +8,28 @@ function makeLT(layer) {
     title: `kc on tap, switch to layer ${layer} while held`
   };
 }
+// make a One-Shot Mod Keycode Definition
+const modHelpLookup = {
+    'LSft': 'Left Shift',
+    'LCtl': 'Left Control',
+    'LAlt': 'Left Alt',
+    'LGUI': 'Left GUI',
+    'RSft': 'Right Shift',
+    'RCtl': 'Right Control',
+    'RAlt': 'Right Alt',
+    'RGUI': 'Right GUI'
+}
+function makeOSM(mod) {
+  let mod_t = "MOD_"+ mod.toUpperCase();
+  let help = modHelpLookup[mod];
+  // Use ${mod} for the help text if ${help} is undefined
+  help = ( undefined === help ) ? mod : help;
+  return {
+    name: `OSM ${mod}`,
+    code: `OSM(${mod_t})`,
+    title: `Enable ${help} for one keypress`
+  };
+}
 export default [
   { label: 'Quantum', width: 'label', group: true },
 
@@ -103,6 +125,19 @@ export default [
   makeLT(13),
   makeLT(14),
   makeLT(15),
+
+  { width: 0 },
+
+  makeOSM('LSft'),
+  makeOSM('LCtl'),
+  makeOSM('LAlt'),
+  makeOSM('LGUI'),
+  { width: 250 },
+  makeOSM('RSft'),
+  makeOSM('RCtl'),
+  makeOSM('RAlt'),
+  makeOSM('RGUI'),
+  { width: 250 },
 
   {
     label:
