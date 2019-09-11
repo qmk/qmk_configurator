@@ -9,23 +9,29 @@ function makeLT(layer) {
   };
 }
 // make a One-Shot Mod Keycode Definition
-const modHelpLookup = {
-    'LSft': 'Left Shift',
-    'LCtl': 'Left Control',
-    'LAlt': 'Left Alt',
-    'LGUI': 'Left GUI',
-    'RSft': 'Right Shift',
-    'RCtl': 'Right Control',
-    'RAlt': 'Right Alt',
-    'RGUI': 'Right GUI'
+const osmLookup = {
+    'LSft': ['LSft' , 'Left Shift'],
+    'LCtl': ['LCtl' , 'Left Control'],
+    'LAlt': ['LAlt' , 'Left Alt'],
+    'LGUI': ['LGUI' , 'Left GUI'],
+    'RSft': ['RSft' , 'Right Shift'],
+    'RCtl': ['RCtl' , 'Right Control'],
+    'RAlt': ['RAlt' , 'Right Alt'],
+    'RGUI': ['RGUI' , 'Right GUI'],
+    'Hypr': ['Hyper', 'Left Control, Shift, Alt and GUI'],
+    'Meh' : ['Meh'  , 'Left Control, Shift, and Alt']
 }
 function makeOSM(mod) {
+  // visual key legend
+  let text = osmLookup[mod][0];
+  // actual keycode argument
   let mod_t = "MOD_"+ mod.toUpperCase();
-  let help = modHelpLookup[mod];
+  // help text
+  let help = osmLookup[mod][1];
   // Use ${mod} for the help text if ${help} is undefined
   help = ( undefined === help ) ? mod : help;
   return {
-    name: `OSM ${mod}`,
+    name: `OSM ${text}`,
     code: `OSM(${mod_t})`,
     title: `Enable ${help} for one keypress`
   };
@@ -138,6 +144,8 @@ export default [
   makeOSM('RAlt'),
   makeOSM('RGUI'),
   { width: 250 },
+  makeOSM('Hypr'),
+  makeOSM('Meh'),
 
   {
     label:
