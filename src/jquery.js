@@ -266,14 +266,14 @@ function parseKeycode(keycode, stats) {
 
     // check for an OSM keycode
     if (maincode === 'OSM') {
-      // ok we know it's OSM, check that's a valid OSM code
+      // ok we know it's OSM, check that it's a valid OSM code
       metadata = store.getters['keycodes/lookupKeycode'](keycode);
       if (metadata === undefined) {
         // it's not valid - return an ANY key
         stats.any += 1;
         return newAnyKey(keycode);
       }
-      // it's valid  return a keycode
+      // it's valid - return a keycode
       return newKey(metadata, keycode);
     }
 
