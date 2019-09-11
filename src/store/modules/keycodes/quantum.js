@@ -132,21 +132,6 @@ export default [
   makeLT(14),
   makeLT(15),
 
-  { width: 0 },
-
-  makeOSM('LSft'),
-  makeOSM('LCtl'),
-  makeOSM('LAlt'),
-  makeOSM('LGUI'),
-  { width: 250 },
-  makeOSM('RSft'),
-  makeOSM('RCtl'),
-  makeOSM('RAlt'),
-  makeOSM('RGUI'),
-  { width: 250 },
-  makeOSM('Hypr'),
-  makeOSM('Meh'),
-
   {
     label:
       'Mod key combinations (A = Alt, C = Control, G = Windows/Command, S = Shift)',
@@ -283,6 +268,21 @@ export default [
     type: 'container',
     title: 'LCTL + LALT'
   },
+
+  { width: 0 },
+
+  makeOSM('LSft'),
+  makeOSM('LCtl'),
+  makeOSM('LAlt'),
+  makeOSM('LGUI'),
+  { width: 250 },
+  makeOSM('RSft'),
+  makeOSM('RCtl'),
+  makeOSM('RAlt'),
+  makeOSM('RGUI'),
+  { width: 250 },
+  makeOSM('Hypr'),
+  makeOSM('Meh'),
 
   { label: 'Special action keys', width: 'label' },
 
