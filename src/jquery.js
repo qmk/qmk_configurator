@@ -340,7 +340,6 @@ function parseKeycode(keycode, stats) {
         cmods = ['MOD_MEH'];
       }
 
-      console.log(cmods, cmods.join('|'));
       mods = cmods.join('|');
       keycode = 'OSM('+ mods +')';
 
