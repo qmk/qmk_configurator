@@ -26,5 +26,10 @@ export default [
   'Potatoes are among the most environmentally friendly vegetables. They’re easy to grow, and don’t require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do.',
   'The potato originated in the region of southern Peru where it was first domesticated between 8000 BC and 5000 BC.',
   'The word potato comes from the Spanish word patata.',
-  'Potato plants are usually pollinated by insects such as bumblebees.'
+  'Potato plants are usually pollinated by insects such as bumblebees.',
+  'Today potatoes are grown in all 50 states of the USA and in about 125 countries throughout the world.',
+  'The sweet potato belongs in the same family as morning glories while the white potato belongs to the same group as tomatoes, tobacco, chile pepper, eggplant and the petunia.',
+  'In 1974, an Englishman named Eric Jenkins grew 370 pounds of potatoes from one plant.',
+  'An 8 ounce baked or boiled potato has only about 100 calories',
+  'Potato blossoms used to be a big hit in royal fashion. Potatoes first became fashionable when Marie Antoinette paraded through the French countryside wearing potato blossoms in her hair.'
 ];
