@@ -341,7 +341,7 @@ function parseKeycode(keycode, stats) {
       }
 
       mods = cmods.join('|');
-      keycode = 'OSM('+ mods +')';
+      keycode = `OSM(${mods})`;
 
 
       metadata = store.getters['keycodes/lookupKeycode'](keycode);
