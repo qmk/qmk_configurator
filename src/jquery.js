@@ -40,6 +40,11 @@ function init() {
   store.commit('app/setKeypressListener', () => keypressListener);
 }
 
+// returns true if bit `value` of `test` is true
+function hasBitsSet(test, value) {
+  return ( test & (1<<value) ) === Math.pow(2, value);
+}
+
 // generate keypress combo list from the keycodes list
 function generateKeypressCombos(_keycodes) {
   const combos = _keycodes
@@ -307,22 +312,31 @@ function parseKeycode(keycode, stats) {
       });
 
       let cmods = [];
-      if ((mods & 0b0001) === 0b0001) {
+      if ( hasBitsSet(mods, 0) ) {
         cmods.push('MOD_LCTL');
       }
-      if ((mods & 0b0010) === 0b0010) {
+      if ( hasBitsSet(mods, 1) ) {
         cmods.push('MOD_LSFT');
       }
-      if ((mods & 0b0100) === 0b0100) {
+      if ( hasBitsSet(mods, 2) ) {
         cmods.push('MOD_LALT');
       }
-      if ((mods & 0b1000) === 0b1000) {
+      if ( hasBitsSet(mods, 3) ) {
         cmods.push('MOD_LGUI');
       }
-      if ((mods & 0b1111) === 0b1111) {
+      if (
+        hasBitsSet(mods, 0) &&
+        hasBitsSet(mods, 1) &&
+        hasBitsSet(mods, 2) &&
+        hasBitsSet(mods, 3)
+      ) {
         cmods = ['MOD_HYPR'];
       }
-      else if ((mods & 0b0111) === 0b0111) {
+      else if (
+        hasBitsSet(mods, 0) &&
+        hasBitsSet(mods, 1) &&
+        hasBitsSet(mods, 2)
+      ) {
         cmods = ['MOD_MEH'];
       }
 
