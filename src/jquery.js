@@ -267,6 +267,70 @@ function parseKeycode(keycode, stats) {
     // check for an OSM keycode
     if (maincode === 'OSM') {
       // ok we know it's OSM, check that it's a valid OSM code
+
+      // tokenizers
+      let mods = internal.split('|');
+      mods = mods.map((amod) => {
+        return amod.trim();
+      });
+
+      // parser
+      mods = mods.map((amod) => {
+        // MOD_LCTL = 0x0001,
+        // MOD_LSFT = 0x0010,
+        // MOD_LALT = 0x0100,
+        // MOD_LGUI = 0x1000,
+        switch (amod) {
+        case 'MOD_LCTL':
+        case 'MOD_RCTL':
+          return 0b0001;
+        case 'MOD_LSFT':
+        case 'MOD_RSFT':
+          return 0b0010;
+        case 'MOD_LALT':
+        case 'MOD_RALT':
+          return 0b0100;
+        case 'MOD_LGUI':
+        case 'MOD_RGUI':
+          return 0b1000;
+        case 'MOD_MEH':
+          return 0b0111;
+        case 'MOD_HYPR':
+          return 0b1111;
+        }
+      });
+
+      // code generator
+      mods = mods.reduce((acc, amod) => {
+        acc |= amod;
+        return acc;
+      });
+
+      let cmods = [];
+      if ((mods & 0b0001) === 0b0001) {
+        cmods.push('MOD_LCTL');
+      }
+      if ((mods & 0b0010) === 0b0010) {
+        cmods.push('MOD_LSFT');
+      }
+      if ((mods & 0b0100) === 0b0100) {
+        cmods.push('MOD_LALT');
+      }
+      if ((mods & 0b1000) === 0b1000) {
+        cmods.push('MOD_LGUI');
+      }
+      if ((mods & 0b1111) === 0b1111) {
+        cmods = ['MOD_HYPR'];
+      }
+      else if ((mods & 0b0111) === 0b0111) {
+        cmods = ['MOD_MEH'];
+      }
+
+      console.log(cmods, cmods.join('|'));
+      mods = cmods.join('|');
+      keycode = 'OSM('+ mods +')';
+
+
       metadata = store.getters['keycodes/lookupKeycode'](keycode);
       if (metadata === undefined) {
         // it's not valid - return an ANY key
