@@ -3,6 +3,7 @@
     <div class="bes-title">{{ $t('message.serverStatus') }}:</div>
     <div :class="{ 'bes-status': true, 'bes-error': hasError }">
       {{ status }}
+      <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
     </div>
     <div class="bes-version">
       {{ $t('message.apiVersion') }}:
@@ -34,6 +35,9 @@ export default {
         return 'bes-odd-job-count';
       }
       return 'bes-high-job-count';
+    },
+    discordLink() {
+      return 'https://discord.gg/Uq7gcHh';
     }
   },
   methods: {
@@ -56,8 +60,7 @@ export default {
             this.status = escape(`${stat} @ ${localTime}`);
             this.hasError = false;
           } else {
-            this.status =
-              'Redis is probably down. Please contact devs on QMK discord';
+            this.status = 'Redis is probably down. Please contact devs on ';
             this.hasError = true;
           }
         })
