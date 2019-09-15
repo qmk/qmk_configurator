@@ -1,6 +1,6 @@
 {
     "keyboard": "signum/3_0/elitec",
-    "keymap": "default",
+    "keymap": "default_0e033fcda60df82d84f2c727f248d287df985745",
     "layers": [
         [
             "KC_TAB",
@@ -15,7 +15,7 @@
             "KC_O",
             "KC_P",
             "KC_LBRC",
-            "LCTL_T(KC_BSPC)",
+            "LCTL_T(KC_ESC)",
             "KC_A",
             "KC_S",
             "KC_D",
@@ -65,7 +65,7 @@
             "KC_Y",
             "KC_SCLN",
             "KC_LBRC",
-            "LCTL_T(KC_BSPC)",
+            "LCTL_T(KC_ESC)",
             "KC_A",
             "KC_R",
             "KC_S",
