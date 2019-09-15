@@ -41,6 +41,10 @@
           </select>
         </p>
         <visualKeymap :profile="false" />
+        <span class="keymap--count"
+          ><span class="keymap--counter">{{ size() }}</span
+          >Keys</span
+        >
       </div>
     </div>
   </div>
@@ -76,7 +80,7 @@ export default {
   computed: {
     ...mapState(['continuousInput']),
     ..._mapState('app', ['appInitialized']),
-    ...mapGetters(['colorwayIndex', 'colorways']),
+    ...mapGetters(['colorwayIndex', 'colorways', 'size']),
     curIndex: {
       get() {
         return this.colorwayIndex;
@@ -136,6 +140,15 @@ export default {
 }
 .keymap--label {
   float: left;
+}
+.keymap--counter {
+  display: inline-block;
+  padding: 0 5px;
+  margin-top: 2px;
+}
+.keymap--count {
+  float: right;
+  color: #999;
 }
 .keymap--keyset {
   float: right;

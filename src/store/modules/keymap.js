@@ -40,7 +40,7 @@ const getters = {
   getLayer: state => _layer => {
     return state.keymap[_layer];
   },
-  size: state => _layer => {
+  size: state => (_layer = 0) => {
     return size(state.keymap[_layer]);
   },
   isDirty: state => state.dirty,
