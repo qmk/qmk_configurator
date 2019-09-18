@@ -1,18 +1,8 @@
 {
-    "keyboard": "launchpad/rev1",
-    "keymap": "defaultish",
-    "layout": "LAYOUT",
-    "layers": [
-        [
-            "OSM(MOD_LCTL|MOD_LSFT)",
-            "OSM(MOD_LSFT| MOD_LCTL)",
-            "OSM(MOD_LALT|MOD_LGUI)",
-            "OSM(MOD_LGUI|MOD_LALT)",
-            "OSM(MOD_LSFT    |    MOD_LALT | MOD_RCTL   )",
-            "OSM(MOD_LSFT  |   MOD_LGUI  |    MOD_LALT | MOD_RCTL   )",
-            "OSM(MOD_LSFT  | MOD_RCTL  |    MOD_LALT    )"
-        ]
-    ],
-    "author": "",
-    "notes": ""
+   "keyboard":"launchpad",
+   "keymap":"defaultish",
+   "layout":"LAYOUT",
+   "layers":[
+       ["KC_1", "KC_2", "KC_3", "KC_4", "KC_5", "KC_6", "MO(1)", "KC_8"]
+   ]
 }
