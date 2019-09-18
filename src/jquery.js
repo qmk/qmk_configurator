@@ -121,8 +121,7 @@ function processOneShotMods(keycode) {
   mods = cmods.join('|');
   keycode = `OSM(${mods})`;
 
-
-  metadata = store.getters['keycodes/lookupKeycode'](keycode);
+  const metadata = store.getters['keycodes/lookupKeycode'](keycode);
   if (metadata === undefined) {
     // it's not valid - return an ANY key
     stats.any += 1;
