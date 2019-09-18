@@ -358,7 +358,7 @@ function parseKeycode(keycode, stats) {
     // check for an OSM keycode
     if (maincode === 'OSM') {
       // ok we know it's OSM
-      processOneShotMods(keycode);
+      return processOneShotMods(keycode);
     }
 
     //Check whether it is a layer switching code or combo keycode
