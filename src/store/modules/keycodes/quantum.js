@@ -32,8 +32,8 @@ const osmLookup = {
 };
 function makeOSM(mod, width = 1000) {
   //if ( osmLookup[mod] ) {
-    // visual key legend
-    let text = osmLookup[mod][0];
+  // visual key legend
+  let text = osmLookup[mod][0];
   /*  // actual keycode argument
     let mod_t = mod.toUpperCase();
     // help text

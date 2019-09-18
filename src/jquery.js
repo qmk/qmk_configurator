@@ -42,23 +42,22 @@ function init() {
 
 // returns true if bit `value` of `test` is true
 function hasBitsSet(test, value) {
-  return ( test & (1<<value) ) === Math.pow(2, value);
+  return (test & (1 << value)) === Math.pow(2, value);
 }
 
 // check One-Shot Mod keycodes
 function processOneShotMods(keycode) {
-  let maincode = keycode.split('(')[0];
   let internal = keycode.split('(')[1];
   internal = internal.split(')')[0];
 
   // tokenizers
   let mods = internal.split('|');
-  mods = mods.map((amod) => {
+  mods = mods.map(amod => {
     return amod.trim();
   });
 
   // parser
-  mods = mods.map((amod) => {
+  mods = mods.map(amod => {
     // MOD_LCTL = 0x0001,
     // MOD_LSFT = 0x0010,
     // MOD_LALT = 0x0100,
@@ -90,16 +89,16 @@ function processOneShotMods(keycode) {
   });
 
   let cmods = [];
-  if ( hasBitsSet(mods, 0) ) {
+  if (hasBitsSet(mods, 0)) {
     cmods.push('MOD_LCTL');
   }
-  if ( hasBitsSet(mods, 1) ) {
+  if (hasBitsSet(mods, 1)) {
     cmods.push('MOD_LSFT');
   }
-  if ( hasBitsSet(mods, 2) ) {
+  if (hasBitsSet(mods, 2)) {
     cmods.push('MOD_LALT');
   }
-  if ( hasBitsSet(mods, 3) ) {
+  if (hasBitsSet(mods, 3)) {
     cmods.push('MOD_LGUI');
   }
   if (
@@ -109,8 +108,7 @@ function processOneShotMods(keycode) {
     hasBitsSet(mods, 3)
   ) {
     cmods = ['MOD_HYPR'];
-  }
-  else if (
+  } else if (
     hasBitsSet(mods, 0) &&
     hasBitsSet(mods, 1) &&
     hasBitsSet(mods, 2)
