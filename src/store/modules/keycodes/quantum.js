@@ -26,24 +26,25 @@ const osmLookup = {
   'MOD_LSFT|MOD_LALT': ['SA', 'Shift and Alt'],
   'MOD_LSFT|MOD_LGUI': ['SG', 'Shift and GUI'],
   'MOD_LALT|MOD_LGUI': ['AG', 'Alt and GUI'],
-  'MOD_LCTL|MOD_LSFT|MOD_LALT': ['CSA', 'Control, Shift, and Alt'],
   'MOD_LCTL|MOD_LSFT|MOD_LGUI': ['CSG', 'Control, Shift, and GUI'],
   'MOD_LCTL|MOD_LALT|MOD_LGUI': ['CAG', 'Control, Alt, and GUI'],
   'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI']
 };
 function makeOSM(mod, width = 1000) {
-  // visual key legend
-  let text = osmLookup[mod][0];
-  // actual keycode argument
-  let mod_t = mod.toUpperCase();
-  // help text
-  let help = osmLookup[mod][1];
-  // Use ${mod} for the help text if ${help} is undefined
-  help = ( undefined === help ) ? mod : help;
+  //if ( osmLookup[mod] ) {
+    // visual key legend
+    let text = osmLookup[mod][0];
+  /*  // actual keycode argument
+    let mod_t = mod.toUpperCase();
+    // help text
+    let help = osmLookup[mod][1];
+    // Use ${mod} for the help text if ${help} is undefined
+    help = ( undefined === help ) ? mod : help;
+  }*/
   return {
     name: `OSM ${text}`,
-    code: `OSM(${mod_t})`,
-    title: `Enable ${help} for one keypress`,
+    code: `OSM(${mod})`,
+    title: `Enable ${mod} for one keypress`,
     width: width
   };
 }
@@ -305,6 +306,7 @@ export default [
   { width: 250 },
   makeOSM('MOD_MEH'),
   makeOSM('MOD_HYPR'),
+  //makeOSM('MOD_TEST'),
   { width: 250 },
 
   { label: 'Special action keys', width: 'label' },
