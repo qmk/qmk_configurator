@@ -45,7 +45,13 @@ function hasBitsSet(test, value) {
   return (test & (1 << value)) === Math.pow(2, value);
 }
 
-// check One-Shot Mod keycodes
+/* check One-Shot Mod keycodes
+ *
+ * This code block normalizes the order of One-Shot Mod parameters (MOD_LCTL,
+ * MOD_RGUI, etc.) so that there are fewer variants that need to be added to
+ * the user interface, such that e.g. OSM(MOD_LCTL|MOD_LALT) and
+ * OSM(MOD_LALT|MOD_LCTL) don't need separate keys.
+ */
 function processOneShotMods(keycode) {
   let internal = keycode.split('(')[1];
   internal = internal.split(')')[0];
