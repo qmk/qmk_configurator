@@ -8,8 +8,7 @@
           :title="$t('message.settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-          >{{ $t('message.settingsPanel.fastInput.label') }}</label
-        >
+        >{{ $t('message.settingsPanel.fastInput.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -24,8 +23,7 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.displaySizes.title')"
-          >{{ $t('message.settingsPanel.displaySizes.label') }}</label
-        >
+        >{{ $t('message.settingsPanel.displaySizes.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -40,8 +38,7 @@
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
           :title="$t('message.settingsPanel.toggleTutorial.title')"
-          >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
-        >
+        >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -57,8 +54,7 @@
           class="settings-panel--text"
           @mouseover="help('darkmode')"
           :title="$t('message.settingsPanel.darkmode.title')"
-          >{{ $t('message.settingsPanel.darkmode.title') }}</label
-        >
+        >{{ $t('message.settingsPanel.darkmode.title') }}</label>
       </div>
       <div>
         <toggle-button
@@ -72,14 +68,10 @@
         <label
           class="settings-panel--text"
           :title="$t('message.settingsPanel.language.title')"
-          >{{ $t('message.settingsPanel.language.title') }}</label
-        >
+        >{{ $t('message.settingsPanel.language.title') }}</label>
       </div>
       <div>
-        <select
-          v-model="configuratorSettings.language"
-          v-on:change="toggleLanguageHandler"
-        >
+        <select v-model="language">
           <option value="en">English</option>
           <option value="de">Deutsch</option>
           <option value="fr">Français</option>
@@ -107,7 +99,15 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled', 'configuratorSettings'])
+    ...mapState('app', ['tutorialEnabled', 'configuratorSettings']),
+    language: {
+      get() {
+        return this.configuratorSettings.language;
+      },
+      async set(value) {
+        await this.changeLanguage(value);
+      }
+    }
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
@@ -115,9 +115,6 @@ export default {
     ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
     darkMode() {
       this.toggleDarkMode();
-    },
-    toggleLanguageHandler({ target }) {
-      this.changeLanguage(target.value);
     },
     help(key) {
       switch (key) {
