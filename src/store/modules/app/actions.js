@@ -162,6 +162,8 @@ const actions = {
       this.$i18n.locale !== state.configuratorSettings.language
     ) {
       this.$i18n.locale = state.configuratorSettings.language;
+    } else {
+      state.configuratorSettings.language = this.$i18n.locale;
     }
   },
   async loadFavoriteKeyboard({ dispatch, state, getters, commit }) {
