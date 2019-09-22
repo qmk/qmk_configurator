@@ -124,6 +124,9 @@ export default {
           label: 'Toggle Darkmode',
           title: 'Dark mode'
         },
+        language: {
+          title: 'Language'
+        },
         on: {
           label: 'On'
         },

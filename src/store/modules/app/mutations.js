@@ -30,6 +30,9 @@ const mutations = {
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
   },
+  setCurrentLanguage(state, _language) {
+    state.configuratorSettings.language = _language;
+  },
   setFavoriteKeyboard(state, _keyboard) {
     state.configuratorSettings.favoriteKeyboard = _keyboard;
   },

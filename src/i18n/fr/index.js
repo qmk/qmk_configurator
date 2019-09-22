@@ -123,6 +123,9 @@ export default {
           title: 'Guide vidéo de MechMerlin sur le configurateur (en Anglais)',
           help: 'Guide vidéo de MechMerlin (en Anglais)'
         },
+        language: {
+          title: 'Langue'
+        },
         darkmode: {
           label: 'Mode Sombre',
           title: 'Active/Désactive le mode sombre'

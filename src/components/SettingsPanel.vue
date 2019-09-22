@@ -68,6 +68,23 @@
           @change="darkMode"
         />
       </div>
+      <div>
+        <label
+          class="settings-panel--text"
+          :title="$t('message.settingsPanel.language.title')"
+          >{{ $t('message.settingsPanel.language.title') }}</label
+        >
+      </div>
+      <div>
+        <select
+          v-model="configuratorSettings.language"
+          v-on:change="toggleLanguageHandler"
+        >
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
@@ -95,9 +112,12 @@ export default {
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial']),
-    ...mapActions('app', ['toggleDarkMode']),
+    ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
     darkMode() {
       this.toggleDarkMode();
+    },
+    toggleLanguageHandler({ target }) {
+      this.changeLanguage(target.value);
     },
     help(key) {
       switch (key) {
