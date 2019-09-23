@@ -1,3 +1,5 @@
+import size from 'lodash/size';
+import isUndefined from 'lodash/isUndefined';
 const getters = {
   firmwareFile: state => state.firmwareFile,
   validateKeyboard: state => keyboard => {
@@ -23,6 +25,12 @@ const getters = {
     // issue #331 whitelist what we send to API for keymapName and save to disk
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
+  },
+  keyCount: state => {
+    if (size(state.layouts) > 0 && !isUndefined(state.layout)) {
+      return state.layouts[state.layout].length;
+    }
+    return 0;
   }
 };
 

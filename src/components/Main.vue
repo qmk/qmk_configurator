@@ -42,7 +42,7 @@
         </p>
         <visualKeymap :profile="false" />
         <span class="keymap--count"
-          ><span class="keymap--counter">{{ size() }}</span
+          ><span class="keymap--counter">{{ keyCount }}</span
           >Keys</span
         >
       </div>
@@ -55,7 +55,8 @@ import capitalize from 'lodash/capitalize';
 import {
   mapMutations as _mapMutations,
   createNamespacedHelpers,
-  mapState as _mapState
+  mapState as _mapState,
+  mapGetters as _mapGetters
 } from 'vuex';
 const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
   'keymap'
@@ -78,8 +79,9 @@ export default {
     LayerControl
   },
   computed: {
-    ...mapState(['continuousInput']),
     ..._mapState('app', ['appInitialized']),
+    ..._mapGetters('app', ['keyCount']),
+    ...mapState(['continuousInput']),
     ...mapGetters(['colorwayIndex', 'colorways', 'size']),
     curIndex: {
       get() {
