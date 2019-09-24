@@ -13,6 +13,7 @@
       </div>
       <div>
         <toggle-button
+          id="setting-toggle-fast-input"
           :value="continuousInput"
           :sync="true"
           :labels="labels"
@@ -29,6 +30,7 @@
       </div>
       <div>
         <toggle-button
+          id="setting-toggle-display-size"
           :value="displaySizes"
           :sync="true"
           :labels="labels"
@@ -45,6 +47,7 @@
       </div>
       <div>
         <toggle-button
+          id="setting-toggle-tutorial"
           :value="tutorialEnabled"
           :sync="true"
           :labels="labels"
@@ -62,6 +65,7 @@
       </div>
       <div>
         <toggle-button
+          id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
           :sync="true"
           :labels="labels"
