@@ -1,5 +1,6 @@
 {
   "baseUrl": "http://localhost:8080/",
   "integrationFolder": "tests/integration",
-  "chromeWebSecurity": false
+  "chromeWebSecurity": false,
+  "video": false
 }
