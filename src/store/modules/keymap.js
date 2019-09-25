@@ -256,10 +256,7 @@ const mutations = {
     state.dirty = false;
   },
   clear(state) {
-    mutations.initKeymap(state, {
-      layer: 0,
-      layout: state.keymap[0].map(() => {})
-    });
+    state.keymap = [[]];
     state.dirty = false;
   },
   changeLayer(state, newLayer) {

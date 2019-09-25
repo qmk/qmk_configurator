@@ -153,7 +153,7 @@ export default {
       this.changeLayer(0);
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::initkeymap');
-      if (this.$store.state.keymap.keymap.length === 0) {
+      if (this.getLayer(0).length === 0) {
         this.initKeymap({
           layer: 0,
           layout: this.layouts[newLayout]
