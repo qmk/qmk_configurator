@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
@@ -31,10 +32,7 @@ const mutations = {
     state.keyboard = _keyboard;
   },
   setCurrentLanguage(state, _language) {
-    // This is because the properties of the object are not Observable
-    let c = state.configuratorSettings;
-    c.language = _language;
-    state.configuratorSettings = c;
+    Vue.set(state.configuratorSettings, 'language', _language);
   },
   setFavoriteKeyboard(state, _keyboard) {
     state.configuratorSettings.favoriteKeyboard = _keyboard;
