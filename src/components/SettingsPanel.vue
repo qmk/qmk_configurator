@@ -72,6 +72,20 @@
           @change="darkMode"
         />
       </div>
+      <div>
+        <label
+          class="settings-panel--text"
+          :title="$t('message.settingsPanel.language.title')"
+          >{{ $t('message.settingsPanel.language.title') }}</label
+        >
+      </div>
+      <div>
+        <select v-model="language">
+          <option value="en">English</option>
+          <option value="de">Deutsch</option>
+          <option value="fr">Français</option>
+        </select>
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
@@ -94,12 +108,20 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled', 'configuratorSettings'])
+    ...mapState('app', ['tutorialEnabled', 'configuratorSettings']),
+    language: {
+      get() {
+        return this.configuratorSettings.language;
+      },
+      async set(value) {
+        await this.changeLanguage(value);
+      }
+    }
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial']),
-    ...mapActions('app', ['toggleDarkMode']),
+    ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
     darkMode() {
       this.toggleDarkMode();
     },

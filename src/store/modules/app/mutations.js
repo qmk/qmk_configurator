@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
@@ -29,6 +30,9 @@ const mutations = {
   },
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
+  },
+  setCurrentLanguage(state, _language) {
+    Vue.set(state.configuratorSettings, 'language', _language);
   },
   setFavoriteKeyboard(state, _keyboard) {
     state.configuratorSettings.favoriteKeyboard = _keyboard;

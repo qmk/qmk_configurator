@@ -85,8 +85,11 @@ library.add(faHatWizard);
 library.add(faMagic);
 
 ga.init(router);
-
 Vue.config.productionTip = false;
+
+// Make $i18n vm accessible in the store
+store.$i18n = i18n._vm;
+
 new Vue({
   router,
   store,

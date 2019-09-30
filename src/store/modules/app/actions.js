@@ -122,6 +122,13 @@ const actions = {
       JSON.stringify(state.configuratorSettings)
     );
   },
+  async changeLanguage({ dispatch, commit }, lang) {
+    // This throws an error because of the mutation of the store
+    // i18n does not provide any workaround for this situation
+    this.$i18n.locale = lang;
+    commit('setCurrentLanguage', lang);
+    await dispatch('saveConfiguratorSettings');
+  },
   // if init state we just load and not toggling
   async toggleDarkMode({ commit, state, dispatch }, init) {
     let darkStatus = state.configuratorSettings.darkmodeEnabled;
@@ -145,8 +152,19 @@ const actions = {
     await dispatch('fetchKeyboards');
     await dispatch('loadFavoriteKeyboard');
     await dispatch('toggleDarkMode', true);
+    await dispatch('loadLanguage');
     console.log('loadApplicationState End');
     commit('setAppInitialized', true);
+  },
+  loadLanguage({ state }) {
+    if (
+      state.configuratorSettings.language &&
+      this.$i18n.locale !== state.configuratorSettings.language
+    ) {
+      this.$i18n.locale = state.configuratorSettings.language;
+    } else {
+      state.configuratorSettings.language = this.$i18n.locale;
+    }
   },
   async loadFavoriteKeyboard({ dispatch, state, getters, commit }) {
     if (state.configuratorSettings.favoriteKeyboard) {
