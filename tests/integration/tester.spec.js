@@ -1,7 +1,16 @@
 describe('Tester feature', function() {
   beforeEach(() => {
     cy.viewport('macbook-15');
-    cy.visit('/#/test');
+    cy.visit('/#/test', {
+      onBeforeLoad: win => {
+        Object.defineProperty(win.navigator, 'language', {
+          value: 'en-US'
+        });
+        Object.defineProperty(win.navigator, 'languages', {
+          value: ['en-US']
+        });
+      }
+    });
   });
   it('Tester should be accessible and instantiated', function() {
     cy.get('.visual-tester-keymap', { timeout: 4000 }).should('be.visible');
