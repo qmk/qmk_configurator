@@ -72,4 +72,34 @@ describe('Simple browsing', function() {
     cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
     cy.get('#favorite-keyboard').should('have.class', 'active');
   });
+  it('Should change language, set to localstorage and retrieve it', () => {
+    cy.clearLocalStorage();
+    cy.visit('/', {
+      onBeforeLoad: win => {
+        Object.defineProperty(win.navigator, 'language', {
+          value: 'en-US'
+        });
+        Object.defineProperty(win.navigator, 'languages', {
+          value: ['en-US']
+        });
+      }
+    });
+    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('keyboard');
+    cy.get('.openSettings').click();
+    cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
+    cy.get('#setting-panel-language').select('fr');
+    cy.get('.slideout-panel-bg').click();
+    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('clavier');
+    cy.visit('/', {
+      onBeforeLoad: win => {
+        Object.defineProperty(win.navigator, 'language', {
+          value: 'en-US'
+        });
+        Object.defineProperty(win.navigator, 'languages', {
+          value: ['en-US']
+        });
+      }
+    });
+    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('clavier');
+  });
 });
