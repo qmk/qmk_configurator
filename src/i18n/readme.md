@@ -12,4 +12,9 @@
      ...<tag>,
    ``` 
    in the correct spots, with `<tag>` replaced with your language tag/folder name.  
-5. Open a [Pull Request](https://github.com/qmk/qmk_configurator/pulls)!
+5. Install `yarn` and run the Linter over your files to make sure they follow the project's style guidelines.
+   ```
+   yarn run lint
+   ```
+   Find more information [in the main README](/README.md#development).
+6. Open a [Pull Request](https://github.com/qmk/qmk_configurator/pulls)!
