@@ -2,7 +2,7 @@ import potato from './potato';
 import print from './print';
 import tester from './tester';
 export default {
-  en: {
+  es: {
     message: {
       ...potato,
       help: {
@@ -21,7 +21,7 @@ export default {
         placeholder: 'nombre de keymap personalizado'
       },
       loadDefault: {
-        label: 'Cargar valor por defecto',
+        label: 'Cargar Original',
         title: 'Cargar valor por defecto para plano de Firmware QMK'
       },
       compile: {
