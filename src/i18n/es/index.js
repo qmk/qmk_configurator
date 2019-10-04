@@ -109,7 +109,7 @@ export default {
           label: 'Entrada rápida',
           title: 'ctrl + alt + f',
           help:
-            'Ingresar teclas por media del teclado sin hacer clic en cada posición.'
+            'Ingresar teclas por medio del teclado sin hacer click en cada posición.'
         },
         displaySizes: {
           label: 'Mostrar tamaño de teclas',
