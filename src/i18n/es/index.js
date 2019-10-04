@@ -14,7 +14,7 @@ export default {
         label: 'teclado'
       },
       layout: {
-        label: 'plano'
+        label: 'layout'
       },
       keymapName: {
         label: 'Nombre de keymap',
@@ -22,7 +22,7 @@ export default {
       },
       loadDefault: {
         label: 'Cargar Original',
-        title: 'Cargar valor por defecto para plano de Firmware QMK'
+        title: 'Cargar valor por defecto para layout de Firmware QMK'
       },
       compile: {
         label: 'Compilar',
@@ -33,7 +33,7 @@ export default {
         label: 'solo keymap'
       },
       downloadSource: {
-        title: 'Dsecargar código de Firmware QMK',
+        title: 'Descargar código de Firmware QMK',
         label: 'Código completo'
       },
       downloadJSON: {
@@ -44,7 +44,7 @@ export default {
         title: 'Importar archivo JSON de Keymap QMK'
       },
       importUrlJSON: {
-        title: 'Import archivo JSON de Keymap QMK de URL'
+        title: 'Importar archivo JSON de Keymap QMK desde URL'
       },
       printKeymap: {
         title: 'Imprimir capas de keymap',
@@ -60,7 +60,7 @@ export default {
       },
       flashFirmware: {
         label: 'Auto-Instalar',
-        title: 'Automaticamente instalar Firmware compilado al MCU'
+        title: 'Automáticamente instalar Firmware compilado al MCU'
       },
       flashFile: {
         label: 'Instalar personalizado',
@@ -146,7 +146,7 @@ export default {
       },
       statsTemplate:
         '\nCargó {layers} capas y {count} códigos de tecla. Definió {any} Any tecla códigos de tecla\n',
-      maintain: 'Este proyecto se mantiene por colaboradores QMK como tú!',
+      maintain: '¡Este proyecto se mantiene por colaboradores QMK como tú!',
       hostedOn: 'Alojado en GitHub Pages',
       serverStatus: 'Servidor',
       apiVersion: 'Versión de API',

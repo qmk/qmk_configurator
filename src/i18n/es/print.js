@@ -3,7 +3,7 @@ export default {
     label: 'Teclado'
   },
   layout: {
-    label: 'Plano'
+    label: 'Layout'
   },
   layer: {
     label: 'Capa'

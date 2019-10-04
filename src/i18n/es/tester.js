@@ -30,6 +30,6 @@ export default {
   },
   chatter: {
     label: 'Umbral de chatter (ms)',
-    detectedAlert: '¡se ha detectado chatter!'
+    detectedAlert: '¡Se ha detectado chatter!'
   }
 };
