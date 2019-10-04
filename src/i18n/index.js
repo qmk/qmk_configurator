@@ -1,14 +1,14 @@
+import de from './de';
 import en from './en';
+import es from './es';
+import fr from './fr';
 import ja from './ja';
 import zh from './zh';
-import fr from './fr';
-import de from './de';
-import es from './es';
 export default {
-  ...en,
-  ...ja,
   ...de,
+  ...en,
+  ...es,
   ...fr,
-  ...zh,
-  ...es
+  ...ja,
+  ...zh
 };
