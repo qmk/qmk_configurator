@@ -4,7 +4,7 @@ import es from './es';
 import fr from './fr';
 import ja from './ja';
 import zh from './zh';
-import pt from './pt';
+import ptBR from './pt-BR';
 export default {
   ...de,
   ...en,
@@ -12,5 +12,5 @@ export default {
   ...fr,
   ...ja,
   ...zh,
-  ...pt
+  ...ptBR
 };
