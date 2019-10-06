@@ -11,6 +11,6 @@ export default {
   ...es,
   ...fr,
   ...ja,
-  ...zh,
-  ...ptBR
+  ...ptBR,
+  ...zh
 };
