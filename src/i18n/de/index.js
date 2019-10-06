@@ -11,22 +11,22 @@ export default {
       },
       keymapName: {
         label: 'Tastaturbelegung',
-        placeholder: 'eigener Name der Tastaturbelegung'
+        placeholder: 'Eigener Name der Tastaturbelegung'
       },
       loadDefault: {
-        label: 'Lade Standart',
-        title: 'Lade Standart Tastaturbelegung von der QMK Firmware'
+        label: 'Lade Standard',
+        title: 'Lade Standard Tastaturbelegung von der QMK Firmware'
       },
       compile: {
-        label: 'kompiliere',
-        title: 'kompiliere Tastaturbelegung um deine Tastaur zu Programieren'
+        label: 'Kompiliere',
+        title: 'Kompiliere Tastaturbelegung, um deine Tastatur zu programmieren'
       },
       downloadKeymap: {
         title: 'Downloade nur die keymap.c Datei',
-        label: 'nur Tastenbelgung'
+        label: 'Nur Tastenbelgung'
       },
       downloadSource: {
-        title: 'Downloade den gesamten QMK Firmware Surce-code',
+        title: 'Downloade den gesamten QMK Firmware Source-Code',
         label: 'Full Source'
       },
       downloadJSON: {
@@ -42,10 +42,10 @@ export default {
       },
       downloadFirmware: {
         label: 'Firmware',
-        title: 'Downloade die firmware datei um deine Tastatur zu Programieren'
+        title: 'Downloade die Firmware, um deine Tastatur zu programmieren'
       },
       ColorwayTip: {
-        title: 'Strg + Alt + N um zum nächten colorway zu kommen'
+        title: 'Strg + Alt + N, um zum nächsten colorway zu kommen'
       },
       layer: {
         label: 'Ebene'
@@ -54,7 +54,7 @@ export default {
         label: 'Tastaturbelegung'
       },
       downloadToolbox: {
-        label: 'Hole dir QMK Toolbox'
+        label: 'Hole dir die QMK Toolbox'
       },
       keycodes: {
         label: 'Keycodes'
@@ -80,23 +80,23 @@ export default {
         }
       },
       settingsPanel: {
-        title: 'Configurator Settings',
+        title: 'Konfigurierungseinstellungen',
         fastInput: {
-          label: 'schnelle Eingabe',
-          title: 'ctrl + alt + f',
+          label: 'Schnelle Eingabe',
+          title: 'STRG + ALT + F',
           help:
-            'Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken'
+            'Gib die Tasten über der Tastatur ein, ohne auf die einzelnen Positionen zu klicken'
         },
         displaySizes: {
-          label: 'zeige Tastengröße',
-          title: 'ctrl + alt + u',
-          help: 'Zeigen Sie die Tastengrößen an'
+          label: 'Zeige Tastengröße',
+          title: 'STRG + ALT + U',
+          help: 'Tastengrößen anzeigen'
         },
         on: {
-          label: 'On'
+          label: 'An'
         },
         off: {
-          label: 'Off'
+          label: 'Aus'
         }
       },
       errors: {
