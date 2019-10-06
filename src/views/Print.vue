@@ -26,7 +26,7 @@
             <input
               type="text"
               v-model="_author"
-              :placeholder="$t('message.author.placeholder')"
+              :placeholder="i18n('author.placeholder')"
             />
           </td>
         </tr>
