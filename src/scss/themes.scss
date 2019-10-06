@@ -202,8 +202,8 @@ html {
       border-color: #000;
     }
     .spinner {
-      & .message,
-      & .status {
+      .message,
+      .status {
         color: #eee;
       }
     }
