@@ -58,7 +58,8 @@ const state = {
     { value: 'en', label: 'English' },
     { value: 'de', label: 'Deutsch' },
     { value: 'fr', label: 'Français' },
-    { value: 'es', label: 'Español' }
+    { value: 'es', label: 'Español' },
+    { value: 'ru', label: 'Русский' }
   ]
 };
 
