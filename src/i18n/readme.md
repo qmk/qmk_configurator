@@ -12,11 +12,11 @@
      ...<tag>,
    ```
    in the correct spots, with `<tag>` replaced with your language tag/folder name.
-5. Edit the `setting-panel-language` select in [SettingsPanel.vue](https://github.com/qmk/qmk_configurator/blob/master/src/components/SettingsPanel.vue) to include
-    ```html
-    <option value="<tag>"><language></option>
+5. Edit the `languages` array in [state.js](https://github.com/qmk/qmk_configurator/blob/master/src/store/modules/app/state.js) to include
+    ```js
+    { value: '<tag>', label: 'Language' },
     ```
-    replacing `<tag>` with your language tag and `<language>` with the native name of your language.
+    replacing `<tag>` with your language tag and `Language` with the native name of your language.
 6. Install `yarn` and run the Linter over your files to make sure they follow the project's style guidelines.
    ```
    yarn run lint
