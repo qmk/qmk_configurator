@@ -81,10 +81,9 @@
       </div>
       <div>
         <select id="setting-panel-language" v-model="language">
-          <option value="en">English</option>
-          <option value="de">Deutsch</option>
-          <option value="fr">Français</option>
-          <option value="es">Español</option>
+          <option v-for="l in languages" :key="l.value" :value="l.value">{{
+            l.label
+          }}</option>
         </select>
       </div>
     </div>
@@ -109,7 +108,11 @@ export default {
   components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput', 'displaySizes']),
-    ...mapState('app', ['tutorialEnabled', 'configuratorSettings']),
+    ...mapState('app', [
+      'tutorialEnabled',
+      'configuratorSettings',
+      'languages'
+    ]),
     language: {
       get() {
         return this.configuratorSettings.language;

@@ -53,7 +53,13 @@ const state = {
   author: '',
   notes: '',
   tutorialEnabled: false,
-  electron: false
+  electron: false,
+  languages: [
+    { value: 'en', label: 'English' },
+    { value: 'de', label: 'Deutsch' },
+    { value: 'fr', label: 'Français' },
+    { value: 'es', label: 'Español' }
+  ]
 };
 
 export default {

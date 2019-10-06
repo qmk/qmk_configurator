@@ -1,8 +1,15 @@
 import potato from './potato';
+import print from './print';
+import tester from './tester';
 export default {
   de: {
     message: {
       ...potato,
+      help: {
+        label: 'Hilfe holen'
+      },
+      print: { ...print },
+      tester: { ...tester },
       keyboard: {
         label: 'Tastatur'
       },
@@ -10,48 +17,65 @@ export default {
         label: 'Layout'
       },
       keymapName: {
-        label: 'Tastaturbelegung',
-        placeholder: 'eigener Name der Tastaturbelegung'
+        label: 'Name',
+        placeholder: 'Eigener Name der Tastaturbelegung'
       },
       loadDefault: {
-        label: 'Lade Standart',
-        title: 'Lade Standart Tastaturbelegung von der QMK Firmware'
+        label: 'Zurücksetzen',
+        title: 'Standard-Tastaturbelegung der QMK Firmware laden'
       },
       compile: {
-        label: 'kompiliere',
-        title: 'kompiliere Tastaturbelegung um deine Tastaur zu Programieren'
+        label: 'Kompilieren',
+        title: 'Tastaturbelegung kompilieren'
       },
       downloadKeymap: {
-        title: 'Downloade nur die keymap.c Datei',
-        label: 'nur Tastenbelgung'
+        title: 'Nur die keymap.c Datei herunterladen',
+        label: 'Nur Tastenbelegung'
       },
       downloadSource: {
-        title: 'Downloade den gesamten QMK Firmware Surce-code',
+        title: 'QMK-Firmwarecode herunterladen',
         label: 'Full Source'
       },
       downloadJSON: {
-        title: 'Exportiere QMK Keymap JSON Datei',
+        title: 'QMK Keymap als JSON Datei exportieren',
         label: 'Keymap.JSON'
       },
       importJSON: {
-        title: 'Importiere QMK Keymap JSON Datei'
+        title: 'QMK Keymap aus JSON Datei importieren'
+      },
+      importUrlJSON: {
+        title: 'QMK Keymap aus JSON von URL importieren'
       },
       printKeymap: {
         title: 'Drucke die Tastaturbelegung der verschiedenen Ebenen',
-        label: 'Drucke Tastaturbelegung'
+        label: 'Drucken'
+      },
+      testKeys: {
+        title: 'Tastendrücke testen',
+        label: 'Tastatur testen'
       },
       downloadFirmware: {
         label: 'Firmware',
-        title: 'Downloade die firmware datei um deine Tastatur zu Programieren'
+        title: 'Firmware-Datei zum Flashen herunterladen'
+      },
+      flashFirmware: {
+        label: 'Auto-Flash',
+        title: 'Kompilierte Firmware automatisch auf Mikrochip flashen'
+      },
+      flashFile: {
+        label: 'Eigener Flash',
+        title: 'Selbst gewählte Datei auf Mikrochip flashen'
       },
       ColorwayTip: {
-        title: 'Strg + Alt + N um zum nächten colorway zu kommen'
+        title: 'Strg + Alt + N zum Wechseln des Farbschemas'
       },
       layer: {
-        label: 'Ebene'
+        label: 'Ebene',
+        confirm: 'Soll die Ebene wirklich gelöscht werden?',
+        title: 'Ebene löschen'
       },
       keymap: {
-        label: 'Tastaturbelegung'
+        label: 'Tastenbelegung'
       },
       downloadToolbox: {
         label: 'Hole dir QMK Toolbox'
@@ -60,7 +84,7 @@ export default {
         label: 'Keycodes'
       },
       keycodesRef: {
-        label: 'Keycodes Referenz'
+        label: 'Keycode-Referenz'
       },
       keycodesTab: {
         ANSI: {
@@ -80,23 +104,35 @@ export default {
         }
       },
       settingsPanel: {
-        title: 'Configurator Settings',
+        title: 'Einstellungen',
         fastInput: {
-          label: 'schnelle Eingabe',
-          title: 'ctrl + alt + f',
+          label: 'Schnelle Eingabe',
+          title: 'strg + alt + f',
           help:
             'Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken'
         },
         displaySizes: {
-          label: 'zeige Tastengröße',
-          title: 'ctrl + alt + u',
-          help: 'Zeigen Sie die Tastengrößen an'
+          label: 'Zeige Tastengröße',
+          title: 'strg + alt + u',
+          help: 'Tastengrößen relativ zur Standardgröße anzeigen'
+        },
+        toggleTutorial: {
+          label: 'Video-Tutorial',
+          title: 'MechMerlin hat ein Video zu dieser Seite gemacht (Englisch)',
+          help: "MechMerlin's Videohilfe"
+        },
+        darkmode: {
+          label: 'Die Seite dunkler machen',
+          title: 'Dunkler Modus'
+        },
+        language: {
+          title: 'Sprache'
         },
         on: {
-          label: 'On'
+          label: 'An'
         },
         off: {
-          label: 'Off'
+          label: 'Aus'
         }
       },
       errors: {
@@ -105,10 +141,18 @@ export default {
         kbfirmwareJSONUnsupported:
           'Entschuldigung, QMK Configurator unterstützt das Importieren von kbfirmware JSON-Dateien nicht.',
         unknownJSON:
-          'Es tut uns leid, dies scheint keine QMK-Keymap-Datei zu sein.'
+          'Es tut uns leid, dies scheint keine QMK-Keymap-Datei zu sein.',
+        unsupportedBrowser:
+          'Sie verwenden einen nicht unterstützten Browser. Bitte nutzen Sie'
       },
       statsTemplate:
-        '\n{layers} Ebenen und {count} keycodes. Es wurden {any} Freie Keycodes Definiert\n'
+        '\n{layers} Ebenen und {count} keycodes geladen. Es wurden {any} freie Keycodes Definiert\n',
+      maintain:
+        'Dieses Projekt wird von den QMK-Entwicklern und -Mitwirkenden bereitgestellt. Helfen Sie mit!',
+      hostedOn: 'Mit GitHub Pages betrieben',
+      serverStatus: 'Server-Status',
+      apiVersion: 'API-Version',
+      jobsWaiting: 'wartende Job(s)'
     }
   }
 };
