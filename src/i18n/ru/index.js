@@ -6,85 +6,85 @@ export default {
     message: {
       ...potato,
       help: {
-        label: 'Summon Wizard'
+        label: 'Вызов волшебника'
       },
       print: { ...print },
       tester: { ...tester },
       keyboard: {
-        label: 'keyboard'
+        label: 'клавиатура'
       },
       layout: {
         label: 'layout'
       },
       keymapName: {
-        label: 'Keymap Name',
-        placeholder: 'custom keymap name'
+        label: 'Имя клавиатуры',
+        placeholder: 'имя пользовательской клавиатуры'
       },
       loadDefault: {
-        label: 'Load Default',
-        title: 'Load default keymap from QMK Firmware'
+        label: 'Загрузка по умолчанию',
+        title: 'Загрузка клавиатуры из прошивки QMK'
       },
       compile: {
-        label: 'Compile',
-        title: 'Compile Keymap'
+        label: 'Скомпилировать',
+        title: 'Скомпилировать раскладку'
       },
       downloadKeymap: {
-        title: 'Download keymap.c only',
-        label: 'keymap only'
+        title: 'Скачать только keymap.c',
+        label: 'только раскладка'
       },
       downloadSource: {
-        title: 'Download QMK Firmware code',
-        label: 'Full Source'
+        title: 'Скачать код прошивки QMK',
+        label: 'Полный источник'
       },
       downloadJSON: {
-        title: 'Export QMK Keymap JSON file',
+        title: 'Экспортировать файл JSON раскладки QMK',
         label: 'Keymap.JSON'
       },
       importJSON: {
-        title: 'Import QMK Keymap JSON file'
+        title: 'Импортировать файл JSON раскладки QMK'
       },
       importUrlJSON: {
-        title: 'Import QMK Keymap JSON from URL'
+        title: 'Импортировать JSON раскладки QMK из URL'
       },
       printKeymap: {
-        title: 'Print Keymap Layers',
-        label: 'Print Keymap'
+        title: 'Распечатать слои раскладки',
+        label: 'Распечатать раскладку'
       },
       testKeys: {
-        title: 'Test Keyboard Input',
-        label: 'Test Keyboard'
+        title: 'Проверка ввода с клавиатуры',
+        label: 'Проверка клавиатуры'
       },
       downloadFirmware: {
-        label: 'Firmware',
-        title: 'Download firmware file for flashing'
+        label: 'Прошивка',
+        title: 'Скачать прошивочный файл для прошивки'
       },
       flashFirmware: {
-        label: 'Auto-Flash',
-        title: 'Automatically Flash compiled Firmware to MCU'
+        label: 'Авто-прошивка',
+        title: 'Автоматически прошить скомпилированную прошивку на MCU'
       },
       flashFile: {
-        label: 'Custom-Flash',
-        title: 'Flash User Selected file to MCU'
+        label: 'Пользовательская прошивка',
+        title: 'Прошить выбранный пользовательский файл на MCU'
       },
       ColorwayTip: {
-        title: 'Ctrl + Alt + N to cycle next colorway'
+        title: 'Ctrl + Alt + N, чтобы перейти к следующему цветовому варианту'
       },
       layer: {
-        label: 'Layer',
-        confirm: 'Are you sure you want to clear layer?',
-        title: 'Clear Layer'
+        label: 'Слой',
+        confirm: 'Вы уверены, что хотите очистить слой?',
+        title: 'Очистить слой'
       },
       keymap: {
-        label: 'Keymap'
+        label: 'Раскладка'
       },
       downloadToolbox: {
-        label: 'Get QMK Toolbox'
+        label: 'Получить QMK инструментарий'
       },
       keycodes: {
-        label: 'Keycodes'
+        label: 'Коды клавиш'
       },
       keycodesRef: {
-        label: 'Keycodes reference'
+        label: 'Ссылка на коды клавиш'
       },
       keycodesTab: {
         ANSI: {
@@ -97,59 +97,59 @@ export default {
           label: 'Quantum'
         },
         KeyboardSettings: {
-          label: 'Keyboard Settings'
+          label: 'Настройки клавиатуры'
         },
         AppMediaMouse: {
-          label: 'App, Media and Mouse'
+          label: 'Приложение, медиа и мышь'
         }
       },
       settingsPanel: {
-        title: 'Configurator Settings',
+        title: 'Настройки конфигуратора',
         fastInput: {
           label: 'Fast Input',
           title: 'ctrl + alt + f',
-          help: 'Input keys via keyboard without clicking each position.'
+          help: 'Ввод клавиш через клавиатуру без нажатия на каждую позицию.'
         },
         displaySizes: {
-          label: 'Show Key Sizes',
+          label: 'Показать размеры клавиш',
           title: 'ctrl + alt + u',
-          help: 'Show keycap sizes in Key Units'
+          help: 'Показать размеры клавиш в Key Units'
         },
         toggleTutorial: {
-          label: 'Video Tutorial',
-          title: 'MechMerlin how-to video on Configurator',
-          help: 'MechMerlin video guide'
+          label: 'Видеоурок',
+          title: 'MechMerlin видео с инструкциями о конфигураторе',
+          help: 'MechMerlin видеогид'
         },
         darkmode: {
-          label: 'Toggle Darkmode',
-          title: 'Dark mode'
+          label: 'Переключить в темный режим',
+          title: 'Темный режим'
         },
         language: {
-          title: 'Language'
+          title: 'Язык'
         },
         on: {
-          label: 'On'
+          label: 'Включить'
         },
         off: {
-          label: 'Off'
+          label: 'Выключить'
         }
       },
       errors: {
         invalidQMKKeymap:
-          "Sorry, that doesn't appear to be a valid QMK keymap file.",
+          "Извините, это неверный файл раскладки QMK.",
         kbfirmwareJSONUnsupported:
-          "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files.",
-        unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file.",
-        unsupportedBrowser: "You're using a non supported browser. Please use"
+          "Извините, QMK конфигуратор не поддерживает импорт JSON файлов раскладки прошивки.",
+        unknownJSON: "Извините, это не похоже на файл раскладки QMK.",
+        unsupportedBrowser: "Вы используете не поддерживаемый браузер. Пожалуйста, используйте"
       },
       statsTemplate:
-        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n',
+        '\nLoaded {layers} слои и {count} коды клавиш. Определен {any} любой код кодов клавиш\n',
       maintain:
-        'This project is maintained by QMK collaborators and contributors like you!',
-      hostedOn: 'Hosted on GitHub Pages',
-      serverStatus: 'Server Status',
-      apiVersion: 'API Version',
-      jobsWaiting: 'job(s) waiting'
+        '"Данный проект поддерживается коллабораторами QMK и такими же соавторами, как ты!"',
+      hostedOn: 'Размещено на GitHub',
+      serverStatus: 'Статус сервера',
+      apiVersion: 'Версия API',
+      jobsWaiting: 'задание(я) ожидает(ют)'
     }
   }
 };
