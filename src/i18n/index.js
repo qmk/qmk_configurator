@@ -5,12 +5,14 @@ import fr from './fr';
 import ja from './ja';
 import ru from './ru';
 import zh from './zh';
+import ptBR from './pt-BR';
 export default {
   ...de,
   ...en,
   ...es,
   ...fr,
   ...ja,
+  ...ptBR,
   ...ru,
   ...zh
 };
