@@ -109,7 +109,7 @@ export default {
           label: 'Szybkie wprowadzanie',
           title: 'Ctrl + Alt + F',
           help:
-            'Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji popredniego.'
+            'Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego.'
         },
         displaySizes: {
           label: 'Pokaż rozmiary klawiszy',
