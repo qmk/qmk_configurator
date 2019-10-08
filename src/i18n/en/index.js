@@ -136,7 +136,7 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Sorry, that doesn't appear to be a valid QMK keymap file.",
+          "Sorry, this doesn't appear to be a valid QMK keymap file.",
         kbfirmwareJSONUnsupported:
           "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files.",
         unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file.",
