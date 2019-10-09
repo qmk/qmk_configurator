@@ -18,7 +18,7 @@ export default {
     16: 'Obecnie znanych jest ponad 4000 różnych gatunków ziemniaków.',
     17: 'Z punktu widzenia systematyki ziemniaki należą do małej rodziny Psiankowatych.',
     18: 'Podczas gorączki złota Klondike na Alasce (w latach 1897-1898) 1 kilogram ziemniaków były warte niemal tyle co 1 kilogram złota.',
-    19: 'Sir Walter Raleigh sprowadził ziemniaki do do Irlandii w 1589 roku i uprawiał je nieopodal Cork na polu o powieżchni 40000 arów.',
+    19: 'Sir Walter Raleigh sprowadził ziemniaki do do Irlandii w 1589 roku i uprawiał je nieopodal Cork na polu o powierzchni 40000 arów.',
     20: 'Ziemniaki są dostępne przez cały rok, ponieważ przez cały rok są zbierane w różnych miejscach na świecie.',
     21: 'Pochodzące z Afryki i Azji słodkie ziemniaki mają różne rozmiary – od malutkich aż po ważące 60 kilogramów.',
     22: 'Narodowy Dzień Ziemniaka przypad na 19 sierpnia i 27 października.',
