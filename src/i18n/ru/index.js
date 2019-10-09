@@ -22,7 +22,7 @@ export default {
       },
       loadDefault: {
         label: 'Значения по умолчанию',
-        title: 'Загрузить раскладку со значениями по умолчанию из QMK Прошивки'
+        title: 'Загрузить раскладку со значениями по умолчанию из QMK Firmware'
       },
       compile: {
         label: 'Скомпилировать',
@@ -33,7 +33,7 @@ export default {
         label: 'только раскладка'
       },
       downloadSource: {
-        title: 'Скачать код QMK Прошивки',
+        title: 'Скачать код QMK Firmware',
         label: 'Все исходники'
       },
       downloadJSON: {
@@ -78,7 +78,7 @@ export default {
         label: 'Раскладка'
       },
       downloadToolbox: {
-        label: 'Получить QMK Инструменты'
+        label: 'Получить QMK Toolbox'
       },
       keycodes: {
         label: 'Коды клавиш'
