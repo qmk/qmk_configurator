@@ -14,13 +14,13 @@
     @dragover.prevent="dragover"
     @dragenter="dragenter"
     @dragleave="dragleave"
-  >LT {{ meta.layer }}<div
-      class="key-contents"
-      :class="contentClasses"
-      @dragenter.prevent="dragenterContents"
-      @dragleave.prevent="dragleaveContents"
-      @click.prevent.stop="clickContents"
-    >{{ contents }}</div>
+  ><div>LT {{ meta.layer }}<div
+  class="key-contents"
+  :class="contentClasses"
+  @dragenter.prevent="dragenterContents"
+  @dragleave.prevent="dragleaveContents"
+  @click.prevent.stop="clickContents"
+  >{{ contents }}</div></div>
     <div v-if="visible" class="remove" @click.stop="remove">x</div>
   </div>
 </template>

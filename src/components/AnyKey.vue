@@ -13,14 +13,14 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-  >{{ displayName }}<input
-    class="key-layer-input"
-    @focus.prevent.stop="focus"
-    @blur.prevent.stop="blur"
-    @click.prevent.stop="clickignore"
-    ref="input"
-    spellcheck="false"
-    v-model="value" /><div
+  ><div>{{ displayName }}<div><input
+  class="key-layer-input"
+  @focus.prevent.stop="focus"
+  @blur.prevent.stop="blur"
+  @click.prevent.stop="clickignore"
+  ref="input"
+  spellcheck="false"
+  v-model="value" /></div></div><div
         v-if="visible"
         class="remove"
         @click.stop="remove"

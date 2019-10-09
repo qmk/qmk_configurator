@@ -13,17 +13,17 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    >{{ displayName }}<div><input
-      class="key-layer-input"
-      :class="errorClasses"
-      type="number"
-      min="0"
-      max="15"
-      :value="value"
-      @focus="focus"
-      @blur="blur"
-      @input="input"
-      /></div><div
+    ><div>{{ displayName }}<div><input
+    class="key-layer-input"
+    :class="errorClasses"
+    type="number"
+    min="0"
+    max="15"
+    :value="value"
+    @focus="focus"
+    @blur="blur"
+    @input="input"
+    /></div></div><div
         v-if="visible"
         class="remove"
         @click.stop="remove"
