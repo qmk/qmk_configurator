@@ -14,15 +14,15 @@ export default {
         label: 'клавиатура'
       },
       layout: {
-        label: 'layout'
+        label: 'раскладка'
       },
       keymapName: {
-        label: 'Имя клавиатуры',
-        placeholder: 'имя пользовательской клавиатуры'
+        label: 'Название раскладки',
+        placeholder: 'название пользовательской раскладки'
       },
       loadDefault: {
-        label: 'Загрузка по умолчанию',
-        title: 'Загрузка клавиатуры из прошивки QMK'
+        label: 'Значения по умолчанию',
+        title: 'Загрузить раскладку со значениями по умолчанию из QMK Прошивки'
       },
       compile: {
         label: 'Скомпилировать',
@@ -33,18 +33,18 @@ export default {
         label: 'только раскладка'
       },
       downloadSource: {
-        title: 'Скачать код прошивки QMK',
-        label: 'Полный источник'
+        title: 'Скачать код QMK Прошивки',
+        label: 'Все исходники'
       },
       downloadJSON: {
-        title: 'Экспортировать файл JSON раскладки QMK',
+        title: 'Экспортировать раскладку QMK в JSON файл',
         label: 'Keymap.JSON'
       },
       importJSON: {
-        title: 'Импортировать файл JSON раскладки QMK'
+        title: 'Импортировать раскладку QMK из JSON файла'
       },
       importUrlJSON: {
-        title: 'Импортировать JSON раскладки QMK из URL'
+        title: 'Импортировать раскладку QMK в виде JSON из URL'
       },
       printKeymap: {
         title: 'Распечатать слои раскладки',
@@ -56,15 +56,15 @@ export default {
       },
       downloadFirmware: {
         label: 'Прошивка',
-        title: 'Скачать прошивочный файл для прошивки'
+        title: 'Скачать прошивочный файл для процесса прошивки'
       },
       flashFirmware: {
         label: 'Авто-прошивка',
-        title: 'Автоматически прошить скомпилированную прошивку на MCU'
+        title: 'Автоматически прошить микроконтроллер скомпилированной прошивкой'
       },
       flashFile: {
         label: 'Пользовательская прошивка',
-        title: 'Прошить выбранный пользовательский файл на MCU'
+        title: 'Прошить микроконтроллер выбранным пользовательским файлом'
       },
       ColorwayTip: {
         title: 'Ctrl + Alt + N, чтобы перейти к следующему цветовому варианту'
@@ -78,13 +78,13 @@ export default {
         label: 'Раскладка'
       },
       downloadToolbox: {
-        label: 'Получить QMK инструментарий'
+        label: 'Получить QMK Инструменты'
       },
       keycodes: {
         label: 'Коды клавиш'
       },
       keycodesRef: {
-        label: 'Ссылка на коды клавиш'
+        label: 'Справочник по кодам клавиш'
       },
       keycodesTab: {
         ANSI: {
@@ -106,50 +106,50 @@ export default {
       settingsPanel: {
         title: 'Настройки конфигуратора',
         fastInput: {
-          label: 'Fast Input',
+          label: 'Быстрый ввод',
           title: 'ctrl + alt + f',
-          help: 'Ввод клавиш через клавиатуру без нажатия на каждую позицию.'
+          help: 'Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию'
         },
         displaySizes: {
-          label: 'Показать размеры клавиш',
+          label: 'Показывать размеры клавиш',
           title: 'ctrl + alt + u',
-          help: 'Показать размеры клавиш в Key Units'
+          help: 'Показывать размеры клавиш в Key Units'
         },
         toggleTutorial: {
           label: 'Видеоурок',
-          title: 'MechMerlin видео с инструкциями о конфигураторе',
-          help: 'MechMerlin видеогид'
+          title: 'Видео от MechMerlin с инструкциями к конфигуратору',
+          help: 'Видеоурок от MechMerlin'
         },
         darkmode: {
-          label: 'Переключить в темный режим',
+          label: 'Темный режим',
           title: 'Темный режим'
         },
         language: {
           title: 'Язык'
         },
         on: {
-          label: 'Включить'
+          label: 'Вкл'
         },
         off: {
-          label: 'Выключить'
+          label: 'Выкл'
         }
       },
       errors: {
         invalidQMKKeymap:
           "Извините, это неверный файл раскладки QMK.",
         kbfirmwareJSONUnsupported:
-          "Извините, QMK конфигуратор не поддерживает импорт JSON файлов раскладки прошивки.",
+          "Извините, QMK конфигуратор не поддерживает импорт JSON файлов kbfirmware.",
         unknownJSON: "Извините, это не похоже на файл раскладки QMK.",
         unsupportedBrowser: "Вы используете не поддерживаемый браузер. Пожалуйста, используйте"
       },
       statsTemplate:
-        '\nLoaded {layers} слои и {count} коды клавиш. Определен {any} любой код кодов клавиш\n',
+        '\nЗагружено {layers} слои и {count} коды клавиш. Обнаружено {any} разных кодов кодов клавиш\n',
       maintain:
-        '"Данный проект поддерживается коллабораторами QMK и такими же соавторами, как ты!"',
-      hostedOn: 'Размещено на GitHub',
+        'Данный проект поддерживается коллабораторами QMK и такими же участниками, как вы!',
+      hostedOn: 'Размещено на GitHub Pages',
       serverStatus: 'Статус сервера',
       apiVersion: 'Версия API',
-      jobsWaiting: 'задание(я) ожидает(ют)'
+      jobsWaiting: 'заданий ожидает'
     }
   }
 };
