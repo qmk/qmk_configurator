@@ -14,7 +14,14 @@
       >{{ layer.name }}</div>
     </div>
     <button
-      class="clear-button"
+      class="layer-action-button"
+      title="Swap Layers"
+      @click="swap"
+    >
+      <font-awesome-icon icon="random" size="lg" fixed-width />
+    </button>
+    <button
+      class="layer-action-button"
       :title="$t('message.layer.title')"
       @click="clearLayer"
     >
@@ -55,7 +62,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['changeLayer', 'initLayer']),
+    ...mapMutations(['changeLayer', 'initLayer', 'swapLayers']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer(id);
@@ -66,14 +73,18 @@ export default {
       if (confirm(this.$t('message.layer.confirm'))) {
         this.initLayer(this.layer);
       }
+    },
+    swap() {
+      let targetLayer = prompt("Enter layer numer to swap with current layer");
+      this.swapLayers(targetLayer);
     }
   }
 };
 </script>
 <style>
-.clear-button {
+.layer-action-button {
   line-height: 100%;
-  margin: 0;
+  margin: 0 2px;
   border-radius: 3px;
   border: 0px solid;
   padding: 6px 8px;

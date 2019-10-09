@@ -275,6 +275,23 @@ const mutations = {
     }
     state.layer = newLayer;
   },
+  swapLayers(state, targetLayer) {
+    if (parseInt(targetLayer) === state.layer) {
+      return;
+    }
+
+    if (state.keymap[targetLayer] === undefined) {
+      mutations.initLayer(state, targetLayer);
+    }
+
+    [state.keymap[targetLayer], state.keymap[state.layer]] = [
+      state.keymap[state.layer],
+      state.keymap[targetLayer]
+    ];
+
+    mutations.changeLayer(state, targetLayer);
+    mutations.setDirty(state);
+  },
   resetConfig(state) {
     state.config = Object.assign({}, state.defaults);
   },

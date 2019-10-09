@@ -106,6 +106,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', [
+      'swapLayers',
       'changeLayer',
       'clear',
       'initKeymap',
