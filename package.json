@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint",
     "prettier:check": "prettier -c \"./src/**/*.{js,vue,scss,css,json}\"",
     "prettier:fix": "prettier -c \"./src/**/*.{js,vue,scss,css,json}\" --write",
+    "prettier:json:check": "prettier -c \"./public/**/*.json\"; if [[ $? == 1 ]]; then exit 0; else exit 1; fi",
     "test:cypress": "cypress run",
     "test:cypress:ci": "start-server-and-test serve http://localhost:8080 test:cypress",
     "test:unit": "vue-cli-service test:unit"

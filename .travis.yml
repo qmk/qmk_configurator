@@ -21,6 +21,7 @@ install:
 
 script:
   - yarn run prettier:check
+  - yarn run prettier:json:check
   - yarn run lint
   - yarn run test:unit
   - yarn run test:cypress:ci
