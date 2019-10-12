@@ -82,6 +82,18 @@ export default [
     title: 'Browser Favorites (Windows)',
     width: 1500
   },
+  {
+    name: 'Brightness Up',
+    code: 'KC_BRIU',
+    title: 'Increase the brightness of screen (Laptop)',
+    width: 1500
+  },
+  {
+    name: 'Brightness Down',
+    code: 'KC_BRID',
+    title: 'Decrease the brightness of screen (Laptop)',
+    width: 1500
+  },
 
   { label: 'Multimedia Keys', width: 'label' },
 
