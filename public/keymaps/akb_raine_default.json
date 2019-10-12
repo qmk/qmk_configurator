@@ -1,6 +1,7 @@
 {
   "keyboard": "akb/raine",
-  "keymap": "akb_raine_layout_mine",
+  "keymap": "default_8d1df",
+  "commit": "8d1df33900e68094e27ae5c278ac0a1bfbb6a89f",
   "layout": "LAYOUT",
   "layers": [
     [
