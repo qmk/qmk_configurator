@@ -1,35 +1,35 @@
 export default {
   page: {
-    label: 'Keyboard Tester'
+    label: 'Тестер клавиатуры'
   },
   keycodeStatus: {
-    label: 'Keycodes Detected'
+    label: 'Обнаружены коды клавиш'
   },
   back: {
-    label: 'Back',
-    title: 'Return to Configurator'
+    label: 'Назад',
+    title: 'Вернуться в конфигуратор'
   },
   reset: {
-    label: 'Reset',
-    title: 'Reset detected keys'
+    label: 'Сброс',
+    title: 'Сброс обнаруженных клавиш'
   },
   letters: {
     keycode: {
-      label: 'keycode'
+      label: 'код клавиши'
     },
     code: {
-      label: 'code'
+      label: 'код'
     },
     key: {
-      label: 'key'
+      label: 'клавиша'
     }
   },
   docs: {
     paragraph:
-      'Note: Detected Key and Code may differ depending on your locale. Docs'
+      'Примечание: Обнаруженные клавиша и код могут отличаться в зависимости от локали. См. документацию'
   },
   chatter: {
-    label: 'Chatter threshold (ms)',
-    detectedAlert: 'chatter has been detected!'
+    label: 'Порог залипания (мс)',
+    detectedAlert: 'было обнаружено залипание!'
   }
 };
