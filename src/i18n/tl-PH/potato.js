@@ -1,0 +1,32 @@
+export default {
+  potato: {
+    1: 'Si Henry Spalding ang pinakaunang nagtanim ng mga patatas sa Idaho noong 1837',
+    2: 'Ang “French Fries” ay unang napaikilala sa Amerika noong si Thomas Jefferson ay naghanda para sa isang hapunan sa White House.',
+    3: 'Ang mga Amerikanong mahihilig sa patatas ay kumakain ng humigit sa 4 milyong tonelada ng French Fries na mangiba-ibang hugis at sukat noong 2017.',
+    4: 'Ang patatas ay mabisang aphrodisiac, ayons sa isang physician sa Ireland.',
+    5: 'Ang karaniwang Amerikano ay kayang kumain ng 140 pounds ng patatas kada taon. Ang mga Aleman naman ay kayang kumain ng higit pa sa 200 pounds kada taon.',
+    6: 'Ang pinakamalaking patatas ay mayroong 18 pounds at 4 ounces base sa Guinness Book of World Records. Ito ay galing sa Ingalatera noong 1795.',
+    7: 'Ang mga patatas ay ang pang-apat sa pangunahing pagkain ng mundo – sumunod sa trigo, mais at kanin.',
+    8: 'Ang mga patatas ay tumutubo sa higit pa sa 125 na mga bansa.',
+    9: 'Kada taon ay may sapat na patatas na kayang punuan ang isang four-lane na daan paikot ng mundo ng anim na beses',
+    10: 'Ang Tsina ang pinakamalaking producer ng patatas sa buong mundo.',
+    11: 'Ang mga patatas ang pinkaunang gulay na tumubo sa kalawakan.',
+    12: 'Ang mga patatas ay gluten-free.',
+    13: 'Isa sa mga basic Incan measurements ng oras ay ang oras ng kung gaano maluluto ang patatas.',
+    14: 'Kapag ang patatas ay nababad sa sinag ng araw habang ito ay lumalaki, ito ay magiging kulay berde at magiging nakakalasong.',
+    15: 'Kailangang ng 10,000 pounds ng patatas para makagawa ng 2,500 pounds potato chips.',
+    16: "Sa kasalukuyan ay mayroong higit sa 4000 na iba't-ibang uri ng patatas.",
+    17: 'Ang patatas ay galing sa isang maliit na pamilya, ang Nightshade o ang Solanaceae family.',
+    18: 'Noong Alaskan Klondike gold rush, (1897-1898) ang mga patatas ay kasing-halaga ng ginto base sa bigay neto.',
+    19: 'Si Sir Walter Raleigh ang unang nagpakilala ng patatas sa Ireland noong 1589 na mayroong 40,000 acres ng kalupaan malapit sa Cork.',
+    20: 'Sa buong taon ay mayroong patatas sa kadahilanan na ito ay naaani saanman kada buwan ng taon.',
+    21: 'Sa Africa at Asya, ang yam ay may pinagkaiba sa sukat sa isang maliit na patatas hanggang sa record na sukat na 130 pounds.',
+    22: 'Tuwing ika-19 ng Agosto at ika-27 ng Oktobre ang National Potato Day.',
+    23: 'Ang patatas ay ginagamit din sa pag-gawa ng mga inuming alkohol gaya ng vodka, potcheen, o akvavit.',
+    24: 'Ang patatas ay isa sa mga gulay na eco-friendly. Madaling palaguin, at hindi kailangan ng madami na pampataba/fertilizer at mga kemikal para mabuhay kumpara sa ibang mga gulay.',
+    25: 'Ang patatas ay galing sa katimugan ng Peru na una ring na-domesticate noong 8000 BC hanggang 5000 BC.',
+    26: 'Ang salitang potato ay galing saitang Espanyol na patata.',
+    27: 'Ang halaman ng patatas ay madalas na pollinated ng mga insekto tulad ng mga bubuyog/bumblebees.',
+    28: 'Ang patatas ay binubuo ng 80% tubig at 20% solid.'
+  }
+};
