@@ -2,7 +2,7 @@ import potato from './potato';
 import print from './print';
 import tester from './tester';
 export default {
-  en: {
+  ph: {
     message: {
       ...potato,
       help: {
