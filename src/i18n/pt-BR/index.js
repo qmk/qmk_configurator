@@ -6,85 +6,85 @@ export default {
     message: {
       ...potato,
       help: {
-        label: 'Summon Wizard'
+        label: 'Invocar mago'
       },
       print: { ...print },
       tester: { ...tester },
       keyboard: {
-        label: 'keyboard'
+        label: 'teclado'
       },
       layout: {
         label: 'layout'
       },
       keymapName: {
-        label: 'Keymap Name',
-        placeholder: 'custom keymap name'
+        label: 'Nome da keymap',
+        placeholder: 'nome da keymap customizada'
       },
       loadDefault: {
-        label: 'Load Default',
-        title: 'Load default keymap from QMK Firmware'
+        label: 'Carregar padrão',
+        title: 'Carregar keymap padrão do QMK Firmware'
       },
       compile: {
-        label: 'Compile',
-        title: 'Compile Keymap'
+        label: 'Compilar',
+        title: 'Compilar Keymap'
       },
       downloadKeymap: {
-        title: 'Download keymap.c only',
-        label: 'keymap only'
+        title: 'Baixar somente keymap.c',
+        label: 'somente keymap'
       },
       downloadSource: {
         title: 'Download QMK Firmware code',
         label: 'Full Source'
       },
       downloadJSON: {
-        title: 'Export QMK Keymap JSON file',
+        title: 'Exportar JSON do keymap QMK',
         label: 'Keymap.JSON'
       },
       importJSON: {
-        title: 'Import QMK Keymap JSON file'
+        title: 'Importar JSON do keymap QMK'
       },
       importUrlJSON: {
-        title: 'Import QMK Keymap JSON from URL'
+        title: 'Importar JSON da URL QMK Keymap JSON'
       },
       printKeymap: {
-        title: 'Print Keymap Layers',
-        label: 'Print Keymap'
+        title: 'Printar camadas de Keymap',
+        label: 'Printar Keymap'
       },
       testKeys: {
-        title: 'Test Keyboard Input',
-        label: 'Test Keyboard'
+        title: 'Testar entrada do teclado',
+        label: 'Testar teclado'
       },
       downloadFirmware: {
         label: 'Firmware',
-        title: 'Download firmware file for flashing'
+        title: 'Baixar arquivo firmware para flashing'
       },
       flashFirmware: {
         label: 'Auto-Flash',
-        title: 'Automatically Flash compiled Firmware to MCU'
+        title: 'Enviar firmware para MCU automaticamente'
       },
       flashFile: {
-        label: 'Custom-Flash',
-        title: 'Flash User Selected file to MCU'
+        label: 'Flash-Customizado',
+        title: 'Enviar arquivo selecionado pelo usuário para o MCU'
       },
       ColorwayTip: {
-        title: 'Ctrl + Alt + N to cycle next colorway'
+        title: 'Ctrl + Alt + N para próximo esquema de cores'
       },
       layer: {
-        label: 'Layer',
-        confirm: 'Are you sure you want to clear layer?',
-        title: 'Clear Layer'
+        label: 'Camadas',
+        confirm: 'Limpar as camadas”',
+        title: 'Limpar camadas'
       },
       keymap: {
         label: 'Keymap'
       },
       downloadToolbox: {
-        label: 'Get QMK Toolbox'
+        label: 'Requerir QMK Toolbox'
       },
       keycodes: {
         label: 'Keycodes'
       },
       keycodesRef: {
-        label: 'Keycodes reference'
+        label: 'Referencias de Keycodes'
       },
       keycodesTab: {
         ANSI: {
@@ -97,35 +97,36 @@ export default {
           label: 'Quantum'
         },
         KeyboardSettings: {
-          label: 'Keyboard Settings'
+          label: 'Configurações de teclado'
         },
         AppMediaMouse: {
-          label: 'App, Media and Mouse'
+          label: 'App, Midia e Mouse'
         }
       },
       settingsPanel: {
-        title: 'Configurator Settings',
+        title: 'Configurações',
         fastInput: {
-          label: 'Fast Input',
+          label: 'Entrada rápida',
           title: 'ctrl + alt + f',
-          help: 'Input keys via keyboard without clicking each position.'
+          help:
+            'Entrada de comandos a partir do teclado sem clicar em outra posição.'
         },
         displaySizes: {
-          label: 'Show Key Sizes',
+          label: 'Mostrar tamanho de teclas',
           title: 'ctrl + alt + u',
-          help: 'Show keycap sizes in Key Units'
+          help: 'Mostrar tamanhos de teclas em unidades-chave'
         },
         toggleTutorial: {
-          label: 'Video Tutorial',
+          label: 'Tutorial em Video',
           title: 'MechMerlin how-to video on Configurator',
           help: 'MechMerlin video guide'
         },
         darkmode: {
           label: 'Toggle Darkmode',
-          title: 'Dark mode'
+          title: 'Modo noturno'
         },
         language: {
-          title: 'Language'
+          title: 'Linguagem'
         },
         on: {
           label: 'On'
@@ -136,20 +137,21 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Sorry, that doesn't appear to be a valid QMK keymap file.",
+          'Desculpe, este não parece ser um arquivo de mapa de chaves do QMK válido. ',
         kbfirmwareJSONUnsupported:
-          "Sorry, QMK Configurator doesn't support importing kbfirmware JSON files.",
-        unknownJSON: "Sorry, this doesn't appear to be a QMK keymap file.",
-        unsupportedBrowser: "You're using a non supported browser. Please use"
+          'Desculpe, o QMK Configurator não suporta a importação de arquivos JSON do kbfimware.',
+        unknownJSON:
+          'Desculpe, este não parece ser um arquivo de mapa de teclas do QMK.',
+        unsupportedBrowser:
+          'Você está usando um navegador não suportado. Por favor, use'
       },
       statsTemplate:
-        '\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n',
-      maintain:
-        'This project is maintained by QMK collaborators and contributors like you!',
-      hostedOn: 'Hosted on GitHub Pages',
-      serverStatus: 'Server Status',
-      apiVersion: 'API Version',
-      jobsWaiting: 'job(s) waiting'
+        '\nCarregou {layers} camadas e {count} códigos-chave. Definido {any} Qualquer código-chave\n',
+      maintain: 'Este projeto é mantido por colaboradores do QMK como você!',
+      hostedOn: 'Hospedado no GitHub',
+      serverStatus: 'Status do servidor',
+      apiVersion: 'Versão da API',
+      jobsWaiting: 'Processos em execuçãoS'
     }
   }
 };
