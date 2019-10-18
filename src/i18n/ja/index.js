@@ -22,29 +22,29 @@ export default {
       },
       loadDefault: {
         label: 'Load Default',
-        title: 'QMK Firmware からデフォルトキーマップをロード'
+        title: 'QMK Firmwareからデフォルトキーマップをロード'
       },
       compile: {
         label: 'Compile',
         title: 'キーマップのコンパイル'
       },
       downloadKeymap: {
-        title: 'keymap.c のみダウンロード',
+        title: 'keymap.cのみダウンロード',
         label: 'keymap only'
       },
       downloadSource: {
-        title: 'QMK Firmware コードのダウンロード',
+        title: 'ソースコードのダウンロード',
         label: 'Full Source'
       },
       downloadJSON: {
-        title: 'QMK Keymap JSON ファイルをエクスポート',
+        title: 'QMK Keymap JSONファイルをエクスポート',
         label: 'Keymap.JSON'
       },
       importJSON: {
-        title: 'QMK Keymap JSON ファイルをインポート'
+        title: 'QMK Keymap JSONファイルをインポート'
       },
       importUrlJSON: {
-        title: 'URL から QMK Keymap JSON をインポート'
+        title: 'URLからQMK Keymap JSONをインポート'
       },
       printKeymap: {
         title: 'キーマップレイヤの印刷',
@@ -60,14 +60,14 @@ export default {
       },
       flashFirmware: {
         label: 'Auto-Flash',
-        title: 'コンパイルされたファームウェアを MCU に自動的に書き込む'
+        title: 'コンパイルされたファームウェアをMCUに自動的に書き込む'
       },
       flashFile: {
         label: 'Custom-Flash',
-        title: 'ユーザが選択したファイルを MCU に書き込む'
+        title: 'ユーザが選択したファイルをMCUに書き込む'
       },
       ColorwayTip: {
-        title: 'Ctrl + Alt + N で次の配色に切り替え'
+        title: 'Ctrl + Alt + Nで次の配色に切り替え'
       },
       layer: {
         label: 'Layer',
@@ -78,7 +78,7 @@ export default {
         label: 'Keymap'
       },
       downloadToolbox: {
-        label: 'QMK Toolbox を入手'
+        label: 'QMK Toolboxを入手'
       },
       keycodes: {
         label: 'Keycodes'
@@ -117,8 +117,8 @@ export default {
         },
         toggleTutorial: {
           label: 'Video Tutorial',
-          title: 'Configurator の MechMerlin のハウツービデオ',
-          help: 'MechMerlin のビデオガイド'
+          title: 'ConfiguratorのMechMerlinのハウツービデオ',
+          help: 'MechMerlinのビデオガイド'
         },
         darkmode: {
           label: 'ダークモードの切り替え',
@@ -136,18 +136,18 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          'すみません、正しい QMK キーマップファイルではないようです。',
+          'すみません、正しいQMKキーマップファイルではないようです。',
         kbfirmwareJSONUnsupported:
-          'すみません、QMK Configurator は キーボードファームウェア JSON ファイルのインポートをサポートしていません。',
-        unknownJSON: 'すみません、QMK キーマップファイルではないようです。',
+          'すみません、QMK ConfiguratorはキーボードファームウェアJSONファイルのインポートをサポートしていません。',
+        unknownJSON: 'すみません、QMKキーマップファイルではないようです。',
         unsupportedBrowser:
           '未サポートのブラウザを使用しています。次のブラウザを使用してください'
       },
       statsTemplate:
         '\n {layers} レイヤと {count} キーコードをロードしました。任意の {any} キーコードを定義しました。\n',
       maintain:
-        'このプロジェクトはあなたのような QMK 協力者と貢献者によって維持されています！',
-      hostedOn: 'GitHub Pages で提供されています',
+        'このプロジェクトはあなたのようなQMK協力者と貢献者によって維持されています！',
+      hostedOn: 'GitHub Pagesで提供されています',
       serverStatus: 'サーバ状況',
       apiVersion: 'API Version',
       jobsWaiting: 'ジョブ待機中'

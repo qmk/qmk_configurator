@@ -7,7 +7,7 @@ export default {
   },
   back: {
     label: 'Back',
-    title: 'Configurator に戻る'
+    title: 'Configuratorに戻る'
   },
   reset: {
     label: 'Reset',
