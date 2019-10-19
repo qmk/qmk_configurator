@@ -29,11 +29,11 @@ export default {
         title: 'キーマップのコンパイル'
       },
       downloadKeymap: {
-        title: 'keymap.cのみダウンロード',
+        title: 'keymap.c のみダウンロード',
         label: 'keymap only'
       },
       downloadSource: {
-        title: 'ソースコードのダウンロード',
+        title: 'QMK全ソースコードのダウンロード',
         label: 'Full Source'
       },
       downloadJSON: {
@@ -84,7 +84,7 @@ export default {
         label: 'Keycodes'
       },
       keycodesRef: {
-        label: 'キーコードの参照'
+        label: 'キーコードの説明はこちら'
       },
       keycodesTab: {
         ANSI: {
