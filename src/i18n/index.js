@@ -1,4 +1,5 @@
 import de from './de';
+import el from './el';
 import en from './en';
 import es from './es';
 import fr from './fr';
@@ -9,6 +10,7 @@ import plPL from './pl-PL';
 import ptBR from './pt-BR';
 export default {
   ...de,
+  ...el,
   ...en,
   ...es,
   ...fr,
