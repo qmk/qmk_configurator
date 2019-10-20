@@ -29,7 +29,7 @@ export default {
       'नोट: पता लगाई गई कुंजी और कोड आपके स्थान के आधार पर भिन्न हो सकते हैं। डॉक्स'
   },
   chatter: {
-    label: 'Chatter सीमा (एमएस)',
+    label: 'Chatter सीमा (ms)',
     detectedAlert: 'Chatter का पता चला है!'
   }
 };

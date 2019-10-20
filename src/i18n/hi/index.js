@@ -29,7 +29,7 @@ export default {
         title: 'कीमैप संकलित करें'
       },
       downloadKeymap: {
-        title: 'केवल कीमैप.c डाउनलोड करें',
+        title: 'केवल keymap.c डाउनलोड करें',
         label: 'केवल कीमैप'
       },
       downloadSource: {
@@ -107,13 +107,13 @@ export default {
         title: 'विन्यासकर्ता सेटिंग्स',
         fastInput: {
           label: 'फास्ट इनपुट',
-          title: 'ctrl + alt + f',
+          title: 'Ctrl + Alt + F',
           help: 'प्रत्येक स्थिति पर क्लिक किए बिना कीबोर्ड के माध्यम से इनपुट कुंजी।'
         },
         displaySizes: {
-          label: 'मुख्य आकार दिखाएँ',
+          label: 'मुख्य कुंजियां दिखाएँ',
           title: 'Ctrl + Alt + U',
-          help: 'की-कैप आकार मुख्य इकाइयों में दिखाएं'
+          help: 'की-कैप आकार कुंजियोंकि इकाइयों में दिखाएं'
         },
         toggleTutorial: {
           label: 'वीडियो ट्यूटोरियल',
@@ -149,7 +149,7 @@ export default {
       hostedOn: 'GitHub पेज पर होस्ट किया गया',
       serverStatus: 'सर्वर की स्थिति',
       apiVersion: 'API संस्करण',
-      jobsWaiting: 'job(s) प्रतीक्षा कर रहा है'
+      jobsWaiting: 'job(s) प्रतीक्षा कर रहे है'
     }
   }
 };
