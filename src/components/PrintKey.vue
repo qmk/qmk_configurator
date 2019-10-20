@@ -64,4 +64,8 @@ export default {
   height: 0;
   clear: both;
 }
+
+.print-keymap > .keycode-select {
+  border: none !important;
+}
 </style>
