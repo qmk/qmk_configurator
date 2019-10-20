@@ -108,7 +108,8 @@ export default {
         fastInput: {
           label: 'Γρήγορη Είσοδος',
           title: 'ctrl + alt + f',
-          help: 'Είσοδος πλήκτρων μέσω του πληκτρολογίου χωρίς να κάνετε κλικ σε κάθε θέση.'
+          help:
+            'Είσοδος πλήκτρων μέσω του πληκτρολογίου χωρίς να κάνετε κλικ σε κάθε θέση.'
         },
         displaySizes: {
           label: 'Δείξτε το Μέγεθος των Πλήκτρων',
@@ -136,11 +137,13 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Συγνώμη, αυτό δεν φαίνεται να είναι ένα έγκυρο QMK keymap αρχείο.",
+          'Συγνώμη, αυτό δεν φαίνεται να είναι ένα έγκυρο QMK keymap αρχείο.',
         kbfirmwareJSONUnsupported:
-          "Συγνώμη,ο QMK Configurator δεν υποστηρίζει την εισαγωγή kbfirmware JSON αρχείων.",
-        unknownJSON: "Συγνώμη, αθτό δεν φαίνεται να είναι ένα QMK keymap αρχείο.",
-        unsupportedBrowser: "Χρησιμοποιείτε έναν μη υποστηριζόμενο browser. Παρακαλώ χρησιμοποιήστε"
+          'Συγνώμη,ο QMK Configurator δεν υποστηρίζει την εισαγωγή kbfirmware JSON αρχείων.',
+        unknownJSON:
+          'Συγνώμη, αθτό δεν φαίνεται να είναι ένα QMK keymap αρχείο.',
+        unsupportedBrowser:
+          'Χρησιμοποιείτε έναν μη υποστηριζόμενο browser. Παρακαλώ χρησιμοποιήστε'
       },
       statsTemplate:
         '\nΦορτώθηκαν τα {layers} επίπεδα και τα {count} πλήκτρα. Προσδιορίστε {any} οποιεσδήποτε κενές θέσεις πλήκτρων\n',
