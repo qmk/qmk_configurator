@@ -71,14 +71,14 @@ export default {
       },
       layer: {
         label: 'Lapisan',
-        confirm: 'Andan pasti ingin membuang lapisan?',
+        confirm: 'Anda pasti ingin membuang lapisan?',
         title: 'Buang Lapisan'
       },
       keymap: {
         label: 'Keymap'
       },
       downloadToolbox: {
-        label: 'Dapatkan peralatan QMK'
+        label: 'Dapatkan QMK Toolbox'
       },
       keycodes: {
         label: 'Kod kekunci'
@@ -151,7 +151,7 @@ export default {
       hostedOn: 'Dihos di GitHub Pages',
       serverStatus: 'Status Pelayan',
       apiVersion: 'Versi API',
-      jobsWaiting: 'kerja kosong'
+      jobsWaiting: 'kerja sedang menunggu'
     }
   }
 };
