@@ -327,6 +327,7 @@ function statusError(message) {
 
 function getExclusionList() {
   return [
+    '1upkeyboards/sweet16',
     '40percentclub/i75',
     '8pack',
     'adkb96',

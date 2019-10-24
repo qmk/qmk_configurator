@@ -1,7 +1,7 @@
 {
-  "keyboard": "1upkeyboards/sweet16",
-  "keymap": "default_0072fdd",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "keyboard": "1upkeyboards/sweet16/v2/promicro",
+  "keymap": "default_9160405",
+  "commit": "9160405d39d82ba787bac07ab569aa74d86d5082",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
