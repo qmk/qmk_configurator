@@ -23,7 +23,7 @@ export default {
     21: "Native d'Afrique et d'Asie, la patate douce peut être de la taille d'une petite pomme-de-terre jusqu'à la taille record de 59kg.",
     22: 'Le 19 Aôut et 27 Octobre sont les jours nationaux de la pomme-de-terre.',
     23: "La pomme-de-terre est aussi utilisée pour réaliser des boissons alcoolisées comme la vodka, le potcheen ou l'akvavit.",
-    24: "La patate est l'un des légumes les plus écologiques. Elle est facile à cultiver, et nécessité que peu de fertilisants et additifs.",
+    24: "La patate est l'un des légumes les plus écologiques. Elle est facile à cultiver, et nécessite que peu de fertilisants et additifs.",
     25: "La pomme-de-terre vient d'une région du sud du Pérou actuel, où elle a été domestiqué entre 8000 av.J-C et 5000 av.J-C.",
     26: 'Le mot patate vient du mot espagnol patata.',
     27: 'Les fleurs de la plante de la pomme-de-terre sont généralement pollinisées par les insectes comme le bourdon.',
