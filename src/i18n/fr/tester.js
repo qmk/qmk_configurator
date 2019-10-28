@@ -26,7 +26,7 @@ export default {
   },
   docs: {
     paragraph:
-      'Note: La touche et le code détectées peuvent varier selon votre localisation. Docs'
+      'Note: La touche et le code détectés peuvent varier selon votre localisation. Docs'
   },
   chatter: {
     label: "Seuil de détection d'activations répétées (chatter)(ms)",

@@ -111,7 +111,7 @@ export default {
           label: 'Entrée Rapide',
           title: 'ctrl + alt + f',
           help:
-            "Permet d'entrer les touches via votre clavier sans cliquer sur chaque positions."
+            "Permet d'entrer les touches via votre clavier sans cliquer sur chaque position."
         },
         displaySizes: {
           label: 'Taille des touches',
@@ -120,8 +120,8 @@ export default {
         },
         toggleTutorial: {
           label: 'Guide Vidéo',
-          title: 'Guide vidéo de MechMerlin sur le configurateur (en Anglais)',
-          help: 'Guide vidéo de MechMerlin (en Anglais)'
+          title: 'Guide vidéo de MechMerlin sur le configurateur (en anglais)',
+          help: 'Guide vidéo de MechMerlin (en anglais)'
         },
         language: {
           title: 'Langue'
@@ -148,7 +148,7 @@ export default {
           "Vous utilisez un navigateur non-supporté. Utilisez s'il vous plait"
       },
       statsTemplate:
-        '\n{layers} calques et {count} touches chargées. {any} emplacements vides definis\n',
+        '\n{layers} calques et {count} touches chargées. {any} emplacements vides définis\n',
       maintain:
         'Ce projet est maintenu par les collaborateurs QMK et des contributeurs comme vous!',
       hostedOn: 'Hébergé sur GitHub Pages',
