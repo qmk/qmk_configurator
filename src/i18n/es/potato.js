@@ -1,7 +1,7 @@
 export default {
   potato: {
     1: 'Henry Spalding primero plantó papas en Idaho en 1837.',
-    2: '“Papas fritas” fueron dadas a conocer en America cuando Thomas Jefferson las sirvió en una cena de la Casa Blanca.',
+    2: '“Papas fritas” fueron dadas a conocer en América cuando Thomas Jefferson las sirvió en una cena de la Casa Blanca.',
     3: 'Fanáticos estadounidenses de papas ingirieron más de 4 millones de toneladas de papas fritas en varias formas y tamaños en 2017.',
     4: 'Las papas son un potente afrodisiaco, según un médico irlandés.',
     5: 'El estadounidense promedio come 140 libras de papas cada año. Los alemanes comen más de 200 libras al año.',
@@ -12,7 +12,7 @@ export default {
     10: 'China es el mayor proveedor de papas del mundo.',
     11: 'Las papas fueron la primera verdura cultivada en el espacio.',
     12: 'Las papas son completamente libres de gluten.',
-    13: 'Una de las medidas básicas de tiempo de los Inca fue el tiempo necesario para cocinar una papa.',
+    13: 'Una de las medidas básicas de tiempo de los Incas fue el tiempo necesario para cocinar una papa.',
     14: 'Si una papa está expuesta a la luz mientras crece, se pondrá verde y llegará a ser venenosa.',
     15: 'Se requiere 10,000 libras de papas para preparar 2,500 libras de papitas.',
     16: 'Hoy en día hay más de 4,000 variedades de papas.',
@@ -20,8 +20,8 @@ export default {
     18: 'Durante la Fiebre del oro de Klondike (1897-1898), las papas prácticamente valían su peso en oro.',
     19: 'Walter Raleigh introdujo las papas en Inglaterra en 1589 en los 40,000 acres de terreno cerca de Cork.',
     20: 'Las papas están disponibles todo el año gracias a que se cosechan en alguna parte del mundo cada mes del año.',
-    21: 'Nativos de Africa y Asia, los ñames (camotes) varían en tamaño desde el tamaño de una papa pequeña hasta el temaño de récord de 130 libras.',
-    22: 'El 19 de agosto y el 27 de octubre son el Día Noacional de la Papa.',
+    21: 'Nativos de África y Asia, los ñames (camotes) varían en tamaño desde el tamaño de una papa pequeña hasta el tamaño récord de 130 libras.',
+    22: 'El 19 de agosto y el 27 de octubre son el Día Nacional de la Papa.',
     23: 'Las papas también se usan para elaborar bebidas alcohólicas tal como el vodka, poitín o aquavit.',
     24: 'Las papas son entre las verduras más ecológicas. Son fáciles de cultivar y no requieren cantidades masivas de abono y aditivos químicos para prosperar como muchas otras verduras.',
     25: 'La papa proviene de la región del sur de Perú donde fue domesticada por primera vez entre 8000 a. C. y 5000 a. C.',
