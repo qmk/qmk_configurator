@@ -50,14 +50,17 @@ import ga from './ga';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import electron from './electron';
-// Find out if we are are running inside electon
+// Find out if we are are running inside electron
 if (
   isObject(navigator) &&
   isString(navigator.userAgent) &&
   navigator.userAgent.includes('Electron')
 )
-  electron.init(); // initializes code specific for the electron app
-
+{
+  // initializes code specific for the electron app
+  electron.init(); 
+}
+  
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
