@@ -2,6 +2,7 @@ import de from './de';
 import en from './en';
 import es from './es';
 import fr from './fr';
+import it from './it';
 import ja from './ja';
 import ms from './ms';
 import ru from './ru';
@@ -13,6 +14,7 @@ export default {
   ...en,
   ...es,
   ...fr,
+  ...it,
   ...ja,
   ...ms,
   ...plPL,
