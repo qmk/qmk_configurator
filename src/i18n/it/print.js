@@ -6,7 +6,7 @@ export default {
     label: 'Layout'
   },
   layer: {
-    label: 'Cappotto'
+    label: 'Livello'
   },
   anonymous: {
     label: 'Anonimo'

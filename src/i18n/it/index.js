@@ -2,7 +2,7 @@ import potato from './potato';
 import print from './print';
 import tester from './tester';
 export default {
-  en: {
+  it: {
     message: {
       ...potato,
       help: {
@@ -70,9 +70,9 @@ export default {
         title: 'Ctrl + Alt + N per cambiare il colore successivo'
       },
       layer: {
-        label: 'Cappotto',
-        confirm: 'Sei sicuro di voler cancellare il cappotto?',
-        title: 'Elimina cappotto'
+        label: 'Livello',
+        confirm: 'Sei sicuro di voler cancellare il livello?',
+        title: 'Elimina livello'
       },
       keymap: {
         label: 'Keymap'
@@ -128,22 +128,22 @@ export default {
           title: 'Lingua'
         },
         on: {
-          label: 'Se'
+          label: 'Accensione'
         },
         off: {
-          label: 'Non'
+          label: 'Spegnimento'
         }
       },
       errors: {
         invalidQMKKeymap:
-          "Mi dispiace, ma sembra che questo non sia un file valido keymap QMK.",
+          "Ma sembra che questo non sia un file valido keymap QMK.",
         kbfirmwareJSONUnsupported:
-          "Mi dispiace, il Configuratore QMK non consente di importare i file JSON da kbfirmware.",
-        unknownJSON: "Mi dispiace, questo non sembra essere un file keymap QMK.",
+          "Il Configuratore QMK non consente di importare i file JSON da kbfirmware.",
+        unknownJSON: "Questo non sembra essere un file keymap QMK.",
         unsupportedBrowser: "Stai usando un browser incompatibile. Utilizzare"
       },
       statsTemplate:
-        '\nCarico {layers} cappottos e {count} codici chiave. Definito {any} Any chiave codice chiave\n',
+        '\nCarico {layers} livellos e {count} codici chiave. Definito {any} Any chiave codice chiave\n',
       maintain: 'Questo progetto è gestito da collaboratori di QMK come lei!',
       hostedOn: 'Ospitato in GitHub Pages',
       serverStatus: 'Stato Server',

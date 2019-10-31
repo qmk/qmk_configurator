@@ -1,6 +1,6 @@
 export default {
   page: {
-    label: 'Tastierista'
+    label: 'Collaudatore di tastiera'
   },
   keycodeStatus: {
     label: 'Codici chiave rilevati'
