@@ -21,7 +21,7 @@ export default {
         placeholder: 'προσαρμοσμένο όνομα keymap'
       },
       loadDefault: {
-        label: 'Φότωση Προεπιλεγμένων',
+        label: 'Φόρτωση Προεπιλεγμένων',
         title: 'Φόρτωση Προεπιλεγμένου Keymap από Λογισμικό QMK'
       },
       compile: {
