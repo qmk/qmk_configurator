@@ -1,7 +1,7 @@
 {
-  "keyboard": "atreus",
-  "keymap": "default_79acf1e",
-  "commit": "79acf1e6602a20a5d82bd70e4fc7b2b34ec2207a",
+  "keyboard": "atreus/astar",
+  "keymap": "default_267a85c",
+  "commit": "267a85c885a97219b544a3c706809821c4f28344",
   "layout": "LAYOUT",
   "layers": [
     [
