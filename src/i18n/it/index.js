@@ -108,7 +108,8 @@ export default {
         fastInput: {
           label: 'Ingresso rapido',
           title: 'ctrl + alt + f',
-          help: 'Inserire i tasti tramite la tastiera senza fare clic su ciascuna posizione.'
+          help:
+            'Inserire i tasti tramite la tastiera senza fare clic su ciascuna posizione.'
         },
         displaySizes: {
           label: 'Mostra dimensione chiave',
@@ -136,11 +137,11 @@ export default {
       },
       errors: {
         invalidQMKKeymap:
-          "Ma sembra che questo non sia un file valido keymap QMK.",
+          'Ma sembra che questo non sia un file valido keymap QMK.',
         kbfirmwareJSONUnsupported:
-          "Il Configuratore QMK non consente di importare i file JSON da kbfirmware.",
-        unknownJSON: "Questo non sembra essere un file keymap QMK.",
-        unsupportedBrowser: "Stai usando un browser incompatibile. Utilizzare"
+          'Il Configuratore QMK non consente di importare i file JSON da kbfirmware.',
+        unknownJSON: 'Questo non sembra essere un file keymap QMK.',
+        unsupportedBrowser: 'Stai usando un browser incompatibile. Utilizzare'
       },
       statsTemplate:
         '\nCarico {layers} livellos e {count} codici chiave. Definito {any} Any chiave codice chiave\n',
