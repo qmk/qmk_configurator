@@ -105,8 +105,16 @@ export default [
   { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
   { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
   { width: 250 },
-  { name: 'Prev Track', code: 'KC_MRWD', title: 'Previous Track / Rewind (macOS)' },
-  { name: 'Next Track', code: 'KC_MFFD', title: 'Next Track / Fast Forward (macOS)' },
+  {
+    name: 'Prev Track',
+    code: 'KC_MRWD',
+    title: 'Previous Track / Rewind (macOS)'
+  },
+  {
+    name: 'Next Track',
+    code: 'KC_MFFD',
+    title: 'Next Track / Fast Forward (macOS)'
+  },
   { width: 250 },
   { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)' },
 
