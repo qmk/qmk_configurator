@@ -17,7 +17,6 @@
         </span>
       </p>
     </div>
-
     <div id="keycodes">
       <div class="tabs">
         <span
@@ -29,6 +28,14 @@
           :title="index"
           >{{ $t('message.keycodesTab.' + index + '.label') }}</span
         >
+        <span class="end-tab"
+          ><input
+            @focus="stopListening"
+            @blur="startListening"
+            type="text"
+            placeholder="search keycodes"
+            v-model="searchFilter"
+        /></span>
       </div>
       <div class="tab-area">
         <template v-for="(key, index) in activeTab">
@@ -36,6 +43,7 @@
             v-bind:is="getComponent(key.code)"
             v-bind="key"
             :key="index"
+            :class="filterClass(key)"
             @mouseenter="message(key)"
           />
         </template>
@@ -62,7 +70,8 @@ export default {
     }
     return {
       active: active,
-      clearTimeout: undefined
+      clearTimeout: undefined,
+      searchFilter: ''
     };
   },
   computed: {
@@ -85,7 +94,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('app', ['setMessage']),
+    ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -116,6 +125,19 @@ export default {
       this.clearTimeout = window.setTimeout(() => {
         store.commit('app/setMessage', '');
       }, 3000);
+    },
+    filterClass(key) {
+      if (this.searchFilter === '' || isUndefined(key.code)) {
+        return '';
+      }
+      const filter = this.searchFilter.toUpperCase();
+      if (
+        !key.code.includes(filter) &&
+        !(key.name && key.name.toUpperCase().includes(filter)) &&
+        !(key.title && key.title.toUpperCase().includes(filter))
+      ) {
+        return 'desaturated';
+      }
     }
   }
 };
@@ -145,6 +167,9 @@ export default {
   cursor: pointer;
   margin-bottom: -1px;
 }
+.end-tab {
+  grid-column: -1;
+}
 .tab-area {
   height: 350px;
   padding: 10px 5px;
@@ -159,5 +184,8 @@ export default {
   left: 520px;
   top: 115px;
   height: 68px;
+}
+.desaturated {
+  opacity: 0.3;
 }
 </style>
