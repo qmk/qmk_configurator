@@ -420,7 +420,6 @@ export default {
 .topctrl-keyboards {
   grid-row: top;
   grid-column: left;
-  /*justify-self: start;*/
   height: 2.5rem;
 }
 .topctrl-keymap-name {
