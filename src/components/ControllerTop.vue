@@ -24,6 +24,19 @@
           ref="select"
         ></v-select>
       </div>
+      <div class="topctrl-layouts">
+        <label class="drop-label" id="drop-label-version"
+          >{{ $t('message.layout.label') }}:</label
+        >
+        <select id="layout" v-model="layout">
+          <option
+            v-for="(aLayout, layoutName) in layouts"
+            :key="layoutName"
+            v-bind:value="layoutName"
+            >{{ layoutName }}</option
+          >
+        </select>
+      </div>
       <div class="topctrl-keymap-name">
         <label
           class="drop-label"
@@ -57,19 +70,6 @@
         >
           {{ $t('message.compile.label') }}
         </button>
-      </div>
-      <div class="topctrl-layouts">
-        <label class="drop-label" id="drop-label-version"
-          >{{ $t('message.layout.label') }}:</label
-        >
-        <select id="layout" v-model="layout">
-          <option
-            v-for="(aLayout, layoutName) in layouts"
-            :key="layoutName"
-            v-bind:value="layoutName"
-            >{{ layoutName }}</option
-          >
-        </select>
       </div>
     </div>
   </div>
@@ -394,18 +394,16 @@ export default {
 </script>
 <style>
 #drop-label-keyboard {
-  min-width: 87px;
-}
-#drop-label-version {
-  min-width: 110px;
+  min-width: 107px;
 }
 #favorite-keyboard {
   cursor: pointer;
 }
 .topctrl {
+  text-align: left;
   display: grid;
-  grid-template: [top] 1fr [bottom] 1fr / [left] 440px [middle] 360px [right] auto;
-  grid-row-gap: 5px;
+  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] 2fr [right] 1fr;
+  grid-row-gap: 2px;
 }
 #controller-top {
   padding: 5px;
@@ -422,16 +420,17 @@ export default {
 .topctrl-keyboards {
   grid-row: top;
   grid-column: left;
-  justify-self: start;
+  /*justify-self: start;*/
   height: 2.5rem;
 }
 .topctrl-keymap-name {
-  grid-row: top;
-  grid-column: middle;
+  grid-row: bottom;
+  grid-column: left;
   justify-self: start;
 }
 #keymap-name {
   width: 220px;
+  width: calc( 40rem - 16px );
   padding: 7px;
   border: 1px solid;
   border-radius: 4px;
@@ -442,7 +441,7 @@ export default {
   justify-self: end;
 }
 .topctrl-layouts {
-  grid-row: bottom;
+  grid-row: middle;
   grid-column-start: left;
   grid-column-end: right;
   justify-self: start;
@@ -452,13 +451,14 @@ export default {
   border-radius: 4px;
   border: 1px solid;
   width: 288px;
+  width: 40rem;
 }
 .drop-label {
   display: inline-block;
   text-align: right;
   padding-right: 5px;
-  min-width: 90px;
-  max-width: 110px;
+  min-width: 130px;
+  max-width: 150px;
 }
 
 .half-size {
@@ -471,7 +471,7 @@ export default {
 }
 .v-select {
   display: inline-block;
-  width: 18rem;
+  width: 40rem;
 }
 .topctrl-keyboards .v-select {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
