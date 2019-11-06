@@ -430,7 +430,7 @@ export default {
 }
 #keymap-name {
   width: 220px;
-  width: calc( 40rem - 16px );
+  width: calc(40rem - 16px);
   padding: 7px;
   border: 1px solid;
   border-radius: 4px;
