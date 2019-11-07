@@ -402,7 +402,7 @@ export default {
 .topctrl {
   text-align: left;
   display: grid;
-  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px , 3fr) [right] 2fr;
+  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px, 3fr) [right] 2fr;
   grid-row-gap: 2px;
 }
 #controller-top {
