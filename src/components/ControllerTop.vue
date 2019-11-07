@@ -394,7 +394,7 @@ export default {
 </script>
 <style>
 #drop-label-keyboard {
-  min-width: 107px;
+  min-width: 137px;
 }
 #favorite-keyboard {
   cursor: pointer;
@@ -402,7 +402,7 @@ export default {
 .topctrl {
   text-align: left;
   display: grid;
-  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] 2fr [right] 1fr;
+  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px, 3fr) [right] 2fr;
   grid-row-gap: 2px;
 }
 #controller-top {
@@ -429,13 +429,13 @@ export default {
 }
 #keymap-name {
   width: 220px;
-  width: calc(40rem - 16px);
+  width: calc(30rem - 16px);
   padding: 7px;
   border: 1px solid;
   border-radius: 4px;
 }
 .topctrl-controls {
-  grid-row: top;
+  grid-row: top / span 3;
   grid-column: right;
   justify-self: end;
 }
@@ -450,14 +450,14 @@ export default {
   border-radius: 4px;
   border: 1px solid;
   width: 288px;
-  width: 40rem;
+  width: 30rem;
 }
 .drop-label {
   display: inline-block;
   text-align: right;
   padding-right: 5px;
-  min-width: 130px;
-  max-width: 150px;
+  min-width: 160px;
+  max-width: 190px;
 }
 
 .half-size {
@@ -470,7 +470,7 @@ export default {
 }
 .v-select {
   display: inline-block;
-  width: 40rem;
+  width: 30rem;
 }
 .topctrl-keyboards .v-select {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
