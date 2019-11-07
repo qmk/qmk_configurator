@@ -394,7 +394,7 @@ export default {
 </script>
 <style>
 #drop-label-keyboard {
-  min-width: 107px;
+  min-width: 137px;
 }
 #favorite-keyboard {
   cursor: pointer;
@@ -456,8 +456,8 @@ export default {
   display: inline-block;
   text-align: right;
   padding-right: 5px;
-  min-width: 130px;
-  max-width: 150px;
+  min-width: 160px;
+  max-width: 190px;
 }
 
 .half-size {
