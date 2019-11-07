@@ -429,7 +429,7 @@ export default {
 }
 #keymap-name {
   width: 220px;
-  width: calc(40rem - 16px);
+  width: calc(30rem - 16px);
   padding: 7px;
   border: 1px solid;
   border-radius: 4px;
@@ -450,7 +450,7 @@ export default {
   border-radius: 4px;
   border: 1px solid;
   width: 288px;
-  width: 40rem;
+  width: 30rem;
 }
 .drop-label {
   display: inline-block;
@@ -470,7 +470,7 @@ export default {
 }
 .v-select {
   display: inline-block;
-  width: 40rem;
+  width: 30rem;
 }
 .topctrl-keyboards .v-select {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
