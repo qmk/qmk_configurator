@@ -386,6 +386,7 @@ function getExclusionList() {
     'minidox',
     'naked48',
     'naked60',
+    'naked64',
     'orthodox',
     'pinky',
     'planck',
