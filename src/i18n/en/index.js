@@ -28,6 +28,10 @@ export default {
         label: 'Compile',
         title: 'Compile Keymap'
       },
+      toggleTerminal: {
+        label: 'Toggle Terminal',
+        title: 'Toggle the Terminal display'
+      },
       downloadKeymap: {
         title: 'Download keymap.c only',
         label: 'keymap only'
