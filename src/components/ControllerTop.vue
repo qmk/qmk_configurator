@@ -265,12 +265,12 @@ export default {
      * @param {boolean} isAutoInit If the method is called by the code
      * @return {object} promise when it has completed
      */
-    toggleTerminal(isAutoInit = false) {
-	  if ( document.getElementById('terminal').getAttribute('class') ) {
+    toggleTerminal() {
+      if (document.getElementById('terminal').getAttribute('class')) {
         document.getElementById('terminal').removeAttribute('class');
-	  } else {
+      } else {
         document.getElementById('terminal').setAttribute('class', 'collapsed');
-	  }
+      }
     },
     // TODO: This needs to be moved in an action
     // selectInitialKeyboard

@@ -36,7 +36,9 @@ export default {
 #terminal {
   padding: 2px 5px;
   border: 1px solid;
-  font-family: 'Roboto Mono', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', 'Courier New', monospace;
+  font-family: 'Roboto Mono', Monaco, 'Bitstream Vera Sans Mono',
+    'Lucida Console', Terminal, Consolas, 'Liberation Mono', 'DejaVu Sans Mono',
+    'Courier New', monospace;
   white-space: pre-wrap;
   overflow-y: scroll;
   height: 200px;
