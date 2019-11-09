@@ -562,26 +562,6 @@ button {
   font-weight: bold;
 }
 
-#terminal {
-  padding: 2px 5px;
-  // background: #272822;
-  // color: #f8f8f2;
-  border: 1px solid;
-  font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
-    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
-    monospace;
-  white-space: pre-wrap;
-  overflow-y: scroll;
-  height: 200px;
-  font-size: 12px;
-  width: 100%;
-  margin: 0px auto;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  display: block;
-}
-
 #controller-bottom {
   padding: 5px;
   border-radius: 0px 0px 5px 5px;

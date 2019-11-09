@@ -32,3 +32,26 @@ export default {
   }
 };
 </script>
+<style>
+#terminal {
+  padding: 2px 5px;
+  border: 1px solid;
+  font-family: 'Roboto Mono', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, Consolas, 'Liberation Mono', 'DejaVu Sans Mono', 'Courier New', monospace;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  height: 200px;
+  font-size: 12px;
+  width: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  transition: all 0.5s ease-out;
+}
+#terminal.collapsed {
+  transition: all 0.5s ease-out;
+  height: 0px;
+  padding: 0 5px;
+}
+</style>
