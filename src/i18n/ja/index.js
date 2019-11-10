@@ -138,7 +138,7 @@ export default {
         invalidQMKKeymap:
           'すみません、正しいQMKキーマップファイルではないようです。',
         kbfirmwareJSONUnsupported:
-          'すみません、QMK ConfiguratorはキーボードファームウェアJSONファイルのインポートをサポートしていません。',
+          'すみません、QMK Configuratorはkbfirmware JSONファイルのインポートをサポートしていません。',
         unknownJSON: 'すみません、QMKキーマップファイルではないようです。',
         unsupportedBrowser:
           '未サポートのブラウザを使用しています。次のブラウザを使用してください'
