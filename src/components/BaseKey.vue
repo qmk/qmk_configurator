@@ -220,7 +220,8 @@ export default {
       );
     },
     formatName(name) {
-      return name.length === 1 ? name.toUpperCase() : name;
+      let unicode = name.codePointAt(0) > 255;
+      return name.length === 1 && !unicode ? name.toUpperCase() : name;
     },
     remove() {
       this.setSelected(this.id);

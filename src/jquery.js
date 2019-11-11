@@ -264,6 +264,11 @@ function parseKeycode(keycode, stats) {
     let internal = splitcode[1];
     internal = internal.split(')')[0];
 
+    if (maincode === 'UC') {
+      metadata = {code: keycode, name: String.fromCodePoint(internal), title: `Unicode ${internal}`}
+      return newKey(metadata, keycode)
+    }
+
     //Check whether it is a layer switching code or combo keycode
     if (internal.includes('KC')) {
       // Layer Tap keycode
