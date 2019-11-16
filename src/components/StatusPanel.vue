@@ -37,8 +37,10 @@ export default {
     toggleTerminal() {
       if (document.getElementById('terminal').getAttribute('class')) {
         document.getElementById('terminal').removeAttribute('class');
+        document.getElementById('toggle-terminal').removeAttribute('class');
       } else {
         document.getElementById('terminal').setAttribute('class', 'collapsed');
+        document.getElementById('toggle-terminal').setAttribute('class', 'collapsed');
       }
     }
   },
@@ -58,8 +60,17 @@ export default {
   position: absolute;
   top: 6px;
   right: 24px;
+  width: 24px;
   white-space: nowrap;
+  color: #f8f8f2;
   margin: 0;
+  transition: all 0.5s ease-out;
+}
+#toggle-terminal.collapsed {
+  transition: all 0.5s ease-out;
+  top: -24px;
+  color: #272822;
+  transform: rotateX(0.5turn);
 }
 #terminal {
   padding: 2px 5px;
