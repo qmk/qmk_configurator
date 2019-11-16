@@ -1,13 +1,11 @@
 <template>
   <div id="status">
     <textarea id="terminal" v-model="message" ref="terminal" readonly />
-    <button
+    <font-awesome-icon icon="chevron-up" size="lg" fixed-width 
       id="toggle-terminal"
       :title="$t('message.toggleTerminal.title')"
       @click="toggleTerminal"
-    >
-      {{ $t('message.toggleTerminal.label') }}
-    </button>
+    />
   </div>
 </template>
 <script>

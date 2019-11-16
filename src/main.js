@@ -38,7 +38,8 @@ import {
   faTrash,
   faHatWizard,
   faMagic,
-  faStar
+  faStar,
+  faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -83,6 +84,7 @@ library.add(faUndo);
 library.add(faTrash);
 library.add(faHatWizard);
 library.add(faMagic);
+library.add(faChevronUp);
 
 ga.init(router);
 Vue.config.productionTip = false;
