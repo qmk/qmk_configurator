@@ -527,6 +527,55 @@ a img {
   cursor: pointer;
 }
 
+#status {
+  position: relative;
+}
+
+#toggle-terminal {
+  cursor: pointer;
+  position: absolute;
+  top: 4px;
+  right: 21px;
+  width: 36px;
+  height: 27px;
+  white-space: nowrap;
+  color: #f8f8f2;
+  margin: 0;
+  transition: all 0.5s ease-out;
+}
+
+#toggle-terminal.collapsed {
+  transition: all 0.5s ease-out;
+  top: -25px;
+  color: #272822;
+  transform: scaleY(-1);
+}
+
+#terminal {
+  padding: 2px 5px;
+  border: 1px solid;
+  font-family: 'Roboto Mono', Monaco, 'Bitstream Vera Sans Mono',
+    'Lucida Console', Terminal, Consolas, 'Liberation Mono', 'DejaVu Sans Mono',
+    'Courier New', monospace;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+  height: 200px;
+  font-size: 12px;
+  width: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: block;
+  transition: all 0.5s ease-out;
+}
+
+#terminal.collapsed {
+  transition: all 0.5s ease-out;
+  height: 0px;
+  padding: 0 5px;
+}
+
 #compile {
   margin-right: 0px;
 }
