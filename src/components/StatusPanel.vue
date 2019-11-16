@@ -1,15 +1,13 @@
 <template>
   <div id="status">
     <textarea id="terminal" v-model="message" ref="terminal" readonly />
-    <div class="topctrl-toggleterminal">
-      <button
-        id="toggle-terminal"
-        :title="$t('message.toggleTerminal.title')"
-        @click="toggleTerminal"
-      >
-        {{ $t('message.toggleTerminal.label') }}
-      </button>
-    </div>
+    <button
+      id="toggle-terminal"
+      :title="$t('message.toggleTerminal.title')"
+      @click="toggleTerminal"
+    >
+      {{ $t('message.toggleTerminal.label') }}
+    </button>
   </div>
 </template>
 <script>
@@ -55,16 +53,13 @@ export default {
 };
 </script>
 <style>
-.topctrl-toggleterminal {
+#status {
   position: relative;
-  grid-row: bottom;
-  grid-column: right;
-  justify-self: end;
 }
 #toggle-terminal {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  top: 6px;
+  right: 24px;
   white-space: nowrap;
   margin: 0;
 }
