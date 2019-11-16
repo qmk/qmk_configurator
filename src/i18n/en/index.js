@@ -29,7 +29,6 @@ export default {
         title: 'Compile Keymap'
       },
       toggleTerminal: {
-        label: 'Toggle Terminal',
         title: 'Toggle the Terminal display'
       },
       downloadKeymap: {
