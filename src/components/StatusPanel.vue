@@ -29,10 +29,9 @@ export default {
       });
     },
     /**
-     * toggleTerminal keymap. Attempts to load the keymap data from
-     * a predefined known file path.
-     * @param {boolean} isAutoInit If the method is called by the code
-     * @return {object} promise when it has completed
+     * toggleTerminal. Collapses/expands the terminal display.
+     * @return doesn't return anything because I don't know what I'm
+	 * doing here.  - noroadsleft
      */
     toggleTerminal() {
       if (document.getElementById('terminal').getAttribute('class')) {
