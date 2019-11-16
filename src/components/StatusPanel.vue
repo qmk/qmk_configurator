@@ -1,6 +1,15 @@
 <template>
   <div id="status">
     <textarea id="terminal" v-model="message" ref="terminal" readonly />
+    <div class="topctrl-toggleterminal">
+      <button
+        id="toggle-terminal"
+        :title="$t('message.toggleTerminal.title')"
+        @click="toggleTerminal"
+      >
+        {{ $t('message.toggleTerminal.label') }}
+      </button>
+    </div>
   </div>
 </template>
 <script>
@@ -22,6 +31,19 @@ export default {
       this.$nextTick(() => {
         terminal.scrollTop = terminal.scrollHeight;
       });
+    },
+    /**
+     * toggleTerminal keymap. Attempts to load the keymap data from
+     * a predefined known file path.
+     * @param {boolean} isAutoInit If the method is called by the code
+     * @return {object} promise when it has completed
+     */
+    toggleTerminal() {
+      if (document.getElementById('terminal').getAttribute('class')) {
+        document.getElementById('terminal').removeAttribute('class');
+      } else {
+        document.getElementById('terminal').setAttribute('class', 'collapsed');
+      }
     }
   },
   computed: {
@@ -33,6 +55,19 @@ export default {
 };
 </script>
 <style>
+.topctrl-toggleterminal {
+  position: relative;
+  grid-row: bottom;
+  grid-column: right;
+  justify-self: end;
+}
+#toggle-terminal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  white-space: nowrap;
+  margin: 0;
+}
 #terminal {
   padding: 2px 5px;
   border: 1px solid;

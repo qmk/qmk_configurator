@@ -71,15 +71,6 @@
           {{ $t('message.compile.label') }}
         </button>
       </div>
-      <div class="topctrl-toggleterminal">
-        <button
-          id="toggle-terminal"
-          :title="$t('message.toggleTerminal.title')"
-          @click="toggleTerminal"
-        >
-          {{ $t('message.toggleTerminal.label') }}
-        </button>
-      </div>
     </div>
   </div>
 </template>
@@ -258,19 +249,6 @@ export default {
           );
           console.log('error loadDefault', error);
         });
-    },
-    /**
-     * toggleTerminal keymap. Attempts to load the keymap data from
-     * a predefined known file path.
-     * @param {boolean} isAutoInit If the method is called by the code
-     * @return {object} promise when it has completed
-     */
-    toggleTerminal() {
-      if (document.getElementById('terminal').getAttribute('class')) {
-        document.getElementById('terminal').removeAttribute('class');
-      } else {
-        document.getElementById('terminal').setAttribute('class', 'collapsed');
-      }
     },
     // TODO: This needs to be moved in an action
     // selectInitialKeyboard
@@ -466,19 +444,6 @@ export default {
   grid-column-start: left;
   grid-column-end: right;
   justify-self: start;
-}
-.topctrl-toggleterminal {
-  position: relative;
-  grid-row: bottom;
-  grid-column: right;
-  justify-self: end;
-}
-#toggle-terminal {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  white-space: nowrap;
-  margin: 0;
 }
 #layout {
   padding: 5px 4px;
