@@ -57,6 +57,7 @@ export default {
   position: relative;
 }
 #toggle-terminal {
+  cursor: pointer;
   position: absolute;
   top: 4px;
   right: 21px;
