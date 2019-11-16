@@ -58,9 +58,10 @@ export default {
 }
 #toggle-terminal {
   position: absolute;
-  top: 6px;
+  top: 3px;
   right: 24px;
-  width: 24px;
+  max-width: 24px;
+  max-height: 18px;
   white-space: nowrap;
   color: #f8f8f2;
   margin: 0;
@@ -68,9 +69,10 @@ export default {
 }
 #toggle-terminal.collapsed {
   transition: all 0.5s ease-out;
-  top: -24px;
+  top: -17px;
+  max-width: 24px;
   color: #272822;
-  transform: rotateX(0.5turn);
+  transform: scaleY(-1);
 }
 #terminal {
   padding: 2px 5px;
