@@ -25,6 +25,8 @@ script:
   - yarn run lint
   - yarn run test:unit
   - yarn run test:cypress:ci
+  # Echo the travis commit to env file to be set in the build process
+  - echo VUE_APP_TRAVIS_COMMIT=$TRAVIS_COMMIT >> .env.production
   - yarn run build
 
 deploy:

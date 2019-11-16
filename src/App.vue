@@ -1,5 +1,6 @@
 <template>
   <div id="app" @click="dismiss">
+    <span style="display:none">{{ revision }}</span>
     <div>
       <header>
         <h1>
@@ -86,6 +87,7 @@ export default {
   },
   data() {
     return {
+      revision: JSON.stringify(process.env.VUE_APP_TRAVIS_COMMIT || 'dev'),
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,
