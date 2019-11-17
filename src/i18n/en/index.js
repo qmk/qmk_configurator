@@ -29,6 +29,7 @@ export default {
         title: 'Compile Keymap'
       },
       toggleTerminal: {
+        label: 'Click to Expand',
         title: 'Toggle the Terminal display'
       },
       downloadKeymap: {

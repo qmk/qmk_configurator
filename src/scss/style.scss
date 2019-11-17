@@ -531,6 +531,24 @@ a img {
   position: relative;
 }
 
+#toggle-terminal-label {
+  cursor: pointer;
+  position: absolute;
+  top: -7.5px;
+  right: 59px;
+  color: #f8f8f2;
+  opacity: 0;
+  transform: scaleY(0);
+  transition: all 0.5s ease-out;
+}
+#toggle-terminal-label.collapsed {
+  opacity: 0.5;
+  color: #272822;
+  top: -22px;
+  transform: scaleY(1);
+  transition: all 0.5s ease-out;
+}
+
 #toggle-terminal {
   cursor: pointer;
   position: absolute;
