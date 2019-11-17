@@ -37,6 +37,9 @@ const mutations = {
   setFavoriteKeyboard(state, _keyboard) {
     state.configuratorSettings.favoriteKeyboard = _keyboard;
   },
+  setFavoriteColor(state, _color) {
+    state.configuratorSettings.favoriteColor = _color;
+  },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;
     state._keyboards = _keyboards; // make a 2nd copy

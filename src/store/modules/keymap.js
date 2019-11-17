@@ -25,7 +25,6 @@ const state = {
   continuousInput: false,
   ignoreMod: false
 };
-
 // Use for computed properties
 const getters = {
   colorway: state => state.colorways[state.colorwayIndex].name,
