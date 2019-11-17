@@ -38,7 +38,7 @@ const mutations = {
     state.configuratorSettings.favoriteKeyboard = _keyboard;
   },
   setFavoriteColor(state, _color) {
-    state.configuratorSettings.favoriteColor = _color;
+    Vue.set(state.configuratorSettings, 'favoriteColor', _color);
   },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;
