@@ -61,3 +61,17 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Docker
+
+If you don't have a webserver already and don't already have one in mind you can use docker. By default it spins up a self-contained environment.
+
+    docker run -p 8080:80 qmkfm/qmk_configurator:latest
+
+You can specify a different backend URL by setting `VUE_APP_API_URL`:
+
+    docker run -e VUE_APP_API_URL=http://localhost:8080 -p 8080:80 qmkfm/qmk_configurator:latest
+
+If you'd like to develop locally you can use a volume to tie your local filesystem to the container:
+
+    docker run --mount type=volume,source=.,target=/qmk_configurator -p 8080:80 qmkfm/qmk_configurator:latest
