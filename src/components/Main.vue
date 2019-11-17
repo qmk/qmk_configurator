@@ -120,8 +120,9 @@ export default {
     },
     isFavoriteColor() {
       return (
+        this.configuratorSettings.favoriteColor &&
         this.displayColorways[this.curIndex].toLowerCase() ===
-        this.configuratorSettings.favoriteColor.toLowerCase()
+          this.configuratorSettings.favoriteColor.toLowerCase()
       );
     }
   },
