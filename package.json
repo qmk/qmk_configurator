@@ -33,7 +33,6 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
-    "@vue/cli-plugin-e2e-nightwatch": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.1.1",
     "@vue/cli-plugin-unit-jest": "^3.8.0",
     "@vue/cli-service": "^3.1.1",
@@ -42,7 +41,6 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
-    "chromedriver": "^74.0.0",
     "cypress": "^3.4.1",
     "eslint": "^5.8.0",
     "eslint-plugin-cypress": "^2.6.1",
@@ -50,12 +48,10 @@
     "eslint-plugin-vue": "^5.0.0-0",
     "growl": "^1.10.0",
     "https-proxy-agent": "^2.2.0",
-    "nightwatch": "^1.1.11",
     "jest": "24",
     "node-sass": "^4.9.0",
     "prettier": "1.19.1",
     "sass-loader": "^7.0.1",
-    "selenium": "^2.20.0",
     "start-server-and-test": "^1.10.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.5.17"
