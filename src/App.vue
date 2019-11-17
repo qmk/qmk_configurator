@@ -29,6 +29,7 @@
     <footer>
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
+      <p style="font-size:10px">revision: {{ revision }}</p>
     </footer>
     <div
       class="help"
@@ -87,7 +88,7 @@ export default {
   },
   data() {
     return {
-      revision: JSON.stringify(process.env.VUE_APP_TRAVIS_COMMIT || 'dev'),
+      revision: process.env.VUE_APP_TRAVIS_COMMIT || 'dev',
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,
