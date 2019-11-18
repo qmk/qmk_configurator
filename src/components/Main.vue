@@ -41,8 +41,8 @@
           </select>
           <a
             id="favorite-colorway"
-            v-on:click="favColor"
-            v-bind:class="{
+            @click="favColor"
+            :class="{
               active: isFavoriteColor
             }"
           >
@@ -141,16 +141,10 @@ export default {
   mounted() {
     jquery.init();
     // Loading favorite color
-    if (this.configuratorSettings.favoriteColor) {
-      for (let i = 0; i < this.displayColorways.length; i++) {
-        if (
-          this.displayColorways[i].toLowerCase() ===
-          this.configuratorSettings.favoriteColor.toLowerCase()
-        ) {
-          this.curIndex = i;
-        }
-      }
-    }
+    const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+    this.curIndex = this.displayColorways.findIndex(
+      color => color.toLowerCase() === favoriteColor
+    );
   },
   beforeDestroy() {
     this.resetListener();
