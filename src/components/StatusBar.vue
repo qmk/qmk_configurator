@@ -5,7 +5,7 @@
       QMK Configurator
     </div>
     <div class="bes-version">
-      {{ $t('message.apiVersion') }}
+      {{ $t('message.apiVersionPrefix') }}
       <span class="version-num">v{{ version }}</span>
     </div>
     <div class="bes-title">
@@ -16,7 +16,7 @@
           </ul>
         </div>
         <div class="bes-status-left">
-          {{ $t('message.serverStatus') }}
+          {{ $t('message.serverIs') }}
           <span v-if="status !== ''">{{ status }}</span>
         </div>
         <div class="bes-status-right">{{ jobs }}</div>
@@ -34,7 +34,7 @@
         icon="chevron-right"
         fixed-width
       />
-      Settings
+      {{ $t('message.settings') }}
     </div>
     <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
   </div>

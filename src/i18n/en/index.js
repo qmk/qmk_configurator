@@ -151,8 +151,9 @@ export default {
       maintain:
         'This project is maintained by QMK collaborators and contributors like you!',
       hostedOn: 'Hosted on GitHub Pages',
-      serverStatus: 'Server is',
-      apiVersion: 'API',
+      serverIs: 'Server is',
+      apiVersionPrefix: 'API',
+      settings: 'Settings',
       favoriteColor: 'Favorite Colorway',
       favoriteKeyboard: 'Favorite Keyboard',
       jobsWaiting: 'job(s) waiting',
