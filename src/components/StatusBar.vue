@@ -94,8 +94,7 @@ export default {
           }
         })
         .catch(json => {
-          var localTime = new Date().toTimeString();
-          this.status = `DOWN @ ${localTime}`;
+          this.status = 'DOWN';
           this.hasError = true;
           console.error('API status error', json);
         });
@@ -110,7 +109,8 @@ export default {
       status: '',
       version: '0.1',
       jobCount: 0,
-      hasError: false
+      hasError: false,
+      jobs: 'Initializing'
     };
   },
   mounted() {
