@@ -151,11 +151,12 @@ export default {
       maintain:
         'This project is maintained by QMK collaborators and contributors like you!',
       hostedOn: 'Hosted on GitHub Pages',
-      serverStatus: 'Server Status',
-      apiVersion: 'API Version',
-      jobsWaiting: 'job(s) waiting',
+      serverStatus: 'Server is',
+      apiVersion: 'API',
       favoriteColor: 'Favorite Colorway',
-      favoriteKeyboard: 'Favorite Keyboard'
+      favoriteKeyboard: 'Favorite Keyboard',
+      jobsWaiting: 'job(s) waiting',
+      currentQueue: 'Current queue'
     }
   }
 };

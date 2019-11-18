@@ -1,22 +1,49 @@
 <template>
   <div class="backend-status">
-    <div class="bes-title">{{ $t('message.serverStatus') }}:</div>
-    <div :class="{ 'bes-status': true, 'bes-error': hasError }">
-      {{ status }}
-      <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
+    <div class="qmk-logo"></div>
+    <div class="qmk-app-name">
+      QMK Configurator
     </div>
     <div class="bes-version">
-      {{ $t('message.apiVersion') }}:
-      <span class="version-num">{{ version }}</span>
+      {{ $t('message.apiVersion') }}
+      <span class="version-num">v{{ version }}</span>
     </div>
-    <div class="bes-jobs" :class="jobCountClass">{{ jobs }}</div>
+    <div class="bes-title">
+      <div class="bes-status">
+        <div class="bes-status-indicator" :class="currentStatusClass">
+          <ul>
+            <li></li>
+          </ul>
+        </div>
+        <div class="bes-status-left">
+          {{ $t('message.serverStatus') }}
+          <span v-if="status !== ''">{{ status }}</span>
+        </div>
+        <div class="bes-status-right">{{ jobs }}</div>
+      </div>
+    </div>
+    <div class="bes-controls" @click="clickSettings">
+      <font-awesome-icon
+        v-if="!settingsPanelVisible"
+        icon="chevron-left"
+        fixed-width
+      />
+      <font-awesome-icon icon="cog" size="lg" />
+      <font-awesome-icon
+        v-if="settingsPanelVisible"
+        icon="chevron-right"
+        fixed-width
+      />
+      Settings
+    </div>
+    <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
   </div>
 </template>
 <script>
 import axios from 'axios';
 import escape from 'lodash/escape';
-import template from 'lodash/template';
 import { backend_status_url } from '@/store/modules/constants';
+import { mapState, mapMutations } from 'vuex';
 /**
  * checkStatus - check status component to poll API for errors and status
  * @return {object} Vue app component
@@ -27,6 +54,10 @@ const warningWaterMark = 10;
 export default {
   name: 'status-bar',
   computed: {
+    ...mapState('app', ['settingsPanelVisible']),
+    currentStatusClass() {
+      return this.status === 'UP' ? 'bes-status-up' : 'bes-status-down';
+    },
     jobCountClass() {
       if (this.jobCount < warningWaterMark) {
         return '';
@@ -41,6 +72,7 @@ export default {
     }
   },
   methods: {
+    ...mapMutations('app', ['setSettingsPanel']),
     getPollInterval() {
       return 25000 + 5000 * Math.random();
     },
@@ -50,14 +82,11 @@ export default {
         .then(({ data }) => {
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
-          this.jobs = template(
-            `<%= jobCount %> ${this.$t('message.jobsWaiting')}`
-          )(this);
+          this.jobs = `${this.$t('message.currentQueue')}: ${this.jobCount}`;
           if (this.jobCount < highWaterMark) {
-            var localTime = new Date(data.last_ping).toTimeString();
             var stat = data.status;
             stat = stat === 'running' ? 'UP' : stat;
-            this.status = escape(`${stat} @ ${localTime}`);
+            this.status = escape(`${stat}`);
             this.hasError = false;
           } else {
             this.status = 'Redis is probably down. Please contact devs on ';
@@ -71,13 +100,15 @@ export default {
           console.error('API status error', json);
         });
       setTimeout(this.fetchData, this.getPollInterval());
+    },
+    clickSettings() {
+      this.setSettingsPanel(!this.settingsPanelVisible);
     }
   },
   data: () => {
     return {
-      status: 'Checking',
+      status: '',
       version: '0.1',
-      jobs: '...',
       jobCount: 0,
       hasError: false
     };
@@ -90,6 +121,9 @@ export default {
 <style>
 .bes-high-job-count {
   color: red;
+}
+.bes-odd-job-count {
+  color: yellow;
 }
 .bes-odd-job-count {
   color: yellow;

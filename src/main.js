@@ -33,6 +33,7 @@ import {
   faCloudUploadAlt,
   faKeyboard,
   faChevronLeft,
+  faChevronRight,
   faPrint,
   faUndo,
   faTrash,
@@ -78,6 +79,7 @@ library.add(faCog);
 library.add(faKeyboard);
 library.add(faExclamationTriangle);
 library.add(faChevronLeft);
+library.add(faChevronRight);
 library.add(faPrint);
 library.add(faUndo);
 library.add(faTrash);
@@ -99,6 +101,7 @@ new Vue({
 
 new Vue({
   i18n,
+  store,
   render: h => h(StatusBar)
 }).$mount('#status-app');
 

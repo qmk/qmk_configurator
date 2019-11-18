@@ -152,7 +152,7 @@ export default {
 </script>
 <style>
 .settings-panel {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .settings-panel--toggles {
   display: grid;
