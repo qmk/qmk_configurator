@@ -149,7 +149,9 @@ export default {
       hostedOn: 'Hosted on GitHub Pages',
       serverStatus: 'Server Status',
       apiVersion: 'API Version',
-      jobsWaiting: 'job(s) waiting'
+      jobsWaiting: 'job(s) waiting',
+      favoriteColor: 'Favorite Colorway',
+      favoriteKeyboard: 'Favorite Keyboard'
     }
   }
 };

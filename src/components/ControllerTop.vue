@@ -4,6 +4,7 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
+          title="$t('message.favoriteKeyboard')"
           @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard

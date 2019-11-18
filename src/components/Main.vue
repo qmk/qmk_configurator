@@ -41,6 +41,7 @@
           </select>
           <a
             id="favorite-colorway"
+            title="$t('message.favoriteColor')"
             @click="favColor"
             :class="{
               active: isFavoriteColor
@@ -141,10 +142,12 @@ export default {
   mounted() {
     jquery.init();
     // Loading favorite color
-    const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
-    this.curIndex = this.displayColorways.findIndex(
-      color => color.toLowerCase() === favoriteColor
-    );
+    if (this.configuratorSettings.favoriteColor) {
+      const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+      this.curIndex = this.displayColorways.findIndex(
+        color => color.toLowerCase() === favoriteColor
+      );
+    }
   },
   beforeDestroy() {
     this.resetListener();
