@@ -85,9 +85,7 @@ export default {
     },
     firmwareURL() {
       const keeb = this.keyboard.split('/');
-      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${
-        keeb[0]
-      }`;
+      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${keeb[0]}`;
     },
     _author: {
       set(value) {
