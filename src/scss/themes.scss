@@ -365,6 +365,18 @@ html[data-theme='dark'] {
       color: $qmk-black;
     }
   }
+  #toggle-terminal-label {
+    color: #f8f8f2;
+  }
+  #toggle-terminal-label.collapsed {
+    color: #f8f8f2;
+  }
+  #toggle-terminal {
+    color: #f8f8f2;
+  }
+  #toggle-terminal.collapsed {
+    color: #f8f8f2;
+  }
   #visual-keymap {
     background: $qmk-grey-dark;
     border-color: $qmk-grey-dark;

@@ -435,7 +435,7 @@ export default {
   border-radius: 4px;
 }
 .topctrl-controls {
-  grid-row: top / span 3;
+  grid-row: top / span 2;
   grid-column: right;
   justify-self: end;
 }
