@@ -26,8 +26,10 @@ const actions = {
    * load the default keymap for the currently selected keyboard
    */
   loadDefaultKeymap({ state }) {
+    const keyboardPath = state.keyboard;
     const keyboardName = state.keyboard.replace(/\//g, '_');
-    return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
+    const layoutMacro = state.layout;
+    return axios.get(`keymaps/${keyboardPath}/${layoutMacro}.json`).then(r => {
       if (r.status === 200) {
         return r.data;
       }
