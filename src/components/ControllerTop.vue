@@ -147,6 +147,7 @@ export default {
         }
         this.$store.commit('keymap/clear');
         this.updateLayout({ target: { value } });
+        this.loadDefault(true);
       }
     },
     fontAdjustClasses() {
@@ -245,7 +246,7 @@ export default {
         })
         .catch(error => {
           statusError(
-            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+            `\n* Sorry, there is no default for the ${this.keyboard} keyboard in ${this.layout}... yet!`
           );
           console.log('error loadDefault', error);
         });
