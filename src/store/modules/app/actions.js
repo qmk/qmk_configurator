@@ -27,6 +27,7 @@ const actions = {
    */
   loadDefaultKeymap({ state }) {
     const keyboardPath = state.keyboard;
+    // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
     const layoutMacro = state.layout;
     return axios.get(`keymaps/${keyboardPath}/${layoutMacro}.json`).then(r => {
