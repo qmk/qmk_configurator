@@ -147,6 +147,7 @@ export default {
         }
         this.$store.commit('keymap/clear');
         this.updateLayout({ target: { value } });
+        this.loadDefault(true);
       }
     },
     fontAdjustClasses() {
