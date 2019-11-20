@@ -6,7 +6,7 @@
   "layers": [
     [
                           "TG(1)",
-"LT(3, KC_BSPC)",         "KC_UP",     "TG(2)",
+ "LT(3,KC_BSPC)",         "KC_UP",     "TG(2)",
        "KC_LEFT",       "KC_DOWN",   "KC_RIGHT"
     ],
     [
