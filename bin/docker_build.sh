@@ -14,4 +14,4 @@ nvm use
 yarn install
 
 # Build configurator
-VUE_APP_API_URL=/ yarn run build
+VUE_APP_API_URL=/api yarn run build

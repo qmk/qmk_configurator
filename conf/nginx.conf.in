@@ -31,7 +31,8 @@ http {
             try_files $uri $uri/ =404;
         }
 
-        location /v1/ {
+        location /api/ {
+            rewrite ^/api(/.*)$ /$1 break;
             proxy_pass %API_URL%;
         }
 
