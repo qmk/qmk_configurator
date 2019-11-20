@@ -32,7 +32,7 @@ http {
         }
 
         location /v1/ {
-            proxy_pass http://127.0.0.1:5001;
+            proxy_pass %API_URL%;
         }
 
         location /docs/ {

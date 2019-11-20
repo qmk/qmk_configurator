@@ -8,14 +8,10 @@ set -e
 . /root/.nvm/nvm.sh
 nvm install 11.12
 
-# Get yarn installed correctly
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-apt-get update
-apt-get remove cmdtest yarn
-apt-get install --no-install-recommends -y yarn
-rm -rf /var/lib/apt/lists/*
-
 # Setup configurator to build
 cd /qmk_configurator
 nvm use
 yarn install
+
+# Build configurator
+VUE_APP_API_URL=/ yarn run build

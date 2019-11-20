@@ -4,11 +4,8 @@
 set -e
 #set -x
 
-# Build configurator
-cd /qmk_configurator
-. /root/.nvm/nvm.sh
-nvm use
-yarn run build
+# Set the API URL
+sed "s;%API_URL%;${QMK_API_URL:-https://api.qmk.fm};g" /etc/nginx/nginx.conf.in > /etc/nginx/nginx.conf
 
 # Start nginx
 cat << EOF
