@@ -399,6 +399,7 @@ function getExclusionList() {
     'rgbkb/zygomorph',
     'runner3680',
     'sentraq/s60_x',
+    'setta21',
     'spacetime',
     'suihankey',
     'suihankey/split',
