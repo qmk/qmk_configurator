@@ -2,7 +2,7 @@
   "keyboard": "setta21/rev1",
   "keymap": "default_12ea2e3",
   "commit": "687a24f2980e6e490ac8e43104f4176b033c9243",
-  "layout": "LAYOUT",
+  "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
  "LT(2,KC_ESC)",   "KC_F2",  "KC_EQL",  "KC_DEL",
