@@ -47,7 +47,6 @@ import {
   faLinux
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import ga from './ga';
 import isObject from 'lodash/isObject';
 import isString from 'lodash/isString';
 import electron from './electron';
@@ -86,7 +85,6 @@ library.add(faHatWizard);
 library.add(faMagic);
 library.add(faChevronUp);
 
-ga.init(router);
 Vue.config.productionTip = false;
 
 // Make $i18n vm accessible in the store
