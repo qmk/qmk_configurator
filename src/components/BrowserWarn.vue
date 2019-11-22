@@ -1,7 +1,7 @@
 <template>
   <div id="browser-warn" v-show="isNotSupported && !isDimissed">
     <a class="dismiss" title="dismiss" v-on:click="dismiss">X</a>
-    {{ $t('message.errors.unsupportedBrowser') }}
+    {{ $t('errors.unsupportedBrowser') }}
     <a href="https://www.google.com/intl/en_us/chrome/" target="_blank"
       >Google Chrome</a
     >

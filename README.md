@@ -87,3 +87,7 @@ If for some reason you do need to build it yourself, you can use this command:
 This process will take a while. You may want to go make some tea or something. When it finishes you can run it with this command:
 
     docker run -p 8080:80 qmk_configurator
+    
+## Internationalization Guide
+
+Please refer to [this document](internationalization_guide.md)

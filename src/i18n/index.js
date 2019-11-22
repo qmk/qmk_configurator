@@ -1,24 +1,27 @@
-import de from './de';
-import en from './en';
-import es from './es';
-import fr from './fr';
-import it from './it';
-import ja from './ja';
-import ms from './ms';
-import ru from './ru';
-import zh from './zh';
-import plPL from './pl-PL';
-import ptBR from './pt-BR';
+import en from './en.csv';
+import de from './de.csv';
+import es from './es.csv';
+import fr from './fr.csv';
+import it from './it.csv';
+import ja from './ja.csv';
+import ms from './ms.csv';
+import plPL from './pl-PL.csv';
+import ptBR from './pt-BR.csv';
+import ru from './ru.csv';
+import zh from './zh.csv';
+// During the import of the csv files
+// the loader will parse the files and generate
+// the translation objects
 export default {
-  ...de,
-  ...en,
-  ...es,
-  ...fr,
-  ...it,
-  ...ja,
-  ...ms,
-  ...plPL,
-  ...ptBR,
-  ...ru,
-  ...zh
+  en,
+  de,
+  es,
+  fr,
+  it,
+  ja,
+  ms,
+  ru,
+  zh,
+  'pl-PL': plPL,
+  'pt-BR': ptBR
 };

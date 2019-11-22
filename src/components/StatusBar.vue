@@ -6,7 +6,7 @@
         QMK Configurator
       </div>
       <div class="bes-version">
-        {{ $t('message.apiVersionPrefix') }}
+        {{ $t('apiVersionPrefix') }}
         <span class="version-num">v{{ version }}</span>
       </div>
     </div>
@@ -18,7 +18,7 @@
           </ul>
         </div>
         <div class="bes-status-center">
-          {{ $t('message.serverIs') }}
+          {{ $t('serverIs') }}
         </div>
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
@@ -40,7 +40,7 @@
         icon="chevron-right"
         fixed-width
       />
-      {{ $t('message.settings') }}
+      {{ $t('settings') }}
     </div>
   </div>
 </template>

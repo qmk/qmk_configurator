@@ -23,60 +23,48 @@
       <button
         class="fixed-size"
         id="toolbox"
-        :title="$t('message.downloadKeymap.title')"
+        :title="$t('downloadKeymap.title')"
         @click="downloadKeymap"
         v-bind:disabled="disableDownloadKeymap"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadKeymap.label') }}
+        {{ $t('downloadKeymap.label') }}
       </button>
       <button
         class="fixed-size"
         id="source"
         @click="downloadSource"
-        :title="$t('message.downloadSource.title')"
+        :title="$t('downloadSource.title')"
         v-bind:disabled="disableDownloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadSource.label') }}
+        {{ $t('downloadSource.label') }}
       </button>
-      <button
-        id="export"
-        @click="exportJSON"
-        :title="$t('message.downloadJSON.title')"
-      >
+      <button id="export" @click="exportJSON" :title="$t('downloadJSON.title')">
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
-      <span class="label-button">{{ $t('message.downloadJSON.label') }}</span>
-      <button
-        id="import"
-        :title="$t('message.importJSON.title')"
-        @click="importKeymap"
-      >
+      <span class="label-button">{{ $t('downloadJSON.label') }}</span>
+      <button id="import" :title="$t('importJSON.title')" @click="importKeymap">
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <button
         id="import-url"
-        :title="$t('message.importUrlJSON.title')"
+        :title="$t('importUrlJSON.title')"
         @click="openVeil"
       >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
       <button
         id="printkeymaps"
-        :title="$t('message.printKeymap.title')"
+        :title="$t('printKeymap.title')"
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        <span class="hide-small">{{ $t('message.printKeymap.label') }}</span>
+        <span class="hide-small">{{ $t('printKeymap.label') }}</span>
       </button>
-      <button
-        id="testkeys"
-        :title="$t('message.testKeys.title')"
-        @click="testKeys"
-      >
+      <button id="testkeys" :title="$t('testKeys.title')" @click="testKeys">
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
-        <span class="hide-small">{{ $t('message.testKeys.label') }}</span>
+        <span class="hide-small">{{ $t('testKeys.label') }}</span>
       </button>
       <input
         id="fileImport"
@@ -101,11 +89,11 @@
       <button
         id="fwFile"
         @click="downloadFirmware"
-        :title="$t('message.downloadFirmware.title')"
+        :title="$t('downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadFirmware.label') }}
+        {{ $t('downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
@@ -315,12 +303,12 @@ export default {
     },
     loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
-        alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
+        alert(this.$t('errors.kbfirmwareJSONUnsupported'));
         return;
       }
 
       if (checkInvalidKeymap(data)) {
-        alert(this.$t('message.errors.unknownJSON'));
+        alert(this.$t('errors.unknownJSON'));
         return;
       }
 
@@ -352,7 +340,7 @@ export default {
         );
         promise.then(() => {
           const stats = load_converted_keymap(data.layers);
-          const msg = this.$t('message.statsTemplate', stats);
+          const msg = this.$t('statsTemplate', stats);
           store.commit('status/deferredMessage', msg);
           store.dispatch('status/viewReadme', this.keyboard).then(() => {
             store.commit('app/setKeymapName', data.keymap);
@@ -368,7 +356,7 @@ export default {
         this.loadJsonData(data);
       } catch (error) {
         console.log(error);
-        alert(this.$t('message.errors.invalidQMKKeymap'));
+        alert(this.$t('errors.invalidQMKKeymap'));
         return;
       }
     },

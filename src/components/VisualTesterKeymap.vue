@@ -23,23 +23,21 @@
       </template>
     </div>
     <div class="info">
-      <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
+      <h3 class="info-title">{{ $t('tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">{{
-            $t('message.tester.letters.key.label')
-          }}</label>
+          <label class="key-label">{{ $t('tester.letters.key.label') }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
           <label class="code-label">{{
-            $t('message.tester.letters.code.label')
+            $t('tester.letters.code.label')
           }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
           <label class="keycode-label">{{
-            $t('message.tester.letters.keycode.label')
+            $t('tester.letters.keycode.label')
           }}</label>
           {{ displayKeyCode }}
         </div>
@@ -51,7 +49,7 @@
         v-html="status"
       ></div>
       <div id="chatter-container">
-        <label>{{ $t('message.tester.chatter.label') }}:</label>
+        <label>{{ $t('tester.chatter.label') }}:</label>
         <input
           id="chatter-threshold"
           @focus="destroyKeyListeners"
@@ -63,12 +61,12 @@
           step="1"
         />
         <span id="chatter-alert" v-show="chatterDetected">
-          {{ $t('message.tester.chatter.detectedAlert') }}
+          {{ $t('tester.chatter.detectedAlert') }}
         </span>
       </div>
     </div>
     <p>
-      {{ $t('message.tester.docs.paragraph') }}
+      {{ $t('tester.docs.paragraph') }}
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
         >Code</a

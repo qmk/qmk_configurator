@@ -7,7 +7,7 @@
     </div>
     <div class="hint hint-right">
       <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        {{ $t('message.downloadToolbox.label') }}
+        {{ $t('downloadToolbox.label') }}
       </a>
     </div>
     <div class="split-content">
@@ -16,8 +16,8 @@
       </div>
       <div class="right-side">
         <p>
-          <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
-            {{ $t('message.keymap.label') }}:
+          <label class="keymap--label" :title="$t('ColorwayTip.title')">
+            {{ $t('keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
@@ -41,7 +41,7 @@
           </select>
           <a
             id="favorite-colorway"
-            :title="$t('message.favoriteColor')"
+            :title="$t('favoriteColor')"
             @click="favColor"
             :class="{
               active: isFavoriteColor

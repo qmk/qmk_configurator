@@ -4,21 +4,21 @@
       class="fixed-size"
       id="fwFile"
       @click="autoFlashFirmware"
-      :title="$t('message.flashFirmware.title')"
+      :title="$t('flashFirmware.title')"
       :disabled="disableDownloadBinary"
     >
       <font-awesome-icon icon="download" size="lg" fixed-width />
-      {{ $t('message.flashFirmware.label') }}
+      {{ $t('flashFirmware.label') }}
     </button>
     <button
       class="fixed-size"
       id="fwFile"
       @click="flashFirmware"
-      :title="$t('message.flashFile.title')"
+      :title="$t('flashFile.title')"
       :disabled="disableFlashFile"
     >
       <font-awesome-icon icon="download" size="lg" fixed-width />
-      {{ $t('message.flashFile.label') }}
+      {{ $t('flashFile.label') }}
     </button>
   </div>
 </template>

@@ -1,14 +1,14 @@
 <template>
   <div class="settings-panel">
-    <h2>{{ $t('message.settingsPanel.title') }}</h2>
+    <h2>{{ $t('settingsPanel.title') }}</h2>
 
     <div class="settings-panel--toggles">
       <div>
         <label
-          :title="$t('message.settingsPanel.fastInput.title')"
+          :title="$t('settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-          >{{ $t('message.settingsPanel.fastInput.label') }}</label
+          >{{ $t('settingsPanel.fastInput.label') }}</label
         >
       </div>
       <div>
@@ -25,8 +25,8 @@
         <label
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.displaySizes.title')"
-          >{{ $t('message.settingsPanel.displaySizes.label') }}</label
+          :title="$t('settingsPanel.displaySizes.title')"
+          >{{ $t('settingsPanel.displaySizes.label') }}</label
         >
       </div>
       <div>
@@ -43,8 +43,8 @@
         <label
           class="settings-panel--text"
           @mouseover="help('toggleTutorial')"
-          :title="$t('message.settingsPanel.toggleTutorial.label')"
-          >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
+          :title="$t('settingsPanel.toggleTutorial.label')"
+          >{{ $t('settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
       <div>
@@ -62,8 +62,13 @@
         <label
           class="settings-panel--text"
           @mouseover="help('darkmode')"
+<<<<<<< HEAD
           :title="$t('message.settingsPanel.darkmode.label')"
           >{{ $t('message.settingsPanel.darkmode.label') }}</label
+=======
+          :title="$t('settingsPanel.darkmode.title')"
+          >{{ $t('settingsPanel.darkmode.title') }}</label
+>>>>>>> Add i18n feature
         >
       </div>
       <div>
@@ -79,9 +84,14 @@
       <div>
         <label
           class="settings-panel--text"
+<<<<<<< HEAD
           @mouseover="help('language')"
           :title="$t('message.settingsPanel.language.title')"
           >{{ $t('message.settingsPanel.language.title') }}</label
+=======
+          :title="$t('settingsPanel.language.title')"
+          >{{ $t('settingsPanel.language.title') }}</label
+>>>>>>> Add i18n feature
         >
       </div>
       <div>
@@ -103,8 +113,8 @@ export default {
   data() {
     return {
       labels: {
-        checked: this.$t('message.settingsPanel.on.label'),
-        unchecked: this.$t('message.settingsPanel.off.label')
+        checked: this.$t('settingsPanel.on.label'),
+        unchecked: this.$t('settingsPanel.off.label')
       },
       helpText: undefined,
       clearTextTimer: undefined
@@ -137,10 +147,10 @@ export default {
     help(key) {
       switch (key) {
         case 'fastInput':
-          this.helpText = this.$t('message.settingsPanel.fastInput.help');
+          this.helpText = this.$t('settingsPanel.fastInput.help');
           break;
         case 'displaySizes':
-          this.helpText = this.$t('message.settingsPanel.displaySizes.help');
+          this.helpText = this.$t('settingsPanel.displaySizes.help');
           break;
         case 'toggleTutorial':
           this.helpText = this.$t('message.settingsPanel.toggleTutorial.help');

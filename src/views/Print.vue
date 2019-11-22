@@ -110,7 +110,7 @@ export default {
   },
   methods: {
     i18n(postfix) {
-      return this.$t(`message.print.${postfix}`);
+      return this.$t(`print.${postfix}`);
     },
     gohome() {
       this.$router.push(`/${this.keyboard}/${this.layout}`);
@@ -120,10 +120,10 @@ export default {
     },
     print() {
       if (this._notes === '') {
-        this._notes = this.$t('message.print.notes.empty');
+        this._notes = this.$t('print.notes.empty');
       }
       if (this._author === '') {
-        this._author = this.$t('message.print.anonymous.label');
+        this._author = this.$t('print.anonymous.label');
       }
       Vue.nextTick(() => {
         window.print();

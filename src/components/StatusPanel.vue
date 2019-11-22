@@ -12,14 +12,14 @@
       id="toggle-terminal-label"
       :class="terminalClasses"
       @click="toggleTerminal"
-      >{{ $t('message.toggleTerminal.label') }}</label
+      >{{ $t('toggleTerminal.label') }}</label
     >
     <font-awesome-icon
       icon="chevron-up"
       size="lg"
       fixed-width
       id="toggle-terminal"
-      :title="$t('message.toggleTerminal.title')"
+      :title="$t('toggleTerminal.title')"
       :class="terminalClasses"
       @click="toggleTerminal"
     />
