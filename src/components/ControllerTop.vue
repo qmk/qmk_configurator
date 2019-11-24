@@ -4,8 +4,9 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
-          v-on:click="favKeyboard"
-          v-bind:class="{
+          title="$t('message.favoriteKeyboard')"
+          @click="favKeyboard"
+          :class="{
             active: isFavoriteKeyboard
           }"
         >
@@ -395,9 +396,6 @@ export default {
 <style>
 #drop-label-keyboard {
   min-width: 137px;
-}
-#favorite-keyboard {
-  cursor: pointer;
 }
 .topctrl {
   text-align: left;

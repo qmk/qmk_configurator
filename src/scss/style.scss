@@ -1038,7 +1038,13 @@ input[type='number'] {
   align-items: center;
   font-size: small;
 }
-
+#favorite-keyboard,
+#favorite-colorway {
+  cursor: pointer;
+}
+#favorite-colorway {
+  float: right;
+}
 @media print {
   .backend-status,
   .random-potato,

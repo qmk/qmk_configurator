@@ -39,7 +39,8 @@ html {
     .tester-key.chatter-detected {
       background-color: rgb(233, 107, 107);
     }
-    #favorite-keyboard {
+    #favorite-keyboard,
+    #favorite-colorway {
       color: grey;
       &.active {
         color: $qmk-green;
