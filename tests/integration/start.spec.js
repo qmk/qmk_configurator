@@ -28,7 +28,7 @@ describe('Simple browsing', function() {
     cy.get('#keycodes-section').should('be.visible');
   });
   it('Side panel should display and disappear properly', function() {
-    cy.get('.openSettings').click();
+    cy.get('.bes-controls').click();
     cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
     cy.get('.slideout-panel-bg').click();
   });

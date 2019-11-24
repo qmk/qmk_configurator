@@ -81,12 +81,6 @@ export default {
       hover: false
     };
   },
-  watch: {
-    $route: function(to) {
-      this.settingsClasses =
-        to.name === 'print' || to.name === 'test' ? 'hideSettings' : '';
-    }
-  },
   async beforeMount() {
     await this.appLoad();
   },
@@ -166,17 +160,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-}
-.openSettings {
-  position: fixed;
-  right: 0;
-  top: 50%;
-}
-div.openSettings > button {
-  cursor: pointer;
-}
-.hideSettings {
-  display: none;
 }
 .embedded-tutorial {
   position: fixed;

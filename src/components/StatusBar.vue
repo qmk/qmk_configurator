@@ -1,23 +1,24 @@
 <template>
   <div class="backend-status">
-    <div class="qmk-logo"></div>
-    <div class="qmk-app-name">
-      QMK Configurator
-    </div>
-    <div class="bes-version">
-      {{ $t('message.apiVersionPrefix') }}
-      <span class="version-num">v{{ version }}</span>
+    <div class="qmk-branding">
+      <div class="qmk-logo"></div>
+      <div class="qmk-app-name">
+        QMK Configurator
+      </div>
+      <div class="bes-version">
+        {{ $t('message.apiVersionPrefix') }}
+        <span class="version-num">v{{ version }}</span>
+      </div>
     </div>
     <div class="bes-title">
       <div class="bes-status">
-        <div class="bes-status-indicator" :class="currentStatusClass">
+        <div class="bes-status-left" :class="currentStatusClass">
           <ul>
             <li></li>
           </ul>
         </div>
-        <div class="bes-status-left">
+        <div class="bes-status-center">
           {{ $t('message.serverIs') }}
-          <span v-if="status !== ''">{{ status }}</span>
         </div>
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
@@ -83,6 +84,11 @@ export default {
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
           this.jobs = `${this.$t('message.currentQueue')}: ${this.jobCount}`;
+          if (this.jobCount === 0) {
+            this.jobs = this.$t('message.ready');
+          } else {
+            this.jobs = `${this.jobCount} ${this.$t('message.jobsAhead')}`;
+          }
           if (this.jobCount < highWaterMark) {
             var stat = data.status;
             stat = stat === 'running' ? 'UP' : stat;
@@ -121,9 +127,6 @@ export default {
 <style>
 .bes-high-job-count {
   color: red;
-}
-.bes-odd-job-count {
-  color: yellow;
 }
 .bes-odd-job-count {
   color: yellow;
