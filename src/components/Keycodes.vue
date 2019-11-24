@@ -29,7 +29,7 @@
           >{{ $t('message.keycodesTab.' + index + '.label') }}</span
         >
         <span class="end-tab"
-          ><input
+          ><font-awesome-icon class="keycode-search-icon" icon="search"/><input
             @focus="stopListening"
             @blur="startListening"
             type="text"
@@ -170,6 +170,11 @@ export default {
 .end-tab {
   grid-column: -1;
 }
+.end-tab input {
+  padding: 3px 7px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+}
 .tab-area {
   height: 350px;
   padding: 10px 5px;
@@ -187,5 +192,11 @@ export default {
 }
 .desaturated {
   opacity: 0.3;
+}
+.keycode-search-icon {
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  opacity: 0.6;
 }
 </style>
