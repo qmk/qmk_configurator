@@ -25,7 +25,7 @@
           v-for="(key, index) in keycodesByGroup"
           :key="index"
           @click="changeActive(index)"
-          :title="index"
+          :title="$t('message.keycodesTab.' + index + '.label')"
           >{{ $t('message.keycodesTab.' + index + '.label')
           }}<span v-if="searchFilter !== ''"
             >({{ searchCounters[index] }})</span
@@ -219,5 +219,8 @@ export default {
   right: 5px;
   top: 11px;
   color: #999;
+}
+.tab span {
+  margin-left: 4px;
 }
 </style>
