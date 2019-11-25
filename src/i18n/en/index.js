@@ -155,7 +155,8 @@ export default {
       apiVersion: 'API Version',
       jobsWaiting: 'job(s) waiting',
       favoriteColor: 'Favorite Colorway',
-      favoriteKeyboard: 'Favorite Keyboard'
+      favoriteKeyboard: 'Favorite Keyboard',
+      searchKeycodes: 'search'
     }
   }
 };

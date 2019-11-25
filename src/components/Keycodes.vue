@@ -26,15 +26,18 @@
           :key="index"
           @click="changeActive(index)"
           :title="index"
-          >{{ $t('message.keycodesTab.' + index + '.label') }}</span
+          >{{ $t('message.keycodesTab.' + index + '.label')
+          }}<span v-if="searchFilter !== ''"
+            >({{ searchCounters[index] }})</span
+          ></span
         >
         <span class="end-tab"
           ><font-awesome-icon class="keycode-search-icon" icon="search"/><input
             @focus="stopListening"
             @blur="startListening"
             type="text"
-            placeholder="search keycodes"
-            v-model="searchFilter"
+            :placeholder="$t('message.searchKeycodes')"
+            v-model="searchFilter_"
         /></span>
       </div>
       <div class="tab-area">
@@ -52,8 +55,9 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 import isUndefined from 'lodash/isUndefined';
+import debounce from 'lodash/debounce';
 import Keycode from '@/components/Keycode';
 import Space from '@/components/Space';
 import store from '@/store';
@@ -70,12 +74,15 @@ export default {
     }
     return {
       active: active,
-      clearTimeout: undefined,
-      searchFilter: ''
+      clearTimeout: undefined
     };
+  },
+  mounted() {
+    this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
+    ...mapState('keycodes', ['searchFilter', 'searchCounters']),
     activeTab() {
       return this.keycodesByGroup[this.active];
     },
@@ -91,10 +98,19 @@ export default {
       }, {});
       delete section['current'];
       return section;
+    },
+    searchFilter_: {
+      get() {
+        return this.searchFilter;
+      },
+      set(newVal) {
+        this.debouncedSetSearchFilter(newVal);
+      }
     }
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
+    ...mapMutations('keycodes', ['setSearchFilter']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -130,7 +146,7 @@ export default {
       if (this.searchFilter === '' || isUndefined(key.code)) {
         return '';
       }
-      const filter = this.searchFilter.toUpperCase();
+      const filter = this.searchFilter_.toUpperCase();
       if (
         !key.code.includes(filter) &&
         !(key.name && key.name.toUpperCase().includes(filter)) &&
@@ -149,7 +165,7 @@ export default {
 }
 .tabs {
   display: grid;
-  grid-template: auto / repeat(7, minmax(120px, 200px));
+  grid-template: auto / repeat(5, minmax(120px, 200px));
 }
 .tab {
   text-overflow: ellipsis;
@@ -169,11 +185,14 @@ export default {
 }
 .end-tab {
   grid-column: -1;
+  justify-self: end;
 }
 .end-tab input {
   padding: 3px 7px;
   border: 1px solid #cdcdcd;
   border-radius: 4px;
+  width: 60%;
+  float: right;
 }
 .tab-area {
   height: 350px;
@@ -197,6 +216,6 @@ export default {
   position: absolute;
   right: 5px;
   top: 11px;
-  opacity: 0.6;
+  color: #999;
 }
 </style>
