@@ -41,7 +41,7 @@
           </select>
           <a
             id="favorite-colorway"
-            title="$t('message.favoriteColor')"
+            :title="$t('message.favoriteColor')"
             @click="favColor"
             :class="{
               active: isFavoriteColor
