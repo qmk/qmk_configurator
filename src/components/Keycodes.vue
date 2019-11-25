@@ -17,7 +17,6 @@
         </span>
       </p>
     </div>
-
     <div id="keycodes">
       <div class="tabs">
         <span
@@ -26,9 +25,22 @@
           v-for="(key, index) in keycodesByGroup"
           :key="index"
           @click="changeActive(index)"
-          :title="index"
-          >{{ $t('message.keycodesTab.' + index + '.label') }}</span
+          :title="$t('message.keycodesTab.' + index + '.label')"
+          >{{ $t('message.keycodesTab.' + index + '.label')
+          }}<span v-if="searchFilter !== ''"
+            >({{ searchCounters[index] }})</span
+          ></span
         >
+        <span class="end-tab"
+          ><font-awesome-icon class="keycode-search-icon" icon="search"/><input
+            @focus="stopListening"
+            @blur="startListening"
+            type="text"
+            :placeholder="$t('message.searchKeycodes')"
+            v-model="searchFilter_"
+            autocomplete="off"
+            spellcheck="false"
+        /></span>
       </div>
       <div class="tab-area">
         <template v-for="(key, index) in activeTab">
@@ -36,6 +48,7 @@
             v-bind:is="getComponent(key.code)"
             v-bind="key"
             :key="index"
+            :class="filterClass(key)"
             @mouseenter="message(key)"
           />
         </template>
@@ -44,8 +57,9 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 import isUndefined from 'lodash/isUndefined';
+import debounce from 'lodash/debounce';
 import Keycode from '@/components/Keycode';
 import Space from '@/components/Space';
 import store from '@/store';
@@ -65,8 +79,12 @@ export default {
       clearTimeout: undefined
     };
   },
+  mounted() {
+    this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
+  },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
+    ...mapState('keycodes', ['searchFilter', 'searchCounters']),
     activeTab() {
       return this.keycodesByGroup[this.active];
     },
@@ -82,10 +100,19 @@ export default {
       }, {});
       delete section['current'];
       return section;
+    },
+    searchFilter_: {
+      get() {
+        return this.searchFilter;
+      },
+      set(newVal) {
+        this.debouncedSetSearchFilter(newVal);
+      }
     }
   },
   methods: {
-    ...mapMutations('app', ['setMessage']),
+    ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
+    ...mapMutations('keycodes', ['setSearchFilter']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -116,6 +143,19 @@ export default {
       this.clearTimeout = window.setTimeout(() => {
         store.commit('app/setMessage', '');
       }, 3000);
+    },
+    filterClass(key) {
+      if (this.searchFilter === '' || isUndefined(key.code)) {
+        return '';
+      }
+      const filter = this.searchFilter_.toUpperCase();
+      if (
+        !key.code.includes(filter) &&
+        !(key.name && key.name.toUpperCase().includes(filter)) &&
+        !(key.title && key.title.toUpperCase().includes(filter))
+      ) {
+        return 'desaturated';
+      }
     }
   }
 };
@@ -127,7 +167,7 @@ export default {
 }
 .tabs {
   display: grid;
-  grid-template: auto / repeat(7, minmax(120px, 200px));
+  grid-template: auto / repeat(6, minmax(120px, 200px));
 }
 .tab {
   text-overflow: ellipsis;
@@ -145,6 +185,17 @@ export default {
   cursor: pointer;
   margin-bottom: -1px;
 }
+.end-tab {
+  grid-column: -1;
+  justify-self: end;
+}
+.end-tab input {
+  padding: 3px 7px;
+  border: 1px solid #cdcdcd;
+  border-radius: 4px;
+  width: 90%;
+  float: right;
+}
 .tab-area {
   height: 350px;
   padding: 10px 5px;
@@ -159,5 +210,17 @@ export default {
   left: 520px;
   top: 115px;
   height: 68px;
+}
+.desaturated {
+  opacity: 0.3;
+}
+.keycode-search-icon {
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  color: #999;
+}
+.tab span {
+  margin-left: 4px;
 }
 </style>
