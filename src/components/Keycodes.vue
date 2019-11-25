@@ -38,6 +38,8 @@
             type="text"
             :placeholder="$t('message.searchKeycodes')"
             v-model="searchFilter_"
+            autocomplete="off"
+            spellcheck="false"
         /></span>
       </div>
       <div class="tab-area">
