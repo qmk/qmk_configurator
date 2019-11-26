@@ -40,7 +40,14 @@ function init() {
   store.commit('app/setKeypressListener', () => keypressListener);
 }
 
-// returns true if bit `value` of `test` is true
+/* hasBitsSet
+ *
+ * arguments:
+ *   test (number)
+ *   value (number)
+ *
+ * returns true if bit `value` of `test` is true, false otherwise
+ */
 function hasBitsSet(test, value) {
   return (test & (1 << value)) === Math.pow(2, value);
 }
