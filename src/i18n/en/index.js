@@ -156,6 +156,7 @@ export default {
       settings: 'Settings',
       favoriteColor: 'Favorite Colorway',
       favoriteKeyboard: 'Favorite Keyboard',
+      searchKeycodes: 'search',
       jobsWaiting: 'job(s) waiting',
       jobsAhead: 'Ahead',
       queueEmpty: 'No Wait',

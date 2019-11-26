@@ -45,7 +45,7 @@ export default [
     code: 'MO(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Momentary turn layer on'
+    title: 'Momentary turn layer on. AKA FN'
   },
   {
     name: 'TG',
