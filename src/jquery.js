@@ -49,7 +49,7 @@ function init() {
  * returns true if bit `value` of `test` is true, false otherwise
  */
 function hasBitsSet(test, value) {
-  return (test & (1 << value)) === Math.pow(2, value);
+  return (test & (1 << value)) === 2 ** value;
 }
 
 /* check One-Shot Mod keycodes
