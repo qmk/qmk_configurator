@@ -31,16 +31,7 @@ const osmLookup = {
   'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI']
 };
 function makeOSM(mod, width = 1000) {
-  //if ( osmLookup[mod] ) {
-  // visual key legend
   let text = osmLookup[mod][0];
-  /*  // actual keycode argument
-    let mod_t = mod.toUpperCase();
-    // help text
-    let help = osmLookup[mod][1];
-    // Use ${mod} for the help text if ${help} is undefined
-    help = ( undefined === help ) ? mod : help;
-  }*/
   return {
     name: `OSM ${text}`,
     code: `OSM(${mod})`,
