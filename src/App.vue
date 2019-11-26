@@ -64,6 +64,8 @@ import SettingsPanel from '@/components/SettingsPanel';
 import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
+import { logger as mainLogger } from '@/logger';
+const logger = mainLogger.child({ module: 'APP.vue' });
 export default {
   name: 'app',
   components: {
@@ -82,9 +84,11 @@ export default {
     };
   },
   async beforeMount() {
+    logger.debug('beforeMount');
     await this.appLoad();
   },
   mounted() {
+    logger.debug('mounted');
     this.randomPotatoFact();
     this.interval = setInterval(() => {
       this.randomPotatoFact();
@@ -95,6 +99,7 @@ export default {
     );
   },
   beforeDestroy() {
+    logger.debug('beforeDestroy');
     clearInterval(this.interval);
     if (isFunction(this.destroyWatcher)) {
       this.destroyWatcher();
@@ -126,12 +131,15 @@ export default {
       this.potatoFact = this.$t('message.potato.' + random(1, len));
     },
     async appLoad() {
+      logger.debug('appLoad');
       await this.loadApplicationState();
     },
     dismiss() {
+      logger.debug('dismiss');
       this.setShowSpinner(false);
     },
     toggleSettingsPanel(visible) {
+      logger.debug('toggleSettingsPanel', visible);
       if (visible) {
         this.panel = this.$showPanel({
           component: SettingsPanel,
@@ -147,6 +155,10 @@ export default {
         this.panel.hide();
         this.panel = undefined;
       }
+    },
+    showSettings() {
+      logger.debug('showSettings');
+      this.setSettingsPanel(true);
     }
   }
 };
