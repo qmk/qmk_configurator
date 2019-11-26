@@ -3,8 +3,6 @@ import isUndefined from 'lodash/isUndefined';
 import { backend_keyboards_url } from '@/store/modules/constants';
 import { getPreferredLayout, getExclusionList } from '@/jquery';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
-import { logger as mainLogger } from '@/logger';
-const logger = mainLogger.child({ module: 'store/app/actions' });
 
 const steno_keyboards = ['gergo', 'georgi'];
 
@@ -65,7 +63,8 @@ const actions = {
       commit('setLayout', undefined);
       dispatch('loadLayouts').then(() => {
         let nextLayout = getPreferredLayout(state.layouts);
-        logger.info(getPreferredLayout(state.layouts));
+        // eslint-disable-next-line
+        console.info(getPreferredLayout(state.layouts));
         if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
           nextLayout = oldLayout;
         }
@@ -153,12 +152,12 @@ const actions = {
     await dispatch('saveConfiguratorSettings');
   },
   async loadApplicationState({ commit, dispatch }) {
-    logger.info('loadApplicationState Start');
+    console.log('loadApplicationState Start');
     await dispatch('fetchKeyboards');
     await dispatch('loadFavoriteKeyboard');
     await dispatch('toggleDarkMode', true);
     await dispatch('loadLanguage');
-    logger.info('loadApplicationState End');
+    console.log('loadApplicationState End');
     commit('setAppInitialized', true);
   },
   loadLanguage({ state }) {
@@ -176,12 +175,12 @@ const actions = {
       if (
         getters.validateKeyboard(state.configuratorSettings.favoriteKeyboard)
       ) {
-        logger.info(
+        console.info(
           `setKeyboard ${state.configuratorSettings.favoriteKeyboard}`
         );
         commit('setKeyboard', state.configuratorSettings.favoriteKeyboard);
       } else {
-        logger.info(
+        console.info(
           'Invalid keyboard favorited. Removing setting from local storage'
         );
         commit('setFavoriteKeyboard', '');

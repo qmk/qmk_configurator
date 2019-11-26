@@ -1,12 +1,10 @@
 import size from 'lodash/size';
 import isUndefined from 'lodash/isUndefined';
-import { logger as mainLogger } from '@/logger';
-const logger = mainLogger.child({ module: 'store/app/getters' });
 const getters = {
   firmwareFile: state => state.firmwareFile,
   validateKeyboard: state => keyboard => {
     const valid = state.keyboards.includes(keyboard);
-    logger.info(`Validate keyboard:${keyboard} valid:${valid}`);
+    console.info(`Validate keyboard:${keyboard} valid:${valid}`);
     return valid;
   },
   filter: state => state.filter,
