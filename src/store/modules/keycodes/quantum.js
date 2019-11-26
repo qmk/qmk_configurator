@@ -297,7 +297,6 @@ export default [
   { width: 250 },
   makeOSM('MOD_MEH'),
   makeOSM('MOD_HYPR'),
-  //makeOSM('MOD_TEST'),
   { width: 250 },
 
   { label: 'Special action keys', width: 'label' },
