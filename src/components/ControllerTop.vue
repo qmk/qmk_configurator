@@ -86,6 +86,9 @@ import isString from 'lodash/isString';
 
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 
+import { logger as mainLogger } from '@/logger';
+const logger = mainLogger.child({ module: 'components/ControllerTop' });
+
 import {
   statusError,
   load_converted_keymap,
@@ -228,7 +231,7 @@ export default {
       this.loadDefaultKeymap()
         .then(data => {
           if (data) {
-            console.log(data);
+            logger.info(data);
             this.updateLayout(data.layout);
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
@@ -248,7 +251,7 @@ export default {
           statusError(
             `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
-          console.log('error loadDefault', error);
+          logger.error('error loadDefault', error);
         });
     },
     // TODO: This needs to be moved in an action
@@ -259,7 +262,7 @@ export default {
      * @returns {undefined}
      */
     initializeKeyboards() {
-      console.info(`initializeKeyboards: ${this.keyboard}`);
+      logger.info(`initializeKeyboards: ${this.keyboard}`);
       let _keyboard = '';
       if (this.$route.query) {
         let filter = this.$route.query.filter;
@@ -273,11 +276,11 @@ export default {
       // But if there is parameters in the URL we prioritize it
       if (this.keyboard) {
         _keyboard = this.keyboard;
-        console.info(`Loading keyboard from store:${_keyboard}`);
+        logger.info(`Loading keyboard from store:${_keyboard}`);
       } else {
         _keyboard = first(this.keyboards);
       }
-      console.log(`_keyboard:${_keyboard}`);
+      logger.log(`_keyboard:${_keyboard}`);
 
       // WIP:
       // if there is a url in the string we
@@ -385,11 +388,11 @@ export default {
     };
   },
   mounted() {
-    console.info('mounted start');
+    logger.info('mounted start');
     this.initializeKeyboards().then(() => {
       this.loadDefault(true);
     });
-    console.info('mounted end');
+    logger.info('mounted end');
   }
 };
 </script>

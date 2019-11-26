@@ -140,6 +140,8 @@ import {
   checkInvalidKeymap
 } from '@/jquery';
 
+import { logger as mainLogger } from '@/logger';
+const logger = mainLogger.child({ module: 'components/ControllerBottom' });
 import ElectronBottomControls from './ElectronBottomControls';
 
 export default {
@@ -335,7 +337,7 @@ export default {
         const data = JSON.parse(this.reader.result);
         this.loadJsonData(data);
       } catch (error) {
-        console.log(error);
+        logger.error(error);
         alert(this.$t('message.errors.invalidQMKKeymap'));
         return;
       }
@@ -358,7 +360,7 @@ export default {
       try {
         data = JSON.parse(jsonText);
       } catch (error) {
-        console.log(error);
+        logger.error(error);
         alert("Sorry, that doesn't appear to be a valid QMK info file.");
         return;
       }
