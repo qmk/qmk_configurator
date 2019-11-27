@@ -1,3 +1,5 @@
+import isUndefined from 'lodash/isUndefined';
+
 // make a Layer Tap Key Keycode Definition
 function makeLT(layer) {
   return {
@@ -31,14 +33,19 @@ const osmLookup = {
   'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI']
 };
 function makeOSM(mod, width = 1000) {
-  let text = osmLookup[mod][0];
+  const tuple = osmLookup[mod];
+  if (isUndefined(tuple)) {
+    throw new Error(`${mod} is not a valid One Shot Mod`);
+  }
+  const [name, title] = tuple;
   return {
-    name: `OSM ${text}`,
+    name: `OSM ${name}`,
     code: `OSM(${mod})`,
-    title: `Enable ${mod} for one keypress`,
+    title: `Enable ${title} for one keypress`,
     width: width
   };
 }
+
 export default [
   { label: 'Quantum', width: 'label', group: true },
 
