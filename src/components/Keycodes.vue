@@ -7,7 +7,7 @@
     <div style="text-align: left; margin-left: 10px;">
       <p>
         <label>{{ $t('message.keycodes.label') }}:</label>
-        <span class="hint-right hint">
+        <span class="hint">
           <a
             href="https://docs.qmk.fm/#/keycodes"
             title="Keycodes reference"
