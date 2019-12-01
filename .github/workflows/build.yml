@@ -91,7 +91,6 @@ jobs:
           name: build
           path: dist
       - name: GitHub Pages Deploy
-        uses: zekth/gh-deploy-action@1.0.0
         run: |
           echo config.qmk.fm > dist/CNAME
           sh deploy.sh
