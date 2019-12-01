@@ -23,6 +23,9 @@
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
     </div>
+    <div class="bes-discord">
+      <a v-if="hasError" target="_blank" :href="discordLink">Error? Let us know on QMK Discord.</a>
+    </div>
     <div class="bes-controls" @click="clickSettings">
       <font-awesome-icon
         v-if="!settingsPanelVisible"
@@ -37,7 +40,6 @@
       />
       {{ $t('message.settings') }}
     </div>
-    <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
   </div>
 </template>
 <script>
