@@ -24,7 +24,9 @@
       </div>
     </div>
     <div class="bes-discord">
-      <a v-if="hasError" target="_blank" :href="discordLink">Error? Let us know on QMK Discord.</a>
+      <a v-if="hasError" target="_blank" :href="discordLink">
+        Error? Let us know on QMK Discord.
+      </a>
     </div>
     <div class="bes-controls" @click="clickSettings">
       <font-awesome-icon
