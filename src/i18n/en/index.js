@@ -121,11 +121,11 @@ export default {
         },
         toggleTutorial: {
           label: 'Video Tutorial',
-          help: 'MechMerlin\'s QMK Configurator video tutorial'
+          help: `MechMerlin's QMK Configurator video tutorial`
         },
         darkmode: {
           label: 'Dark Mode',
-          help: 'Use QMK Configurator\'s dark theme'
+          help: `Use QMK Configurator's dark theme`
         },
         language: {
           title: 'Language',
