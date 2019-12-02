@@ -402,6 +402,11 @@ html[data-theme='dark'] {
   #keycodes {
     background-color: inherit;
   }
+  .bottom-fixed,
+  .settings-panel--help-text {
+    background: #194452;
+    color: #ddd;
+  }
   .tab-area {
     background: $qmk-grey-dark;
     border-color: #2f2f2f;
