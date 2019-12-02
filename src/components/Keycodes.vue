@@ -208,8 +208,8 @@ export default {
 .keycode.isoenter {
   position: absolute;
   left: 520px;
-  top: 115px;
-  height: 68px;
+  top: 117px;
+  height: 69px;
 }
 .desaturated {
   opacity: 0.3;
