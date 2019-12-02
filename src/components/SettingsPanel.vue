@@ -42,8 +42,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.toggleTutorial.title')"
+          @mouseover="help('toggleTutorial')"
+          :title="$t('message.settingsPanel.toggleTutorial.label')"
           >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
@@ -62,8 +62,8 @@
         <label
           class="settings-panel--text"
           @mouseover="help('darkmode')"
-          :title="$t('message.settingsPanel.darkmode.title')"
-          >{{ $t('message.settingsPanel.darkmode.title') }}</label
+          :title="$t('message.settingsPanel.darkmode.label')"
+          >{{ $t('message.settingsPanel.darkmode.label') }}</label
         >
       </div>
       <div>
@@ -79,6 +79,7 @@
       <div>
         <label
           class="settings-panel--text"
+          @mouseover="help('language')"
           :title="$t('message.settingsPanel.language.title')"
           >{{ $t('message.settingsPanel.language.title') }}</label
         >
@@ -140,6 +141,15 @@ export default {
           break;
         case 'displaySizes':
           this.helpText = this.$t('message.settingsPanel.displaySizes.help');
+          break;
+        case 'toggleTutorial':
+          this.helpText = this.$t('message.settingsPanel.toggleTutorial.help');
+          break;
+        case 'darkmode':
+          this.helpText = this.$t('message.settingsPanel.darkmode.help');
+          break;
+        case 'language':
+          this.helpText = this.$t('message.settingsPanel.language.help');
           break;
       }
 

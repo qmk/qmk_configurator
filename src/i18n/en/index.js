@@ -121,15 +121,15 @@ export default {
         },
         toggleTutorial: {
           label: 'Video Tutorial',
-          title: 'MechMerlin how-to video on Configurator',
-          help: 'MechMerlin video guide'
+          help: 'MechMerlin\'s QMK Configurator video tutorial'
         },
         darkmode: {
-          label: 'Toggle Darkmode',
-          title: 'Dark mode'
+          label: 'Dark Mode',
+          help: 'Use QMK Configurator\'s dark theme'
         },
         language: {
-          title: 'Language'
+          title: 'Language',
+          help: 'Change the language of the user interface'
         },
         on: {
           label: 'On'
