@@ -7,7 +7,6 @@ TO REFACTOR: import of style.css
 */
 
 /* prevent draggable elements from being selected */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
@@ -24,7 +23,7 @@ TO REFACTOR: import of style.css
 body {
   // background-color: #fff;
   padding: 33px 50px 50px;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   // color: #333;
   font-weight: 400;
 }
@@ -369,7 +368,7 @@ input {
 label,
 button {
   text-transform: uppercase;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
@@ -767,7 +766,7 @@ input[type='number'] {
 
 .hint {
   font-size: 13px;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-left: 5px;
 }
 

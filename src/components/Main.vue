@@ -160,7 +160,7 @@ export default {
   justify-content: end;
 }
 #colorway-select {
-  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .beta-feedback {
   position: fixed;
