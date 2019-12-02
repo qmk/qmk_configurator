@@ -15,6 +15,7 @@
         <toggle-button
           id="setting-toggle-fast-input"
           :value="continuousInput"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleContinuousInput"
@@ -32,6 +33,7 @@
         <toggle-button
           id="setting-toggle-display-size"
           :value="displaySizes"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleDisplaySizes"
@@ -49,6 +51,7 @@
         <toggle-button
           id="setting-toggle-tutorial"
           :value="tutorialEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -67,6 +70,7 @@
         <toggle-button
           id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="darkMode"
