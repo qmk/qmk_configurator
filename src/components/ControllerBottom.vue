@@ -424,9 +424,6 @@ export default {
 };
 </script>
 <style>
-#controller-bottom button {
-  margin-top: 4px;
-}
 .input-url-modal {
   padding: 5px;
   border: 1px solid;
