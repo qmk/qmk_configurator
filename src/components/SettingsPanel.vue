@@ -156,7 +156,7 @@ export default {
 }
 .settings-panel--toggles {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr;
   grid-row-gap: 5px;
 }
 .settings-panel--text {
