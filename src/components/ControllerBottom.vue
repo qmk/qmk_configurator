@@ -472,7 +472,7 @@ export default {
   font-weight: bold;
   height: 19px;
   border: 0px solid;
-  padding: 6px 12px 6px;
+  padding: 5px 8px;
   text-transform: uppercase;
 }
 @media (max-width: 90rem) {
