@@ -9,6 +9,7 @@ TO REFACTOR: import of style.css
 /* prevent draggable elements from being selected */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 [draggable] {
   -moz-user-select: none;
@@ -626,6 +627,7 @@ button {
   cursor: -webkit-grab;
   // background: #fff;
   float: left;
+  font-family: 'Roboto', sans-serif;
   font-size: 70%;
   line-height: 11px;
   white-space: pre-line;

@@ -23,6 +23,7 @@ export default {
   width: 100%;
   text-align: center;
   line-height: 250%;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
   opacity: 0.8;
 }
