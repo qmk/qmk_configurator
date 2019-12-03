@@ -1,7 +1,7 @@
 {
   "keyboard": "massdrop/alt",
   "keymap": "default-ish",
-  "layout": "LAYOUT",
+  "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
       "KC_ESC",
