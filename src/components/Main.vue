@@ -39,6 +39,16 @@
               >{{ name }}</option
             >
           </select>
+          <a
+            id="favorite-colorway"
+            :title="$t('message.favoriteColor')"
+            @click="favColor"
+            :class="{
+              active: isFavoriteColor
+            }"
+          >
+            <font-awesome-icon icon="star" size="lg" fixed-width />
+          </a>
         </p>
         <visualKeymap :profile="false" />
         <span class="keymap--count"
@@ -56,7 +66,8 @@ import {
   mapMutations as _mapMutations,
   createNamespacedHelpers,
   mapState as _mapState,
-  mapGetters as _mapGetters
+  mapGetters as _mapGetters,
+  mapActions
 } from 'vuex';
 const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
   'keymap'
@@ -79,7 +90,7 @@ export default {
     LayerControl
   },
   computed: {
-    ..._mapState('app', ['appInitialized']),
+    ..._mapState('app', ['appInitialized', 'configuratorSettings']),
     ..._mapGetters('app', ['keyCount']),
     ...mapState(['continuousInput']),
     ...mapGetters(['colorwayIndex', 'colorways', 'size']),
@@ -107,14 +118,36 @@ export default {
     },
     redditPost() {
       return 'https://www.reddit.com/r/MechanicalKeyboards/comments/aio97b/qmk_configurator_updates_beta_need_your_input/';
+    },
+    isFavoriteColor() {
+      return (
+        this.configuratorSettings.favoriteColor &&
+        this.displayColorways[this.curIndex].toLowerCase() ===
+          this.configuratorSettings.favoriteColor.toLowerCase()
+      );
     }
   },
   methods: {
+    ...mapActions('app', ['setFavoriteColor']),
     ...mapMutations(['nextColorway']),
-    ..._mapMutations('app', ['resetListener'])
+    ..._mapMutations('app', ['resetListener']),
+    favColor() {
+      if (this.isFavoriteColor) {
+        this.setFavoriteColor('');
+      } else {
+        this.setFavoriteColor(this.displayColorways[this.curIndex]);
+      }
+    }
   },
   mounted() {
     jquery.init();
+    // Loading favorite color
+    if (this.configuratorSettings.favoriteColor) {
+      const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+      this.curIndex = this.displayColorways.findIndex(
+        color => color.toLowerCase() === favoriteColor
+      );
+    }
   },
   beforeDestroy() {
     this.resetListener();

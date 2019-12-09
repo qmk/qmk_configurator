@@ -147,6 +147,10 @@ const actions = {
     commit('setFavoriteKeyboard', keyboard);
     await dispatch('saveConfiguratorSettings');
   },
+  async setFavoriteColor({ commit, dispatch }, color) {
+    commit('setFavoriteColor', color);
+    await dispatch('saveConfiguratorSettings');
+  },
   async loadApplicationState({ commit, dispatch }) {
     console.log('loadApplicationState Start');
     await dispatch('fetchKeyboards');

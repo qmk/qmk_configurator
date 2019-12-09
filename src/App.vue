@@ -3,27 +3,11 @@
     <span style="display:none">{{ revision }}</span>
     <div>
       <header>
-        <h1>
-          <a href="/">
-            <img
-              src="./../assets/qmk_icon_512.png"
-              alt="QMK Logo"
-              width="48"
-              style="vertical-align: middle"
-            />QMK Configurator
-          </a>
-        </h1>
         <p class="random-potato">{{ potatoFact }}</p>
       </header>
       <router-view />
       <spinner :isVisible="showSpinner" :status="spinnerMsg" />
       <InfoBar :msg="message" />
-      <div class="openSettings" :class="settingsClasses">
-        <button @click="showSettings">
-          <font-awesome-icon icon="chevron-left" size="lg" />
-          <font-awesome-icon icon="cog" size="lg" />
-        </button>
-      </div>
     </div>
     <slideout-panel></slideout-panel>
     <footer>
@@ -96,12 +80,6 @@ export default {
       settingsClasses: '',
       hover: false
     };
-  },
-  watch: {
-    $route: function(to) {
-      this.settingsClasses =
-        to.name === 'print' || to.name === 'test' ? 'hideSettings' : '';
-    }
   },
   async beforeMount() {
     await this.appLoad();
@@ -186,17 +164,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
-.openSettings {
-  position: fixed;
-  right: 0;
-  top: 50%;
-}
-div.openSettings > button {
-  cursor: pointer;
-}
-.hideSettings {
-  display: none;
-}
 .embedded-tutorial {
   position: fixed;
   bottom: 20px;
@@ -209,7 +176,7 @@ div.openSettings > button {
 
 .help {
   position: fixed;
-  top: 30px;
+  top: 50px;
   right: 10px;
   opacity: 0.7;
   cursor: pointer;

@@ -329,6 +329,7 @@ function getExclusionList() {
   return [
     '1upkeyboards/sweet16',
     '40percentclub/i75',
+    '7skb',
     '8pack',
     'adkb96',
     'angel17',

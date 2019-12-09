@@ -20,11 +20,7 @@ export default {
     Main,
     Keycodes
   },
-  methods: {
-    track() {
-      this.$ga.page('/');
-    }
-  }
+  methods: {}
 };
 </script>
 <style>

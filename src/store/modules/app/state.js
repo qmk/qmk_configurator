@@ -8,7 +8,8 @@ function setDefaultConfiguratorSettings() {
   const initialConfig = {
     version: CONSTS.configuratorSettingsVersion,
     darkmodeEnabled: false,
-    favoriteKeyboard: ''
+    favoriteKeyboard: '',
+    favoriteColor: ''
   };
   localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
   return initialConfig;

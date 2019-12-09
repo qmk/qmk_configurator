@@ -39,7 +39,8 @@ html {
     .tester-key.chatter-detected {
       background-color: rgb(233, 107, 107);
     }
-    #favorite-keyboard {
+    #favorite-keyboard,
+    #favorite-colorway {
       color: grey;
       &.active {
         color: $qmk-green;
@@ -156,7 +157,7 @@ html {
       background: #eee;
     }
     .backend-status {
-      background: #222;
+      background: #272822;
       color: #bbb;
     }
     #keycodes {
@@ -165,7 +166,7 @@ html {
     }
 
     .bes-status {
-      color: lightgreen;
+      color: #fff;
     }
 
     .bes-error {
@@ -456,5 +457,9 @@ html[data-theme='dark'] {
         color: #000;
       }
     }
+  }
+
+  .random-potato {
+    color: #eeeeee;
   }
 }

@@ -26,7 +26,7 @@ describe('Simple browsing', function() {
         );
       }
     });
-    cy.get('.openSettings').click();
+    cy.get('.bes-controls').click();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
@@ -35,7 +35,7 @@ describe('Simple browsing', function() {
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should(
       'not.be.visible'
     );
-    cy.get('.openSettings').click();
+    cy.get('.bes-controls', { timeout: 5000 }).click();
     cy.get('#setting-toggle-darkmode').click();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
     cy.visit('/');
@@ -85,7 +85,7 @@ describe('Simple browsing', function() {
       }
     });
     cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('keyboard');
-    cy.get('.openSettings').click();
+    cy.get('.bes-controls').click();
     cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
     cy.get('#setting-panel-language').select('fr');
     cy.get('.slideout-panel-bg').click();
