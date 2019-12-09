@@ -71,27 +71,31 @@ function processOneShotMods(keycode) {
 
   // parser
   mods = mods.map(amod => {
-    // MOD_LCTL = 0x0001,
-    // MOD_LSFT = 0x0010,
-    // MOD_LALT = 0x0100,
-    // MOD_LGUI = 0x1000,
+    // MOD_LCTL = 0b00001, MOD_RCTL = 0b10001,
+    // MOD_LSFT = 0b00010, MOD_RSFT = 0b10010,
+    // MOD_LALT = 0b00100, MOD_RALT = 0b10100,
+    // MOD_LGUI = 0b01000, MOD_RGUI = 0b11000,
     switch (amod) {
       case 'MOD_LCTL':
+        return 0b00001;
       case 'MOD_RCTL':
-        return 0b0001;
+        return 0b10001;
       case 'MOD_LSFT':
+        return 0b00010;
       case 'MOD_RSFT':
-        return 0b0010;
+        return 0b10010;
       case 'MOD_LALT':
+        return 0b00100;
       case 'MOD_RALT':
-        return 0b0100;
+        return 0b10100;
       case 'MOD_LGUI':
+        return 0b01000;
       case 'MOD_RGUI':
-        return 0b1000;
+        return 0b11000;
       case 'MOD_MEH':
-        return 0b0111;
+        return 0b00111;
       case 'MOD_HYPR':
-        return 0b1111;
+        return 0b01111;
     }
   });
 
@@ -103,16 +107,16 @@ function processOneShotMods(keycode) {
 
   let cmods = [];
   if (hasBitsSet(mods, 0)) {
-    cmods.push('MOD_LCTL');
+    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RCTL' : 'MOD_LCTL');
   }
   if (hasBitsSet(mods, 1)) {
-    cmods.push('MOD_LSFT');
+    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RSFT' : 'MOD_LSFT');
   }
   if (hasBitsSet(mods, 2)) {
-    cmods.push('MOD_LALT');
+    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RALT' : 'MOD_LALT');
   }
   if (hasBitsSet(mods, 3)) {
-    cmods.push('MOD_LGUI');
+    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RGUI' : 'MOD_LGUI');
   }
   if (
     hasBitsSet(mods, 0) &&
