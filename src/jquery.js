@@ -108,16 +108,16 @@ function processOneShotMods(keycode) {
   let cmods = [];
   const osmHand = hasBitsSet(mods, 4) ? 'MOD_R' : 'MOD_L';
   if (hasBitsSet(mods, 0)) {
-    cmods.push(osmHand + 'CTL');
+    cmods.push(`${osmHand}CTL`);
   }
   if (hasBitsSet(mods, 1)) {
-    cmods.push(osmHand + 'SFT');
+    cmods.push(`${osmHand}SFT`);
   }
   if (hasBitsSet(mods, 2)) {
-    cmods.push(osmHand + 'ALT');
+    cmods.push(`${osmHand}ALT`);
   }
   if (hasBitsSet(mods, 3)) {
-    cmods.push(osmHand + 'GUI');
+    cmods.push(`${osmHand}GUI`);
   }
   if (
     hasBitsSet(mods, 0) &&
