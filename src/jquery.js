@@ -106,17 +106,18 @@ function processOneShotMods(keycode) {
   });
 
   let cmods = [];
+  const osmHand = hasBitsSet(mods, 4) ? 'MOD_R' : 'MOD_L';
   if (hasBitsSet(mods, 0)) {
-    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RCTL' : 'MOD_LCTL');
+    cmods.push(osmHand + 'CTL');
   }
   if (hasBitsSet(mods, 1)) {
-    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RSFT' : 'MOD_LSFT');
+    cmods.push(osmHand + 'SFT');
   }
   if (hasBitsSet(mods, 2)) {
-    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RALT' : 'MOD_LALT');
+    cmods.push(osmHand + 'ALT');
   }
   if (hasBitsSet(mods, 3)) {
-    cmods.push(hasBitsSet(mods, 4) ? 'MOD_RGUI' : 'MOD_LGUI');
+    cmods.push(osmHand + 'GUI');
   }
   if (
     hasBitsSet(mods, 0) &&
