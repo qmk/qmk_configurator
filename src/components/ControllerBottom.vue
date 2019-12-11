@@ -309,6 +309,27 @@ export default {
 
       // Check for redirects
       switch (data.keyboard) {
+        case 'vinta':
+          switch (data.layout) {
+            case 'LAYOUT_67_ansi':
+              data.layout = `LAYOUT_65_ansi_blocker`;
+              break;
+          }
+          break;
+        case 'percent/canoe':
+          switch (data.layout) {
+            case 'LAYOUT_iso':
+              data.layout = `LAYOUT_65_iso_blocker`;
+              break;
+          }
+          break;
+        case 'noxary/268_2':
+          switch (data.layout) {
+            case 'LAYOUT':
+              data.layout = `LAYOUT_65_ansi_blocker`;
+              break;
+          }
+          break;
         case 'angel64':
           data.keyboard += `/alpha`;
           break;
@@ -329,6 +350,11 @@ export default {
           break;
         case 'kbdfans/kbd67mkiirgb':
           data.keyboard = `kbdfans/kbd67/mkiirgb`;
+          switch (data.layout) {
+            case 'LAYOUT':
+              data.layout = `LAYOUT_65_ansi_blocker`;
+              break;
+          }
           break;
         case 'doro67/multi':
           switch (data.layout) {

@@ -48,10 +48,23 @@
     "target": "gh60/revc"
   },
   "kbdfans/kbd67mkiirgb": {
-    "target": "kbdfans/kbd67/mkiirgb"
+    "target": "kbdfans/kbd67/mkiirgb",
+    "layouts": {
+      "LAYOUT": "LAYOUT_65_ansi_blocker"
+    }
   },
   "kudox": {
     "target": "kudox/rev1"
+  },
+  "noxary/268_2": {
+    "layouts": {
+      "LAYOUT": "LAYOUT_65_ansi_blocker"
+    }
+  },
+  "percent/canoe": {
+    "layouts": {
+      "LAYOUT_iso": "LAYOUT_65_iso_blocker"
+    }
   },
   "plain60": {
     "target": "maartenwut/plain60"
@@ -91,6 +104,11 @@
   },
   "ta65": {
     "target": "maartenwut/ta65"
+  },
+  "vinta": {
+    "layouts": {
+      "LAYOUT_67_ansi": "LAYOUT_65_ansi_blocker"
+    }
   },
   "wasdat": {
     "target": "maartenwut/wasdat"
