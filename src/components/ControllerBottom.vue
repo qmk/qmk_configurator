@@ -306,6 +306,94 @@ export default {
         this.$store.commit('app/setAuthor', escape(author));
         this.$store.commit('app/setNotes', escape(notes));
       }
+
+      // Check for redirects
+      switch (data.keyboard) {
+        case 'angel64':
+          data.keyboard += `/alpha`;
+          break;
+        case 'dztech/dz60rgb':
+        case 'dztech/dz60rgb_ansi':
+        case 'dztech/dz60rgb_wkl':
+          data.keyboard += `/v1`;
+          break;
+        case 'kudox':
+          data.keyboard += `/rev1`;
+          break;
+        case 'romac':
+        case 'ropro':
+          data.keyboard = `kingly_keys/${data.keyboard}`;
+          break;
+        case 'angel17':
+          data.keyboard += `/alpha`;
+          break;
+        case 'kbdfans/kbd67mkiirgb':
+          data.keyboard = `kbdfans/kbd67/mkiirgb`;
+          break;
+        case 'doro67/multi':
+          switch (data.layout) {
+            case 'LAYOUT_ansi':
+              data.layout = `LAYOUT_65_ansi_blocker`;
+              break;
+          }
+        case 'doro67/regular':
+        case 'doro67/rgb':
+          switch (data.layout) {
+            case 'LAYOUT':
+              data.layout = `LAYOUT_65_ansi_blocker`;
+              break;
+          }
+          break;
+        case 'canoe':
+        case 'skog':
+          data.keyboard = `percent/${data.keyboard}`;
+          break;
+        case 'bpiphany/pegasushoof':
+          data.keyboard += `/2013`;
+          break;
+        case 'alice':
+          data.keyboard = `tgr/${data.keyboard}`;
+          break;
+        case 'atom47/rev2':
+        case 'atom47/rev3':
+        case 'plain60':
+        case 'ta65':
+        case 'wasdat':
+          data.keyboard = `maartenwut/${data.keyboard}`;
+          break;
+        case 'gh60':
+          data.keyboard += `/revc`;
+          break;
+        case 'satan':
+          data.keyboard = `gh60/${data.keyboard}`;
+          break;
+        case 'suihankey':
+          data.keyboard += `/split/alpha`;
+          break;
+        case 'rama/koyu':
+          data.keyboard = `wilba_tech/rama_works_koyu`;
+          break;
+        case 'rama/m6_a':
+          data.keyboard = `wilba_tech/rama_works_m6_a`;
+          break;
+        case 'rama/m6_b':
+          data.keyboard = `wilba_tech/rama_works_m6_b`;
+          break;
+        case 'rama/m10_b':
+          data.keyboard = `wilba_tech/rama_works_m10_b`;
+          break;
+        case 'rama/m60_a':
+          data.keyboard = `wilba_tech/rama_works_m60_a`;
+          break;
+        case 'rama/u80_a':
+          data.keyboard = `wilba_tech/rama_works_u80_a`;
+          break;
+        case 'zeal60':
+        case 'zeal65':
+          data.keyboard = `wilba_tech/${data.keyboard}`;
+          break;
+      }
+
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
         this.$store.commit('app/setLayout', data.layout);
