@@ -310,25 +310,26 @@ export default {
       }
 
       // allow renames of a keyboard or layout multiple times
-      // only allow up to 10 subtitutions to avoid looping forever.
+      // only allow up to MaxRuns subtitutions to avoid looping forever.
       let runs = 0;
+      const MaxRuns = 10;
       do {
         if (!isUndefined(remap.lookup[data.keyboard])) {
-          let notRemapped = 1;
+          let notRemapped = true;
           const { target, layouts } = remap.lookup[data.keyboard];
           if (!isUndefined(target)) {
             data.keyboard = target;
-            notRemapped = 0;
+            notRemapped = false;
           }
           if (!isUndefined(layouts) && layouts[data.layout]) {
             data.layout = layouts[data.layout];
-            notRemapped = 0;
+            notRemapped = false;
           }
           // once we have no more layout renames we can safely exit loop
           if (notRemapped) break;
           runs += 1;
         }
-      } while (runs < 10 && !isUndefined(remap.lookup[data.keyboard]));
+      } while (runs < MaxRuns);
       console.log(`performed ${runs} remapping operations on ${data.keyboard}`);
 
       this.$store.commit('app/setKeyboard', data.keyboard);
