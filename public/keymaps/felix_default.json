@@ -2,7 +2,7 @@
   "keyboard": "felix",
   "keymap": "default_769854b",
   "commit": "769854b8a2678488c22145c0aede764d7710afa6",
-  "layout": "LAYOUT",
+  "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
       "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
