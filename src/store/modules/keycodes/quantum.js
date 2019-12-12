@@ -52,7 +52,11 @@ export default [
   { label: 'QMK specific', width: 'label' },
 
   { name: '', code: 'KC_NO', title: 'Do nothing' },
-  { name: '▽', code: 'KC_TRNS', title: 'Pass-through' },
+  {
+    name: '▽',
+    code: 'KC_TRNS',
+    title: 'Use the next lowest non-transparent key'
+  },
   { name: 'Reset', code: 'RESET', title: 'Reset the keyboard' },
   { name: 'Debug', code: 'DEBUG', title: 'Toggle debug mode' },
   {
