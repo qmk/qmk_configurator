@@ -309,15 +309,17 @@ export default {
         this.$store.commit('app/setNotes', escape(notes));
       }
 
-      if (!isUndefined(remap.lookup[data.keyboard])) {
-        const { target, layouts } = remap.lookup[data.keyboard];
-        if (!isUndefined(target)) {
-          data.keyboard = target;
+      do {
+        if (!isUndefined(remap.lookup[data.keyboard])) {
+          const { target, layouts } = remap.lookup[data.keyboard];
+          if (!isUndefined(target)) {
+            data.keyboard = target;
+          }
+          if (!isUndefined(layouts) && layouts[data.layout]) {
+            data.layout = layouts[data.layout];
+          }
         }
-        if (!isUndefined(layouts) && layouts[data.layout]) {
-          data.layout = layouts[data.layout];
-        }
-      }
+      } while (!isUndefined(remap.lookup[data.keyboard]));
 
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
