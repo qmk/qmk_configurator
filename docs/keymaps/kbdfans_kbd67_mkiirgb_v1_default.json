@@ -1,7 +1,7 @@
 {
-  "keyboard": "kbdfans/kbd67/mkiirgb",
-  "keymap": "default_37b6a2a",
-  "commit": "37b6a2abbd96eaf3d6d724ac09c789d54a67d962",
+  "keyboard": "kbdfans/kbd67/mkiirgb/v1",
+  "keymap": "default_426c03e",
+  "commit": "426c03eda0deb62d916498fbdd671c7d3532b9e4",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
