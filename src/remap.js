@@ -53,6 +53,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  'kbdfans/kbd67/mkiirgb': {
+    target: 'kbdfans/kbd67/mkiirgb/v1',
+  },
   kudox: {
     target: 'kudox/rev1'
   },
