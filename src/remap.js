@@ -54,7 +54,7 @@ const lookup = {
     }
   },
   'kbdfans/kbd67/mkiirgb': {
-    target: 'kbdfans/kbd67/mkiirgb/v1',
+    target: 'kbdfans/kbd67/mkiirgb/v1'
   },
   kudox: {
     target: 'kudox/rev1'
