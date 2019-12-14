@@ -290,6 +290,28 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
+    // This is recursive, but it's limited to a maximum depth of 10
+    remapKeyboard(keyboard, layout, depth = 0) {
+      if (depth > 10) {
+        console.warn(`possible remap loop detected with ${keyboard}:${layout}`);
+        return { keyboard, layout };
+      }
+      let remapped = false;
+      if (!isUndefined(remap.lookup[keyboard])) {
+        const { target, layouts } = remap.lookup[keyboard];
+        if (!isUndefined(target)) {
+          keyboard = target;
+          remapped = true;
+        }
+        if (!isUndefined(layouts) && !isUndefined(layouts[layout])) {
+          layout = layouts[layout];
+          remapped = true;
+        }
+      }
+      return remapped
+        ? this.remapKeyboard(keyboard, layout, ++depth)
+        : { keyboard, layout };
+    },
     loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
         alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
@@ -309,28 +331,11 @@ export default {
         this.$store.commit('app/setNotes', escape(notes));
       }
 
-      // allow renames of a keyboard or layout multiple times
-      // only allow up to MaxRuns subtitutions to avoid looping forever.
-      let runs = 0;
-      const MaxRuns = 10;
-      do {
-        let notRemapped = true;
-        if (!isUndefined(remap.lookup[data.keyboard])) {
-          const { target, layouts } = remap.lookup[data.keyboard];
-          if (!isUndefined(target)) {
-            data.keyboard = target;
-            notRemapped = false;
-          }
-          if (!isUndefined(layouts) && layouts[data.layout]) {
-            data.layout = layouts[data.layout];
-            notRemapped = false;
-          }
-          // once we have no more layout renames we can safely exit loop
-        }
-        runs += 1;
-        if (notRemapped) break;
-      } while (runs < MaxRuns);
-      console.log(`performed ${runs} remapping operations on ${data.keyboard}`);
+      // remap old json files to new mappings if they need it
+      data = Object.assign(
+        data,
+        this.remapKeyboard(data.keyboard, data.layout)
+      );
 
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
