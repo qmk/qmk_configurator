@@ -290,25 +290,26 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
+    // remap old keymap.json files to current locations and layouts
     // This is recursive, but it's limited to a maximum depth of 10
     remapKeyboard(keyboard, layout, depth = 0) {
+      let wasRemapped = false;
       if (depth > 10) {
         console.warn(`possible remap loop detected with ${keyboard}:${layout}`);
-        return { keyboard, layout };
-      }
-      let remapped = false;
-      if (!isUndefined(remap.lookup[keyboard])) {
-        const { target, layouts } = remap.lookup[keyboard];
-        if (!isUndefined(target)) {
-          keyboard = target;
-          remapped = true;
+      } else {
+        if (!isUndefined(remap.lookup[keyboard])) {
+          const { target, layouts } = remap.lookup[keyboard];
+          if (!isUndefined(target)) {
+            keyboard = target;
+            wasRemapped = true;
+          }
+          if (!isUndefined(layouts) && !isUndefined(layouts[layout])) {
+            layout = layouts[layout];
+            wasRemapped = true;
+          }
         }
-        if (!isUndefined(layouts) && !isUndefined(layouts[layout])) {
-          layout = layouts[layout];
-          remapped = true;
-        }
       }
-      return remapped
+      return wasRemapped
         ? this.remapKeyboard(keyboard, layout, ++depth)
         : { keyboard, layout };
     },
