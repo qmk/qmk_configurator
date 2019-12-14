@@ -314,8 +314,8 @@ export default {
       let runs = 0;
       const MaxRuns = 10;
       do {
+        let notRemapped = true;
         if (!isUndefined(remap.lookup[data.keyboard])) {
-          let notRemapped = true;
           const { target, layouts } = remap.lookup[data.keyboard];
           if (!isUndefined(target)) {
             data.keyboard = target;
@@ -326,9 +326,9 @@ export default {
             notRemapped = false;
           }
           // once we have no more layout renames we can safely exit loop
-          if (notRemapped) break;
-          runs += 1;
         }
+        runs += 1;
+        if (notRemapped) break;
       } while (runs < MaxRuns);
       console.log(`performed ${runs} remapping operations on ${data.keyboard}`);
 
