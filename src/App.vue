@@ -39,6 +39,7 @@
         class="santa-hat"
         src="../assets/Santa_hat.svg"
         v-show="!tutorialEnabled"
+        alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
       />
 
       <font-awesome-icon
@@ -243,9 +244,6 @@ export default {
   animation: tada 3s linear infinite;
 }
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
-  animation: tada 3s linear infinite;
-}
-</style>
   animation: tada 3s linear infinite;
 }
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
