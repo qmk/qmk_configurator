@@ -30,11 +30,17 @@
       "
     >
       <font-awesome-icon
-        v-show="!tutorialEnabled"
+        v-show="false && !tutorialEnabled"
         icon="hat-wizard"
         transform="rotate-22"
         size="3x"
       />
+      <img
+        class="santa-hat"
+        src="../assets/Santa_hat.svg"
+        v-show="!tutorialEnabled"
+      />
+
       <font-awesome-icon
         v-show="tutorialEnabled"
         icon="magic"
@@ -64,6 +70,7 @@ import SettingsPanel from '@/components/SettingsPanel';
 import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
+
 export default {
   name: 'app',
   components: {
@@ -181,6 +188,12 @@ export default {
   opacity: 0.7;
   cursor: pointer;
 }
+
+.santa-hat {
+  width: 56px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
 @keyframes tada {
   0% {
@@ -217,6 +230,9 @@ export default {
 }
 .faa-tada.animated.faa-slow,
 .faa-tada.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }

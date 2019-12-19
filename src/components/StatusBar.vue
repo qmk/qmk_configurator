@@ -83,7 +83,6 @@ export default {
         .then(({ data }) => {
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
-          this.jobs = `${this.$t('message.currentQueue')}: ${this.jobCount}`;
           if (this.jobCount === 0) {
             this.jobs = this.$t('message.ready');
           } else {

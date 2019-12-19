@@ -53,6 +53,6 @@
     "serialize-javascript": "^2.1.1",
     "start-server-and-test": "^1.10.0",
     "vue-loader": "^15.7.0",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.6.11"
   }
 }
