@@ -59,6 +59,7 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+    <SnowFlake v-if="snowflakes" />
   </div>
 </template>
 <script>
@@ -70,12 +71,14 @@ import SettingsPanel from '@/components/SettingsPanel';
 import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
+import SnowFlake from '@/components/SnowFlake';
 
 export default {
   name: 'app',
   components: {
     Spinner,
-    InfoBar
+    InfoBar,
+    SnowFlake
   },
   data() {
     return {
@@ -108,7 +111,13 @@ export default {
     }
   },
   computed: {
-    ...mapState(['showSpinner', 'spinnerMsg', 'message', 'tutorialEnabled']),
+    ...mapState([
+      'showSpinner',
+      'spinnerMsg',
+      'message',
+      'tutorialEnabled',
+      'snowflakes'
+    ]),
     showInfoBar() {
       return this.message !== '';
     },
@@ -231,6 +240,12 @@ export default {
 .faa-tada.animated.faa-slow,
 .faa-tada.animated-hover.faa-slow:hover,
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
+</style>
   animation: tada 3s linear infinite;
 }
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {

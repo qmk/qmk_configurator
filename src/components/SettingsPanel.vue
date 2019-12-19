@@ -75,6 +75,22 @@
       <div>
         <label
           class="settings-panel--text"
+          :title="$t('message.settingsPanel.snowflakes.title')"
+          >{{ $t('message.settingsPanel.snowflakes.title') }}</label
+        >
+      </div>
+      <div>
+        <toggle-button
+          id="setting-toggle-snowflakes"
+          :value="snowflakes"
+          :sync="true"
+          :labels="labels"
+          @change="toggleSnowflakes"
+        />
+      </div>
+      <div>
+        <label
+          class="settings-panel--text"
           :title="$t('message.settingsPanel.language.title')"
           >{{ $t('message.settingsPanel.language.title') }}</label
         >
@@ -111,7 +127,8 @@ export default {
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
-      'languages'
+      'languages',
+      'snowflakes'
     ]),
     language: {
       get() {
@@ -124,7 +141,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
-    ...mapMutations('app', ['toggleTutorial']),
+    ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
     ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
     darkMode() {
       this.toggleDarkMode();
