@@ -56,7 +56,7 @@
         class="jinglebell"
         src="../assets/jinglebell.svg"
         v-show="snowflakes && tutorialEnabled"
-        alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
+        alt="Jingle Bell SVG Icon made from Icon Fonts is licensed by CC BY 3.0"
       />
     </div>
     <iframe
