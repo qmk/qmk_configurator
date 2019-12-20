@@ -136,6 +136,10 @@ export default {
         },
         off: {
           label: 'Off'
+        },
+        snowflakes: {
+          label: 'Toggle Snowflakes',
+          title: 'Snowflakes'
         }
       },
       errors: {

@@ -322,9 +322,15 @@ export default {
     },
     postUpdateKeyboard() {
       this.$store.commit('status/clear');
-      this.$router.replace({
-        path: `/${this.keyboard}/${this.layout}`
-      });
+      this.$router
+        .replace({
+          path: `/${this.keyboard}/${this.layout}`
+        })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            throw err;
+          }
+        });
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
     },
@@ -336,7 +342,13 @@ export default {
     updateLayout(e) {
       const newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
-      this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
+      this.$router
+        .replace({ path: `/${this.keyboard}/${this.layout}` })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            throw err;
+          }
+        });
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;

@@ -14,6 +14,11 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
       <p style="font-size:10px">version: {{ revision }}</p>
+      <p>
+        Jingle Bell SVG Icon made from
+        <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed
+        by CC BY 3.0
+      </p>
     </footer>
     <div
       class="help"
@@ -30,16 +35,28 @@
       "
     >
       <font-awesome-icon
-        v-show="!tutorialEnabled"
+        v-show="!snowflakes && !tutorialEnabled"
         icon="hat-wizard"
         transform="rotate-22"
         size="3x"
       />
+      <img
+        class="santa-hat"
+        src="../assets/Santa_hat.svg"
+        v-show="snowflakes && !tutorialEnabled"
+        alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
+      />
       <font-awesome-icon
-        v-show="tutorialEnabled"
+        v-show="!snowflakes && tutorialEnabled"
         icon="magic"
         transform="rotate-185"
         size="3x"
+      />
+      <img
+        class="jinglebell"
+        src="../assets/jinglebell.svg"
+        v-show="snowflakes && tutorialEnabled"
+        alt="Jingle Bell SVG Icon made from Icon Fonts is licensed by CC BY 3.0"
       />
     </div>
     <iframe
@@ -53,6 +70,7 @@
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+    <SnowFlake v-if="snowflakes" />
   </div>
 </template>
 <script>
@@ -64,11 +82,14 @@ import SettingsPanel from '@/components/SettingsPanel';
 import { createNamespacedHelpers, mapActions } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
+import SnowFlake from '@/components/SnowFlake';
+
 export default {
   name: 'app',
   components: {
     Spinner,
-    InfoBar
+    InfoBar,
+    SnowFlake
   },
   data() {
     return {
@@ -101,7 +122,13 @@ export default {
     }
   },
   computed: {
-    ...mapState(['showSpinner', 'spinnerMsg', 'message', 'tutorialEnabled']),
+    ...mapState([
+      'showSpinner',
+      'spinnerMsg',
+      'message',
+      'tutorialEnabled',
+      'snowflakes'
+    ]),
     showInfoBar() {
       return this.message !== '';
     },
@@ -181,6 +208,17 @@ export default {
   opacity: 0.7;
   cursor: pointer;
 }
+
+.santa-hat {
+  width: 56px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.jinglebell {
+  width: 50px;
+  transform: rotate(-9deg);
+}
+
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
 @keyframes tada {
   0% {
@@ -217,6 +255,12 @@ export default {
 }
 .faa-tada.animated.faa-slow,
 .faa-tada.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }
