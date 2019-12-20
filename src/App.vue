@@ -14,6 +14,11 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
       <p style="font-size:10px">version: {{ revision }}</p>
+      <p>
+        Jingle Bell SVG Icon made from
+        <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed
+        by CC BY 3.0
+      </p>
     </footer>
     <div
       class="help"
@@ -30,7 +35,7 @@
       "
     >
       <font-awesome-icon
-        v-show="false && !tutorialEnabled"
+        v-show="!snowflakes && !tutorialEnabled"
         icon="hat-wizard"
         transform="rotate-22"
         size="3x"
@@ -38,15 +43,20 @@
       <img
         class="santa-hat"
         src="../assets/Santa_hat.svg"
-        v-show="!tutorialEnabled"
+        v-show="snowflakes && !tutorialEnabled"
         alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
       />
-
       <font-awesome-icon
-        v-show="tutorialEnabled"
+        v-show="!snowflakes && tutorialEnabled"
         icon="magic"
         transform="rotate-185"
         size="3x"
+      />
+      <img
+        class="jinglebell"
+        src="../assets/jinglebell.svg"
+        v-show="snowflakes && tutorialEnabled"
+        alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
       />
     </div>
     <iframe
@@ -202,6 +212,11 @@ export default {
 .santa-hat {
   width: 56px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.jinglebell {
+  width: 50px;
+  transform: rotate(-9deg);
 }
 
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
