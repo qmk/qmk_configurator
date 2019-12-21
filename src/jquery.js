@@ -683,12 +683,12 @@ function getPreferredLayout(layouts) {
   return first(mykeys);
 }
 
-function checkInvalidKeymap(keymap) {
+function checkInvalidKeymap({ keyboard, keymap, layout, layers }) {
   const res =
-    isUndefined(keymap.keyboard) ||
-    isUndefined(keymap.keymap) ||
-    isUndefined(keymap.layout) ||
-    isUndefined(keymap.layers);
+    isUndefined(keyboard) ||
+    isUndefined(keymap) ||
+    isUndefined(layout) ||
+    isUndefined(layers);
   return res;
 }
 

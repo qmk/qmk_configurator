@@ -142,6 +142,8 @@ import {
 
 import ElectronBottomControls from './ElectronBottomControls';
 
+import remap from '@/remap';
+
 export default {
   name: 'bottom-controller',
   components: { ElectronBottomControls },
@@ -288,6 +290,29 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
+    // remap old keymap.json files to current locations and layouts
+    // This is recursive, but it's limited to a maximum depth of 10
+    remapKeyboard(keyboard, layout, depth = 0) {
+      let wasRemapped = false;
+      if (depth > 10) {
+        console.warn(`possible remap loop detected with ${keyboard}:${layout}`);
+      } else {
+        if (!isUndefined(remap.lookup[keyboard])) {
+          const { target, layouts } = remap.lookup[keyboard];
+          if (!isUndefined(target)) {
+            keyboard = target;
+            wasRemapped = true;
+          }
+          if (!isUndefined(layouts) && !isUndefined(layouts[layout])) {
+            layout = layouts[layout];
+            wasRemapped = true;
+          }
+        }
+      }
+      return wasRemapped
+        ? this.remapKeyboard(keyboard, layout, ++depth)
+        : { keyboard, layout };
+    },
     loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
         alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
@@ -306,6 +331,13 @@ export default {
         this.$store.commit('app/setAuthor', escape(author));
         this.$store.commit('app/setNotes', escape(notes));
       }
+
+      // remap old json files to new mappings if they need it
+      data = Object.assign(
+        data,
+        this.remapKeyboard(data.keyboard, data.layout)
+      );
+
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
         this.$store.commit('app/setLayout', data.layout);
