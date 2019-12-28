@@ -79,7 +79,7 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { createNamespacedHelpers, mapActions } from 'vuex';
+import { createNamespacedHelpers, mapActions, mapGetters } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 import SnowFlake from '@/components/SnowFlake';
@@ -105,6 +105,10 @@ export default {
   async beforeMount() {
     await this.appLoad();
   },
+  created() {
+    // will trigger function before closing/refreshing tab
+    window.addEventListener('beforeunload', this.showConfirmationPrompt);
+  },
   mounted() {
     this.randomPotatoFact();
     this.interval = setInterval(() => {
@@ -122,6 +126,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters('keymap', ['isDirty']),
     ...mapState([
       'showSpinner',
       'spinnerMsg',
@@ -157,6 +162,21 @@ export default {
     },
     dismiss() {
       this.setShowSpinner(false);
+    },
+    showConfirmationPrompt(e) {
+      // implemented according to https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
+
+      if (this.isDirty === true) {
+        // Cancel default event
+        e.preventDefault();
+        // Chrome requires returnValue to be set
+        e.returnValue = '';
+
+        // will show prompt
+        return true;
+      }
+      // will not show confirmation prompt
+      return null;
     },
     toggleSettingsPanel(visible) {
       if (visible) {
