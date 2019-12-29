@@ -124,6 +124,8 @@ export default {
     if (isFunction(this.destroyWatcher)) {
       this.destroyWatcher();
     }
+    // remove event listener
+    window.removeEventListener('beforeunload', this.showConfirmationPrompt);
   },
   computed: {
     ...mapGetters('keymap', ['isDirty']),
