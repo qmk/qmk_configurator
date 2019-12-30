@@ -75,22 +75,6 @@
       <div>
         <label
           class="settings-panel--text"
-          :title="$t('message.settingsPanel.snowflakes.title')"
-          >{{ $t('message.settingsPanel.snowflakes.title') }}</label
-        >
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-snowflakes"
-          :value="snowflakes"
-          :sync="true"
-          :labels="labels"
-          @change="toggleSnowflakes"
-        />
-      </div>
-      <div>
-        <label
-          class="settings-panel--text"
           :title="$t('message.settingsPanel.language.title')"
           >{{ $t('message.settingsPanel.language.title') }}</label
         >
@@ -127,8 +111,7 @@ export default {
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
-      'languages',
-      'snowflakes'
+      'languages'
     ]),
     language: {
       get() {
