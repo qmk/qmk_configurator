@@ -65,6 +65,7 @@ export default {
     clearLayer() {
       if (confirm(this.$t('message.layer.confirm'))) {
         this.initLayer(this.layer);
+        this.$store.commit('keymap/setDirty');
       }
     }
   }
