@@ -4,8 +4,10 @@ apiVersionPrefix,
 favoriteColor,
 favoriteKeyboard,
 hostedOn,Размещено на GitHub Pages
+jobsAhead,
 jobsWaiting,шт. заданий ожидает
 maintain,"Данный проект поддерживается коллабораторами QMK и такими же участниками, как вы!"
+ready,
 searchKeycodes,
 serverIs,
 serverStatus,Статус сервера

@@ -88,9 +88,9 @@ export default {
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
           if (this.jobCount === 0) {
-            this.jobs = this.$t('message.ready');
+            this.jobs = this.$t('ready');
           } else {
-            this.jobs = `${this.jobCount} ${this.$t('message.jobsAhead')}`;
+            this.jobs = `${this.jobCount} ${this.$t('jobsAhead')}`;
           }
           if (this.jobCount < highWaterMark) {
             var stat = data.status;

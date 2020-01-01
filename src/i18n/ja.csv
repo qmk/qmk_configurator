@@ -4,8 +4,10 @@ apiVersionPrefix,
 favoriteColor,
 favoriteKeyboard,
 hostedOn,GitHub Pagesで提供されています
+jobsAhead,
 jobsWaiting,ジョブ待機中
 maintain,このプロジェクトはあなたのようなQMK協力者と貢献者によって維持されています！
+ready,
 searchKeycodes,
 serverIs,
 serverStatus,サーバ状況

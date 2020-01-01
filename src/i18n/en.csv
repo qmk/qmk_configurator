@@ -4,8 +4,10 @@ apiVersionPrefix,API
 favoriteColor,Favorite Colorway
 favoriteKeyboard,Favorite Keyboard
 hostedOn,Hosted on GitHub Pages
+jobsAhead,Ahead
 jobsWaiting,job(s) waiting
 maintain,This project is maintained by QMK collaborators and contributors like you!
+ready,Ready
 searchKeycodes,search
 serverIs,Service
 serverStatus,Server Status

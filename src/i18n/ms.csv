@@ -4,8 +4,10 @@ apiVersionPrefix,
 favoriteColor,
 favoriteKeyboard,
 hostedOn,Dihos di GitHub Pages
+jobsAhead,
 jobsWaiting,kerja sedang menunggu
 maintain,Project ini dikendalikan oleh kolabrasi QMK dan penyumbang seperti anda!
+ready,
 searchKeycodes,
 serverIs,
 serverStatus,Status Pelayan

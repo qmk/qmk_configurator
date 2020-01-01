@@ -4,8 +4,10 @@ apiVersionPrefix,
 favoriteColor,
 favoriteKeyboard,
 hostedOn,Mit GitHub Pages betrieben
+jobsAhead,
 jobsWaiting,wartende Job(s)
 maintain,Dieses Projekt wird von den QMK-Entwicklern und -Mitwirkenden bereitgestellt. Helfen Sie mit!
+ready,
 searchKeycodes,
 serverIs,
 serverStatus,Server-Status
