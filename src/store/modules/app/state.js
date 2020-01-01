@@ -66,7 +66,7 @@ const state = {
     { value: 'pl-PL', label: 'Polski' },
     { value: 'ms', label: 'Bahasa Malaysia' }
   ],
-  snowflakes: true
+  snowflakes: false
 };
 
 export default {
