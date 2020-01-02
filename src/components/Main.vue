@@ -5,7 +5,7 @@
       <statusPanel />
       <controllerBottom />
     </div>
-    <div class="hint">
+    <div class="hint hint-right">
       <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
         {{ $t('message.downloadToolbox.label') }}
       </a>
@@ -155,12 +155,12 @@ export default {
 };
 </script>
 <style>
-.hint {
+.hint-right {
   display: grid;
   justify-content: end;
 }
 #colorway-select {
-  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .beta-feedback {
   position: fixed;

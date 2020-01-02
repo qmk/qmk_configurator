@@ -7,7 +7,7 @@
     <div style="text-align: left; margin-left: 10px;">
       <p>
         <label>{{ $t('message.keycodes.label') }}:</label>
-        <span class="hint-right hint">
+        <span class="hint">
           <a
             href="https://docs.qmk.fm/#/keycodes"
             title="Keycodes reference"
@@ -208,8 +208,8 @@ export default {
 .keycode.isoenter {
   position: absolute;
   left: 520px;
-  top: 115px;
-  height: 68px;
+  top: 117px;
+  height: 69px;
 }
 .desaturated {
   opacity: 0.3;

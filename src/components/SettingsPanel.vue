@@ -15,6 +15,7 @@
         <toggle-button
           id="setting-toggle-fast-input"
           :value="continuousInput"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleContinuousInput"
@@ -32,6 +33,7 @@
         <toggle-button
           id="setting-toggle-display-size"
           :value="displaySizes"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleDisplaySizes"
@@ -40,8 +42,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.toggleTutorial.title')"
+          @mouseover="help('toggleTutorial')"
+          :title="$t('message.settingsPanel.toggleTutorial.label')"
           >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
@@ -49,6 +51,7 @@
         <toggle-button
           id="setting-toggle-tutorial"
           :value="tutorialEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -59,14 +62,15 @@
         <label
           class="settings-panel--text"
           @mouseover="help('darkmode')"
-          :title="$t('message.settingsPanel.darkmode.title')"
-          >{{ $t('message.settingsPanel.darkmode.title') }}</label
+          :title="$t('message.settingsPanel.darkmode.label')"
+          >{{ $t('message.settingsPanel.darkmode.label') }}</label
         >
       </div>
       <div>
         <toggle-button
           id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="darkMode"
@@ -75,6 +79,7 @@
       <div>
         <label
           class="settings-panel--text"
+          @mouseover="help('language')"
           :title="$t('message.settingsPanel.language.title')"
           >{{ $t('message.settingsPanel.language.title') }}</label
         >
@@ -137,6 +142,15 @@ export default {
         case 'displaySizes':
           this.helpText = this.$t('message.settingsPanel.displaySizes.help');
           break;
+        case 'toggleTutorial':
+          this.helpText = this.$t('message.settingsPanel.toggleTutorial.help');
+          break;
+        case 'darkmode':
+          this.helpText = this.$t('message.settingsPanel.darkmode.help');
+          break;
+        case 'language':
+          this.helpText = this.$t('message.settingsPanel.language.help');
+          break;
       }
 
       if (this.clearTextTimer) {
@@ -156,7 +170,7 @@ export default {
 }
 .settings-panel--toggles {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr;
   grid-row-gap: 5px;
 }
 .settings-panel--text {
