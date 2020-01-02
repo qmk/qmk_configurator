@@ -14,11 +14,6 @@
       <p>{{ $t('message.maintain') }}</p>
       <p>{{ $t('message.hostedOn') }}</p>
       <p style="font-size:10px">version: {{ revision }}</p>
-      <p>
-        Jingle Bell SVG Icon made from
-        <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed
-        by CC BY 3.0
-      </p>
     </footer>
     <div
       class="help"
