@@ -28,6 +28,10 @@ export default {
         label: 'Compile',
         title: 'キーマップのコンパイル'
       },
+      toggleTerminal: {
+        label: '展開するにはクリックします',
+        title: 'ターミナル表示の切り替え'
+      },
       downloadKeymap: {
         title: 'keymap.c のみダウンロード',
         label: 'keymap only'
@@ -104,34 +108,38 @@ export default {
         }
       },
       settingsPanel: {
-        title: 'Configurator Settings',
+        title: 'Configuratorの設定',
         fastInput: {
-          label: 'Fast Input',
+          label: '高速入力',
           title: 'ctrl + alt + f',
           help: '各位置をクリックせずキーボードでキーを入力する'
         },
         displaySizes: {
-          label: 'Show Key Sizes',
+          label: 'キーサイズの表示',
           title: 'ctrl + alt + u',
           help: 'キーキャップサイズをキーユニットで表示'
         },
         toggleTutorial: {
-          label: 'Video Tutorial',
-          title: 'ConfiguratorのMechMerlinのハウツービデオ',
-          help: 'MechMerlinのビデオガイド'
+          label: 'ビデオチュートリアル',
+          help: `MechMerlinのQMK Configuratorビデオチュートリアル`
         },
         darkmode: {
-          label: 'ダークモードの切り替え',
-          title: 'Dark mode'
+          label: 'ダークモード',
+          help: `QMK Configuratorのダークテーマを使用する`
         },
         language: {
-          title: 'Language'
+          title: '言語',
+          help: 'ユーザインタフェースの言語を変更する'
         },
         on: {
           label: 'On'
         },
         off: {
           label: 'Off'
+        },
+        snowflakes: {
+          label: '雪の切り替え',
+          title: '雪'
         }
       },
       errors: {
@@ -148,9 +156,16 @@ export default {
       maintain:
         'このプロジェクトはあなたのようなQMK協力者と貢献者によって維持されています！',
       hostedOn: 'GitHub Pagesで提供されています',
-      serverStatus: 'サーバ状況',
-      apiVersion: 'API Version',
-      jobsWaiting: 'ジョブ待機中'
+      serverIs: 'サービス',
+      apiVersionPrefix: 'API',
+      settings: '設定',
+      favoriteColor: 'お気に入りの配色',
+      favoriteKeyboard: 'お気に入りのキーボード',
+      searchKeycodes: '検索',
+      jobsWaiting: 'ジョブ待機中',
+      jobsAhead: 'ジョブ',
+      queueEmpty: '待機なし',
+      ready: '準備完了'
     }
   }
 };
