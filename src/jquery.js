@@ -440,6 +440,7 @@ function getExclusionList() {
     '8pack',
     'adkb96',
     'angel17',
+    'angel64',
     'atreus',
     'bigseries',
     'boston_meetup',
