@@ -75,3 +75,15 @@ You can specify a different backend URL by setting `VUE_APP_API_URL`:
 If you'd like to develop locally you can use a volume to tie your local filesystem to the container:
 
     docker run --mount type=volume,source=.,target=/qmk_configurator -p 8080:80 qmkfm/qmk_configurator:latest
+
+### Building The Docker Image
+
+Most of the time you don't need to do this, you can use volume mounts as described above to use the pre-built image with your local tree. 
+
+If for some reason you do need to build it yourself, you can use this command:
+
+    docker build -t qmk_configurator .
+
+This process will take a while. You may want to go make some tea or something. When it finishes you can run it with this command:
+
+    docker run -p 8080:80 qmk_configurator
