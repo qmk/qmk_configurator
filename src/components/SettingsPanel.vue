@@ -62,13 +62,8 @@
         <label
           class="settings-panel--text"
           @mouseover="help('darkmode')"
-<<<<<<< HEAD
-          :title="$t('message.settingsPanel.darkmode.label')"
-          >{{ $t('message.settingsPanel.darkmode.label') }}</label
-=======
-          :title="$t('settingsPanel.darkmode.title')"
-          >{{ $t('settingsPanel.darkmode.title') }}</label
->>>>>>> Add i18n feature
+          :title="$t('settingsPanel.darkmode.label')"
+          >{{ $t('settingsPanel.darkmode.label') }}</label
         >
       </div>
       <div>
@@ -84,14 +79,9 @@
       <div>
         <label
           class="settings-panel--text"
-<<<<<<< HEAD
           @mouseover="help('language')"
-          :title="$t('message.settingsPanel.language.title')"
-          >{{ $t('message.settingsPanel.language.title') }}</label
-=======
           :title="$t('settingsPanel.language.title')"
           >{{ $t('settingsPanel.language.title') }}</label
->>>>>>> Add i18n feature
         >
       </div>
       <div>
