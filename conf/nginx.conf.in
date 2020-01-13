@@ -1,0 +1,43 @@
+worker_processes 2;
+
+error_log /dev/fd/2 warn;
+pid /var/run/nginx.pid;
+
+events {
+    worker_connections 32;
+}
+
+http {
+    server_tokens off;
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log /dev/fd/1 main;
+
+    sendfile off; # disable to avoid caching and volume mount issues
+    keepalive_timeout 65;
+
+    server {
+        listen 80 default_server;
+        root /qmk_configurator/dist;
+        index index.html;
+        server_name _;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+        location /api/ {
+            rewrite ^/api(/.*)$ /$1 break;
+            proxy_pass %API_URL%;
+        }
+
+        location /docs/ {
+            root /qmk_compiler/qmk_firmware/docs;
+        }
+    }
+}
