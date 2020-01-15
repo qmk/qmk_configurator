@@ -143,13 +143,13 @@ export default {
           this.helpText = this.$t('settingsPanel.displaySizes.help');
           break;
         case 'toggleTutorial':
-          this.helpText = this.$t('message.settingsPanel.toggleTutorial.help');
+          this.helpText = this.$t('settingsPanel.toggleTutorial.help');
           break;
         case 'darkmode':
-          this.helpText = this.$t('message.settingsPanel.darkmode.help');
+          this.helpText = this.$t('settingsPanel.darkmode.help');
           break;
         case 'language':
-          this.helpText = this.$t('message.settingsPanel.language.help');
+          this.helpText = this.$t('settingsPanel.language.help');
           break;
       }
 
