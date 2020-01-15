@@ -97,6 +97,7 @@ print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,Print Keymap Layers
 settingsPanel:darkmode:label,Toggle Darkmode
+settingsPanel:darkmode:help,Dark Mode for UI
 settingsPanel:darkmode:title,Dark mode
 settingsPanel:displaySizes:help,Show keycap sizes in Key Units
 settingsPanel:displaySizes:label,Show Key Sizes
@@ -105,6 +106,7 @@ settingsPanel:fastInput:help,Input keys via keyboard without clicking each posit
 settingsPanel:fastInput:label,Fast Input
 settingsPanel:fastInput:title,ctrl + alt + f
 settingsPanel:language:title,Language
+settingsPanel:language:help,Switch Display Language
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:title,Configurator Settings
