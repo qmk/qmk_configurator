@@ -2,17 +2,13 @@
   <div class="visual-tester">
     <button id="leaveTest" @click="gohome()">
       <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
-      {{ $t('message.tester.back.label') }}
+      {{ $t('tester.back.label') }}
     </button>
-    <button
-      id="resetTest"
-      @click="reset()"
-      :title="$t('message.tester.reset.title')"
-    >
+    <button id="resetTest" @click="reset()" :title="$t('tester.reset.title')">
       <font-awesome-icon icon="undo" size="lg" fixed-width />
-      {{ $t('message.tester.reset.label') }}
+      {{ $t('tester.reset.label') }}
     </button>
-    <!--h2 class="keyboardTesterTitle">{{ $t('message.tester.page.label') }}</h2-->
+    <!--h2 class="keyboardTesterTitle">{{ $t('tester.page.label') }}</h2-->
     <VisualTesterKeymap></VisualTesterKeymap>
   </div>
 </template>

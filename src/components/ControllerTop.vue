@@ -4,7 +4,7 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
-          :title="$t('message.favoriteKeyboard')"
+          :title="$t('favoriteKeyboard')"
           @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
@@ -13,7 +13,7 @@
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
         <label class="drop-label" id="drop-label-keyboard"
-          >{{ $t('message.keyboard.label') }}:</label
+          >{{ $t('keyboard.label') }}:</label
         >
         <v-select
           @search:focus="opened"
@@ -27,7 +27,7 @@
       </div>
       <div class="topctrl-layouts">
         <label class="drop-label" id="drop-label-version"
-          >{{ $t('message.layout.label') }}:</label
+          >{{ $t('layout.label') }}:</label
         >
         <select id="layout" v-model="layout">
           <option
@@ -42,14 +42,14 @@
         <label
           class="drop-label"
           :class="fontAdjustClasses"
-          :title="$t('message.keymapName.label')"
-          >{{ $t('message.keymapName.label') }}:</label
+          :title="$t('keymapName.label')"
+          >{{ $t('keymapName.label') }}:</label
         >
         <input
           id="keymap-name"
           type="text"
           v-model="keymapName"
-          :placeholder="$t('message.keymapName.placeholder')"
+          :placeholder="$t('keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
           @blur="blur"
@@ -58,18 +58,18 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          :title="$t('message.loadDefault.title')"
+          :title="$t('loadDefault.title')"
           @click="loadDefault"
         >
-          {{ $t('message.loadDefault.label') }}
+          {{ $t('loadDefault.label') }}
         </button>
         <button
           id="compile"
-          :title="$t('message.compile.title')"
+          :title="$t('compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >
-          {{ $t('message.compile.label') }}
+          {{ $t('compile.label') }}
         </button>
       </div>
     </div>
@@ -152,7 +152,7 @@ export default {
     },
     fontAdjustClasses() {
       let classes = [];
-      if (this.$t('message.keymapName.label').length > 12) {
+      if (this.$t('keymapName.label').length > 12) {
         classes.push('half-size');
       }
       return classes.join(' ');
@@ -236,7 +236,7 @@ export default {
             promise.then(() => {
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
-              const msg = this.$t('message.statsTemplate', stats);
+              const msg = this.$t('statsTemplate', stats);
               store.commit('status/append', msg);
               if (!isAutoInit) {
                 store.commit('keymap/setDirty');

@@ -11,17 +11,17 @@
     </div>
     <slideout-panel></slideout-panel>
     <footer>
-      <p>{{ $t('message.maintain') }}</p>
-      <p>{{ $t('message.hostedOn') }}</p>
+      <p>{{ $t('maintain') }}</p>
+      <p>{{ $t('hostedOn') }}</p>
       <p style="font-size:10px">version: {{ revision }}</p>
     </footer>
     <div
       class="help"
       :class="helpClasses"
       @click="toggleTutorial"
-      :title="$t('message.help.label')"
+      :title="$t('help.label')"
       @mouseenter="
-        setMessage($t('message.help.label'));
+        setMessage($t('help.label'));
         hover = true;
       "
       @mouseleave="
@@ -151,8 +151,8 @@ export default {
     ]),
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
-      const len = size(this.$t('message.potato'));
-      this.potatoFact = this.$t('message.potato.' + random(1, len));
+      const len = size(this.$t('potato'));
+      this.potatoFact = this.$t('potato.' + random(1, len));
     },
     async appLoad() {
       await this.loadApplicationState();
