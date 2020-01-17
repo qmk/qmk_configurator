@@ -96,21 +96,23 @@ print:print:title,Stampa
 print:source:title,Fonte
 printKeymap:label,Stampa keymap
 printKeymap:title,Stampa livelli keymap
+settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambia Modalità scura
-settingsPanel:darkmode:title,Modalità scura
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
 settingsPanel:displaySizes:label,Mostra dimensione chiave
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ciascuna posizione.
 settingsPanel:fastInput:label,Ingresso rapido
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
 settingsPanel:language:title,Lingua
 settingsPanel:off:label,Spegnimento
 settingsPanel:on:label,Accensione
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
 settingsPanel:title,Configuratore Impostazioni
 settingsPanel:toggleTutorial:help,MechMerlin guida video
 settingsPanel:toggleTutorial:label,Video Tutorial
-settingsPanel:toggleTutorial:title,MechMerlin video how-to per il configuratore
 testKeys:label,Prova tastiera
 testKeys:title,Prova ingresso tastiera
 tester:back:label,Indietro

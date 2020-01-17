@@ -96,21 +96,23 @@ print:print:title,Impressão
 print:source:title,Fonte
 printKeymap:label,Printar Keymap
 printKeymap:title,Printar camadas de Keymap
+settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Darkmode
-settingsPanel:darkmode:title,Modo noturno
 settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
 settingsPanel:displaySizes:label,Mostrar tamanho de teclas
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
 settingsPanel:language:title,Linguagem
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
 settingsPanel:title,Configurações
 settingsPanel:toggleTutorial:help,MechMerlin video guide
 settingsPanel:toggleTutorial:label,Tutorial em Video
-settingsPanel:toggleTutorial:title,MechMerlin how-to video on Configurator
 testKeys:label,Testar teclado
 testKeys:title,Testar entrada do teclado
 tester:back:label,Back
