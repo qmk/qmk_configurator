@@ -96,21 +96,23 @@ print:print:title,Imprimir
 print:source:title,Fuente
 printKeymap:label,Imprimir keymap
 printKeymap:title,Imprimir capas de keymap
+settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambiar Modo oscuro
-settingsPanel:darkmode:title,Modo oscuro
 settingsPanel:displaySizes:help,Mostrar tamaños de keycaps en Unidades de Tecla
 settingsPanel:displaySizes:label,Mostrar tamaño de teclas
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ingresar teclas por medio del teclado sin hacer click en cada posición.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
 settingsPanel:language:title,Idioma
 settingsPanel:off:label,No
 settingsPanel:on:label,Sí
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
 settingsPanel:title,Configuración de Configurator
 settingsPanel:toggleTutorial:help,MechMerlin video guía
 settingsPanel:toggleTutorial:label,Video Tutorial
-settingsPanel:toggleTutorial:title,MechMerlin video how-to para Configurator
 testKeys:label,Probar teclado
 testKeys:title,Probar entrada del teclado
 tester:back:label,Atrás

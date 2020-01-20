@@ -1,17 +1,17 @@
 Key,Translation
 apiVersion,API Version
-apiVersionPrefix,
-favoriteColor,
-favoriteKeyboard,
+apiVersionPrefix,API
+favoriteColor,お気に入りの配色
+favoriteKeyboard,お気に入りのキーボード
 hostedOn,GitHub Pagesで提供されています
-jobsAhead,
+jobsAhead,待機なし
 jobsWaiting,ジョブ待機中
 maintain,このプロジェクトはあなたのようなQMK協力者と貢献者によって維持されています！
-ready,
-searchKeycodes,
-serverIs,
+ready,準備完了
+searchKeycodes,検索
+serverIs,サービス
 serverStatus,サーバ状況
-settings,
+settings,設定
 statsTemplate,\n {layers} レイヤと {count} キーコードをロードしました。任意の {any} キーコードを定義しました。\n
 ColorwayTip:title,Ctrl + Alt + Nで次の配色に切り替え
 compile:label,Compile
@@ -96,21 +96,23 @@ print:print:title,Print
 print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,キーマップレイヤの印刷
-settingsPanel:darkmode:label,ダークモードの切り替え
-settingsPanel:darkmode:title,Dark mode
+settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
+settingsPanel:darkmode:label,ダークモード
 settingsPanel:displaySizes:help,キーキャップサイズをキーユニットで表示
-settingsPanel:displaySizes:label,Show Key Sizes
+settingsPanel:displaySizes:label,キーサイズの表示
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
-settingsPanel:fastInput:label,Fast Input
+settingsPanel:fastInput:label,高速入力
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:language:title,Language
+settingsPanel:language:help,ユーザインタフェースの言語を変更する
+settingsPanel:language:title,言語
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
-settingsPanel:title,Configurator Settings
+settingsPanel:snowflakes:label,雪の切り替え
+settingsPanel:snowflakes:title,雪
+settingsPanel:title,Configuratorの設定
 settingsPanel:toggleTutorial:help,MechMerlinのビデオガイド
-settingsPanel:toggleTutorial:label,Video Tutorial
-settingsPanel:toggleTutorial:title,ConfiguratorのMechMerlinのハウツービデオ
+settingsPanel:toggleTutorial:label,ビデオチュートリアル
 testKeys:label,Test Keyboard
 testKeys:title,キーボード入力テスト
 tester:back:label,Back
@@ -125,5 +127,5 @@ tester:letters:keycode:label,keycode
 tester:page:label,Keyboard Tester
 tester:reset:label,Reset
 tester:reset:title,検出されたキーをリセットする
-toggleTerminal:label,
-toggleTerminal:title,
+toggleTerminal:label,展開するにはクリックします
+toggleTerminal:title,ターミナル表示の切り替え

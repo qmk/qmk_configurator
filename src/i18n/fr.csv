@@ -96,21 +96,23 @@ print:print:title,Imprimer
 print:source:title,Source
 printKeymap:label,Imprimer la disposition
 printKeymap:title,Imprime les calques de la disposition
+settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Mode Sombre
-settingsPanel:darkmode:title,Active/Désactive le mode sombre
 settingsPanel:displaySizes:help,Montre la taille des touches (une touche classique = 1 u)
 settingsPanel:displaySizes:label,Taille des touches
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position.
 settingsPanel:fastInput:label,Entrée Rapide
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
 settingsPanel:language:title,Langue
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
 settingsPanel:title,Paramètres du Configurateur
 settingsPanel:toggleTutorial:help,Guide vidéo de MechMerlin (en anglais)
 settingsPanel:toggleTutorial:label,Guide Vidéo
-settingsPanel:toggleTutorial:title,Guide vidéo de MechMerlin sur le configurateur (en anglais)
 testKeys:label,Testeur de clavier
 testKeys:title,Teste le clavier
 tester:back:label,Retour

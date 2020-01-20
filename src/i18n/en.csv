@@ -96,23 +96,23 @@ print:print:title,Print
 print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,Print Keymap Layers
-settingsPanel:darkmode:label,Toggle Darkmode
-settingsPanel:darkmode:help,Dark Mode for UI
-settingsPanel:darkmode:title,Dark mode
+settingsPanel:darkmode:help,Use QMK Configurator's dark theme
+settingsPanel:darkmode:label,Dark Mode
 settingsPanel:displaySizes:help,Show keycap sizes in Key Units
 settingsPanel:displaySizes:label,Show Key Sizes
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Input keys via keyboard without clicking each position.
 settingsPanel:fastInput:label,Fast Input
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,Change the language of the user interface
 settingsPanel:language:title,Language
-settingsPanel:language:help,Switch Display Language
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:snowflakes:label,Toggle Snowflakes
+settingsPanel:snowflakes:title,Snowflakes
 settingsPanel:title,Configurator Settings
-settingsPanel:toggleTutorial:help,MechMerlin video guide
+settingsPanel:toggleTutorial:help,MechMerlin's QMK Configurator video tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
-settingsPanel:toggleTutorial:title,MechMerlin how-to video on Configurator
 testKeys:label,Test Keyboard
 testKeys:title,Test Keyboard Input
 tester:back:label,Back

@@ -96,21 +96,23 @@ print:print:title,Cetak
 print:source:title,Sumber
 printKeymap:label,Cetak Keymap
 printKeymap:title,Cetak Lapisan Keymap
+settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Mod Gelap
-settingsPanel:darkmode:title,Mod Gelap
 settingsPanel:displaySizes:help,Tunjukkan saiz kekunci dalam Unit Kekunci
 settingsPanel:displaySizes:label,Tunjukkan saiz kekunci
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi.
 settingsPanel:fastInput:label,Input cepat
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
 settingsPanel:language:title,Bahasa
 settingsPanel:off:label,Tutup
 settingsPanel:on:label,Buka
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
 settingsPanel:title,Konfigur seting
 settingsPanel:toggleTutorial:help,Panduan video MechMerlin
 settingsPanel:toggleTutorial:label,Video Tutorial
-settingsPanel:toggleTutorial:title,Panduan video MechMerlin di Configurator
 testKeys:label,Test Keyboard
 testKeys:title,Uji Input Papan kekunci
 tester:back:label,Belakang
