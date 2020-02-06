@@ -51,11 +51,9 @@ export default {
   },
   methods: {
     flashFirmware() {
-      window.Bridge.autoFlash = false;
       window.Bridge.flashFile();
     },
     autoFlashFirmware() {
-      window.Bridge.autoFlash = true;
       window.Bridge.flashURL(
         first(this.firmwareBinaryURL),
         this.keyboard,
