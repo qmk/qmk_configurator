@@ -16,6 +16,8 @@ statsTemplate,\nLoaded {layers} layers and {count} keycodes. Defined {any} Any k
 ColorwayTip:title,Ctrl + Alt + N to cycle next colorway
 compile:label,Compile
 compile:title,Compile Keymap
+compileFlash:label,Compile & Flash
+compileFlash:title,Compile Keymap and then flash to keyboard
 downloadFirmware:label,Firmware
 downloadFirmware:title,Download firmware file for flashing
 downloadJSON:label,Keymap.JSON

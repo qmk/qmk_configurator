@@ -3,16 +3,6 @@
     <button
       class="fixed-size"
       id="fwFile"
-      @click="autoFlashFirmware"
-      :title="$t('flashFirmware.title')"
-      :disabled="disableDownloadBinary"
-    >
-      <font-awesome-icon icon="download" size="lg" fixed-width />
-      {{ $t('flashFirmware.label') }}
-    </button>
-    <button
-      class="fixed-size"
-      id="fwFile"
       @click="flashFirmware"
       :title="$t('flashFile.title')"
       :disabled="disableFlashFile"
@@ -53,13 +43,6 @@ export default {
     flashFirmware() {
       window.Bridge.flashFile();
     },
-    autoFlashFirmware() {
-      window.Bridge.flashURL(
-        first(this.firmwareBinaryURL),
-        this.keyboard,
-        this.firmwareFile
-      );
-    }
   }
 };
 </script>

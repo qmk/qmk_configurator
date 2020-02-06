@@ -64,6 +64,16 @@
           {{ $t('loadDefault.label') }}
         </button>
         <button
+          v-if="this.electron"
+          id="compile"
+          :title="$t('compileFlash.title')"
+          v-bind:disabled="compileDisabled"
+          @click="compile"
+        >
+          {{ $t('compileFlash.label') }}
+        </button>
+        <button
+          v-else
           id="compile"
           :title="$t('compile.title')"
           v-bind:disabled="compileDisabled"
@@ -494,7 +504,7 @@ export default {
   width: 30rem;
 }
 #processor-name {
-  width: 97px;
+  width: 115px;
   padding: 2px;
   border: 0.3px solid;
   border-radius: 1.5px;
@@ -502,7 +512,7 @@ export default {
 .topctrl-processors {
   grid-row: middle;
   grid-column: right;
-  justify-self: end;
+  justify-self: start;
 }
 .drop-label {
   display: inline-block;

@@ -624,6 +624,13 @@ function check_status() {
               data.result.firmware_keymap_url
             );
             store.commit('app/setFirmwareFile', data.result.firmware_filename);
+            if (store.state.app.electron){
+              window.Bridge.flashURL(
+                first(data.result.firmware_binary_url),
+                store.state.app.keyboard,
+                data.result.firmware_filename
+              );
+            }
             enableCompileButton();
             enableOtherButtons();
             break;
