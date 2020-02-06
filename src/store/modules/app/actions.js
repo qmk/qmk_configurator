@@ -112,6 +112,7 @@ const actions = {
     return axios
       .get(backend_keyboards_url + '/' + state.keyboard)
       .then(resp => {
+        commit('setProcessor', resp.data.keyboards[state.keyboard].processor)
         commit('processLayouts', resp);
         return resp;
       });

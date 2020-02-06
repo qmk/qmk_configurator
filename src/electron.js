@@ -13,6 +13,7 @@ export default {
         store.commit('status/append', `\n${txt}`);
         store.dispatch('status/scrollToEnd');
       };
+      window.Bridge.processor = () => {return store.state.app.processor}
     }
   }
 };

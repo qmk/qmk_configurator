@@ -72,6 +72,23 @@
           {{ $t('compile.label') }}
         </button>
       </div>
+      <div class="topctrl-processors" v-if="this.electron">
+        <label
+          class="drop-label"
+          :class="fontAdjustClasses"
+          :title="$t('processorInput')"
+          >{{ $t('processorInput') }}: </label
+        >
+        <input
+          id="processor-name"
+          type="text"
+          v-model="processor"
+          :placeholder="processor"
+          spellcheck="false"
+          @focus="focus"
+          @blur="blur"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -102,6 +119,8 @@ export default {
     ...mapState('app', [
       'keyboard',
       'keyboards',
+      'processor',
+      'electron',
       'layouts',
       'configuratorSettings',
       'compileDisabled'
@@ -111,6 +130,14 @@ export default {
     },
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
+    },
+    processor: {
+      get() {
+        return this.$store.state.app.processor;
+      },
+      set(value) {
+        return this.updateProcessor(value)
+      }
     },
     keyboard: {
       get() {
@@ -205,7 +232,8 @@ export default {
       'setLayout',
       'stopListening',
       'startListening',
-      'previewRequested'
+      'previewRequested',
+      'setProcessor'
     ]),
     ...mapActions('app', [
       'fetchKeyboards',
@@ -367,6 +395,9 @@ export default {
     updateFilter(filter) {
       this.$store.commit('app/setFilter', filter);
     },
+    updateProcessor(p) {
+      this.setProcessor(p);
+    },
     opened() {
       this.stopListening();
       Vue.nextTick(() => {
@@ -461,6 +492,17 @@ export default {
   border: 1px solid;
   width: 288px;
   width: 30rem;
+}
+#processor-name {
+  width: 97px;
+  padding: 2px;
+  border: 0.3px solid;
+  border-radius: 1.5px;
+}
+.topctrl-processors {
+  grid-row: middle;
+  grid-column: right;
+  justify-self: end;
 }
 .drop-label {
   display: inline-block;

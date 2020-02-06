@@ -129,3 +129,4 @@ tester:reset:label,Reset
 tester:reset:title,Reset detected keys
 toggleTerminal:label,Click to Expand
 toggleTerminal:title,Toggle the Terminal display
+processorInput,Processor

@@ -55,6 +55,7 @@ const state = {
   notes: '',
   tutorialEnabled: false,
   electron: false,
+  processor: '',
   languages: [
     { value: 'en', label: 'English' },
     { value: 'de', label: 'Deutsch' },
@@ -66,7 +67,7 @@ const state = {
     { value: 'pl-PL', label: 'Polski' },
     { value: 'ms', label: 'Bahasa Malaysia' }
   ],
-  snowflakes: false
+  snowflakes: false,
 };
 
 export default {

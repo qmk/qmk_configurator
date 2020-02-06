@@ -170,6 +170,9 @@ const mutations = {
   },
   toggleSnowflakes(state) {
     state.snowflakes = !state.snowflakes;
+  },
+  setProcessor(state, processor) {
+    state.processor = processor;
   }
 };
 
