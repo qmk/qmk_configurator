@@ -1,11 +1,11 @@
 <template>
   <!-- prettier-ignore -->
-  <div
-    class="space"
-    :class="computedClass"
-    :title="label"
-    @mouseenter="$emit('mouseenter')"
-    >{{ label }}&nbsp;<span :class="iconClass" v-if="icon"><font-awesome-icon :icon="icon" fixed-width /></span></div>
+  <div class="space" :class="computedClass" :title="label" @mouseenter="$emit('mouseenter')">
+    {{ label }}&nbsp;
+    <span :class="iconClass" v-if="icon">
+      <font-awesome-icon :icon="icon" fixed-width />
+    </span>
+  </div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
@@ -44,8 +44,5 @@ export default {
   height: 20px;
   justify-content: left;
   font-weight: bold;
-}
-.warning {
-  color: orange;
 }
 </style>

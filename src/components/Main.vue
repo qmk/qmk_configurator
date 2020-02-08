@@ -1,19 +1,23 @@
 <template>
   <div>
     <div ref="console">
-      <controllerTop /><statusPanel /><controllerBottom />
+      <controllerTop v-if="appInitialized" />
+      <statusPanel />
+      <controllerBottom />
     </div>
-    <div class="hint">
+    <div class="hint hint-right">
       <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        {{ $t('message.downloadToolbox.label') }}
+        {{ $t('downloadToolbox.label') }}
       </a>
     </div>
     <div class="split-content">
-      <div class="left-side"><layerControl /></div>
+      <div class="left-side">
+        <layerControl />
+      </div>
       <div class="right-side">
         <p>
-          <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
-            {{ $t('message.keymap.label') }}:
+          <label class="keymap--label" :title="$t('ColorwayTip.title')">
+            {{ $t('keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
@@ -32,12 +36,25 @@
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
+              >{{ name }}</option
             >
-              {{ name }}
-            </option>
           </select>
+          <a
+            id="favorite-colorway"
+            :title="$t('favoriteColor')"
+            @click="favColor"
+            :class="{
+              active: isFavoriteColor
+            }"
+          >
+            <font-awesome-icon icon="star" size="lg" fixed-width />
+          </a>
         </p>
         <visualKeymap :profile="false" />
+        <span class="keymap--count"
+          ><span class="keymap--counter">{{ keyCount }}</span
+          >Keys</span
+        >
       </div>
     </div>
   </div>
@@ -45,7 +62,13 @@
 
 <script>
 import capitalize from 'lodash/capitalize';
-import { mapMutations as _mapMutations, createNamespacedHelpers } from 'vuex';
+import {
+  mapMutations as _mapMutations,
+  createNamespacedHelpers,
+  mapState as _mapState,
+  mapGetters as _mapGetters,
+  mapActions
+} from 'vuex';
 const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
   'keymap'
 );
@@ -67,8 +90,10 @@ export default {
     LayerControl
   },
   computed: {
+    ..._mapState('app', ['appInitialized', 'configuratorSettings']),
+    ..._mapGetters('app', ['keyCount']),
     ...mapState(['continuousInput']),
-    ...mapGetters(['colorwayIndex', 'colorways']),
+    ...mapGetters(['colorwayIndex', 'colorways', 'size']),
     curIndex: {
       get() {
         return this.colorwayIndex;
@@ -93,30 +118,49 @@ export default {
     },
     redditPost() {
       return 'https://www.reddit.com/r/MechanicalKeyboards/comments/aio97b/qmk_configurator_updates_beta_need_your_input/';
+    },
+    isFavoriteColor() {
+      return (
+        this.configuratorSettings.favoriteColor &&
+        this.displayColorways[this.curIndex].toLowerCase() ===
+          this.configuratorSettings.favoriteColor.toLowerCase()
+      );
     }
   },
   methods: {
+    ...mapActions('app', ['setFavoriteColor']),
     ...mapMutations(['nextColorway']),
-    ..._mapMutations('app', ['resetListener'])
+    ..._mapMutations('app', ['resetListener']),
+    favColor() {
+      if (this.isFavoriteColor) {
+        this.setFavoriteColor('');
+      } else {
+        this.setFavoriteColor(this.displayColorways[this.curIndex]);
+      }
+    }
   },
   mounted() {
     jquery.init();
+    // Loading favorite color
+    if (this.configuratorSettings.favoriteColor) {
+      const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+      this.curIndex = this.displayColorways.findIndex(
+        color => color.toLowerCase() === favoriteColor
+      );
+    }
   },
   beforeDestroy() {
     this.resetListener();
   }
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-.Main {
-}
-.hint {
+<style>
+.hint-right {
   display: grid;
   justify-content: end;
 }
 #colorway-select {
-  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .beta-feedback {
   position: fixed;
@@ -126,13 +170,20 @@ export default {
 .beta-button {
   height: 30px;
   font-size: 15px;
-  background: #4b0082;
   border-radius: 9px;
-  color: #ffa500;
   cursor: pointer;
 }
 .keymap--label {
   float: left;
+}
+.keymap--counter {
+  display: inline-block;
+  padding: 0 5px;
+  margin-top: 2px;
+}
+.keymap--count {
+  float: right;
+  color: #999;
 }
 .keymap--keyset {
   float: right;

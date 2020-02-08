@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>
-      <label>{{ $t('message.layer.label') }}:</label>
+      <label>{{ $t('layer.label') }}:</label>
     </p>
     <div class="layers">
       <!-- prettier-ignore -->
@@ -13,6 +13,9 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
+    <button class="clear-button" :title="$t('layer.title')" @click="clearLayer">
+      <font-awesome-icon icon="trash" size="lg" fixed-width />
+    </button>
   </div>
 </template>
 <script>
@@ -54,7 +57,23 @@ export default {
         this.initLayer(id);
       }
       this.changeLayer(id);
+    },
+    clearLayer() {
+      if (confirm(this.$t('layer.confirm'))) {
+        this.initLayer(this.layer);
+        this.$store.commit('keymap/setDirty');
+      }
     }
   }
 };
 </script>
+<style>
+.clear-button {
+  line-height: 100%;
+  margin: 0;
+  border-radius: 3px;
+  border: 0px solid;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+</style>

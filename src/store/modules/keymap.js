@@ -7,7 +7,7 @@ import colorways from '@/components/colorways';
 import defaults from './config';
 
 const state = {
-  keymap: [{}],
+  keymap: [[]], // array of arrays
   layer: 0,
   dirty: false,
   selectedIndex: undefined,
@@ -25,7 +25,6 @@ const state = {
   continuousInput: false,
   ignoreMod: false
 };
-
 // Use for computed properties
 const getters = {
   colorway: state => state.colorways[state.colorwayIndex].name,
@@ -40,7 +39,7 @@ const getters = {
   getLayer: state => _layer => {
     return state.keymap[_layer];
   },
-  size: state => _layer => {
+  size: state => (_layer = 0) => {
     return size(state.keymap[_layer]);
   },
   isDirty: state => state.dirty,
@@ -256,7 +255,7 @@ const mutations = {
     state.dirty = false;
   },
   clear(state) {
-    state.keymap = Vue.set(state, 'keymap', []);
+    state.keymap = [[]];
     state.dirty = false;
   },
   changeLayer(state, newLayer) {
@@ -330,7 +329,14 @@ const mutations = {
       mutations.initKeymap(state, { layer, layout: state.keymap[0] });
     } else {
       // TODO probably need to do something differently here
-      Vue.set(state.keymap, layer, []);
+      if (state.keymap[0].length > 0) {
+        mutations.initKeymap(state, {
+          layer,
+          layout: state.keymap[0].map(() => {})
+        });
+      } else {
+        Vue.set(state.keymap, layer, [[]]);
+      }
     }
   },
   setLoadingKeymapPromise(state, resolve) {

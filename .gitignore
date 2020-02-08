@@ -13,6 +13,7 @@ node_modules
 /selenium-debug.log
 /functional_tests/reports/
 /selenium-server.log
+/cypress
 
 .DS_Store
 node_modules

@@ -82,6 +82,18 @@ export default [
     title: 'Browser Favorites (Windows)',
     width: 1500
   },
+  {
+    name: 'Brightness Up',
+    code: 'KC_BRIU',
+    title: 'Increase the brightness of screen (Laptop)',
+    width: 1500
+  },
+  {
+    name: 'Brightness Down',
+    code: 'KC_BRID',
+    title: 'Decrease the brightness of screen (Laptop)',
+    width: 1500
+  },
 
   { label: 'Multimedia Keys', width: 'label' },
 
@@ -92,14 +104,17 @@ export default [
   { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
   { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
   { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
-
-  { label: 'Multimedia Keys (macOS)', width: 'label' },
-
-  { name: 'Prev Track', code: 'KC_MRWD', title: 'Previous Track (macOS)' },
-  { name: 'Next Track', code: 'KC_MFFD', title: 'Next Track (macOS)' },
-  { name: 'Mute', code: 'KC__MUTE', title: 'Mute Audio (macOS)' },
-  { name: 'Vol -', code: 'KC__VOLDOWN', title: 'Volume Down (macOS)' },
-  { name: 'Vol +', code: 'KC__VOLUP', title: 'Volume Up (macOS)' },
+  { width: 250 },
+  {
+    name: 'Prev Track',
+    code: 'KC_MRWD',
+    title: 'Previous Track / Rewind (macOS)'
+  },
+  {
+    name: 'Next Track',
+    code: 'KC_MFFD',
+    title: 'Next Track / Fast Forward (macOS)'
+  },
   { width: 250 },
   { name: 'Eject', code: 'KC_EJCT', title: 'Eject (macOS)' },
 

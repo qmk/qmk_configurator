@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <div
     :id="myid"
-    class="key"
+    class="key tester-key"
     :class="localClasses"
     :style="mystyles"
     :title="displayName"
@@ -24,14 +24,17 @@ export default {
       return this.formatName(this.breakLines(this.meta.name));
     },
     localClasses() {
-      let classes = ['ignore-cursor'];
+      const classes = [];
       if (this.meta.active) {
-        classes = 'active';
+        classes.push('active');
+      }
+      if (this.meta.chatter) {
+        classes.push('chatter-detected');
       }
       if (this.meta.detected) {
-        classes = 'detected';
+        classes.push('detected');
       }
-      return `${this.myclasses} ${classes}`;
+      return `${this.myclasses} ${classes.join(' ')}`;
     }
   },
   methods: {
@@ -44,14 +47,3 @@ export default {
   }
 };
 </script>
-<style scoped>
-.active {
-  background: green;
-}
-.detected {
-  background: lightgreen;
-}
-.ignore-cursor {
-  cursor: auto;
-}
-</style>

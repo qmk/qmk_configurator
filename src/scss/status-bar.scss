@@ -1,0 +1,115 @@
+.backend-status {
+  z-index: 3000;
+  display: grid;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  grid-template: 1fr / 5% [qmk-branding] 2fr [server-status] 2fr [bes-discord] 1fr [controls] 1fr 5%;
+  align-items: center;
+  font-size: 16px;
+  line-height: 2.5;
+  justify-items: start;
+}
+
+.qmk-branding {
+  grid-column: qmk-branding;
+  display: grid;
+  grid-template: 1fr / [qmk-logo] auto [qmk-app-name] auto [api-version];
+}
+
+.qmk-logo {
+  grid-column: qmk-logo;
+  background-image: url('../assets/qmk_icon_36.png');
+  width: 36px;
+  height: 36px;
+  transform: scale(0.777777);
+  margin-top: 2px;
+}
+.qmk-app-name {
+  grid-column: qmk-app-name;
+  color: #fff;
+  background-repeat: no-repeat;
+  padding-left: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bes-version {
+  grid-column: api-version;
+  margin-left: 6px;
+  align-self: center;
+  justify-self: start;
+  color: #7a7b7b;
+  font-size: 13px;
+  position: relative;
+  top: 1px;
+}
+
+.bes-title {
+  justify-self: center;
+  font-size: 12px;
+}
+
+.bes-status {
+  grid-column: server-status;
+  display: grid;
+  grid-template: 1fr / auto auto auto;
+  width: auto;
+  background-color: #24402e;
+  border-radius: 4px;
+}
+
+.bes-status-left {
+  ul {
+    margin: 0.9em 0 0.7em 1.5em;
+    padding: 0;
+  }
+  li {
+    display: block;
+    width: 7px;
+    height: 7px;
+    margin-right: 0px;
+    border-radius: 100%;
+  }
+  width: 1rem;
+}
+
+.bes-status-center {
+  padding: 0 30px;
+  overflow: hidden;
+  border-right: 1px solid #000;
+  text-align: center;
+}
+
+.bes-status-right {
+  padding: 0 30px;
+  text-align: center;
+}
+
+.bes-status-up {
+  li:nth-child(-n + 5) {
+    background: rgba(220, 220, 220, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(0, 255, 192, 0.5),
+      0px 0px 10px 2px rgba(0, 255, 135, 1);
+  }
+}
+.bes-status-down {
+  li:nth-child(-n + 5) {
+    background: rgba(205, 205, 205, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(255, 0, 0, 0.4),
+      0px 0px 10px 2px rgba(255, 0, 0, 1);
+  }
+}
+.bes-discord {
+  a {
+    font-size: 14px;
+  }
+}
+.bes-controls {
+  justify-self: end;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}

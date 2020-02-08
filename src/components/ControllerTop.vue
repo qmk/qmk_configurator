@@ -2,7 +2,19 @@
   <div id="controller-top">
     <div class="topctrl">
       <div class="topctrl-keyboards">
-        <label class="drop-label">{{ $t('message.keyboard.label') }}:</label>
+        <a
+          id="favorite-keyboard"
+          :title="$t('favoriteKeyboard')"
+          @click="favKeyboard"
+          :class="{
+            active: isFavoriteKeyboard
+          }"
+        >
+          <font-awesome-icon icon="star" size="lg" fixed-width />
+        </a>
+        <label class="drop-label" id="drop-label-keyboard"
+          >{{ $t('keyboard.label') }}:</label
+        >
         <v-select
           @search:focus="opened"
           @search:blur="blur"
@@ -13,18 +25,31 @@
           ref="select"
         ></v-select>
       </div>
+      <div class="topctrl-layouts">
+        <label class="drop-label" id="drop-label-version"
+          >{{ $t('layout.label') }}:</label
+        >
+        <select id="layout" v-model="layout">
+          <option
+            v-for="(aLayout, layoutName) in layouts"
+            :key="layoutName"
+            v-bind:value="layoutName"
+            >{{ layoutName }}</option
+          >
+        </select>
+      </div>
       <div class="topctrl-keymap-name">
         <label
           class="drop-label"
           :class="fontAdjustClasses"
-          :title="$t('message.keymapName.label')"
-          >{{ $t('message.keymapName.label') }}:</label
+          :title="$t('keymapName.label')"
+          >{{ $t('keymapName.label') }}:</label
         >
         <input
           id="keymap-name"
           type="text"
           v-model="keymapName"
-          :placeholder="$t('message.keymapName.placeholder')"
+          :placeholder="$t('keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
           @blur="blur"
@@ -33,31 +58,19 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          :title="$t('message.loadDefault.title')"
+          :title="$t('loadDefault.title')"
           @click="loadDefault"
         >
-          {{ $t('message.loadDefault.label') }}
+          {{ $t('loadDefault.label') }}
         </button>
         <button
           id="compile"
-          :title="$t('message.compile.title')"
+          :title="$t('compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >
-          {{ $t('message.compile.label') }}
+          {{ $t('compile.label') }}
         </button>
-      </div>
-      <div class="topctrl-layouts">
-        <label class="drop-label">{{ $t('message.layout.label') }}:</label>
-        <select id="layout" v-model="layout">
-          <option
-            v-for="(aLayout, layoutName) in layouts"
-            :key="layoutName"
-            v-bind:value="layoutName"
-          >
-            {{ layoutName }}
-          </option>
-        </select>
       </div>
     </div>
   </div>
@@ -65,24 +78,17 @@
 
 <script>
 import Vue from 'vue';
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
 
-import axios from 'axios';
-
-import {
-  backend_keyboards_url,
-  PREVIEW_LABEL
-} from '@/store/modules/constants';
+import { PREVIEW_LABEL } from '@/store/modules/constants';
 
 import {
   statusError,
   load_converted_keymap,
-  // render_layout,
-  getExclusionList,
   compileLayout,
   disableOtherButtons
 } from '@/jquery';
@@ -93,7 +99,16 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
-    ...mapState('app', ['keyboards', 'layouts', 'compileDisabled']),
+    ...mapState('app', [
+      'keyboard',
+      'keyboards',
+      'layouts',
+      'configuratorSettings',
+      'compileDisabled'
+    ]),
+    isFavoriteKeyboard() {
+      return this.keyboard === this.configuratorSettings.favoriteKeyboard;
+    },
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
     },
@@ -137,7 +152,7 @@ export default {
     },
     fontAdjustClasses() {
       let classes = [];
-      if (this.$t('message.keymapName.label').length > 12) {
+      if (this.$t('keymapName.label').length > 12) {
         classes.push('half-size');
       }
       return classes.join(' ');
@@ -166,7 +181,7 @@ export default {
     },
     $route: function(to /*, from*/) {
       if (to.query) {
-        let filter = to.query.filter;
+        const filter = to.query.filter;
         if (!isUndefined(filter)) {
           this.updateFilter(filter);
           this.updateKeyboard(first(this.keyboards));
@@ -192,6 +207,11 @@ export default {
       'startListening',
       'previewRequested'
     ]),
+    ...mapActions('app', [
+      'fetchKeyboards',
+      'loadDefaultKeymap',
+      'setFavoriteKeyboard'
+    ]),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -204,24 +224,19 @@ export default {
           return false;
         }
       }
-      let keyboardName = this.keyboard.replace(/\//g, '_');
-      let store = this.$store;
-      // TODO move this to store
-      axios
-        .get(`keymaps/${keyboardName}_default.json`)
-        .then(({ data, status }) => {
-          if (status === 200) {
+      const store = this.$store;
+      this.loadDefaultKeymap()
+        .then(data => {
+          if (data) {
             console.log(data);
             this.updateLayout(data.layout);
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             );
             promise.then(() => {
-              this.logLoadDefaultSuccess(keyboardName);
-
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
-              const msg = this.$t('message.statsTemplate', stats);
+              const msg = this.$t('statsTemplate', stats);
               store.commit('status/append', msg);
               if (!isAutoInit) {
                 store.commit('keymap/setDirty');
@@ -230,55 +245,59 @@ export default {
           }
         })
         .catch(error => {
-          this.logLoadDefaultFail(keyboardName);
           statusError(
-            `\n* Sorry there is no default for the ${
-              this.keyboard
-            } keyboard... yet!`
+            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
           console.log('error loadDefault', error);
         });
     },
-    // TODO this should be an action
-    fetchKeyboards() {
-      console.log(backend_keyboards_url);
-      return axios.get(backend_keyboards_url).then(this.initializeKeyboards);
-    },
+    // TODO: This needs to be moved in an action
+    // selectInitialKeyboard
     /**
      * initializeKeyboards - parse the keyboard list from the API response
      * @param {object} the API Response
      * @returns {undefined}
      */
-    initializeKeyboards({ data, status }) {
+    initializeKeyboards() {
+      console.info(`initializeKeyboards: ${this.keyboard}`);
       let _keyboard = '';
-      if (status === 200) {
-        let exclude = getExclusionList();
-        this.$store.commit(
-          'app/setKeyboards',
-          data.filter(keeb => {
-            return isUndefined(exclude[keeb]);
-          })
-        );
-        if (this.$route.query) {
-          let filter = this.$route.query.filter;
-          if (!isUndefined(filter)) {
-            this.updateFilter(filter);
-          }
+      if (this.$route.query) {
+        let filter = this.$route.query.filter;
+        if (!isUndefined(filter)) {
+          this.updateFilter(filter);
         }
-        _keyboard = first(this.keyboards);
-        let { keyboardP, layoutP } = this.$route.params;
-        if (
-          isString(keyboardP) &&
-          keyboardP !== '' &&
-          keyboardP !== PREVIEW_LABEL
-        ) {
-          // if someone loads a specific keyboard log it
-          _keyboard = keyboardP;
-          this.firstRun = false;
-        }
-        this.setLayout(layoutP);
-        return this.updateKeyboard(_keyboard);
       }
+
+      // if the store is initialized with a keyboard
+      // we set it.
+      // But if there is parameters in the URL we prioritize it
+      if (this.keyboard) {
+        _keyboard = this.keyboard;
+        console.info(`Loading keyboard from store:${_keyboard}`);
+      } else {
+        _keyboard = first(this.keyboards);
+      }
+      console.log(`_keyboard:${_keyboard}`);
+
+      // WIP:
+      // if there is a url in the string we
+      // load the keyboard by fetching the url
+      // if (this.$route.query.url) {
+      // }
+
+      let { keyboardP, layoutP } = this.$route.params;
+      if (
+        isString(keyboardP) &&
+        keyboardP !== '' &&
+        keyboardP !== PREVIEW_LABEL
+      ) {
+        // if someone loads a specific keyboard load it
+        _keyboard = keyboardP;
+        this.firstRun = false;
+      }
+
+      this.setLayout(layoutP);
+      return this.updateKeyboard(_keyboard);
     },
     /**
      * updateKeyboard - triggers a keyboard update action on the store
@@ -289,18 +308,29 @@ export default {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
-      } else {
-        this.logChangeKeyboard(newKeyboard);
       }
       return this.$store
         .dispatch('app/changeKeyboard', newKeyboard)
         .then(this.postUpdateKeyboard);
     },
+    favKeyboard() {
+      if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
+        this.setFavoriteKeyboard('');
+      } else {
+        this.setFavoriteKeyboard(this.keyboard);
+      }
+    },
     postUpdateKeyboard() {
       this.$store.commit('status/clear');
-      this.$router.replace({
-        path: `/${this.keyboard}/${this.layout}`
-      });
+      this.$router
+        .replace({
+          path: `/${this.keyboard}/${this.layout}`
+        })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            throw err;
+          }
+        });
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
     },
@@ -310,16 +340,21 @@ export default {
      * @return {undefined}
      */
     updateLayout(e) {
-      let newLayout = e.target ? e.target.value : e;
+      const newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
-      this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
+      this.$router
+        .replace({ path: `/${this.keyboard}/${this.layout}` })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            throw err;
+          }
+        });
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;
       this.$store.commit('app/setKeymapName', newKeymapName);
     },
     compile() {
-      this.logCompile(this.keyboard);
       let keymapName = this.realKeymapName;
       let _keymapName = this.$store.getters['app/exportKeymapName'];
       // TODO extract this name function to the store
@@ -353,34 +388,6 @@ export default {
     },
     blur() {
       this.startListening();
-    },
-    logCompile(keyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'compilation',
-        eventLabel: keyboard
-      });
-    },
-    logLoadDefaultSuccess(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultSuccess',
-        eventLabel: keyboardName
-      });
-    },
-    logLoadDefaultFail(keyboardName) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'loadDefaultFail',
-        eventLabel: keyboardName
-      });
-    },
-    logChangeKeyboard(newKeyboard) {
-      this.$ga.event({
-        eventCategory: 'apicall',
-        eventAction: 'changeKeyboard',
-        eventLabel: newKeyboard
-      });
     }
   },
   data: () => {
@@ -390,23 +397,27 @@ export default {
     };
   },
   mounted() {
-    this.fetchKeyboards().then(() => {
+    console.info('mounted start');
+    this.initializeKeyboards().then(() => {
       this.loadDefault(true);
     });
+    console.info('mounted end');
   }
 };
 </script>
 <style>
+#drop-label-keyboard {
+  min-width: 137px;
+}
 .topctrl {
+  text-align: left;
   display: grid;
-  grid-template: [top] 1fr [bottom] 1fr / [left] 400px [middle] 360px [right] auto;
-  grid-row-gap: 5px;
+  grid-template: [top] 1fr [middle] 1fr [bottom] 1fr / [left] minmax(700px, 3fr) [right] 2fr;
+  grid-row-gap: 2px;
 }
 #controller-top {
   padding: 5px;
   border-radius: 5px 5px 0px 0px;
-  background: #eee;
-  border-color: #ccc;
   border-style: solid;
   border-width: 1px 1px 0px 1px;
   margin: 0px auto;
@@ -419,27 +430,27 @@ export default {
 .topctrl-keyboards {
   grid-row: top;
   grid-column: left;
-  justify-self: start;
   height: 2.5rem;
 }
 .topctrl-keymap-name {
-  grid-row: top;
-  grid-column: middle;
+  grid-row: bottom;
+  grid-column: left;
   justify-self: start;
 }
 #keymap-name {
   width: 220px;
+  width: calc(30rem - 16px);
   padding: 7px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   border-radius: 4px;
 }
 .topctrl-controls {
-  grid-row: top;
+  grid-row: top / span 2;
   grid-column: right;
   justify-self: end;
 }
 .topctrl-layouts {
-  grid-row: bottom;
+  grid-row: middle;
   grid-column-start: left;
   grid-column-end: right;
   justify-self: start;
@@ -447,15 +458,16 @@ export default {
 #layout {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   width: 288px;
+  width: 30rem;
 }
 .drop-label {
   display: inline-block;
   text-align: right;
   padding-right: 5px;
-  min-width: 90px;
-  max-width: 110px;
+  min-width: 160px;
+  max-width: 190px;
 }
 
 .half-size {
@@ -468,10 +480,9 @@ export default {
 }
 .v-select {
   display: inline-block;
-  width: 18rem;
+  width: 30rem;
 }
 .topctrl-keyboards .v-select {
-  background: white;
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;

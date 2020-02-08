@@ -33,8 +33,15 @@ import {
   faCloudUploadAlt,
   faKeyboard,
   faChevronLeft,
+  faChevronRight,
   faPrint,
-  faUndo
+  faUndo,
+  faTrash,
+  faHatWizard,
+  faMagic,
+  faStar,
+  faChevronUp,
+  faSearch
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -42,7 +49,16 @@ import {
   faLinux
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
-import ga from './ga';
+import isObject from 'lodash/isObject';
+import isString from 'lodash/isString';
+import electron from './electron';
+// Find out if we are are running inside electon
+if (
+  isObject(navigator) &&
+  isString(navigator.userAgent) &&
+  navigator.userAgent.includes('Electron')
+)
+  electron.init(); // initializes code specific for the electron app
 
 Vue.component('Veil', Veil);
 Vue.component('v-select', vSelect);
@@ -50,6 +66,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueSlideoutPanel);
 
 library.add(faDownload);
+library.add(faStar);
 library.add(faCloudUploadAlt);
 library.add(faUpload);
 library.add(faArrowUp);
@@ -63,12 +80,20 @@ library.add(faCog);
 library.add(faKeyboard);
 library.add(faExclamationTriangle);
 library.add(faChevronLeft);
+library.add(faChevronRight);
 library.add(faPrint);
 library.add(faUndo);
-
-ga.init(router);
+library.add(faTrash);
+library.add(faHatWizard);
+library.add(faMagic);
+library.add(faChevronUp);
+library.add(faSearch);
 
 Vue.config.productionTip = false;
+
+// Make $i18n vm accessible in the store
+store.$i18n = i18n._vm;
+
 new Vue({
   router,
   store,
@@ -78,6 +103,7 @@ new Vue({
 
 new Vue({
   i18n,
+  store,
   render: h => h(StatusBar)
 }).$mount('#status-app');
 

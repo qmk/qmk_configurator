@@ -52,14 +52,10 @@ export default {
 </script>
 <style>
 .print-keymap {
-  background: #fff;
   border-radius: 5px;
-  border: 5px solid #fff;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
-}
-
-.print-keymap {
+  border: 5px solid;
   position: relative;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 .print-keymap:after {
@@ -67,5 +63,9 @@ export default {
   display: block;
   height: 0;
   clear: both;
+}
+
+.print-keymap > .keycode-select {
+  border: none !important;
 }
 </style>

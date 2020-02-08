@@ -13,13 +13,13 @@
     @dragover.prevent="dragover"
     @dragenter="dragenter"
     @dragleave="dragleave"
-    >{{ displayName }}<div
-      class="key-contents"
-      :class="contentClasses"
-      @dragenter.prevent="dragenterContents"
-      @dragleave.prevent="dragleaveContents"
-      @click.prevent.stop="clickContents"
-      >{{ contents }}</div><div
+    ><div>{{ displayName }}<div
+    class="key-contents"
+    :class="contentClasses"
+    @dragenter.prevent="dragenterContents"
+    @dragleave.prevent="dragleaveContents"
+    @click.prevent.stop="clickContents"
+    >{{ contents }}</div></div><div
         v-if="visible"
         class="remove"
         @click.stop="remove"
@@ -94,7 +94,6 @@ export default {
 </script>
 <style>
 .key-contents.overme {
-  background: #cceecc;
   border-radius: 4px;
 }
 </style>

@@ -2,14 +2,14 @@
   <div class="tester">
     <div class="layout-selector-radios">
       <slot v-for="_layout in availableLayouts">
-        <input
-          :id="_layout"
+        <button
+          class="layout-btn-select"
+          v-on:click="layout = _layout"
           :key="_layout"
-          :value="_layout"
-          v-model="layout"
-          type="radio"
-        />
-        <label :for="_layout" :key="_layout">{{ _layout }}</label>
+          :class="{ active: _layout === layout }"
+        >
+          {{ _layout }}
+        </button>
       </slot>
     </div>
     <div class="visual-tester-keymap" :style="styles">
@@ -23,24 +23,22 @@
       </template>
     </div>
     <div class="info">
-      <h3 class="info-title">{{ $t('message.tester.keycodeStatus.label') }}</h3>
+      <h3 class="info-title">{{ $t('tester.keycodeStatus.label') }}</h3>
       <div class="letter-display">
         <div class="letter-key">
-          <label class="key-label">
-            {{ $t('message.tester.letters.key.label') }}
-          </label>
+          <label class="key-label">{{ $t('tester.letters.key.label') }}</label>
           {{ lastKey }}
         </div>
         <div class="letter-code">
-          <label class="code-label">
-            {{ $t('message.tester.letters.code.label') }}
-          </label>
+          <label class="code-label">{{
+            $t('tester.letters.code.label')
+          }}</label>
           {{ lastCode }}
         </div>
         <div class="letter-key-code" @click="togglehex">
-          <label class="keycode-label">
-            {{ $t('message.tester.letters.keycode.label') }}
-          </label>
+          <label class="keycode-label">{{
+            $t('tester.letters.keycode.label')
+          }}</label>
           {{ displayKeyCode }}
         </div>
       </div>
@@ -50,9 +48,25 @@
         spellcheck="false"
         v-html="status"
       ></div>
+      <div id="chatter-container">
+        <label>{{ $t('tester.chatter.label') }}:</label>
+        <input
+          id="chatter-threshold"
+          @focus="destroyKeyListeners"
+          @blur="createKeyListeners"
+          type="number"
+          v-model="chatterThreshold"
+          min="1"
+          max="100"
+          step="1"
+        />
+        <span id="chatter-alert" v-show="chatterDetected">
+          {{ $t('tester.chatter.detectedAlert') }}
+        </span>
+      </div>
     </div>
     <p>
-      {{ $t('message.tester.docs.paragraph') }}
+      {{ $t('tester.docs.paragraph') }}
       <a
         href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code"
         >Code</a
@@ -74,17 +88,21 @@ export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
-    document.addEventListener('keydown', this.keydown);
-    document.addEventListener('keyup', this.keyup);
+    this.createKeyListeners();
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
-    document.removeEventListener('keydown', this.keydown);
-    document.removeEventListener('keyup', this.keyup);
+    this.destroyKeyListeners();
   },
   computed: {
-    ...mapState('tester', ['defaults', 'layouts', 'config', 'keymap']),
+    ...mapState('tester', [
+      'defaults',
+      'layouts',
+      'config',
+      'keymap',
+      'chatterDetected'
+    ]),
     ...mapGetters('keymap', ['colorway']),
     ...mapGetters('tester', [
       'availableLayouts',
@@ -94,7 +112,7 @@ export default {
       'codeToPosition'
     ]),
     styles() {
-      let styles = [];
+      const styles = [];
       styles.push(`width: ${this.width}px;`);
       styles.push(`height: ${this.height}px;`);
       styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
@@ -118,8 +136,8 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      let curLayer = this.activeLayoutMeta.map((pos, index) => {
-        let _pos = Object.assign({ w: 1, h: 1 }, pos);
+      const curLayer = this.activeLayoutMeta.map((pos, index) => {
+        const _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
@@ -144,7 +162,11 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('tester', ['setActive', 'setDetected']),
+    ...mapMutations('tester', [
+      'setActive',
+      'setDetected',
+      'setChatterDetected'
+    ]),
     ...mapActions('tester', ['init']),
     getComponent() {
       return TesterKey;
@@ -161,9 +183,22 @@ export default {
         evStr
       ].join(' ');
     },
+    getElapsedTime(ev, endTs) {
+      return (endTs - this.timingKeyDown[ev.code]).toFixed(3);
+    },
+    createKeyListeners() {
+      document.addEventListener('keydown', this.keydown);
+      document.addEventListener('keyup', this.keyup);
+    },
+    destroyKeyListeners() {
+      document.removeEventListener('keydown', this.keydown);
+      document.removeEventListener('keyup', this.keyup);
+    },
     keyup(ev) {
       const endTS = performance.now();
-      const evStr = this.formatKeyEvent(ev, endTS);
+      this.timingKeyUp[ev.code] = endTS;
+      const elapsedTime = this.getElapsedTime(ev, endTS);
+      const evStr = this.formatKeyEvent(ev, elapsedTime);
       ev.preventDefault();
       ev.stopPropagation();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
@@ -178,9 +213,9 @@ export default {
       if (ev.repeat) {
         return;
       }
-      this.timing[ev.code] = performance.now();
       ev.preventDefault();
       ev.stopPropagation();
+      this.timingKeyDown[ev.code] = performance.now();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
         this.formatLog('KEY-DOWN', pos, this.formatKeyEvent(ev))
@@ -190,6 +225,19 @@ export default {
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
         this.setActive({ pos });
+
+        // Chatter detection is triggered when a switch
+        // triggers an event too quickly after the last
+        // keyUp of the switch. Which means the switch
+        // may be broken. QMK command LT() will not trigger
+        // it because it only sends one signal
+        if (
+          this.timingKeyUp[ev.code] &&
+          this.timingKeyDown[ev.code] - this.timingKeyUp[ev.code] <
+            this.chatterThreshold
+        ) {
+          this.setChatterDetected({ pos });
+        }
       }
     },
     scrollToEnd() {
@@ -208,10 +256,10 @@ export default {
       }
       this.scrollToEnd();
     },
-    formatKeyEvent(ev, endTS) {
-      let msg = [];
-      if (endTS) {
-        msg.push(`in ${(endTS - this.timing[ev.code]).toFixed(3)}ms`);
+    formatKeyEvent(ev, time) {
+      const msg = [];
+      if (time) {
+        msg.push(`in ${time}ms`);
       }
       msg.unshift(
         [
@@ -244,10 +292,12 @@ export default {
   },
   data() {
     return {
+      chatterThreshold: 8,
       width: 0,
       height: 0,
       status: '',
-      timing: {},
+      timingKeyUp: {},
+      timingKeyDown: {},
       lastKey: '',
       lastCode: '',
       lastKeyCode: '',
@@ -258,19 +308,33 @@ export default {
 };
 </script>
 <style>
+#chatter-alert {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: red;
+}
+#chatter-container {
+  text-align: left;
+}
+#chatter-threshold {
+  margin: 0 5px;
+  width: 50px;
+}
+#chatter-threshold::-webkit-inner-spin-button,
+#chatter-threshold::-webkit-outer-spin-button {
+  -webkit-appearance: inner-spin-button !important;
+  opacity: 1;
+}
 .layout-selector-container select {
   padding: 5px 4px;
   border-radius: 4px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid;
   margin-left: 10px;
-}
-span.log-green {
-  color: lightgreen;
 }
 .tester {
   margin-top: 35px;
   display: grid;
-  grid-template: 30px 1fr 1fr / 1fr;
+  grid-template: 45px 1fr 1fr / 1fr;
   justify-items: center;
 }
 .visual-tester-keymap {
@@ -285,7 +349,6 @@ span.log-green {
   grid-row: info-title;
 }
 .letter-display {
-  color: rgba(0, 0, 0, 0.7);
   grid-row: info-top;
   display: grid;
   grid-template: [letter] 3rem / [letter-left] 1fr [letter-mid] 1fr [letter-right] 1fr;
@@ -297,7 +360,7 @@ span.log-green {
 }
 .letter-key {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
   grid-column: letter-mid;
   grid-row: letter;
 }
@@ -305,13 +368,13 @@ span.log-green {
   position: relative;
   grid-column: letter-left;
   grid-row: letter;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
 }
 .letter-key-code {
   position: relative;
   grid-column: letter-right;
   grid-row: letter;
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid;
   cursor: pointer;
 }
 .status-log {
@@ -319,9 +382,7 @@ span.log-green {
   padding: 2px 5px;
   width: 869px;
   text-align: left;
-  background: #272822;
-  color: #f8f8f2;
-  border: 1px solid #000;
+  border: 1px solid;
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
@@ -342,6 +403,14 @@ span.log-green {
   font-size: 8px;
   right: 2px;
   bottom: 1px;
-  color: rgba(0, 0, 0, 0.5);
+}
+.layout-btn-select {
+  line-height: 120%;
+  margin: 0px 4px 0px 0px;
+  border-radius: 3px;
+  border: 0px solid;
+  padding: 6px 12px;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 </style>

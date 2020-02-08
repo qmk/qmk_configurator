@@ -1,6 +1,6 @@
 {
     "keyboard": "signum/3_0/elitec",
-    "keymap": "default",
+    "keymap": "default_0e033fcda60df82d84f2c727f248d287df985745",
     "layers": [
         [
             "KC_TAB",
@@ -39,7 +39,7 @@
             "KC_DOT",
             "KC_SLSH",
             "KC_RSPC",
-            "KC_LCTL",
+            "LCTL_T(KC_LBRC)",
             "KC_LALT",
             "KC_LGUI",
             "TT(2)",
@@ -49,8 +49,8 @@
             "KC_SPC",
             "LT(2,KC_BSPC)",
             "KC_RGUI",
-            "KC_RALT",
-            "KC_RCTL"
+            "LALT_T(KC_RALT)",
+            "RCTL_T(KC_RBRC)"
         ],
         [
             "KC_TAB",
@@ -89,7 +89,7 @@
             "KC_DOT",
             "KC_SLSH",
             "KC_RSPC",
-            "KC_LCTL",
+            "LCTL_T(KC_LBRC)",
             "KC_LALT",
             "KC_LGUI",
             "TT(2)",
@@ -99,8 +99,8 @@
             "KC_SPC",
             "LT(2,KC_BSPC)",
             "KC_RGUI",
-            "KC_RALT",
-            "KC_RCTL"
+            "LALT_T(KC_RALT)",
+            "RCTL_T(KC_RBRC)"
         ],
         [
             "KC_GRV",

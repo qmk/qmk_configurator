@@ -25,7 +25,11 @@ export default {
   name: 'visual-keymap',
   extends: BaseKeymap,
   props: {
-    profile: Boolean
+    profile: Boolean,
+    debug: {
+      type: Boolean,
+      default: false
+    }
   },
   watch: {
     layout(newLayout, oldLayout) {
@@ -122,7 +126,7 @@ export default {
     getComponent(key) {
       const { meta } = key;
       if (meta === undefined) {
-        console.log(`key ${key.id} has undefined metadata`);
+        this.debug && console.log(`key ${key.id} has undefined metadata`);
         return BaseKey;
       }
       switch (meta.type) {
@@ -149,7 +153,7 @@ export default {
       this.changeLayer(0);
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::initkeymap');
-      if (this.$store.state.keymap.keymap.length === 0) {
+      if (this.getLayer(0).length === 0) {
         this.initKeymap({
           layer: 0,
           layout: this.layouts[newLayout]

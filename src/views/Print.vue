@@ -26,7 +26,7 @@
             <input
               type="text"
               v-model="_author"
-              :placeholder="$t('message.author.placeholder')"
+              :placeholder="i18n('author.placeholder')"
             />
           </td>
         </tr>
@@ -85,9 +85,7 @@ export default {
     },
     firmwareURL() {
       const keeb = this.keyboard.split('/');
-      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${
-        keeb[0]
-      }`;
+      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${keeb[0]}`;
     },
     _author: {
       set(value) {
@@ -112,7 +110,7 @@ export default {
   },
   methods: {
     i18n(postfix) {
-      return this.$t(`message.print.${postfix}`);
+      return this.$t(`print.${postfix}`);
     },
     gohome() {
       this.$router.push(`/${this.keyboard}/${this.layout}`);
@@ -122,10 +120,10 @@ export default {
     },
     print() {
       if (this._notes === '') {
-        this._notes = this.$t('message.notes.empty');
+        this._notes = this.$t('print.notes.empty');
       }
       if (this._author === '') {
-        this._author = this.$t('message.anonymous.label');
+        this._author = this.$t('print.anonymous.label');
       }
       Vue.nextTick(() => {
         window.print();
