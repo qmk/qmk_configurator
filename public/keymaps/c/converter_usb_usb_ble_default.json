@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/usb_usb/ble",
-  "keymap": "default_b5d7bb6",
-  "commit": "b5d7bb6154f848e4f3fd3e5d3cc8bbb16a18e093",
+  "keymap": "default_d3bd1d8",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
   "layout": "LAYOUT_all",
   "layers": [
     [

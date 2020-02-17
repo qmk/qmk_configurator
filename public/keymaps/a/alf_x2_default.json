@@ -1,7 +1,7 @@
 {
   "keyboard": "alf/x2",
-  "keymap": "default_",
-  "commit": "cd3518b802071a915ff11659a32bf0a124687ea3",
+  "keymap": "default_f14629e",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [
