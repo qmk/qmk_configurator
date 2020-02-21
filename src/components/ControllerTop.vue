@@ -99,10 +99,12 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
+    ...mapGetters('app', ['exportKeymapName']),
     ...mapState('app', [
       'keyboard',
       'keyboards',
       'layouts',
+      'layout',
       'configuratorSettings',
       'compileDisabled'
     ]),
@@ -121,9 +123,11 @@ export default {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
           ) {
-            var old = this.$store.state.app.keyboard;
-            this.$store.commit('app/setKeyboard', ''); // force a refresh
-            Vue.nextTick(this.$store.commit('app/setKeyboard', old));
+            var old = this.keyboard;
+            this.setKeyboard(''); // force a refresh
+            Vue.nextTick(() => {
+              this.setKeyboard(old);
+            });
             return false;
           }
         }
@@ -139,14 +143,13 @@ export default {
       set(value) {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
-            var old = this.$store.state.app.layout;
-            const setLayout = this.setLayout;
-            setLayout(''); // force a refresh
-            Vue.nextTick(() => setLayout(old));
+            const old = this.layout;
+            this.setLayout(''); // force a refresh
+            Vue.nextTick(() => this.setLayout(old));
             return false;
           }
         }
-        this.$store.commit('keymap/clear');
+        this.clear();
         this.updateLayout({ target: { value } });
       }
     },
@@ -200,14 +203,17 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['resizeConfig']),
+    ...mapMutations('keymap', ['resizeConfig', 'clear']),
     ...mapMutations('app', [
       'setLayout',
       'stopListening',
       'startListening',
-      'previewRequested'
+      'previewRequested',
+      'setKeyboard',
+      'setKeymapName'
     ]),
     ...mapActions('app', [
+      'changeKeyboard',
       'fetchKeyboards',
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
@@ -309,9 +315,7 @@ export default {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
       }
-      return this.$store
-        .dispatch('app/changeKeyboard', newKeyboard)
-        .then(this.postUpdateKeyboard);
+      return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
     },
     favKeyboard() {
       if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
@@ -328,6 +332,7 @@ export default {
         })
         .catch(err => {
           if (err.name !== 'NavigationDuplicated') {
+            // ignore this harmless error otherwise report
             throw err;
           }
         });
@@ -352,11 +357,11 @@ export default {
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;
-      this.$store.commit('app/setKeymapName', newKeymapName);
+      this.setKeymapName(newKeymapName);
     },
     compile() {
       let keymapName = this.realKeymapName;
-      let _keymapName = this.$store.getters['app/exportKeymapName'];
+      let _keymapName = this.exportKeymapName;
       // TODO extract this name function to the store
       keymapName =
         keymapName === ''
@@ -397,11 +402,9 @@ export default {
     };
   },
   mounted() {
-    console.info('mounted start');
     this.initializeKeyboards().then(() => {
       this.loadDefault(true);
     });
-    console.info('mounted end');
   }
 };
 </script>
