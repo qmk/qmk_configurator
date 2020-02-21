@@ -59,6 +59,9 @@ const lookup = {
   kudox: {
     target: 'kudox/rev1'
   },
+  'mechlovin/hannah910': {
+    target: 'mechlovin/hannah910/rev1'
+  },
   'noxary/268_2': {
     layouts: {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
@@ -71,6 +74,12 @@ const lookup = {
   },
   plain60: {
     target: 'maartenwut/plain60'
+  },
+  'primekb/prime_l': {
+    target: 'primekb/prime_l/v1'
+  },
+  'primekb/prime_l_v2': {
+    target: 'primekb/prime_l/v2'
   },
   'rama/koyu': {
     target: 'wilba_tech/rama_works_koyu'
