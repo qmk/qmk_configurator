@@ -1,7 +1,7 @@
 {
   "keyboard": "cospad",
-  "keymap": "default_e6f4173",
-  "commit": "e6f4173aecaedabe3b2550340321520f45227c7f",
+  "keymap": "default_ba264c6",
+  "commit": "ba264c69c28dd36ab8bd7eda1ba19ecf51eae6a9",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
