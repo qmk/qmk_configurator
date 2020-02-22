@@ -49,7 +49,7 @@ keymapName:label,Nom de la disposition
 keymapName:placeholder,Disposition Personnalisée
 layer:confirm,Etes-vous sur de vouloir effacer ce calque?
 layer:label,Calque
-layer:title,Efface le calque
+layer:clear,Efface le calque
 layout:label,version
 loadDefault:label,Disposition par défaut
 loadDefault:title,Charge la disposition des touches par défaut de QMK

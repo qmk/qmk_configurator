@@ -49,7 +49,7 @@ keymapName:label,Nombre de keymap
 keymapName:placeholder,nombre de keymap personalizado
 layer:confirm,¿Estás seguro de que quieres borrar la capa?
 layer:label,Capa
-layer:title,Borrar capa
+layer:clear,Borrar capa
 layout:label,layout
 loadDefault:label,Cargar Original
 loadDefault:title,Cargar valor por defecto para layout de Firmware QMK

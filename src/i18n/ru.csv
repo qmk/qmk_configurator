@@ -49,7 +49,7 @@ keymapName:label,Название раскладки
 keymapName:placeholder,название пользовательской раскладки
 layer:confirm,"Вы уверены, что хотите очистить слой?"
 layer:label,Слой
-layer:title,Очистить слой
+layer:clear,Очистить слой
 layout:label,раскладка
 loadDefault:label,Значения по умолчанию
 loadDefault:title,Загрузить раскладку со значениями по умолчанию из QMK Firmware
