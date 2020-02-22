@@ -8,6 +8,8 @@ import first from 'lodash/first';
 import keys from 'lodash/keys';
 import values from 'lodash/values';
 import * as keypress from 'keypress.js';
+import longFormKeycodes from './longFormKeycodes';
+
 
 import { backend_compile_url } from './store/modules/constants';
 
@@ -355,6 +357,12 @@ function parseKeycode(keycode, stats) {
 
   keycode = stripANY(keycode);
   stats.count += 1;
+
+  // Check if the keycode is long-form or alternate
+  if (longFormKeycodes[keycode]) {
+    console.log("Remapping" + keycode + ' to ' + longFormKeycodes[keycode] + "...");
+    keycode = longFormKeycodes[keycode];
+  }
 
   // Check if the keycode is a complex/combo keycode ie. contains ()
   if (keycode.includes('(')) {
