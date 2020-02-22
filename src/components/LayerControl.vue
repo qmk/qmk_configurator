@@ -3,6 +3,9 @@
     <p>
       <label>{{ $t('layer.label') }}:</label>
     </p>
+    <button class="add-button" :title="$t('layer.add')" @click="addLayer">
+      <font-awesome-icon icon="plus" size="lg" fixed-width />
+    </button>
     <div class="layers">
       <!-- prettier-ignore -->
       <div
@@ -63,12 +66,18 @@ export default {
         this.initLayer(this.layer);
         this.$store.commit('keymap/setDirty');
       }
+    },
+    addLayer() {
+      console.log( this.$store.state.keymap.length );
+      console.log( this.$store.getters['keymap/keymap'] );
+      //this.$store.state.keymap.push({})
+      //this.$store.commit('keymap/setDirty');
     }
   }
 };
 </script>
 <style>
-.clear-button {
+.clear-button, .add-button {
   line-height: 100%;
   margin: 0;
   border-radius: 3px;

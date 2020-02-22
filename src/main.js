@@ -37,6 +37,7 @@ import {
   faPrint,
   faUndo,
   faTrash,
+  faPlus,
   faHatWizard,
   faMagic,
   faStar,
@@ -84,6 +85,7 @@ library.add(faChevronRight);
 library.add(faPrint);
 library.add(faUndo);
 library.add(faTrash);
+library.add(faPlus);
 library.add(faHatWizard);
 library.add(faMagic);
 library.add(faChevronUp);
