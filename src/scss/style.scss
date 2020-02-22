@@ -411,16 +411,14 @@ button {
 }
 
 .layers {
-  column-count: 2;
-  padding-left: 10px;
-  padding-right: 9px;
+  padding: 0 10px;
   // background: #fff;
 }
 
 .layer {
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
+  width: 39px;
+  height: 17px;
+  border-radius: 4px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -430,7 +428,7 @@ button {
   align-items: center;
   line-height: 80%;
   font-size: 80%;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
   // background: #fff;
   // color: #ccc;
 }
@@ -453,6 +451,10 @@ button {
 // .layer.active.non-empty {
 //   color: #fff;
 // }
+
+.layer:not(.non-empty) {
+  display: none;
+}
 
 .split-content::after {
   content: ' ';
