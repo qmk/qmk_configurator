@@ -452,10 +452,6 @@ button {
 //   color: #fff;
 // }
 
-.layer:not(.non-empty) {
-  display: none;
-}
-
 .split-content::after {
   content: ' ';
   display: block;
