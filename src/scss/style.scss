@@ -38,6 +38,9 @@ h6 {
   margin: 0 0 20px;
 }
 
+p {
+  margin: 0 0 4px;
+}
 /*p, ul, ol, table, pre, dl {
   margin: 0 0 20px; }*/
 
@@ -427,7 +430,7 @@ button {
   align-items: center;
   line-height: 80%;
   font-size: 80%;
-  margin: 2px;
+  margin: 0px;
   // background: #fff;
   // color: #ccc;
 }
@@ -454,6 +457,7 @@ button {
 .split-content {
   display: grid;
   grid-template: 1fr / [keymap] auto [layer] auto [space] 1fr;
+  grid-column-gap: 16px;
 }
 
 .split-content::after {

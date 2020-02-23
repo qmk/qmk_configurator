@@ -26,6 +26,17 @@
           </label>
           &nbsp;
           <!-- maintain spacing for paragraph -->
+          <br />
+          <a
+            id="favorite-colorway"
+            :title="$t('favoriteColor')"
+            @click="favColor"
+            :class="{
+              active: isFavoriteColor
+            }"
+          >
+            <font-awesome-icon icon="star" size="lg" fixed-width />
+          </a>
           <select
             class="keymap--keyset"
             id="colorway-select"
@@ -39,16 +50,6 @@
               >{{ name }}</option
             >
           </select>
-          <a
-            id="favorite-colorway"
-            :title="$t('favoriteColor')"
-            @click="favColor"
-            :class="{
-              active: isFavoriteColor
-            }"
-          >
-            <font-awesome-icon icon="star" size="lg" fixed-width />
-          </a>
         </p>
         <visualKeymap :profile="false" />
         <span class="keymap--count"
