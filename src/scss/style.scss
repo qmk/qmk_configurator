@@ -411,8 +411,7 @@ button {
 }
 
 .layers {
-  padding: 0 10px;
-  // background: #fff;
+  padding: 0 8px;
 }
 
 .layer {
@@ -452,6 +451,11 @@ button {
 //   color: #fff;
 // }
 
+.split-content {
+  display: grid;
+  grid-template: 1fr / [keymap] 1fr [layer] 70px;
+}
+
 .split-content::after {
   content: ' ';
   display: block;
@@ -472,14 +476,17 @@ button {
   padding: 30px 0px;
 }
 
-.left-side {
-  float: left;
+.layer-control {
+  width: 60px;
+  grid-column: layer;
   pointer-events: all;
 }
 
-.right-side {
-  float: left;
+.keymap-control {
+  grid-row: 1;
+  grid-column: keymap;
   pointer-events: all;
+  text-align: left;
 }
 
 .rigth-side:after {
@@ -773,7 +780,6 @@ input[type='number'] {
   cursor: pointer;
 }
 #favorite-colorway {
-  float: right;
 }
 @media print {
   .backend-status,

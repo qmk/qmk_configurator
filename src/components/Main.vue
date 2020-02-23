@@ -11,10 +11,10 @@
       </a>
     </div>
     <div class="split-content">
-      <div class="left-side">
+      <div class="layer-control">
         <layerControl />
       </div>
-      <div class="right-side">
+      <div class="keymap-control">
         <p>
           <label class="keymap--label" :title="$t('ColorwayTip.title')">
             {{ $t('keymap.label') }}:
@@ -182,10 +182,9 @@ export default {
   margin-top: 2px;
 }
 .keymap--count {
-  float: right;
+  text-align: left;
   color: #999;
 }
 .keymap--keyset {
-  float: right;
 }
 </style>
