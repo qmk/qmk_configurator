@@ -8,10 +8,7 @@
     </button>
     <div class="layers">
       <!-- prettier-ignore -->
-      <div
-        v-for="layer in layers"
-        class="layer-item"
-      >
+      <div v-for="layer in layers" class="layer-item">
         <div
           class="layer"
           :class="layer.clazz"
@@ -75,8 +72,8 @@ export default {
       }
     },
     addLayer() {
-      console.log( this.$store.state.keymap.length );
-      console.log( this.$store.getters['keymap/keymap'] );
+      console.log(this.$store.state.keymap.length);
+      console.log(this.$store.getters['keymap/keymap']);
       //this.$store.state.keymap.push({})
       //this.$store.commit('keymap/setDirty');
     }
@@ -84,7 +81,8 @@ export default {
 };
 </script>
 <style>
-.clear-button, .add-button {
+.clear-button,
+.add-button {
   line-height: 100%;
   margin: 0;
   border-radius: 3px;
