@@ -84,6 +84,12 @@ html {
       color: #fff;
       border-color: #000;
     }
+    .small-cog {
+      color: #000;
+    }
+    .small-cog:hover {
+      color: #49ad4c;
+    }
     .tab {
       background: #fff;
       border-color: #ccc;
@@ -480,7 +486,12 @@ html[data-theme='dark'] {
       }
     }
   }
-
+  .small-cog {
+    color: #fff;
+  }
+  .small-cog:hover {
+    color: #ccc;
+  }
   .random-potato {
     color: #eeeeee;
   }

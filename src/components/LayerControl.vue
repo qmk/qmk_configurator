@@ -9,12 +9,19 @@
     <div class="layers">
       <!-- prettier-ignore -->
       <div
-        class="layer"
-        :class="layer.clazz"
         v-for="layer in layers"
-        :key="layer.id"
-        @click="clicked(layer.id)"
-      >{{ layer.name }}</div>
+        class="layer-item"
+      >
+        <div
+          class="layer"
+          :class="layer.clazz"
+          :key="layer.id"
+          @click="clicked(layer.id)"
+        >{{ layer.name }}</div>
+        <button class="small-cog" :title="$t('layer.edit')" @click="addLayer">
+          <font-awesome-icon icon="cog" size="" />
+        </button>
+      </div>
     </div>
     <button class="clear-button" :title="$t('layer.clear')" @click="clearLayer">
       <font-awesome-icon icon="trash" size="lg" fixed-width />
@@ -84,5 +91,9 @@ export default {
   border: 0px solid;
   padding: 6px 8px;
   cursor: pointer;
+}
+.layer-item {
+  display: grid;
+  grid-template: auto / [layer] auto [cog] auto;
 }
 </style>

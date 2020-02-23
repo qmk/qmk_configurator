@@ -453,7 +453,7 @@ button {
 
 .split-content {
   display: grid;
-  grid-template: 1fr / [keymap] 1fr [layer] 70px;
+  grid-template: 1fr / [keymap] auto [layer] auto [space] 1fr;
 }
 
 .split-content::after {
@@ -480,6 +480,14 @@ button {
   width: 60px;
   grid-column: layer;
   pointer-events: all;
+}
+
+.small-cog {
+  cursor: pointer;
+  background-color: transparent;
+  width: auto;
+  padding: 0 2px;
+  border: 0;
 }
 
 .keymap-control {
