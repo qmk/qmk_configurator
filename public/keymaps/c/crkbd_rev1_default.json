@@ -23,7 +23,7 @@
                                                   "KC_LGUI", "MO(3)",   "KC_SPC",  "KC_ENT",  "KC_TRNS", "KC_RALT"
     ],
     [
-      "RESET",   "RGBRST",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "RESET",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
                                                   "KC_LGUI", "KC_TRNS", "KC_SPC",  "KC_ENT",  "KC_TRNS", "KC_RALT"
