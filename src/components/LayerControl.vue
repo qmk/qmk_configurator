@@ -8,7 +8,11 @@
     </button>
     <div class="layers">
       <!-- prettier-ignore -->
-      <div v-for="layer in layers" class="layer-item">
+      <div
+        v-for="layer in layers"
+        v-bind:key="layer.id"
+        class="layer-item"
+      >
         <div
           class="layer"
           :class="layer.clazz"
