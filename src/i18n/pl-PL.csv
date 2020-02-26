@@ -49,7 +49,7 @@ keymapName:label,Nazwa mapy klawiszy
 keymapName:placeholder,Własna mapa klawiszy
 layer:confirm,Na pewno chcesz wyczyścić aktualną warstwę?
 layer:label,Warstwa
-layer:title,Wyczyść warstwę
+layer:clear,Wyczyść warstwę
 layout:label,Układ
 loadDefault:label,Wczytaj domyślną
 loadDefault:title,Wczytaj domyślną mapę klawiszy z QMK Firmware

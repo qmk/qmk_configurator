@@ -49,7 +49,7 @@ keymapName:label,Nome da keymap
 keymapName:placeholder,nome da keymap customizada
 layer:confirm,Limpar as camadas”
 layer:label,Camadas
-layer:title,Limpar camadas
+layer:clear,Limpar camadas
 layout:label,layout
 loadDefault:label,Carregar padrão
 loadDefault:title,Carregar keymap padrão do QMK Firmware

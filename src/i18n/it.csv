@@ -49,7 +49,7 @@ keymapName:label,Nome keymap
 keymapName:placeholder,nome keymap personalizzato
 layer:confirm,Sei sicuro di voler cancellare il livello?
 layer:label,Livello
-layer:title,Elimina livello
+layer:clear,Elimina livello
 layout:label,layout
 loadDefault:label,Carica Originale
 loadDefault:title,Carica il valore predefinito per il layout del Firmware QMK

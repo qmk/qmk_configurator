@@ -49,7 +49,7 @@ keymapName:label,Nama Keymap
 keymapName:placeholder,Sesuaikan nama keymap
 layer:confirm,Anda pasti ingin membuang lapisan?
 layer:label,Lapisan
-layer:title,Buang Lapisan
+layer:clear,Buang Lapisan
 layout:label,susunan
 loadDefault:label,Memuat keymap asal
 loadDefault:title,Memuatkan keymap asal dari QMK Firmware

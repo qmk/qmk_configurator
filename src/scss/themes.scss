@@ -79,10 +79,16 @@ html {
       background: #4b0082;
       color: #ffa500;
     }
-    .clear-button {
+    .clear-button, .add-button {
       background-color: #49ad4c;
       color: #fff;
       border-color: #000;
+    }
+    .small-cog {
+      color: #000;
+    }
+    .small-cog:hover {
+      color: #49ad4c;
     }
     .tab {
       background: #fff;
@@ -480,7 +486,12 @@ html[data-theme='dark'] {
       }
     }
   }
-
+  .small-cog {
+    color: #fff;
+  }
+  .small-cog:hover {
+    color: #49ad4c;
+  }
   .random-potato {
     color: #eeeeee;
   }

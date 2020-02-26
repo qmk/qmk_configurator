@@ -38,6 +38,9 @@ h6 {
   margin: 0 0 20px;
 }
 
+p {
+  margin: 0 0 4px;
+}
 /*p, ul, ol, table, pre, dl {
   margin: 0 0 20px; }*/
 
@@ -411,16 +414,13 @@ button {
 }
 
 .layers {
-  column-count: 2;
-  padding-left: 10px;
-  padding-right: 9px;
-  // background: #fff;
+  padding: 0 8px;
 }
 
 .layer {
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
+  width: 39px;
+  height: 17px;
+  border-radius: 4px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -430,7 +430,7 @@ button {
   align-items: center;
   line-height: 80%;
   font-size: 80%;
-  margin-bottom: 10px;
+  margin: 0px;
   // background: #fff;
   // color: #ccc;
 }
@@ -454,6 +454,12 @@ button {
 //   color: #fff;
 // }
 
+.split-content {
+  display: grid;
+  grid-template: 1fr / [keymap] auto [layer] auto [space] 1fr;
+  grid-column-gap: 16px;
+}
+
 .split-content::after {
   content: ' ';
   display: block;
@@ -474,14 +480,25 @@ button {
   padding: 30px 0px;
 }
 
-.left-side {
-  float: left;
+.layer-control {
+  width: 60px;
+  grid-column: layer;
   pointer-events: all;
 }
 
-.right-side {
-  float: left;
+.small-cog {
+  cursor: pointer;
+  background-color: transparent;
+  width: auto;
+  padding: 0 2px;
+  border: 0;
+}
+
+.keymap-control {
+  grid-row: 1;
+  grid-column: keymap;
   pointer-events: all;
+  text-align: left;
 }
 
 .rigth-side:after {
@@ -775,7 +792,6 @@ input[type='number'] {
   cursor: pointer;
 }
 #favorite-colorway {
-  float: right;
 }
 @media print {
   .backend-status,

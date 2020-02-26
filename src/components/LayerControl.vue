@@ -3,17 +3,28 @@
     <p>
       <label>{{ $t('layer.label') }}:</label>
     </p>
+    <button class="add-button" :title="$t('layer.add')" @click="addLayer">
+      <font-awesome-icon icon="plus" size="lg" fixed-width />
+    </button>
     <div class="layers">
       <!-- prettier-ignore -->
       <div
-        class="layer"
-        :class="layer.clazz"
         v-for="layer in layers"
-        :key="layer.id"
-        @click="clicked(layer.id)"
-      >{{ layer.name }}</div>
+        v-bind:key="layer.id"
+        class="layer-item"
+      >
+        <div
+          class="layer"
+          :class="layer.clazz"
+          :key="layer.id"
+          @click="clicked(layer.id)"
+        >{{ layer.name }}</div>
+        <button class="small-cog" :title="$t('layer.edit')" @click="addLayer">
+          <font-awesome-icon icon="cog" size="" />
+        </button>
+      </div>
     </div>
-    <button class="clear-button" :title="$t('layer.title')" @click="clearLayer">
+    <button class="clear-button" :title="$t('layer.clear')" @click="clearLayer">
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
   </div>
@@ -63,17 +74,28 @@ export default {
         this.initLayer(this.layer);
         this.$store.commit('keymap/setDirty');
       }
+    },
+    addLayer() {
+      console.log(this.$store.state.keymap.length);
+      console.log(this.$store.getters['keymap/keymap']);
+      //this.$store.state.keymap.push({})
+      //this.$store.commit('keymap/setDirty');
     }
   }
 };
 </script>
 <style>
-.clear-button {
+.clear-button,
+.add-button {
   line-height: 100%;
   margin: 0;
   border-radius: 3px;
   border: 0px solid;
   padding: 6px 8px;
   cursor: pointer;
+}
+.layer-item {
+  display: grid;
+  grid-template: auto / [layer] auto [cog] auto;
 }
 </style>

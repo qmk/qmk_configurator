@@ -49,7 +49,7 @@ keymapName:label,Name
 keymapName:placeholder,Eigener Name der Tastaturbelegung
 layer:confirm,Soll die Ebene wirklich gelöscht werden?
 layer:label,Ebene
-layer:title,Ebene löschen
+layer:clear,Ebene löschen
 layout:label,Layout
 loadDefault:label,Zurücksetzen
 loadDefault:title,Standard-Tastaturbelegung der QMK Firmware laden

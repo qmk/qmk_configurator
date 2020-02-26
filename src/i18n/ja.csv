@@ -49,7 +49,7 @@ keymapName:label,Keymap Name
 keymapName:placeholder,カスタムキーマップ名
 layer:confirm,レイヤをクリアしますか？
 layer:label,Layer
-layer:title,レイヤのクリア
+layer:clear,レイヤのクリア
 layout:label,layout
 loadDefault:label,Load Default
 loadDefault:title,QMK Firmwareからデフォルトキーマップをロード
