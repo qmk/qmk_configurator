@@ -134,6 +134,22 @@ export default {
         ) {
           classes.push('mod');
           classes.push(`${this.colorway}-mod`);
+        }
+        if (
+          // Enter
+          colorways.enterCode[this.meta.code]
+        ) {
+          classes.push(`${this.colorway}-enter`);
+        } else if (
+          // Escape
+          colorways.escapeCode[this.meta.code]
+        ) {
+          classes.push(`${this.colorway}-esc`);
+        } else if (
+          // Backspace
+          colorways.bkspCode[this.meta.code]
+        ) {
+          classes.push(`${this.colorway}-bksp`);
         } else {
           // everything else
           classes.push(`${this.colorway}-key`);

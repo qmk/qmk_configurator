@@ -482,6 +482,9 @@ button {
 .right-side {
   float: left;
   pointer-events: all;
+  p {
+    height: 22px;
+  }
 }
 
 .rigth-side:after {

@@ -1,3 +1,4 @@
+import gmk_8008 from './8008';
 import gmk_bento from './bento';
 import gmk_dolch from './dolch';
 import gmk_jamon from './jamon';
@@ -17,6 +18,7 @@ import gmk_wob from './wob';
 import gmk_yuri from './yuri';
 
 export default [
+  gmk_8008,
   gmk_bento,
   gmk_dolch,
   gmk_jamon,
