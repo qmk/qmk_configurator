@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-analog-dreams',
+  name: 'gmk-9009',
   override: {
     KC_ENT: 'enter',
     KC_PENT: 'enter',
