@@ -4,16 +4,10 @@ import gmk from './gmk';
 import sa from './sa';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
-import bkspCode from './bkspCode';
-import enterCode from './enterCode';
-import escapeCode from './escapeCode';
 
 export default {
   alphaCodes,
   modCodes,
-  enterCode,
-  escapeCode,
-  bkspCode,
   list: [dsa_galaxy_class, dsa_milkshake, ...sa, ...gmk],
   /*
    * List of codes we should use icons for instead of text
