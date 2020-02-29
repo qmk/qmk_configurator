@@ -2,7 +2,9 @@ import gmk_8008 from './8008';
 import gmk_9009 from './9009';
 import gmk_alter from './alter';
 import gmk_analog_dreams from './analog_dreams';
+import gmk_ascii from './ascii';
 import gmk_bento from './bento';
+import gmk_bingsu from './bingsu';
 import gmk_dolch from './dolch';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
@@ -25,7 +27,9 @@ export default [
   gmk_9009,
   gmk_alter,
   gmk_analog_dreams,
+  gmk_ascii,
   gmk_bento,
+  gmk_bingsu,
   gmk_dolch,
   gmk_jamon,
   gmk_merlin,

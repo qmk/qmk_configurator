@@ -334,6 +334,12 @@
   color: #ac4fc6;
 }
 
+.gmk-ascii-key,
+.gmk-ascii-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-2M;
+}
+
 .gmk-bento-key {
   background: #fff3ef;
   color: #3e728f;
@@ -359,17 +365,18 @@
   color: #fff3ef;
 }
 
-.gmk-bento-key {
-  background: #fff3ef;
-  color: #3e728f;
+.gmk-bingsu-key {
+  background: #946777;
+  color: $color-gmk-abs-CP;
 }
-.gmk-bento-mod {
-  background: #3e728f;
-  color: #fb7279;
+.gmk-bingsu-mod {
+  background: #533D45;
+  color: $color-gmk-abs-CP;
 }
-.gmk-bento-accent {
-  background: #fb7279;
-  color: #fff3ef;
+
+.gmk-bingsu-accent {
+  background: $color-gmk-abs-CP;
+  color: #533D45;
 }
 
 .gmk-dolch-key {
