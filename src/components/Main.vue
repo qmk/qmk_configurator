@@ -15,7 +15,7 @@
         <layerControl />
       </div>
       <div class="right-side">
-        <p>
+        <div class="keymap--area">
           <label class="keymap--label" :title="$t('ColorwayTip.title')">
             {{ $t('keymap.label') }}:
             <font-awesome-icon
@@ -49,7 +49,7 @@
           >
             <font-awesome-icon icon="star" size="lg" fixed-width />
           </a>
-        </p>
+        </div>
         <visualKeymap :profile="false" />
         <span class="keymap--count"
           ><span class="keymap--counter">{{ keyCount }}</span
@@ -187,5 +187,10 @@ export default {
 }
 .keymap--keyset {
   float: right;
+}
+.keymap--area {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 1.5em;
 }
 </style>
