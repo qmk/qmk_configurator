@@ -44,6 +44,9 @@ const lookup = {
   'dztech/dz60rgb_wkl': {
     target: 'dztech/dz60rgb_wkl/v1'
   },
+  'dztech/dz65rgb': {
+    target: 'dztech/dz65rgb/v1'
+  },
   gh60: {
     target: 'gh60/revc'
   },
