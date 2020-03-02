@@ -134,6 +134,9 @@ const lookup = {
   wasdat: {
     target: 'maartenwut/wasdat'
   },
+  'westfoxtrot/cypher': {
+    target: 'westfoxtrot/cypher/rev1'
+  },
   zeal60: {
     target: 'wilba_tech/zeal60'
   },
