@@ -50,6 +50,12 @@ const lookup = {
   gh60: {
     target: 'gh60/revc'
   },
+  idb_60: {
+    target: 'idb/idb_60',
+    layouts: {
+      LAYOUT: 'LAYOUT_all'
+    }
+  },
   'kbdfans/kbd67mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb',
     layouts: {
