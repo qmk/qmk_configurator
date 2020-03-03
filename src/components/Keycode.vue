@@ -104,7 +104,7 @@ export default {
     }
   },
   mounted() {
-    this.hidden = document.getElementsByClassName('hidden')[0];
+    this.hidden = document.getElementsByClassName('qmk-hidden-drag-n-drop')[0];
   }
 };
 </script>
