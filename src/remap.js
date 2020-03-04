@@ -68,6 +68,9 @@ const lookup = {
   kudox: {
     target: 'kudox/rev1'
   },
+  'lfkeyboards/lfk78': {
+    target: 'lfkeyboards/lfk78/revj'
+  },
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
