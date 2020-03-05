@@ -489,6 +489,7 @@ function getExclusionList() {
     'launchpad',
     'lets_split',
     'lets_split_eh',
+    'lfkeyboards/lfk78',
     'lily58',
     'maartenwut/atom47',
     'maxipad',
