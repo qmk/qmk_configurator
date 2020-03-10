@@ -1,0 +1,96 @@
+name: Build
+on: ['push','pull_request']
+
+jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Use Node.js 11.12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11.12
+      - name: Install
+        run: yarn
+  test:
+    needs: install
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 11.12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11.12
+      - uses: actions/cache@v1
+        id: cypress_cache
+        with:
+          path: ~/.cache
+          key: cypress_cache-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cypress_cache-
+      - uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Install
+        run: npx cypress install
+      - name: Lint
+        run: |
+          yarn prettier:check
+          yarn prettier:json:check
+          yarn lint
+      - name: install libconf
+        run: sudo apt-get install libgconf-2-4
+      - name: Test
+        run: |
+          yarn test:cypress:ci
+  build:
+    needs: install
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 11.12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11.12
+      - uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+      - name: Build
+        run: |
+          yarn build
+          echo VUE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+      - name: Upload Build
+        uses: actions/upload-artifact@master
+        if: github.ref == 'refs/heads/master'
+        with:
+          name: build
+          path: dist
+  deploy:
+    needs: ['build','test']
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    steps:
+      - name: Download Build
+        uses: actions/download-artifact@master
+        with:
+          name: build
+          path: dist
+      - name: GitHub Pages Deploy
+        run: |
+          echo config.qmk.fm > dist/CNAME
+          sh deploy.sh
