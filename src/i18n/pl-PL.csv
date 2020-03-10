@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Status serwera
 settings,
-statsTemplate,\nWgrano {layers} warstw i {count} kodów klawiszy. Zdefiniowano {any} kodów klawiszy Any\n
+statsTemplate,"
+Wgrano {layers} warstw i {count} kodów klawiszy. Zdefiniowano {any} kodów klawiszy Any
+"
 ColorwayTip:title,Wciśnij Ctrl + Alt + N aby wybrać następny motyw kolorystyczny
 compile:label,Kompiluj
 compile:title,Kompiluj mapę klawiszy

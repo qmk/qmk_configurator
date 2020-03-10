@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Stato Server
 settings,
-statsTemplate,\nCarico {layers} livellos e {count} codici chiave. Definito {any} Any chiave codice chiave\n
+statsTemplate,"
+Carico {layers} livellos e {count} codici chiave. Definito {any} Any chiave codice chiave
+"
 ColorwayTip:title,Ctrl + Alt + N per cambiare il colore successivo
 compile:label,Compilare
 compile:title,Compila il keymap

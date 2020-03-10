@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Status Pelayan
 settings,
-statsTemplate,\n{layers} lapisan dan {count} kod kekunci yang diload. Definasikan {any} apa-apa kod kekunci\n
+statsTemplate,"
+{layers} lapisan dan {count} kod kekunci yang diload. Definasikan {any} apa-apa kod kekunci
+"
 ColorwayTip:title,Ctrl + Alt + N untuk pilih warna seterusnya
 compile:label,Kompil
 compile:title,Kompil Keymap

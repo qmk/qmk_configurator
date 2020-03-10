@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Statut du serveur
 settings,
-statsTemplate,\n{layers} calques et {count} touches chargées. {any} emplacements vides définis\n
+statsTemplate,"
+{layers} calques et {count} touches chargées. {any} emplacements vides définis
+"
 ColorwayTip:title,Ctrl + Alt + N pour changer de coloris
 compile:label,Compiler
 compile:title,Compile la disposition des touches actuelle

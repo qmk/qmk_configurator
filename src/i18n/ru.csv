@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Статус сервера
 settings,
-statsTemplate,\nЗагружен(а/о) {layers} шт. слоев и {count} шт. кодов клавиш. Обнаружен(о) {any} код(ов) Any кодов клавиш\n
+statsTemplate,"
+Загружен(а/о) {layers} шт. слоев и {count} шт. кодов клавиш. Обнаружен(о) {any} код(ов) Any кодов клавиш
+"
 ColorwayTip:title,"Ctrl + Alt + N, чтобы перейти к следующему цветовому варианту"
 compile:label,Скомпилировать
 compile:title,Скомпилировать раскладку

@@ -16,9 +16,9 @@ function namespaceNesting(o, k, v) {
     namespaceNesting(o[namespace], splittedKey.join(':'), v);
   } else {
     if (v && namespace) {
-      o[namespace][key] = v.replace(/\\n/g, '\n');
+      o[namespace][key] = v;
     } else if (v) {
-      o[key] = v.replace(/\\n/g, '\n');
+      o[key] = v;
     }
   }
 }
