@@ -439,6 +439,7 @@ function getExclusionList() {
     '7skb',
     '8pack',
     'adkb96',
+    'ai03/equinox',
     'angel17',
     'angel64',
     'atreus',
