@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Servidor
 settings,
-statsTemplate,\nCargó {layers} capas y {count} códigos de tecla. Definió {any} Any tecla códigos de tecla\n
+statsTemplate,"
+Cargó {layers} capas y {count} códigos de tecla. Definió {any} Any tecla códigos de tecla
+"
 ColorwayTip:title,Ctrl + Alt + N para cambiar al próximo color
 compile:label,Compilar
 compile:title,Compilar el keymap

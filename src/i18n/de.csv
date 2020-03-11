@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Server-Status
 settings,
-statsTemplate,\n{layers} Ebenen und {count} keycodes geladen. Es wurden {any} freie Keycodes Definiert\n
+statsTemplate,"
+{layers} Ebenen und {count} keycodes geladen. Es wurden {any} freie Keycodes Definiert
+"
 ColorwayTip:title,Strg + Alt + N zum Wechseln des Farbschemas
 compile:label,Kompilieren
 compile:title,Tastaturbelegung kompilieren

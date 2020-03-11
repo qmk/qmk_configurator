@@ -12,7 +12,9 @@ searchKeycodes,search
 serverIs,Service
 serverStatus,Server Status
 settings,Settings
-statsTemplate,\nLoaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes\n
+statsTemplate,"
+Loaded {layers} layers and {count} keycodes. Defined {any} Any key keycodes
+"
 ColorwayTip:title,Ctrl + Alt + N to cycle next colorway
 compile:label,Compile
 compile:title,Compile Keymap
