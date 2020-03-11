@@ -93,4 +93,4 @@ jobs:
       - name: GitHub Pages Deploy
         run: |
           echo config.qmk.fm > dist/CNAME
-          sh deploy.sh
+          ./deploy.sh
