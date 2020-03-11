@@ -85,6 +85,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
+      - uses: actions/checkout@v1
       - name: Download Build
         uses: actions/download-artifact@master
         with:
