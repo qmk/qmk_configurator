@@ -12,7 +12,9 @@ searchKeycodes,検索
 serverIs,サービス
 serverStatus,サーバ状況
 settings,設定
-statsTemplate,\n {layers} レイヤと {count} キーコードをロードしました。任意の {any} キーコードを定義しました。\n
+statsTemplate,"
+{layers} レイヤと {count} キーコードをロードしました。任意の {any} キーコードを定義しました。
+"
 ColorwayTip:title,Ctrl + Alt + Nで次の配色に切り替え
 compile:label,Compile
 compile:title,キーマップのコンパイル

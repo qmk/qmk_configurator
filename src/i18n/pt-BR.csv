@@ -12,7 +12,9 @@ searchKeycodes,
 serverIs,
 serverStatus,Status do servidor
 settings,
-statsTemplate,\nCarregou {layers} camadas e {count} códigos-chave. Definido {any} Qualquer código-chave\n
+statsTemplate,"
+Carregou {layers} camadas e {count} códigos-chave. Definido {any} Qualquer código-chave
+"
 ColorwayTip:title,Ctrl + Alt + N para próximo esquema de cores
 compile:label,Compilar
 compile:title,Compilar Keymap
