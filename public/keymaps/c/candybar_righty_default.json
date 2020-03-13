@@ -1,7 +1,7 @@
 {
-  "keyboard": "candybar",
-  "keymap": "default_0072fdd",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "keyboard": "candybar/righty",
+  "keymap": "default_18bc525",
+  "commit": "18bc5254932a842276627d8f055b6fb1d3345230",
   "layout": "LAYOUT",
   "layers": [
     [
