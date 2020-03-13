@@ -598,16 +598,19 @@ function disableOtherButtons() {
  */
 function check_status() {
   const url = `${backend_compile_url}/${store.state.app.jobID}`;
+  const start = performance.now();
   axios
     .get(url)
     .then(resp => {
-      console.log(resp);
+      console.log(`response in ${performance.now() - start}ms`, resp);
       let msg;
       let { status, data } = resp;
       if (status !== 200) {
         console.log('Unexpected status', data.status);
         enableCompileButton();
       } else {
+        const pollInterval = Math.floor(2500 + Math.random() * 1000);
+        console.log(`Next Poll in ${pollInterval}ms`);
         switch (data.status) {
           case 'finished':
             store.commit('app/setSpinnerMsg', 'Done!');
@@ -635,13 +638,13 @@ function check_status() {
             store.commit('app/setSpinnerMsg', 'Waiting for Oven');
             msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
             store.commit('status/append', msg);
-            setTimeout(check_status, 500);
+            setTimeout(check_status, pollInterval);
             break;
           case 'running':
             store.commit('app/setSpinnerMsg', baking);
             msg = compile_status === 'running' ? ' .' : '\n* Running';
             store.commit('status/append', msg);
-            setTimeout(check_status, 500);
+            setTimeout(check_status, pollInterval);
             break;
           case 'unknown':
             store.commit('app/setSpinnerMsg', 'Abort! Abort!');
