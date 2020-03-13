@@ -84,12 +84,12 @@ describe('Simple browsing', function() {
         });
       }
     });
-    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('keyboard');
+    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('keyboard');
     cy.get('.bes-controls').click();
     cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
     cy.get('#setting-panel-language').select('fr');
     cy.get('.slideout-panel-bg').click();
-    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('clavier');
+    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
     cy.visit('/', {
       onBeforeLoad: win => {
         Object.defineProperty(win.navigator, 'language', {
@@ -100,6 +100,6 @@ describe('Simple browsing', function() {
         });
       }
     });
-    cy.get('#drop-label-keyboard', { timeout: 1000 }).contains('clavier');
+    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
   });
 });
