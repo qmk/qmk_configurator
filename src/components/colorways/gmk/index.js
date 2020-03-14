@@ -1,6 +1,5 @@
 import gmk_8008 from './8008';
 import gmk_9009 from './9009';
-import gmk_alter from './alter';
 import gmk_analog_dreams from './analog_dreams';
 import gmk_ascii from './ascii';
 import gmk_bento from './bento';
@@ -25,7 +24,6 @@ import gmk_yuri from './yuri';
 export default [
   gmk_8008,
   gmk_9009,
-  gmk_alter,
   gmk_analog_dreams,
   gmk_ascii,
   gmk_bento,
