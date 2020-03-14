@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-cafe',
+  name: 'gmk-camping',
   override: {
     KC_ENT: 'accent',
     KC_PENT: 'accent',

@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-cafe',
+  name: 'gmk-coral',
   override: {
     KC_ENT: 'accent',
     KC_PENT: 'accent',
