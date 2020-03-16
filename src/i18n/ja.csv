@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,API Version
+apiVersionPrefix,API
+favoriteColor,お気に入りの配色
+favoriteKeyboard,お気に入りのキーボード
+hostedOn,GitHub Pagesで提供されています
+jobsAhead,待機なし
+jobsWaiting,ジョブ待機中
+maintain,このプロジェクトはあなたのようなQMK協力者と貢献者によって維持されています！
+ready,準備完了
+searchKeycodes,検索
+serverIs,サービス
+serverStatus,サーバ状況
+settings,設定
+statsTemplate,"
+{layers} レイヤと {count} キーコードをロードしました。任意の {any} キーコードを定義しました。
+"
+ColorwayTip:title,Ctrl + Alt + Nで次の配色に切り替え
+compile:label,Compile
+compile:title,キーマップのコンパイル
+downloadFirmware:label,Firmware
+downloadFirmware:title,書き込み用ファームウェアファイルのダウンロード
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,QMK Keymap JSONファイルをエクスポート
+downloadKeymap:label,keymap only
+downloadKeymap:title,keymap.c のみダウンロード
+downloadSource:label,Full Source
+downloadSource:title,QMK全ソースコードのダウンロード
+downloadToolbox:label,QMK Toolboxを入手
+errors:invalidQMKKeymap,すみません、正しいQMKキーマップファイルではないようです。
+errors:kbfirmwareJSONUnsupported,すみません、QMK Configuratorはkbfirmware JSONファイルのインポートをサポートしていません。
+errors:unknownJSON,すみません、QMKキーマップファイルではないようです。
+errors:unsupportedBrowser,未サポートのブラウザを使用しています。次のブラウザを使用してください
+flashFile:label,Custom-Flash
+flashFile:title,ユーザが選択したファイルをMCUに書き込む
+flashFirmware:label,Auto-Flash
+flashFirmware:title,コンパイルされたファームウェアをMCUに自動的に書き込む
+help:label,ウィザード召喚
+importJSON:title,QMK Keymap JSONファイルをインポート
+importUrlJSON:title,URLからQMK Keymap JSONをインポート
+keyboard:label,keyboard
+keycodes:label,Keycodes
+keycodesRef:label,キーコードの説明はこちら
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"App, Media and Mouse"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Keyboard Settings
+keycodesTab:Quantum:label,Quantum
+keymap:label,Keymap
+keymapName:label,Keymap Name
+keymapName:placeholder,カスタムキーマップ名
+layer:confirm,レイヤをクリアしますか？
+layer:label,Layer
+layer:title,レイヤのクリア
+layout:label,layout
+loadDefault:label,Load Default
+loadDefault:title,QMK Firmwareからデフォルトキーマップをロード
+potato:1,ヘンリー・スポルディングが1837年にアイダホ州で最初にジャガイモを植えました。
+potato:10,中国は世界最大のジャガイモ生産国です。
+potato:11,ジャガイモは宇宙で最初に栽培された野菜です。
+potato:12,ジャガイモは完全にグルテンフリーです。
+potato:13,最も基本的なインカの時間の長さの1つは、ジャガイモを調理するのにかかった時間でした。
+potato:14,ジャガイモが成長中に光にさらされると、緑色に変わり有毒になります。
+potato:15,"2,500ポンドのポテトチップスを製造するには10,000ポンドのジャガイモが必要です。"
+potato:16,今日、4000種類以上のジャガイモがあります。
+potato:17,ジャガイモは小さな科であるナス科に属しています。
+potato:18,アラスカのクロンダイク・ゴールドラッシュの間(1897-1898)、ジャガイモは同じ重さの金とほとんど同じ価値がありました。
+potato:19,"サー・ウォルター・ローリーは1589年にアイルランドのコーク近くの40,000エーカーの土地にジャガイモを持ち込みました。"
+potato:2,「フライドポテト」はトーマス・ジェファーソンがホワイトハウスのディナーで出した時にアメリカに持ち込まれました。
+potato:20,ジャガイモは年中毎月どこかで収穫されるので、1年中入手できます。
+potato:21,アフリカとアジア原産のヤムイモのサイズは、小さなジャガイモのサイズから130ポンドの記録的なサイズまでいろいろあります。
+potato:22,8月19日と10月27日は国民のポテトデーです。
+potato:23,ジャガイモはウォッカ、ポッチーン、アクアビットなどのアルコール飲料の醸造にも使用されます。
+potato:24,ジャガイモは最も環境に優しい野菜の1つです。栽培が簡単で、他の多くの野菜のように成長するのに大量の肥料や化学添加剤を必要としません。
+potato:25,ジャガイモはペルー南部を起源とし、紀元前8000年から紀元前5000年の間に最初に栽培されました。
+potato:26,potatoという単語はスペイン語のpatataに由来しています。
+potato:27,ジャガイモは通常、マルハナバチなどの昆虫によって受粉されます。
+potato:28,ジャガイモは約80%の水分と20%の固形物からできています。
+potato:3,アメリカのポテト愛好家は、2017年にさまざまな形やサイズの400万トン以上のフライドポテトを消費しました。
+potato:4,ジャガイモは強力な媚薬です、とアイルランドの医師は言います。
+potato:5,平均的なアメリカ人は年間140ポンドのジャガイモを食べます。ドイツ人は年間200ポンド以上食べます。
+potato:6,ギネス世界記録によると栽培された最大のジャガイモは18ポンド4オンスでした。1975年にイギリスで栽培されました。
+potato:7,ジャガイモは、小麦、トウモロコシ、米に次ぐ世界で4番目の主食です。
+potato:8,ジャガイモは125か国以上で栽培されています。
+potato:9,毎年、世界を6周する4車線の高速道路をカバーするのに十分なジャガイモが世界中で栽培されています。
+print:anonymous:label,匿名
+print:author:placeholder,オプションであなたの名前
+print:author:title,Author
+print:back:title,Back
+print:date:title,Date
+print:keyboard:label,Keyboard
+print:layer:label,Layer
+print:layout:label,Layout
+print:notes:empty,最高のキーマップ
+print:notes:placeholder,この設定についてのメモ
+print:notes:title,Notes
+print:print:title,Print
+print:source:title,Source
+printKeymap:label,Print Keymap
+printKeymap:title,キーマップレイヤの印刷
+settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
+settingsPanel:darkmode:label,ダークモード
+settingsPanel:displaySizes:help,キーキャップサイズをキーユニットで表示
+settingsPanel:displaySizes:label,キーサイズの表示
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
+settingsPanel:fastInput:label,高速入力
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,ユーザインタフェースの言語を変更する
+settingsPanel:language:title,言語
+settingsPanel:off:label,Off
+settingsPanel:on:label,On
+settingsPanel:snowflakes:label,雪の切り替え
+settingsPanel:snowflakes:title,雪
+settingsPanel:title,Configuratorの設定
+settingsPanel:toggleTutorial:help,MechMerlinのビデオガイド
+settingsPanel:toggleTutorial:label,ビデオチュートリアル
+testKeys:label,Test Keyboard
+testKeys:title,キーボード入力テスト
+tester:back:label,Back
+tester:back:title,Configuratorに戻る
+tester:chatter:detectedAlert,チャタリングが検出されました!
+tester:chatter:label,チャタリングのしきい値 (ms)
+tester:docs:paragraph,メモ: 検出されたキーとコードはロケールによって異なる場合があります。ドキュメント参照
+tester:keycodeStatus:label,検出されたキーコード
+tester:letters:code:label,code
+tester:letters:key:label,key
+tester:letters:keycode:label,keycode
+tester:page:label,Keyboard Tester
+tester:reset:label,Reset
+tester:reset:title,検出されたキーをリセットする
+toggleTerminal:label,展開するにはクリックします
+toggleTerminal:title,ターミナル表示の切り替え

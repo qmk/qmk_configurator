@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Versão da API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Hospedado no GitHub
+jobsAhead,
+jobsWaiting,Processos em execuçãoS
+maintain,Este projeto é mantido por colaboradores do QMK como você!
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Status do servidor
+settings,
+statsTemplate,"
+Carregou {layers} camadas e {count} códigos-chave. Definido {any} Qualquer código-chave
+"
+ColorwayTip:title,Ctrl + Alt + N para próximo esquema de cores
+compile:label,Compilar
+compile:title,Compilar Keymap
+downloadFirmware:label,Firmware
+downloadFirmware:title,Baixar arquivo firmware para flashing
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,Exportar JSON do keymap QMK
+downloadKeymap:label,somente keymap
+downloadKeymap:title,Baixar somente keymap.c
+downloadSource:label,Full Source
+downloadSource:title,Download QMK Firmware code
+downloadToolbox:label,Requerir QMK Toolbox
+errors:invalidQMKKeymap,"Desculpe, este não parece ser um arquivo de mapa de chaves do QMK válido."
+errors:kbfirmwareJSONUnsupported,"Desculpe, o QMK Configurator não suporta a importação de arquivos JSON do kbfimware."
+errors:unknownJSON,"Desculpe, este não parece ser um arquivo de mapa de teclas do QMK."
+errors:unsupportedBrowser,"Você está usando um navegador não suportado. Por favor, use"
+flashFile:label,Flash-Customizado
+flashFile:title,Enviar arquivo selecionado pelo usuário para o MCU
+flashFirmware:label,Auto-Flash
+flashFirmware:title,Enviar firmware para MCU automaticamente
+help:label,Invocar mago
+importJSON:title,Importar JSON do keymap QMK
+importUrlJSON:title,Importar JSON da URL QMK Keymap JSON
+keyboard:label,teclado
+keycodes:label,Keycodes
+keycodesRef:label,Referencias de Keycodes
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"App, Midia e Mouse"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Configurações de teclado
+keycodesTab:Quantum:label,Quantum
+keymap:label,Keymap
+keymapName:label,Nome da keymap
+keymapName:placeholder,nome da keymap customizada
+layer:confirm,Limpar as camadas”
+layer:label,Camadas
+layer:title,Limpar camadas
+layout:label,layout
+loadDefault:label,Carregar padrão
+loadDefault:title,Carregar keymap padrão do QMK Firmware
+potato:1,Henry Spalding plantou batatas em Idaho pela primeira vez em 1837
+potato:10,A China é o maior produtor mundial de batata.
+potato:11,As batatas foram o primeiro vegetal cultivado no espaço.
+potato:12,Batatas são totalmente sem glúten.
+potato:13,Uma das medidas mais básica do tempo da Civilização Inca era o tempo necessário para cozinhar uma batata.
+potato:14,"Se uma batata for exposta à luz durante o crescimento, ela ficará verde e se tornaná venenosa."
+potato:15,São necessários 10000 libras de batatas para produzir 2500 libras de batatas fritas.
+potato:16,Hoje existem mais de 4000 tipos diferentes de batatas.
+potato:17,As batatas pertencem a uma família pequena chamada Nightshade ou Solanaceae.
+potato:18,"Durante a corrida do ouro de Klondike (1897-1898) no Alasca, as batatas praticamente valiam seu peso em ouro."
+potato:19,Sr Walter Raleigh introduziu batatas na Irlanda em 1589 nos 40000 acres de terra perto de Cork.
+potato:2,“Batatas fritas” foram introduzidas na América quando Thomas Jefferson as serviu em um jantar na Casa Branca.
+potato:20,"As batatas estão disponíveis durante todo o ano, pois são colhidas em algum lugar todos os meses do ano."
+potato:21,"Nativo da África e da Ásia, o tamanho do inhame varia do tamanho de uma batata pequena até o tamanho recorde de 130 libras."
+potato:22,19 de Agosto e 27 de Outubro são comemorados como Dia Nacional da Batata.
+potato:23,"As batatas também são usadas para preparar bebidas alcoólicas como vodka, potcheen ou akvavit."
+potato:24,"As batatas estão entre os vegetais mais ecológicos, pois são fáceis de cultivas e não exigem grandes quantidades de fertilizantes e aditivos químicos para prosperar, como muitos outros vegetais."
+potato:25,"A batata teve origem na região do sul do Peru, onde foi domesticada pela primeira vez entre 8000 a.C. e 5000 a.C."
+potato:26,A palavra batata vem da palavra em espanhol patata.
+potato:27,As plantas de batata são geralmente polinizadas por insetos como abelhas.
+potato:28,Uma batata tem cerca de 80% de água e 20% de sólidos.
+potato:3,Os americanos amantes de batata consumiram mais de 4 milhões de toneladas de batatas fritas em várias formas e tamanhos em 2017.
+potato:4,"Batata é um poderoso afrodisíaco, diz médico na Irlanda."
+potato:5,"O americano consome em média 140 libras de batatas por ano. No entanto, os alemães comem mais de 200 libras por ano."
+potato:6,A maior batata cultivada foi na Inglaterra em 1795 custando 18 libras e 4 onças de acordo com o Guinness Book of World Records (O livro dos recordes).
+potato:7,"A batata é o quarto alimento básico do mundo - depois do trigo, milho e arroz."
+potato:8,Batatas são cultivadas em mais de 125 países.
+potato:9,Todos os anos são cultivadas em todo o mundo o suficiente de batatas para cobrir uma rodovia de quatro faixas que circula o mundo seis vezes.
+print:anonymous:label,Anônimo
+print:author:placeholder,Seu nome (opcional)
+print:author:title,Autor
+print:back:title,Voltar
+print:date:title,Data
+print:keyboard:label,Teclado
+print:layer:label,Camada
+print:layout:label,Layout
+print:notes:empty,Meu mapa de teclado impressionante
+print:notes:placeholder,Anotações sobre esta configuração
+print:notes:title,Anotações
+print:print:title,Impressão
+print:source:title,Fonte
+printKeymap:label,Printar Keymap
+printKeymap:title,Printar camadas de Keymap
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Toggle Darkmode
+settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
+settingsPanel:displaySizes:label,Mostrar tamanho de teclas
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição.
+settingsPanel:fastInput:label,Entrada rápida
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
+settingsPanel:language:title,Linguagem
+settingsPanel:off:label,Off
+settingsPanel:on:label,On
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Configurações
+settingsPanel:toggleTutorial:help,MechMerlin video guide
+settingsPanel:toggleTutorial:label,Tutorial em Video
+testKeys:label,Testar teclado
+testKeys:title,Testar entrada do teclado
+tester:back:label,Back
+tester:back:title,Return to Configurator
+tester:chatter:detectedAlert,chatter has been detected!
+tester:chatter:label,Chatter threshold (ms)
+tester:docs:paragraph,Note: Detected Key and Code may differ depending on your locale. Docs
+tester:keycodeStatus:label,Keycodes Detected
+tester:letters:code:label,code
+tester:letters:key:label,key
+tester:letters:keycode:label,keycode
+tester:page:label,Keyboard Tester
+tester:reset:label,Reset
+tester:reset:title,Reset detected keys
+toggleTerminal:label,
+toggleTerminal:title,

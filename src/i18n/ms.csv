@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Versi API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Dihos di GitHub Pages
+jobsAhead,
+jobsWaiting,kerja sedang menunggu
+maintain,Project ini dikendalikan oleh kolabrasi QMK dan penyumbang seperti anda!
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Status Pelayan
+settings,
+statsTemplate,"
+{layers} lapisan dan {count} kod kekunci yang diload. Definasikan {any} apa-apa kod kekunci
+"
+ColorwayTip:title,Ctrl + Alt + N untuk pilih warna seterusnya
+compile:label,Kompil
+compile:title,Kompil Keymap
+downloadFirmware:label,Perisian tegar
+downloadFirmware:title,Muat turun fail perisian tegar untuk di flash
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,Eksport fail JSON QMK Keymap
+downloadKeymap:label,keymap sahaja
+downloadKeymap:title,Muat turun keymap.c
+downloadSource:label,Sumber Penuh
+downloadSource:title,Muat turun kod perisian tegar QMK
+downloadToolbox:label,Dapatkan QMK Toolbox
+errors:invalidQMKKeymap,"Maaf, itu tidak merupakan file QMK keymap yang benar."
+errors:kbfirmwareJSONUnsupported,"Maaf, QMK Configurator tidak menyokong mengimport fail jSON kbfirmware."
+errors:unknownJSON,"Maaf, itu tidak merupakan file QMK keymap."
+errors:unsupportedBrowser,Anda mengunakan pelayar yang tak disokong. Sila gunakan
+flashFile:label,Custom-Flash
+flashFile:title,Flash file pilihan penguna kepada MCU
+flashFirmware:label,Auto-Flash
+flashFirmware:title,Flash perisian tegar yang dikompil kepada MCU secara automatik
+help:label,Panggil Wizard
+importJSON:title,Import fail JSON QMK Keymap
+importUrlJSON:title,Import fail JSON QMK Keymap dari URL
+keyboard:label,papan kekunci
+keycodes:label,Kod kekunci
+keycodesRef:label,Rujukan kod kekunci
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"App, Media and Tetikus"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Seting papan kekunci
+keycodesTab:Quantum:label,Quantum
+keymap:label,Keymap
+keymapName:label,Nama Keymap
+keymapName:placeholder,Sesuaikan nama keymap
+layer:confirm,Anda pasti ingin membuang lapisan?
+layer:label,Lapisan
+layer:title,Buang Lapisan
+layout:label,susunan
+loadDefault:label,Memuat keymap asal
+loadDefault:title,Memuatkan keymap asal dari QMK Firmware
+potato:1,Tanaman kentang pertama Henry Spalding di Idaho pada 1837
+potato:10,China adalah pengeluar kentang terbesar di dunia.
+potato:11,Kentang adalah sayuran pertama yang ditanam di ruang angkasa.
+potato:12,Kentang adalah bebas dari gluten sepenuhnya.
+potato:13,Salah satu pengukuran waktu yang paling asas dalam waktu adalah masa yang diambil untuk memasak kentang.
+potato:14,"Sekiranya kentang terdedah kepada cahaya semasa tumbuh, ia akan menjadi hijau dan menjadi beracun."
+potato:15,"Ia mengambil 10,000 paun kentang untuk membuat 2,500 paun kentang goreng."
+potato:16,Hari ini terdapat lebih daripada 4000 jenis kentang yang berbeza.
+potato:17,"Kentang kepunyaan keluarga kecil, keluarga Nightshade atau Solanaceae."
+potato:18,"Semasa Klondike Alaskan Gold Rush, (1897-1898) kentang secara praktikal beratnya sama nilai dengan emas."
+potato:19,"Sir Walter Raleigh memperkenalkan kentang ke Ireland pada 1589 di tanah seluas 40,000 ekar berhampiran Cork."
+potato:2,“Ketang Goreng” telah diperkenalkan kepada Amerika ketika Thomas Jefferson menghidangkanya di makan malam White House.
+potato:20,Kentang disediakan sepanjang tahun kerana ia dituai di sesuatu temp setiap bulan dalam setahun.
+potato:21,"Kebiasaanya kepada Afrika dan Asia, ubi keledeknya bervariasi dari saiz kentang kecil sehingga saiz rekod sebanyak 130 paun."
+potato:22,19 Ogos dan 27 Oktober adalah Hari Kentang Kebangsaan.
+potato:23,"Kentang juga digunakan untuk membuat minuman beralkohol seperti vodka, potcheen, atau akvavit."
+potato:24,"Kentang adalah antara sayur-sayuran yang paling mesra alam. Mereka mudah berkembang, dan tidak memerlukan banyak baja dan bahan tambahan kimia untuk berkembang maju seperti sayur-sayuran lain."
+potato:25,Kentang berasal dari rantau selatan Peru di mana ia pertama kali ditanam antara 8000 SM dan 5000 SM.
+potato:26,"Perkataan kentang berasal dari perkataan Sepanyol, iaitu patata."
+potato:27,Tumbuhan kentang biasanya disemai oleh serangga seperti lebah.
+potato:28,Sebuah kentang adalah kira-kira 80% air dan 20% pepejal.
+potato:3,Peminat kentang Amerika makan lebih 4 juta tan ketang goreng dalam pelbagai bentuk dan saiz pada 2017.
+potato:4,"Kentang merupakan pengalak nafsu syahwat yang kuat, kata ahli fizik di Ireland."
+potato:5,Kebiasaannya penduduk Amerika makan 140 paun kentang setiap tahun. Penduduk German makan lebih daripada 200 paun setiap tahun.
+potato:6,Kentang terbesar ialah 18 paun dan 4 auns mengikut catatan Guinness Book of World Records. Ia ditanam di England pada 1795.
+potato:7,"Kentang adalah makanan asas keempat dunia – selepas gandum, jagung dan beras."
+potato:8,Kentang ditanam di lebih daripada 125 buah negara.
+potato:9,Setiap tahun kentang ditanam di seluruh dunia mampu untuk menampung lebuh raya empat lorong yang mengelilingi dunia enam kali.
+print:anonymous:label,Tanpa nama
+print:author:placeholder,Nama Anda(tidak diwajibkan)
+print:author:title,Penulis
+print:back:title,Belakang
+print:date:title,Tarikh
+print:keyboard:label,Papan kekunci
+print:layer:label,Lapisan
+print:layout:label,Susun atur
+print:notes:empty,Keymap saya yang hebat
+print:notes:placeholder,Nota tentang konfigurasi ini
+print:notes:title,Nota
+print:print:title,Cetak
+print:source:title,Sumber
+printKeymap:label,Cetak Keymap
+printKeymap:title,Cetak Lapisan Keymap
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Toggle Mod Gelap
+settingsPanel:displaySizes:help,Tunjukkan saiz kekunci dalam Unit Kekunci
+settingsPanel:displaySizes:label,Tunjukkan saiz kekunci
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi.
+settingsPanel:fastInput:label,Input cepat
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
+settingsPanel:language:title,Bahasa
+settingsPanel:off:label,Tutup
+settingsPanel:on:label,Buka
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Konfigur seting
+settingsPanel:toggleTutorial:help,Panduan video MechMerlin
+settingsPanel:toggleTutorial:label,Video Tutorial
+testKeys:label,Test Keyboard
+testKeys:title,Uji Input Papan kekunci
+tester:back:label,Belakang
+tester:back:title,Pulang ke Configurator
+tester:chatter:detectedAlert,chatter telah dikesan!
+tester:chatter:label,Had chatter (ms)
+tester:docs:paragraph,Nota: Kod dan kekunci yang dikesan mungkin berbeza bergantung pada locale anda. Dokumen
+tester:keycodeStatus:label,Kod Kekunci Dikesan
+tester:letters:code:label,kod
+tester:letters:key:label,kekunci
+tester:letters:keycode:label,kod kekunci
+tester:page:label,Penguji Papan Kekunci
+tester:reset:label,Set semula
+tester:reset:title,Set semula key yang dikesan
+toggleTerminal:label,
+toggleTerminal:title,

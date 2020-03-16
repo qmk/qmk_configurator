@@ -6,7 +6,7 @@
         QMK Configurator
       </div>
       <div class="bes-version">
-        {{ $t('message.apiVersionPrefix') }}
+        {{ $t('apiVersionPrefix') }}
         <span class="version-num">v{{ version }}</span>
       </div>
     </div>
@@ -18,10 +18,15 @@
           </ul>
         </div>
         <div class="bes-status-center">
-          {{ $t('message.serverIs') }}
+          {{ $t('serverIs') }}
         </div>
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
+    </div>
+    <div class="bes-discord">
+      <a v-if="hasError" target="_blank" :href="discordLink">
+        Error? Let us know on QMK Discord.
+      </a>
     </div>
     <div class="bes-controls" @click="clickSettings">
       <font-awesome-icon
@@ -35,9 +40,8 @@
         icon="chevron-right"
         fixed-width
       />
-      {{ $t('message.settings') }}
+      {{ $t('settings') }}
     </div>
-    <a v-if="hasError" target="_blank" :href="discordLink">QMK Discord</a>
   </div>
 </template>
 <script>
@@ -83,11 +87,10 @@ export default {
         .then(({ data }) => {
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
-          this.jobs = `${this.$t('message.currentQueue')}: ${this.jobCount}`;
           if (this.jobCount === 0) {
-            this.jobs = this.$t('message.ready');
+            this.jobs = this.$t('ready');
           } else {
-            this.jobs = `${this.jobCount} ${this.$t('message.jobsAhead')}`;
+            this.jobs = `${this.jobCount} ${this.$t('jobsAhead')}`;
           }
           if (this.jobCount < highWaterMark) {
             var stat = data.status;

@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Version de l'API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Hébergé sur GitHub Pages
+jobsAhead,
+jobsWaiting,tâche(s) en attente
+maintain,Ce projet est maintenu par les collaborateurs QMK et des contributeurs comme vous!
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Statut du serveur
+settings,
+statsTemplate,"
+{layers} calques et {count} touches chargées. {any} emplacements vides définis
+"
+ColorwayTip:title,Ctrl + Alt + N pour changer de coloris
+compile:label,Compiler
+compile:title,Compile la disposition des touches actuelle
+downloadFirmware:label,Firmware
+downloadFirmware:title,Télécharge le fichier du firmware à flash
+downloadJSON:label,Disposition.JSON
+downloadJSON:title,Exporte le fichier .JSON de la disposition des touches actuelle
+downloadKeymap:label,disposition seulement
+downloadKeymap:title,Télécharge seulement le fichier de disposition des touches keymap.c
+downloadSource:label,Code Source
+downloadSource:title,Télécharge le code source de qmk.fm
+downloadToolbox:label,Obtenir QMK Toolbox
+errors:invalidQMKKeymap,"Désolé, cela ne semble pas être un fichier de disposition QMK valide."
+errors:kbfirmwareJSONUnsupported,"Désolé, le Configurateur QMK ne supporte pas l'importation des fichiers JSON de kbfirmware."
+errors:unknownJSON,"Désolé, cela ne semble pas être un fichier de disposition QMK."
+errors:unsupportedBrowser,Vous utilisez un navigateur non-supporté. Utilisez s'il vous plait
+flashFile:label,Flash Manuel
+flashFile:title,Flash le fichier selectionné
+flashFirmware:label,Flash Automatique
+flashFirmware:title,Flash automatiquement le firmware compilé
+help:label,Invoque le Sorcier
+importJSON:title,Importe un fichier .JSON de disposition des touches
+importUrlJSON:title,Importe une disposition QMK .JSON d'une URL
+keyboard:label,clavier
+keycodes:label,Codes des touches
+keycodesRef:label,Référence
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"Apps, Médias et Souris"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Paramètres du clavier
+keycodesTab:Quantum:label,Quantum
+keymap:label,Disposition
+keymapName:label,Nom de la disposition
+keymapName:placeholder,Disposition Personnalisée
+layer:confirm,Etes-vous sur de vouloir effacer ce calque?
+layer:label,Calque
+layer:title,Efface le calque
+layout:label,version
+loadDefault:label,Disposition par défaut
+loadDefault:title,Charge la disposition des touches par défaut de QMK
+potato:1,"Henry Spalding a été le premier à cultiver les patates en Idaho,US en 1837."
+potato:10,La Chine est le plus grand producteur de pomme-de-terre au monde.
+potato:11,La patate est le premier légume à avoir été cultivé dans l'espace.
+potato:12,La patate est sans-gluten.
+potato:13,Une des unités les plus basiques de la société Inca était le temps de cuisson d'une pomme-de-terre.
+potato:14,La pomme-de-terre devient verte et toxique si elle est exposé à la lumière pendant sa croissance.
+potato:15,"Il faut 4,5 tonnes de patates pour environ 1 tonne de chips."
+potato:16,De nos jours il existe plus de 4000 espèces de pomme-de-terre différentes.
+potato:17,La pomme-de-terre appartient à la petite famille des Solanacées.
+potato:18,"Durant la ruée vers l'or en Alaska (1897-1898), la patate valait presque son poids en or."
+potato:19,Sir Walter Raleigh a introduit la pomme-de-terre en Irlande en 1589 sur un terrain de 16000 hectares près de Cork.
+potato:2,Les frites ont été introduites aux Etats-Unis par le Président Thomas Jefferson en les servant aux dinners à la Maison Blanche.
+potato:20,"La pomme-de-terre est disponible toute l'année, car elle est cultivé à différents endroits chaque mois."
+potato:21,"Native d'Afrique et d'Asie, la patate douce peut être de la taille d'une petite pomme-de-terre jusqu'à la taille record de 59kg."
+potato:22,Le 19 Aôut et 27 Octobre sont les jours nationaux de la pomme-de-terre.
+potato:23,"La pomme-de-terre est aussi utilisée pour réaliser des boissons alcoolisées comme la vodka, le potcheen ou l'akvavit."
+potato:24,"La patate est l'un des légumes les plus écologiques. Elle est facile à cultiver, et nécessite que peu de fertilisants et additifs."
+potato:25,"La pomme-de-terre vient d'une région du sud du Pérou actuel, où elle a été domestiqué entre 8000 av.J-C et 5000 av.J-C."
+potato:26,Le mot patate vient du mot espagnol patata.
+potato:27,Les fleurs de la plante de la pomme-de-terre sont généralement pollinisées par les insectes comme le bourdon.
+potato:28,La patate possède un ratio d'environ 80% d'eau pour 20% de matière sèche.
+potato:3,4 millions de tonnes de frites ont été consommé en 2017 aux Etats-Unis.
+potato:4,"La patate est un puissant aphrodisiaque, selon un physicien en Irlande."
+potato:5,Un Américain moyen consomme 63kg de pommes-de-terre par an. Un Allemand en consomme plus de 90kg par an.
+potato:6,La plus grosse patate selon le Guinness Book était de 8.3kg. Elle a poussé en Angleterre en 1795.
+potato:7,"La pomme-de-terre est la quatrième plus importante denrée alimentaire - après le blé, le riz et le maïs."
+potato:8,La pomme-de-terre est cultivé dans plus de 125 pays.
+potato:9,Chaque année la surface utilisée à la culture de la patate équivaut à une 4-voies faisant l'équivalent de 6 fois le tour de la planète.
+print:anonymous:label,Anonyme
+print:author:placeholder,Votre nom (Optionnel)
+print:author:title,Auteur
+print:back:title,Retour
+print:date:title,Date
+print:keyboard:label,Clavier
+print:layer:label,Calque
+print:layout:label,Disposition
+print:notes:empty,Ma configuration
+print:notes:placeholder,Notes sur la configuration
+print:notes:title,Notes
+print:print:title,Imprimer
+print:source:title,Source
+printKeymap:label,Imprimer la disposition
+printKeymap:title,Imprime les calques de la disposition
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Mode Sombre
+settingsPanel:displaySizes:help,Montre la taille des touches (une touche classique = 1 u)
+settingsPanel:displaySizes:label,Taille des touches
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position.
+settingsPanel:fastInput:label,Entrée Rapide
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
+settingsPanel:language:title,Langue
+settingsPanel:off:label,Off
+settingsPanel:on:label,On
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Paramètres du Configurateur
+settingsPanel:toggleTutorial:help,Guide vidéo de MechMerlin (en anglais)
+settingsPanel:toggleTutorial:label,Guide Vidéo
+testKeys:label,Testeur de clavier
+testKeys:title,Teste le clavier
+tester:back:label,Retour
+tester:back:title,Retour au configurateur
+tester:chatter:detectedAlert,Activations répétées détectées (chatter)
+tester:chatter:label,Seuil de détection d'activations répétées (chatter)(ms)
+tester:docs:paragraph,Note: La touche et le code détectés peuvent varier selon votre localisation. Docs
+tester:keycodeStatus:label,Touches Détectées
+tester:letters:code:label,code
+tester:letters:key:label,touche
+tester:letters:keycode:label,code de la touche
+tester:page:label,Testeur De Clavier
+tester:reset:label,Réinitialiser
+tester:reset:title,Réinitialise les touches détectées
+toggleTerminal:label,
+toggleTerminal:title,

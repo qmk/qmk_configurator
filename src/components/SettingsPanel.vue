@@ -1,20 +1,21 @@
 <template>
   <div class="settings-panel">
-    <h2>{{ $t('message.settingsPanel.title') }}</h2>
+    <h2>{{ $t('settingsPanel.title') }}</h2>
 
     <div class="settings-panel--toggles">
       <div>
         <label
-          :title="$t('message.settingsPanel.fastInput.title')"
+          :title="$t('settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
-          >{{ $t('message.settingsPanel.fastInput.label') }}</label
+          >{{ $t('settingsPanel.fastInput.label') }}</label
         >
       </div>
       <div>
         <toggle-button
           id="setting-toggle-fast-input"
           :value="continuousInput"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleContinuousInput"
@@ -24,14 +25,15 @@
         <label
           class="settings-panel--text"
           @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.displaySizes.title')"
-          >{{ $t('message.settingsPanel.displaySizes.label') }}</label
+          :title="$t('settingsPanel.displaySizes.title')"
+          >{{ $t('settingsPanel.displaySizes.label') }}</label
         >
       </div>
       <div>
         <toggle-button
           id="setting-toggle-display-size"
           :value="displaySizes"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleDisplaySizes"
@@ -40,15 +42,16 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('displaySizes')"
-          :title="$t('message.settingsPanel.toggleTutorial.title')"
-          >{{ $t('message.settingsPanel.toggleTutorial.label') }}</label
+          @mouseover="help('toggleTutorial')"
+          :title="$t('settingsPanel.toggleTutorial.label')"
+          >{{ $t('settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
       <div>
         <toggle-button
           id="setting-toggle-tutorial"
           :value="tutorialEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -59,14 +62,15 @@
         <label
           class="settings-panel--text"
           @mouseover="help('darkmode')"
-          :title="$t('message.settingsPanel.darkmode.title')"
-          >{{ $t('message.settingsPanel.darkmode.title') }}</label
+          :title="$t('settingsPanel.darkmode.label')"
+          >{{ $t('settingsPanel.darkmode.label') }}</label
         >
       </div>
       <div>
         <toggle-button
           id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
+          :width="75"
           :sync="true"
           :labels="labels"
           @change="darkMode"
@@ -75,8 +79,9 @@
       <div>
         <label
           class="settings-panel--text"
-          :title="$t('message.settingsPanel.language.title')"
-          >{{ $t('message.settingsPanel.language.title') }}</label
+          @mouseover="help('language')"
+          :title="$t('settingsPanel.language.title')"
+          >{{ $t('settingsPanel.language.title') }}</label
         >
       </div>
       <div>
@@ -98,8 +103,8 @@ export default {
   data() {
     return {
       labels: {
-        checked: this.$t('message.settingsPanel.on.label'),
-        unchecked: this.$t('message.settingsPanel.off.label')
+        checked: this.$t('settingsPanel.on.label'),
+        unchecked: this.$t('settingsPanel.off.label')
       },
       helpText: undefined,
       clearTextTimer: undefined
@@ -124,7 +129,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
-    ...mapMutations('app', ['toggleTutorial']),
+    ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
     ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
     darkMode() {
       this.toggleDarkMode();
@@ -132,10 +137,19 @@ export default {
     help(key) {
       switch (key) {
         case 'fastInput':
-          this.helpText = this.$t('message.settingsPanel.fastInput.help');
+          this.helpText = this.$t('settingsPanel.fastInput.help');
           break;
         case 'displaySizes':
-          this.helpText = this.$t('message.settingsPanel.displaySizes.help');
+          this.helpText = this.$t('settingsPanel.displaySizes.help');
+          break;
+        case 'toggleTutorial':
+          this.helpText = this.$t('settingsPanel.toggleTutorial.help');
+          break;
+        case 'darkmode':
+          this.helpText = this.$t('settingsPanel.darkmode.help');
+          break;
+        case 'language':
+          this.helpText = this.$t('settingsPanel.language.help');
           break;
       }
 
@@ -156,7 +170,7 @@ export default {
 }
 .settings-panel--toggles {
   display: grid;
-  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-template: 1fr / 1fr;
   grid-row-gap: 5px;
 }
 .settings-panel--text {

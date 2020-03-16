@@ -26,12 +26,16 @@ const actions = {
    * load the default keymap for the currently selected keyboard
    */
   loadDefaultKeymap({ state }) {
+    const keyboardPath = state.keyboard.slice(0, 1);
+    // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
-    return axios.get(`keymaps/${keyboardName}_default.json`).then(r => {
-      if (r.status === 200) {
-        return r.data;
-      }
-    });
+    return axios
+      .get(`keymaps/${keyboardPath}/${keyboardName}_default.json`)
+      .then(r => {
+        if (r.status === 200) {
+          return r.data;
+        }
+      });
   },
   /**
    * load keymap from the selected URL

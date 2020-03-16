@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Wersja API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Hostowane na GitHub Pages
+jobsAhead,
+jobsWaiting,zadań w kolejce
+maintain,Ten projekt jest prowadzony przez współpracowników QMK i współtwórców takich jak Ty!
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Status serwera
+settings,
+statsTemplate,"
+Wgrano {layers} warstw i {count} kodów klawiszy. Zdefiniowano {any} kodów klawiszy Any
+"
+ColorwayTip:title,Wciśnij Ctrl + Alt + N aby wybrać następny motyw kolorystyczny
+compile:label,Kompiluj
+compile:title,Kompiluj mapę klawiszy
+downloadFirmware:label,Firmware
+downloadFirmware:title,Pobierz plik firmware aby wgrać go do klawiatury
+downloadJSON:label,keymap.json
+downloadJSON:title,Pobierz mapę klawiszy w formacie JSON
+downloadKeymap:label,Mapa klawiszy
+downloadKeymap:title,Pobierz tylko plik keymap.c
+downloadSource:label,Cały kod źródłowy
+downloadSource:title,Pobierz całość kodu QMK Firmware
+downloadToolbox:label,Pobierz QMK Toolbox
+errors:invalidQMKKeymap,Wgrany plik nie jest poprawnie sformatowaną mapą klawiszy QMK.
+errors:kbfirmwareJSONUnsupported,Niestety Konfigurator QMK nie obsługuje wgrywania plików kbfirmware w formacie JSON
+errors:unknownJSON,Wgrany plik nie jest mapą klawiszy QMK.
+errors:unsupportedBrowser,"Używasz przeglądarki, której nie wspieramy. Uruchom"
+flashFile:label,Wgrywanie ręczne
+flashFile:title,Wybierz plik z firmware do wgrania do klawiatury
+flashFirmware:label,Auto-Wgrywanie
+flashFirmware:title,Automatyczne wgrywanie pliku firmware do klawiatury
+help:label,Przywołaj czarodzieja
+importJSON:title,Wczytaj mapę klawiszy QMK w formacie JSON z pliku
+importUrlJSON:title,Wczytaj mapę klawiszy QMK w formacie JSON z adresu URL
+keyboard:label,Klawiatura
+keycodes:label,Kody klawiszy
+keycodesRef:label,Rozpiska kodów klawiszy
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"Aplikacje, Mysz i Multimedia"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Ustawienia klawiatury
+keycodesTab:Quantum:label,Quantum
+keymap:label,Mapa klawiszy
+keymapName:label,Nazwa mapy klawiszy
+keymapName:placeholder,Własna mapa klawiszy
+layer:confirm,Na pewno chcesz wyczyścić aktualną warstwę?
+layer:label,Warstwa
+layer:title,Wyczyść warstwę
+layout:label,Układ
+loadDefault:label,Wczytaj domyślną
+loadDefault:title,Wczytaj domyślną mapę klawiszy z QMK Firmware
+potato:1,Henry Spalding pierwszy posadził ziemniaki w Idaho w 1837 roku.
+potato:10,Największym na świecie producentem ziemniaków są Chiny.
+potato:11,Ziemniaki były pierwszym warzywem uprawianym w kosmosie.
+potato:12,Ziemniaki nie zawierają glutenu.
+potato:13,Jedną z podstawowych jednostek czasu używanych przez Inków była długość gotowania ziemniaków.
+potato:14,"Jeśli podczas uprawy ziemniak zostanie wystawiony na działanie promieni słonecznych, stanie się zielony i trujący."
+potato:15,Potrzeba 4 ton ziemniaków aby wyprodukować 1 tonę chipsów.
+potato:16,Obecnie znanych jest ponad 4000 różnych gatunków ziemniaków.
+potato:17,Z punktu widzenia systematyki ziemniaki należą do małej rodziny Psiankowatych.
+potato:18,Podczas gorączki złota Klondike na Alasce (w latach 1897-1898) 1 kilogram ziemniaków były warte niemal tyle co 1 kilogram złota.
+potato:19,Sir Walter Raleigh sprowadził ziemniaki do do Irlandii w 1589 roku i uprawiał je nieopodal Cork na polu o powierzchni 40000 arów.
+potato:2,"“Frytki” zostały pierwszy raz zaprezentowane w Ameryce, gdy Thomas Jefferson podał je podczas obiadu w Białym Domu."
+potato:20,"Ziemniaki są dostępne przez cały rok, ponieważ przez cały rok są zbierane w różnych miejscach na świecie."
+potato:21,Pochodzące z Afryki i Azji słodkie ziemniaki mają różne rozmiary – od malutkich aż po ważące 60 kilogramów.
+potato:22,Narodowy Dzień Ziemniaka przypad na 19 sierpnia i 27 października.
+potato:23,"Zmieniaki wykorzystuje się do produkcji wódki, potcheen i akvavity."
+potato:24,Ziemniaki należą do warzyw najbardziej przyjaznych środowisku. W przeciwieństwie do innych warzyw ich uprawa jest łatwa i nie wymaga dużych ilości nawozów.
+potato:25,Ziemniaki pochodzą z regionu zajmowanego obecnie przez południową część Peru. Zostały udomowione pomiędzy 8000 a 5000 rokiem przed naszą erą.
+potato:26,Słowo ziemniak pochodzi od staropolskiego jabłka ziemnego.
+potato:27,Kwiaty ziemniaków są zwykle zapylane przez owady takie jak np. pszczoły.
+potato:28,Ziemniak w 80% składa się z wody
+potato:3,Amerykańcy miłośnicy zmieniaków w 2017 roku zjedli ponad 4 miliony ton frytek o przeróżnych kształtach.
+potato:4,Zdaniem lekarza z Irlandii ziemniaki są potężnym afrodyzjakiem.
+potato:5,"Przeciętny Amerykanin w ciągu roku zjada 63,5 kilograma frytek. Prześciga go statystyczny Niemiec, którzy zjada średnio 90,7kg frytek rocznie."
+potato:6,"Według Księgi Rekordów Guinnessa największy ziemniak ważył 8,27 kg. Został on wyhodowany w Anglii w 1795 roku."
+potato:7,"Ziemniaki są na czwartym miejscu wśród najczęściej spożywanych rodzajów pożywienia - zaraz po pszenicy, kukurydzy i ryżu."
+potato:8,Ziemniaki są uprawiane w ponad 125 krajach.
+potato:9,"Każdego roku uprawianych jest tyle ziemniaków, że ułożone w pas o szerokości 4-jezdniowej autostrady oplotły by Ziemię sześciokrotnie."
+print:anonymous:label,Anonim
+print:author:placeholder,Wpisz swoje imię...
+print:author:title,Autor
+print:back:title,Wróć
+print:date:title,Data
+print:keyboard:label,Klawiatura
+print:layer:label,Warstwa
+print:layout:label,Układ
+print:notes:empty,Moja cudowna konfiguracja.
+print:notes:placeholder,Miejsce na dodatkowe informacje dotyczące tej konfiguracji...
+print:notes:title,Notatki
+print:print:title,Drukuj
+print:source:title,Źródło
+printKeymap:label,Drukuj mapę
+printKeymap:title,Drukuj wszystkie warstwy mapy klawiszy
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Włącz/wyłącz tryb nocny
+settingsPanel:displaySizes:help,Wyświetla rozmiary klawiszy używając jako skali szerokości klawisza alfanumerycznego.
+settingsPanel:displaySizes:label,Pokaż rozmiary klawiszy
+settingsPanel:displaySizes:title,Ctrl + Alt + U
+settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego.
+settingsPanel:fastInput:label,Szybkie wprowadzanie
+settingsPanel:fastInput:title,Ctrl + Alt + F
+settingsPanel:language:help,
+settingsPanel:language:title,Język
+settingsPanel:off:label,Wył
+settingsPanel:on:label,Wł
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Ustawienia konfiguratora
+settingsPanel:toggleTutorial:help,Przewodnik wideo MechMerlina
+settingsPanel:toggleTutorial:label,Przewodnik wideo
+testKeys:label,Test klawiatury
+testKeys:title,Przetestuj działanie klawiatury
+tester:back:label,Wróć
+tester:back:title,Wróć do Konfiguratora
+tester:chatter:detectedAlert,Wykryto wielokrotną aktywację klawisza!
+tester:chatter:label,Próg wykrywalności dla wielokrotnej aktywacji klawisza (w ms)
+tester:docs:paragraph,Uwaga: Wykryty Kod i Klawisz mogą się różnić w zależności od ustawionej lokalizacji. Dokumentacja:
+tester:keycodeStatus:label,Wykryte kody klawiszy
+tester:letters:code:label,kod
+tester:letters:key:label,klawisz
+tester:letters:keycode:label,kod klawisza
+tester:page:label,Tester klawiatury
+tester:reset:label,Wyczyść
+tester:reset:title,Zresetuj wykryte kody klawiszy
+toggleTerminal:label,
+toggleTerminal:title,

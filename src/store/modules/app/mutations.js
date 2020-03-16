@@ -167,6 +167,9 @@ const mutations = {
   },
   setDarkmode(state, enabled) {
     state.configuratorSettings.darkmodeEnabled = enabled;
+  },
+  toggleSnowflakes(state) {
+    state.snowflakes = !state.snowflakes;
   }
 };
 

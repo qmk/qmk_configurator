@@ -169,6 +169,14 @@ html {
       color: #fff;
     }
 
+    .bes-discord {
+      a {
+        color: #c63;
+      }
+      a:hover {
+        color: #f96;
+      }
+    }
     .bes-error {
       color: red;
     }
@@ -388,12 +396,26 @@ html[data-theme='dark'] {
   .help {
     color: #1db6ff;
   }
+  .backend-status {
+    background: #131411;
+  }
   #keycodes {
     background-color: inherit;
+  }
+  .bottom-fixed,
+  .settings-panel--help-text {
+    background: #194452;
+    color: #ddd;
   }
   .tab-area {
     background: $qmk-grey-dark;
     border-color: #2f2f2f;
+  }
+  .keycode-container:after,
+  .keycode-layer-container:after,
+  .keycode-layer:after {
+    border-color: #353535;
+    background: #1d1d1d;
   }
   .letter-key-code,
   .letter-code,
@@ -406,7 +428,7 @@ html[data-theme='dark'] {
   }
   .tab {
     border-color: #2f2f2f;
-    color: #777;
+    color: #555;
     &.active {
       color: $qmk-grey-light;
       background-color: #464646;

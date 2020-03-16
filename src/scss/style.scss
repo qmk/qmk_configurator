@@ -7,8 +7,8 @@ TO REFACTOR: import of style.css
 */
 
 /* prevent draggable elements from being selected */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 [draggable] {
   -moz-user-select: none;
@@ -22,8 +22,8 @@ TO REFACTOR: import of style.css
 
 body {
   // background-color: #fff;
-  padding: 50px;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 33px 50px 50px;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   // color: #333;
   font-weight: 400;
 }
@@ -259,13 +259,16 @@ a img {
 #resetTest,
 #load-default {
   line-height: 120%;
-  margin: 0px 4px 0px 0px;
   border-radius: 3px;
   // background-color: #49ad4c;
   // color: white;
   border: 0px solid #000;
-  padding: 6px 12px;
+  padding: 5px 8px;
   cursor: pointer;
+}
+
+button + button {
+  margin-left: 4px;
 }
 
 #status {
@@ -319,6 +322,7 @@ a img {
   white-space: pre-wrap;
   overflow-y: scroll;
   height: 200px;
+  resize: none;
   font-size: 12px;
   width: 100%;
   margin: 0px auto;
@@ -364,7 +368,7 @@ input {
 label,
 button {
   text-transform: uppercase;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
@@ -386,7 +390,7 @@ button {
 
 .botctrl {
   display: grid;
-  grid-template: auto / 80% 20%;
+  grid-template: auto / 34fr 5fr;
   grid-row-gap: 5px;
 }
 
@@ -625,6 +629,7 @@ button {
   cursor: -webkit-grab;
   // background: #fff;
   float: left;
+  font-family: 'Roboto', sans-serif;
   font-size: 70%;
   line-height: 11px;
   white-space: pre-line;
@@ -761,7 +766,7 @@ input[type='number'] {
 
 .hint {
   font-size: 13px;
-  font: 14px/1.5 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-left: 5px;
 }
 
@@ -788,4 +793,5 @@ input[type='number'] {
 
 .random-potato {
   color: #2c3e50;
+  font-family: 'Roboto', sans-serif;
 }

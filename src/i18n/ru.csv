@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Версия API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Размещено на GitHub Pages
+jobsAhead,
+jobsWaiting,шт. заданий ожидает
+maintain,"Данный проект поддерживается коллабораторами QMK и такими же участниками, как вы!"
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Статус сервера
+settings,
+statsTemplate,"
+Загружен(а/о) {layers} шт. слоев и {count} шт. кодов клавиш. Обнаружен(о) {any} код(ов) Any кодов клавиш
+"
+ColorwayTip:title,"Ctrl + Alt + N, чтобы перейти к следующему цветовому варианту"
+compile:label,Скомпилировать
+compile:title,Скомпилировать раскладку
+downloadFirmware:label,Прошивка
+downloadFirmware:title,Скачать прошивочный файл для процесса прошивки
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,Экспортировать раскладку QMK в JSON файл
+downloadKeymap:label,только раскладка
+downloadKeymap:title,Скачать только keymap.c
+downloadSource:label,Все исходники
+downloadSource:title,Скачать код QMK Firmware
+downloadToolbox:label,Получить QMK Toolbox
+errors:invalidQMKKeymap,"Извините, это неверный файл раскладки QMK."
+errors:kbfirmwareJSONUnsupported,"Извините, QMK конфигуратор не поддерживает импорт JSON файлов kbfirmware."
+errors:unknownJSON,"Извините, это не похоже на файл раскладки QMK."
+errors:unsupportedBrowser,"Вы используете не поддерживаемый браузер. Пожалуйста, используйте"
+flashFile:label,Пользовательская прошивка
+flashFile:title,Прошить микроконтроллер выбранным пользовательским файлом
+flashFirmware:label,Авто-прошивка
+flashFirmware:title,Автоматически прошить микроконтроллер скомпилированной прошивкой
+help:label,Вызов волшебника
+importJSON:title,Импортировать раскладку QMK из JSON файла
+importUrlJSON:title,Импортировать раскладку QMK в виде JSON из URL
+keyboard:label,клавиатура
+keycodes:label,Коды клавиш
+keycodesRef:label,Справочник по кодам клавиш
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"Приложение, медиа и мышь"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Настройки клавиатуры
+keycodesTab:Quantum:label,Quantum
+keymap:label,Раскладка
+keymapName:label,Название раскладки
+keymapName:placeholder,название пользовательской раскладки
+layer:confirm,"Вы уверены, что хотите очистить слой?"
+layer:label,Слой
+layer:title,Очистить слой
+layout:label,раскладка
+loadDefault:label,Значения по умолчанию
+loadDefault:title,Загрузить раскладку со значениями по умолчанию из QMK Firmware
+potato:1,Henry Spalding первым посадил картофель в Айдахо в 1837 году
+potato:10,Китай производит больше всего картофеля в мире.
+potato:11,"Картофель был первым овощем, выращенным в космосе."
+potato:12,Картофель совсем не содержит глютена.
+potato:13,"Одной из основных единиц измерения времени у Инков было время, необходимое для приготовления картофеля."
+potato:14,"Если картофель подвергается воздействию солнечных лучей во время созревания, он становится зеленым и ядовитым."
+potato:15,"Необходимо 10000 фунтов картофеля, чтобы приготовить 2500 фунтов картофельных чипсов."
+potato:16,На сегодняшний день существует более 4000 видов картофеля.
+potato:17,Картофель принадлежит к небольшому семейству Пасленовых.
+potato:18,"Во время Золотой лихорадки на Аляске (1897-1898) картофель стоил практически столько же, сколько и золото."
+potato:19,Сэр Walter Raleigh первым посадил картофель в Ирландии в 1589 году на 40000 акров земли вблизи города Корк.
+potato:2,"Картофель фри появился в Америке, когда Thomas Jefferson подал его на ужин в Белом доме."
+potato:20,"Картофель доступен круглый год, поскольку его каждый месяц в году где-то собирают."
+potato:21,Родной для Африки и Азии ямс вырастает от размеров маленького клубня картофеля до рекордных 130 фунтов.
+potato:22,Международный день картофеля празднуется 19 августа и 27 октября.
+potato:23,"Картофель также используется в приготовлении таких алкогольных напитков, как водка, потин или аквавит."
+potato:24,"Картофель является одним из самых экологически чистых овощей. Его легко выращивать, и он не требует огромного количества удобрений и химических добавок, чтобы цвести, в отличие от многих других овощей."
+potato:25,"Родиной картофеля считается южный регион Перу, где он был впервые окультурен между 8000 и 5000 годами до нашей эры."
+potato:26,Слово “картофель” происходит от испанского слова “patata”.
+potato:27,"Растения картофеля обычно опыляются насекомыми, например, шмелями."
+potato:28,Картофель состоит на 80% из воды и на 20% из сухого вещества.
+potato:3,В 2017 году любители картофеля в Америке съели более 4 миллионов тонн картофеля фри различной формы и размеров.
+potato:4,"Картофель - это мощный афродизиак, как говорят врачи в Ирландии."
+potato:5,Среднестатистический американец съедает 140 фунтов картофеля в год. Немцы съедают более 200 фунтов за год.
+potato:6,Самый большой выращенный плод картофеля весил 18 фунтов и 4 унции согласно Книге рекордов Гиннесса. Он был выращен в Англии в 1795 году.
+potato:7,"Картофель является четвертым по популярности продуктом питания в мире – после пшеницы, кукурузы и риса."
+potato:8,Картофель выращивают более чем в 125 странах мира.
+potato:9,"Каждый год в мире выращивается столько картофеля, что его достаточно, чтобы покрыть четырехполосную автомагистраль вокруг земного шара шесть раз."
+print:anonymous:label,Аноним
+print:author:placeholder,Ваше Имя (опционально)
+print:author:title,Автор
+print:back:title,Назад
+print:date:title,Дата
+print:keyboard:label,Клавиатура
+print:layer:label,Слой
+print:layout:label,Раскладка
+print:notes:empty,Моя потрясающая раскладка
+print:notes:placeholder,Примечания об этой конфигурации
+print:notes:title,Примечания
+print:print:title,Распечатать
+print:source:title,Источник
+printKeymap:label,Распечатать раскладку
+printKeymap:title,Распечатать слои раскладки
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Темный режим
+settingsPanel:displaySizes:help,Показывать размеры клавиш в Key Units
+settingsPanel:displaySizes:label,Показывать размеры клавиш
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
+settingsPanel:fastInput:label,Быстрый ввод
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
+settingsPanel:language:title,Язык
+settingsPanel:off:label,Выкл
+settingsPanel:on:label,Вкл
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Настройки конфигуратора
+settingsPanel:toggleTutorial:help,Видеоурок от MechMerlin
+settingsPanel:toggleTutorial:label,Видеоурок
+testKeys:label,Проверка клавиатуры
+testKeys:title,Проверка ввода с клавиатуры
+tester:back:label,Назад
+tester:back:title,Вернуться в конфигуратор
+tester:chatter:detectedAlert,было обнаружено залипание!
+tester:chatter:label,Порог залипания (мс)
+tester:docs:paragraph,Примечание: Обнаруженные клавиша и код могут отличаться в зависимости от локали. См. документацию
+tester:keycodeStatus:label,Обнаружены коды клавиш
+tester:letters:code:label,код
+tester:letters:key:label,клавиша
+tester:letters:keycode:label,код клавиши
+tester:page:label,Тестер клавиатуры
+tester:reset:label,Сброс
+tester:reset:title,Сброс обнаруженных клавиш
+toggleTerminal:label,
+toggleTerminal:title,

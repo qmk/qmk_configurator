@@ -65,7 +65,8 @@ const state = {
     { value: 'pt-BR', label: 'Brasileira' },
     { value: 'pl-PL', label: 'Polski' },
     { value: 'ms', label: 'Bahasa Malaysia' }
-  ]
+  ],
+  snowflakes: false
 };
 
 export default {

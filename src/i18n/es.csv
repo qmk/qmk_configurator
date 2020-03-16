@@ -1,0 +1,133 @@
+Key,Translation
+apiVersion,Versión de API
+apiVersionPrefix,
+favoriteColor,
+favoriteKeyboard,
+hostedOn,Alojado en GitHub Pages
+jobsAhead,
+jobsWaiting,trabajo(s) esperando
+maintain,¡Este proyecto se mantiene por colaboradores QMK como tú!
+ready,
+searchKeycodes,
+serverIs,
+serverStatus,Servidor
+settings,
+statsTemplate,"
+Cargó {layers} capas y {count} códigos de tecla. Definió {any} Any tecla códigos de tecla
+"
+ColorwayTip:title,Ctrl + Alt + N para cambiar al próximo color
+compile:label,Compilar
+compile:title,Compilar el keymap
+downloadFirmware:label,Firmware
+downloadFirmware:title,Descargar archivo de firmware para instalar
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,Exportar archivo JSON de Keymap QMK
+downloadKeymap:label,solo keymap
+downloadKeymap:title,Descargar solamente keymap.c
+downloadSource:label,Código completo
+downloadSource:title,Descargar código de Firmware QMK
+downloadToolbox:label,Descargar QMK Toolbox
+errors:invalidQMKKeymap,"Lo siento, pero parece que este no es un archivo válido de keymap QMK."
+errors:kbfirmwareJSONUnsupported,"Lo siento, el Configurator QMK no permite importar archivos JSON de kbfirmware."
+errors:unknownJSON,"Lo siento, este no parece ser un archivo keymap QMK."
+errors:unsupportedBrowser,Estás usando un navegador incompatible. Por favor usa
+flashFile:label,Instalar personalizado
+flashFile:title,Instalar archivo elegido al MCU
+flashFirmware:label,Auto-Instalar
+flashFirmware:title,Automáticamente instalar Firmware compilado al MCU
+help:label,Abrir tutorial
+importJSON:title,Importar archivo JSON de Keymap QMK
+importUrlJSON:title,Importar archivo JSON de Keymap QMK desde URL
+keyboard:label,teclado
+keycodes:label,Códigos de teclas
+keycodesRef:label,Referencia de códigos de tecla
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,"App, Media y Mouse"
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,Configuración de teclado
+keycodesTab:Quantum:label,Quantum
+keymap:label,Keymap
+keymapName:label,Nombre de keymap
+keymapName:placeholder,nombre de keymap personalizado
+layer:confirm,¿Estás seguro de que quieres borrar la capa?
+layer:label,Capa
+layer:title,Borrar capa
+layout:label,layout
+loadDefault:label,Cargar Original
+loadDefault:title,Cargar valor por defecto para layout de Firmware QMK
+potato:1,Henry Spalding primero plantó papas en Idaho en 1837.
+potato:10,China es el mayor proveedor de papas del mundo.
+potato:11,Las papas fueron la primera verdura cultivada en el espacio.
+potato:12,Las papas son completamente libres de gluten.
+potato:13,Una de las medidas básicas de tiempo de los Incas fue el tiempo necesario para cocinar una papa.
+potato:14,"Si una papa está expuesta a la luz mientras crece, se pondrá verde y llegará a ser venenosa."
+potato:15,"Se requiere 10,000 libras de papas para preparar 2,500 libras de papitas."
+potato:16,"Hoy en día hay más de 4,000 variedades de papas."
+potato:17,"Las papas pertenecen a una familia pequeña, las belladonas o solanáceas."
+potato:18,"Durante la Fiebre del oro de Klondike (1897-1898), las papas prácticamente valían su peso en oro."
+potato:19,"Walter Raleigh introdujo las papas en Inglaterra en 1589 en los 40,000 acres de terreno cerca de Cork."
+potato:2,“Papas fritas” fueron dadas a conocer en América cuando Thomas Jefferson las sirvió en una cena de la Casa Blanca.
+potato:20,Las papas están disponibles todo el año gracias a que se cosechan en alguna parte del mundo cada mes del año.
+potato:21,"Nativos de África y Asia, los ñames (camotes) varían en tamaño desde el tamaño de una papa pequeña hasta el tamaño récord de 130 libras."
+potato:22,El 19 de agosto y el 27 de octubre son el Día Nacional de la Papa.
+potato:23,"Las papas también se usan para elaborar bebidas alcohólicas tal como el vodka, poitín o aquavit."
+potato:24,Las papas son entre las verduras más ecológicas. Son fáciles de cultivar y no requieren cantidades masivas de abono y aditivos químicos para prosperar como muchas otras verduras.
+potato:25,La papa proviene de la región del sur de Perú donde fue domesticada por primera vez entre 8000 a. C. y 5000 a. C.
+potato:26,La palabra inglesa potato proviene de la palabra española patata.
+potato:27,Las plantas de papas suelen ser polinizadas por insectos como abejas.
+potato:28,Una papa se compone de 80% agua y 20% materia sólida.
+potato:3,Fanáticos estadounidenses de papas ingirieron más de 4 millones de toneladas de papas fritas en varias formas y tamaños en 2017.
+potato:4,"Las papas son un potente afrodisiaco, según un médico irlandés."
+potato:5,El estadounidense promedio come 140 libras de papas cada año. Los alemanes comen más de 200 libras al año.
+potato:6,"La papa más grande pesó 18 libras y 4 onzas, según el Libro de Records Mundiales de Guinness. Fue cultivada en Inglaterra en 1795."
+potato:7,"Las papas son el cuarto alimento básico del mundo – después de trigo, maíz y arroz."
+potato:8,Las papas son cultivadas en más de 125 países.
+potato:9,Cada año el mundo produce una cantidad de papas suficientes para cubrir una carretera de cuatro carriles que rodea el mundo seis veces.
+print:anonymous:label,Anónimo
+print:author:placeholder,"Opcionalmente, Tu Nombre"
+print:author:title,Autor
+print:back:title,Atrás
+print:date:title,Fecha
+print:keyboard:label,Teclado
+print:layer:label,Capa
+print:layout:label,Layout
+print:notes:empty,Mi keymap genial
+print:notes:placeholder,Notas sobre esta configuración
+print:notes:title,Notas
+print:print:title,Imprimir
+print:source:title,Fuente
+printKeymap:label,Imprimir keymap
+printKeymap:title,Imprimir capas de keymap
+settingsPanel:darkmode:help,
+settingsPanel:darkmode:label,Cambiar Modo oscuro
+settingsPanel:displaySizes:help,Mostrar tamaños de keycaps en Unidades de Tecla
+settingsPanel:displaySizes:label,Mostrar tamaño de teclas
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,Ingresar teclas por medio del teclado sin hacer click en cada posición.
+settingsPanel:fastInput:label,Entrada rápida
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:language:help,
+settingsPanel:language:title,Idioma
+settingsPanel:off:label,No
+settingsPanel:on:label,Sí
+settingsPanel:snowflakes:label,
+settingsPanel:snowflakes:title,
+settingsPanel:title,Configuración de Configurator
+settingsPanel:toggleTutorial:help,MechMerlin video guía
+settingsPanel:toggleTutorial:label,Video Tutorial
+testKeys:label,Probar teclado
+testKeys:title,Probar entrada del teclado
+tester:back:label,Atrás
+tester:back:title,Regresar a Configurator
+tester:chatter:detectedAlert,¡Se ha detectado chatter!
+tester:chatter:label,Umbral de chatter (ms)
+tester:docs:paragraph,Nota: Tecla y código detectado pueden ser diferentes según tu localidad. Docs
+tester:keycodeStatus:label,Códigos de teclas detectados
+tester:letters:code:label,código
+tester:letters:key:label,tecla
+tester:letters:keycode:label,código de tecla
+tester:page:label,Probador de teclado
+tester:reset:label,Restablecer
+tester:reset:title,Restablecer las teclas detectadas
+toggleTerminal:label,
+toggleTerminal:title,

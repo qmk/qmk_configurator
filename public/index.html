@@ -7,6 +7,11 @@
     <meta name="description" content="QMK Configurator is an online tool used for easily creating firmware files for keyboards supported in qmk_firmware">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>QMK Configurator</title>
+    <style>
+        .qmk-hidden-drag-n-drop {
+          margin-left: -100vh;
+        }
+    </style>
  </head>
   </head>
   <body>
@@ -15,7 +20,7 @@
     </noscript>
     <div id="browser-warn-container"></div>
     <div id="status-app"></div>
-    <div class="hidden"></div>
+    <div class="qmk-hidden-drag-n-drop"></div>
     <div id="controller">
       <div id="controller-app">
       <div id="app"></div>

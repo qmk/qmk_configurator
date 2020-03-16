@@ -5,9 +5,9 @@
       <statusPanel />
       <controllerBottom />
     </div>
-    <div class="hint">
+    <div class="hint hint-right">
       <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        {{ $t('message.downloadToolbox.label') }}
+        {{ $t('downloadToolbox.label') }}
       </a>
     </div>
     <div class="split-content">
@@ -15,9 +15,9 @@
         <layerControl />
       </div>
       <div class="right-side">
-        <p>
-          <label class="keymap--label" :title="$t('message.ColorwayTip.title')">
-            {{ $t('message.keymap.label') }}:
+        <div class="keymap--area">
+          <label class="keymap--label" :title="$t('ColorwayTip.title')">
+            {{ $t('keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
               icon="keyboard"
@@ -41,7 +41,7 @@
           </select>
           <a
             id="favorite-colorway"
-            :title="$t('message.favoriteColor')"
+            :title="$t('favoriteColor')"
             @click="favColor"
             :class="{
               active: isFavoriteColor
@@ -49,7 +49,7 @@
           >
             <font-awesome-icon icon="star" size="lg" fixed-width />
           </a>
-        </p>
+        </div>
         <visualKeymap :profile="false" />
         <span class="keymap--count"
           ><span class="keymap--counter">{{ keyCount }}</span
@@ -155,12 +155,12 @@ export default {
 };
 </script>
 <style>
-.hint {
+.hint-right {
   display: grid;
   justify-content: end;
 }
 #colorway-select {
-  font-family: 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .beta-feedback {
   position: fixed;
@@ -187,5 +187,10 @@ export default {
 }
 .keymap--keyset {
   float: right;
+}
+.keymap--area {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 1.5em;
 }
 </style>

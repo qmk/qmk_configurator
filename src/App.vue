@@ -11,17 +11,17 @@
     </div>
     <slideout-panel></slideout-panel>
     <footer>
-      <p>{{ $t('message.maintain') }}</p>
-      <p>{{ $t('message.hostedOn') }}</p>
+      <p>{{ $t('maintain') }}</p>
+      <p>{{ $t('hostedOn') }}</p>
       <p style="font-size:10px">version: {{ revision }}</p>
     </footer>
     <div
       class="help"
       :class="helpClasses"
       @click="toggleTutorial"
-      :title="$t('message.help.label')"
+      :title="$t('help.label')"
       @mouseenter="
-        setMessage($t('message.help.label'));
+        setMessage($t('help.label'));
         hover = true;
       "
       @mouseleave="
@@ -30,16 +30,28 @@
       "
     >
       <font-awesome-icon
-        v-show="!tutorialEnabled"
+        v-show="!snowflakes && !tutorialEnabled"
         icon="hat-wizard"
         transform="rotate-22"
         size="3x"
       />
+      <img
+        class="santa-hat"
+        src="../assets/Santa_hat.svg"
+        v-show="snowflakes && !tutorialEnabled"
+        alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
+      />
       <font-awesome-icon
-        v-show="tutorialEnabled"
+        v-show="!snowflakes && tutorialEnabled"
         icon="magic"
         transform="rotate-185"
         size="3x"
+      />
+      <img
+        class="jinglebell"
+        src="../assets/jinglebell.svg"
+        v-show="snowflakes && tutorialEnabled"
+        alt="Jingle Bell SVG Icon made from Icon Fonts is licensed by CC BY 3.0"
       />
     </div>
     <iframe
@@ -47,12 +59,13 @@
       class="embedded-tutorial"
       width="560"
       height="315"
-      src="https://www.youtube.com/embed/tx54jkRC9ZY"
+      src="https://www.youtube.com/embed/-imgglzDMdY"
       frameborder="0"
       sandbox="allow-scripts allow-same-origin"
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
+    <SnowFlake v-if="snowflakes" />
   </div>
 </template>
 <script>
@@ -61,14 +74,17 @@ import InfoBar from '@/components/InfoBar';
 import random from 'lodash/random';
 import Spinner from '@/components/spinner';
 import SettingsPanel from '@/components/SettingsPanel';
-import { createNamespacedHelpers, mapActions } from 'vuex';
+import { createNamespacedHelpers, mapActions, mapGetters } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
+import SnowFlake from '@/components/SnowFlake';
+
 export default {
   name: 'app',
   components: {
     Spinner,
-    InfoBar
+    InfoBar,
+    SnowFlake
   },
   data() {
     return {
@@ -83,6 +99,10 @@ export default {
   },
   async beforeMount() {
     await this.appLoad();
+  },
+  created() {
+    // will trigger function before closing/refreshing tab
+    window.addEventListener('beforeunload', this.showConfirmationPrompt);
   },
   mounted() {
     this.randomPotatoFact();
@@ -99,9 +119,18 @@ export default {
     if (isFunction(this.destroyWatcher)) {
       this.destroyWatcher();
     }
+    // remove event listener
+    window.removeEventListener('beforeunload', this.showConfirmationPrompt);
   },
   computed: {
-    ...mapState(['showSpinner', 'spinnerMsg', 'message', 'tutorialEnabled']),
+    ...mapGetters('keymap', ['isDirty']),
+    ...mapState([
+      'showSpinner',
+      'spinnerMsg',
+      'message',
+      'tutorialEnabled',
+      'snowflakes'
+    ]),
     showInfoBar() {
       return this.message !== '';
     },
@@ -122,14 +151,29 @@ export default {
     ]),
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
-      const len = size(this.$t('message.potato'));
-      this.potatoFact = this.$t('message.potato.' + random(1, len));
+      const len = size(this.$t('potato'));
+      this.potatoFact = this.$t('potato.' + random(1, len));
     },
     async appLoad() {
       await this.loadApplicationState();
     },
     dismiss() {
       this.setShowSpinner(false);
+    },
+    showConfirmationPrompt(e) {
+      // implemented according to https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onbeforeunload
+
+      if (this.isDirty === true) {
+        // Cancel default event
+        e.preventDefault();
+        // Chrome requires returnValue to be set
+        e.returnValue = '';
+
+        // will show prompt
+        return true;
+      }
+      // will not show confirmation prompt
+      return null;
     },
     toggleSettingsPanel(visible) {
       if (visible) {
@@ -181,6 +225,17 @@ export default {
   opacity: 0.7;
   cursor: pointer;
 }
+
+.santa-hat {
+  width: 56px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.jinglebell {
+  width: 50px;
+  transform: rotate(-9deg);
+}
+
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
 @keyframes tada {
   0% {
@@ -217,6 +272,12 @@ export default {
 }
 .faa-tada.animated.faa-slow,
 .faa-tada.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
+.faa-parent.animated-hover:hover > .faa-tada.faa-slow {
+  animation: tada 3s linear infinite;
+}
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }

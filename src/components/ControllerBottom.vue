@@ -23,60 +23,48 @@
       <button
         class="fixed-size"
         id="toolbox"
-        :title="$t('message.downloadKeymap.title')"
+        :title="$t('downloadKeymap.title')"
         @click="downloadKeymap"
         v-bind:disabled="disableDownloadKeymap"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadKeymap.label') }}
+        {{ $t('downloadKeymap.label') }}
       </button>
       <button
         class="fixed-size"
         id="source"
         @click="downloadSource"
-        :title="$t('message.downloadSource.title')"
+        :title="$t('downloadSource.title')"
         v-bind:disabled="disableDownloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadSource.label') }}
+        {{ $t('downloadSource.label') }}
       </button>
-      <button
-        id="export"
-        @click="exportJSON"
-        :title="$t('message.downloadJSON.title')"
-      >
+      <button id="export" @click="exportJSON" :title="$t('downloadJSON.title')">
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
-      <span class="label-button">{{ $t('message.downloadJSON.label') }}</span>
-      <button
-        id="import"
-        :title="$t('message.importJSON.title')"
-        @click="importKeymap"
-      >
+      <span class="label-button">{{ $t('downloadJSON.label') }}</span>
+      <button id="import" :title="$t('importJSON.title')" @click="importKeymap">
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <button
         id="import-url"
-        :title="$t('message.importUrlJSON.title')"
+        :title="$t('importUrlJSON.title')"
         @click="openVeil"
       >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
       <button
         id="printkeymaps"
-        :title="$t('message.printKeymap.title')"
+        :title="$t('printKeymap.title')"
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
-        <span class="hide-small">{{ $t('message.printKeymap.label') }}</span>
+        <span class="hide-small">{{ $t('printKeymap.label') }}</span>
       </button>
-      <button
-        id="testkeys"
-        :title="$t('message.testKeys.title')"
-        @click="testKeys"
-      >
+      <button id="testkeys" :title="$t('testKeys.title')" @click="testKeys">
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
-        <span class="hide-small">{{ $t('message.testKeys.label') }}</span>
+        <span class="hide-small">{{ $t('testKeys.label') }}</span>
       </button>
       <input
         id="fileImport"
@@ -101,11 +89,11 @@
       <button
         id="fwFile"
         @click="downloadFirmware"
-        :title="$t('message.downloadFirmware.title')"
+        :title="$t('downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('message.downloadFirmware.label') }}
+        {{ $t('downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
@@ -141,6 +129,8 @@ import {
 } from '@/jquery';
 
 import ElectronBottomControls from './ElectronBottomControls';
+
+import remap from '@/remap';
 
 export default {
   name: 'bottom-controller',
@@ -288,14 +278,37 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.fileImportElement.value = ''; // clear value for chrome issue #83
     },
+    // remap old keymap.json files to current locations and layouts
+    // This is recursive, but it's limited to a maximum depth of 10
+    remapKeyboard(keyboard, layout, depth = 0) {
+      let wasRemapped = false;
+      if (depth > 10) {
+        console.warn(`possible remap loop detected with ${keyboard}:${layout}`);
+      } else {
+        if (!isUndefined(remap.lookup[keyboard])) {
+          const { target, layouts } = remap.lookup[keyboard];
+          if (!isUndefined(target)) {
+            keyboard = target;
+            wasRemapped = true;
+          }
+          if (!isUndefined(layouts) && !isUndefined(layouts[layout])) {
+            layout = layouts[layout];
+            wasRemapped = true;
+          }
+        }
+      }
+      return wasRemapped
+        ? this.remapKeyboard(keyboard, layout, ++depth)
+        : { keyboard, layout };
+    },
     loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
-        alert(this.$t('message.errors.kbfirmwareJSONUnsupported'));
+        alert(this.$t('errors.kbfirmwareJSONUnsupported'));
         return;
       }
 
       if (checkInvalidKeymap(data)) {
-        alert(this.$t('message.errors.unknownJSON'));
+        alert(this.$t('errors.unknownJSON'));
         return;
       }
 
@@ -306,6 +319,13 @@ export default {
         this.$store.commit('app/setAuthor', escape(author));
         this.$store.commit('app/setNotes', escape(notes));
       }
+
+      // remap old json files to new mappings if they need it
+      data = Object.assign(
+        data,
+        this.remapKeyboard(data.keyboard, data.layout)
+      );
+
       this.$store.commit('app/setKeyboard', data.keyboard);
       this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
         this.$store.commit('app/setLayout', data.layout);
@@ -320,7 +340,7 @@ export default {
         );
         promise.then(() => {
           const stats = load_converted_keymap(data.layers);
-          const msg = this.$t('message.statsTemplate', stats);
+          const msg = this.$t('statsTemplate', stats);
           store.commit('status/deferredMessage', msg);
           store.dispatch('status/viewReadme', this.keyboard).then(() => {
             store.commit('app/setKeymapName', data.keymap);
@@ -336,7 +356,7 @@ export default {
         this.loadJsonData(data);
       } catch (error) {
         console.log(error);
-        alert(this.$t('message.errors.invalidQMKKeymap'));
+        alert(this.$t('errors.invalidQMKKeymap'));
         return;
       }
     },
@@ -424,9 +444,6 @@ export default {
 };
 </script>
 <style>
-#controller-bottom button {
-  margin-top: 4px;
-}
 .input-url-modal {
   padding: 5px;
   border: 1px solid;
@@ -475,7 +492,7 @@ export default {
   font-weight: bold;
   height: 19px;
   border: 0px solid;
-  padding: 6px 12px 6px;
+  padding: 5px 8px;
   text-transform: uppercase;
 }
 @media (max-width: 90rem) {

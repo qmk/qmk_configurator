@@ -40,6 +40,107 @@ function init() {
   store.commit('app/setKeypressListener', () => keypressListener);
 }
 
+/* hasBitsSet
+ *
+ * arguments:
+ *   test (number)
+ *   value (number)
+ *
+ * returns true if bit `value` of `test` is true, false otherwise
+ */
+function hasBitsSet(test, value) {
+  return (test & (1 << value)) === 2 ** value;
+}
+
+/* check One-Shot Mod keycodes
+ *
+ * This code block normalizes the order of One-Shot Mod parameters (MOD_LCTL,
+ * MOD_RGUI, etc.) so that there are fewer variants that need to be added to
+ * the user interface, such that e.g. OSM(MOD_LCTL|MOD_LALT) and
+ * OSM(MOD_LALT|MOD_LCTL) don't need separate keys.
+ */
+function processOneShotMods(keycode) {
+  let internal = keycode.split('(')[1];
+  internal = internal.split(')')[0];
+
+  // tokenizers
+  let mods = internal.split('|');
+  mods = mods.map(amod => {
+    return amod.trim();
+  });
+
+  // parser
+  mods = mods.map(amod => {
+    // MOD_LCTL = 0b00001, MOD_RCTL = 0b10001,
+    // MOD_LSFT = 0b00010, MOD_RSFT = 0b10010,
+    // MOD_LALT = 0b00100, MOD_RALT = 0b10100,
+    // MOD_LGUI = 0b01000, MOD_RGUI = 0b11000,
+    switch (amod) {
+      case 'MOD_LCTL':
+        return 0b00001;
+      case 'MOD_RCTL':
+        return 0b10001;
+      case 'MOD_LSFT':
+        return 0b00010;
+      case 'MOD_RSFT':
+        return 0b10010;
+      case 'MOD_LALT':
+        return 0b00100;
+      case 'MOD_RALT':
+        return 0b10100;
+      case 'MOD_LGUI':
+        return 0b01000;
+      case 'MOD_RGUI':
+        return 0b11000;
+      case 'MOD_MEH':
+        return 0b00111;
+      case 'MOD_HYPR':
+        return 0b01111;
+    }
+  });
+
+  // code generator
+  mods = mods.reduce((acc, amod) => {
+    acc |= amod;
+    return acc;
+  });
+
+  let cmods = [];
+  const osmHand = hasBitsSet(mods, 4) ? 'MOD_R' : 'MOD_L';
+  if (hasBitsSet(mods, 0)) {
+    cmods.push(`${osmHand}CTL`);
+  }
+  if (hasBitsSet(mods, 1)) {
+    cmods.push(`${osmHand}SFT`);
+  }
+  if (hasBitsSet(mods, 2)) {
+    cmods.push(`${osmHand}ALT`);
+  }
+  if (hasBitsSet(mods, 3)) {
+    cmods.push(`${osmHand}GUI`);
+  }
+  if (
+    hasBitsSet(mods, 0) &&
+    hasBitsSet(mods, 1) &&
+    hasBitsSet(mods, 2) &&
+    hasBitsSet(mods, 3)
+  ) {
+    cmods = ['MOD_HYPR'];
+  } else if (
+    hasBitsSet(mods, 0) &&
+    hasBitsSet(mods, 1) &&
+    hasBitsSet(mods, 2)
+  ) {
+    cmods = ['MOD_MEH'];
+  }
+
+  mods = cmods.join('|');
+  keycode = `OSM(${mods})`;
+
+  const metadata = store.getters['keycodes/lookupKeycode'](keycode);
+  return newKey(metadata, keycode);
+}
+
 // generate keypress combo list from the keycodes list
 function generateKeypressCombos(_keycodes) {
   const combos = _keycodes
@@ -264,6 +365,12 @@ function parseKeycode(keycode, stats) {
     let internal = splitcode[1];
     internal = internal.split(')')[0];
 
+    // check for an OSM keycode
+    if (maincode === 'OSM') {
+      // ok we know it's OSM
+      return processOneShotMods(keycode);
+    }
+
     //Check whether it is a layer switching code or combo keycode
     if (internal.includes('KC')) {
       // Layer Tap keycode
@@ -332,7 +439,9 @@ function getExclusionList() {
     '7skb',
     '8pack',
     'adkb96',
+    'ai03/equinox',
     'angel17',
+    'angel64',
     'atreus',
     'bigseries',
     'boston_meetup',
@@ -352,12 +461,15 @@ function getExclusionList() {
     'eco',
     'ergo42',
     'ergodash',
+    'ergoslab',
     'ergotravel',
     'fortitude60',
+    'getta25',
     'hadron',
     'handwired/bluepill',
     'handwired/dactyl_manuform',
     'handwired/onekey',
+    'handwired/postageboard',
     'handwired/qc60',
     'handwired/splittest',
     'handwired/xealous',
@@ -378,10 +490,12 @@ function getExclusionList() {
     'launchpad',
     'lets_split',
     'lets_split_eh',
+    'lfkeyboards/lfk78',
     'lily58',
     'maartenwut/atom47',
     'maxipad',
     'mechllama/g35',
+    'mechlovin/hannah910',
     'mechmini',
     'meira',
     'minidox',
@@ -389,10 +503,13 @@ function getExclusionList() {
     'naked60',
     'naked64',
     'namecard2x4',
+    'navi10',
     'orthodox',
+    'pico',
     'pinky',
     'planck',
     'preonic',
+    'primekb/prime_l',
     'ps2avrGB',
     'qwertyydox',
     'redox',
@@ -481,16 +598,19 @@ function disableOtherButtons() {
  */
 function check_status() {
   const url = `${backend_compile_url}/${store.state.app.jobID}`;
+  const start = performance.now();
   axios
     .get(url)
     .then(resp => {
-      console.log(resp);
+      console.log(`response in ${performance.now() - start}ms`, resp);
       let msg;
       let { status, data } = resp;
       if (status !== 200) {
         console.log('Unexpected status', data.status);
         enableCompileButton();
       } else {
+        const pollInterval = Math.floor(2500 + Math.random() * 1000);
+        console.log(`Next Poll in ${pollInterval}ms`);
         switch (data.status) {
           case 'finished':
             store.commit('app/setSpinnerMsg', 'Done!');
@@ -518,13 +638,13 @@ function check_status() {
             store.commit('app/setSpinnerMsg', 'Waiting for Oven');
             msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
             store.commit('status/append', msg);
-            setTimeout(check_status, 500);
+            setTimeout(check_status, pollInterval);
             break;
           case 'running':
             store.commit('app/setSpinnerMsg', baking);
             msg = compile_status === 'running' ? ' .' : '\n* Running';
             store.commit('status/append', msg);
-            setTimeout(check_status, 500);
+            setTimeout(check_status, pollInterval);
             break;
           case 'unknown':
             store.commit('app/setSpinnerMsg', 'Abort! Abort!');
@@ -576,12 +696,12 @@ function getPreferredLayout(layouts) {
   return first(mykeys);
 }
 
-function checkInvalidKeymap(keymap) {
+function checkInvalidKeymap({ keyboard, keymap, layout, layers }) {
   const res =
-    isUndefined(keymap.keyboard) ||
-    isUndefined(keymap.keymap) ||
-    isUndefined(keymap.layout) ||
-    isUndefined(keymap.layers);
+    isUndefined(keyboard) ||
+    isUndefined(keymap) ||
+    isUndefined(layout) ||
+    isUndefined(layers);
   return res;
 }
 

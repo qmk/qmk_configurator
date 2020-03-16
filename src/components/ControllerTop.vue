@@ -4,7 +4,7 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
-          :title="$t('message.favoriteKeyboard')"
+          :title="$t('favoriteKeyboard')"
           @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
@@ -13,7 +13,7 @@
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
         <label class="drop-label" id="drop-label-keyboard"
-          >{{ $t('message.keyboard.label') }}:</label
+          >{{ $t('keyboard.label') }}:</label
         >
         <v-select
           @search:focus="opened"
@@ -27,7 +27,7 @@
       </div>
       <div class="topctrl-layouts">
         <label class="drop-label" id="drop-label-version"
-          >{{ $t('message.layout.label') }}:</label
+          >{{ $t('layout.label') }}:</label
         >
         <select id="layout" v-model="layout">
           <option
@@ -42,14 +42,14 @@
         <label
           class="drop-label"
           :class="fontAdjustClasses"
-          :title="$t('message.keymapName.label')"
-          >{{ $t('message.keymapName.label') }}:</label
+          :title="$t('keymapName.label')"
+          >{{ $t('keymapName.label') }}:</label
         >
         <input
           id="keymap-name"
           type="text"
           v-model="keymapName"
-          :placeholder="$t('message.keymapName.placeholder')"
+          :placeholder="$t('keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
           @blur="blur"
@@ -58,18 +58,18 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          :title="$t('message.loadDefault.title')"
+          :title="$t('loadDefault.title')"
           @click="loadDefault"
         >
-          {{ $t('message.loadDefault.label') }}
+          {{ $t('loadDefault.label') }}
         </button>
         <button
           id="compile"
-          :title="$t('message.compile.title')"
+          :title="$t('compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >
-          {{ $t('message.compile.label') }}
+          {{ $t('compile.label') }}
         </button>
       </div>
     </div>
@@ -99,10 +99,12 @@ export default {
   name: 'ControllerTop',
   computed: {
     ...mapGetters('keymap', ['isDirty']),
+    ...mapGetters('app', ['exportKeymapName']),
     ...mapState('app', [
       'keyboard',
       'keyboards',
       'layouts',
+      'layout',
       'configuratorSettings',
       'compileDisabled'
     ]),
@@ -121,9 +123,11 @@ export default {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
           ) {
-            var old = this.$store.state.app.keyboard;
-            this.$store.commit('app/setKeyboard', ''); // force a refresh
-            Vue.nextTick(this.$store.commit('app/setKeyboard', old));
+            var old = this.keyboard;
+            this.setKeyboard(''); // force a refresh
+            Vue.nextTick(() => {
+              this.setKeyboard(old);
+            });
             return false;
           }
         }
@@ -139,20 +143,19 @@ export default {
       set(value) {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
-            var old = this.$store.state.app.layout;
-            const setLayout = this.setLayout;
-            setLayout(''); // force a refresh
-            Vue.nextTick(() => setLayout(old));
+            const old = this.layout;
+            this.setLayout(''); // force a refresh
+            Vue.nextTick(() => this.setLayout(old));
             return false;
           }
         }
-        this.$store.commit('keymap/clear');
+        this.clear();
         this.updateLayout({ target: { value } });
       }
     },
     fontAdjustClasses() {
       let classes = [];
-      if (this.$t('message.keymapName.label').length > 12) {
+      if (this.$t('keymapName.label').length > 12) {
         classes.push('half-size');
       }
       return classes.join(' ');
@@ -200,14 +203,17 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['resizeConfig']),
+    ...mapMutations('keymap', ['resizeConfig', 'clear']),
     ...mapMutations('app', [
       'setLayout',
       'stopListening',
       'startListening',
-      'previewRequested'
+      'previewRequested',
+      'setKeyboard',
+      'setKeymapName'
     ]),
     ...mapActions('app', [
+      'changeKeyboard',
       'fetchKeyboards',
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
@@ -236,7 +242,7 @@ export default {
             promise.then(() => {
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
-              const msg = this.$t('message.statsTemplate', stats);
+              const msg = this.$t('statsTemplate', stats);
               store.commit('status/append', msg);
               if (!isAutoInit) {
                 store.commit('keymap/setDirty');
@@ -309,9 +315,7 @@ export default {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
       }
-      return this.$store
-        .dispatch('app/changeKeyboard', newKeyboard)
-        .then(this.postUpdateKeyboard);
+      return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
     },
     favKeyboard() {
       if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
@@ -322,9 +326,16 @@ export default {
     },
     postUpdateKeyboard() {
       this.$store.commit('status/clear');
-      this.$router.replace({
-        path: `/${this.keyboard}/${this.layout}`
-      });
+      this.$router
+        .replace({
+          path: `/${this.keyboard}/${this.layout}`
+        })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            // ignore this harmless error otherwise report
+            throw err;
+          }
+        });
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
     },
@@ -336,15 +347,21 @@ export default {
     updateLayout(e) {
       const newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
-      this.$router.replace({ path: `/${this.keyboard}/${this.layout}` });
+      this.$router
+        .replace({ path: `/${this.keyboard}/${this.layout}` })
+        .catch(err => {
+          if (err.name !== 'NavigationDuplicated') {
+            throw err;
+          }
+        });
     },
     updateKeymapName(newKeymapName) {
       this.keymapName = newKeymapName;
-      this.$store.commit('app/setKeymapName', newKeymapName);
+      this.setKeymapName(newKeymapName);
     },
     compile() {
       let keymapName = this.realKeymapName;
-      let _keymapName = this.$store.getters['app/exportKeymapName'];
+      let _keymapName = this.exportKeymapName;
       // TODO extract this name function to the store
       keymapName =
         keymapName === ''
@@ -385,11 +402,9 @@ export default {
     };
   },
   mounted() {
-    console.info('mounted start');
     this.initializeKeyboards().then(() => {
       this.loadDefault(true);
     });
-    console.info('mounted end');
   }
 };
 </script>
