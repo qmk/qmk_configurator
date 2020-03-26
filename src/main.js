@@ -41,7 +41,8 @@ import {
   faMagic,
   faStar,
   faChevronUp,
-  faSearch
+  faSearch,
+  faQuestionCircle
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,

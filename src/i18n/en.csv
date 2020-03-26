@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
 keymap:label,Keymap
+keymapHelp:label,Help
+keymapHelp:title,How do I use keymap.json?
 keymapName:label,Keymap Name
 keymapName:placeholder,custom keymap name
 layer:confirm,Are you sure you want to clear layer?

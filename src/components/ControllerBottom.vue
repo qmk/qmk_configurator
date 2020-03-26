@@ -35,6 +35,15 @@
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
       <button
+        id="keymapHelp"
+        class="ui-button"
+        :title="$t('keymapHelp.title')"
+        @click="keymapJSONHelp"
+      >
+        <font-awesome-icon icon="question-circle" size="lg" fixed-width />
+        <span class="hide-small">{{ $t('keymapHelp.label') }}</span>
+      </button>
+      <button
         id="printkeymaps"
         :title="$t('printKeymap.title')"
         @click="printKeymaps"
@@ -437,6 +446,9 @@ export default {
     },
     testKeys() {
       this.$router.push('/test');
+    },
+    keymapJSONHelp() {
+      window.open("https://docs.qmk.fm/#/configurator_troubleshooting", '_blank');
     }
   },
   data: () => {
