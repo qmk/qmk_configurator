@@ -22,16 +22,6 @@
     <div class="botctrl-1-1">
       <button
         class="fixed-size"
-        id="toolbox"
-        :title="$t('downloadKeymap.title')"
-        @click="downloadKeymap"
-        v-bind:disabled="disableDownloadKeymap"
-      >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('downloadKeymap.label') }}
-      </button>
-      <button
-        class="fixed-size"
         id="source"
         @click="downloadSource"
         :title="$t('downloadSource.title')"
