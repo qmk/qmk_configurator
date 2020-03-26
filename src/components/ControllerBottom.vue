@@ -20,16 +20,6 @@
       </template>
     </Veil>
     <div class="botctrl-1-1">
-      <button
-        class="fixed-size"
-        id="source"
-        @click="downloadSource"
-        :title="$t('downloadSource.title')"
-        v-bind:disabled="disableDownloadSource"
-      >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('downloadSource.label') }}
-      </button>
       <button id="export" @click="exportJSON" :title="$t('downloadJSON.title')">
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
@@ -76,6 +66,16 @@
       </ElectronBottomControls>
     </div>
     <div v-else class="botctrl-1-2">
+      <button
+        class="fixed-size"
+        id="source"
+        @click="downloadSource"
+        :title="$t('downloadSource.title')"
+        v-bind:disabled="disableDownloadSource"
+      >
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('downloadSource.label') }}
+      </button>
       <button
         id="fwFile"
         @click="downloadFirmware"
