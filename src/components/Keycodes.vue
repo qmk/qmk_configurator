@@ -12,6 +12,7 @@
             href="https://docs.qmk.fm/#/keycodes"
             title="Keycodes reference"
             target="_blank"
+            rel="noopener"
             >{{ $t('keycodesRef.label') }}</a
           >
         </span>
