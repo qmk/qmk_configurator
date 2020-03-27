@@ -6,9 +6,13 @@
       <controllerBottom />
     </div>
     <div class="hint hint-right">
-      <a target="_blank" href="https://github.com/qmk/qmk_toolbox/releases">
-        {{ $t('downloadToolbox.label') }}
-      </a>
+      <a
+        href="https://github.com/qmk/qmk_toolbox/releases"
+        :title="$t('downloadToolbox.label')"
+        target="_blank"
+        rel="noopener"
+        >{{ $t('downloadToolbox.label') }}</a
+      >
     </div>
     <div class="split-content">
       <div class="left-side">

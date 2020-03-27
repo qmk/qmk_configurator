@@ -24,7 +24,7 @@
       </div>
     </div>
     <div class="bes-discord">
-      <a v-if="hasError" target="_blank" :href="discordLink">
+      <a v-if="hasError" target="_blank" rel="noopener" :href="discordLink">
         Error? Let us know on QMK Discord.
       </a>
     </div>

@@ -10,8 +10,9 @@
         <span class="hint">
           <a
             href="https://docs.qmk.fm/#/keycodes"
-            title="Keycodes reference"
+            :title="$t('keycodesRef.label')"
             target="_blank"
+            rel="noopener"
             >{{ $t('keycodesRef.label') }}</a
           >
         </span>
