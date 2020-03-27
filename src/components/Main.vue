@@ -8,6 +8,7 @@
     <div class="hint hint-right">
       <a
         href="https://github.com/qmk/qmk_toolbox/releases"
+        :title="$t('downloadToolbox.label')"
         target="_blank"
         rel="noopener"
         >{{ $t('downloadToolbox.label') }}</a
