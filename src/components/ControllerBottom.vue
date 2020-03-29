@@ -144,6 +144,7 @@ export default {
       'electron'
     ]),
     ...mapGetters('app', ['exportKeymapName', 'firmwareFile']),
+    ...mapGetters('keymap', ['isDirty']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -186,7 +187,7 @@ export default {
     ]),
     ...mapMutations('keymap', ['setLoadingKeymapPromise', 'setDirty', 'clear']),
     ...mapMutations('keymap', { clearKeymap: 'clear' }),
-    ...mapMutations('status', ['deferredMessage']),
+    ...mapMutations('status', ['deferredMessage', 'append']),
     ...mapMutations('status', { clearStatus: 'clear' }),
     ...mapActions('app', [
       'changeKeyboard',
@@ -245,7 +246,7 @@ export default {
     },
     downloadFirmware() {
       this.urlEncodedData = first(this.firmwareBinaryURL);
-      this.filename = this.$store.getters['app/firmwareFile'];
+      this.filename = this.firmwareFile;
       this.downloadElementEnabled = true;
       Vue.nextTick(() => {
         this.$refs.downloadElement.click();
@@ -271,7 +272,7 @@ export default {
       });
     },
     importKeymap() {
-      if (this.$store.getters['keymap/isDirty']) {
+      if (this.isDirty) {
         if (
           !confirm(
             clearKeymapTemplate({ action: 'change keyboard and layout' })
@@ -429,8 +430,7 @@ export default {
           this.clearKeymap();
           this.setKeymapName('info.json preview');
           this.clearStatus();
-          store.commit(
-            'status/append',
+          this.append(
             [
               'Preview info.json mode\n',
               'For Developers only, working on new keyboards.\n',
