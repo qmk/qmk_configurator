@@ -107,17 +107,10 @@
 </template>
 <script>
 import Vue from 'vue';
-import { createNamespacedHelpers } from 'vuex';
-const {
-  mapMutations,
-  mapActions,
-  mapState,
-  mapGetters
-} = createNamespacedHelpers('app');
+import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import escape from 'lodash/escape';
-const encoding = 'data:text/plain;charset=utf-8,';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 import {
@@ -132,11 +125,13 @@ import ElectronBottomControls from './ElectronBottomControls';
 
 import remap from '@/remap';
 
+const encoding = 'data:application/json;charset=utf-8,';
+
 export default {
   name: 'bottom-controller',
   components: { ElectronBottomControls },
   computed: {
-    ...mapState([
+    ...mapState('app', [
       'keyboard',
       'layout',
       'previewRequested',
@@ -148,7 +143,7 @@ export default {
       'notes',
       'electron'
     ]),
-    ...mapGetters(['exportKeymapName', 'firmwareFile']),
+    ...mapGetters('app', ['exportKeymapName', 'firmwareFile']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -178,8 +173,27 @@ export default {
     }
   },
   methods: {
-    ...mapMutations(['dismissPreview', 'stopListening', 'startListening']),
-    ...mapActions(['loadKeymapFromUrl']),
+    ...mapMutations('app', [
+      'dismissPreview',
+      'enablePreview',
+      'setAuthor',
+      'setKeyboard',
+      'setKeymapName',
+      'setLayout',
+      'setNotes',
+      'startListening',
+      'stopListening'
+    ]),
+    ...mapMutations('keymap', ['setLoadingKeymapPromise', 'setDirty', 'clear']),
+    ...mapMutations('keymap', { clearKeymap: 'clear' }),
+    ...mapMutations('status', ['deferredMessage']),
+    ...mapMutations('status', { clearStatus: 'clear' }),
+    ...mapActions('app', [
+      'changeKeyboard',
+      'loadKeymapFromUrl',
+      'loadLayouts'
+    ]),
+    ...mapActions('status', ['viewReadme']),
     importUrlkeymap: function() {
       this.loadKeymapFromUrl(this.urlImport)
         .then(data => {
@@ -218,10 +232,7 @@ export default {
         notes: this.notes
       };
 
-      this.download(
-        `${this.$store.getters['app/exportKeymapName']}.json`,
-        JSON.stringify(data)
-      );
+      this.download(this.exportKeymapName, JSON.stringify(data));
     },
     download(filename, data) {
       this.urlEncodedData = encoding + encodeURIComponent(data);
@@ -316,8 +327,8 @@ export default {
 
       if (!isUndefined(data.author)) {
         const { author, notes } = data;
-        this.$store.commit('app/setAuthor', escape(author));
-        this.$store.commit('app/setNotes', escape(notes));
+        this.setAuthor(escape(author));
+        this.setNotes(escape(notes));
       }
 
       // remap old json files to new mappings if they need it
@@ -326,25 +337,32 @@ export default {
         this.remapKeyboard(data.keyboard, data.layout)
       );
 
-      this.$store.commit('app/setKeyboard', data.keyboard);
-      this.$store.dispatch('app/changeKeyboard', this.keyboard).then(() => {
-        this.$store.commit('app/setLayout', data.layout);
+      this.setKeyboard(data.keyboard);
+      this.changeKeyboard(this.keyboard).then(() => {
+        this.setLayout(data.layout);
         // todo validate these values
-        this.$router.replace({
-          path: `/${data.keyboard}/${data.layout}`
-        });
+        this.$router
+          .replace({
+            path: `/${data.keyboard}/${data.layout}`
+          })
+          .catch(err => {
+            if (err.name !== 'NavigationDuplicated') {
+              // ignore nav errors
+              console.error(err);
+            }
+          });
 
         var store = this.$store;
         let promise = new Promise(resolve =>
-          store.commit('keymap/setLoadingKeymapPromise', resolve)
+          this.setLoadingKeymapPromise(resolve)
         );
         promise.then(() => {
           const stats = load_converted_keymap(data.layers);
           const msg = this.$t('statsTemplate', stats);
-          store.commit('status/deferredMessage', msg);
-          store.dispatch('status/viewReadme', this.keyboard).then(() => {
-            store.commit('app/setKeymapName', data.keymap);
-            store.commit('keymap/setDirty');
+          this.deferredMessage(msg);
+          this.viewReadme(this.keyboard).then(() => {
+            this.setKeymapName(data.keymap);
+            this.setDirty();
           });
         });
         disableOtherButtons();
@@ -365,7 +383,7 @@ export default {
       if (files.length === 0) {
         return;
       }
-      this.$store.commit('app/enablePreview');
+      this.enablePreview();
       disableCompileButton();
       this.reader = new FileReader();
       this.reader.onload = this.previewInfoOnLoad;
@@ -383,7 +401,7 @@ export default {
         return;
       }
 
-      this.$store.commit('app/setKeyboard', PREVIEW_LABEL);
+      this.setKeyboard(PREVIEW_LABEL);
       /*
        * Preview Mode State hack
        * When we load a info.json preview we are bypassing the normal XHR request to the backend for
@@ -400,17 +418,17 @@ export default {
        * TODO come up with a better way of resetting keymap than depending on visual keymap change detection
        */
       const store = this.$store;
-      this.$store.dispatch('app/loadLayouts', data).then(() => {
+      this.loadLayouts(data).then(() => {
         // This is a special hack to get around change detection
-        this.$store.commit('app/setLayout', '  ');
+        this.setLayout('  ');
         Vue.nextTick(() => {
           const layout = getPreferredLayout(store.state.app.layouts);
-          store.commit('keymap/clear');
-          store.commit('app/setLayout', layout);
+          this.clearKeymap();
+          this.setLayout(layout);
           // clear the keymap data is now responsibility of code that changes layout
-          store.commit('keymap/clear');
-          store.commit('app/setKeymapName', 'info.json preview');
-          store.commit('status/clear');
+          this.clearKeymap();
+          this.setKeymapName('info.json preview');
+          this.clearStatus();
           store.commit(
             'status/append',
             [
