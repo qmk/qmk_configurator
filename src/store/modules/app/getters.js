@@ -30,7 +30,7 @@ const getters = {
     if (
       size(state.layouts) > 0 &&
       !isUndefined(state.layout) &&
-      !isUndefined(state.layout[state.layout])
+      !isUndefined(state.layouts[state.layout])
     ) {
       return state.layouts[state.layout].length;
     }
