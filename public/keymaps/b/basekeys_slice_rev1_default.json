@@ -1,6 +1,7 @@
 {
   "keyboard":"basekeys/slice/rev1",
-  "keymap":"default_",
+  "keymap":"default_4704aba",
+  "commit":"4704aba55cac8ee6d382498aafac9e61e48bfadf"
   "layout":"LAYOUT",
   "layers": [
     [
