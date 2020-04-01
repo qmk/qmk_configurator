@@ -238,8 +238,7 @@ export default {
             this.updateLayout(data.layout);
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
-            );
-            promise.then(() => {
+            ).then(() => {
               this.updateKeymapName(data.keymap);
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('statsTemplate', stats);
@@ -248,7 +247,9 @@ export default {
                 store.commit('keymap/setDirty');
               }
             });
+            return promise;
           }
+          return data;
         })
         .catch(error => {
           statusError(

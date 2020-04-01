@@ -27,7 +27,11 @@ const getters = {
     return exportName;
   },
   keyCount: state => {
-    if (size(state.layouts) > 0 && !isUndefined(state.layout)) {
+    if (
+      size(state.layouts) > 0 &&
+      !isUndefined(state.layout) &&
+      !isUndefined(state.layouts[state.layout])
+    ) {
       return state.layouts[state.layout].length;
     }
     return 0;

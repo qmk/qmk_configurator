@@ -65,29 +65,32 @@ Vue.component('v-select', vSelect);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 Vue.use(VueSlideoutPanel);
 
-library.add(faDownload);
-library.add(faStar);
-library.add(faCloudUploadAlt);
-library.add(faUpload);
-library.add(faArrowUp);
-library.add(faArrowDown);
-library.add(faArrowLeft);
-library.add(faArrowRight);
-library.add(faApple);
-library.add(faWindows);
-library.add(faLinux);
-library.add(faCog);
-library.add(faKeyboard);
-library.add(faExclamationTriangle);
-library.add(faChevronLeft);
-library.add(faChevronRight);
-library.add(faPrint);
-library.add(faUndo);
-library.add(faTrash);
-library.add(faHatWizard);
-library.add(faMagic);
-library.add(faChevronUp);
-library.add(faSearch);
+const icons = [
+  faApple,
+  faArrowDown,
+  faArrowLeft,
+  faArrowRight,
+  faArrowUp,
+  faChevronLeft,
+  faChevronRight,
+  faChevronUp,
+  faCloudUploadAlt,
+  faCog,
+  faDownload,
+  faExclamationTriangle,
+  faHatWizard,
+  faKeyboard,
+  faLinux,
+  faMagic,
+  faPrint,
+  faSearch,
+  faStar,
+  faTrash,
+  faUndo,
+  faUpload,
+  faWindows
+];
+library.add(...icons);
 
 Vue.config.productionTip = false;
 
