@@ -8,7 +8,7 @@
     <div class="hint hint-right">
       <a
         href="https://github.com/qmk/qmk_toolbox/releases"
-        :title="$t('downloadToolbox.label')"
+        v-tooltip="$t('downloadToolbox.label')"
         target="_blank"
         rel="noopener"
         >{{ $t('downloadToolbox.label') }}</a
@@ -20,7 +20,7 @@
       </div>
       <div class="right-side">
         <div class="keymap--area">
-          <label class="keymap--label" :title="$t('ColorwayTip.title')">
+          <label class="keymap--label" v-tooltip="$t('ColorwayTip.title')">
             {{ $t('keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
@@ -45,7 +45,7 @@
           </select>
           <a
             id="favorite-colorway"
-            :title="$t('favoriteColor')"
+            v-tooltip="$t('favoriteColor')"
             @click="favColor"
             :class="{
               active: isFavoriteColor

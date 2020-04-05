@@ -4,7 +4,7 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
-          :title="$t('favoriteKeyboard')"
+          v-tooltip="$t('favoriteKeyboard')"
           @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
@@ -42,7 +42,7 @@
         <label
           class="drop-label"
           :class="fontAdjustClasses"
-          :title="$t('keymapName.label')"
+          v-tooltip="$t('keymapName.label')"
           >{{ $t('keymapName.label') }}:</label
         >
         <input
@@ -58,14 +58,14 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          :title="$t('loadDefault.title')"
+          v-tooltip="$t('loadDefault.title')"
           @click="loadDefault"
         >
           {{ $t('loadDefault.label') }}
         </button>
         <button
           id="compile"
-          :title="$t('compile.title')"
+          v-tooltip="$t('compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >

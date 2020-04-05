@@ -9,8 +9,10 @@ import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
+import VTooltip from 'v-tooltip';
 
 Vue.use(VueI18n);
+Vue.use(VTooltip);
 
 import messages from '@/i18n';
 
@@ -89,7 +91,8 @@ const icons = [
   faTrash,
   faUndo,
   faUpload,
-  faWindows
+  faWindows,
+  faQuestionCircle
 ];
 library.add(...icons);
 

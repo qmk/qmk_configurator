@@ -20,38 +20,56 @@
       </template>
     </Veil>
     <div class="botctrl-1-1">
-      <button id="export" @click="exportJSON" :title="$t('downloadJSON.title')">
+      <button
+        id="export"
+        @click="exportJSON"
+        v-tooltip.bottom="$t('downloadJSON.title')"
+      >
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
       <span class="label-button">{{ $t('downloadJSON.label') }}</span>
-      <button id="import" :title="$t('importJSON.title')" @click="importKeymap">
+      <button
+        id="import"
+        v-tooltip.bottom="$t('importJSON.title')"
+        @click="importKeymap"
+      >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <button
         id="import-url"
-        :title="$t('importUrlJSON.title')"
+        v-tooltip.bottom="$t('importUrlJSON.title')"
         @click="openVeil"
       >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
-      <button
-        id="keymapHelp"
-        class="ui-button"
-        :title="$t('keymapHelp.title')"
-        @click="keymapJSONHelp"
+      <a
+        rel="noopener"
+        class="button-padding"
+        target="_blank"
+        :href="configuratorDocsURL"
       >
-        <font-awesome-icon icon="question-circle" size="lg" fixed-width />
-        <span class="hide-small">{{ $t('keymapHelp.label') }}</span>
-      </button>
+        <button
+          id="keymapHelp"
+          class="ui-button"
+          v-tooltip.bottom="$t('keymapHelp.title')"
+        >
+          <font-awesome-icon icon="question-circle" size="lg" fixed-width />
+          <span class="hide-small">{{ $t('keymapHelp.label') }}</span>
+        </button>
+      </a>
       <button
         id="printkeymaps"
-        :title="$t('printKeymap.title')"
+        v-tooltip.bottom="$t('printKeymap.title')"
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
         <span class="hide-small">{{ $t('printKeymap.label') }}</span>
       </button>
-      <button id="testkeys" :title="$t('testKeys.title')" @click="testKeys">
+      <button
+        id="testkeys"
+        v-tooltip.bottom="$t('testKeys.title')"
+        @click="testKeys"
+      >
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
         <span class="hide-small">{{ $t('testKeys.label') }}</span>
       </button>
@@ -79,7 +97,7 @@
         class="fixed-size"
         id="source"
         @click="downloadSource"
-        :title="$t('downloadSource.title')"
+        v-tooltip="$t('downloadSource.title')"
         v-bind:disabled="disableDownloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
@@ -88,7 +106,7 @@
       <button
         id="fwFile"
         @click="downloadFirmware"
-        :title="$t('downloadFirmware.title')"
+        v-tooltip="$t('downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
@@ -156,6 +174,9 @@ export default {
         isUndefined(this.firmwareBinaryURL) ||
         this.firmwareBinaryURL === ''
       );
+    },
+    configuratorDocsURL() {
+      return 'https://docs.qmk.fm/#/configurator_troubleshooting';
     }
   },
   watch: {
@@ -449,12 +470,6 @@ export default {
     },
     testKeys() {
       this.$router.push('/test');
-    },
-    keymapJSONHelp() {
-      window.open(
-        'https://docs.qmk.fm/#/configurator_troubleshooting',
-        '_blank'
-      );
     }
   },
   data: () => {
@@ -525,5 +540,8 @@ export default {
   .hide-small {
     display: none;
   }
+}
+.button-padding {
+  margin: 0 4px;
 }
 </style>
