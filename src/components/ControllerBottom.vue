@@ -143,7 +143,7 @@ export default {
       'electron'
     ]),
     ...mapGetters('app', ['exportKeymapName', 'firmwareFile']),
-    ...mapGetters('keymap', ['isDirty']),
+    ...mapGetters('keymap', ['isDirty', 'exportLayers']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -218,7 +218,7 @@ export default {
     },
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
-      let layers = this.$store.getters['keymap/exportLayers']({
+      let layers = this.exportLayers({
         compiler: false
       });
 
@@ -229,7 +229,10 @@ export default {
         layout: this.layout,
         layers: layers,
         author: this.author,
-        notes: this.notes
+        notes: this.notes,
+        version: 1,
+        documentation:
+          "This file is a QMK Configurator export. You can import this at https://config.qmk.fm. It can also be used directly with QMK's source code.\nTo setup your QMK environment check out the tutorial: https://docs.qmk.fm/#/newbs\n You can convert this file to a keymap.c using this command: qmk json2c keymap.json\nYou can compile this keymap using this command: qmk compile keymap.json"
       };
 
       this.download(this.exportKeymapName, JSON.stringify(data));
