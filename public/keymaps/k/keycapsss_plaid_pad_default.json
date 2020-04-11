@@ -1,0 +1,14 @@
+{
+  "keyboard": "keycapsss/plaid_pad",
+  "keymap": "default_619ee54",
+  "commit": "619ee543b8093f643585870db87bad06630c39d4",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PSLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PAST",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PMNS",
+      "KC_P0",   "KC_PDOT", "KC_PEQL", "KC_PPLS"
+    ]
+  ]
+}
