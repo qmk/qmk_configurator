@@ -13,7 +13,7 @@
             "KC_LCTL","KC_LGUI","KC_LALT","KC_MHEN","KC_SPC","KC_SPC","KC_SPC","KC_SPC","KC_HENK","KC_KANA","KC_APP","KC_LEFT","KC_DOWN","KC_RGHT"
         ],[
             "KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO",
-            "MO(0)","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO",
+            "MO(1)","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO",
             "KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO",
             "KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","RGB_TOG","RGB_MOD","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO",
             "KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","KC_NO","RGB_VAD","RGB_VAI","RGB_HUD","RGB_HUI","RGB_SAD","RGB_SAI","KC_NO","KC_NO","KC_NO",
