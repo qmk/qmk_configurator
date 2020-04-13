@@ -1,0 +1,24 @@
+{
+  "keyboard": "ymdk_np21",
+  "keymap": "default_b628290",
+  "commit": "b62829031de1ae2e5e1efaa35606981c04c443c3",
+  "layout": "LAYOUT_ortho_6x4",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "KC_BSPC", "MO(1)",   
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS", 
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS", 
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS", 
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT", 
+      "KC_P0",   "KC_DOT",  "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", 
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", 
+      "KC_TRNS", "BL_ON",   "KC_TRNS", "BL_INC",  
+      "KC_TRNS", "BL_TOGG", "KC_TRNS", "BL_INC",  
+      "KC_TRNS", "BL_OFF",  "KC_TRNS", "BL_DEC",  
+      "BL_BRTG", "KC_TRNS", "KC_TRNS", "BL_DEC"
+    ]
+  ]
+}
