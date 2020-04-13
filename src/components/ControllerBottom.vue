@@ -148,6 +148,7 @@ export default {
   name: 'bottom-controller',
   components: { ElectronBottomControls },
   computed: {
+    ...mapState('keymap', ['templates']),
     ...mapState('app', [
       'keyboard',
       'layout',
@@ -244,17 +245,15 @@ export default {
       });
 
       //API payload format
-      let data = {
+      const { keymap } = this.templates;
+      let data = Object.assign(keymap, {
         keyboard: this.keyboard,
         keymap: this.exportKeymapName,
         layout: this.layout,
         layers: layers,
         author: this.author,
-        notes: this.notes,
-        version: 1,
-        documentation:
-          "This file is a QMK Configurator export. You can import this at https://config.qmk.fm. It can also be used directly with QMK's source code.\nTo setup your QMK environment check out the tutorial: https://docs.qmk.fm/#/newbs\n You can convert this file to a keymap.c using this command: qmk json2c keymap.json\nYou can compile this keymap using this command: qmk compile keymap.json"
-      };
+        notes: this.notes
+      });
 
       this.download(this.exportKeymapName, JSON.stringify(data));
     },

@@ -218,6 +218,7 @@ export default {
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
     ]),
+    ...mapActions('keymap', ['initTemplates']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -405,6 +406,7 @@ export default {
   mounted() {
     this.initializeKeyboards().then(() => {
       this.loadDefault(true);
+      this.initTemplates();
     });
   }
 };
