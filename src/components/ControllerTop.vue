@@ -240,6 +240,8 @@ export default {
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             ).then(() => {
+              // clear the keymap name for the default keymap
+              // otherwise it overrides the default getter
               this.updateKeymapName('');
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('statsTemplate', stats);
