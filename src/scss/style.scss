@@ -1,6 +1,7 @@
 @import './scss/qmk_colors';
 @import './scss/themes';
 @import './scss/status-bar';
+@import './scss/tooltip.scss';
 
 /*
 TO REFACTOR: import of style.css
@@ -257,7 +258,8 @@ a img {
 #leavePrint,
 #leaveTest,
 #resetTest,
-#load-default {
+#load-default,
+.ui-button {
   line-height: 120%;
   border-radius: 3px;
   // background-color: #49ad4c;
@@ -390,7 +392,7 @@ button {
 
 .botctrl {
   display: grid;
-  grid-template: auto / 34fr 5fr;
+  grid-template: auto / 17fr 6fr;
   grid-row-gap: 5px;
 }
 

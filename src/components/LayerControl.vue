@@ -13,7 +13,11 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
-    <button class="clear-button" :title="$t('layer.title')" @click="clearLayer">
+    <button
+      class="clear-button"
+      v-tooltip="$t('layer.title')"
+      @click="clearLayer"
+    >
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
   </div>

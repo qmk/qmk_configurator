@@ -536,14 +536,17 @@ function getExclusionList() {
 
 function compileLayout(_keyboard, _keymapName, _layout) {
   disableCompileButton();
-  var layers = store.getters['keymap/exportLayers']({ compiler: true });
-  var data = {
-    keyboard: _keyboard,
-    keymap: _keymapName,
-    layout: _layout,
-    layers: layers
-  };
-  console.log(JSON.stringify(data));
+  let template = store.state.keymap.templates.keymap;
+  const layers = store.getters['keymap/exportLayers']({ compiler: true });
+  let request = JSON.stringify(
+    Object.assign(template, {
+      keyboard: _keyboard,
+      keymap: _keymapName,
+      layout: _layout,
+      layers: layers
+    })
+  );
+  console.log(request);
   if (store.getters['status/empty']) {
     store.commit('status/append', '\n');
   }
@@ -552,7 +555,7 @@ function compileLayout(_keyboard, _keymapName, _layout) {
     `* Sending ${_keyboard}:${_keymapName} with ${_layout}`
   );
   axios
-    .post(backend_compile_url, JSON.stringify(data))
+    .post(backend_compile_url, request)
     .then(resp => {
       const { status, data } = resp;
       if (status === 200) {

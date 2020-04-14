@@ -21,48 +21,55 @@
     </Veil>
     <div class="botctrl-1-1">
       <button
-        class="fixed-size"
-        id="toolbox"
-        :title="$t('downloadKeymap.title')"
-        @click="downloadKeymap"
-        v-bind:disabled="disableDownloadKeymap"
+        id="export"
+        @click="exportJSON"
+        v-tooltip.bottom="$t('downloadJSON.title')"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('downloadKeymap.label') }}
-      </button>
-      <button
-        class="fixed-size"
-        id="source"
-        @click="downloadSource"
-        :title="$t('downloadSource.title')"
-        v-bind:disabled="disableDownloadSource"
-      >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
-        {{ $t('downloadSource.label') }}
-      </button>
-      <button id="export" @click="exportJSON" :title="$t('downloadJSON.title')">
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
       <span class="label-button">{{ $t('downloadJSON.label') }}</span>
-      <button id="import" :title="$t('importJSON.title')" @click="importKeymap">
+      <button
+        id="import"
+        v-tooltip.bottom="$t('importJSON.title')"
+        @click="importKeymap"
+      >
         <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <button
         id="import-url"
-        :title="$t('importUrlJSON.title')"
+        v-tooltip.bottom="$t('importUrlJSON.title')"
         @click="openVeil"
       >
         <font-awesome-icon icon="cloud-upload-alt" size="lg" fixed-width />
       </button>
+      <a
+        rel="noopener"
+        class="button-padding"
+        target="_blank"
+        :href="configuratorDocsURL"
+      >
+        <button
+          id="keymapHelp"
+          class="ui-button"
+          v-tooltip.bottom="$t('keymapHelp.title')"
+        >
+          <font-awesome-icon icon="question-circle" size="lg" fixed-width />
+          <span class="hide-small">{{ $t('keymapHelp.label') }}</span>
+        </button>
+      </a>
       <button
         id="printkeymaps"
-        :title="$t('printKeymap.title')"
+        v-tooltip.bottom="$t('printKeymap.title')"
         @click="printKeymaps"
       >
         <font-awesome-icon icon="print" size="lg" fixed-width />
         <span class="hide-small">{{ $t('printKeymap.label') }}</span>
       </button>
-      <button id="testkeys" :title="$t('testKeys.title')" @click="testKeys">
+      <button
+        id="testkeys"
+        v-tooltip.bottom="$t('testKeys.title')"
+        @click="testKeys"
+      >
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
         <span class="hide-small">{{ $t('testKeys.label') }}</span>
       </button>
@@ -87,9 +94,19 @@
     </div>
     <div v-else class="botctrl-1-2">
       <button
+        class="fixed-size"
+        id="source"
+        @click="downloadSource"
+        v-tooltip="$t('downloadSource.title')"
+        v-bind:disabled="disableDownloadSource"
+      >
+        <font-awesome-icon icon="download" size="lg" fixed-width />
+        {{ $t('downloadSource.label') }}
+      </button>
+      <button
         id="fwFile"
         @click="downloadFirmware"
-        :title="$t('downloadFirmware.title')"
+        v-tooltip="$t('downloadFirmware.title')"
         v-bind:disabled="disableDownloadBinary"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
@@ -131,6 +148,7 @@ export default {
   name: 'bottom-controller',
   components: { ElectronBottomControls },
   computed: {
+    ...mapState('keymap', ['templates']),
     ...mapState('app', [
       'keyboard',
       'layout',
@@ -144,7 +162,7 @@ export default {
       'electron'
     ]),
     ...mapGetters('app', ['exportKeymapName', 'firmwareFile']),
-    ...mapGetters('keymap', ['isDirty']),
+    ...mapGetters('keymap', ['isDirty', 'exportLayers']),
     disableDownloadKeymap() {
       return !this.enableDownloads && this.keymapSourceURL !== '';
     },
@@ -157,6 +175,9 @@ export default {
         isUndefined(this.firmwareBinaryURL) ||
         this.firmwareBinaryURL === ''
       );
+    },
+    configuratorDocsURL() {
+      return 'https://docs.qmk.fm/#/configurator_troubleshooting';
     }
   },
   watch: {
@@ -219,19 +240,20 @@ export default {
     },
     exportJSON() {
       //Squashes the keymaps to the api payload format, might look into making this a function
-      let layers = this.$store.getters['keymap/exportLayers']({
+      let layers = this.exportLayers({
         compiler: false
       });
 
       //API payload format
-      let data = {
+      const { keymap } = this.templates;
+      let data = Object.assign(keymap, {
         keyboard: this.keyboard,
         keymap: this.exportKeymapName,
         layout: this.layout,
         layers: layers,
         author: this.author,
         notes: this.notes
-      };
+      });
 
       this.download(this.exportKeymapName, JSON.stringify(data));
     },
@@ -517,5 +539,8 @@ export default {
   .hide-small {
     display: none;
   }
+}
+.button-padding {
+  margin: 0 4px;
 }
 </style>

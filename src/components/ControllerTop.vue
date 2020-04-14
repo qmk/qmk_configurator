@@ -4,7 +4,7 @@
       <div class="topctrl-keyboards">
         <a
           id="favorite-keyboard"
-          :title="$t('favoriteKeyboard')"
+          v-tooltip="$t('favoriteKeyboard')"
           @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
@@ -42,7 +42,7 @@
         <label
           class="drop-label"
           :class="fontAdjustClasses"
-          :title="$t('keymapName.label')"
+          v-tooltip="$t('keymapName.label')"
           >{{ $t('keymapName.label') }}:</label
         >
         <input
@@ -58,14 +58,14 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
-          :title="$t('loadDefault.title')"
+          v-tooltip="$t('loadDefault.title')"
           @click="loadDefault"
         >
           {{ $t('loadDefault.label') }}
         </button>
         <button
           id="compile"
-          :title="$t('compile.title')"
+          v-tooltip="$t('compile.title')"
           v-bind:disabled="compileDisabled"
           @click="compile"
         >
@@ -218,6 +218,7 @@ export default {
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
     ]),
+    ...mapActions('keymap', ['initTemplates']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -239,7 +240,9 @@ export default {
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
             ).then(() => {
-              this.updateKeymapName(data.keymap);
+              // clear the keymap name for the default keymap
+              // otherwise it overrides the default getter
+              this.updateKeymapName('');
               const stats = load_converted_keymap(data.layers);
               const msg = this.$t('statsTemplate', stats);
               store.commit('status/append', msg);
@@ -405,6 +408,7 @@ export default {
   mounted() {
     this.initializeKeyboards().then(() => {
       this.loadDefault(true);
+      this.initTemplates();
     });
   }
 };

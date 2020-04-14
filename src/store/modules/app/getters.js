@@ -24,7 +24,7 @@ const getters = {
     }
     // issue #331 whitelist what we send to API for keymapName and save to disk
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
-    return exportName;
+    return `${exportName}.json`;
   },
   keyCount: state => {
     if (
