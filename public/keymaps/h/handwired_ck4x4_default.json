@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/ck4x4",
-  "keymap": "default_6b4549d",
-  "commit": "6b4549da8ceed736c85195f3bd16ded40131a29c",
+  "keymap": "default",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
   "layout": "LAYOUT",
   "layers": [
     [
