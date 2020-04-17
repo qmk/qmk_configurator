@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/bluepill/bluepill70",
-  "keymap": "default_cf19cb0",
-  "commit": "cf19cb0dbeda15d51df9c513a51cd2d985747b36",
+  "keymap": "default",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
   "layout": "LAYOUT_seventy_ansi",
   "layers": [
     [
