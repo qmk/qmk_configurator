@@ -1,7 +1,7 @@
 {
   "keyboard": "divergetm2",
-  "keymap": "default_dd29b64",
-  "commit": "dd29b642564896f3753721db364b6413e501e6c1",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_ortho_4x12_2x2u",
   "layers": [
     [
