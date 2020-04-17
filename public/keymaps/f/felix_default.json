@@ -1,7 +1,7 @@
 {
   "keyboard": "felix",
-  "keymap": "default_769854b",
-  "commit": "769854b8a2678488c22145c0aede764d7710afa6",
+  "keymap": "default",
+  "commit": "2bbbfc61543053f297e38fd070d8b18ee380bff5",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [

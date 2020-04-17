@@ -1,7 +1,7 @@
 {
   "keyboard": "gray_studio/space65",
-  "keymap": "default_8c5c1fd",
-  "commit": "8c5c1fd7fe8866f61081ec4cf953f48352d7c088",
+  "keymap": "default",
+  "commit": "7085066f0860087fa140241d25b29ad5f60c8179",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -1,0 +1,11 @@
+{
+  "keyboard": "botanicalkeyboards/fm2u",
+  "keymap": "default_4a92dd3",
+  "commit": "4a92dd327c7df11f10cbe85c5eb5868330062f2b",
+  "layout": "LAYOUT_100u",
+  "layers": [
+    [
+      "KC_B"
+    ]
+  ]
+}

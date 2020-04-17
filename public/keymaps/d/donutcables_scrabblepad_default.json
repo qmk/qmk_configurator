@@ -1,7 +1,7 @@
 {
   "keyboard": "donutcables/scrabblepad",
-  "keymap": "default_7e5c107",
-  "commit": "7e5c107d43890eb517184d6fddff9a6da165fc3d",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [

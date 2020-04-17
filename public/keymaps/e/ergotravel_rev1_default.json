@@ -1,7 +1,7 @@
 {
   "keyboard": "ergotravel/rev1",
-  "keymap": "default_39b5958",
-  "commit": "39b5958ae8dbcf374ab68366838acb5cbd380d94",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [

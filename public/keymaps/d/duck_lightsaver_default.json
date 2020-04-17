@@ -1,7 +1,7 @@
 {
   "keyboard": "duck/lightsaver",
-  "keymap": "default_a63d477",
-  "commit": "a63d4774f5115b91703936183a39a4724b44b94d",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [
