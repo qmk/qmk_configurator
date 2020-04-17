@@ -1,7 +1,7 @@
 {
   "keyboard": "gingham",
-  "keymap": "default_c45b751",
-  "commit": "c45b751b147255229bf7afc65cb4ca9a3979c6d8",
+  "keymap": "default",
+  "commit": "f2901375ce9fbf14e4a95eabf3b6abc7bfbc4300",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
