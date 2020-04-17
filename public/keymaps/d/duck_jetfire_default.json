@@ -1,7 +1,7 @@
 {
   "keyboard": "duck/jetfire",
-  "keymap": "default_e16b39f",
-  "commit": "e16b39f0c20c73348ae12af0e82e4b4c0d30b393",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [
