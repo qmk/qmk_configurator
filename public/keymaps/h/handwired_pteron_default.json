@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/pteron",
-  "keymap": "default_f01133d",
-  "commit": "f01133d08918b3d1dd7b349309b02ffd37273f5c",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [

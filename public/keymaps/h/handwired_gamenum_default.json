@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/gamenum",
-  "keymap": "default_9e4ac6c",
-  "commit": "9e4ac6cf29e6b2ce950135c8f877c95f2d1f1d55",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [

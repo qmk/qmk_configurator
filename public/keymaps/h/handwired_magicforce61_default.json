@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/magicforce61",
-  "keymap": "default_dfe0244",
-  "commit": "dfe02441bb96c17357a0471b8dde74b51d3081d3",
+  "keymap": "default",
+  "commit": "3ad389de55aa73eef4542807488a70a19639df11",
   "layout": "LAYOUT",
   "layers": [
     [

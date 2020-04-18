@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_manuform/5x7",
-  "keymap": "default_e2d3c92",
-  "commit": "e2d3c92199d6cc42a39c5d8729dfff61d78dd7d1",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_5x7",
   "layers": [
     [

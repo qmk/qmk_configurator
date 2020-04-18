@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/prime_exl",
-  "keymap": "default_a6c9e53",
-  "commit": "a6c9e53510d129e6e9fe6936fbfd061f2296a892",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [
