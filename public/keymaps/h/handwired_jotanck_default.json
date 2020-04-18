@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/jotanck",
-  "keymap": "default_016a258",
-  "commit": "016a258301e309973fcc9f4083b6b8591050cb6d",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
