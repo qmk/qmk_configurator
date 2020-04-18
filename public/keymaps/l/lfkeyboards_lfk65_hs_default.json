@@ -1,7 +1,7 @@
 {
   "keyboard": "lfkeyboards/lfk65_hs",
-  "keymap": "default_7e9a7af",
-  "commit": "7e9a7af672ab226cc57f05f362d6b1e965ac56e6",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
