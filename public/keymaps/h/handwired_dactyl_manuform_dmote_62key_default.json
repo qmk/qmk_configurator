@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_manuform/dmote/62key",
-  "keymap": "default_983613c",
-  "commit": "983613c88d69501b184c52b08ea6a3a7d3f149f8",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_62key",
   "layers": [
     [
