@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/minorca",
-  "keymap": "default_5b7260f",
-  "commit": "5b7260fc5327f195f63d872f856391e0bd168d27",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [
