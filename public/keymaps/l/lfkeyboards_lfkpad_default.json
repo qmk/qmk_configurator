@@ -1,7 +1,7 @@
 {
   "keyboard": "lfkeyboards/lfkpad",
-  "keymap": "default_e2d3c92",
-  "commit": "e2d3c92199d6cc42a39c5d8729dfff61d78dd7d1",
+  "keymap": "default",
+  "commit": "efe8bd8e9218f67a0845ccfa3eef7b074aebf7dc",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
