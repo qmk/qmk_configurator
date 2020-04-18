@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/terminus_mini",
-  "keymap": "default_79e0964",
-  "commit": "79e0964d2194a26fc011547006a6fc3f8a99947a",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [
