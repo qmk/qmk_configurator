@@ -1,7 +1,7 @@
 {
   "keyboard": "lets_split/sockets",
-  "keymap": "default_161afe2",
-  "commit": "161afe2e54e14b210b30539bd8a100471bcdf2c3",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
