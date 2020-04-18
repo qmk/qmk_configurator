@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/jotpad16",
-  "keymap": "default_c3cf9c0",
-  "commit": "c3cf9c0cef2283cce65ad025402b14ad021dc1dc",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
