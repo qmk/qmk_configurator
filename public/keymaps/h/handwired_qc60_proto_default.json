@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/qc60/proto",
-  "keymap": "default_c4680a6",
-  "commit": "c4680a6460bcc0a3695f3e9232089374c40fc29c",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_ansi_default",
   "layers": [
     [
