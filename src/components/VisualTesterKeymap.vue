@@ -321,7 +321,7 @@ export default {
       lastKeyCode: '',
       displayHex: false,
       audioIcon: 'volume-mute',
-      sound: new Howl({ src: ['typewriter-key-1.mp3'] })
+      sound: new Howl({ src: ['typewriter-key-1.mp3'], html5: true })
     };
   },
   components: { TesterKey }
