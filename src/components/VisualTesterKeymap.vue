@@ -255,7 +255,8 @@ export default {
         }
       }
       if (this.audioIcon !== 'volume-mute') {
-        this.sound.play();
+        this.sound.play(this.index[this.curIndex]);
+        this.curIndex = (this.curIndex + 1) % this.index.length;
       }
     },
     scrollToEnd() {
@@ -309,6 +310,17 @@ export default {
     }
   },
   data() {
+    const sound = new Howl({
+      src: ['typewriter-2.mp3'],
+      sprite: {
+        0: [107, 207],
+        1: [304, 270],
+        2: [646, 219],
+        3: [862, 144],
+        4: [1013, 263]
+      },
+      html5: true
+    });
     return {
       chatterThreshold: 8,
       width: 0,
@@ -321,7 +333,9 @@ export default {
       lastKeyCode: '',
       displayHex: false,
       audioIcon: 'volume-mute',
-      sound: new Howl({ src: ['typewriter-key-1.mp3'], html5: true })
+      curIndex: 0,
+      sound,
+      index: Object.keys(sound._sprite)
     };
   },
   components: { TesterKey }
