@@ -230,10 +230,6 @@ export default {
       ev.preventDefault();
       ev.stopPropagation();
 
-      if (this.audioIcon !== 'volume-mute') {
-        this.sound.play();
-      }
-
       this.timingKeyDown[ev.code] = performance.now();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
@@ -257,6 +253,9 @@ export default {
         ) {
           this.setChatterDetected({ pos });
         }
+      }
+      if (this.audioIcon !== 'volume-mute') {
+        this.sound.play();
       }
     },
     scrollToEnd() {
