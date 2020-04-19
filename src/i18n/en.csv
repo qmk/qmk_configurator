@@ -131,5 +131,6 @@ tester:letters:keycode:label,keycode
 tester:page:label,Keyboard Tester
 tester:reset:label,Reset
 tester:reset:title,Reset detected keys
+tester:typewritericon:label,Click to hear typewriter sounds while testing
 toggleTerminal:label,Click to Expand
 toggleTerminal:title,Toggle the Terminal display

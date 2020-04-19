@@ -49,6 +49,15 @@
         v-html="status"
       ></div>
       <div id="chatter-container">
+        <span v-tooltip="$t('tester.typewritericon.label')">
+          <font-awesome-icon
+            class="volume"
+            :icon="audioIcon"
+            size="lg"
+            fixed-width
+            @click="toggleAudio"
+          />
+        </span>
         <label>{{ $t('tester.chatter.label') }}:</label>
         <input
           id="chatter-threshold"
@@ -83,6 +92,7 @@ import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap';
 import TesterKey from '@/components/TesterKey';
+import { Howl } from 'howler';
 
 export default {
   name: 'visual-tester-keymap',
@@ -168,6 +178,10 @@ export default {
       'setChatterDetected'
     ]),
     ...mapActions('tester', ['init']),
+    toggleAudio() {
+      this.audioIcon =
+        this.audioIcon === 'volume-mute' ? 'volume-up' : 'volume-mute';
+    },
     getComponent() {
       return TesterKey;
     },
@@ -215,6 +229,11 @@ export default {
       }
       ev.preventDefault();
       ev.stopPropagation();
+
+      if (this.audioIcon !== 'volume-mute') {
+        this.sound.play();
+      }
+
       this.timingKeyDown[ev.code] = performance.now();
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(
@@ -301,7 +320,9 @@ export default {
       lastKey: '',
       lastCode: '',
       lastKeyCode: '',
-      displayHex: false
+      displayHex: false,
+      audioIcon: 'volume-mute',
+      sound: new Howl({ src: ['typewriter-key-1.mp3'] })
     };
   },
   components: { TesterKey }
@@ -412,5 +433,8 @@ export default {
   padding: 6px 12px;
   cursor: pointer;
   margin-bottom: 10px;
+}
+.volume {
+  margin-right: 10px;
 }
 </style>
