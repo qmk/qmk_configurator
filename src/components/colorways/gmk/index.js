@@ -6,8 +6,6 @@ import gmk_bento from './bento';
 import gmk_bingsu from './bingsu';
 import gmk_cafe from './cafe';
 import gmk_calm_depths from './calm_depths';
-// import gmk_camping from './camping';
-// import gmk_coral from './coral';
 import gmk_dolch from './dolch';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
