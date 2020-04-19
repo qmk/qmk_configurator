@@ -13,7 +13,7 @@
     @dragleave.prevent="dragleave"
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
-    ><div>{{ displayName }}<div><input
+    ><div :class="`${hasFocus ? 'key-layer-title-focus' : 'key-layer-title'}`">{{ displayName }}<div><input
     class="key-layer-input"
     :class="errorClasses"
     type="number"
@@ -40,7 +40,8 @@ export default {
   extends: BaseKey,
   data() {
     return {
-      error: false
+      error: false,
+      hasFocus: false
     };
   },
   computed: {
@@ -83,9 +84,11 @@ export default {
     blur() {
       this.startListening();
       this.setSelected(undefined);
+      this.hasFocus = false;
     },
     focus() {
       this.stopListening();
+      this.hasFocus = true;
     }
   }
 };
