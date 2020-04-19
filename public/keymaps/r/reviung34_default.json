@@ -1,7 +1,7 @@
 {
   "keyboard": "reviung34",
-  "keymap": "default_8cf1491",
-  "commit": "8cf1491d04f96f3ab4bedac408c434e8e50adf7d",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_reviung34",
   "layers": [
     [
