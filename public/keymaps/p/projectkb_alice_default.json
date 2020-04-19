@@ -1,7 +1,7 @@
 {
   "keyboard": "projectkb/alice",
-  "keymap": "default_c2f9e01",
-  "commit": "c2f9e018abbbb1aa8029001fe224b6082127e3a7",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_default",
   "layers": [
     [
