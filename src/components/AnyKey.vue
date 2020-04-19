@@ -65,7 +65,7 @@ export default {
     focus() {
       this.stopListening();
       this.hasFocus = true;
-      this.charLength = this.value.length;
+      this.charLength = this.value ? this.value.length : 3;
       this.$refs.input.selectionStart = this.$refs.input.selectionEnd = 1000;
     },
     updateWidth(value) {
