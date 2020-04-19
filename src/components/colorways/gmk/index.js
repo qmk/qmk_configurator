@@ -32,8 +32,6 @@ export default [
   gmk_bingsu,
   gmk_cafe,
   gmk_calm_depths,
-  // gmk_camping,
-  // gmk_coral,
   gmk_dolch,
   gmk_jamon,
   gmk_merlin,
