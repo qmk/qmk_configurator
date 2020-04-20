@@ -146,6 +146,9 @@ const lookup = {
   'westfoxtrot/cypher': {
     target: 'westfoxtrot/cypher/rev1'
   },
+  yd60mq: {
+    target: 'yd60mq/12led'
+  },
   zeal60: {
     target: 'wilba_tech/zeal60'
   },

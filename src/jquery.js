@@ -527,6 +527,7 @@ function getExclusionList() {
     'treadstone48',
     'uzu42',
     'vitamins_included',
+    'yd60mq',
     'yosino58',
     'zinc'
   ].reduce((acc, k) => {
