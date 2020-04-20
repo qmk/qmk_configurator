@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/bdn9",
-  "keymap": "default_b2ee290",
-  "commit": "b2ee290c9f506e42dd9c4577c8147646c405aeb0",
+  "keymap": "default",
+  "commit": "c7f8548d9af2045996294602d2a4bd9a214ae23c",
   "layout": "LAYOUT",
   "layers": [
     [

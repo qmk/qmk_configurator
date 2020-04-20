@@ -1,7 +1,7 @@
 {
   "keyboard": "novelpad",
-  "keymap": "default_e2d3c92",
-  "commit": "e2d3c92199d6cc42a39c5d8729dfff61d78dd7d1",
+  "keymap": "default",
+  "commit": "fcf87370a835942681592891dcab6b3a0809bb1f",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "MO(1)",   "KC_P0",   "KC_PDOT", "KC_ENT"
     ],
     [
-      "KC_TRNS",  "BL_STEP",  "RGB_M_SW", "RESET",
-      "RGB_TOG",  "RGB_MOD",  "RGB_M_P",  "RGB_M_SN",
-      "RGB_HUI",  "RGB_SAI",  "RGB_VAI",  "RGB_M_K",
-      "RGB_HUD",  "RGB_SAD",  "RGB_VAD",  "RGB_M_X",
-      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS"
+      "KC_TRNS", "BL_STEP", "RGB_M_SW","RESET",
+      "RGB_TOG", "RGB_MOD", "RGB_M_P", "RGB_M_SN",
+      "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_M_K",
+      "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_M_X",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }

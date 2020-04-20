@@ -1,7 +1,7 @@
 {
   "keyboard": "lets_split_eh/eh",
-  "keymap": "default_cb14965",
-  "commit": "cb149650efd07cbdc3cacb1fe2eb58f17eee5965",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -29,10 +29,10 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [
-      "LCTL(LSFT(KC_ESC))", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "RGB_SAI", "RGB_HUI", "LCTL(LALT(KC_DEL))",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_TOG",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "BL_STEP",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
+      "LCTL(LSFT(KC_ESC))", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_MOD",  "RGB_VAI", "RGB_SAI", "RGB_HUI", "LCTL(LALT(KC_DEL))",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_RMOD", "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_TOG",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "BL_STEP",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
     ]
   ]
 }

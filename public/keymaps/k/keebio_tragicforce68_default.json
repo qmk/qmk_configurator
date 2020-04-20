@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/tragicforce68",
-  "keymap": "default_b2ee290",
-  "commit": "b2ee290c9f506e42dd9c4577c8147646c405aeb0",
+  "keymap": "default",
+  "commit": "78954a0d3e09bd7e15779c5abbf27d428ec1b33c",
   "layout": "LAYOUT_68_ansi",
   "layers": [
     [

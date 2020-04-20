@@ -1,7 +1,7 @@
 {
   "keyboard": "tanuki",
-  "keymap": "default_586bd92",
-  "commit": "586bd92ea74a1345b4de5422f25bb8618c20eea3",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [

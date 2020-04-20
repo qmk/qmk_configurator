@@ -1,7 +1,7 @@
 {
   "keyboard": "primekb/prime_r",
-  "keymap": "default_e2d3c92",
-  "commit": "e2d3c92199d6cc42a39c5d8729dfff61d78dd7d1",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [

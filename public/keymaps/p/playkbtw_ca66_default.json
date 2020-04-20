@@ -1,7 +1,7 @@
 {
   "keyboard": "playkbtw/ca66",
-  "keymap": "default_74d8683",
-  "commit": "74d86832c3ff5107daa015bdb7709af6256a462c",
+  "keymap": "default",
+  "commit": "fc5fb2fc1598bd07cafb97b35100237506592d9d",
   "layout": "LAYOUT",
   "layers": [
     [

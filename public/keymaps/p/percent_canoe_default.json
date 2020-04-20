@@ -1,7 +1,7 @@
 {
   "keyboard": "percent/canoe",
-  "keymap": "default_8ddebce",
-  "commit": "8ddebce2d7d42eedbafae5b92dff1af229115fac",
+  "keymap": "default",
+  "commit": "78954a0d3e09bd7e15779c5abbf27d428ec1b33c",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

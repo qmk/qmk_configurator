@@ -1,7 +1,7 @@
 {
   "keyboard": "jj40",
-  "keymap": "default_91b18e2",
-  "commit": "91b18e263f6373994613c290129e49f18e17cef1",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_planck_mit",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "orthodox/rev3",
-  "keymap": "default_e2d3c92",
-  "commit": "e2d3c92199d6cc42a39c5d8729dfff61d78dd7d1",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
 	[

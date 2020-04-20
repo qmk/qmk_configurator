@@ -1,7 +1,7 @@
 {
   "keyboard": "runner3680/3x6",
-  "keymap": "default_872480d",
-  "commit": "872480dde2ba4713a96404d1a0a55db71a9d1b9b",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [

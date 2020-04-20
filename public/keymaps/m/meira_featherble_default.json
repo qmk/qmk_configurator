@@ -1,7 +1,7 @@
 {
   "keyboard": "meira/featherble",
-  "keymap": "default_0072fdd",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

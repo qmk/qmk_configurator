@@ -1,7 +1,7 @@
 {
   "keyboard": "yosino58/rev1",
-  "keymap": "default_dc570b0",
-  "commit": "dc570b0b389d23b8ea8b46311294a7040b5e1e44",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [
