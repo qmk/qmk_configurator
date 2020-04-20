@@ -149,6 +149,9 @@ const lookup = {
   yd60mq: {
     target: 'yd60mq/12led'
   },
+  ymd75: {
+    target: 'ymd75/rev1'
+  },
   zeal60: {
     target: 'wilba_tech/zeal60'
   },
