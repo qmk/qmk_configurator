@@ -511,6 +511,7 @@ function getExclusionList() {
     'planck',
     'preonic',
     'primekb/prime_l',
+    'projectkb/alice',
     'ps2avrGB',
     'qwertyydox',
     'redox',

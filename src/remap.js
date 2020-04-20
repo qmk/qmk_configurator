@@ -96,6 +96,9 @@ const lookup = {
   'primekb/prime_l_v2': {
     target: 'primekb/prime_l/v2'
   },
+  'projectkb/alice': {
+    target: 'projectkb/alice/rev1'
+  },
   'rama/koyu': {
     target: 'wilba_tech/rama_works_koyu'
   },
