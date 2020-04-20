@@ -1,7 +1,7 @@
 {
   "keyboard": "westfoxtrot/cypher/rev1",
-  "keymap": "default_2308680",
-  "commit": "23086808a78c9234232e2ddbf0c977d1fb2cb6ae",
+  "keymap": "default",
+  "commit": "a561443fcacc75ce6b389bd0831af85a2d104f11",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
