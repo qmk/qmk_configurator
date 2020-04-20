@@ -1,7 +1,7 @@
 {
   "keyboard": "vitamins_included/rev2",
-  "keymap": "default_19a8501",
-  "commit": "19a85015c2b4c9b4a7196f5be73a16ceec5a4f31",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
