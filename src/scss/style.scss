@@ -590,6 +590,7 @@ button {
 
 .key-layer-input {
   width: 24px;
+  min-width: 24px;
   height: 24px;
   border-radius: 2px;
   border: 1px solid;
@@ -599,6 +600,18 @@ button {
   -webkit-box-sizing: border-box;
   padding: 1px;
   text-align: center;
+  transition: width 100ms ease-out;
+  &:focus {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -7px);
+    z-index: 2;
+    transition: width 0ms linear;
+  }
+}
+.key-layer-title-focus {
+  padding-bottom: 24px;
 }
 
 #keycodes {
