@@ -1,7 +1,7 @@
 {
   "keyboard": "sirius/unigo66",
-  "keymap": "default_76da6ec",
-  "commit": "76da6ec0618a95afe956ae43f47ef173774cf8ae",
+  "keymap": "default",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
   "layout": "LAYOUT",
   "layers": [
     [
