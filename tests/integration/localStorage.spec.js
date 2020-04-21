@@ -30,7 +30,16 @@ describe('Simple browsing', function() {
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
-    cy.visit('/');
+    cy.visit('/', {
+      onBeforeLoad(win) {
+        // force false, even if OS has requested change
+        cy.stub(win, 'matchMedia')
+          .withArgs('(prefers-color-scheme: dark)')
+          .returns({
+            matches: false
+          });
+      }
+    });
     cy.clearLocalStorage();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should(
       'not.be.visible'
