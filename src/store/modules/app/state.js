@@ -6,7 +6,7 @@ import {
 
 function setDefaultConfiguratorSettings() {
   // detect if OS supports dark mode and set as default
-  let osDarkMode =
+  const osDarkMode =
     window.matchMedia &&
     window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialConfig = {
