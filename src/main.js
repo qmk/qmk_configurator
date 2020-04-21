@@ -44,7 +44,9 @@ import {
   faStar,
   faChevronUp,
   faSearch,
-  faQuestionCircle
+  faQuestionCircle,
+  faVolumeMute,
+  faVolumeUp
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -92,7 +94,9 @@ const icons = [
   faUndo,
   faUpload,
   faWindows,
-  faQuestionCircle
+  faQuestionCircle,
+  faVolumeUp,
+  faVolumeMute
 ];
 library.add(...icons);
 
