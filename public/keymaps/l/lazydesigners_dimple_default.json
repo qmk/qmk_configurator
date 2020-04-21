@@ -1,7 +1,7 @@
 {
   "keyboard": "lazydesigners/dimple",
-  "keymap": "default_f7caca5",
-  "commit": "f7caca51f60d8b02a7cdcc16acfaa3d794f70bed",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [

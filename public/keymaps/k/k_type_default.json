@@ -1,7 +1,7 @@
 {
   "keyboard": "k_type",
-  "keymap": "default_0072fdd",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "keymap": "default",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
   "layout": "KEYMAP",
   "layers": [
     [

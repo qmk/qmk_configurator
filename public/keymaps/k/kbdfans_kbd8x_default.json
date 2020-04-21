@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbd8x",
-  "keymap": "default_b49dbf9",
-  "commit": "b49dbf9b19264e7558253a34ca737dcd301487b1",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT_all",
   "layers": [
     [

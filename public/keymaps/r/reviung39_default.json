@@ -1,7 +1,7 @@
 {
   "keyboard": "reviung39",
-  "keymap": "default_b7ddf64",
-  "commit": "b7ddf64b547f48f7fd47937a5b33561f0090cd7c",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT_reviung39",
   "layers": [
     [

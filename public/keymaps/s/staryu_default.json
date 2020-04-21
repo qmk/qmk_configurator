@@ -1,7 +1,7 @@
 {
   "keyboard": "staryu",
-  "keymap": "default_9ef21d2",
-  "commit": "9ef21d2e1c26b4153368fb3fe887ea7117c5b49b",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [

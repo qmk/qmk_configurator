@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/rorschach/rev1",
-  "keymap": "default_b2ee290",
-  "commit": "b2ee290c9f506e42dd9c4577c8147646c405aeb0",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [

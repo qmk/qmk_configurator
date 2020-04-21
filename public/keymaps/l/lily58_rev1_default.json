@@ -1,7 +1,7 @@
 {
   "keyboard": "lily58/rev1",
-  "keymap": "defaultish_28e182b",
-  "commit": "28e182bc8a2976562e0d76a1332527e0a4be81ea",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [

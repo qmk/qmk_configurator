@@ -1,7 +1,7 @@
 {
   "keyboard": "melody96",
-  "keymap": "default_118e948",
-  "commit": "118e948e355b784b22f94378b5f85285e6dd4634",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
   "layout": "LAYOUT",
   "layers": [
     [

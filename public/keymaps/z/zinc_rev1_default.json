@@ -1,7 +1,7 @@
 {
   "keyboard": "zinc/rev1",
-  "keymap": "default_23cd9f4",
-  "commit": "23cd9f4dee791464196faaf6692599325cfe6f3c",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

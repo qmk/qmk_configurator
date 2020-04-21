@@ -1,4 +1,11 @@
+import gmk_8008 from './8008';
+import gmk_9009 from './9009';
+import gmk_analog_dreams from './analog_dreams';
+import gmk_ascii from './ascii';
 import gmk_bento from './bento';
+import gmk_bingsu from './bingsu';
+import gmk_cafe from './cafe';
+import gmk_calm_depths from './calm_depths';
 import gmk_dolch from './dolch';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
@@ -17,7 +24,14 @@ import gmk_wob from './wob';
 import gmk_yuri from './yuri';
 
 export default [
+  gmk_8008,
+  gmk_9009,
+  gmk_analog_dreams,
+  gmk_ascii,
   gmk_bento,
+  gmk_bingsu,
+  gmk_cafe,
+  gmk_calm_depths,
   gmk_dolch,
   gmk_jamon,
   gmk_merlin,
