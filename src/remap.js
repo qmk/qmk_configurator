@@ -96,6 +96,9 @@ const lookup = {
   'primekb/prime_l_v2': {
     target: 'primekb/prime_l/v2'
   },
+  'projectkb/alice': {
+    target: 'projectkb/alice/rev1'
+  },
   'rama/koyu': {
     target: 'wilba_tech/rama_works_koyu'
   },
@@ -142,6 +145,12 @@ const lookup = {
   },
   'westfoxtrot/cypher': {
     target: 'westfoxtrot/cypher/rev1'
+  },
+  yd60mq: {
+    target: 'yd60mq/12led'
+  },
+  ymd75: {
+    target: 'ymd75/rev1'
   },
   zeal60: {
     target: 'wilba_tech/zeal60'

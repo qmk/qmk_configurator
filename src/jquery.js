@@ -511,6 +511,7 @@ function getExclusionList() {
     'planck',
     'preonic',
     'primekb/prime_l',
+    'projectkb/alice',
     'ps2avrGB',
     'qwertyydox',
     'redox',
@@ -526,6 +527,8 @@ function getExclusionList() {
     'treadstone48',
     'uzu42',
     'vitamins_included',
+    'yd60mq',
+    'ymd75',
     'yosino58',
     'zinc'
   ].reduce((acc, k) => {
