@@ -173,17 +173,19 @@ const longFormKeycodes = {
   KC_MS_ACCEL2: 'KC_ACL2',
 
   // Modifiers
-  'C(kc)': 'LCTL(kc)',
-  'S(kc)': 'LSFT(kc)',
-  'A(kc)': 'LALT(kc)',
-  'G(kc)': 'LGUI(kc)',
-  'LCMD(kc)': 'LGUI(kc)',
-  'LWIN(kc)': 'LGUI(kc)',
-  'RALT(kc)': 'ALGR(kc)',
-  'RCMD(kc)': 'RGUI(kc)',
-  'RWIN(kc)': 'RGUI(kc)',
-  'SCMD(kc)': 'SGUI(kc)',
-  'SWIN(kc)': 'SGUI(kc)',
+  // Change short-form mod wrappers to long-form
+  // e.g. C(kc) to LCTL(kc)
+  C: 'LCTL',
+  S: 'LSFT',
+  A: 'LALT',
+  G: 'LGUI',
+  LCMD: 'LGUI',
+  LWIN: 'LGUI',
+  ALGR: 'RALT',
+  RCMD: 'RGUI',
+  RWIN: 'RGUI',
+  SCMD: 'SGUI',
+  SWIN: 'SGUI',
 
   // RGB Lighting
   RGB_MODE_FORWARD: 'RGB_MOD',

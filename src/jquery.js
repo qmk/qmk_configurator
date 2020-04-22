@@ -368,6 +368,9 @@ function parseKeycode(keycode, stats) {
     let key, outerKeycode;
     let splitcode = keycode.split('(');
     let maincode = splitcode[0];
+    if (longFormKeycodes[maincode]) {
+      maincode = longFormKeycodes[maincode];
+    }
     let internal = splitcode[1];
     internal = internal.split(')')[0];
 
