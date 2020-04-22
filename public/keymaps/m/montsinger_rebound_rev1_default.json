@@ -1,7 +1,7 @@
 {
-  "keyboard": "montsinger/rebound",
-  "keymap": "default_dd2b793",
-  "commit": "dd2b793c0c288509de7ca9d2e16c2cb4e3f8d267",
+  "keyboard": "montsinger/rebound/rev1",
+  "keymap": "default",
+  "commit": "738c6612ca0c5d0d95195af259abb1b6e3995b9b",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
