@@ -5,9 +5,13 @@ import {
 } from '@/store/localStorage';
 
 function setDefaultConfiguratorSettings() {
+  // detect if OS supports dark mode and set as default
+  const osDarkMode =
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialConfig = {
     version: CONSTS.configuratorSettingsVersion,
-    darkmodeEnabled: false,
+    darkmodeEnabled: osDarkMode,
     favoriteKeyboard: '',
     favoriteColor: ''
   };
