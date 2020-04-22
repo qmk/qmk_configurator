@@ -230,4 +230,4 @@ const longFormKeycodes = {
   UNICODE_MODE_WINC: 'UC_M_WC'
 };
 
-export default { longFormKeycodes };
+export { longFormKeycodes };

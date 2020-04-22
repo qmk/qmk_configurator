@@ -8,9 +8,8 @@ import first from 'lodash/first';
 import keys from 'lodash/keys';
 import values from 'lodash/values';
 import * as keypress from 'keypress.js';
-import longFormKeycodes from './longFormKeycodes';
 
-
+import { longFormKeycodes } from './longFormKeycodes';
 import { backend_compile_url } from './store/modules/constants';
 
 let keypressListener;
@@ -359,8 +358,11 @@ function parseKeycode(keycode, stats) {
   stats.count += 1;
 
   // Check if the keycode is long-form or alternate
+  console.log(keycode);
   if (longFormKeycodes[keycode]) {
-    console.log("Remapping" + keycode + ' to ' + longFormKeycodes[keycode] + "...");
+    console.log(
+      'Remapping ' + keycode + ' to ' + longFormKeycodes[keycode] + '...'
+    );
     keycode = longFormKeycodes[keycode];
   }
 
