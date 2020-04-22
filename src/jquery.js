@@ -359,9 +359,6 @@ function parseKeycode(keycode, stats) {
 
   // Check if the keycode is long-form or alternate
   if (longFormKeycodes[keycode]) {
-    console.log(
-      'Remapping ' + keycode + ' to ' + longFormKeycodes[keycode] + '...'
-    );
     keycode = longFormKeycodes[keycode];
   }
 
