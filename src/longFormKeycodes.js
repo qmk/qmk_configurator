@@ -75,7 +75,7 @@ const longFormKeycodes = {
   KC_LWIN: 'KC_LGUI',
   KC_RCTRL: 'KC_RCTL',
   KC_RSHIFT: 'KC_RSFT',
-  KC_RALT: 'KC_ALGR',
+  KC_ALGR: 'KC_RALT',
   KC_RCMD: 'KC_RGUI',
   KC_RWIN: 'KC_RGUI',
   KC_SYSTEM_POWER: 'KC_PWR',
