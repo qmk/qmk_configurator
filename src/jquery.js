@@ -9,6 +9,7 @@ import keys from 'lodash/keys';
 import values from 'lodash/values';
 import * as keypress from 'keypress.js';
 
+import { longFormKeycodes } from './longFormKeycodes';
 import { backend_compile_url } from './store/modules/constants';
 
 let keypressListener;
@@ -356,12 +357,20 @@ function parseKeycode(keycode, stats) {
   keycode = stripANY(keycode);
   stats.count += 1;
 
+  // Check if the keycode is long-form or alternate
+  if (longFormKeycodes[keycode]) {
+    keycode = longFormKeycodes[keycode];
+  }
+
   // Check if the keycode is a complex/combo keycode ie. contains ()
   if (keycode.includes('(')) {
     // Pull the keycode and or layer from within the brackets
     let key, outerKeycode;
     let splitcode = keycode.split('(');
     let maincode = splitcode[0];
+    if (longFormKeycodes[maincode]) {
+      maincode = longFormKeycodes[maincode];
+    }
     let internal = splitcode[1];
     internal = internal.split(')')[0];
 
