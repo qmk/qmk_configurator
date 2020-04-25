@@ -384,7 +384,11 @@ export default {
           const msg = this.$t('statsTemplate', stats);
           this.deferredMessage(msg);
           this.viewReadme(this.keyboard).then(() => {
-            this.setKeymapName(data.keymap);
+            let keymapName = data.keymap;
+            if (keymapName.endsWith('.json')) {
+              keymapName = keymapName.replace(/.json$/, '');
+            }
+            this.setKeymapName(keymapName);
             this.setDirty();
           });
         });
