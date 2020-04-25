@@ -1,4 +1,4 @@
-const longFormKeycodes = {
+export const longFormKeycodes = {
   KC_TRANSPARENT: 'KC_TRNS',
   _______: 'KC_TRNS',
   XXXXXXX: 'KC_NO',
@@ -231,5 +231,3 @@ const longFormKeycodes = {
   UNICODE_MODE_BSD: 'UC_M_BS',
   UNICODE_MODE_WINC: 'UC_M_WC'
 };
-
-export { longFormKeycodes };
