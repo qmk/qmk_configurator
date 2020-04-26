@@ -155,27 +155,7 @@ export default {
 
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::scale');
-      const layout = this.layouts[newLayout];
-      const max = layout.reduce(
-        (acc, pos) => {
-          let _pos = Object.assign({ w: 1, h: 1 }, pos);
-          const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
-          const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-          acc.x = Math.max(acc.x, coor.x + dims.w);
-          acc.y = Math.max(acc.y, coor.y + dims.h);
-          return acc;
-        },
-        {
-          x: 0,
-          y: 0
-        }
-      );
-      if (max.x > this.defaults.MAX_X) {
-        this.resizeConfig(max);
-        max.x *= this.config.SCALE;
-        max.y *= this.config.SCALE;
-      }
-      this.setSize(max);
+      this.setSize(this.calculateMax(newLayout));
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::scale');
     }
