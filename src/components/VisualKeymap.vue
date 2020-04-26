@@ -135,10 +135,6 @@ export default {
           return BaseKey;
       }
     },
-    setSize(max) {
-      this.width = max.x;
-      this.height = max.y;
-    },
     recalcEverything(newLayout) {
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::reset');
