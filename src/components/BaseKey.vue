@@ -44,6 +44,9 @@ export default {
     y: Number,
     x: Number,
     u: Number,
+    r: Number,
+    rx: Number,
+    ry: Number,
     colorway: String,
     displaySizes: {
       type: Boolean,
@@ -144,11 +147,26 @@ export default {
       if (this.h > 0) {
         styles.push(`height: ${this.h}px;`);
       }
-      if (this.y > 0) {
-        styles.push(`top: ${this.y}px;`);
-      }
-      if (this.x > 0) {
-        styles.push(`left: ${this.x}px;`);
+      if (this.r && this.r != 0) {
+        if (this.ry > 0) {
+          styles.push(`top: ${this.ry}px;`);
+        }
+        if (this.rx > 0) {
+          styles.push(`left: ${this.rx}px;`);
+        }
+        styles.push(
+          `transform: rotate(${this.r}deg) translateX(${Math.round(
+            this.x - this.rx,
+            3
+          )}px) translateY(${Math.round(this.y - this.ry, 3)}px);`
+        );
+      } else {
+        if (this.y > 0) {
+          styles.push(`top: ${this.y}px;`);
+        }
+        if (this.x > 0) {
+          styles.push(`left: ${this.x}px;`);
+        }
       }
       if (this.meta && this.meta.name.length >= 2) {
         let keySize = 0.61;

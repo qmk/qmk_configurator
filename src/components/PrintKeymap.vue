@@ -58,8 +58,14 @@ export default {
       this.profile && console.time('currentLayer');
       const colorway = this.colorway;
       let curLayer = layout.map((pos, index) => {
-        let _pos = Object.assign({ w: 1, h: 1 }, pos);
-        const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+        let _pos = Object.assign({ w: 1, h: 1, r: 0 }, pos);
+        const coor = this.calcKeyKeymapPos(
+          _pos.x,
+          _pos.y,
+          _pos.r,
+          _pos.rx,
+          _pos.ry
+        );
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
           {

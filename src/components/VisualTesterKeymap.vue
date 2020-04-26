@@ -147,8 +147,14 @@ export default {
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
       const curLayer = this.activeLayoutMeta.map((pos, index) => {
-        const _pos = Object.assign({ w: 1, h: 1 }, pos);
-        const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+        const _pos = Object.assign({ w: 1, h: 1, r: 0 }, pos);
+        const coor = this.calcKeyKeymapPos(
+          _pos.x,
+          _pos.y,
+          _pos.r,
+          _pos.rx,
+          _pos.ry
+        );
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
         return Object.assign(
           {
