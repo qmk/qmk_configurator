@@ -6,6 +6,7 @@ import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 import defaults from './config';
 import axios from 'axios';
+import { backend_skeletons_url } from './constants';
 
 const state = {
   keymap: [[]], // array of arrays
@@ -169,7 +170,7 @@ const actions = {
   },
   initTemplates({ commit }) {
     return axios
-      .get('https://api.clueboard.co/v1/skeletons/keymap')
+      .get(`${backend_skeletons_url}/keymap`)
       .then(resp => {
         if (resp.status === 200) {
           let template = Object.assign({}, resp.data);
