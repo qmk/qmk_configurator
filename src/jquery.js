@@ -509,6 +509,7 @@ function getExclusionList() {
     'mechmini',
     'meira',
     'minidox',
+    'montsinger/rebound',
     'naked48',
     'naked60',
     'naked64',

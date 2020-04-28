@@ -77,6 +77,9 @@ const lookup = {
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
+  'montsinger/rebound': {
+    target: 'montsinger/rebound/rev1'
+  },
   'noxary/268_2': {
     layouts: {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
