@@ -152,8 +152,8 @@ export default {
       }
       if (this.meta && this.meta.name.length >= 2) {
         let keySize = 0.61;
-        if ( this.config.SCALE < 1 ) {
-          keySize *= ( 1 + this.config.SCALE ) / 2;
+        if (this.config.SCALE < 1) {
+          keySize *= (1 + this.config.SCALE) / 2;
         }
         styles.push(`font-size: ${keySize}rem;`);
       }
