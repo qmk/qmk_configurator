@@ -179,8 +179,4 @@ textarea.optional-notes {
 .print-controls {
   padding-bottom: 20px;
 }
-
-.help {
-  display: none;
-}
 </style>
