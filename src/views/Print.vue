@@ -173,7 +173,8 @@ textarea.optional-notes {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
-  font-size: 12pt;
+  font-size: 14px;
+  width: 400px;
 }
 .print-controls {
   padding-bottom: 20px;
