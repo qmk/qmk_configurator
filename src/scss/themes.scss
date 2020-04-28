@@ -356,6 +356,9 @@ html[data-theme='dark'] {
   body {
     color: $qmk-white;
     background-color: $qmk-dark-bg;
+    th {
+      color: #bbb;
+    }
   }
   header h1 a {
     color: $qmk-grey-light;
