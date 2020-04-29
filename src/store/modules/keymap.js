@@ -315,7 +315,7 @@ const mutations = {
       KEY_X_SPACING,
       KEY_Y_SPACING
     } = state.config;
-    Vue.set(state.config, 'SCALE', (defaults.MAX_X / max.x).toFixed(3));
+    Vue.set(state.config, 'SCALE', (defaults.MAX_X / max.x).toFixed(3) * 1);
     Vue.set(state.config, 'KEY_WIDTH', (KEY_WIDTH *= state.config.SCALE));
     Vue.set(state.config, 'KEY_HEIGHT', (KEY_HEIGHT *= state.config.SCALE));
     Vue.set(
@@ -331,12 +331,12 @@ const mutations = {
     Vue.set(
       state.config,
       'KEY_X_SPACING',
-      (KEY_X_SPACING *= state.config.SCALE)
+      (KEY_X_SPACING *= state.config.SCALE).toFixed(3) * 1
     );
     Vue.set(
       state.config,
       'KEY_Y_SPACING',
-      (KEY_Y_SPACING *= state.config.SCALE)
+      (KEY_Y_SPACING *= state.config.SCALE).toFixed(3) * 1
     );
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
