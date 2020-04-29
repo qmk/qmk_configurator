@@ -356,8 +356,18 @@ html[data-theme='dark'] {
   body {
     color: $qmk-white;
     background-color: $qmk-dark-bg;
+    h3 {
+      color: #ddd;
+    }
     th {
       color: #bbb;
+    }
+    .print-keymap {
+      background: #464646;
+      border-color: #464646;
+      .key {
+        background-color: #353535;
+      }
     }
   }
   header h1 a {
