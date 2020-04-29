@@ -37,7 +37,9 @@
         <tr>
           <th>{{ i18n('source.title') }}</th>
           <td>
-            <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
+            <a :href="firmwareURL" target="_blank" :class="myclasses">{{
+              firmwareURL
+            }}</a>
           </td>
         </tr>
         <tr>
@@ -85,6 +87,13 @@ export default {
     },
     firmwareURL() {
       return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${this.keyboard}`;
+    },
+    myclasses() {
+      let classes = [];
+      if ((this.keyboard.match(/\//g) || []).length > 0) {
+        classes.push(`source-small`);
+      }
+      return classes.join(' ');
     },
     _author: {
       set(value) {
@@ -177,5 +186,9 @@ textarea.optional-notes {
 }
 .print-controls {
   padding-bottom: 20px;
+}
+
+.source-small {
+  font-size: 80%;
 }
 </style>
