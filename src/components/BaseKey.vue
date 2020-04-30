@@ -34,6 +34,65 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
+const _getUnitClass = (unit, rotated) => {
+  if (rotated) {
+    switch (unit) {
+      case 2:
+        return 'k2uh';
+      case 1.25:
+        'k125uh';
+        return 'k125uh';
+      case 1.5:
+        return 'k15uh';
+      case 1.75:
+        return 'k175uh';
+      default:
+        return 'kiso';
+    }
+  }
+  switch (unit) {
+    case 1:
+      return 'k1u';
+    case 1.25:
+      return 'k125u';
+    case 1.5:
+      return 'k15u';
+    case 1.75:
+      return 'k175u';
+    case 2:
+      return 'k2u';
+    case 2.25:
+      return 'k225u';
+    case 2.75:
+      return 'k275u';
+    case 3:
+      return 'k3u';
+    case 4:
+      return 'k4u';
+    case 6:
+      return 'k6u';
+    case 6.25:
+      return 'k625u';
+    case 7:
+      return 'k7u';
+    default:
+      return 'k1u';
+  }
+};
+
+const cache = new Map();
+
+const getUnitClass = (unit, rotated) => {
+  const key = `${unit}-${rotated}`;
+  let hit = cache.has(key);
+  if (hit) {
+    return cache.get(key);
+  }
+  const value = _getUnitClass(unit, rotated);
+  cache.set(key, value);
+  return value;
+};
+
 export default {
   name: 'base-key',
   props: {
@@ -113,7 +172,7 @@ export default {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      classes.push(this.getUnitClass(this.u, this.h > this.w));
+      classes.push(getUnitClass(this.u, this.h > this.w));
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode
@@ -160,49 +219,6 @@ export default {
       'setSelectedContent'
     ]),
     ...mapMutations('app', ['stopListening', 'startListening']),
-    getUnitClass(unit, rotated) {
-      if (rotated) {
-        switch (unit) {
-          case 2:
-            return 'k2uh';
-          case 1.25:
-            'k125uh';
-            return 'k125uh';
-          case 1.5:
-            return 'k15uh';
-          case 1.75:
-            return 'k175uh';
-          default:
-            return 'kiso';
-        }
-      }
-      switch (unit) {
-        case 1:
-          return 'k1u';
-        case 1.25:
-          return 'k125u';
-        case 1.5:
-          return 'k15u';
-        case 1.75:
-          return 'k175u';
-        case 2:
-          return 'k2u';
-        case 2.25:
-          return 'k225u';
-        case 2.75:
-          return 'k275u';
-        case 3:
-          return 'k3u';
-        case 6:
-          return 'k6u';
-        case 6.25:
-          return 'k625u';
-        case 7:
-          return 'k7u';
-        default:
-          return 'k1u';
-      }
-    },
     clicked() {
       let id = this.id;
       if (this.isSelected) {
@@ -355,6 +371,12 @@ export default {
 .k3u {
   width: calc(
     calc(2 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k4u {
+  width: calc(
+    calc(3 * var(--default-key-x-spacing)) + var(--default-key-width)
   );
   height: var(--default-key-height);
 }
