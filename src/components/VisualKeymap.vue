@@ -61,13 +61,6 @@ export default {
       'defaults'
     ]),
     ...mapState('app', ['layout', 'layouts', 'previewRequested']),
-    styles() {
-      let styles = [];
-      styles.push(`width: ${this.width}px;`);
-      styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * 0.4}rem;`);
-      return styles.join('');
-    },
     currentLayer() {
       const layout = this.layouts[this.layout];
       const keymap = this.getLayer(this.layer);

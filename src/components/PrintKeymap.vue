@@ -36,14 +36,7 @@ export default {
       'colorway',
       'defaults'
     ]),
-    ...mapState('app', ['layout', 'layouts', 'previewRequested']),
-    styles() {
-      let styles = [];
-      styles.push(`width: ${this.width}px;`);
-      styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
-      return styles.join('');
-    }
+    ...mapState('app', ['layout', 'layouts', 'previewRequested'])
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),

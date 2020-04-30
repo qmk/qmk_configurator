@@ -109,6 +109,9 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
+      if (this.meta && this.meta.name.length >= 2) {
+        classes.push('smaller');
+      }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
@@ -150,13 +153,7 @@ export default {
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
       }
-      if (this.meta && this.meta.name.length >= 2) {
-        let keySize = 0.61;
-        if (this.config.SCALE < 1) {
-          keySize *= (1 + this.config.SCALE) / 2;
-        }
-        styles.push(`font-size: ${keySize}rem;`);
-      }
+
       return styles.join('');
     }
   },
@@ -262,11 +259,12 @@ export default {
   transform: scale(0.8);
 }
 .key.smaller {
-  font-size: 0.61rem;
+  font-size: var(--default-smaller-key-font-size);
 }
 .key {
   border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
+  font-size: var(--default-key-font-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 120%;
