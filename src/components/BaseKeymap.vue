@@ -12,6 +12,10 @@ export default {
       return {
         '--default-smaller-key-font-size': `${smolKeySize}rem`,
         '--default-key-font-size': `${keySize}rem`,
+        '--default-key-height': `${this.config.KEY_HEIGHT}px`,
+        '--default-key-width': `${this.config.KEY_WIDTH}px`,
+        '--default-key-x-spacing': `${this.config.KEY_X_SPACING}px`,
+        '--default-key-y-spacing': `${this.config.KEY_Y_SPACING}px`,
         width: `${this.width}px`,
         height: `${this.height}px`
       };
