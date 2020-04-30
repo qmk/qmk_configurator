@@ -29,10 +29,13 @@ export default {
         u: h > w ? h : w
       };
     },
-    calcKeyKeymapPos(x, y) {
+    calcKeyKeymapPos(x, y, r, rx, ry) {
       return {
         x: x * this.config.KEY_X_SPACING,
-        y: y * this.config.KEY_Y_SPACING
+        y: y * this.config.KEY_Y_SPACING,
+        r: r,
+        rx: rx * this.config.KEY_X_SPACING,
+        ry: ry * this.config.KEY_Y_SPACING
       };
     },
     setSize(max) {
@@ -43,10 +46,16 @@ export default {
       const layoutArray = this.layouts[layout];
       const max = layoutArray.reduce(
         (acc, pos) => {
-          let _pos = Object.assign({ w: 1, h: 1 }, pos);
-          const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
+          let _pos = Object.assign({ w: 1, h: 1, r: 0, rx: 0, ry: 0 }, pos);
+          const coor = this.calcKeyKeymapPos(
+            _pos.x,
+            _pos.y,
+            _pos.r,
+            _pos.rx,
+            _pos.ry
+          );
           const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
-          acc.x = Math.max(acc.x, coor.x + dims.w);
+          acc.x = Math.max(acc.x, coor.x + dims.w); // TODO: use sin,cos with coor.x,y (icluding w/h)
           acc.y = Math.max(acc.y, coor.y + dims.h);
           return acc;
         },
