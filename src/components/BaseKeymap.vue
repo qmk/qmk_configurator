@@ -3,7 +3,7 @@ export default {
   name: 'base-keymap',
   computed: {
     styles() {
-      let keySize = 0.8;
+      let keySize = 0.85;
       let smolKeySize = 0.61;
       if (this.config.SCALE < 1) {
         keySize *= (1 + this.config.SCALE) / 2;
