@@ -121,13 +121,6 @@ export default {
       'activeLayoutMeta',
       'codeToPosition'
     ]),
-    styles() {
-      const styles = [];
-      styles.push(`width: ${this.width}px;`);
-      styles.push(`height: ${this.height}px;`);
-      styles.push(`font-size: ${this.fontsize * this.config.SCALE}em;`);
-      return styles.join('');
-    },
     layout: {
       get() {
         return this.$store.state.tester.layout;

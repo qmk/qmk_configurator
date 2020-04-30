@@ -1,6 +1,22 @@
 <script>
 export default {
   name: 'base-keymap',
+  computed: {
+    styles() {
+      let keySize = 0.85;
+      let smolKeySize = 0.61;
+      if (this.config.SCALE < 1) {
+        keySize *= (1 + this.config.SCALE) / 2;
+        smolKeySize *= (1 + this.config.SCALE) / 2;
+      }
+      return {
+        '--default-smaller-key-font-size': `${smolKeySize}rem`,
+        '--default-key-font-size': `${keySize}rem`,
+        width: `${this.width}px`,
+        height: `${this.height}px`
+      };
+    }
+  },
   methods: {
     calcKeyKeymapDims(w, h) {
       return {
