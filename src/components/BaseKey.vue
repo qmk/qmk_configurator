@@ -44,6 +44,7 @@ export default {
     y: Number,
     x: Number,
     u: Number,
+    enter: Boolean,
     colorway: String,
     displaySizes: {
       type: Boolean,
@@ -137,14 +138,17 @@ export default {
           classes.push(`${this.colorway}-key`);
         }
       }
+      if (this.enter) {
+        classes.push("kiso")
+      }
       return classes.join(' ');
     },
     mystyles() {
       let styles = [];
-      if (this.w > 0) {
+      if (! this.enter && this.w > 0) {
         styles.push(`width: ${this.w}px;`);
       }
-      if (this.h > 0) {
+      if (!this.enter && this.h > 0) {
         styles.push(`height: ${this.h}px;`);
       }
       if (this.y > 0) {
@@ -272,5 +276,32 @@ export default {
     0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.key.kiso {
+  width: calc(
+    0.5 * var(--default-key-x-spacing) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+
+  padding: 0px;
+  margin-left: calc(var(--default-key-x-spacing) * -0.25);
+  border-radius: 6px 6px 0px 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+}
+.kiso::after {
+  background: inherit;
+  position: absolute;
+  content: '';
+
+  right: -1px;
+  top: var(--default-key-height);
+  height: var(--default-key-x-spacing);
+  width: calc(1.25 * var(--default-key-width));
+  border-radius: 0px 0px 6px 6px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 2px 0px 1px;
 }
 </style>
