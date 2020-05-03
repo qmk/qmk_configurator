@@ -132,7 +132,7 @@ export default {
     displayName() {
       if (this.displaySizes) {
         return this.uh > this.uw
-          ? this.u === 1
+          ? this.uw === 1
             ? this.uh
             : `${this.uw} /\n ${this.uh}`
           : this.uw;
@@ -175,7 +175,7 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta && this.meta.name.length >= 2) {
+      if (this.meta && this.meta.name.length >= 2 && !this.displaySizes) {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
