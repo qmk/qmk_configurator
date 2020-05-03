@@ -34,9 +34,12 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
-const _getUnitClass = (unit, rotated) => {
-  if (rotated) {
-    switch (unit) {
+const _getUnitClass = (unith, unitw) => {
+  if (unith > unitw) {
+    if (unith === 2 && unitw == 1.25) {
+      return 'kiso';
+    }
+    switch (unith) {
       case 2:
         return 'k2uh';
       case 1.25:
@@ -47,10 +50,9 @@ const _getUnitClass = (unit, rotated) => {
       case 1.75:
         return 'k175uh';
       default:
-        return 'kiso';
     }
   }
-  switch (unit) {
+  switch (unitw) {
     case 1:
       return 'k1u';
     case 1.25:
@@ -82,13 +84,13 @@ const _getUnitClass = (unit, rotated) => {
 
 const cache = new Map();
 
-const getUnitClass = (unit, rotated) => {
-  const key = `${unit}-${rotated}`;
+const getUnitClass = (unitheight, unitwidth) => {
+  const key = `${unitheight}-${unitwidth}`;
   let hit = cache.has(key);
   if (hit) {
     return cache.get(key);
   }
-  const value = _getUnitClass(unit, rotated);
+  const value = _getUnitClass(unitheight, unitwidth);
   cache.set(key, value);
   return value;
 };
@@ -102,7 +104,8 @@ export default {
     h: Number,
     y: Number,
     x: Number,
-    u: Number,
+    uh: Number,
+    uw: Number,
     colorway: String,
     displaySizes: {
       type: Boolean,
@@ -128,7 +131,11 @@ export default {
     },
     displayName() {
       if (this.displaySizes) {
-        return this.u;
+        return this.uh > this.uw
+          ? this.u === 1
+            ? this.uh
+            : `${this.uw} /\n ${this.uh}`
+          : this.uw;
       }
       if (isUndefined(this.meta)) {
         return;
@@ -172,7 +179,7 @@ export default {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      classes.push(getUnitClass(this.u, this.h > this.w));
+      classes.push(getUnitClass(this.uh, this.uw));
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode

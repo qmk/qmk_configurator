@@ -30,7 +30,8 @@ export default {
         h:
           h * this.config.KEY_Y_SPACING -
           (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT),
-        u: h > w ? h : w
+        uh: h,
+        uw: w
       };
     },
     calcKeyKeymapPos(x, y) {
