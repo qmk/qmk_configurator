@@ -35,7 +35,7 @@ let substitute = Object.assign(
 );
 
 const _getUnitClass = (unith, unitw) => {
-  if (unith > unitw) {
+  if (unith > unitw || unith < 1) {
     if (unith === 2 && unitw == 1.25) {
       return 'kiso';
     }
@@ -50,6 +50,7 @@ const _getUnitClass = (unith, unitw) => {
       case 1.75:
         return 'k175uh';
       default:
+        return 'custom';
     }
   }
   switch (unitw) {
@@ -78,7 +79,7 @@ const _getUnitClass = (unith, unitw) => {
     case 7:
       return 'k7u';
     default:
-      return 'k1u';
+      return 'custom';
   }
 };
 
@@ -213,6 +214,13 @@ export default {
       }
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
+      }
+      if (getUnitClass(this.uh, this.uw) === 'custom') {
+        // explicitly override the height and width calculations for the keymap and provide custom values
+        styles = styles.concat([
+          `--default-key-height: ${this.config.KEY_HEIGHT * this.uh}px;`,
+          `--default-key-width: ${this.config.KEY_WIDTH * this.uw}px;`
+        ]);
       }
 
       return styles.join('');
@@ -410,6 +418,10 @@ export default {
   height: calc(
     calc(1 * var(--default-key-y-spacing)) + var(--default-key-height)
   );
+}
+.custom {
+  width: var(--default-key-width);
+  height: var(--default-key-height);
 }
 .k125uh {
   width: var(--default-key-width);
