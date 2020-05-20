@@ -34,6 +34,68 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
+const _getUnitClass = (unith, unitw) => {
+  if (unith > unitw || unith < 1) {
+    if (unith === 2 && unitw == 1.25) {
+      return 'kiso';
+    }
+    switch (unith) {
+      case 2:
+        return 'k2uh';
+      case 1.25:
+        'k125uh';
+        return 'k125uh';
+      case 1.5:
+        return 'k15uh';
+      case 1.75:
+        return 'k175uh';
+      default:
+        return 'custom';
+    }
+  }
+  switch (unitw) {
+    case 1:
+      return 'k1u';
+    case 1.25:
+      return 'k125u';
+    case 1.5:
+      return 'k15u';
+    case 1.75:
+      return 'k175u';
+    case 2:
+      return 'k2u';
+    case 2.25:
+      return 'k225u';
+    case 2.75:
+      return 'k275u';
+    case 3:
+      return 'k3u';
+    case 4:
+      return 'k4u';
+    case 6:
+      return 'k6u';
+    case 6.25:
+      return 'k625u';
+    case 7:
+      return 'k7u';
+    default:
+      return 'custom';
+  }
+};
+
+const cache = new Map();
+
+const getUnitClass = (unitheight, unitwidth) => {
+  const key = `${unitheight}-${unitwidth}`;
+  let hit = cache.has(key);
+  if (hit) {
+    return cache.get(key);
+  }
+  const value = _getUnitClass(unitheight, unitwidth);
+  cache.set(key, value);
+  return value;
+};
+
 export default {
   name: 'base-key',
   props: {
@@ -43,7 +105,8 @@ export default {
     h: Number,
     y: Number,
     x: Number,
-    u: Number,
+    uh: Number,
+    uw: Number,
     colorway: String,
     displaySizes: {
       type: Boolean,
@@ -69,7 +132,11 @@ export default {
     },
     displayName() {
       if (this.displaySizes) {
-        return this.u;
+        return this.uh > this.uw
+          ? this.uw === 1
+            ? this.uh
+            : `${this.uw} /\n ${this.uh}`
+          : this.uw;
       }
       if (isUndefined(this.meta)) {
         return;
@@ -109,10 +176,11 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta && this.meta.name.length >= 2) {
+      if (this.meta && this.meta.name.length >= 2 && !this.displaySizes) {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
+      classes.push(getUnitClass(this.uh, this.uw));
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode
@@ -141,17 +209,18 @@ export default {
     },
     mystyles() {
       let styles = [];
-      if (this.w > 0) {
-        styles.push(`width: ${this.w}px;`);
-      }
-      if (this.h > 0) {
-        styles.push(`height: ${this.h}px;`);
-      }
       if (this.y > 0) {
         styles.push(`top: ${this.y}px;`);
       }
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
+      }
+      if (getUnitClass(this.uh, this.uw) === 'custom') {
+        // explicitly override the height and width calculations for the keymap and provide custom values
+        styles = styles.concat([
+          `--default-key-height: ${this.config.KEY_HEIGHT * this.uh}px;`,
+          `--default-key-width: ${this.config.KEY_WIDTH * this.uw}px;`
+        ]);
       }
 
       return styles.join('');
@@ -272,5 +341,127 @@ export default {
     0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.k1u {
+  width: calc(var(--default-key-width));
+  height: calc(var(--default-key-height));
+}
+//(w - 1) * this.config.KEY_X_SPACING + this.config.KEY_WIDTH
+.k125u {
+  width: calc(
+    calc(0.25 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k15u {
+  width: calc(
+    calc(0.5 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k175u {
+  width: calc(
+    calc(0.75 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k2u {
+  width: calc(
+    calc(1 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k225u {
+  width: calc(
+    calc(1.25 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k275u {
+  width: calc(
+    calc(1.75 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k3u {
+  width: calc(
+    calc(2 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k4u {
+  width: calc(
+    calc(3 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k6u {
+  width: calc(
+    calc(5 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k625u {
+  width: calc(
+    calc(5.25 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k7u {
+  width: calc(
+    calc(6 * var(--default-key-x-spacing)) + var(--default-key-width)
+  );
+  height: var(--default-key-height);
+}
+.k2uh {
+  width: var(--default-key-width);
+  height: calc(
+    calc(1 * var(--default-key-y-spacing)) + var(--default-key-height)
+  );
+}
+.custom {
+  width: var(--default-key-width);
+  height: var(--default-key-height);
+}
+.k125uh {
+  width: var(--default-key-width);
+  height: calc(
+    calc(0.25 * var(--default-key-y-spacing)) + var(--default-key-height)
+  );
+}
+.k15uh {
+  width: var(--default-key-width);
+  height: calc(
+    calc(0.5 * var(--default-key-y-spacing)) + var(--default-key-height)
+  );
+}
+.k175uh {
+  width: var(--default-key-width);
+  height: calc(
+    calc(0.75 * var(--default-key-y-spacing)) + var(--default-key-height)
+  );
+}
+.key.kiso {
+  width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
+  height: var(--default-key-height);
+  padding: 0px;
+  margin-left: calc(var(--default-key-x-spacing) * -0.25);
+  border-radius: 6px 6px 0px 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+}
+.kiso::after {
+  background: inherit;
+  position: absolute;
+  content: '';
+  right: -1px;
+  top: var(--default-key-height);
+  height: var(--default-key-x-spacing);
+  width: calc(1.25 * var(--default-key-width));
+  border-radius: 0px 0px 6px 6px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 2px 0px 1px;
 }
 </style>

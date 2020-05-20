@@ -54,6 +54,12 @@ Start the server separatly
 yarn run test:cypress
 ```
 
+### Run your end-to-end tests like CI
+Start the server separatly
+```
+yarn run test:cypress:ci
+```
+
 ### Run your unit tests
 ```
 yarn run test:unit

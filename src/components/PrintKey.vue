@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     breakLines(name) {
-      if (this.u < 1.75) {
+      if (this.uw < 1.75) {
         name = name.replace(' ', '\n').replace('_', '_\n');
       }
       return name;
