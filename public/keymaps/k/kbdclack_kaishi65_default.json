@@ -1,7 +1,7 @@
 {
     "keyboard": "kbdclack/kaishi65",
     "keymap": "default",
-    "commit": "",
+    "commit": "5d01cc45be72381a60ffdfa6d1b84716d3a18470",
     "layout": "LAYOUT_65_ansi",
     "layers": [
       [
