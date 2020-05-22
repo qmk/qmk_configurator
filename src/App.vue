@@ -99,16 +99,16 @@ export default {
   },
   async beforeMount() {
     await this.appLoad();
+    this.randomPotatoFact();
+    this.interval = setInterval(() => {
+      this.randomPotatoFact();
+    }, this.interval);
   },
   created() {
     // will trigger function before closing/refreshing tab
     window.addEventListener('beforeunload', this.showConfirmationPrompt);
   },
   mounted() {
-    this.randomPotatoFact();
-    this.interval = setInterval(() => {
-      this.randomPotatoFact();
-    }, this.interval);
     this.destroyWatcher = this.$store.watch(
       state => state.app.settingsPanelVisible,
       this.toggleSettingsPanel
