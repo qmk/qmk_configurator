@@ -102,7 +102,7 @@ printKeymap:label,打印键位
 printKeymap:title,打印键位表
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
-settingsPanel:displaySizes:help,Show keycap sizes in Key Units
+settingsPanel:displaySizes:help,以按键单位显示键帽尺寸
 settingsPanel:displaySizes:label,显示按键尺寸
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,不敲击每个位置通过键盘输入按键
