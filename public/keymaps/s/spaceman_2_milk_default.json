@@ -1,7 +1,7 @@
 {
   "keyboard": "spaceman/2_milk",
-  "keymap": "default_45950bb",
-  "commit": "45950bb3b65fe7c499e653f0e68a0acae73d3029",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT",
   "layers": [
     [

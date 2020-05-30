@@ -1,7 +1,7 @@
 {
   "keyboard": "at101_bh",
-  "keymap": "default_190fcdd",
-  "commit": "190fcdde2620bcd2d94b58aa29fca3f5361ef40d",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT",
   "layers": [
     [
