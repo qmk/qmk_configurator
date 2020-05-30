@@ -1,7 +1,7 @@
 {
-  "keyboard": "tartan",
+  "keyboard": "dm9records/tartan",
   "keymap": "default",
-  "commit": "ef33befa06f13384c06405174eb370d11a31491f",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

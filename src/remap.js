@@ -1,4 +1,7 @@
 const lookup = {
+  '2_milk': {
+    target: 'spaceman/2_milk'
+  },
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
@@ -10,6 +13,9 @@ const lookup = {
   },
   angel64: {
     target: 'angel64/alpha'
+  },
+  at101_blackheart: {
+    target: 'at101_bh'
   },
   'atom47/rev2': {
     target: 'maartenwut/atom47/rev2'
@@ -50,6 +56,9 @@ const lookup = {
   'dztech/dz65rgb': {
     target: 'dztech/dz65rgb/v1'
   },
+  ergoinu: {
+    target: 'dm9records/ergoinu'
+  },
   gh60: {
     target: 'gh60/revc'
   },
@@ -77,6 +86,9 @@ const lookup = {
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
+  model01: {
+    target: 'keyboardio/model01'
+  },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
   },
@@ -85,10 +97,22 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  omnikey_blackheart: {
+    target: 'omnikey_bh'
+  },
+  'pancake/feather': {
+    target: 'spaceman/pancake/feather'
+  },
+  'pancake/promicro': {
+    target: 'spaceman/pancake/promicro'
+  },
   'percent/canoe': {
     layouts: {
       LAYOUT_iso: 'LAYOUT_65_iso_blocker'
     }
+  },
+  plaid: {
+    target: 'dm9records/plaid'
   },
   plain60: {
     target: 'maartenwut/plain60'
@@ -138,6 +162,9 @@ const lookup = {
   ta65: {
     target: 'maartenwut/ta65'
   },
+  tartan: {
+    target: 'dm9records/tartan'
+  },
   vinta: {
     layouts: {
       LAYOUT_67_ansi: 'LAYOUT_65_ansi_blocker'
@@ -154,6 +181,9 @@ const lookup = {
   },
   ymd75: {
     target: 'ymd75/rev1'
+  },
+  z150_blackheart: {
+    target: 'z150_bh'
   },
   zeal60: {
     target: 'wilba_tech/zeal60'

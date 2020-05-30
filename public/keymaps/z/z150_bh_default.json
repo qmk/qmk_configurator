@@ -1,7 +1,7 @@
 {
-  "keyboard": "z150_blackheart",
-  "keymap": "default_ec30229",
-  "commit": "ec302295b695e43c5967a6f806c4b4505c651e13",
+  "keyboard": "z150_bh",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT",
   "layers": [
     [

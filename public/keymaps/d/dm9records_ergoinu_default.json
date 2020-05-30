@@ -1,7 +1,7 @@
 {
-  "keyboard": "ergoinu",
-  "keymap": "default_303ca46",
-  "commit": "303ca46e77965700de40b0b1d1b41284b2ff7811",
+  "keyboard": "dm9records/ergoinu",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT",
   "layers": [
     [
