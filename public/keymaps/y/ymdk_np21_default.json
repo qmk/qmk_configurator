@@ -1,6 +1,6 @@
 {
   "keyboard": "ymdk_np21",
-  "keymap": "default_b628290",
+  "keymap": "default",
   "commit": "b62829031de1ae2e5e1efaa35606981c04c443c3",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [

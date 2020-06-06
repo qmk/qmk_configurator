@@ -1,6 +1,6 @@
 {
   "keyboard": "ymdk/bface",
-  "keymap": "default_d137fde",
+  "keymap": "default",
   "commit": "d137fdea780a37395f397f9641fc7ebd2c7f27a0",
   "layout": "LAYOUT_60_ansi",
   "layers": [
