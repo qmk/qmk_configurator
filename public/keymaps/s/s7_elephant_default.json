@@ -1,6 +1,6 @@
 {
   "keyboard": "s7_elephant",
-  "keymap": "default_0b0c989",
+  "keymap": "default",
   "commit": "0b0c98929b7d9375661a101740f2b1be8ca3e0fc",
   "layout": "LAYOUT_ansi",
   "layers": [

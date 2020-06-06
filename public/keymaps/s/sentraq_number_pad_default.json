@@ -1,6 +1,6 @@
 {
   "keyboard": "sentraq/number_pad",
-  "keymap": "default_b6fbcd9",
+  "keymap": "default",
   "commit": "b6fbcd9d6210524fe73921db12209e8703c74d2d",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [

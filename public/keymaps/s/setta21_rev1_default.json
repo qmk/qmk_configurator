@@ -1,6 +1,6 @@
 {
   "keyboard": "setta21/rev1",
-  "keymap": "default_12ea2e3",
+  "keymap": "default",
   "commit": "12ea2e3649459a008e4ebb8efa8ba82005ffc218",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [

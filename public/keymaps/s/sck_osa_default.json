@@ -1,6 +1,6 @@
 {
   "keyboard": "sck/osa",
-  "keymap": "default_19b60c2",
+  "keymap": "default",
   "commit": "19b60c273ab63c250db748e5eead6baba88cd0d8",
   "layout": "LAYOUT_default_ansi",
   "layers": [

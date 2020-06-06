@@ -1,6 +1,6 @@
 {
   "keyboard": "sx60",
-  "keymap": "default_96546c7",
+  "keymap": "default",
   "commit": "96546c79c0e931c89e4ac60a154b669925d5d34d",
   "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [

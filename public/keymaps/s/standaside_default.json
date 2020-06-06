@@ -1,6 +1,6 @@
 {
   "keyboard": "standaside",
-  "keymap": "default_e88a759",
+  "keymap": "default",
   "commit": "e88a75904b0c345d75b02bbf333dd171d31399ae",
   "layout": "LAYOUT_ortho_4x16",
   "layers": [
