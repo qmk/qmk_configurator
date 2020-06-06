@@ -1,6 +1,6 @@
 {
   "keyboard": "wallaby",
-  "keymap": "default_28d94b7",
+  "keymap": "default",
   "commit": "28d94b72484967f12b521e87b2745bc24d792471",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [

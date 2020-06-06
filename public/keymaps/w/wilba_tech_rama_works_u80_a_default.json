@@ -1,6 +1,6 @@
 {
   "keyboard": "wilba_tech/rama_works_u80_a",
-  "keymap": "default_bffbb4b",
+  "keymap": "default",
   "commit": "bffbb4b42d3167125f54b5aeb7a30fef44ff5dbe",
   "layout": "LAYOUT_all",
   "layers": [

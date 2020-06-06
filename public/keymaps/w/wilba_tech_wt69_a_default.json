@@ -1,6 +1,6 @@
 {
   "keyboard": "wilba_tech/wt69_a",
-  "keymap": "default_0250cad",
+  "keymap": "default",
   "commit": "0250cad4208e0d2679fb49afc4d0b97e819eb29f",
   "layout": "LAYOUT_all",
   "layers": [

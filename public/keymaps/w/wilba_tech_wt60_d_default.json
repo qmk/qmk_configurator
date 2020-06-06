@@ -1,6 +1,6 @@
 {
   "keyboard": "wilba_tech/wt60_d",
-  "keymap": "default_9ae874e",
+  "keymap": "default",
   "commit": "9ae874e0c35094e30df5dd6e77fe18047f08730d",
   "layout": "LAYOUT_all",
   "layers": [

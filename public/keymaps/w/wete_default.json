@@ -1,6 +1,6 @@
 {
   "keyboard": "wete",
-  "keymap": "default_93c5307",
+  "keymap": "default",
   "commit": "93c5307fd60c35780921570ccf41a1806847eb9c",
   "layout": "LAYOUT_ansi_rhnp",
   "layers": [
