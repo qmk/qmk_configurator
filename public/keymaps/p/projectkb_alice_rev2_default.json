@@ -1,6 +1,6 @@
 {
   "keyboard": "projectkb/alice/rev2",
-  "keymap": "default_c2f9e01",
+  "keymap": "default",
   "commit": "c2f9e018abbbb1aa8029001fe224b6082127e3a7",
   "layout": "LAYOUT_default",
   "layers": [

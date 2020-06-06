@@ -1,6 +1,6 @@
 {
   "keyboard": "primekb/prime_l/v1",
-  "keymap": "default_42d6270",
+  "keymap": "default",
   "commit": "42d6270f28831e95d1cb9c14a7423d5b1d864d67",
   "layout": "LAYOUT",
   "layers": [

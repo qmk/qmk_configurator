@@ -1,6 +1,6 @@
 {
   "keyboard": "percent/booster",
-  "keymap": "default_98b237a",
+  "keymap": "default",
   "commit": "98b237a21bf36aa073073ba74c51851a494214d3",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "panc60",
-  "keymap": "default_57ec309",
+  "keymap": "default",
   "commit": "57ec309d3e05732094408834b00af9cfd1ffca62",
   "layout": "LAYOUT_60_hhkb",
   "layers": [
