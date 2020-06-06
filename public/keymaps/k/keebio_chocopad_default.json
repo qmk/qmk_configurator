@@ -1,6 +1,6 @@
 {
   "keyboard": "keebio/chocopad",
-  "keymap": "default_b2ee290",
+  "keymap": "default",
   "commit": "b2ee290c9f506e42dd9c4577c8147646c405aeb0",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [

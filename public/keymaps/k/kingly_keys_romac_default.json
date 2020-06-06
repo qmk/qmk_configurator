@@ -1,6 +1,6 @@
 {
   "keyboard": "kingly_keys/romac",
-  "keymap": "default_9fe7b40",
+  "keymap": "default",
   "commit": "9fe7b406cb43e334d588e69b14c3fa41ae4c4925",
   "layout": "LAYOUT",
   "layers": [
