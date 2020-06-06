@@ -1,6 +1,6 @@
 {
   "keyboard": "doro67/multi",
-  "keymap": "default_8eb0aef",
+  "keymap": "default",
   "commit": "8eb0aefb60aef8d5a88b8b7789c094be7ec194ee",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [

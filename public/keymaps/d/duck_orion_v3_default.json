@@ -1,6 +1,6 @@
 {
   "keyboard": "duck/orion/v3",
-  "keymap": "default_60b2a9a",
+  "keymap": "default",
   "commit": "60b2a9a5ea88321629e970e936652cc1ba786b80",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
