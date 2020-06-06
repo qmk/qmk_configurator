@@ -1,6 +1,6 @@
 {
   "keyboard": "noxary/220",
-  "keymap": "default_0f0062b",
+  "keymap": "default",
   "commit": "0f0062b4929b4598aa45d5aeb20d4678b4e06d37",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
