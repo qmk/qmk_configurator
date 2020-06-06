@@ -1,6 +1,6 @@
 {
   "keyboard": "exclusive/e7v1se",
-  "keymap": "default_ab78386",
+  "keymap": "default",
   "commit": "ab78386e021037bda9855bae444564a8ceff8404",
   "layout": "LAYOUT",
   "layers": [
