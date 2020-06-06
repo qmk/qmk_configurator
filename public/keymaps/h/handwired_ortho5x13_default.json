@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/ortho5x13",
-  "keymap": "default_a90331a",
+  "keymap": "default",
   "commit": "a90331aec21a47ef3a9fe47425c9c7204bc768b5",
   "layout": "LAYOUT",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "hineybush/physix",
-  "keymap": "default_cfbb848",
+  "keymap": "default",
   "commit": "cfbb848e03a113c65dd7fb01133a2049dbef6542",
   "layout": "LAYOUT_split_bksp_275_rspace",
   "layers": [

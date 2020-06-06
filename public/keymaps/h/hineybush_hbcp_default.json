@@ -1,6 +1,6 @@
 {
   "keyboard": "hineybush/hbcp",
-  "keymap": "default_002adad",
+  "keymap": "default",
   "commit": "002adadf58fa7ad05edae7036bcf638251170894",
   "layout": "LAYOUT_all",
   "layers": [

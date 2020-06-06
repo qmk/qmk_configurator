@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/cmd60",
-  "keymap": "default_60f9abc",
+  "keymap": "default",
   "commit": "60f9abca1245640e12d65aa60f5953ff1719408f",
   "layout": "LAYOUT",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/aranck",
-  "keymap": "default_c4061f0",
+  "keymap": "default",
   "commit": "c4061f003ccba195cb19b4c51db61a1f65f29039",
   "layout": "LAYOUT_planck_mit",
   "layers": [

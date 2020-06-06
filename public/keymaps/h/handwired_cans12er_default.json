@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/cans12er",
-  "keymap": "default_d145736",
+  "keymap": "default",
   "commit": "d14573620d3e964730af960aab3c05a5d061796f",
   "layout": "LAYOUT_ortho_3x4",
   "layers": [

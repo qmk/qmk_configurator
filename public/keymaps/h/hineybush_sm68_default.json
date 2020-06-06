@@ -1,6 +1,6 @@
 {
   "keyboard": "hineybush/sm68",
-  "keymap": "default_543e612",
+  "keymap": "default",
   "commit": "543e612003b17d5542102957aa53ea2d5c6727ed",
   "layout": "LAYOUT_68_ansi_split_rshift",
   "layers": [

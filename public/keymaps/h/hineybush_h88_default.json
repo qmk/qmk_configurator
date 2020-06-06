@@ -1,6 +1,6 @@
 {
   "keyboard": "hineybush/h88",
-  "keymap": "default_aba9032",
+  "keymap": "default",
   "commit": "aba90329b2b88c892a81c35761ff4c428003f0f9",
   "layout": "LAYOUT_all",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/hnah108",
-  "keymap": "default_9bfacc7",
+  "keymap": "default",
   "commit": "9bfacc7c76237600ac0a05003fd87ae98e0b0221",
   "layout": "LAYOUT_all",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/symmetry60",
-  "keymap": "default_b252cce",
+  "keymap": "default",
   "commit": "b252cce18fd474562510be5fc1e401287d747cd3",
   "layout": "LAYOUT_ortho_5x14",
   "layers": [

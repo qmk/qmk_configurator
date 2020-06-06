@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/hnah40rgb",
-  "keymap": "default_23f89ff",
+  "keymap": "default",
   "commit": "23f89ff7cf4bce42d46e99183a977c5c74384c57",
   "layout": "LAYOUT_all",
   "layers": [
