@@ -1,6 +1,6 @@
 {
   "keyboard": "maartenwut/eon40",
-  "keymap": "default_bf397fd",
+  "keymap": "default",
   "commit": "bf397fdd9fe5adfea67cc7650c5eba53086f8a63",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [

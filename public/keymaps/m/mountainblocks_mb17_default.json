@@ -1,6 +1,6 @@
 {
   "keyboard": "mountainblocks/mb17",
-  "keymap": "default_b9d0b1f",
+  "keymap": "default",
   "commit": "b9d0b1f06478a1b3f596882b33cb9bd84e477bea",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
