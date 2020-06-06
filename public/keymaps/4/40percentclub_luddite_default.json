@@ -1,6 +1,6 @@
 {
   "keyboard": "40percentclub/luddite",
-  "keymap": "default_feddc49",
+  "keymap": "default",
   "commit": "feddc496ee1a6e1edc92adc35e6a6b5836bfae9b",
   "layout": "LAYOUT_60_ansi",
   "layers": [

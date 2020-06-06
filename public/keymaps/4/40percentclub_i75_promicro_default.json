@@ -1,6 +1,6 @@
 {
   "keyboard": "40percentclub/i75/promicro",
-  "keymap": "default_368de26",
+  "keymap": "default",
   "commit": "368de26996fbd54eefbf54c567a90bf0d81e20c7",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [
