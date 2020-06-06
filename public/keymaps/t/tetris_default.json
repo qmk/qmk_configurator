@@ -1,6 +1,6 @@
 {
   "keyboard": "tetris",
-  "keymap": "default_9e3b384",
+  "keymap": "default",
   "commit": "9e3b38425feedbe8d95c6cb738d713cc6e15af56",
   "layout": "LAYOUT_planck_mit",
   "layers": [
