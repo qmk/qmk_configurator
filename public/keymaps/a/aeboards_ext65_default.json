@@ -1,6 +1,6 @@
 {
   "keyboard": "aeboards/ext65",
-  "keymap": "default_320822d",
+  "keymap": "default",
   "commit": "320822d75b785401809f45007320e6fb6885b3fd",
   "layout": "LAYOUT_ext65",
   "layers": [

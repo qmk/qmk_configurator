@@ -1,6 +1,6 @@
 {
   "keyboard": "ai03/polaris",
-  "keymap": "default_8f33313",
+  "keymap": "default",
   "commit": "8f333138f5cc76ecc7538100ce93af5e228f0eb0",
   "layout": "LAYOUT_all",
   "layers": [

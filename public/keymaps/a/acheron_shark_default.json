@@ -1,6 +1,6 @@
 {
   "keyboard": "acheron/shark",
-  "keymap": "default_2304879",
+  "keymap": "default",
   "commit": "23048798dd4e089c6f636a198cb246f41e6aef73",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
