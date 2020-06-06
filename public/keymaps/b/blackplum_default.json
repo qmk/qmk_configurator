@@ -1,6 +1,6 @@
 {
   "keyboard": "blackplum",
-  "keymap": "default_e264f01",
+  "keymap": "default",
   "commit": "e264f0151da0025dbb53dfc5a70bce13105a04d8",
   "layout": "LAYOUT_68_ansi",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "bm16a",
-  "keymap": "default_9e49f19",
+  "keymap": "default",
   "commit": "9e49f19a1a597f90b519f100b852d44493dcfd78",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [

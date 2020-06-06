@@ -1,6 +1,6 @@
 {
   "keyboard": "bthlabs/geekpad",
-  "keymap": "default_2dcce4c",
+  "keymap": "default",
   "commit": "2dcce4c35160066e32b827985a924c4f7ea5b4d9",
   "layout": "LAYOUT",
   "layers": [

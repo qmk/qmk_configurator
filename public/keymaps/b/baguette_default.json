@@ -1,6 +1,6 @@
 {
   "keyboard": "baguette",
-  "keymap": "default_1741e39",
+  "keymap": "default",
   "commit": "1741e39e3463ac3cc6164656b0cc7afa8c33cc00",
   "layout": "LAYOUT_ansi",
   "layers": [
