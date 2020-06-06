@@ -1,6 +1,6 @@
 {
   "keyboard": "xiaomi/mk02",
-  "keymap": "default_21d6cb1",
+  "keymap": "default",
   "commit": "21d6cb18edea93ab83d21872397fce5b5622cfa8",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [

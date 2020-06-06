@@ -1,6 +1,6 @@
 {
   "keyboard": "xelus/snap96",
-  "keymap": "default_b936048",
+  "keymap": "default",
   "commit": "b936048b0bf2b5508104e243089e785debc431d0",
   "layout": "LAYOUT_all",
   "layers": [
