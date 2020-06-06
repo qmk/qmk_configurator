@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/adb_usb",
-  "keymap": "default_03d16db",
+  "keymap": "default",
   "commit": "03d16db942fe0352cc3b3522a1c778b7e60a4b3a",
   "layout": "LAYOUT_ext_ansi",
   "layers": [

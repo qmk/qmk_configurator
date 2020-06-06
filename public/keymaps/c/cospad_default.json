@@ -1,6 +1,6 @@
 {
   "keyboard": "cospad",
-  "keymap": "default_ba264c6",
+  "keymap": "default",
   "commit": "ba264c69c28dd36ab8bd7eda1ba19ecf51eae6a9",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "coseyfannitutti/mulletpad",
-  "keymap": "default_5e7b929",
+  "keymap": "default",
   "commit": "5e7b929717bd6b461816f6800310b2ea90673900",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [

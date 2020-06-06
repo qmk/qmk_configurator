@@ -1,6 +1,6 @@
 {
   "keyboard": "crawlpad",
-  "keymap": "default_6630e4b",
+  "keymap": "default",
   "commit": "6630e4bb4156ec41f2a255dea4937f578cc62e06",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [

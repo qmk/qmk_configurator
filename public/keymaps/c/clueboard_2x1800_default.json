@@ -1,6 +1,6 @@
 {
     "keyboard": "clueboard/2x1800",
-    "keymap": "default_85d4c15",
+    "keymap": "default",
     "commit": "85d4c15a654b0244aa80f27f3bc3a1f346ae32fe",
     "layout": "LAYOUT",
     "layers": [

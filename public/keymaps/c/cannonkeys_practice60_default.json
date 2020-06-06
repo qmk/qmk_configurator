@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/practice60",
-  "keymap": "default_e6b9980",
+  "keymap": "default",
   "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT_60_ansi",
   "layers": [

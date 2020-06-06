@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/tmov2",
-  "keymap": "default_8d11359",
+  "keymap": "default",
   "commit": "8d11359886d70a7a75c041ac2d9d3ec88a16b7ee",
   "layout": "LAYOUT_default",
   "layers": [

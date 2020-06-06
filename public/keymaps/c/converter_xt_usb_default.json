@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/xt_usb",
-  "keymap": "default_006ec86",
+  "keymap": "default",
   "commit": "006ec86786da874938f54e9b1d0f4a5f049de546",
   "layout": "LAYOUT_xt",
   "layers": [

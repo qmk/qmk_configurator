@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/ortho75",
-  "keymap": "default_cd59fe7",
+  "keymap": "default",
   "commit": "cd59fe78be54af41c9fa4e5a9474767d8b314cd6",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [

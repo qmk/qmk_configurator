@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/hp_46010a",
-  "keymap": "default_ce057ea",
+  "keymap": "default",
   "commit": "ce057ea47448d0df2a05efa419f61563649a5821",
   "layout": "LAYOUT",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/atlas",
-  "keymap": "default_eb7fc7f",
+  "keymap": "default",
   "commit": "eb7fc7f9d99231e4c59dee2bef8659b089f4846a",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [

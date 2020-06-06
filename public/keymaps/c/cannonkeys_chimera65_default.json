@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/chimera65",
-  "keymap": "default_59af2cb",
+  "keymap": "default",
   "commit": "59af2cbe640191345175bf34fd65f78ab1036647",
   "layout": "LAYOUT_default",
   "layers": [

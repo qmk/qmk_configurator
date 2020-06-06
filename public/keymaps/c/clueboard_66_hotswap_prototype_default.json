@@ -1,6 +1,6 @@
 {
   "keyboard": "clueboard/66_hotswap/prototype",
-  "keymap": "default_0f62383",
+  "keymap": "default",
   "commit": "0f62383be57d2e3dacc79a76973295c73e805038",
   "layout": "LAYOUT",
   "layers": [

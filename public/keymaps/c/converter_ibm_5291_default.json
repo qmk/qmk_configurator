@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/ibm_5291",
-  "keymap": "default_4ebd270",
+  "keymap": "default",
   "commit": "4ebd27002a344b017276dc70796435a8e718f46a",
   "layout": "LAYOUT",
   "layers": [
