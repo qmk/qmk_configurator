@@ -1,5 +1,5 @@
 {
-  "keyboard": "hs60",
+  "keyboard": "hs60/v1",
   "keymap": "default",
   "commit": "6fa3cfbf534b54290f693dc1986437aebd092b32",
   "layout": "LAYOUT_60_iso",
