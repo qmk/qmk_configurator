@@ -1,7 +1,7 @@
 {
   "keyboard": "signum/3_0/elitec",
   "keymap": "default",
-  "commit": "0e033fcda60df82d84f2c727f248d287df985745",
+  "commit": "edf8552970fab2bd025933e0244ce9acb37f0712",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
