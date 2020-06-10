@@ -505,6 +505,7 @@ function getExclusionList() {
     'maartenwut/atom47',
     'maxipad',
     'mechllama/g35',
+    'mechlovin/adelais',
     'mechlovin/hannah910',
     'mechmini',
     'meira',
