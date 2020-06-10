@@ -1,7 +1,7 @@
 {
-  "keyboard": "helix/rev2",
+  "keyboard": "helix/rev2/oled/under",
   "keymap": "default",
-  "commit": "583be4a5f386c11c02a88f8e0869ec6a773cba7f",
+  "commit": "511fe643c2ac902e8d42f87bffccdf4aaab700d1",
   "layout": "LAYOUT",
   "layers": [
     [
