@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/aplx2",
+  "keymap": "default",
+  "commit": "cfdd105d9db4f7c4f30ce24096d2531cd1b9e899",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_X"
+    ]
+  ]
+}
