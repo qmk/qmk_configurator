@@ -543,7 +543,8 @@ function getExclusionList() {
     'yd60mq',
     'ymd75',
     'yosino58',
-    'zinc'
+    'zinc',
+    'zvecr/zv48'
   ].reduce((acc, k) => {
     acc[k] = true;
     return acc;
