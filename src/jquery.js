@@ -535,6 +535,7 @@ function getExclusionList() {
     'rgbkb/zen',
     'rgbkb/zygomorph',
     'runner3680',
+    's7_elephant',
     'sentraq/s60_x',
     'setta21',
     'spacetime',

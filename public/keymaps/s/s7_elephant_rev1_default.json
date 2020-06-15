@@ -1,7 +1,7 @@
 {
-  "keyboard": "s7_elephant",
+  "keyboard": "s7_elephant/rev1",
   "keymap": "default",
-  "commit": "0b0c98929b7d9375661a101740f2b1be8ca3e0fc",
+  "commit": "622e94c6cdf6a307ee87b6add974def647979f15",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
@@ -13,10 +13,10 @@
     ],
     [
       "RESET",      "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_PSCR", "KC_SLCK", "KC_PAUS",
-      "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS",    "KC_TRNS", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLD", "KC_MUTE", "KC_VOLU", "KC_TRNS",            "KC_TRNS", "KC_PGUP",
-      "KC_TRNS",    "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGDN",
-      "EEP_RST",    "KC_TRNS", "KC_TRNS", "KC_TRNS",                            "KC_TRNS",                             "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______",    "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______",    "_______", "KC_MPRV", "KC_MPLY", "KC_MNXT", "_______", "_______", "_______", "_______", "KC_VOLD", "KC_MUTE", "KC_VOLU", "_______",            "_______", "KC_PGUP",
+      "_______",    "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_PGDN",
+      "EEP_RST",    "_______", "_______", "_______",                            "_______",                             "_______", "_______",            "_______", "_______", "_______"
     ]
   ]
 }
