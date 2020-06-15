@@ -493,6 +493,7 @@ function getExclusionList() {
     'keebio/nyquist',
     'keebio/quefrency',
     'keebio/rorschach',
+    'keebio/sinc',
     'keebio/viterbi',
     'kinesis',
     'kudox',
