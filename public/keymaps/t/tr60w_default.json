@@ -1,6 +1,6 @@
 {
   "keyboard": "tr60w",
-  "keymap": "default_6809247",
+  "keymap": "default",
   "commit": "680924777be7739b249bf0dc3b60a3185134bc94",
   "layout": "LAYOUT_60_tsangan_hhkb",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "preonic/rev2",
-  "keymap": "default_97b8ade",
+  "keymap": "default",
   "commit": "97b8ade1aa7dd96027d10dc92da2a2ccbde61b8c",
   "layout": "LAYOUT_preonic_grid",
   "layers": [

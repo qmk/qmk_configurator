@@ -1,6 +1,6 @@
 {
   "keyboard": "redscarf_i",
-  "keymap": "default_a68f514",
+  "keymap": "default",
   "commit": "a68f514a8a82a19b078315fd068db592cd811f19",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [

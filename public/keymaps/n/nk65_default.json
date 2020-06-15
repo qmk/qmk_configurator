@@ -1,6 +1,6 @@
 {
   "keyboard": "nk65",
-  "keymap": "default_acd3e79",
+  "keymap": "default",
   "commit": "acd3e79add2d47ab664b831936e5b6e71d3b8e15",
   "layout": "LAYOUT_65_ansi",
   "layers": [

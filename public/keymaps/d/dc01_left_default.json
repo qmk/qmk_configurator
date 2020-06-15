@@ -1,6 +1,6 @@
 {
   "keyboard": "dc01/left",
-  "keymap": "default_1147fc2",
+  "keymap": "default",
   "commit": "1147fc24adfe22eac6e67f9d7f0f1184f358f141",
   "layout": "LAYOUT_ansi",
   "layers": [

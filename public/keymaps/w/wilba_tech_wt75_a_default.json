@@ -1,6 +1,6 @@
 {
   "keyboard": "wilba_tech/wt75_a",
-  "keymap": "default_c5e10b7",
+  "keymap": "default",
   "commit": "c5e10b7203f140e747ac3a95b6964c52110e07df",
   "layout": "LAYOUT_all",
   "layers": [

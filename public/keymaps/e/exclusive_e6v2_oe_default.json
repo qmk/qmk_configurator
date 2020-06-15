@@ -1,6 +1,6 @@
 {
   "keyboard": "exclusive/e6v2/oe",
-  "keymap": "default_6affec5",
+  "keymap": "default",
   "commit": "6affec582b4816bf7f3b22bb3e3c7175d09e5c9e",
   "layout": "LAYOUT_60_ansi",
   "layers": [

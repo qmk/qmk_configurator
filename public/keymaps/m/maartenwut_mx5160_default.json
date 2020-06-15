@@ -1,6 +1,6 @@
 {
   "keyboard": "maartenwut/mx5160",
-  "keymap": "default_251a69e",
+  "keymap": "default",
   "commit": "251a69ea3d63ac8783e30b6e03e3866b9579af72",
   "layout": "LAYOUT_all",
   "layers": [

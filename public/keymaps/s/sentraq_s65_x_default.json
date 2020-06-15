@@ -1,6 +1,6 @@
 {
   "keyboard": "sentraq/s65_x",
-  "keymap": "default_9b232a7",
+  "keymap": "default",
   "commit": "9b232a7f885e320061aae994713acd31297eac5c",
   "layout": "LAYOUT_65_ansi",
   "layers": [

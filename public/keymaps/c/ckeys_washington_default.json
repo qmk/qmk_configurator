@@ -1,6 +1,6 @@
 {
   "keyboard": "ckeys/washington",
-  "keymap": "default_b0bee46",
+  "keymap": "default",
   "commit": "b0bee465aade65c7155efec69d0c8090a7e8a61a",
   "layout": "LAYOUT",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/bdn9_ble",
-  "keymap": "default_6265b78",
+  "keymap": "default",
   "commit": "6265b783073e943b8f5b2f7118a2ec8df1fd2ebc",
   "layout": "LAYOUT",
   "layers": [

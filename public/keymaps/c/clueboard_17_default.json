@@ -1,6 +1,6 @@
 {
   "keyboard": "clueboard/17",
-  "keymap": "default_d1f735b",
+  "keymap": "default",
   "commit": "d1f735b6d2739295faf932dbb61e3c8b4c0b2898",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [

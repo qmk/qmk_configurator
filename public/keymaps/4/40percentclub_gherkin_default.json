@@ -1,6 +1,6 @@
 {
   "keyboard": "40percentclub/gherkin",
-  "keymap": "default_e7e38fe",
+  "keymap": "default",
   "commit": "e7e38fe80e78e0f68de50b06bb05d0a66322afae",
   "layout": "LAYOUT_ortho_3x10",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "keyhive/maypad",
-  "keymap": "default_e717dca",
+  "keymap": "default",
   "commit": "e717dcaa09143615ae0b46bf625621f67a7b55ce",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [

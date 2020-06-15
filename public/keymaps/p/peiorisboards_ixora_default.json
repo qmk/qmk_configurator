@@ -1,6 +1,6 @@
 {
   "keyboard": "peiorisboards/ixora",
-  "keymap": "default_6850126",
+  "keymap": "default",
   "commit": "68501261c3a8dbf04a2f1de7ad23640e8074ab87",
   "layout": "LAYOUT_full",
   "layers": [

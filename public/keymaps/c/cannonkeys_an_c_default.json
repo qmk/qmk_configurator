@@ -1,6 +1,6 @@
 {
   "keyboard": "cannonkeys/an_c",
-  "keymap": "default_3915c8e",
+  "keymap": "default",
   "commit": "3915c8eb00138852a4385701c9ebc71f63654a4b",
   "layout": "LAYOUT_60_ansi",
   "layers": [

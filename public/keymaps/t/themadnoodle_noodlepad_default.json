@@ -1,0 +1,23 @@
+{
+  "keyboard": "themadnoodle/noodlepad",
+  "keymap": "default",
+  "commit": "6fc4f1eddd8df1841dd7b6c59943bc32580cee82",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_MPRV", "LT(2,KC_MUTE)", "KC_MNXT",
+      "KC_MSTP", "KC_MPLY",       "KC_MSEL",
+      "KC_CALC", "KC_MAIL",       "LT(1,KC_MYCM)"
+    ],
+    [
+      "RGB_MOD", "RGB_TOG", "RGB_RMOD",
+      "RGB_SPI", "RGB_SPD", "RGB_VAI",
+      "RGB_SAI", "RGB_SAD", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

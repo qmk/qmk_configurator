@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/numeric_keypad_IIe",
-  "keymap": "default_b5d85dd",
+  "keymap": "default",
   "commit": "b5d85ddc90e248317fb12832f7072dfbcccd48e5",
   "layout": "LAYOUT",
   "layers": [

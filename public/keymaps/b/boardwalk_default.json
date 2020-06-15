@@ -1,6 +1,6 @@
 {
   "keyboard": "boardwalk",
-  "keymap": "default_5ab0eeb",
+  "keymap": "default",
   "commit": "5ab0eeb513f50a14e51467bf76a19997b75d65fb",
   "layout": "LAYOUT_ortho_5x14",
   "layers": [

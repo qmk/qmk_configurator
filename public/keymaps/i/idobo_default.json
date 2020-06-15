@@ -1,6 +1,6 @@
 {
   "keyboard": "idobo",
-  "keymap": "default_d6184be",
+  "keymap": "default",
   "commit": "d6184be67a56429a284c2d0fa5f990368a580735",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [

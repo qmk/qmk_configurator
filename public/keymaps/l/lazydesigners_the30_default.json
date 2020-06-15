@@ -1,6 +1,6 @@
 {
   "keyboard": "lazydesigners/the30",
-  "keymap": "default_c1c27b8",
+  "keymap": "default",
   "commit": "c1c27b83aa9a3a57da43749854ee3c5182e63826",
   "layout": "LAYOUT_ortho_3x10",
   "layers": [

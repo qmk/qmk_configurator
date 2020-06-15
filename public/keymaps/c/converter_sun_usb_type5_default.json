@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/sun_usb/type5",
-  "keymap": "default_52ecc76",
+  "keymap": "default",
   "commit": "52ecc76e28bbcde9e35d35eb48a4d5b78aa204e2",
   "layout": "LAYOUT_jp_unix",
   "layers": [

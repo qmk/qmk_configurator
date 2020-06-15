@@ -1,6 +1,6 @@
 {
   "keyboard": "j80",
-  "keymap": "default_67054fc",
+  "keymap": "default",
   "commit": "67054fc3806953feb34adbf9a272fcfcaace6d0f",
   "layout": "LAYOUT_tkl_ansi_split_rshift",
   "layers": [

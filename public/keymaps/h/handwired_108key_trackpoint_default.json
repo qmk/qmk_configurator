@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/108key_trackpoint",
-  "keymap": "default_303fa4e",
+  "keymap": "default",
   "commit": "303fa4ec3337760922a17fb19150c1aa3f58a3b3",
   "layout": "LAYOUT",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "wheatfield/blocked65",
-  "keymap": "default_fe3e5cb",
+  "keymap": "default",
   "commit": "fe3e5cba6915b49a9a20ca4b0a43b308d1512d53",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [

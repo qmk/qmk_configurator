@@ -1,6 +1,6 @@
 {
   "keyboard": "switchplate/southpaw_fullsize",
-  "keymap": "default_479c6a6",
+  "keymap": "default",
   "commit": "479c6a68cf1bed01380599045a25a37b9847569a",
   "layout": "LAYOUT_all",
   "layers": [

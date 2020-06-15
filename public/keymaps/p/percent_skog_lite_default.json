@@ -1,6 +1,6 @@
 {
   "keyboard": "percent/skog_lite",
-  "keymap": "default_ec053c8",
+  "keymap": "default",
   "commit": "ec053c8283a58de59954f6fe9a9438ef29a24918",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [

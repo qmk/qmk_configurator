@@ -452,6 +452,7 @@ function getExclusionList() {
     'angel17',
     'angel64',
     'atreus',
+    'bat43',
     'bigseries',
     'boston_meetup',
     'bpiphany/pegasushoof',
@@ -487,11 +488,13 @@ function getExclusionList() {
     'ivy',
     'jisplit89',
     'kbdfans/kbd75',
+    'keebio/bdn9',
     'keebio/iris',
     'keebio/levinson',
     'keebio/nyquist',
     'keebio/quefrency',
     'keebio/rorschach',
+    'keebio/sinc',
     'keebio/viterbi',
     'kinesis',
     'kudox',
@@ -505,6 +508,7 @@ function getExclusionList() {
     'maartenwut/atom47',
     'maxipad',
     'mechllama/g35',
+    'mechlovin/adelais',
     'mechlovin/hannah910',
     'mechmini',
     'meira',
@@ -517,6 +521,7 @@ function getExclusionList() {
     'namecard2x4',
     'navi10',
     'orthodox',
+    'pimentoso/paddino02',
     'pico',
     'pinky',
     'planck',
@@ -530,6 +535,7 @@ function getExclusionList() {
     'rgbkb/zen',
     'rgbkb/zygomorph',
     'runner3680',
+    's7_elephant',
     'sentraq/s60_x',
     'setta21',
     'spacetime',
@@ -541,7 +547,8 @@ function getExclusionList() {
     'yd60mq',
     'ymd75',
     'yosino58',
-    'zinc'
+    'zinc',
+    'zvecr/zv48'
   ].reduce((acc, k) => {
     acc[k] = true;
     return acc;

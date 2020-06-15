@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/palm_usb/stowaway",
-  "keymap": "default_3f96ba0",
+  "keymap": "default",
   "commit": "3f96ba011359e7e842a5f917c11886c1867ba207",
   "layout": "LAYOUT",
   "layers": [

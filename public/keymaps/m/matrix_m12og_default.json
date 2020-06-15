@@ -1,6 +1,6 @@
 {
   "keyboard": "matrix/m12og",
-  "keymap": "default_8551ab3",
+  "keymap": "default",
   "commit": "8551ab3daf97e62f7b679ed7d8042141300566e3",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [

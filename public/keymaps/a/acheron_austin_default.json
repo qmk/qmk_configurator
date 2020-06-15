@@ -1,6 +1,6 @@
 {
   "keyboard": "acheron/austin",
-  "keymap": "default_a208117",
+  "keymap": "default",
   "commit": "a2081171de25099b0e6be6faa08954ceff2a953b",
   "layout": "LAYOUT_all",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "converter/m0110_usb",
-  "keymap": "default_329b574",
+  "keymap": "default",
   "commit": "329b574831c6cb75047baf31efbe113483f8b1c7",
   "layout": "LAYOUT_ansi",
   "layers": [

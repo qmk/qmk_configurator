@@ -1,6 +1,6 @@
 {
   "keyboard": "exclusive/e65",
-  "keymap": "default_a88b6db",
+  "keymap": "default",
   "commit": "a88b6db6825c2c577ec203c49a135ca6b85ecb42",
   "layout": "LAYOUT_65_ansi_noblocker",
   "layers": [

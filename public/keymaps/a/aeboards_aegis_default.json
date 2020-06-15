@@ -1,6 +1,6 @@
 {
   "keyboard": "aeboards/aegis",
-  "keymap": "default_9cb4c5c",
+  "keymap": "default",
   "commit": "9cb4c5c092b8d0b4f23f873384e13cf4c2c375a3",
   "layout": "LAYOUT_aegis",
   "layers": [

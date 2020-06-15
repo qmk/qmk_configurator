@@ -1,6 +1,6 @@
 {
   "keyboard": "mechkeys/mk60",
-  "keymap": "default_98b68be",
+  "keymap": "default",
   "commit": "98b68bec53ee814310cfc003b5b51504951601ec",
   "layout": "LAYOUT",
   "layers": [

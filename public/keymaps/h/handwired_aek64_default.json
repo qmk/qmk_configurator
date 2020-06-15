@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/aek64",
-  "keymap": "default_ab48ffd",
+  "keymap": "default",
   "commit": "ab48ffd5c5923b822e789bb3b18d8a16654da91a",
   "layout": "LAYOUT",
   "layers": [

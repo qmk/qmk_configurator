@@ -1,6 +1,6 @@
 {
   "keyboard": "foxlab/leaf60/hotswap",
-  "keymap": "default_a8af694",
+  "keymap": "default",
   "commit": "a8af694d265d5d136e81669ec7b30052a8f4de08",
   "layout": "LAYOUT_60_tsangan_hhkb",
   "layers": [

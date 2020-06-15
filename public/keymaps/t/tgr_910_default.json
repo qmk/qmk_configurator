@@ -1,6 +1,6 @@
 {
   "keyboard": "tgr/910",
-  "keymap": "default_90665ae",
+  "keymap": "default",
   "commit": "90665aeec9c90f62ea3687b037624d9fc04ad380",
   "layout": "LAYOUT_ansi_split_bs",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "ashpil/modelm_usbc",
-  "keymap": "default_acd02e4",
+  "keymap": "default",
   "commit": "acd02e4469ac2befd981da8349a05ef7e2c949fa",
   "layout": "LAYOUT_fullsize_ansi_wkl",
   "layers": [

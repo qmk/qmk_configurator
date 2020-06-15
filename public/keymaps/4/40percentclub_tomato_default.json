@@ -1,6 +1,6 @@
 {
   "keyboard": "40percentclub/tomato",
-  "keymap": "default_b173c05",
+  "keymap": "default",
   "commit": "b173c05cc25e9394c6e50081c1af707443950104",
   "layout": "LAYOUT_ortho_3x10",
   "layers": [

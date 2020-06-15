@@ -1,6 +1,6 @@
 {
   "keyboard": "duck/octagon/v1",
-  "keymap": "default_3916b06",
+  "keymap": "default",
   "commit": "3916b06168f39233f77a252fbf5f9cfdae3df4fe",
   "layout": "LAYOUT_75_ansi",
   "layers": [

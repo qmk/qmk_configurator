@@ -1,7 +1,7 @@
 {
   "keyboard": "hotdox",
-  "keymap": "default_3e7a2c4",
-  "commit": "3e7a2c49a6e81ba51a8079494bb99f61942e3d7f",
+  "keymap": "default",
+  "commit": "267a85c885a97219b544a3c706809821c4f28344",
   "layout": "LAYOUT_ergodox",
   "layers": [
     [

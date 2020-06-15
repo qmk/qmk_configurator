@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/chiron",
-  "keymap": "default_ad5ead2",
+  "keymap": "default",
   "commit": "ad5ead24c38a5ffe06017bd3f83b67ac65f75714",
   "layout": "LAYOUT",
   "layers": [

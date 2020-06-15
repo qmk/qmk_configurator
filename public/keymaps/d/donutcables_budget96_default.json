@@ -1,6 +1,6 @@
 {
   "keyboard": "donutcables/budget96",
-  "keymap": "default_f698f1e",
+  "keymap": "default",
   "commit": "f698f1e3f4f51431473d54512fd6c0609b9b72ee",
   "layout": "LAYOUT_96_ansi",
   "layers": [

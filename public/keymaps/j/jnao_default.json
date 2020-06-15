@@ -1,6 +1,6 @@
 {
   "keyboard": "jnao",
-  "keymap": "default_2c8d8be",
+  "keymap": "default",
   "commit": "2c8d8be7187e800cfd465674449255b25e5d02b9",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [

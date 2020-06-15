@@ -1,7 +1,7 @@
 {
   "keyboard": "meishi",
-  "keymap": "default_0072fdd",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
   "layout": "LAYOUT",
   "layers": [
     [

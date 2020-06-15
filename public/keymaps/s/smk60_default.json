@@ -1,6 +1,6 @@
 {
   "keyboard": "smk60",
-  "keymap": "default_5cf7dbe",
+  "keymap": "default",
   "commit": "5cf7dbedd2e68ec40b0666f10c47f9601e1ae275",
   "layout": "LAYOUT_60_ansi",
   "layers": [

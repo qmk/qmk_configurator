@@ -1,6 +1,6 @@
 {
   "keyboard": "handwired/rs60",
-  "keymap": "default_e611433",
+  "keymap": "default",
   "commit": "e611433cb5a479d84b37088e64da01b556f314fa",
   "layout": "LAYOUT",
   "layers": [

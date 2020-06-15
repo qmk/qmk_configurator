@@ -1,6 +1,6 @@
 {
   "keyboard": "miller/gm862",
-  "keymap": "default_4ef10a4",
+  "keymap": "default",
   "commit": "4ef10a424ae1174bc108de9014dfd1f0ff6751e0",
   "layout": "LAYOUT_60_ansi",
   "layers": [

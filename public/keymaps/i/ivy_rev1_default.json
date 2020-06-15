@@ -1,7 +1,7 @@
 {
   "keyboard": "ivy/rev1",
-  "keymap": "default_fd48f68",
-  "commit": "fd48f687b133d5000f647b38923810c2d1b16453",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
   "layout": "LAYOUT",
   "layers": [
     [

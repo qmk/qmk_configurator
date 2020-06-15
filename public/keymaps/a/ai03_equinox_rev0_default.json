@@ -1,6 +1,6 @@
 {
   "keyboard": "ai03/equinox/rev0",
-  "keymap": "default_20e1c8c",
+  "keymap": "default",
   "commit": "20e1c8c571ba1d197421ff14555bf2ab873a080f",
   "layout": "LAYOUT_all",
   "layers": [

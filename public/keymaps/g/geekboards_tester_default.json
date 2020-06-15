@@ -1,6 +1,6 @@
 {
   "keyboard": "geekboards/tester",
-  "keymap": "default_4d46489",
+  "keymap": "default",
   "commit": "4d46489a2ac4ff7099e9b7498e34c6201f0b14cb",
   "layout": "LAYOUT",
   "layers": [

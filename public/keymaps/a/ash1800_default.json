@@ -1,6 +1,6 @@
 {
   "keyboard": "ash1800",
-  "keymap": "default_03e50e6",
+  "keymap": "default",
   "commit": "03e50e6dc9f661cdce4156279f1229af80b91b8e",
   "layout": "LAYOUT_all",
   "layers": [

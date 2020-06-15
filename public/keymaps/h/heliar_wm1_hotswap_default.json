@@ -1,6 +1,6 @@
 {
   "keyboard": "heliar/wm1_hotswap",
-  "keymap": "default_2b318ba",
+  "keymap": "default",
   "commit": "2b318ba01b6e504bfe5f300f8459afc849e104b7",
   "layout": "LAYOUT",
   "layers": [

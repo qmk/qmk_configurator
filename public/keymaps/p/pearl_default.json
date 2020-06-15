@@ -1,6 +1,6 @@
 {
   "keyboard": "pearl",
-  "keymap": "default_8d65d69",
+  "keymap": "default",
   "commit": "8d65d69b8d1ab4e45d0b42dd4e9e6d9a0bedc9a0",
   "layout": "LAYOUT_all",
   "layers": [

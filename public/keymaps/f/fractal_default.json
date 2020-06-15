@@ -1,6 +1,6 @@
 {
   "keyboard": "fractal",
-  "keymap": "default_3fc5a05",
+  "keymap": "default",
   "commit": "3fc5a05d663ae2ea960e16fa16e976f9dd70b0f2",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [

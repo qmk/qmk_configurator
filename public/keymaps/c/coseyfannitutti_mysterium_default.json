@@ -1,6 +1,6 @@
 {
   "keyboard": "coseyfannitutti/mysterium",
-  "keymap": "default_2d256f4",
+  "keymap": "default",
   "commit": "2d256f48d01c33c7e8eafa58db65afbba5fbdc03",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [

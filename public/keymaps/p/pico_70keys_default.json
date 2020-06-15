@@ -1,6 +1,6 @@
 {
   "keyboard": "pico/70keys",
-  "keymap": "default_7048b94",
+  "keymap": "default",
   "commit": "7048b9403472464e3b2c9eea4ffbaf5be9538785",
   "layout": "LAYOUT",
   "layers": [

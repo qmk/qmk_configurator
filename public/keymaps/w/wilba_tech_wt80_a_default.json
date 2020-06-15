@@ -1,6 +1,6 @@
 {
   "keyboard": "wilba_tech/wt80_a",
-  "keymap": "default_2dea540",
+  "keymap": "default",
   "commit": "2dea540afbfcffaea82f70b6642c39aedb9e3b5b",
   "layout": "LAYOUT_all",
   "layers": [

@@ -1,6 +1,6 @@
 {
   "keyboard": "1upkeyboards/sweet16/v1",
-  "keymap": "default_9160405",
+  "keymap": "default",
   "commit": "9160405d39d82ba787bac07ab569aa74d86d5082",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [

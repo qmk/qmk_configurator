@@ -1,7 +1,7 @@
 {
   "keyboard": "hecomi/alpha",
-  "keymap": "default_0db6519",
-  "commit": "0db65190c2f4f72fd99d676d7e8aed6e0cc834f6",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
   "layout": "LAYOUT",
   "layers": [
     [

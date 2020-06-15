@@ -1,6 +1,6 @@
 {
   "keyboard": "1upkeyboards/1up60hse",
-  "keymap": "default_1ab008e",
+  "keymap": "default",
   "commit": "1ab008eabd10a4c295f7e792033f8504e441f3ac",
   "layout": "LAYOUT_60_ansi",
   "layers": [

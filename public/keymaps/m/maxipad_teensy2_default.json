@@ -1,6 +1,6 @@
 {
   "keyboard": "maxipad/teensy2",
-  "keymap": "default_36fce12",
+  "keymap": "default",
   "commit": "36fce12d080a4dd37a00f504396bd94b7a06e203",
   "layout": "LAYOUT",
   "layers": [
