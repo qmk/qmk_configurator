@@ -15,7 +15,7 @@
         <toggle-button
           id="setting-toggle-fast-input"
           :value="continuousInput"
-          :width="75"
+          :width="defaultWidth"
           :sync="true"
           :labels="labels"
           @change="toggleContinuousInput"
@@ -33,7 +33,7 @@
         <toggle-button
           id="setting-toggle-display-size"
           :value="displaySizes"
-          :width="75"
+          :width="defaultWidth"
           :sync="true"
           :labels="labels"
           @change="toggleDisplaySizes"
@@ -51,7 +51,7 @@
         <toggle-button
           id="setting-toggle-tutorial"
           :value="tutorialEnabled"
-          :width="75"
+          :width="defaultWidth"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -70,7 +70,7 @@
         <toggle-button
           id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
-          :width="75"
+          :width="defaultWidth"
           :sync="true"
           :labels="labels"
           @change="darkMode"
@@ -91,6 +91,24 @@
           }}</option>
         </select>
       </div>
+      <div>
+        <label
+          class="settings-panel--clear-keymap"
+          @mouseover="help('clearLayer')"
+          :title="$t('settingsPanel.clearLayer.title')"
+          >{{ $t('settingsPanel.clearLayer.title') }}</label
+        >
+        <div>
+          <toggle-button
+            id="settings-panel--clear-keymap"
+            :value="configuratorSettings.clearLayerDefault"
+            :width="defaultWidth"
+            :sync="true"
+            :labels="clearLayerLabels"
+            @change="clearLayerDefault"
+          />
+        </div>
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
@@ -106,8 +124,13 @@ export default {
         checked: this.$t('settingsPanel.on.label'),
         unchecked: this.$t('settingsPanel.off.label')
       },
+      clearLayerLabels: {
+        checked: this.$t('settingsPanel.kctrns.label'),
+        unchecked: this.$t('settingsPanel.kcno.label')
+      },
       helpText: undefined,
-      clearTextTimer: undefined
+      clearTextTimer: undefined,
+      defaultWidth: 75
     };
   },
   components: { ToggleButton },
@@ -130,9 +153,16 @@ export default {
   methods: {
     ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
-    ...mapActions('app', ['toggleDarkMode', 'changeLanguage']),
+    ...mapActions('app', [
+      'toggleDarkMode',
+      'changeLanguage',
+      'toggleClearLayerDefault'
+    ]),
     darkMode() {
       this.toggleDarkMode();
+    },
+    clearLayerDefault() {
+      this.toggleClearLayerDefault();
     },
     help(key) {
       switch (key) {
@@ -150,6 +180,9 @@ export default {
           break;
         case 'language':
           this.helpText = this.$t('settingsPanel.language.help');
+          break;
+        case 'clearLayer':
+          this.helpText = this.$t('settingsPanel.clearLayer.help');
           break;
       }
 

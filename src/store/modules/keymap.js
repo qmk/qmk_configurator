@@ -147,7 +147,7 @@ const getters = {
 const actions = {
   initKey({ state, commit }, { _layer, index }) {
     if (state.keymap[_layer] === undefined) {
-      commit('initLayer', _layer);
+      commit('initLayer', { layer: _layer });
     }
     return state.keymap[_layer][index];
   },
@@ -155,7 +155,7 @@ const actions = {
     commit('setKeyLayer', { layer, index, toLayer });
     if (toLayer !== layer) {
       if (state.keymap[toLayer] === undefined) {
-        commit('initLayer', toLayer);
+        commit('initLayer', { layer: toLayer });
       }
       let store = this;
       let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
@@ -231,7 +231,7 @@ const mutations = {
       }
       if (type === 'layer-container') {
         if (state.keymap[layer] === undefined) {
-          mutations.initLayer(state, layer);
+          mutations.initLayer(state, { layer });
         }
         Vue.set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
       }
@@ -340,28 +340,34 @@ const mutations = {
     );
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
+    const { name } = this.getters['keycodes/lookupKeycode'](code);
     Vue.set(
       state.keymap,
       layer,
       layout.map(() => {
         return {
-          name: '',
+          name,
           code,
           type: undefined
         };
       })
     );
   },
-  initLayer(state, layer) {
+  initLayer(state, { layer, code = 'KC_NO' }) {
     if (layer > 0) {
       // layer 0 is always initialized. Use it as a reference
-      mutations.initKeymap(state, { layer, layout: state.keymap[0] });
+      this.commit('keymap/initKeymap', {
+        layer,
+        layout: state.keymap[0],
+        code
+      });
     } else {
       // TODO probably need to do something differently here
       if (state.keymap[0].length > 0) {
-        mutations.initKeymap(state, {
+        this.commit('keymap/initKeymap', {
           layer,
-          layout: state.keymap[0].map(() => {})
+          layout: state.keymap[0].map(() => {}),
+          code: 'KC_NO'
         });
       } else {
         Vue.set(state.keymap, layer, [[]]);

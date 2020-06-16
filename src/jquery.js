@@ -281,7 +281,7 @@ function load_converted_keymap(converted_keymap) {
   const acc = converted_keymap.reduce(
     (acc, layerData, _layer) => {
       //Add layer object for every layer that exists
-      store.commit('keymap/initLayer', _layer);
+      store.commit('keymap/initLayer', { layer: _layer });
       //Loop over each keycode in the layer
       acc.layers.push(
         layerData.map(keycode => {

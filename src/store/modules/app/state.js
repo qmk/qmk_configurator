@@ -13,7 +13,8 @@ function setDefaultConfiguratorSettings() {
     version: CONSTS.configuratorSettingsVersion,
     darkmodeEnabled: osDarkMode,
     favoriteKeyboard: '',
-    favoriteColor: ''
+    favoriteColor: '',
+    clearLayerDefault: false
   };
   localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
   return initialConfig;

@@ -25,7 +25,7 @@ const actions = {
   /**
    * load the default keymap for the currently selected keyboard
    */
-  loadDefaultKeymap({ state }) {
+  async loadDefaultKeymap({ state }) {
     const keyboardPath = state.keyboard.slice(0, 1);
     // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
@@ -40,7 +40,7 @@ const actions = {
   /**
    * load keymap from the selected URL
    */
-  loadKeymapFromUrl(_, url) {
+  async loadKeymapFromUrl(_, url) {
     return axios.get(url).then(r => {
       return r.data;
     });
@@ -145,6 +145,12 @@ const actions = {
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
+    await dispatch('saveConfiguratorSettings');
+  },
+  async toggleClearLayerDefault({ commit, state, dispatch }) {
+    let status = state.configuratorSettings.clearLayerDefault;
+    status = !status;
+    commit('setClearLayerDefault', status);
     await dispatch('saveConfiguratorSettings');
   },
   async setFavoriteKeyboard({ commit, dispatch }, keyboard) {

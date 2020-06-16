@@ -165,8 +165,11 @@ const mutations = {
   toggleTutorial(state) {
     state.tutorialEnabled = !state.tutorialEnabled;
   },
-  setDarkmode(state, enabled) {
-    state.configuratorSettings.darkmodeEnabled = enabled;
+  setDarkmode(state, value) {
+    state.configuratorSettings.darkmodeEnabled = value;
+  },
+  setClearLayerDefault(state, value) {
+    state.configuratorSettings.clearLayerDefault = value;
   },
   toggleSnowflakes(state) {
     state.snowflakes = !state.snowflakes;
