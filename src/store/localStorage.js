@@ -1,6 +1,6 @@
 const CONSTS = {
   configuratorSettings: 'configuratorSettings',
-  configuratorSettingsVersion: 1
+  configuratorSettingsVersion: 2
 };
 
 function localStorageLoad(key) {

@@ -25,15 +25,13 @@
 <script>
 import rangeRight from 'lodash/rangeRight';
 import isUndefined from 'lodash/isUndefined';
-import { createNamespacedHelpers } from 'vuex';
-const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
-  'keymap'
-);
+import { mapState, mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'layer-control',
   computed: {
-    ...mapState(['layer']),
-    ...mapGetters(['getLayer']),
+    ...mapState('keymap', ['layer']),
+    ...mapState('app', ['configuratorSettings']),
+    ...mapGetters('keymap', ['getLayer']),
     layers() {
       let layers = rangeRight(16).map(layer => {
         let clazz = [layer];
@@ -52,19 +50,28 @@ export default {
       });
 
       return layers;
+    },
+    defaultClearLayerCode() {
+      return this.configuratorSettings.clearLayerDefault ? 'KC_TRNS' : 'KC_NO';
     }
   },
   methods: {
-    ...mapMutations(['changeLayer', 'initLayer']),
+    ...mapMutations('keymap', ['changeLayer', 'initLayer']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
-        this.initLayer(id);
+        this.initLayer({
+          layer: id,
+          code: this.defaultClearLayerCode
+        });
       }
       this.changeLayer(id);
     },
     clearLayer() {
       if (confirm(this.$t('layer.confirm'))) {
-        this.initLayer(this.layer);
+        this.initLayer({
+          layer: this.layer,
+          code: this.defaultClearLayerCode
+        });
         this.$store.commit('keymap/setDirty');
       }
     }
