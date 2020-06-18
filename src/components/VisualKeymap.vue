@@ -160,6 +160,12 @@ export default {
       // eslint-disable-next-line no-console
       this.profile && console.time('layout::scale');
       const layout = this.layouts[newLayout];
+      if (isUndefined(layout)) {
+        console.log(
+          `WARNING: layout ${newLayout} does not exist on this keyboard`
+        );
+        return;
+      }
       const max = layout.reduce(
         (acc, pos) => {
           let _pos = Object.assign({ w: 1, h: 1 }, pos);
