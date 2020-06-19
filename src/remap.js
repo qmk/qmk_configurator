@@ -117,6 +117,21 @@ const lookup = {
   plain60: {
     target: 'maartenwut/plain60'
   },
+  'preonic/rev1': {
+    layouts: {
+      LAYOUT_preonic_grid: 'LAYOUT_ortho_5x12'
+    }
+  },
+  'preonic/rev2': {
+    layouts: {
+      LAYOUT_preonic_grid: 'LAYOUT_ortho_5x12'
+    }
+  },
+  'preonic/rev3': {
+    layouts: {
+      LAYOUT_preonic_grid: 'LAYOUT_ortho_5x12'
+    }
+  },
   'primekb/prime_l': {
     target: 'primekb/prime_l/v1'
   },
