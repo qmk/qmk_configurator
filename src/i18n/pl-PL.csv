@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Ustawienia klawiatury
 keycodesTab:Quantum:label,Quantum
 keymap:label,Mapa klawiszy
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Nazwa mapy klawiszy
 keymapName:placeholder,Własna mapa klawiszy
 layer:confirm,Na pewno chcesz wyczyścić aktualną warstwę?
@@ -98,6 +100,8 @@ print:print:title,Drukuj
 print:source:title,Źródło
 printKeymap:label,Drukuj mapę
 printKeymap:title,Drukuj wszystkie warstwy mapy klawiszy
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Włącz/wyłącz tryb nocny
 settingsPanel:displaySizes:help,Wyświetla rozmiary klawiszy używając jako skali szerokości klawisza alfanumerycznego.
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego.
 settingsPanel:fastInput:label,Szybkie wprowadzanie
 settingsPanel:fastInput:title,Ctrl + Alt + F
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Język
 settingsPanel:off:label,Wył
@@ -129,5 +135,6 @@ tester:letters:keycode:label,kod klawisza
 tester:page:label,Tester klawiatury
 tester:reset:label,Wyczyść
 tester:reset:title,Zresetuj wykryte kody klawiszy
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

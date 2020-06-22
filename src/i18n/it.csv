@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Configurazione tastiera
 keycodesTab:Quantum:label,Quantum
 keymap:label,Keymap
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Nome keymap
 keymapName:placeholder,nome keymap personalizzato
 layer:confirm,Sei sicuro di voler cancellare il livello?
@@ -98,6 +100,8 @@ print:print:title,Stampa
 print:source:title,Fonte
 printKeymap:label,Stampa keymap
 printKeymap:title,Stampa livelli keymap
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambia Modalità scura
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ciascuna posizione.
 settingsPanel:fastInput:label,Ingresso rapido
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Lingua
 settingsPanel:off:label,Spegnimento
@@ -129,5 +135,6 @@ tester:letters:keycode:label,codici chiave
 tester:page:label,Collaudatore di tastiera
 tester:reset:label,Reimpostato
 tester:reset:title,Reimposta le chiavi rilevate
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Настройки клавиатуры
 keycodesTab:Quantum:label,Quantum
 keymap:label,Раскладка
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Название раскладки
 keymapName:placeholder,название пользовательской раскладки
 layer:confirm,"Вы уверены, что хотите очистить слой?"
@@ -98,6 +100,8 @@ print:print:title,Распечатать
 print:source:title,Источник
 printKeymap:label,Распечатать раскладку
 printKeymap:title,Распечатать слои раскладки
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Темный режим
 settingsPanel:displaySizes:help,Показывать размеры клавиш в Key Units
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
 settingsPanel:fastInput:label,Быстрый ввод
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Язык
 settingsPanel:off:label,Выкл
@@ -129,5 +135,6 @@ tester:letters:keycode:label,код клавиши
 tester:page:label,Тестер клавиатуры
 tester:reset:label,Сброс
 tester:reset:title,Сброс обнаруженных клавиш
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

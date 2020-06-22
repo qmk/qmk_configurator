@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Tastatureinstellungen
 keycodesTab:Quantum:label,Quantum
 keymap:label,Tastenbelegung
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Name
 keymapName:placeholder,Eigener Name der Tastaturbelegung
 layer:confirm,Soll die Ebene wirklich gelöscht werden?
@@ -98,6 +100,8 @@ print:print:title,Drucken
 print:source:title,Quelle
 printKeymap:label,Drucken
 printKeymap:title,Drucke die Tastaturbelegung der verschiedenen Ebenen
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Die Seite dunkler machen
 settingsPanel:displaySizes:help,Tastengrößen relativ zur Standardgröße anzeigen
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,strg + alt + u
 settingsPanel:fastInput:help,"Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken"
 settingsPanel:fastInput:label,Schnelle Eingabe
 settingsPanel:fastInput:title,strg + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Sprache
 settingsPanel:off:label,Aus
@@ -129,5 +135,6 @@ tester:letters:keycode:label,Tastencode
 tester:page:label,Tastentester
 tester:reset:label,Zurücksetzen
 tester:reset:title,Erfasste Tasten zurücksetzen
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Configurações de teclado
 keycodesTab:Quantum:label,Quantum
 keymap:label,Keymap
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Nome da keymap
 keymapName:placeholder,nome da keymap customizada
 layer:confirm,Limpar as camadas”
@@ -98,6 +100,8 @@ print:print:title,Impressão
 print:source:title,Fonte
 printKeymap:label,Printar Keymap
 printKeymap:title,Printar camadas de Keymap
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Darkmode
 settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Linguagem
 settingsPanel:off:label,Off
@@ -129,5 +135,6 @@ tester:letters:keycode:label,keycode
 tester:page:label,Keyboard Tester
 tester:reset:label,Reset
 tester:reset:title,Reset detected keys
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
