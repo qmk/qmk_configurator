@@ -35,7 +35,10 @@ let substitute = Object.assign(
 );
 
 const _getUnitClass = (unith, unitw) => {
-  if (unith >= unitw && unith !== 1) {
+  if (unith == unitw && unith > 1) {
+    return 'custom';
+  }
+  if (unith > unitw || unith < 1) {
     if (unith === 2 && unitw == 1.25) {
       return 'kiso';
     }
