@@ -35,7 +35,7 @@ let substitute = Object.assign(
 );
 
 const _getUnitClass = (unith, unitw) => {
-  if (unith > unitw || unith < 1) {
+  if (unith >= unitw && unith !== 1) {
     if (unith === 2 && unitw == 1.25) {
       return 'kiso';
     }
@@ -218,8 +218,10 @@ export default {
       if (getUnitClass(this.uh, this.uw) === 'custom') {
         // explicitly override the height and width calculations for the keymap and provide custom values
         styles = styles.concat([
-          `--default-key-height: ${this.config.KEY_HEIGHT * this.uh}px;`,
-          `--default-key-width: ${this.config.KEY_WIDTH * this.uw}px;`
+          `--default-key-height: ${this.uh * this.config.KEY_Y_SPACING -
+            (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT)}px;`,
+          `--default-key-width: ${this.uw * this.config.KEY_X_SPACING -
+            (this.config.KEY_X_SPACING - this.config.KEY_WIDTH)}px;`
         ]);
       }
 
