@@ -13,7 +13,7 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap';
 import BaseKey from '@/components/BaseKey';
 import AnyKey from '@/components/AnyKey';
@@ -106,6 +106,8 @@ export default {
       'resizeConfig',
       'setLoadingKeymapPromise'
     ]),
+    ...mapMutations('status', ['append']),
+    ...mapActions('status', ['scrollToEnd']),
     /**
      * Due to a quirk in how reactivity works we have to clear the layout
      * name to reset the UI to it's old value.
@@ -161,9 +163,10 @@ export default {
       this.profile && console.time('layout::scale');
       const layout = this.layouts[newLayout];
       if (isUndefined(layout)) {
-        console.log(
-          `WARNING: layout ${newLayout} does not exist on this keyboard`
-        );
+        const msg = `\n\nWARNING: layout ${newLayout} does not exist on this keyboard\n\n`;
+        console.log(msg);
+        this.append(msg);
+        this.scrollToEnd();
         return;
       }
       const max = layout.reduce(
