@@ -1,0 +1,23 @@
+{
+    "keyboard": "mixi",
+    "keymap": "default",
+    "commit": "af4bc251f9d4032abf12d0377b5e948701e82713",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "KC_MUTE", "KC_MPLY", "MO(2)"  ,
+            "KC_MPRV", "KC_UP"  , "KC_MNXT",
+            "KC_LEFT", "KC_DOWN", "KC_RGHT"
+        ],
+        [
+            "RGB_TOG" , "KC_TRNS", "KC_TRNS",
+            "KC_TRNS" , "RGB_VAI", "KC_TRNS",
+            "RGB_RMOD", "RGB_VAD", "RGB_MOD"
+        ],
+        [
+            "KC_NO"  , "KC_NO", "KC_TRNS",
+            "EEP_RST", "RESET", "DEBUG"  ,
+            "KC_NO"  , "KC_NO", "KC_NO"
+        ]
+    ]
+}
