@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Paramètres du clavier
 keycodesTab:Quantum:label,Quantum
 keymap:label,Disposition
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Nom de la disposition
 keymapName:placeholder,Disposition Personnalisée
 layer:confirm,Etes-vous sur de vouloir effacer ce calque?
@@ -98,6 +100,8 @@ print:print:title,Imprimer
 print:source:title,Source
 printKeymap:label,Imprimer la disposition
 printKeymap:title,Imprime les calques de la disposition
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Mode Sombre
 settingsPanel:displaySizes:help,Montre la taille des touches (une touche classique = 1 u)
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position.
 settingsPanel:fastInput:label,Entrée Rapide
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Langue
 settingsPanel:off:label,Off
@@ -129,5 +135,6 @@ tester:letters:keycode:label,code de la touche
 tester:page:label,Testeur De Clavier
 tester:reset:label,Réinitialiser
 tester:reset:title,Réinitialise les touches détectées
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

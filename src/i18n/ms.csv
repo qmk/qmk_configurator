@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Seting papan kekunci
 keycodesTab:Quantum:label,Quantum
 keymap:label,Keymap
+keymapHelp:label,
+keymapHelp:title,
 keymapName:label,Nama Keymap
 keymapName:placeholder,Sesuaikan nama keymap
 layer:confirm,Anda pasti ingin membuang lapisan?
@@ -98,6 +100,8 @@ print:print:title,Cetak
 print:source:title,Sumber
 printKeymap:label,Cetak Keymap
 printKeymap:title,Cetak Lapisan Keymap
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Mod Gelap
 settingsPanel:displaySizes:help,Tunjukkan saiz kekunci dalam Unit Kekunci
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi.
 settingsPanel:fastInput:label,Input cepat
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Bahasa
 settingsPanel:off:label,Tutup
@@ -129,5 +135,6 @@ tester:letters:keycode:label,kod kekunci
 tester:page:label,Penguji Papan Kekunci
 tester:reset:label,Set semula
 tester:reset:title,Set semula key yang dikesan
+tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,

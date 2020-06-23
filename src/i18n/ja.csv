@@ -47,6 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
 keymap:label,Keymap
+keymapHelp:label,ヘルプ
+keymapHelp:title,keymap.jsonを使用するにはどうすればいいですか？
 keymapName:label,Keymap Name
 keymapName:placeholder,カスタムキーマップ名
 layer:confirm,レイヤをクリアしますか？
@@ -98,6 +100,8 @@ print:print:title,Print
 print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,キーマップレイヤの印刷
+settingsPanel:clearLayer:help,レイヤクリア時のデフォルトのキーコードを変更する
+settingsPanel:clearLayer:title,レイヤクリア時のデフォルト
 settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
 settingsPanel:darkmode:label,ダークモード
 settingsPanel:displaySizes:help,キーキャップサイズをキーユニットで表示
@@ -106,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
 settingsPanel:fastInput:label,高速入力
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,KC_NO
+settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,ユーザインタフェースの言語を変更する
 settingsPanel:language:title,言語
 settingsPanel:off:label,Off
@@ -129,5 +135,6 @@ tester:letters:keycode:label,keycode
 tester:page:label,Keyboard Tester
 tester:reset:label,Reset
 tester:reset:title,検出されたキーをリセットする
+tester:typewritericon:label,クリックすると、テスト中にタイプライターの音を鳴らします
 toggleTerminal:label,展開するにはクリックします
 toggleTerminal:title,ターミナル表示の切り替え
