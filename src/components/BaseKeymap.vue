@@ -10,6 +10,8 @@ export default {
         smolKeySize *= (1 + this.config.SCALE) / 2;
       }
       return {
+        '--unit-width: 1',
+        '--unit-height: 1',
         '--default-smaller-key-font-size': `${smolKeySize}rem`,
         '--default-key-font-size': `${keySize}rem`,
         '--default-key-height': `${this.config.KEY_HEIGHT}px`,

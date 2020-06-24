@@ -341,8 +341,6 @@ export default {
     0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-  --unit-width: 1;
-  --unit-height: 1;
   width: calc(
     var(--unit-width) * var(--default-key-x-spacing) -
       (var(--default-key-x-spacing) - var(--default-key-width))
