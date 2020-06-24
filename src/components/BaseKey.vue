@@ -35,9 +35,6 @@ let substitute = Object.assign(
 );
 
 const _getKeyClass = (unith, unitw) => {
-  if (unith === 2 && unitw == 1.25) {
-    return 'kiso';
-  }
   if (unith == 1) {
     switch (unitw) {
       case 1:
@@ -77,6 +74,9 @@ const _getKeyClass = (unith, unitw) => {
       case 2:
         return 'k2uh';
     }
+  }
+  if (unith === 2 && unitw == 1.25) {
+    return 'kiso';
   }
   return 'custom';
 };
