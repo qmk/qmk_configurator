@@ -350,52 +350,52 @@ export default {
       (var(--default-key-y-spacing) - var(--default-key-height))
   );
 }
-.key.k125u {
+.k125u {
   --unit-width: 1.25;
 }
-.key.k15u {
+.k15u {
   --unit-width: 1.5;
 }
-.key.k175u {
+.k175u {
   --unit-width: 1.75;
 }
-.key.k2u {
+.k2u {
   --unit-width: 2;
 }
-.key.k225u {
+.k225u {
   --unit-width: 2.25;
 }
-.key.k275u {
+.k275u {
   --unit-width: 2.75;
 }
-.key.k3u {
+.k3u {
   --unit-width: 3;
 }
-.key.k4u {
+.k4u {
   --unit-width: 4;
 }
-.key.k6u {
+.k6u {
   --unit-width: 6;
 }
-.key.k625u {
+.k625u {
   --unit-width: 6.25;
 }
-.key.k7u {
+.k7u {
   --unit-width: 7;
 }
-.key.k125uh {
+.k125uh {
   --unit-height: 1.25;
 }
-.key.k15uh {
+.k15uh {
   --unit-height: 1.5;
 }
-.key.k175uh {
+.k175uh {
   --unit-height: 1.75;
 }
-.key.k2uh {
+.k2uh {
   --unit-height: 2;
 }
-.key.kiso {
+.kiso {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
   height: var(--default-key-height);
   padding: 0px;
