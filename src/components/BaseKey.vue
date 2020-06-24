@@ -34,11 +34,64 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
-const getKeyClass = (unitheight, unitwidth) => {
-  if (unitheight === 2 && unitwidth == 1.25) {
+const _getKeyClass = (unith, unitw) => {
+  if (unith === 2 && unitw == 1.25) {
     return 'kiso';
   }
-  return '';
+  if (unith == 1) {
+    switch (unitw) {
+      case 1:
+        return 'k1u';
+      case 1.25:
+        return 'k125u';
+      case 1.5:
+        return 'k15u';
+      case 1.75:
+        return 'k175u';
+      case 2:
+        return 'k2u';
+      case 2.25:
+        return 'k225u';
+      case 2.75:
+        return 'k275u';
+      case 3:
+        return 'k3u';
+      case 4:
+        return 'k4u';
+      case 6:
+        return 'k6u';
+      case 6.25:
+        return 'k625u';
+      case 7:
+        return 'k7u';
+    }
+  }
+  if (unitw == 1) {
+    switch (unith) {
+      case 1.25:
+        return 'k125uh';
+      case 1.5:
+        return 'k15uh';
+      case 1.75:
+        return 'k175uh';
+      case 2:
+        return 'k2uh';
+    }
+  }
+  return 'custom';
+};
+
+const cache = new Map();
+
+const getKeyClass = (unitheight, unitwidth) => {
+  const key = `${unitheight}-${unitwidth}`;
+  let hit = cache.has(key);
+  if (hit) {
+    return cache.get(key);
+  }
+  const value = _getKeyClass(unitheight, unitwidth);
+  cache.set(key, value);
+  return value;
 };
 
 export default {
@@ -154,17 +207,20 @@ export default {
     },
     mystyles() {
       let styles = [];
-      if (this.uw !== 1) {
-        styles.push(`--unit-width: ${this.uw};`);
-      }
-      if (this.uh !== 1) {
-        styles.push(`--unit-height: ${this.uh};`);
-      }
       if (this.y > 0) {
         styles.push(`top: ${this.y}px;`);
       }
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
+      }
+      if (getKeyClass(this.uh, this.uw) === 'custom') {
+        // explicitly override the height and width calculations for the keymap and provide custom values
+        if (this.uw !== 1) {
+          styles.push(`--unit-width: ${this.uw};`);
+        }
+        if (this.uh !== 1) {
+          styles.push(`--unit-height: ${this.uh};`);
+        }
       }
 
       return styles.join('');
@@ -295,6 +351,51 @@ export default {
     var(--unit-height) * var(--default-key-y-spacing) -
       (var(--default-key-y-spacing) - var(--default-key-height))
   );
+}
+.key.k125u {
+  --unit-width: 1.25;
+}
+.key.k15u {
+  --unit-width: 1.5;
+}
+.key.k175u {
+  --unit-width: 1.75;
+}
+.key.k2u {
+  --unit-width: 2;
+}
+.key.k225u {
+  --unit-width: 2.25;
+}
+.key.k275u {
+  --unit-width: 2.75;
+}
+.key.k3u {
+  --unit-width: 3;
+}
+.key.k4u {
+  --unit-width: 4;
+}
+.key.k6u {
+  --unit-width: 6;
+}
+.key.k625u {
+  --unit-width: 6.25;
+}
+.key.k7u {
+  --unit-width: 7;
+}
+.key.k125uh {
+  --unit-height: 1.25;
+}
+.key.k15uh {
+  --unit-height: 1.5;
+}
+.key.k175uh {
+  --unit-height: 1.75;
+}
+.key.k2uh {
+  --unit-height: 2;
 }
 .key.kiso {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
