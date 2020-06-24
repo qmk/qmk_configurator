@@ -346,105 +346,67 @@ export default {
     0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
+  width: calc(
+    var(--unit-width) * var(--default-key-x-spacing) -
+      (var(--default-key-x-spacing) - var(--default-key-width))
+  );
+  height: calc(
+    var(--unit-height) * var(--default-key-y-spacing) -
+      (var(--default-key-y-spacing) - var(--default-key-height))
+  );
 }
 .k1u {
-  width: calc(var(--default-key-width));
-  height: calc(var(--default-key-height));
+  --unit-width: 1;
 }
 //(w - 1) * this.config.KEY_X_SPACING + this.config.KEY_WIDTH
 .k125u {
-  width: calc(
-    calc(0.25 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 1.25;
 }
 .k15u {
-  width: calc(
-    calc(0.5 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 1.5;
 }
 .k175u {
-  width: calc(
-    calc(0.75 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 1.75;
 }
 .k2u {
-  width: calc(
-    calc(1 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2;
 }
 .k225u {
-  width: calc(
-    calc(1.25 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2.25;
 }
 .k275u {
-  width: calc(
-    calc(1.75 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2.75;
 }
 .k3u {
-  width: calc(
-    calc(2 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 3;
 }
 .k4u {
-  width: calc(
-    calc(3 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 4;
 }
 .k6u {
-  width: calc(
-    calc(5 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 6;
 }
 .k625u {
-  width: calc(
-    calc(5.25 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 6.25;
 }
 .k7u {
-  width: calc(
-    calc(6 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 7;
 }
 .k2uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(1 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 2;
 }
 .custom {
   width: var(--default-key-width);
   height: var(--default-key-height);
 }
 .k125uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.25 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.25;
 }
 .k15uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.5 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.5;
 }
 .k175uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.75 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.75;
 }
 .key.kiso {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
