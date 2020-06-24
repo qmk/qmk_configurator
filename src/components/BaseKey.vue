@@ -34,7 +34,7 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
-const _getKeyClass = (unith, unitw) => {
+const _getKeySizeClass = (unith, unitw) => {
   if (unith == 1) {
     switch (unitw) {
       case 1:
@@ -83,13 +83,13 @@ const _getKeyClass = (unith, unitw) => {
 
 const cache = new Map();
 
-const getKeyClass = (unitheight, unitwidth) => {
+const getKeySizeClass = (unitheight, unitwidth) => {
   const key = `${unitheight}-${unitwidth}`;
   let hit = cache.has(key);
   if (hit) {
     return cache.get(key);
   }
-  const value = _getKeyClass(unitheight, unitwidth);
+  const value = _getKeySizeClass(unitheight, unitwidth);
   cache.set(key, value);
   return value;
 };
@@ -178,7 +178,7 @@ export default {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      classes.push(getKeyClass(this.uh, this.uw));
+      classes.push(getKeySizeClass(this.uh, this.uw));
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode
@@ -213,7 +213,7 @@ export default {
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
       }
-      if (getKeyClass(this.uh, this.uw) === 'custom') {
+      if (getKeySizeClass(this.uh, this.uw) === 'custom') {
         // explicitly override the height and width calculations for the keymap and provide custom values
         if (this.uw !== 1) {
           styles.push(`--unit-width: ${this.uw};`);
