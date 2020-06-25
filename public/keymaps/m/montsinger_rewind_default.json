@@ -1,7 +1,7 @@
 {
   "keyboard": "montsinger/rewind",
   "keymap": "default",
-  "commit": "b43bdc1c69bb5a57976a159bfc00c4ac1c7c7f8f",
+  "commit": "372c0a8e14df621a3a25e0484a7b30f4f1af8601",
   "layout": "LAYOUT_ortho_5x10",
   "layers": [
     [
