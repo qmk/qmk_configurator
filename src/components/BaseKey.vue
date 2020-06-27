@@ -34,67 +34,62 @@ let substitute = Object.assign(
   colorways.platformIcons(window.navigator.platform)
 );
 
-const _getUnitClass = (unith, unitw) => {
-  if (unith == unitw && unith > 1) {
-    return 'custom';
-  }
-  if (unith > unitw || unith < 1) {
-    if (unith === 2 && unitw == 1.25) {
-      return 'kiso';
-    }
-    switch (unith) {
-      case 2:
-        return 'k2uh';
+const _getKeySizeClass = (unith, unitw) => {
+  if (unith == 1) {
+    switch (unitw) {
+      case 1:
+        return 'k1u';
       case 1.25:
-        'k125uh';
+        return 'k125u';
+      case 1.5:
+        return 'k15u';
+      case 1.75:
+        return 'k175u';
+      case 2:
+        return 'k2u';
+      case 2.25:
+        return 'k225u';
+      case 2.75:
+        return 'k275u';
+      case 3:
+        return 'k3u';
+      case 4:
+        return 'k4u';
+      case 6:
+        return 'k6u';
+      case 6.25:
+        return 'k625u';
+      case 7:
+        return 'k7u';
+    }
+  }
+  if (unitw == 1) {
+    switch (unith) {
+      case 1.25:
         return 'k125uh';
       case 1.5:
         return 'k15uh';
       case 1.75:
         return 'k175uh';
-      default:
-        return 'custom';
+      case 2:
+        return 'k2uh';
     }
   }
-  switch (unitw) {
-    case 1:
-      return 'k1u';
-    case 1.25:
-      return 'k125u';
-    case 1.5:
-      return 'k15u';
-    case 1.75:
-      return 'k175u';
-    case 2:
-      return 'k2u';
-    case 2.25:
-      return 'k225u';
-    case 2.75:
-      return 'k275u';
-    case 3:
-      return 'k3u';
-    case 4:
-      return 'k4u';
-    case 6:
-      return 'k6u';
-    case 6.25:
-      return 'k625u';
-    case 7:
-      return 'k7u';
-    default:
-      return 'custom';
+  if (unith === 2 && unitw == 1.25) {
+    return 'kiso';
   }
+  return 'custom';
 };
 
 const cache = new Map();
 
-const getUnitClass = (unitheight, unitwidth) => {
+const getKeySizeClass = (unitheight, unitwidth) => {
   const key = `${unitheight}-${unitwidth}`;
   let hit = cache.has(key);
   if (hit) {
     return cache.get(key);
   }
-  const value = _getUnitClass(unitheight, unitwidth);
+  const value = _getKeySizeClass(unitheight, unitwidth);
   cache.set(key, value);
   return value;
 };
@@ -183,7 +178,7 @@ export default {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
-      classes.push(getUnitClass(this.uh, this.uw));
+      classes.push(getKeySizeClass(this.uh, this.uw));
       if (!isUndefined(this.meta) && !this.printable) {
         if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
           // Colorway specific overrides by keycode
@@ -218,14 +213,14 @@ export default {
       if (this.x > 0) {
         styles.push(`left: ${this.x}px;`);
       }
-      if (getUnitClass(this.uh, this.uw) === 'custom') {
+      if (getKeySizeClass(this.uh, this.uw) === 'custom') {
         // explicitly override the height and width calculations for the keymap and provide custom values
-        styles = styles.concat([
-          `--default-key-height: ${this.uh * this.config.KEY_Y_SPACING -
-            (this.config.KEY_Y_SPACING - this.config.KEY_HEIGHT)}px;`,
-          `--default-key-width: ${this.uw * this.config.KEY_X_SPACING -
-            (this.config.KEY_X_SPACING - this.config.KEY_WIDTH)}px;`
-        ]);
+        if (this.uw !== 1) {
+          styles.push(`--unit-width: ${this.uw};`);
+        }
+        if (this.uh !== 1) {
+          styles.push(`--unit-height: ${this.uh};`);
+        }
       }
 
       return styles.join('');
@@ -346,107 +341,61 @@ export default {
     0px 0px 0px 1px rgba(0, 0, 0, 0.3);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-.k1u {
-  width: calc(var(--default-key-width));
-  height: calc(var(--default-key-height));
-}
-//(w - 1) * this.config.KEY_X_SPACING + this.config.KEY_WIDTH
-.k125u {
   width: calc(
-    calc(0.25 * var(--default-key-x-spacing)) + var(--default-key-width)
+    var(--unit-width) * var(--default-key-x-spacing) -
+      (var(--default-key-x-spacing) - var(--default-key-width))
   );
-  height: var(--default-key-height);
+  height: calc(
+    var(--unit-height) * var(--default-key-y-spacing) -
+      (var(--default-key-y-spacing) - var(--default-key-height))
+  );
+}
+.k125u {
+  --unit-width: 1.25;
 }
 .k15u {
-  width: calc(
-    calc(0.5 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 1.5;
 }
 .k175u {
-  width: calc(
-    calc(0.75 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 1.75;
 }
 .k2u {
-  width: calc(
-    calc(1 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2;
 }
 .k225u {
-  width: calc(
-    calc(1.25 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2.25;
 }
 .k275u {
-  width: calc(
-    calc(1.75 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 2.75;
 }
 .k3u {
-  width: calc(
-    calc(2 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 3;
 }
 .k4u {
-  width: calc(
-    calc(3 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 4;
 }
 .k6u {
-  width: calc(
-    calc(5 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 6;
 }
 .k625u {
-  width: calc(
-    calc(5.25 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
+  --unit-width: 6.25;
 }
 .k7u {
-  width: calc(
-    calc(6 * var(--default-key-x-spacing)) + var(--default-key-width)
-  );
-  height: var(--default-key-height);
-}
-.k2uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(1 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
-}
-.custom {
-  width: var(--default-key-width);
-  height: var(--default-key-height);
+  --unit-width: 7;
 }
 .k125uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.25 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.25;
 }
 .k15uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.5 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.5;
 }
 .k175uh {
-  width: var(--default-key-width);
-  height: calc(
-    calc(0.75 * var(--default-key-y-spacing)) + var(--default-key-height)
-  );
+  --unit-height: 1.75;
 }
-.key.kiso {
+.k2uh {
+  --unit-height: 2;
+}
+.kiso {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
   height: var(--default-key-height);
   padding: 0px;
