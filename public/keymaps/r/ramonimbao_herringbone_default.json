@@ -1,5 +1,5 @@
 {
-  "keyboard": "herringbone",
+  "keyboard": "ramonimbao/herringbone",
   "keymap": "default",
   "commit": "32a47e7af4a2ce21260aadde5bf7ed8f78293ff9",
   "layout": "LAYOUT_ansi",
