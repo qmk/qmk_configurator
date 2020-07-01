@@ -165,5 +165,26 @@ export default [
   { name: 'F21', code: 'KC_F21' },
   { name: 'F22', code: 'KC_F22' },
   { name: 'F23', code: 'KC_F23' },
-  { name: 'F24', code: 'KC_F24' }
+  { name: 'F24', code: 'KC_F24' },
+
+  { label: 'Lock Switch Keys', width: 'label' },
+
+  {
+    name: 'Locking Caps Lock',
+    code: 'KC_LCAP',
+    title: 'Locking Caps Lock',
+    width: 1750
+  },
+  {
+    name: 'Locking Num Lock',
+    code: 'KC_LNUM',
+    title: 'Locking Num Lock',
+    width: 1750
+  },
+  {
+    name: 'Locking Scroll Lock',
+    code: 'KC_LSCR',
+    title: 'Locking Scroll Lock',
+    width: 1750
+  }
 ];
