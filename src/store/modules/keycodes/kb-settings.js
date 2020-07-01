@@ -173,29 +173,31 @@ export default [
     title: 'Cycle through backlight levels'
   },
   {
+    name: 'BL Breath',
+    code: 'BL_BRTG',
+    title: 'Toggle backlight breathing'
+  },
+  {
     name: 'BL On',
     code: 'BL_ON',
     title: 'Set the backlight to max brightness'
-  },
-  {
-    name: 'BL Off',
-    code: 'BL_OFF',
-    title: 'Turn the backlight off'
   },
   {
     name: 'BL +',
     code: 'BL_INC',
     title: 'Increase the backlight level'
   },
+  { width: 0 },
+  { width: 1000 },
+  {
+    name: 'BL Off',
+    code: 'BL_OFF',
+    title: 'Turn the backlight off'
+  },
   {
     name: 'BL -',
     code: 'BL_DEC',
     title: 'Decrease the backlight level'
-  },
-  {
-    name: 'BL Breath',
-    code: 'BL_BRTG',
-    title: 'Toggle backlight breathing'
   },
 
   { label: 'RGB Lighting settings', width: 'label' },
