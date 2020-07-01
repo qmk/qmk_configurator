@@ -120,7 +120,7 @@ export default [
   { name: 'Space', code: 'KC_SPC', keys: 'space', width: 6250 },
   { name: 'Right Alt', code: 'KC_RALT', width: 1250 },
   { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
-  { name: 'Menu', code: 'KC_APP', width: 1250 },
+  { name: 'Menu', code: 'KC_APP', title: 'Context Menu', width: 1250 },
   { name: 'Right Ctrl', code: 'KC_RCTL', width: 1250 },
   { width: 250 },
   { name: 'Left', code: 'KC_LEFT', keys: 'left' },

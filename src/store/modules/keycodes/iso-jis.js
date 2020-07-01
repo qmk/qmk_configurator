@@ -140,7 +140,7 @@ export default [
   },
   { name: 'Right Alt', code: 'KC_RALT' },
   { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
-  { name: 'Menu', code: 'KC_APP' },
+  { name: 'Menu', code: 'KC_APP', title: 'Context Menu' },
   { name: 'Right Ctrl', code: 'KC_RCTL', width: 1250 },
   { width: 250 },
   { name: 'Left', code: 'KC_LEFT', keys: 'left' },

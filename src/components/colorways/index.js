@@ -16,7 +16,8 @@ export default {
     KC_UP: 'arrow-up',
     KC_DOWN: 'arrow-down',
     KC_LEFT: 'arrow-left',
-    KC_RGHT: 'arrow-right'
+    KC_RGHT: 'arrow-right',
+    KC_APP: 'bars'
   },
   /**
    * returns the correct icons for the identified platform
