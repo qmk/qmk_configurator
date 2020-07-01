@@ -220,6 +220,7 @@ export default [
   { name: 'RGB Mode K', code: 'RGB_M_K', title: 'RGB Mode: Knight Rider' },
   { name: 'RGB Mode X', code: 'RGB_M_X', title: 'RGB Mode: Christmas' },
   { name: 'RGB Mode G', code: 'RGB_M_G', title: 'RGB Mode: Gradient' },
+  { name: 'RGB Mode T', code: 'RGB_M_T', title: 'RGB Mode: Test' },
   { width: 0 },
   { width: 1000 },
   { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'Previous RGB mode' },
