@@ -188,7 +188,7 @@ export default [
     title: 'Increase the backlight level'
   },
   { width: 0 },
-  { width: 1000 },
+  { width: 3000 },
   {
     name: 'BL Off',
     code: 'BL_OFF',
@@ -208,15 +208,10 @@ export default [
     title: 'Toggle RGB lighting on or off'
   },
   { name: 'RGB Mode +', code: 'RGB_MOD', title: 'Next RGB mode' },
-  { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'Previous RGB mode' },
   { name: 'Hue +', code: 'RGB_HUI', title: 'Increase hue' },
-  { name: 'Hue -', code: 'RGB_HUD', title: 'Decrease hue' },
   { name: 'Sat +', code: 'RGB_SAI', title: 'Increase saturation' },
-  { name: 'Sat -', code: 'RGB_SAD', title: 'Decrease saturation' },
   { name: 'Bright +', code: 'RGB_VAI', title: 'Increase value' },
-  { name: 'Bright -', code: 'RGB_VAD', title: 'Decrease value' },
   { name: 'Effect +', code: 'RGB_SPI', title: 'Increase RGB effect speed' },
-  { name: 'Effect -', code: 'RGB_SPD', title: 'Decrease RGB effect speed' },
   { name: 'RGB Mode P', code: 'RGB_M_P', title: 'RGB Mode: Plain' },
   { name: 'RGB Mode B', code: 'RGB_M_B', title: 'RGB Mode: Breathe' },
   { name: 'RGB Mode R', code: 'RGB_M_R', title: 'RGB Mode: Rainbow' },
@@ -224,5 +219,12 @@ export default [
   { name: 'RGB Mode SN', code: 'RGB_M_SN', title: 'RGB Mode: Snake' },
   { name: 'RGB Mode K', code: 'RGB_M_K', title: 'RGB Mode: Knight Rider' },
   { name: 'RGB Mode X', code: 'RGB_M_X', title: 'RGB Mode: Christmas' },
-  { name: 'RGB Mode G', code: 'RGB_M_G', title: 'RGB Mode: Gradient' }
+  { name: 'RGB Mode G', code: 'RGB_M_G', title: 'RGB Mode: Gradient' },
+  { width: 0 },
+  { width: 1000 },
+  { name: 'RGB Mode -', code: 'RGB_RMOD', title: 'Previous RGB mode' },
+  { name: 'Hue -', code: 'RGB_HUD', title: 'Decrease hue' },
+  { name: 'Sat -', code: 'RGB_SAD', title: 'Decrease saturation' },
+  { name: 'Bright -', code: 'RGB_VAD', title: 'Decrease value' },
+  { name: 'Effect -', code: 'RGB_SPD', title: 'Decrease RGB effect speed' }
 ];
