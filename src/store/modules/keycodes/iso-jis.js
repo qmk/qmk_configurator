@@ -138,7 +138,7 @@ export default [
     styles: { 'font-size': '8px' },
     width: 1250
   },
-  { name: 'Right Alt', code: 'KC_RALT' },
+  { name: 'Alt Gr', code: 'KC_RALT' },
   { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
   { name: 'Menu', code: 'KC_APP', title: 'Context Menu' },
   { name: 'Right Ctrl', code: 'KC_RCTL', width: 1250 },
