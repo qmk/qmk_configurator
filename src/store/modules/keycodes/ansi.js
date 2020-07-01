@@ -63,7 +63,7 @@ export default [
   { name: '}\n]', code: 'KC_RBRC', keys: ']' },
   { name: '|\n\\', code: 'KC_BSLS', keys: '\\', width: 1500 },
   { width: 250 },
-  { name: 'Del', code: 'KC_DEL', keys: 'delete' },
+  { name: 'Delete', code: 'KC_DEL', keys: 'delete' },
   { name: 'End', code: 'KC_END', keys: 'end' },
   { name: 'Page Down', code: 'KC_PGDN', keys: 'pagedown' },
   { width: 250 },
