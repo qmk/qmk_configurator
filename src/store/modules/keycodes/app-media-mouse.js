@@ -172,19 +172,19 @@ export default [
   { label: 'Mechanically Locking Keys', width: 'label' },
 
   {
-    name: 'Locking Caps Lock',
+    name: 'Lock. Caps Lock',
     code: 'KC_LCAP',
     title: 'Locking Caps Lock',
     width: 1750
   },
   {
-    name: 'Locking Num Lock',
+    name: 'Lock. Num Lock',
     code: 'KC_LNUM',
     title: 'Locking Num Lock',
     width: 1750
   },
   {
-    name: 'Locking Scroll Lock',
+    name: 'Lock. Scroll Lock',
     code: 'KC_LSCR',
     title: 'Locking Scroll Lock',
     width: 1750
