@@ -169,7 +169,7 @@ export default [
   { name: 'F23', code: 'KC_F23' },
   { name: 'F24', code: 'KC_F24' },
 
-  { label: 'Lock Switch Keys', width: 'label' },
+  { label: 'Mechanically Locking Keys', width: 'label' },
 
   {
     name: 'Locking Caps Lock',
