@@ -129,7 +129,7 @@ export default [
   { name: 'Left OS', code: 'KC_LGUI', keys: 'cmd', width: 1250 },
   { name: 'Left Alt', code: 'KC_LALT', keys: 'alt', width: 1250 },
   { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan', width: 1250 },
-  { name: 'Space', code: 'KC_SPC', keys: 'space', width: 4000 },
+  { name: 'Space', code: 'KC_SPC', keys: 'space', width: 3000 },
   { name: '変換', code: 'KC_HENK', title: 'JIS Henkan', width: 1250 },
   {
     name: 'カタカナ\nひらがな',
@@ -138,6 +138,7 @@ export default [
     styles: { 'font-size': '8px' },
     width: 1250
   },
+  { name: 'Right Alt', code: 'KC_RALT' },
   { name: 'Right OS', code: 'KC_RGUI', width: 1250 },
   { name: 'Menu', code: 'KC_APP' },
   { name: 'Right Ctrl', code: 'KC_RCTL', width: 1250 },
