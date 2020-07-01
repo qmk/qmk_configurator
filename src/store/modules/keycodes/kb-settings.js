@@ -151,7 +151,7 @@ export default [
     width: 1500
   },
   {
-    name: 'Togg NKRO',
+    name: 'Toggle NKRO',
     code: 'NK_TOGG',
     title: 'Turn NKRO on or off',
     width: 1500
