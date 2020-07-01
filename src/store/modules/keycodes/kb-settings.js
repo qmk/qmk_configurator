@@ -16,6 +16,18 @@ export default [
     width: 1500
   },
   {
+    name: 'Swap LCtl/LGUI',
+    code: 'LCG_SWP',
+    title: 'Swap Left Control and GUI',
+    width: 1500
+  },
+  {
+    name: 'Swap RCtl/RGUI',
+    code: 'RCG_SWP',
+    title: 'Swap Right Control and GUI',
+    width: 1500
+  },
+  {
     name: 'Swap LAlt/LGUI',
     code: 'LAG_SWP',
     title: 'Swap Left Alt and Left GUI',
@@ -58,6 +70,12 @@ export default [
     width: 1500
   },
   {
+    name: 'Swap Ctl/GUI',
+    code: 'CG_SWAP',
+    title: 'Swap Ctrl and GUI on both sides (for macOS)',
+    width: 1500
+  },
+  {
     width: 0
   },
   {
@@ -70,6 +88,18 @@ export default [
     name: 'Rev Caps>LCtl',
     code: 'CL_CAPS',
     title: 'Stop treating Caps Lock as Left Control',
+    width: 1500
+  },
+  {
+    name: 'Unswap LCtl/LGUI',
+    code: 'LCG_NRM',
+    title: 'Unswap Left Control and GUI',
+    width: 1500
+  },
+  {
+    name: 'Unswap RCtl/RGUI',
+    code: 'RCG_NRM',
+    title: 'Unswap Right Control and GUI',
     width: 1500
   },
   {
@@ -112,6 +142,12 @@ export default [
     name: 'Rev Alt/GUI',
     code: 'AG_NORM',
     title: 'Unswap Alt and GUI on both sides (for macOS)',
+    width: 1500
+  },
+  {
+    name: 'Unswap Ctl/GUI',
+    code: 'CG_NORM',
+    title: 'Unswap Ctrl and GUI on both sides',
     width: 1500
   },
   {
