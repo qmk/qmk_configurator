@@ -491,6 +491,7 @@ function getExclusionList() {
     'kbdfans/kbd75',
     'keebio/bdn9',
     'keebio/iris',
+    'keebio/kbo5000',
     'keebio/levinson',
     'keebio/nyquist',
     'keebio/quefrency',
