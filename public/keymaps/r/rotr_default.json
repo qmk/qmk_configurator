@@ -1,0 +1,11 @@
+{
+  "keyboard": "rotr",
+  "keymap": "default",
+  "commit": "67beec5e94eefade8d22be10a5308373ddb54118",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ]
+  ]
+}
