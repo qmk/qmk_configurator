@@ -482,6 +482,7 @@ function getExclusionList() {
     'handwired/postageboard',
     'handwired/qc60',
     'handwired/splittest',
+    'handwired/unk',
     'handwired/xealous',
     'hecomi',
     'helix',
