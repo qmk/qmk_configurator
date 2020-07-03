@@ -1,8 +1,8 @@
 {
   "keyboard": "botanicalkeyboards/fm2u",
   "keymap": "default",
-  "commit": "4a92dd327c7df11f10cbe85c5eb5868330062f2b",
-  "layout": "LAYOUT_100u",
+  "commit": "7c57efaaf9388e003422c8b2c15e4ecd8b10053c",
+  "layout": "LAYOUT_2u",
   "layers": [
     [
       "KC_B"
