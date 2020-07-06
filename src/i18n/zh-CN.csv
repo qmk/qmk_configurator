@@ -121,8 +121,8 @@ testKeys:label,测试键盘
 testKeys:title,测试键盘输入
 tester:back:label,返回
 tester:back:title,回到配置页面
-tester:chatter:detectedAlert,探测到震颤！
-tester:chatter:label,震颤阈值 (ms)
+tester:chatter:detectedAlert,探测到连击！
+tester:chatter:label,连击阈值 (ms)
 tester:docs:paragraph,注意：探测到的键位值和键位码可能会因为本地设置有所不同。文档
 tester:keycodeStatus:label,键码已探测
 tester:letters:code:label,键位代码
