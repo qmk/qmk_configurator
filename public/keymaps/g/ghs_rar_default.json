@@ -1,7 +1,7 @@
 {
   "keyboard": "ghs/rar",
   "keymap": "default",
-  "commit": "8c66c5aa9b08d732329408847dc6cf7645e67ae1",
+  "commit": "60ee8bddfcd2889c8ae040c06ae639ac6113e795",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
