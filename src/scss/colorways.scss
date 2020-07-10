@@ -381,6 +381,19 @@
   color: #3d3635;
 }
 
+.gmk-camping-key {
+  background: rgb(238, 226, 208);
+  color: rgb(91, 124, 91);
+}
+.gmk-camping-mod {
+  background: rgb(91, 124, 91);
+  color: rgb(238, 226, 208);
+}
+.gmk-camping-accent {
+  background: rgb(115, 54, 54);
+  color: rgb(238, 226, 208);
+}
+
 .gmk-calm-depths-key {
   background: #2e3b51;
   color: #22aabc;
@@ -388,6 +401,19 @@
 .gmk-calm-depths-mod {
   background: #4a4f58;
   color: #22aabc;
+}
+
+.gmk-deku-key {
+  background: #298286;
+  color: #e5e1de;
+}
+.gmk-deku-mod {
+  background: #e5e1de;
+  color: #298286;
+}
+.gmk-deku-accent {
+  background: #b03232;
+  color: #e5e1de;
 }
 
 .gmk-dolch-key {
@@ -411,6 +437,71 @@
   }
 }
 .gmk-dolch-kb {
+}
+
+.gmk-hammer-head-dark-key {
+  background: $color-pantone-533C;
+  color: $color-pantone-3258C;
+}
+.gmk-hammer-head-dark-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+}
+.gmk-hammer-head-dark-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
+}
+
+.gmk-hammer-head-light-key {
+  background: $color-pantone-536C;
+  color: $color-pantone-2378C;
+}
+.gmk-hammer-head-light-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+}
+.gmk-hammer-head-light-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
+}
+
+.gmk-hyperfuse-key {
+  background: $color-gmk-abs-2M;
+  color: $color-gmk-abs-DY;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2M, 10%);
+    color: lighten($color-gmk-abs-DY, 5%);
+    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
+  }
+}
+.gmk-hyperfuse-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-TU2;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2B, 10%);
+    color: $color-gmk-abs-TU2;
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
+  }
+}
+.gmk-hyperfuse-accent {
+  background: $color-gmk-abs-TU2;
+  color: $color-gmk-abs-DY;
+  input {
+    background: lighten($color-gmk-abs-TU2, 40%);
+  }
+}
+.gmk-hyperfuse-accent2 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-TU2;
+  input {
+    background: lighten($color-gmk-abs-DY, 40%);
+  }
+}
+.gmk-hyperfuse-kb {
+  // placeholder
+  // background: $color-pantone-533C;
 }
 
 .gmk-jamon-key {
@@ -443,6 +534,23 @@
 .gmk-jamon-kb {
   // placeholder
   background: $color-pantone-533C;
+}
+
+.gmk-mecha-01-key {
+  background: $color-pantone-267C;
+  color: $color-pantone-802C;
+}
+.gmk-mecha-01-mod {
+  background: $color-gmk-abs-CR;
+  color: $color-pantone-802C;
+}
+.gmk-mecha-01-accent {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-RO2;
+}
+.gmk-mecha-01-accent2 {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-V2;
 }
 
 .gmk-merlin-key {
@@ -846,4 +954,15 @@
 }
 .dsa-milkshake-os {
   background: #c091ed;
+}
+
+.jtk-suited-assassin-key,
+.jtk-suited-assassin-mod {
+  background: #312c2b;
+  color: #a79373;
+}
+
+.jtk-suited-assassin-accent {
+  background: #a79373;
+  color: #312c2b;
 }
