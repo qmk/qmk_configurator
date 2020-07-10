@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-hyperfuse',
+  name: 'kat-hyperfuse',
   override: {
     KC_ENT: 'accent',
     KC_PENT: 'accent',

@@ -465,45 +465,6 @@
   color: $color-pantone-2378C;
 }
 
-.gmk-hyperfuse-key {
-  background: $color-gmk-abs-2M;
-  color: $color-gmk-abs-DY;
-  input,
-  .key-contents {
-    background: darken($color-gmk-abs-2M, 10%);
-    color: lighten($color-gmk-abs-DY, 5%);
-    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
-  }
-}
-.gmk-hyperfuse-mod {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-TU2;
-  input,
-  .key-contents {
-    background: darken($color-gmk-abs-2B, 10%);
-    color: $color-gmk-abs-TU2;
-    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
-  }
-}
-.gmk-hyperfuse-accent {
-  background: $color-gmk-abs-TU2;
-  color: $color-gmk-abs-DY;
-  input {
-    background: lighten($color-gmk-abs-TU2, 40%);
-  }
-}
-.gmk-hyperfuse-accent2 {
-  background: $color-gmk-abs-DY;
-  color: $color-gmk-abs-TU2;
-  input {
-    background: lighten($color-gmk-abs-DY, 40%);
-  }
-}
-.gmk-hyperfuse-kb {
-  // placeholder
-  // background: $color-pantone-533C;
-}
-
 .gmk-jamon-key {
   background: #84172c;
   color: #ece4d0;
@@ -956,6 +917,70 @@
   background: #c091ed;
 }
 
+.kat-hyperfuse-key {
+  background: $color-gmk-abs-2M;
+  color: $color-gmk-abs-DY;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2M, 10%);
+    color: lighten($color-gmk-abs-DY, 5%);
+    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
+  }
+}
+.kat-hyperfuse-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-TU2;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2B, 10%);
+    color: $color-gmk-abs-TU2;
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
+  }
+}
+.kat-hyperfuse-accent {
+  background: $color-gmk-abs-TU2;
+  color: $color-gmk-abs-DY;
+  input {
+    background: lighten($color-gmk-abs-TU2, 40%);
+  }
+}
+.kat-hyperfuse-accent2 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-TU2;
+  input {
+    background: lighten($color-gmk-abs-DY, 40%);
+  }
+}
+
+.kat-oasis-key {
+  background: $color-pantone-155C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-155C, 10%);
+    color: lighten($color-pantone-7617C, 5%);
+    border-color: mix($color-pantone-155C, lighten($color-pantone-7617C, 5%));
+  }
+}
+.kat-oasis-mod {
+  background: $color-pantone-317C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-317C, 10%);
+    color: $color-pantone-7617C;
+    border-color: mix($color-pantone-317C, $color-pantone-7617C);
+  }
+}
+.kat-oasis-accent {
+  background: $color-pantone-7617C;
+  color: $color-pantone-155C;
+  input {
+    background: lighten($color-pantone-7617C, 40%);
+  }
+}
+
+// JTKeycaps
 .jtk-suited-assassin-key,
 .jtk-suited-assassin-mod {
   background: #312c2b;

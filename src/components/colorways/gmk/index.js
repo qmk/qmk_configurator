@@ -11,7 +11,6 @@ import gmk_deku from './deku';
 import gmk_dolch from './dolch';
 import gmk_hammer_head_dark from './hammer_head_dark';
 import gmk_hammer_head_light from './hammer_head_light';
-import gmk_hyperfuse from './hyperfuse';
 import gmk_jamon from './jamon';
 import gmk_mecha_01 from './mecha_01';
 import gmk_merlin from './merlin';
@@ -43,7 +42,6 @@ export default [
   gmk_dolch,
   gmk_hammer_head_dark,
   gmk_hammer_head_light,
-  gmk_hyperfuse,
   gmk_jamon,
   gmk_mecha_01,
   gmk_merlin,
