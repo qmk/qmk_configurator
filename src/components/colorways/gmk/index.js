@@ -9,10 +9,9 @@ import gmk_calm_depths from './calm_depths';
 import gmk_camping from './camping';
 import gmk_deku from './deku';
 import gmk_dolch from './dolch';
-import gmk_hammer_head_dark from './hammer_head_dark';
-import gmk_hammer_head_light from './hammer_head_light';
+import gmk_hammerhead_dark from './hammerhead_dark';
+import gmk_hammerhead_light from './hammerhead_light';
 import gmk_jamon from './jamon';
-import gmk_mecha_01 from './mecha_01';
 import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
 import gmk_mizu from './mizu';
@@ -40,10 +39,9 @@ export default [
   gmk_camping,
   gmk_deku,
   gmk_dolch,
-  gmk_hammer_head_dark,
-  gmk_hammer_head_light,
+  gmk_hammerhead_dark,
+  gmk_hammerhead_light,
   gmk_jamon,
-  gmk_mecha_01,
   gmk_merlin,
   gmk_metaverse,
   gmk_mizu,

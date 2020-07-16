@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-hammer-head-light',
+  name: 'gmk-hammerhead-light',
   override: {
     KC_ENT: 'accent',
     KC_PENT: 'accent',

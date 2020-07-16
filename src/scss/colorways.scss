@@ -439,28 +439,52 @@
 .gmk-dolch-kb {
 }
 
-.gmk-hammer-head-dark-key {
+.gmk-hammerhead-dark-key {
   background: $color-pantone-533C;
   color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
 }
-.gmk-hammer-head-dark-mod {
+.gmk-hammerhead-dark-mod {
   background: $color-pantone-2378C;
   color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
 }
-.gmk-hammer-head-dark-accent {
+.gmk-hammerhead-dark-accent {
   background: $color-pantone-3258C;
   color: $color-pantone-2378C;
 }
 
-.gmk-hammer-head-light-key {
+.gmk-hammerhead-light-key {
   background: $color-pantone-536C;
   color: $color-pantone-2378C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-536C, 10%);
+    color: darken($color-pantone-2378C, 5%);
+    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 5%));
+  }
 }
-.gmk-hammer-head-light-mod {
+.gmk-hammerhead-light-mod {
   background: $color-pantone-2378C;
   color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
 }
-.gmk-hammer-head-light-accent {
+.gmk-hammerhead-light-accent {
   background: $color-pantone-3258C;
   color: $color-pantone-2378C;
 }
@@ -495,23 +519,6 @@
 .gmk-jamon-kb {
   // placeholder
   background: $color-pantone-533C;
-}
-
-.gmk-mecha-01-key {
-  background: $color-pantone-267C;
-  color: $color-pantone-802C;
-}
-.gmk-mecha-01-mod {
-  background: $color-gmk-abs-CR;
-  color: $color-pantone-802C;
-}
-.gmk-mecha-01-accent {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-RO2;
-}
-.gmk-mecha-01-accent2 {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-V2;
 }
 
 .gmk-merlin-key {
@@ -985,6 +992,12 @@
 .jtk-suited-assassin-mod {
   background: #312c2b;
   color: #a79373;
+  input,
+  .key-contents {
+    background: lighten(#312c2b, 10%);
+    color: darken(#a79373, 5%);
+    border-color: mix(#312c2b, darken(#a79373, 5%));
+  }
 }
 
 .jtk-suited-assassin-accent {
