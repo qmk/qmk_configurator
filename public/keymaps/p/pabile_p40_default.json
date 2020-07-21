@@ -1,5 +1,5 @@
 {
-  "keyboard": "%KEYBOARD%",
+  "keyboard": "pabile/p40",
   "keymap": "default",
   "commit": "d15a60d2d318ede79746c09d5beb79ba72037f30",
   "layout": "LAYOUT_ortho_4x10",
