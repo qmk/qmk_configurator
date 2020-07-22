@@ -381,6 +381,31 @@
   color: #3d3635;
 }
 
+.gmk-camping-key {
+  background: $color-sp-abs-WCK;
+  color: $color-sp-abs-VF;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-WCK, 10%);
+    color: $color-sp-abs-VF;
+    border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
+  }
+}
+.gmk-camping-mod {
+  background: $color-sp-abs-VF;
+  color: $color-sp-abs-WCK;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-VF, 10%);
+    color: $color-sp-abs-WCK;
+    border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
+  }
+}
+.gmk-camping-accent {
+  background: $color-sp-abs-RBC;
+  color: $color-sp-abs-WCK;
+}
+
 .gmk-calm-depths-key {
   background: #2e3b51;
   color: #22aabc;
@@ -388,6 +413,19 @@
 .gmk-calm-depths-mod {
   background: #4a4f58;
   color: #22aabc;
+}
+
+.gmk-deku-key {
+  background: #298286;
+  color: #e5e1de;
+}
+.gmk-deku-mod {
+  background: #e5e1de;
+  color: #298286;
+}
+.gmk-deku-accent {
+  background: #b03232;
+  color: #e5e1de;
 }
 
 .gmk-dolch-key {
@@ -411,6 +449,56 @@
   }
 }
 .gmk-dolch-kb {
+}
+
+.gmk-hammerhead-dark-key {
+  background: $color-pantone-533C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-dark-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-dark-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
+}
+
+.gmk-hammerhead-light-key {
+  background: $color-pantone-536C;
+  color: $color-pantone-2378C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-536C, 10%);
+    color: darken($color-pantone-2378C, 5%);
+    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 5%));
+  }
+}
+.gmk-hammerhead-light-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-light-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
 }
 
 .gmk-jamon-key {
@@ -846,4 +934,85 @@
 }
 .dsa-milkshake-os {
   background: #c091ed;
+}
+
+.kat-hyperfuse-key {
+  background: $color-gmk-abs-2M;
+  color: $color-gmk-abs-DY;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2M, 10%);
+    color: lighten($color-gmk-abs-DY, 5%);
+    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
+  }
+}
+.kat-hyperfuse-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-TU2;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2B, 10%);
+    color: $color-gmk-abs-TU2;
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
+  }
+}
+.kat-hyperfuse-accent {
+  background: $color-gmk-abs-TU2;
+  color: $color-gmk-abs-DY;
+  input {
+    background: lighten($color-gmk-abs-TU2, 40%);
+  }
+}
+.kat-hyperfuse-accent2 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-TU2;
+  input {
+    background: lighten($color-gmk-abs-DY, 40%);
+  }
+}
+
+.kat-oasis-key {
+  background: $color-pantone-155C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-155C, 10%);
+    color: lighten($color-pantone-7617C, 5%);
+    border-color: mix($color-pantone-155C, lighten($color-pantone-7617C, 5%));
+  }
+}
+.kat-oasis-mod {
+  background: $color-pantone-317C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-317C, 10%);
+    color: $color-pantone-7617C;
+    border-color: mix($color-pantone-317C, $color-pantone-7617C);
+  }
+}
+.kat-oasis-accent {
+  background: $color-pantone-7617C;
+  color: $color-pantone-155C;
+  input {
+    background: lighten($color-pantone-7617C, 40%);
+  }
+}
+
+// JTKeycaps
+.jtk-suited-assassin-key,
+.jtk-suited-assassin-mod {
+  background: #312c2b;
+  color: #a79373;
+  input,
+  .key-contents {
+    background: lighten(#312c2b, 10%);
+    color: darken(#a79373, 5%);
+    border-color: mix(#312c2b, darken(#a79373, 5%));
+  }
+}
+
+.jtk-suited-assassin-accent {
+  background: #a79373;
+  color: #312c2b;
 }
