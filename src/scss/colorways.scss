@@ -382,16 +382,28 @@
 }
 
 .gmk-camping-key {
-  background: rgb(238, 226, 208);
-  color: rgb(91, 124, 91);
+  background: $color-sp-abs-WCK;
+  color: $color-sp-abs-VF;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-WCK, 10%);
+    color: $color-sp-abs-VF;
+    border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
+  }
 }
 .gmk-camping-mod {
-  background: rgb(91, 124, 91);
-  color: rgb(238, 226, 208);
+  background: $color-sp-abs-VF;
+  color: $color-sp-abs-WCK;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-VF, 10%);
+    color: $color-sp-abs-WCK;
+    border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
+  }
 }
 .gmk-camping-accent {
-  background: rgb(115, 54, 54);
-  color: rgb(238, 226, 208);
+  background: $color-sp-abs-RBC;
+  color: $color-sp-abs-WCK;
 }
 
 .gmk-calm-depths-key {
