@@ -9,7 +9,7 @@ export default [
   { width: 1250 },
   { name: 'Exec', code: 'KC_EXEC', title: 'Execute' },
   { name: 'Help', code: 'KC_HELP', title: 'Help' },
-  { name: 'Menu', code: 'KC_MENU', title: 'Menu' },
+  { name: 'Menu', code: 'KC_MENU', title: 'Menu (Legacy)' },
   { name: 'Select', code: 'KC_SLCT', title: 'Select' },
   { name: 'Stop', code: 'KC_STOP', title: 'Stop' },
   { name: 'Again', code: 'KC_AGIN', title: 'Again' },
@@ -152,18 +152,41 @@ export default [
     title: 'Set mouse acceleration to 2'
   },
 
-  { label: 'Extra FN Keys', width: 'label' },
+  { label: 'Extra Fn Keys', width: 'label' },
 
   { name: 'F13', code: 'KC_F13' },
   { name: 'F14', code: 'KC_F14' },
   { name: 'F15', code: 'KC_F15' },
   { name: 'F16', code: 'KC_F16' },
+  { width: 250 },
   { name: 'F17', code: 'KC_F17' },
   { name: 'F18', code: 'KC_F18' },
   { name: 'F19', code: 'KC_F19' },
   { name: 'F20', code: 'KC_F20' },
+  { width: 250 },
   { name: 'F21', code: 'KC_F21' },
   { name: 'F22', code: 'KC_F22' },
   { name: 'F23', code: 'KC_F23' },
-  { name: 'F24', code: 'KC_F24' }
+  { name: 'F24', code: 'KC_F24' },
+
+  { label: 'Mechanically Locking Keys', width: 'label' },
+
+  {
+    name: 'Lock. Caps Lock',
+    code: 'KC_LCAP',
+    title: 'Locking Caps Lock',
+    width: 1750
+  },
+  {
+    name: 'Lock. Num Lock',
+    code: 'KC_LNUM',
+    title: 'Locking Num Lock',
+    width: 1750
+  },
+  {
+    name: 'Lock. Scroll Lock',
+    code: 'KC_LSCR',
+    title: 'Locking Scroll Lock',
+    width: 1750
+  }
 ];
