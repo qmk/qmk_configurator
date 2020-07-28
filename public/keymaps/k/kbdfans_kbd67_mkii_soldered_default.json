@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbd67/mkii_soldered",
   "keymap": "default",
-  "commit": "096a49c3dc3a1674a8cc95987c97e922c0c769a4",
+  "commit": "1f2807c2deb0f90222090537feca38682c9aa5b5",
   "layout": "LAYOUT_all",
   "layers": [
     [
