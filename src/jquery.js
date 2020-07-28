@@ -543,6 +543,7 @@ function getExclusionList() {
     's7_elephant',
     'sentraq/s60_x',
     'setta21',
+    'sirius/uni660',
     'spacetime',
     'suihankey',
     'suihankey/split',

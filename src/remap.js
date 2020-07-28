@@ -23,6 +23,9 @@ const lookup = {
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
   },
+  bear_face: {
+    target: 'bear_face/v1'
+  },
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
   },
