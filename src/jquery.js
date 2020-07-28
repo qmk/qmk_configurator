@@ -488,6 +488,7 @@ function getExclusionList() {
     'helix',
     'ivy',
     'jian',
+    'jiran',
     'jisplit89',
     'kbdfans/kbd75',
     'keebio/bdn9',
