@@ -453,6 +453,7 @@ function getExclusionList() {
     'angel64',
     'atreus',
     'bat43',
+    'bear_face',
     'bigseries',
     'boston_meetup',
     'bpiphany/pegasushoof',
