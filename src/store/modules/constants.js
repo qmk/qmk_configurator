@@ -12,3 +12,4 @@ export const backend_readme_url_template = template(
 );
 export const backend_skeletons_url = `${backend_baseurl}/v1/skeletons`;
 export const PREVIEW_LABEL = 'Preview info.json';
+export const MAX_LAYERS = 16;

@@ -6,7 +6,7 @@ import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 import defaults from './config';
 import axios from 'axios';
-import { backend_skeletons_url } from './constants';
+import { backend_skeletons_url, MAX_LAYERS } from './constants';
 
 const state = {
   keymap: [[]], // array of arrays
@@ -375,8 +375,10 @@ const mutations = {
     }
   },
   duplicateLayer(state, { layer }) {
-    state.keymap = [...state.keymap, state.keymap[layer]];
-    state.layer = state.keymap.length - 1;
+    if (state.keymap.length !== MAX_LAYERS) {
+      state.keymap = [...state.keymap, state.keymap[layer]];
+      state.layer = state.keymap.length - 1;
+    }
   },
   setLoadingKeymapPromise(state, resolve) {
     state.loadingKeymapPromise = resolve;

@@ -68,7 +68,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['changeLayer', 'initLayer']),
+    ...mapMutations('keymap', ['changeLayer', 'initLayer', 'duplicateLayer']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer({
@@ -79,7 +79,7 @@ export default {
       this.changeLayer(id);
     },
     cloneLayer() {
-      this.$store.commit('keymap/duplicateLayer', { layer: this.layer });
+      this.duplicateLayer({ layer: this.layer });
     },
     clearLayer() {
       if (confirm(this.$t('layer.confirm'))) {
