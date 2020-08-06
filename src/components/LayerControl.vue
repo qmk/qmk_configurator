@@ -13,13 +13,23 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
-    <button
-      class="clear-button"
-      v-tooltip="$t('layer.title')"
-      @click="clearLayer"
-    >
-      <font-awesome-icon icon="trash" size="lg" fixed-width />
-    </button>
+    <div style="display: flex; flex-direction: column; padding: 0 13px;">
+      <button
+        class="clear-button"
+        style="margin-bottom: 10px"
+        v-tooltip="$t('layer.title')"
+        @click="clearLayer"
+      >
+        <font-awesome-icon icon="trash" size="lg" fixed-width />
+      </button>
+      <button
+        class="clear-button"
+        v-tooltip="$t('layer.clone')"
+        @click="cloneLayer"
+      >
+        <font-awesome-icon icon="copy" size="lg" fixed-width />
+      </button>
+    </div>
   </div>
 </template>
 <script>
@@ -56,7 +66,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['changeLayer', 'initLayer']),
+    ...mapMutations('keymap', ['changeLayer', 'initLayer', 'duplicateLayer']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer({
@@ -65,6 +75,9 @@ export default {
         });
       }
       this.changeLayer(id);
+    },
+    cloneLayer() {
+      this.duplicateLayer({ layer: this.layer });
     },
     clearLayer() {
       if (confirm(this.$t('layer.confirm'))) {

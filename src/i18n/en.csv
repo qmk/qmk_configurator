@@ -54,6 +54,7 @@ keymapName:placeholder,custom keymap name
 layer:confirm,Are you sure you want to clear layer?
 layer:label,Layer
 layer:title,Clear Layer
+layer:clone, Clone Layer
 layout:label,layout
 loadDefault:label,Load Default
 loadDefault:title,Load default keymap from QMK Firmware

@@ -47,7 +47,8 @@ import {
   faQuestionCircle,
   faVolumeMute,
   faVolumeUp,
-  faBars
+  faBars,
+  faCopy
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -98,7 +99,8 @@ const icons = [
   faWindows,
   faQuestionCircle,
   faVolumeUp,
-  faVolumeMute
+  faVolumeMute,
+  faCopy
 ];
 library.add(...icons);
 
