@@ -380,6 +380,7 @@ const mutations = {
       state.layer = state.keymap.length - 1;
     }
   },
+
   setLoadingKeymapPromise(state, resolve) {
     state.loadingKeymapPromise = resolve;
   },
