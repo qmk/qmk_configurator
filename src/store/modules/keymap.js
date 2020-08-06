@@ -375,7 +375,8 @@ const mutations = {
     }
   },
   duplicateLayer(state, { layer }) {
-    state.keymap.push(state.keymap[layer]);
+    state.keymap = [...state.keymap, state.keymap[layer]];
+    state.layer = state.keymap.length - 1;
   },
   setLoadingKeymapPromise(state, resolve) {
     state.loadingKeymapPromise = resolve;

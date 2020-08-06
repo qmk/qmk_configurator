@@ -13,16 +13,18 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
-    <div style="display: flex; flex-direction: column; padding: 0 13px;">
+    <div class="layer-modifiers">
       <button
+        :aria-label="$t('layer.title')"
+        style="margin-bottom: 10px;"
         class="clear-button"
-        style="margin-bottom: 10px"
         v-tooltip="$t('layer.title')"
         @click="clearLayer"
       >
         <font-awesome-icon icon="trash" size="lg" fixed-width />
       </button>
       <button
+        :aria-label="$t('layer.clone')"
         class="clear-button"
         v-tooltip="$t('layer.clone')"
         @click="cloneLayer"
@@ -77,7 +79,7 @@ export default {
       this.changeLayer(id);
     },
     cloneLayer() {
-      this.duplicateLayer({ layer: this.layer });
+      this.$store.commit('keymap/duplicateLayer', { layer: this.layer });
     },
     clearLayer() {
       if (confirm(this.$t('layer.confirm'))) {
@@ -99,5 +101,10 @@ export default {
   border: 0px solid;
   padding: 6px 8px;
   cursor: pointer;
+}
+.layer-modifiers {
+  display: flex;
+  flex-direction: column;
+  padding: 0 13px;
 }
 </style>
