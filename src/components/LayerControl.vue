@@ -68,7 +68,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['changeLayer', 'initLayer', 'duplicateLayer']),
+    ...mapMutations('keymap', ['changeLayer', 'initLayer']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer({
