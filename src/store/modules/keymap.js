@@ -375,7 +375,7 @@ const mutations = {
     }
   },
   duplicateLayer(state, { layer }) {
-    if (state.keymap.length !== MAX_LAYERS) {
+    if (state.keymap.length < MAX_LAYERS) {
       state.keymap = [...state.keymap, state.keymap[layer]];
       state.layer = state.keymap.length - 1;
     }

@@ -28,6 +28,7 @@
         class="clear-button"
         v-tooltip="$t('layer.clone')"
         @click="cloneLayer"
+        :disabled="keymap.length >= maxLayers"
       >
         <font-awesome-icon icon="copy" size="lg" fixed-width />
       </button>
@@ -35,15 +36,19 @@
   </div>
 </template>
 <script>
+import { MAX_LAYERS } from '../store/modules/constants.js';
 import rangeRight from 'lodash/rangeRight';
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 export default {
   name: 'layer-control',
   computed: {
-    ...mapState('keymap', ['layer']),
+    ...mapState('keymap', ['layer', 'keymap']),
     ...mapState('app', ['configuratorSettings']),
     ...mapGetters('keymap', ['getLayer']),
+    maxLayers() {
+      return MAX_LAYERS;
+    },
     layers() {
       let layers = rangeRight(16).map(layer => {
         let clazz = [layer];
@@ -101,6 +106,10 @@ export default {
   border: 0px solid;
   padding: 6px 8px;
   cursor: pointer;
+}
+.clear-button:disabled {
+  background: gray;
+  cursor: auto;
 }
 .layer-modifiers {
   display: flex;
