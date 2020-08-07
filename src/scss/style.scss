@@ -534,6 +534,10 @@ button {
   // color: #ccc;
 }
 
+.print-keymap .key:empty:before {
+  content: '';
+}
+
 .key .remove {
   width: 0px;
   height: 0px;
