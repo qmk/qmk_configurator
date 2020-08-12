@@ -1,8 +1,8 @@
 {
   "keyboard": "pom_keyboards/tnln95",
   "keymap": "default",
-  "commit": "cf141c00d636b67179f7b9436284fbd0b7f6def2",
-  "layout": "LAYOUT_ansi",
+  "commit": "1b4f47c8ee099f373dddd5b294e09bd78b39055f",
+  "layout": "LAYOUT_all",
   "layers": [
     [
         "KC_PMNS", "KC_PAST", "KC_PSLS", "KC_BSPACE", "KC_ESC",    "KC_GRAVE", "KC_1", "KC_2", "KC_3", "KC_4", "KC_5", "KC_6", "KC_7", "KC_8", "KC_9", "KC_0", "KC_MINUS", "KC_EQUAL",     "KC_BSPACE",    "KC_HOME",
