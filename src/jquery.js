@@ -477,6 +477,7 @@ function getExclusionList() {
     'fortitude60',
     'getta25',
     'hadron',
+    'handwired/bento',
     'handwired/bluepill',
     'handwired/dactyl_manuform',
     'handwired/onekey',
