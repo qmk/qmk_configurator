@@ -2,6 +2,9 @@ const lookup = {
   '2_milk': {
     target: 'spaceman/2_milk'
   },
+  'aeboards/ext65': {
+    target: 'aeboards/ext65/rev1'
+  },
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
