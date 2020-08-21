@@ -1,0 +1,13 @@
+{
+  "keyboard": "satt/vision",
+  "keymap": "default",
+  "commit": "e4a0a5f4e1e1a561939596fff09380dab8434d79",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_TRNS"
+    ]
+  ]
+}
+
+
