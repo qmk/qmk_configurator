@@ -48,7 +48,7 @@
             "LT(2,KC_SCLN)",
             "RGUI(KC_QUOT)",
             "KC_LSFT",
-            "LCTL(KC_Z)",
+            "LCTL_T(KC_Z)",
             "KC_X",
             "KC_C",
             "KC_V",
