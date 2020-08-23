@@ -549,6 +549,7 @@ function getExclusionList() {
     'sentraq/s60_x',
     'setta21',
     'sirius/uni660',
+    'sofle',
     'spacetime',
     'suihankey',
     'suihankey/split',
