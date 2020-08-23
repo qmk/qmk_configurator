@@ -104,6 +104,9 @@ const lookup = {
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
   },
+  nomu30: {
+    target: 'nomu30/rev1'
+  },
   'noxary/268_2': {
     layouts: {
       LAYOUT: 'LAYOUT_65_ansi_blocker'

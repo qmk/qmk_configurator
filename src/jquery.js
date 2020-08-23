@@ -529,6 +529,7 @@ function getExclusionList() {
     'naked64',
     'namecard2x4',
     'navi10',
+    'nomu30',
     'orthodox',
     'pimentoso/paddino02',
     'pico',
