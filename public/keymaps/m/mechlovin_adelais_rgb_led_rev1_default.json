@@ -1,5 +1,5 @@
 {
-  "keyboard": "mechlovin/adelais/rgb_led",
+  "keyboard": "mechlovin/adelais/rgb_led/rev1",
   "keymap": "default",
   "commit": "e9e6054ee7eaca4cbd8d1c7566f394559ea8770a",
   "layout": "LAYOUT_all",

@@ -515,6 +515,7 @@ function getExclusionList() {
     'maxipad',
     'mechllama/g35',
     'mechlovin/adelais',
+    'mechlovin/adelais/rgb_led',
     'mechlovin/adelais/standard_led',
     'mechlovin/hannah910',
     'mechmini',

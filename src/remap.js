@@ -92,6 +92,9 @@ const lookup = {
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
+  'mechlovin/adelais/rgb_led': {
+    target: 'mechlovin/adelais/rgb_led/rev1'
+  },
   'mechlovin/adelais/standard_led': {
     target: 'mechlovin/adelais/standard_led/rev2'
   },
