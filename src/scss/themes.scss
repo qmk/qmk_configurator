@@ -512,7 +512,8 @@ html[data-theme='dark'] {
         background-color: #ffffff;
         border-color: #ffffff;
         color: #2c3e50;
-        .key, .key:empty {
+        .key,
+        .key:empty {
           background-color: #ffffff;
         }
       }
