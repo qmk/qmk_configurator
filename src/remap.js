@@ -195,6 +195,9 @@ const lookup = {
   tartan: {
     target: 'dm9records/tartan'
   },
+  underscore33: {
+    target: 'underscore33/rev1'
+  },
   vinta: {
     layouts: {
       LAYOUT_67_ansi: 'LAYOUT_65_ansi_blocker'
