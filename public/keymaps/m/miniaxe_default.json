@@ -1,8 +1,8 @@
 {
   "keyboard": "miniaxe",
   "keymap": "default",
-  "commit": "5909d8aef1126357899b687155bfe377914891df",
-  "layout": "LAYOUT",
+  "commit": "c8b721d7c6cf683473bcf3d0af6ec561471b1dcc",
+  "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [
       "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",                     "KC_Y",                "KC_U",    "KC_I",                 "KC_O",    "KC_P",

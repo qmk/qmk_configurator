@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/bento/rev1",
+  "keymap": "default",
+  "commit": "66de3308e5b17c0c59692b2660f2ce3a33c99863",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(1)",   "KC_UP",   "KC_MUTE",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "_______", "KC_HOME", "RESET",
+      "KC_MPRV", "KC_END",  "KC_MNXT"
+    ]
+  ]
+}
