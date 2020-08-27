@@ -116,6 +116,8 @@ export default {
           .replace(/Gmk/, 'GMK')
           .replace(/^Sa/, 'SA')
           .replace(/^Dsa/, 'DSA')
+          .replace(/^Jtk/, 'JTK')
+          .replace(/Kat/, 'KAT')
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA');
       });

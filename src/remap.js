@@ -2,6 +2,9 @@ const lookup = {
   '2_milk': {
     target: 'spaceman/2_milk'
   },
+  'aeboards/ext65': {
+    target: 'aeboards/ext65/rev1'
+  },
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
@@ -22,6 +25,9 @@ const lookup = {
   },
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
+  },
+  bear_face: {
+    target: 'bear_face/v1'
   },
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
@@ -86,6 +92,9 @@ const lookup = {
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
+  'mechlovin/adelais/rgb_led': {
+    target: 'mechlovin/adelais/rgb_led/rev1'
+  },
   'mechlovin/adelais/standard_led': {
     target: 'mechlovin/adelais/standard_led/rev2'
   },
@@ -94,6 +103,9 @@ const lookup = {
   },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
+  },
+  nomu30: {
+    target: 'nomu30/rev1'
   },
   'noxary/268_2': {
     layouts: {
@@ -182,6 +194,9 @@ const lookup = {
   },
   tartan: {
     target: 'dm9records/tartan'
+  },
+  underscore33: {
+    target: 'underscore33/rev1'
   },
   vinta: {
     layouts: {

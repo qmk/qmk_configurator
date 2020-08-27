@@ -1,14 +1,15 @@
-import dsa_galaxy_class from './dsa/galaxy_class';
-import dsa_milkshake from './dsa/milkshake';
+import dsa from './dsa';
 import gmk from './gmk';
 import sa from './sa';
+import jtk from './jtk';
+import kat from './kat';
 import alphaCodes from './alphaCodes';
 import modCodes from './modCodes';
 
 export default {
   alphaCodes,
   modCodes,
-  list: [dsa_galaxy_class, dsa_milkshake, ...sa, ...gmk],
+  list: [...dsa, ...sa, ...gmk, ...jtk, ...kat],
   /*
    * List of codes we should use icons for instead of text
    */
@@ -16,7 +17,8 @@ export default {
     KC_UP: 'arrow-up',
     KC_DOWN: 'arrow-down',
     KC_LEFT: 'arrow-left',
-    KC_RGHT: 'arrow-right'
+    KC_RGHT: 'arrow-right',
+    KC_APP: 'bars'
   },
   /**
    * returns the correct icons for the identified platform
