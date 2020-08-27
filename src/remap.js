@@ -32,6 +32,12 @@ const lookup = {
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
   },
+  'candybar/lefty': {
+    target: 'tkc/candybar/lefty'
+  },
+  'candybar/righty': {
+    target: 'tkc/candybar/righty'
+  },
   canoe: {
     target: 'percent/canoe'
   },
@@ -100,6 +106,9 @@ const lookup = {
   },
   model01: {
     target: 'keyboardio/model01'
+  },
+  m0lly: {
+    target: 'tkc/m0lly'
   },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
@@ -194,6 +203,9 @@ const lookup = {
   },
   tartan: {
     target: 'dm9records/tartan'
+  },
+  tkc1800: {
+    target: 'tkc/tkc1800'
   },
   underscore33: {
     target: 'underscore33/rev1'
