@@ -32,6 +32,9 @@ const lookup = {
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
   },
+  chavdai40: {
+    target: 'chavdai40/rev1'
+  },
   'candybar/lefty': {
     target: 'tkc/candybar/lefty'
   },
