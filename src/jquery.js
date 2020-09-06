@@ -512,6 +512,7 @@ function getExclusionList() {
     'lfkeyboards/lfk78',
     'lily58',
     'maartenwut/atom47',
+    'marksard/rhymestone',
     'maxipad',
     'mechllama/g35',
     'mechlovin/adelais',
