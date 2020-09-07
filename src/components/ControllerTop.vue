@@ -81,6 +81,7 @@ import Vue from 'vue';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
 import first from 'lodash/first';
+import random from 'lodash/random';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
 
@@ -285,7 +286,7 @@ export default {
         _keyboard = this.keyboard;
         console.info(`Loading keyboard from store:${_keyboard}`);
       } else {
-        _keyboard = first(this.keyboards);
+        _keyboard = this.keyboards[(0, random(this.keyboards.length - 1))];
       }
       console.log(`_keyboard:${_keyboard}`);
 
