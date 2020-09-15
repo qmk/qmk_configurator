@@ -37,7 +37,9 @@
         <tr>
           <th>{{ i18n('source.title') }}</th>
           <td>
-            <a :href="firmwareURL" target="_blank">{{ firmwareURL }}</a>
+            <a :href="firmwareURL" target="_blank" :class="myclasses">{{
+              firmwareURL
+            }}</a>
           </td>
         </tr>
         <tr>
@@ -84,8 +86,14 @@ export default {
       return `${date.toISOString()}`;
     },
     firmwareURL() {
-      const keeb = this.keyboard.split('/');
-      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${keeb[0]}`;
+      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${this.keyboard}`;
+    },
+    myclasses() {
+      let classes = [];
+      if ((this.keyboard.match(/\//g) || []).length > 0) {
+        classes.push(`source-small`);
+      }
+      return classes.join(' ');
     },
     _author: {
       set(value) {
@@ -173,9 +181,14 @@ textarea.optional-notes {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
-  font-size: 12pt;
+  font-size: 14px;
+  width: 400px;
 }
 .print-controls {
   padding-bottom: 20px;
+}
+
+.source-small {
+  font-size: 80%;
 }
 </style>

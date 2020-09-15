@@ -2,6 +2,9 @@ const lookup = {
   '2_milk': {
     target: 'spaceman/2_milk'
   },
+  'aeboards/ext65': {
+    target: 'aeboards/ext65/rev1'
+  },
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
@@ -28,6 +31,15 @@ const lookup = {
   },
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
+  },
+  chavdai40: {
+    target: 'chavdai40/rev1'
+  },
+  'candybar/lefty': {
+    target: 'tkc/candybar/lefty'
+  },
+  'candybar/righty': {
+    target: 'tkc/candybar/righty'
   },
   canoe: {
     target: 'percent/canoe'
@@ -89,14 +101,23 @@ const lookup = {
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
+  'mechlovin/adelais/rgb_led': {
+    target: 'mechlovin/adelais/rgb_led/rev1'
+  },
   'mechlovin/adelais/standard_led': {
     target: 'mechlovin/adelais/standard_led/rev2'
   },
   model01: {
     target: 'keyboardio/model01'
   },
+  m0lly: {
+    target: 'tkc/m0lly'
+  },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
+  },
+  nomu30: {
+    target: 'nomu30/rev1'
   },
   'noxary/268_2': {
     layouts: {
@@ -185,6 +206,12 @@ const lookup = {
   },
   tartan: {
     target: 'dm9records/tartan'
+  },
+  tkc1800: {
+    target: 'tkc/tkc1800'
+  },
+  underscore33: {
+    target: 'underscore33/rev1'
   },
   vinta: {
     layouts: {

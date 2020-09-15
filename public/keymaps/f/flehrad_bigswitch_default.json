@@ -1,0 +1,11 @@
+{
+  "keyboard": "flehrad/bigswitch",
+  "keymap": "default",
+  "commit": "000eb14d789f84afc7dbd33955dbfb6481792f0b",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LALT(LGUI(KC_POWER))"
+    ]
+  ]
+}

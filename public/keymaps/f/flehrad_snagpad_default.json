@@ -1,0 +1,15 @@
+{
+  "keyboard": "flehrad/snagpad",
+  "keymap": "default",
+  "commit": "000eb14d789f84afc7dbd33955dbfb6481792f0b",
+  "layout": "LAYOUT_ortho_5x4",
+  "layers": [
+    [
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}
