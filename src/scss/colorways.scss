@@ -592,6 +592,45 @@
   // placeholder
 }
 
+.gmk-metropolis-key {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+
+.gmk-metropolis-mod {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+
+.gmk-metropolis-esc {
+  background: $color-pantone-142C;
+  color: $color-pantone-5395C;
+}
+
+.gmk-metropolis-enter {
+  background: $color-pantone-333C;
+  color: $color-pantone-5395C;
+}
+
+.gmk-metropolis-fn {
+  background: $color-pantone-179C;
+  color: $color-pantone-5395C;
+}
+
+.gmk-metropolis-accent1 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-142C;
+}
+
+.gmk-metropolis-accent2 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-179C;
+}
+
+.gmk-metropolis-kb {
+  // placeholder
+}
+
 .gmk-mizu-key {
   background: #c2d9e4;
   color: #444f58;
@@ -647,6 +686,30 @@
 .gmk-nautilus-kb {
   // placeholder
   background: $color-pantone-533C;
+}
+
+.gmk-nines-key {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+
+.gmk-nines-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+
+.gmk-nines-esc {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-N9;
+}
+
+.gmk-nines-enter {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-N9;
+}
+
+.gmk-nines-kb {
+  // placeholder
 }
 
 .gmk-olivetti-key {
