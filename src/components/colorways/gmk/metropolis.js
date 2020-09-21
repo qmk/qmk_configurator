@@ -5,7 +5,7 @@ export default {
         KC_GESC: 'esc', //Esc
         KC_ENT: 'enter', // Enter
         KC_PENT: 'enter', // Numpad Enter
-        MO(layer): 'fn', // Fn
+        MO(): 'fn', // Fn
         KC_TAB: 'accent1', // Tab
         KC_CAPS: 'accent1', //  Caps Lock
         KC_BSPC: 'accent1', // Backspace
