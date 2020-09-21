@@ -37,6 +37,6 @@ export default {
         KC_LEFT: 'accent2', // Left Arrow
         KC_DOWN: 'accent2', // Down Arrow
         KC_RGHT: 'accent2', // Right Arrow
-        MO(layer): 'fn', // Fn
+        MO(layer): 'fn' // Fn
     }
 };
