@@ -5,7 +5,6 @@ export default {
         KC_GESC: 'esc', //Esc
         KC_ENT: 'enter', // Enter
         KC_PENT: 'enter', // Numpad Enter
-        MO(): 'fn', // Fn
         KC_TAB: 'accent1', // Tab
         KC_CAPS: 'accent1', //  Caps Lock
         KC_BSPC: 'accent1', // Backspace
@@ -37,6 +36,7 @@ export default {
         KC_UP: 'accent2', // Up Arrow
         KC_LEFT: 'accent2', // Left Arrow
         KC_DOWN: 'accent2', // Down Arrow
-        KC_RGHT: 'accent2' // Right Arrow
+        KC_RGHT: 'accent2', // Right Arrow
+        MO(layer): 'fn', // Fn
     }
 };
