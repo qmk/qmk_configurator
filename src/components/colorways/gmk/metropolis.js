@@ -37,6 +37,6 @@ export default {
         KC_LEFT: 'accent2',
         KC_DOWN: 'accent2',
         KC_RGHT: 'accent2',
-        MO(layer): 'accent3'
+        'MO(layer)': 'accent3'
     }
 };
