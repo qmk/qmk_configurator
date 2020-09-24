@@ -44,6 +44,9 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  'crkbd/rev1': {
+    target: 'crkbd/rev1/legacy'
+  },
   'doro67/multi': {
     layouts: {
       LAYOUT_ansi: 'LAYOUT_65_ansi_blocker'

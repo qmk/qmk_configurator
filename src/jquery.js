@@ -465,6 +465,7 @@ function getExclusionList() {
     'converter/sun_usb',
     'converter/usb_usb',
     'crkbd',
+    'crkbd/rev1',
     'deltasplit75',
     'duck/eagle_viper',
     'duck/octagon',
