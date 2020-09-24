@@ -77,6 +77,9 @@ const lookup = {
   ergoinu: {
     target: 'dm9records/ergoinu'
   },
+  'exclusive/e85': {
+    target: 'exclusive/e85/hotswap'
+  },
   gh60: {
     target: 'gh60/revc'
   },

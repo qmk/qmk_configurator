@@ -475,6 +475,7 @@ function getExclusionList() {
     'ergodash',
     'ergoslab',
     'ergotravel',
+    'exclusive/e85',
     'fortitude60',
     'getta25',
     'hadron',
