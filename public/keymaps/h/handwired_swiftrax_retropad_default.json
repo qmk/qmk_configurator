@@ -1,0 +1,23 @@
+{
+  "keyboard": "handwired/swiftrax/retropad",
+  "keymap": "default",
+  "commit": "5faf5383ad4f651fd3d576a4d0932679f14c752e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",
+      "KC_MSTP", "KC_MPLY",
+      "KC_MPRV", "KC_MNXT"
+    ],
+    [
+      "TO(2)",
+      "KC_MSTP", "KC_MPLY",
+      "KC_MRWD", "KC_MFFD"
+    ],
+    [
+      "TO(0)",
+      "KC_HOME", "KC_PGUP",
+      "KC_END",  "KC_PGDN"
+    ]
+  ]
+}
