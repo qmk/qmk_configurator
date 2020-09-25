@@ -210,6 +210,9 @@ const lookup = {
   skog: {
     target: 'percent/skog'
   },
+  stoutgat: {
+    target: 'tkw/stoutgat/v1'
+  },
   suihankey: {
     target: 'suihankey/split/alpha'
   },
@@ -221,6 +224,9 @@ const lookup = {
   },
   tkc1800: {
     target: 'tkc/tkc1800'
+  },
+  'tkw/stoutgat/v2': {
+    target: 'tkw/stoutgat/v2/f411'
   },
   underscore33: {
     target: 'underscore33/rev1'

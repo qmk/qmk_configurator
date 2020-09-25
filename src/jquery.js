@@ -556,6 +556,7 @@ function getExclusionList() {
     'spacetime',
     'suihankey',
     'suihankey/split',
+    'tkw/stoutgat/v2',
     'treadstone48',
     'underscore33',
     'uzu42',
