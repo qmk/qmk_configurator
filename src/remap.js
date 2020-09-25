@@ -133,6 +133,9 @@ const lookup = {
   omnikey_blackheart: {
     target: 'omnikey_bh'
   },
+  'pabile/p20': {
+    target: 'pabile/p20/ver1'
+  },
   'pancake/feather': {
     target: 'spaceman/pancake/feather'
   },
