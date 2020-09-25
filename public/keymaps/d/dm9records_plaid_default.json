@@ -1,7 +1,7 @@
 {
   "keyboard": "dm9records/plaid",
   "keymap": "default",
-  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
+  "commit": "3abb60934886289725a18c7ea96b246e70f7af3a",
   "layout": "LAYOUT_plaid_grid",
   "layers": [
     [
