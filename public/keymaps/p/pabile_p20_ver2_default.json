@@ -1,0 +1,15 @@
+{
+  "keyboard": "pabile/p20/ver2",
+  "keymap": "default",
+  "commit": "741856dd57735dcd143987eb954ecc4a5ca2fc96",
+  "layout": "LAYOUT_ortho_5x4",
+  "layers": [
+    [
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_TAB",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_DEL",
+      "KC_P0",   "DBLZERO", "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}
