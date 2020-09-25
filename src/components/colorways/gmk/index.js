@@ -9,6 +9,7 @@ import gmk_calm_depths from './calm_depths';
 import gmk_camping from './camping';
 import gmk_deku from './deku';
 import gmk_dolch from './dolch';
+import gmk_dualshot from './dualshot';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
 import gmk_jamon from './jamon';
@@ -39,6 +40,7 @@ export default [
   gmk_camping,
   gmk_deku,
   gmk_dolch,
+  gmk_dualshot,
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
   gmk_jamon,
