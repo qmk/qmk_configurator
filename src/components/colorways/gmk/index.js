@@ -14,7 +14,6 @@ import gmk_hammerhead_light from './hammerhead_light';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
-import gmk_metropolis from './metropolis';
 import gmk_mizu from './mizu';
 import gmk_nautilus from './nautilus';
 import gmk_nines from './nines';
@@ -46,7 +45,6 @@ export default [
   gmk_jamon,
   gmk_merlin,
   gmk_metaverse,
-  gmk_metropolis,
   gmk_mizu,
   gmk_nautilus,
   gmk_nines,
