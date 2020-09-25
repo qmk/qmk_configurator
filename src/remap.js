@@ -44,6 +44,9 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  'crkbd/rev1': {
+    target: 'crkbd/rev1/legacy'
+  },
   'doro67/multi': {
     layouts: {
       LAYOUT_ansi: 'LAYOUT_65_ansi_blocker'
@@ -74,6 +77,9 @@ const lookup = {
   ergoinu: {
     target: 'dm9records/ergoinu'
   },
+  'exclusive/e85': {
+    target: 'exclusive/e85/hotswap'
+  },
   gh60: {
     target: 'gh60/revc'
   },
@@ -82,6 +88,9 @@ const lookup = {
     layouts: {
       LAYOUT: 'LAYOUT_all'
     }
+  },
+  katana60: {
+    target: 'rominronin/katana60/rev1'
   },
   'kbdfans/kbd67mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb',
@@ -126,6 +135,9 @@ const lookup = {
   },
   omnikey_blackheart: {
     target: 'omnikey_bh'
+  },
+  'pabile/p20': {
+    target: 'pabile/p20/ver1'
   },
   'pancake/feather': {
     target: 'spaceman/pancake/feather'
@@ -198,6 +210,9 @@ const lookup = {
   skog: {
     target: 'percent/skog'
   },
+  stoutgat: {
+    target: 'tkw/stoutgat/v1'
+  },
   suihankey: {
     target: 'suihankey/split/alpha'
   },
@@ -209,6 +224,9 @@ const lookup = {
   },
   tkc1800: {
     target: 'tkc/tkc1800'
+  },
+  'tkw/stoutgat/v2': {
+    target: 'tkw/stoutgat/v2/f411'
   },
   underscore33: {
     target: 'underscore33/rev1'
