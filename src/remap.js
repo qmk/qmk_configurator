@@ -89,6 +89,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_all'
     }
   },
+  katana60: {
+    target: 'rominronin/katana60/rev1'
+  },
   'kbdfans/kbd67mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb',
     layouts: {
