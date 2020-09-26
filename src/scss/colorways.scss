@@ -725,6 +725,22 @@
   background: $color-pantone-533C;
 }
 
+.gmk-nines-key {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+.gmk-nines-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+.gmk-nines-accent {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-N9;
+}
+.gmk-nines-kb {
+  // placeholder
+}
+
 .gmk-olivetti-key {
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
