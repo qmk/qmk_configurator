@@ -16,6 +16,7 @@ import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
 import gmk_mizu from './mizu';
 import gmk_nautilus from './nautilus';
+import gmk_nines from './nines';
 import gmk_olivetti from './olivetti';
 import gmk_olivia from './olivia';
 import gmk_plum from './plum';
@@ -46,6 +47,7 @@ export default [
   gmk_metaverse,
   gmk_mizu,
   gmk_nautilus,
+  gmk_nines,
   gmk_olivetti,
   gmk_olivia,
   gmk_plum,
