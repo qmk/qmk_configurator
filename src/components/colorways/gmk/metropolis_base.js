@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-metropolis',
+  name: 'gmk-metropolis-base',
   override: {
     KC_TAB: 'mod2',
     KC_CAPS: 'mod2',
