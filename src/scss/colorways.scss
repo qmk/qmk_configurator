@@ -468,28 +468,28 @@
 }
 
 .gmk-dualshot-key {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-N9;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
 }
 .gmk-dualshot-mod {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-N9;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
 }
 .gmk-dualshot-mod2 {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-RO2;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-RO2, 35%);
 }
 .gmk-dualshot-mod3 {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-N6;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N6, 5%);
 }
 .gmk-dualshot-mod4 {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-TU2;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-TU2, 9%);
 }
 .gmk-dualshot-mod5 {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-N5;
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N5, 29%);
 }
 .gmk-dualshot-accent {
   background: $color-gmk-abs-RO2;
