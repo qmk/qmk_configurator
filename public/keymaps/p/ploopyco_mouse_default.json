@@ -1,0 +1,18 @@
+{
+    "keyboard": "ploopyco/mouse",
+    "keymap": "default",
+    "commit": "fbdc65e2e956e9d51c94fecdbce1f0abc2817950",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "LCTL(KC_C)",
+            "KC_BTN1",
+            "KC_BTN3",
+            "KC_BTN2",
+            "LCTL(KC_V)",
+            "KC_BTN4",
+            "KC_BTN5",
+            "LCTL(KC_Z)"
+        ]
+    ]
+}
