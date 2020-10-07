@@ -467,6 +467,70 @@
 .gmk-dolch-kb {
 }
 
+.gmk-dracula-key {
+  background: #44475a;
+  color: #f8f8f2;
+}
+.gmk-dracula-mod {
+  background: #282a36;
+  color: #f8f8f2;
+}
+.gmk-dracula-mod2 {
+  background: #282a36;
+  color: #ff79c6;
+}
+.gmk-dracula-mod3 {
+  background: #282a36;
+  color: #bd93f9;
+}
+.gmk-dracula-mod4 {
+  background: #282a36;
+  color: #8be9fd;
+}
+.gmk-dracula-mod5 {
+  background: #282a36;
+  color: #f1fa8c;
+}
+.gmk-dracula-mod6 {
+  background: #282a36;
+  color: #50fa7b;
+}
+.gmk-dracula-accent {
+  background: #ff5555;
+  color: #282a36;
+}
+.gmk-dracula-accent2 {
+  background: #f1fa8c;
+  color: #282a36;
+}
+.gmk-dracula-accent3 {
+  background: #bd93f9;
+  color: #282a36;
+}
+.gmk-dracula-accent4 {
+  background: #ff79c6;
+  color: #282a36;
+}
+.gmk-dracula-accent5 {
+  background: #8be9fd;
+  color: #282a36;
+}
+.gmk-dracula-accent6 {
+  background: #f8f8f2;
+  color: #282a36;
+}
+.gmk-dracula-func {
+  background: #44475a;
+  color: #f8f8f2;
+}
+.gmk-dracula-func2 {
+  background: #282a36;
+  color: #f8f8f2;
+}
+.gmk-dracula-kb {
+  // placeholder
+}
+
 .gmk-dualshot-key {
   background: darken($color-gmk-abs-2B, 5%);
   color: darken($color-gmk-abs-N9, 12%);
@@ -559,6 +623,54 @@
 .gmk-hammerhead-light-accent {
   background: $color-pantone-3258C;
   color: $color-pantone-2378C;
+}
+
+.gmk-handarbeit+-key {
+  background: $color-gmk-abs-P3;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-mod {
+  background: $color-gmk-abs-P3;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent2 {
+  background: $color-gmk-abs-3C;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent3 {
+  background: $color-gmk-abs-N6;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent4 {
+  background: $color-gmk-abs-N7;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent5 {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent6 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent7 {
+  background: $color-gmk-abs-V2;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent8 {
+  background: $color-gmk-abs-3A;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-accent9 {
+  background: $color-gmk-abs-TU1;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit+-kb {
+  // placeholder
 }
 
 .gmk-jamon-key {
@@ -681,6 +793,21 @@
   color: $color-pantone-5395C;
 }
 .gmk-metropolis-base-kb {
+  // placeholder
+}
+
+.gmk-metropolis-midnight-key {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-midnight-mod {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-midnight-accent {
+  background: $color-pantone-333C;
+  color: $color-pantone-5395C;
+.gmk-metropolis-midnight-kb {
   // placeholder
 }
 
@@ -809,6 +936,38 @@
   color: #363434;
 }
 .gmk-olivia-kb {
+}
+
+.gmk-olivia++-dark-key {
+  background: #2b2b2b;
+  color: #f1beb0;
+}
+.gmk-olivia++-dark-mod {
+  background: #2b2b2b;
+  color: #f1beb0;
+}
+.gmk-olivia++-dark-accent {
+  background: #f1beb0;
+  color: #2b2b2b;
+}
+.gmk-olivia++-dark-kb {
+  // placeholder
+}
+
+.gmk-phosphorous-key {
+  background: $color-pantone-11C;
+  color: $color-pantone-311C;
+}
+.gmk-phosphorous-mod {
+  background: $color-pantone-11C;
+  color: $color-pantone-311C;
+}
+.gmk-phosphorous-accent {
+  background: $color-pantone-311C;
+  color: $color-pantone-11C;
+}
+.gmk-phosphorous-kb {
+  // placeholder
 }
 
 .gmk-plum-key {
