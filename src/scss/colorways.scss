@@ -467,6 +467,50 @@
 .gmk-dolch-kb {
 }
 
+.gmk-dualshot-key {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
+}
+.gmk-dualshot-mod {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
+}
+.gmk-dualshot-mod2 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
+}
+.gmk-dualshot-mod3 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N6, 5%);
+}
+.gmk-dualshot-mod4 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-TU2, 9%);
+}
+.gmk-dualshot-mod5 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N5, 29%);
+}
+.gmk-dualshot-accent {
+  background: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent2 {
+  background: lighten($color-gmk-abs-N6, 5%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent3 {
+  background: lighten($color-gmk-abs-TU2, 9%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent4 {
+  background: lighten($color-gmk-abs-N5, 29%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-kb {
+  // placeholder
+}
+
 .gmk-hammerhead-dark-key {
   background: $color-pantone-533C;
   color: $color-pantone-3258C;
@@ -605,6 +649,38 @@
   color: $color-gmk-abs-WS1;
 }
 .gmk-metaverse-kb {
+  // placeholder
+}
+
+.gmk-metropolis-base-key {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-base-mod {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-base-mod2 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-142C;
+}
+.gmk-metropolis-base-mod3 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-179C;
+}
+.gmk-metropolis-base-accent {
+  background: $color-pantone-142C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-accent2 {
+  background: $color-pantone-333C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-accent3 {
+  background: $color-pantone-179C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-kb {
   // placeholder
 }
 
