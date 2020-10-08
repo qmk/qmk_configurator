@@ -62,6 +62,6 @@ export default {
     KC_LEFT: 'accent7',
     KC_RIGHT: 'accent7',
     KC_PENT: 'accent8',
-    KC_PDOT: 'accent9',
+    KC_PDOT: 'accent9'
   }
 };
