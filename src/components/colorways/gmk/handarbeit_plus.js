@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-handarbeit+',
+  name: 'gmk-handarbeit-plus',
   override: {
     KC_F1: 'accent',
     KC_F2: 'accent',

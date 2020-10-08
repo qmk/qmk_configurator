@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-olivia++-dark',
+  name: 'gmk-olivia-plus-plus-dark',
   override: {
     KC_ESC: 'accent',
     KC_GESC: 'accent',
