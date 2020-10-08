@@ -13,7 +13,7 @@ import gmk_dracula from './dracula';
 import gmk_dualshot from './dualshot';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
-import gmk_handarbeit + from './handarbeit+';
+import 'gmk_handarbeit +' from './handarbeit+';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
