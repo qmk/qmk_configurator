@@ -13,6 +13,7 @@ import gmk_dracula from './dracula';
 import gmk_dualshot from './dualshot';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
+import gmk_handarbeit_plus from './handarbeit_plus';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
@@ -23,6 +24,7 @@ import gmk_nautilus from './nautilus';
 import gmk_nines from './nines';
 import gmk_olivetti from './olivetti';
 import gmk_olivia from './olivia';
+import gmk_olivia_plus_plus_dark from './olivia_plus_plus_dark';
 import gmk_phosphorous from './phosphorous';
 import gmk_plum from './plum';
 import gmk_serika from './serika';
@@ -49,6 +51,7 @@ export default [
   gmk_dualshot,
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
+  gmk_handarbeit_plus,
   gmk_jamon,
   gmk_merlin,
   gmk_metaverse,
@@ -59,6 +62,7 @@ export default [
   gmk_nines,
   gmk_olivetti,
   gmk_olivia,
+  gmk_olivia_plus_plus_dark,
   gmk_phosphorous,
   gmk_plum,
   gmk_serika,
