@@ -1,7 +1,7 @@
 {
-  "keyboard": "handwired/ferris",
+  "keyboard": "ferris/sweep",
   "keymap": "default",
-  "commit": "80d92525db8aee24d1028a977fd3bbb210414877",
+  "commit": "704934c427af1cc2176fa7c82773e86d89cbfa3c",
   "layout": "LAYOUT",
   "layers": [
     [

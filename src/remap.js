@@ -83,6 +83,9 @@ const lookup = {
   gh60: {
     target: 'gh60/revc'
   },
+  'handwired/ferris': {
+    target: 'ferris/0_1'
+  },
   idb_60: {
     target: 'idb/idb_60',
     layouts: {
