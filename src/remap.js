@@ -113,6 +113,9 @@ const lookup = {
   'lfkeyboards/lfk78': {
     target: 'lfkeyboards/lfk78/revj'
   },
+  'lfkeyboards/smk65': {
+    target: 'lfkeyboards/smk65/revb'
+  },
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },

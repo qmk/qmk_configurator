@@ -512,6 +512,7 @@ function getExclusionList() {
     'lets_split',
     'lets_split_eh',
     'lfkeyboards/lfk78',
+    'lfkeyboards/smk65',
     'lily58',
     'maartenwut/atom47',
     'marksard/rhymestone',
