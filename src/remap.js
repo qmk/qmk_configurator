@@ -128,6 +128,9 @@ const lookup = {
   'mechlovin/delphine': {
     target: 'mechlovin/delphine/mono_led',
   },
+  'mechlovin/hannah60rgb': {
+    target: 'mechlovin/hannah60rgb/rev1',
+  },
   model01: {
     target: 'keyboardio/model01'
   },

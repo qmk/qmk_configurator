@@ -522,6 +522,7 @@ function getExclusionList() {
     'mechlovin/adelais/rgb_led',
     'mechlovin/adelais/standard_led',
     'mechlovin/delphine',
+    'mechlovin/hannah60rgb',
     'mechlovin/hannah910',
     'mechmini',
     'meira',

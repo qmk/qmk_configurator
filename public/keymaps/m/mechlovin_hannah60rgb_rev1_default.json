@@ -1,7 +1,7 @@
 {
-  "keyboard": "mechlovin/hannah60rgb",
+  "keyboard": "mechlovin/hannah60rgb/rev1",
   "keymap": "default",
-  "commit": "58fd782ce05a5f13c05227c02f9b78f10cd4ecb5",
+  "commit": "793de76bb451d2072a4460407dec2b2811dc48ac",
   "layout": "LAYOUT_all",
   "layers": [
     [
