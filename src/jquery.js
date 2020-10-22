@@ -526,6 +526,7 @@ function getExclusionList() {
     'mechlovin/hannah910',
     'mechmini',
     'meira',
+    'melgeek/z70ultra',
     'minidox',
     'montsinger/rebound',
     'mschwingen/modelm',

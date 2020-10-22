@@ -131,6 +131,9 @@ const lookup = {
   'mechlovin/hannah60rgb': {
     target: 'mechlovin/hannah60rgb/rev1',
   },
+  'melgeek/z70ultra': {
+    target: 'melgeek/z70ultra/rev1'
+  },
   model01: {
     target: 'keyboardio/model01'
   },
