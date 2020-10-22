@@ -62,6 +62,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  drakon: {
+    target: 'jagdpietr/drakon'
+  },
   'dztech/dz60rgb': {
     target: 'dztech/dz60rgb/v1'
   },
