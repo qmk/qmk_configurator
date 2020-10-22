@@ -125,6 +125,9 @@ const lookup = {
   'mechlovin/adelais/standard_led': {
     target: 'mechlovin/adelais/standard_led/rev2'
   },
+  'mechlovin/delphine': {
+    target: 'mechlovin/delphine/mono_led',
+  },
   model01: {
     target: 'keyboardio/model01'
   },
