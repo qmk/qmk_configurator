@@ -126,10 +126,10 @@ const lookup = {
     target: 'mechlovin/adelais/standard_led/rev2'
   },
   'mechlovin/delphine': {
-    target: 'mechlovin/delphine/mono_led',
+    target: 'mechlovin/delphine/mono_led'
   },
   'mechlovin/hannah60rgb': {
-    target: 'mechlovin/hannah60rgb/rev1',
+    target: 'mechlovin/hannah60rgb/rev1'
   },
   'melgeek/z70ultra': {
     target: 'melgeek/z70ultra/rev1'
