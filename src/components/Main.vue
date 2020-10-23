@@ -119,7 +119,8 @@ export default {
           .replace(/^Jtk/, 'JTK')
           .replace(/Kat/, 'KAT')
           .replace(/Wob/, 'WOB')
-          .replace(/Ta/, 'TA');
+          .replace(/Ta/, 'TA')
+          .replace(/ ?Plus/g, '+');
       });
     },
     redditPost() {
