@@ -62,6 +62,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  drakon: {
+    target: 'jagdpietr/drakon'
+  },
   'dztech/dz60rgb': {
     target: 'dztech/dz60rgb/v1'
   },
@@ -82,6 +85,9 @@ const lookup = {
   },
   gh60: {
     target: 'gh60/revc'
+  },
+  'handwired/ferris': {
+    target: 'ferris/0_1'
   },
   idb_60: {
     target: 'idb/idb_60',
@@ -107,6 +113,9 @@ const lookup = {
   'lfkeyboards/lfk78': {
     target: 'lfkeyboards/lfk78/revj'
   },
+  'lfkeyboards/smk65': {
+    target: 'lfkeyboards/smk65/revb'
+  },
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
   },
@@ -115,6 +124,15 @@ const lookup = {
   },
   'mechlovin/adelais/standard_led': {
     target: 'mechlovin/adelais/standard_led/rev2'
+  },
+  'mechlovin/delphine': {
+    target: 'mechlovin/delphine/mono_led'
+  },
+  'mechlovin/hannah60rgb': {
+    target: 'mechlovin/hannah60rgb/rev1'
+  },
+  'melgeek/z70ultra': {
+    target: 'melgeek/z70ultra/rev1'
   },
   model01: {
     target: 'keyboardio/model01'
