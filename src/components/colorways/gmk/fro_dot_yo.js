@@ -1,5 +1,5 @@
 export default {
-  name: 'gmk-fro_dot_yo',
+  name: 'gmk-fro-dot-yo',
   override: {
     KC_TAB: 'blu',
     KC_BSPC: 'rdp',
