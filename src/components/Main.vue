@@ -120,7 +120,8 @@ export default {
           .replace(/Kat/, 'KAT')
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA')
-          .replace(/ ?Plus/g, '+');
+          .replace(/ ?Plus/g, '+')
+          .replace(/ ?Dot/g, '.');
       });
     },
     redditPost() {

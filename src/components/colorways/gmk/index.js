@@ -11,6 +11,7 @@ import gmk_deku from './deku';
 import gmk_dolch from './dolch';
 import gmk_dracula from './dracula';
 import gmk_dualshot from './dualshot';
+import gmk_fro_dot_yo from './fro_dot_yo';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
 import gmk_handarbeit_plus from './handarbeit_plus';
@@ -49,6 +50,7 @@ export default [
   gmk_dolch,
   gmk_dracula,
   gmk_dualshot,
+  gmk_fro_dot_yo,
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
   gmk_handarbeit_plus,
