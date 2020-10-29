@@ -4,7 +4,7 @@ export default {
     KC_TAB: 'blu',
     KC_BSPC: 'rdp',
     KC_LGUI: 'blu',
-    KC_RGUI: 'blue',
+    KC_RGUI: 'blu',
     KC_CAPS: 'ppl',
     KC_ENT: 'grn',
     KC_PENT: 'grn',
