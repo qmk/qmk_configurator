@@ -1,8 +1,8 @@
 {
   "keyboard": "clawsome/roadster",
   "keymap": "default",
-  "commit": "2c0201e80f7d1e477440c3a0cfcb9b90575a002a",
-  "layout": "LAYOUT_40_ansi",
+  "commit": "14cb662280852f6cd4d84dae9e46c00fdd971ef4",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_DEL",
