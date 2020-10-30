@@ -121,7 +121,7 @@ export default {
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA')
           .replace(/ ?Plus/g, '+')
-          .replace(/ ?Dot/g, '.');
+          .replace(/ ?Dot ?/g, '\.');
       });
     },
     redditPost() {
