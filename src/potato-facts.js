@@ -14,7 +14,7 @@ export default [
   'Potatoes are totally gluten-free.',
   'One of the most basic Incan measurements of time was the time it took to cook a potato.',
   'If a potato is exposed to light while growing, it will turn green and become poisonous.',
-  'F**k mate, that\'s drier than a dead dingo\'s donger.',
+  'F**k mate, that potato\'s drier than a dead dingo\'s donger.',
   'It takes 10,000 pounds of potatoes to make 2,500 pounds of potato chips.',
   'Today there are more than 4000 different kinds of potatoes.',
   'Potatoes belong to a small family, the Nightshade or Solanaceae family.',
