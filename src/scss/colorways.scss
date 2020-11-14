@@ -1313,3 +1313,28 @@
   background: #a79373;
   color: #312c2b;
 }
+
+.gmk-grand-prix-key {
+  background: rgb(193, 199, 215);
+  color: rgb(54, 71, 92);
+  input,
+  .key-contents {
+    background: lighten(#c7e6f5, 5%);
+    color: darken(#f54730, 26%);
+    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+  }
+}
+.gmk-grand-prix-mod {
+  background: rgb(54, 71, 92);
+  color: rgb(192, 208, 54);
+  input,
+  .key-contents {
+    background: darken(rgb(54, 71, 92), 14%);
+    color: lighten(rgb(192, 208, 54), 14%);
+    border-color: mix(rgb(54, 71, 92), lighten(rgb(192, 208, 54), 14%));
+  }
+}
+.gmk-grand-prix-accent {
+  background: rgb(192, 208, 54);
+  color: rgb(54, 71, 92);
+}
