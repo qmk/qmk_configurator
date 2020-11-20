@@ -177,7 +177,7 @@ const lookup = {
   'ploopyco/trackball': {
     target: 'ploopyco/trackball/rev1_005'
   },
-  'polilla': {
+  polilla: {
     target: 'polilla/rev1'
   },
   'preonic/rev1': {
