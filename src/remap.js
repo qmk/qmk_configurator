@@ -219,6 +219,12 @@ const lookup = {
   'rama/u80_a': {
     target: 'wilba_tech/rama_works_u80_a'
   },
+  'rgbkb/pan': {
+    target: 'rgbkb/pan/rev1/32a'
+  },
+  'rgbkb/pan/rev1': {
+    target: 'rgbkb/pan/rev1/32a'
+  },
   romac: {
     target: 'kingly_keys/romac'
   },

@@ -549,6 +549,8 @@ function getExclusionList() {
     'ps2avrGB',
     'qwertyydox',
     'redox',
+    'rgbkb/pan',
+    'rgbkb/pan/rev1',
     'rgbkb/sol',
     'rgbkb/zen',
     'rgbkb/zygomorph',
