@@ -1,0 +1,15 @@
+{
+  "keyboard": "rocketboard_16",
+  "keymap": "default",
+  "commit": "9f0dbc21a3bcb815877e321c974c55c5320605c6",
+  "layout": "LAYOUT_default",
+  "layers": [
+    [
+      "RGB_MOD", "KC_NLCK",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_DEL",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_END",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_VOLU",
+      "KC_P0",   "RGB_TOG", "KC_MUTE", "KC_VOLD"
+    ]
+  ]
+}
