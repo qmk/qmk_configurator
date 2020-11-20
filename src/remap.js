@@ -174,6 +174,9 @@ const lookup = {
   plain60: {
     target: 'maartenwut/plain60'
   },
+  'ploopyco/trackball': {
+    target: 'ploopyco/trackball/rev1_005'
+  },
   'polilla': {
     target: 'polilla/rev1'
   },
