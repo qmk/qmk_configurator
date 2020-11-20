@@ -1,5 +1,5 @@
 {
-  "keyboard": "crkbd/rev1/legacy",
+  "keyboard": "crkbd/rev1/common",
   "keymap": "default",
   "commit": "503b76253891a9820ad2d21a89617654dc4414fb",
   "layout": "LAYOUT_split_3x6_3",
