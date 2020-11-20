@@ -174,6 +174,9 @@ const lookup = {
   plain60: {
     target: 'maartenwut/plain60'
   },
+  'polilla': {
+    target: 'polilla/rev1'
+  },
   'preonic/rev1': {
     layouts: {
       LAYOUT_preonic_grid: 'LAYOUT_ortho_5x12'
