@@ -174,6 +174,12 @@ const lookup = {
   plain60: {
     target: 'maartenwut/plain60'
   },
+  'ploopyco/trackball': {
+    target: 'ploopyco/trackball/rev1_005'
+  },
+  polilla: {
+    target: 'polilla/rev1'
+  },
   'preonic/rev1': {
     layouts: {
       LAYOUT_preonic_grid: 'LAYOUT_ortho_5x12'
@@ -215,6 +221,12 @@ const lookup = {
   },
   'rama/u80_a': {
     target: 'wilba_tech/rama_works_u80_a'
+  },
+  'rgbkb/pan': {
+    target: 'rgbkb/pan/rev1/32a'
+  },
+  'rgbkb/pan/rev1': {
+    target: 'rgbkb/pan/rev1/32a'
   },
   romac: {
     target: 'kingly_keys/romac'

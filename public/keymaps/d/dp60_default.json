@@ -1,7 +1,7 @@
 {
   "keyboard": "dp60",
   "keymap": "default",
-  "commit": "f5638e54f51360095640fff621315997e23be30d",
+  "commit": "d7c90d805f414198a44d1b714363721df38950d6",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
