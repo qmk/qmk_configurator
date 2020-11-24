@@ -1,17 +1,17 @@
 Key,Translation
 apiVersion,Versão da API
 apiVersionPrefix,
-favoriteColor,
-favoriteKeyboard,
+favoriteColor,Cor favorita
+favoriteKeyboard,Teclado favorito
 hostedOn,Hospedado no GitHub
 jobsAhead,
 jobsWaiting,Processos em execuçãoS
 maintain,Este projeto é mantido por colaboradores do QMK como você!
-ready,
+ready,Pronto
 searchKeycodes,
 serverIs,
 serverStatus,Status do servidor
-settings,
+settings,Configurações
 statsTemplate,"
 Carregou {layers} camadas e {count} códigos-chave. Definido {any} Qualquer código-chave
 "
