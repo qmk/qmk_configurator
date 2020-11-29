@@ -1,7 +1,7 @@
 {
-  "keyboard": "xelus/valor",
+  "keyboard": "xelus/valor/rev1",
   "keymap": "default",
-  "commit": "79f080a43f005293c4442cbd7190533ad878526d",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

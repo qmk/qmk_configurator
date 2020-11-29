@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/omrontkl",
+  "keyboard": "evyd13/omrontkl",
   "keymap": "default",
-  "commit": "867fded9801a84e901bc381d8f523e45544b6119",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/eon65",
+  "keyboard": "evyd13/eon65",
   "keymap": "default",
-  "commit": "bd4c66a26b79a97c116a7dfa2b9351312c544dc2",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

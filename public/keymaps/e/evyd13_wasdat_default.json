@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/wasdat",
+  "keyboard": "evyd13/wasdat",
   "keymap": "default",
-  "commit": "75b28225db91b6dc449d76314a85fdedb154758e",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_fullsize_ansi",
   "layers": [
     [

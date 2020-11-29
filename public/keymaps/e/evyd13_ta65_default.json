@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/ta65",
+  "keyboard": "evyd13/ta65",
   "keymap": "default",
-  "commit": "5c9c45619e267e1c43fee483a1a1de54c12989bc",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

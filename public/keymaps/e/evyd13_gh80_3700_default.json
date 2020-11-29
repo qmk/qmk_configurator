@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/gh80_3700",
+  "keyboard": "evyd13/gh80_3700",
   "keymap": "default",
-  "commit": "792a4802446d0d5b97924bcb305ac0686b4539d8",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [

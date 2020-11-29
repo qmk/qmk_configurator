@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/pockettype",
+  "keyboard": "evyd13/pockettype",
   "keymap": "default",
-  "commit": "4e02253aaf79f696e3e3470e8e97a14a5722d328",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

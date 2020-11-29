@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/mx5160",
+  "keyboard": "evyd13/mx5160",
   "keymap": "default",
-  "commit": "251a69ea3d63ac8783e30b6e03e3866b9579af72",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

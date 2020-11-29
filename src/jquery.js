@@ -448,6 +448,7 @@ function getExclusionList() {
     '7skb',
     '8pack',
     'adkb96',
+    'aeboards/ext65',
     'ai03/equinox',
     'angel17',
     'angel64',

@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/minitomic",
+  "keyboard": "evyd13/minitomic",
   "keymap": "default",
-  "commit": "94ea13e73de3f41c724406c9ec38760109037651",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_split_space",
   "layers": [
     [

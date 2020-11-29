@@ -1,7 +1,7 @@
 {
-  "keyboard": "maartenwut/nt660",
+  "keyboard": "evyd13/nt660",
   "keymap": "default",
-  "commit": "86812f22e42b493d7021fe4bcb726ac9412b8e55",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_all",
   "layers": [
     [

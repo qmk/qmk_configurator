@@ -89,6 +89,45 @@ const lookup = {
   'handwired/ferris': {
     target: 'ferris/0_1'
   },
+  'helix/pico/sc/back': {
+    target: 'helix/pico/sc'
+  },
+  'helix/pico/sc/under': {
+    target: 'helix/pico/sc'
+  },
+  'helix/rev2/back/oled': {
+    target: 'helix/rev2/back'
+  },
+  'helix/rev2/oled': {
+    target: 'helix/rev2'
+  },
+  'helix/rev2/oled/back': {
+    target: 'helix/rev2/back'
+  },
+  'helix/rev2/oled/under': {
+    target: 'helix/rev2/under'
+  },
+  'helix/rev2/sc/back': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/sc/oled': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/sc/oledback': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/sc/oledunder': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/sc/under': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/under': {
+    target: 'helix/rev2/sc'
+  },
+  'helix/rev2/under/oled': {
+    target: 'helix/rev2/under'
+  },
   idb_60: {
     target: 'idb/idb_60',
     layouts: {
@@ -115,6 +154,69 @@ const lookup = {
   },
   'lfkeyboards/smk65': {
     target: 'lfkeyboards/smk65/revb'
+  },
+  'maartenwut/atom47/rev2': {
+    target: 'evyd13/atom47/rev2'
+  },
+  'maartenwut/atom47/rev3': {
+    target: 'evyd13/atom47/rev3'
+  },
+  'maartenwut/eon40': {
+    target: 'evyd13/eon40'
+  },
+  'maartenwut/eon65': {
+    target: 'evyd13/eon65'
+  },
+  'maartenwut/eon75': {
+    target: 'evyd13/eon75'
+  },
+  'maartenwut/eon87': {
+    target: 'evyd13/eon87'
+  },
+  'maartenwut/eon95': {
+    target: 'evyd13/eon95'
+  },
+  'maartenwut/gh80_1800': {
+    target: 'evyd13/gh80_1800'
+  },
+  'maartenwut/gh80_3700': {
+    target: 'evyd13/gh80_3700'
+  },
+  'maartenwut/minitomic': {
+    target: 'evyd13/minitomic'
+  },
+  'maartenwut/mx5160': {
+    target: 'evyd13/mx5160'
+  },
+  'maartenwut/nt660': {
+    target: 'evyd13/nt660'
+  },
+  'maartenwut/omrontkl': {
+    target: 'evyd13/omrontkl'
+  },
+  'maartenwut/plain60': {
+    target: 'evyd13/plain60'
+  },
+  'maartenwut/pockettype': {
+    target: 'evyd13/pockettype'
+  },
+  'maartenwut/quackfire': {
+    target: 'evyd13/quackfire'
+  },
+  'maartenwut/solheim68': {
+    target: 'evyd13/solheim68'
+  },
+  'maartenwut/ta65': {
+    target: 'evyd13/ta65'
+  },
+  'maartenwut/wasdat': {
+    target: 'evyd13/wasdat'
+  },
+  'maartenwut/wasdat_code': {
+    target: 'evyd13/wasdat_code'
+  },
+  'maartenwut/wonderland': {
+    target: 'evyd13/wonderland'
   },
   'mechlovin/hannah910': {
     target: 'mechlovin/hannah910/rev1'
@@ -240,6 +342,9 @@ const lookup = {
   skog: {
     target: 'percent/skog'
   },
+  speedo: {
+    target: 'cozykeys/speedo/v2'
+  },
   stoutgat: {
     target: 'tkw/stoutgat/v1'
   },
@@ -271,6 +376,12 @@ const lookup = {
   },
   'westfoxtrot/cypher': {
     target: 'westfoxtrot/cypher/rev1'
+  },
+  'xelus/dawn60': {
+    target: 'xelus/dawn60/rev1'
+  },
+  'xelus/valor': {
+    target: 'xelus/valor/rev1'
   },
   yd60mq: {
     target: 'yd60mq/12led'
