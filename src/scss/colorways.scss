@@ -1145,6 +1145,35 @@
   color: $color-gmk-abs-N9;
 }
 
+.gmk-vaporwave-key {
+  $color-vaporwave-lighter-pink: scale-color(#ff3eb5, $lightness: 40%);
+  background-color: #9595d2;
+  color: $color-vaporwave-lighter-pink;
+  font-weight: bold;
+  input,
+  .key-contents {
+    background: lighten(#9595d2, 5%);
+    color: $color-vaporwave-lighter-pink;
+    border-color: mix(#9595d2, $color-vaporwave-lighter-pink);
+  }
+}
+
+.gmk-vaporwave-mod {
+  background-color: #6244bb;
+  color: #00bce3;
+  input,
+  .key-contents {
+    background: lighten(#6244bb, 10%);
+    color: #00bce3;
+    border-color: mix(#6244bb, #00bce3);
+  }
+}
+
+.gmk-vaporwave-accent {
+  background-color: #00bce3;
+  color: #6244bb;
+}
+
 .gmk-wob-key {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
