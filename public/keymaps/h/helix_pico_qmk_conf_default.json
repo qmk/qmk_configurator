@@ -1,5 +1,5 @@
 {
-  "keyboard": "helix/pico",
+  "keyboard": "helix/pico/qmk_conf",
   "keymap": "default",
   "commit": "583be4a5f386c11c02a88f8e0869ec6a773cba7f",
   "layout": "LAYOUT",
