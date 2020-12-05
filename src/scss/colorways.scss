@@ -1146,15 +1146,23 @@
 }
 
 .gmk-vaporwave-key {
-  $color-vaporwave-lighter-pink: scale-color(#ff3eb5, $lightness: 40%);
-  background-color: #9595d2;
+  $color-vaporwave-lighter-pink: scale-color(
+    #ff3eb5,
+    $lightness: 60%,
+    $saturation: -20%
+  );
+  $color-vaporwave-lighter-lilac: scale-color(#9595d2, $lightness: 5%);
+  background-color: $color-vaporwave-lighter-lilac;
   color: $color-vaporwave-lighter-pink;
   font-weight: bold;
   input,
   .key-contents {
-    background: lighten(#9595d2, 5%);
+    background: lighten($color-vaporwave-lighter-lilac, 5%);
     color: $color-vaporwave-lighter-pink;
-    border-color: mix(#9595d2, $color-vaporwave-lighter-pink);
+    border-color: mix(
+      $color-vaporwave-lighter-lilac,
+      $color-vaporwave-lighter-pink
+    );
   }
 }
 
