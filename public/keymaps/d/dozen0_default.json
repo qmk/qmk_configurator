@@ -18,7 +18,7 @@
     ],
     [
       "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS",
-      "RGBRST",  "RGB_RMOD","RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS"
+      "KC_TRNS", "RGB_RMOD","RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS"
     ]
   ]
 }
