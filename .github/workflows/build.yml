@@ -45,3 +45,7 @@ jobs:
           deploy_key: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: test-gh-pages
+          force_orphan: true
+          user_name: 'QMK Bot'
+          user_email: 'hello@qmk.fm'
+          commit_message: 'Deploy to GitHub Pages'
