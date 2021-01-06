@@ -1,0 +1,14 @@
+{
+  "keyboard": "handwired/ck4x4",
+  "keymap": "default",
+  "commit": "d3bd1d893b6f7caebe821b5811104a9981d8f084",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_7",    "KC_8",    "KC_9",    "KC_MINS",
+      "KC_4",    "KC_5",    "KC_6",    "KC_PLUS",
+      "KC_1",    "KC_2",    "KC_3",    "KC_ENT",
+      "RESET",   "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}

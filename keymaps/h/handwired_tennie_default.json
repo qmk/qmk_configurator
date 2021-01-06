@@ -1,0 +1,28 @@
+{
+  "keyboard": "handwired/tennie",
+  "keymap": "default",
+  "commit": "68d8bb2b3fb8a35fda164539d27754b3f74e0819",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+           "KC_DEL",  "KC_SPC",  "KC_ENT",
+      "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT",
+           "TT(1)",   "TT(2)",   "TT(3)"
+    ],
+    [
+           "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_BRID", "KC_VOLD", "KC_VOLU", "KC_BRIU",
+           "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+           "RGB_MOD",  "RGB_TOG",  "RGB_RMOD",
+      "KC_F13",   "KC_F14",   "KC_F15",   "KC_F16",
+           "KC_TRNS",  "KC_TRNS",  "KC_TRNS"
+    ],
+    [
+           "KC_WBAK", "KC_WREF", "KC_WFWD",
+      "KC_NO",   "KC_PGDN", "KC_PGUP", "KC_NO",
+           "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

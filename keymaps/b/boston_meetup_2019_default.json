@@ -1,0 +1,32 @@
+{
+  "keyboard": "boston_meetup/2019",
+  "keymap": "default",
+  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",
+      "KC_COLN", "KC_P7",   "KC_P8",   "KC_P9",
+      "MO(2)",   "KC_P4",   "KC_P5",   "KC_P6",
+      "MO(1)",   "KC_P1",   "KC_P2",   "KC_P3"
+    ],
+    [
+      "KC_NLCK",
+      "KC_COLN", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_TRNS", "KC_NO",   "KC_EQL",  "KC_PPLS",
+      "KC_TRNS", "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_NLCK",
+      "RGB_TOG", "RGB_MOD", "RGB_RMOD", "KC_NO",
+      "KC_TRNS", "RGB_HUI", "RGB_SAI",  "RGB_VAI",
+      "KC_TRNS", "RGB_HUD", "RGB_SAD",  "RGB_VAD"
+    ],
+    [
+      "RESET",
+      "HPT_TOG", "HPT_FBK",  "HPT_RST", "KC_BSPC",
+      "KC_TRNS", "HPT_MODI", "KC_NO",   "KC_NO",
+      "KC_TRNS", "HPT_MODD", "CK_TOGG", "KC_DEL"
+    ]
+  ]
+}

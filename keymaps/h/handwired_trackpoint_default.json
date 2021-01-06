@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/trackpoint",
+  "keymap": "default",
+  "commit": "be8257f0a784a07e7dd93ecafe96c1d7774383f7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_BTN1", "KC_BTN3", "KC_BTN2"
+    ]
+  ]
+}

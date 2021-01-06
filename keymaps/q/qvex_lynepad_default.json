@@ -1,0 +1,13 @@
+{
+  "keyboard": "qvex/lynepad",
+  "keymap": "default",
+  "commit": "a422309354a17137c402c43f581c4e57acd510cb",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MS_BTN4", "KC_MS_BTN2", "KC_MS_UP","KC_MS_BTN1",
+      "KC_MS_BTN5", "KC_MS_LEFT", "KC_MS_DOWN", "KC_MS_RIGHT",
+      "KC_MS_ACCEL0", "KC_MS_ACCEL1", "KC_MS_ACCEL2"
+    ]
+  ]
+}

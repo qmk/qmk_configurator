@@ -1,0 +1,24 @@
+{
+  "keyboard": "amjpad",
+  "keymap": "default",
+  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "layout": "LAYOUT_numpad_6x4",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "KC_BSPC",       "KC_PEQL",
+      "KC_NLCK", "KC_PSLS", "KC_PAST",       "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",         "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "LT(1,KC_PDOT)", "KC_PENT"
+    ],
+    [
+      "KC_ESC",  "KC_TAB",  "KC_BSPC",       "KC_PEQL",
+      "KC_NLCK", "KC_PSLS", "KC_PAST",       "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",         "RESET",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "LT(1,KC_PDOT)", "KC_PENT"
+    ]
+  ]
+}

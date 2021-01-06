@@ -1,0 +1,32 @@
+{
+  "keyboard": "setta21/rev1",
+  "keymap": "default",
+  "commit": "12ea2e3649459a008e4ebb8efa8ba82005ffc218",
+  "layout": "LAYOUT_numpad_6x4",
+  "layers": [
+    [
+      "LT(2,KC_ESC)", "KC_F2",   "KC_EQL",  "KC_DEL",
+      "KC_NLCK",      "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",        "KC_P8",   "KC_P9",
+      "KC_P4",        "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",        "KC_P2",   "KC_P3",
+      "LT(1,KC_P0)",             "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_ESC",  "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_NO",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_NO",   "KC_UP",   "KC_NO",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS",
+      "KC_NO",   "KC_DOWN", "KC_NO",
+      "MO(1)",              "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "MO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "RGB_SAD", "RGB_SAI", "KC_NO",
+      "RGB_HUD", "RGB_HUI", "KC_NO",   "RGB_TOG",
+      "RGB_VAD", "RGB_VAI", "KC_NO",
+      "KC_NO",              "KC_NO",   "RGB_MOD"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "keyboard": "wilba_tech/rama_works_m6_b",
+  "keymap": "default",
+  "commit": "bffbb4b42d3167125f54b5aeb7a30fef44ff5dbe",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6"
+    ]
+  ]
+}

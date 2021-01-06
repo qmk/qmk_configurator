@@ -1,0 +1,16 @@
+{
+  "keyboard": "aplx6",
+  "keymap": "default",
+  "commit": "4bccde37d4148bdf0ee3676c9eed102639cfeb4a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPLY", "KC_VOLU", "MO(1)",
+      "KC_MPRV", "KC_VOLD", "KC_MNXT"
+    ],
+    [
+      "KC_CALC", "KC_PGUP", "KC_TRNS",
+      "KC_MYCM", "KC_PGDN", "RESET"
+    ]
+  ]
+}

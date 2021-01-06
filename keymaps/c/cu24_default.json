@@ -1,0 +1,24 @@
+{
+  "keyboard": "cu24",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
+  "layout": "LAYOUT_grid",
+  "layers": [
+    [
+      "KC_MPLY", "KC_MUTE", "KC_VOLD", "KC_VOLU",
+      "MO(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD", "BL_STEP", "BL_BRTG",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS",
+      "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "RESET",   "KC_TRNS"
+    ]
+  ]
+}

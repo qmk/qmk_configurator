@@ -1,0 +1,40 @@
+{
+  "keyboard": "allison_numpad",
+  "keymap": "default",
+  "commit": "4a09679d740a68ba0cf3020cdaf4d010bd2beca5",
+  "layout": "LAYOUT_ortho_6x4",
+  "layers": [
+    [
+      "KC_PSCR", "KC_SLCK", "KC_PAUS", "TG(1)",
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "BL_TOGG", "BL_INC",  "BL_DEC",  "BL_BRTG",
+      "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
