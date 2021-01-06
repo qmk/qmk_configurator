@@ -45,7 +45,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: test-gh-pages
+          BRANCH: gh-pages
           FOLDER: ./dist
           GIT_CONFIG_NAME : QMK Bot
           GIT_CONFIG_EMAIL: hello@qmk.fm
