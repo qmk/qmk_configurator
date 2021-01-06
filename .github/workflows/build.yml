@@ -1,6 +1,7 @@
 name: Website build
 
 on:
+  pull_request:
   push:
     branches:
       - master
@@ -40,12 +41,12 @@ jobs:
           yarn run build
           echo config.qmk.fm > dist/CNAME
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
-          deploy_key: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: test-gh-pages
-          force_orphan: true
-          user_name: 'QMK Bot'
-          user_email: 'hello@qmk.fm'
-          commit_message: 'Deploy to GitHub Pages'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: test-gh-pages
+          FOLDER: ./dist
+          GIT_CONFIG_NAME : QMK Bot
+          GIT_CONFIG_EMAIL: hello@qmk.fm
+          SINGLE_COMMIT: true
