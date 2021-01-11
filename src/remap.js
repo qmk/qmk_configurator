@@ -8,6 +8,9 @@ const lookup = {
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
+  aleth42: {
+    target: 'aleth42/rev1'
+  },
   alice: {
     target: 'tgr/alice'
   },

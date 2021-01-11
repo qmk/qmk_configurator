@@ -450,6 +450,7 @@ function getExclusionList() {
     'adkb96',
     'aeboards/ext65',
     'ai03/equinox',
+    'aleth42',
     'angel17',
     'angel64',
     'atreus',
