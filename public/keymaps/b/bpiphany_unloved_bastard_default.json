@@ -1,8 +1,8 @@
 {
   "keyboard": "bpiphany/unloved_bastard",
   "keymap": "default",
-  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
-  "layout": "LAYOUT_tkl_ansi",
+  "commit": "55843480fffddebf15b3557fb11dca6206ab7b7b",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",             "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",     "KC_PSCR", "KC_SLCK", "KC_PAUS",
