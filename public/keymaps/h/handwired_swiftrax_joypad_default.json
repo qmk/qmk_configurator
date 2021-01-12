@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/swiftrax/joypad",
+  "keymap": "default",
+  "commit": "bf959d79dc7a37e94fc368bb8d3a4ca52421faad",
+  "layout": "LAYOUT_ortho_6x4",
+  "layers": [
+    [
+      "KC_MUTE", "KC_F13",  "KC_F14",  "KC_F15",
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}
