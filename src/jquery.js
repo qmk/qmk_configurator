@@ -573,6 +573,7 @@ function getExclusionList() {
     'underscore33',
     'uzu42',
     'vitamins_included',
+    'whale/sk',
     'yd60mq',
     'ymd75',
     'yosino58',

@@ -383,6 +383,9 @@ const lookup = {
   'westfoxtrot/cypher': {
     target: 'westfoxtrot/cypher/rev1'
   },
+  'whale/sk': {
+    target: 'whale/sk/v3'
+  },
   'xelus/dawn60': {
     target: 'xelus/dawn60/rev1'
   },
