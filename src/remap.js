@@ -333,6 +333,9 @@ const lookup = {
   'rama/u80_a': {
     target: 'wilba_tech/rama_works_u80_a'
   },
+  'ramonimbao/herringbone': {
+    target: 'ramonimbao/herringbone/v1'
+  },
   'rgbkb/pan': {
     target: 'rgbkb/pan/rev1/32a'
   },

@@ -554,6 +554,7 @@ function getExclusionList() {
     'projectkb/alice',
     'ps2avrGB',
     'qwertyydox',
+    'ramonimbao/herringbone',
     'redox',
     'rgbkb/pan',
     'rgbkb/pan/rev1',
