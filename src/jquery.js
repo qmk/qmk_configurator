@@ -493,6 +493,7 @@ function getExclusionList() {
     'handwired/xealous',
     'hecomi',
     'helix',
+    'id80',
     'ivy',
     'jian',
     'jiran',

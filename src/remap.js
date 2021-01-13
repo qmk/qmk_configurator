@@ -131,6 +131,9 @@ const lookup = {
   'helix/rev2/under/oled': {
     target: 'helix/rev2/under'
   },
+  id80: {
+    target: 'id80/ansi'
+  },
   idb_60: {
     target: 'idb/idb_60',
     layouts: {
