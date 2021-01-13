@@ -259,6 +259,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  oddball: {
+    target: 'oddball/v1'
+  },
   omnikey_blackheart: {
     target: 'omnikey_bh'
   },

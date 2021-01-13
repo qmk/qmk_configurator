@@ -541,6 +541,7 @@ function getExclusionList() {
     'namecard2x4',
     'navi10',
     'nomu30',
+    'oddball',
     'orthodox',
     'pimentoso/paddino02',
     'pico',
