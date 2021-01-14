@@ -1,7 +1,7 @@
 {
   "keyboard": "plume/plume65",
   "keymap": "default",
-  "commit": "d0eabd083ebe13b864dd7628b43096c8362d0f29",
+  "commit": "c66df1664497546f32662409778731143e45a552",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

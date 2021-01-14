@@ -1,7 +1,7 @@
 {
-  "keyboard": "id80",
+  "keyboard": "id80/ansi",
   "keymap": "default",
-  "commit": "17bda000f39dd40317160576d0a948d7abb2612f",
+  "commit": "29fcd5418a1b6aad0052c97551ed99220ab9a40a",
   "layout": "LAYOUT",
   "layers": [
     [
