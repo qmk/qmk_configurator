@@ -80,6 +80,9 @@ const lookup = {
   'dztech/dz65rgb': {
     target: 'dztech/dz65rgb/v1'
   },
+  eek: {
+    target: 'eek/silk_down'
+  },
   ergoinu: {
     target: 'dm9records/ergoinu'
   },
