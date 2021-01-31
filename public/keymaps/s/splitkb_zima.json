@@ -1,0 +1,26 @@
+{
+    "keyboard":"splitkb/zima",
+    "keymap":"default",
+    "commit":"3e217e529f9df0d1ba0646f6fa854ff38a660bae"
+    "layout":"LAYOUT_ortho_4x3",
+    "layers":[
+        [
+            "KC_MUTE","TG(1)","TG(2)",
+            "KC_P7","KC_P8","KC_P9",
+            "KC_P4","KC_P5","KC_P6",
+            "KC_P1","KC_P2","KC_P3"
+        ],
+        [
+            "RESET","KC_TRNS","KC_NO",
+            "ANY(AU_ON)","ANY(AU_OFF)","KC_NO",
+            "ANY(CK_TOGG)","KC_NO","ANY(CK_UP)",
+            "ANY(CK_RST)","KC_NO","ANY(CK_DOWN)"
+        ],
+        [
+            "RGB_TOG","KC_N","KC_TRNS",
+            "RGB_HUI","RGB_SAI","RGB_VAI",
+            "RGB_HUD","RGB_SAD","RGB_VAD",
+            "ANY(HPT_TOG)","ANY(HPT_FBK)","ANY(HPT_CONT)"
+        ]
+    ]
+}
