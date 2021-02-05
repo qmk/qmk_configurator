@@ -127,7 +127,6 @@ import Vue from 'vue';
 import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
-import escape from 'lodash/escape';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 import {
@@ -350,8 +349,8 @@ export default {
 
       if (!isUndefined(data.author)) {
         const { author, notes } = data;
-        this.setAuthor(escape(author));
-        this.setNotes(escape(notes));
+        this.setAuthor(author);
+        this.setNotes(notes);
       }
 
       // remap old json files to new mappings if they need it
