@@ -44,15 +44,17 @@
         /></span>
       </div>
       <div class="tab-area">
-        <template v-for="(key, index) in activeTab">
-          <component
-            v-bind:is="getComponent(key.code)"
-            v-bind="key"
-            :key="index"
-            :class="filterClass(key)"
-            @mouseenter="message(key)"
-          />
-        </template>
+        <div>
+          <template v-for="(key, index) in activeTab">
+            <component
+              v-bind:is="getComponent(key.code)"
+              v-bind="key"
+              :key="index"
+              :class="filterClass(key)"
+              @mouseenter="message(key)"
+            />
+          </template>
+        </div>
       </div>
     </div>
   </div>
@@ -192,16 +194,21 @@ export default {
 }
 .end-tab input {
   padding: 3px 7px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid #464646;
   border-radius: 4px;
   width: 90%;
-  float: right;
+  background: inherit;
+  margin-bottom: 8px;
+  outline: none;
 }
 .tab-area {
   height: 350px;
   padding: 10px 5px;
   border: 1px solid;
   border-radius: 0 4px 4px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tab.active {
   opacity: 1;

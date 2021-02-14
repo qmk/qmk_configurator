@@ -43,7 +43,7 @@ html {
     #favorite-colorway {
       color: grey;
       &.active {
-        color: $qmk-green;
+        color: $qmk-primary;
       }
     }
     .embedded-tutorial {
@@ -80,7 +80,7 @@ html {
       color: #ffa500;
     }
     .clear-button {
-      background-color: #49ad4c;
+      background-color: rgb(255, 33, 115);
       color: #fff;
       border-color: #000;
     }
@@ -133,7 +133,7 @@ html {
       color: white;
       border-color: #000;
       &.active {
-        background-color: #49ad4c;
+        background-color: rgb(255, 33, 115);
       }
     }
     span.log-green {
@@ -157,7 +157,7 @@ html {
       background: #eee;
     }
     .backend-status {
-      background: #272822;
+      background: #000;
       color: #bbb;
     }
     #keycodes {
@@ -198,7 +198,7 @@ html {
       background-color: #eee;
       border-color: #ccc;
       button {
-        background-color: #49ad4c;
+        background-color: rgb(255, 33, 115);
         color: #fff;
       }
     }
@@ -206,7 +206,7 @@ html {
       border-color: #cdcdcd;
     }
     .label-button {
-      background-color: #49ad4c;
+      background-color: rgb(255, 33, 115);
       color: white;
       border-color: #000;
     }
@@ -274,7 +274,7 @@ html {
     #resetTest,
     #load-default,
     .ui-button {
-      background-color: #49ad4c;
+      background-color: rgb(255, 33, 115);
       color: white;
       border-color: #000;
     }
@@ -286,9 +286,10 @@ html {
       color: #999;
     }
     #terminal {
-      background: #272822;
-      border-color: #000;
-      color: #f8f8f2;
+      background: inherit;
+      border-color: #464646;
+      color: white;
+      padding: 16px;
     }
     #controller-bottom {
       background: #eee;
@@ -378,9 +379,10 @@ html[data-theme='dark'] {
   }
   #controller-top,
   #controller-bottom {
-    background-color: $qmk-grey-dark;
+    background-color: $qmk-dark-bg;
     color: $qmk-grey-light;
-    border-color: #0e0e0e;
+    border-color: $qmk-grey-dark;
+    padding: 16px;
   }
   .tester-key {
     background: #0c0c0c;
@@ -401,8 +403,8 @@ html[data-theme='dark'] {
     color: #f8f8f2;
   }
   #visual-keymap {
-    background: $qmk-grey-dark;
-    border-color: $qmk-grey-dark;
+    background: #101010;
+    border: 10px solid #101010;
   }
   .info-title {
     color: $qmk-grey-light;
@@ -411,10 +413,10 @@ html[data-theme='dark'] {
     color: #1db6ff;
   }
   .backend-status {
-    background: #131411;
+    background: #000;
   }
   #keycodes {
-    background-color: inherit;
+    background: inherit;
   }
   .bottom-fixed,
   .settings-panel--help-text {
@@ -422,8 +424,15 @@ html[data-theme='dark'] {
     color: #ddd;
   }
   .tab-area {
-    background: $qmk-grey-dark;
-    border-color: #2f2f2f;
+    background: inherit;
+    border-color: $qmk-grey-dark;
+  }
+  .split-content {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 5px;
+    border: 1px solid $qmk-grey-dark;
   }
   .keycode-container:after,
   .keycode-layer-container:after,
@@ -440,19 +449,29 @@ html[data-theme='dark'] {
   #app {
     color: $qmk-grey-light;
   }
+  .tabs {
+    border: 1px solid $qmk-grey-dark;
+    border-bottom: 0;
+    border-radius: 5px 5px 0 0;
+    padding: 8px;
+    padding-bottom: 0;
+  }
   .tab {
-    border-color: #2f2f2f;
+    background: inherit;
+    border: none;
     color: #555;
     &.active {
       color: $qmk-grey-light;
-      background-color: #464646;
+      background-color: inherit;
+      border-bottom: 2px solid $qmk-primary;
     }
   }
 
   .keycode {
-    background: #0c0c0c;
+    background: #1d1d1d;
     color: white;
     border-color: #0e0e0e;
+    border-radius: 5px;
   }
   .layers {
     background-color: $qmk-dark-bg;
@@ -473,9 +492,9 @@ html[data-theme='dark'] {
     }
   }
   .layer {
-    background: $qmk-grey-dark;
-    border-color: #5a5a5a;
-    color: #0e0e0e;
+    border: none;
+    color: black;
+    line-height: 1;
     &:hover {
       background: #eee;
       color: #000;

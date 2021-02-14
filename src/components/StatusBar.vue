@@ -1,16 +1,16 @@
 <template>
   <div class="backend-status">
     <div class="qmk-branding">
-      <div class="qmk-logo"></div>
+      <!-- <div class="qmk-logo"></div> -->
       <div class="qmk-app-name">
-        QMK Configurator
+        Keyb.io - QMK Configurator
       </div>
-      <div class="bes-version">
+      <!-- <div class="bes-version">
         {{ $t('apiVersionPrefix') }}
         <span class="version-num">v{{ version }}</span>
-      </div>
+      </div> -->
     </div>
-    <div class="bes-title">
+    <!-- <div class="bes-title">
       <div class="bes-status">
         <div class="bes-status-left" :class="currentStatusClass">
           <ul>
@@ -22,12 +22,12 @@
         </div>
         <div class="bes-status-right">{{ jobs }}</div>
       </div>
-    </div>
-    <div class="bes-discord">
+    </div> -->
+    <!-- <div class="bes-discord">
       <a v-if="hasError" target="_blank" rel="noopener" :href="discordLink">
         Error? Let us know on QMK Discord.
       </a>
-    </div>
+    </div> -->
     <div class="bes-controls" @click="clickSettings">
       <font-awesome-icon
         v-if="!settingsPanelVisible"

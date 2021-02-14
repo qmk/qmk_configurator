@@ -37,6 +37,7 @@
           >
             <option
               class="option"
+              controller-bo
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
