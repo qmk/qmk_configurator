@@ -6,12 +6,12 @@ import {
 
 function setDefaultConfiguratorSettings() {
   // detect if OS supports dark mode and set as default
-  const osDarkMode =
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const osDarkMode =
+  //   window.matchMedia &&
+  //   window.matchMedia('(prefers-color-scheme: dark)').matches;
   const initialConfig = {
     version: CONSTS.configuratorSettingsVersion,
-    darkmodeEnabled: osDarkMode,
+    darkmodeEnabled: true,
     favoriteKeyboard: '',
     favoriteColor: '',
     clearLayerDefault: false
