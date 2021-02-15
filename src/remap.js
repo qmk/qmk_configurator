@@ -47,6 +47,9 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  'cmm_studio/saka68': {
+    target: 'cmm_studio/saka68/solder'
+  },
   'crkbd/rev1': {
     target: 'crkbd/rev1/legacy'
   },
