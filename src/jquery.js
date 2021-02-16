@@ -502,6 +502,7 @@ function getExclusionList() {
     'jones',
     'kbdfans/kbd75',
     'keebio/bdn9',
+    'keebio/dsp40',
     'keebio/iris',
     'keebio/kbo5000',
     'keebio/levinson',

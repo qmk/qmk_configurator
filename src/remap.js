@@ -161,6 +161,9 @@ const lookup = {
   'kbdfans/kbd67/mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb/v1'
   },
+  'keebio/dsp40': {
+    target: 'keebio/dsp40/rev1'
+  },
   kudox: {
     target: 'kudox/rev1'
   },
