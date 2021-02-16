@@ -499,6 +499,7 @@ function getExclusionList() {
     'jian',
     'jiran',
     'jisplit89',
+    'jones',
     'kbdfans/kbd75',
     'keebio/bdn9',
     'keebio/iris',

@@ -146,6 +146,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_all'
     }
   },
+  jones: {
+    target: 'jones/v03_1'
+  },
   katana60: {
     target: 'rominronin/katana60/rev1'
   },
