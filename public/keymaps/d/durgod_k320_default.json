@@ -1,6 +1,6 @@
 {
-  "keyboard": "Durgod K320",
-  "keymap": "default_537b761",
+  "keyboard": "durgod/k320",
+  "keymap": "default",
   "commit": "537b7614b9be39025379291880b549e4fa4d826d",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
