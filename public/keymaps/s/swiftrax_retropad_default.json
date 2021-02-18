@@ -1,7 +1,7 @@
 {
-  "keyboard": "handwired/swiftrax/retropad",
+  "keyboard": "swiftrax/retropad",
   "keymap": "default",
-  "commit": "5faf5383ad4f651fd3d576a4d0932679f14c752e",
+  "commit": "a0d9221dcc085b196e071581e9e7d8d9a96037fe",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -47,6 +47,9 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  'cmm_studio/saka68': {
+    target: 'cmm_studio/saka68/solder'
+  },
   'crkbd/rev1': {
     target: 'crkbd/rev1/legacy'
   },
@@ -143,6 +146,9 @@ const lookup = {
       LAYOUT: 'LAYOUT_all'
     }
   },
+  jones: {
+    target: 'jones/v03_1'
+  },
   katana60: {
     target: 'rominronin/katana60/rev1'
   },
@@ -154,6 +160,12 @@ const lookup = {
   },
   'kbdfans/kbd67/mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb/v1'
+  },
+  'keebio/dsp40': {
+    target: 'keebio/dsp40/rev1'
+  },
+  'keycapsss/plaid_pad': {
+    target: 'keycapsss/plaid_pad/rev1'
   },
   kudox: {
     target: 'kudox/rev1'

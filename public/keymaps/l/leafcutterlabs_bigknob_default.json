@@ -1,0 +1,15 @@
+{
+  "keyboard": "leafcutterlabs/bigknob",
+  "keymap": "default",
+  "commit": "d28d474dc05ee008615f8bf94c0e1664b614ad91",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",
+      "KC_MEDIA_PREV_TRACK",
+      "KC_MEDIA_PLAY_PAUSE",
+      "KC_MEDIA_STOP",
+      "KC_MNXT"
+    ]
+  ]
+}
