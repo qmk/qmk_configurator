@@ -20,6 +20,9 @@ const lookup = {
   angel64: {
     target: 'angel64/alpha'
   },
+  aplx6: {
+    target: 'aplyard/aplx6/rev1'
+  },
   at101_blackheart: {
     target: 'at101_bh'
   },
