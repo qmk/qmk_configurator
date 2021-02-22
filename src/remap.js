@@ -384,6 +384,9 @@ const lookup = {
   skog: {
     target: 'percent/skog'
   },
+  southpaw75: {
+    target: 'fr4/southpaw75'
+  },
   speedo: {
     target: 'cozykeys/speedo/v2'
   },
