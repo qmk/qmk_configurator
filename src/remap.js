@@ -29,6 +29,9 @@ const lookup = {
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
   },
+  bear_65: {
+    target: 'jacky_studio/bear_65'
+  },
   bear_face: {
     target: 'bear_face/v1'
   },
