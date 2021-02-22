@@ -369,6 +369,12 @@ const lookup = {
   ropro: {
     target: 'kingly_keys/ropro'
   },
+  's7_elephant/rev1': {
+    target: 'jacky_studio/s7_elephant/rev1'
+  },
+  's7_elephant/rev2': {
+    target: 'jacky_studio/s7_elephant/rev2'
+  },
   satan: {
     target: 'gh60/satan'
   },
