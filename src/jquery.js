@@ -486,6 +486,7 @@ function getExclusionList() {
     'handwired/bluepill',
     'handwired/dactyl_manuform',
     'handwired/onekey',
+    'handwired/pill60',
     'handwired/postageboard',
     'handwired/pytest/has_community',
     'handwired/qc60',

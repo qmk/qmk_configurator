@@ -104,6 +104,9 @@ const lookup = {
   'handwired/ferris': {
     target: 'ferris/0_1'
   },
+  'handwired/pill60': {
+    target: 'handwired/pill60/bluepill'
+  },
   'helix/pico/sc/back': {
     target: 'helix/pico/sc'
   },
