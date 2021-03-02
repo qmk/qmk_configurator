@@ -20,6 +20,9 @@ const lookup = {
   angel64: {
     target: 'angel64/alpha'
   },
+  aplx6: {
+    target: 'aplyard/aplx6/rev1'
+  },
   at101_blackheart: {
     target: 'at101_bh'
   },
@@ -28,6 +31,9 @@ const lookup = {
   },
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
+  },
+  bear_65: {
+    target: 'jacky_studio/bear_65'
   },
   bear_face: {
     target: 'bear_face/v1'
@@ -366,11 +372,20 @@ const lookup = {
   ropro: {
     target: 'kingly_keys/ropro'
   },
+  's7_elephant/rev1': {
+    target: 'jacky_studio/s7_elephant/rev1'
+  },
+  's7_elephant/rev2': {
+    target: 'jacky_studio/s7_elephant/rev2'
+  },
   satan: {
     target: 'gh60/satan'
   },
   skog: {
     target: 'percent/skog'
+  },
+  southpaw75: {
+    target: 'fr4/southpaw75'
   },
   speedo: {
     target: 'cozykeys/speedo/v2'

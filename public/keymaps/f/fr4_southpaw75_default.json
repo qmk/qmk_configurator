@@ -1,7 +1,7 @@
 {
-  "keyboard": "southpaw75",
+  "keyboard": "fr4/southpaw75",
   "keymap": "default",
-  "commit": "3b3a1b2a635fd41808cf58ddf9f33b89f6db3e5e",
+  "commit": "1a5f6b54aff179732e3f4f4eb79e47454f0a1eb5",
   "layout": "LAYOUT",
   "layers": [
     [
