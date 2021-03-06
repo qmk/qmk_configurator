@@ -282,6 +282,12 @@ export default [
     type: 'container',
     title: 'LCTL + LALT'
   },
+  {
+    name: 'RCS',
+    code: 'RCS(kc)',
+    type: 'container',
+    title: 'RCTL + RSFT'
+  },
 
   { width: 0 },
 
