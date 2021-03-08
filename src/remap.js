@@ -77,6 +77,9 @@ const lookup = {
   drakon: {
     target: 'jagdpietr/drakon'
   },
+  dumbpad: {
+    target: 'dumbpad/v0x'
+  },
   'dztech/dz60rgb': {
     target: 'dztech/dz60rgb/v1'
   },
@@ -103,6 +106,9 @@ const lookup = {
   },
   'handwired/ferris': {
     target: 'ferris/0_1'
+  },
+  'handwired/pill60': {
+    target: 'handwired/pill60/bluepill'
   },
   'helix/pico/sc/back': {
     target: 'helix/pico/sc'
