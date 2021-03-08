@@ -1,0 +1,13 @@
+{
+  "keyboard": "nightly_boards/octopad",
+  "keymap": "default",
+  "commit": "ac433b218d2f0652833155f5eaa6b0c287f9cdec",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_VOLD", "KC_ESC",  "KC_VOLU", "KC_BRID", "RESET",   "KC_BRIU",
+                 "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+                 "KC_A",    "KC_S",    "KC_D",    "KC_F"
+    ]
+  ]
+}

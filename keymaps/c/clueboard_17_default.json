@@ -1,0 +1,22 @@
+{
+  "keyboard": "clueboard/17",
+  "keymap": "default",
+  "commit": "d1f735b6d2739295faf932dbb61e3c8b4c0b2898",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "LT(1,KC_NLCK)", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",         "KC_P8",   "KC_P9",
+      "KC_P4",         "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",         "KC_P2",   "KC_P3",
+      "KC_P0",                    "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "LT(1,KC_NLCK)", "KC_TRNS", "KC_TRNS", "RGB_TOG",
+      "KC_TRNS",       "RGB_SAI", "KC_TRNS",
+      "RGB_HUD",       "BL_STEP", "RGB_HUI", "RGB_VAI",
+      "KC_TRNS",       "RGB_SAD", "KC_TRNS",
+      "RGB_MOD",                  "KC_TRNS", "RGB_VAD"
+    ]
+  ]
+}

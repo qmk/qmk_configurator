@@ -1,0 +1,18 @@
+{
+  "keyboard": "handwired/bdn9_ble",
+  "keymap": "default",
+  "commit": "6265b783073e943b8f5b2f7118a2ec8df1fd2ebc",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I"
+    ],
+    [
+      "KC_TRNS", "OUT_AUTO", "RESET",
+      "BL_STEP", "OUT_USB",  "KC_TRNS",
+      "BL_TOGG", "OUT_BT",   "KC_TRNS"
+    ]
+  ]
+}

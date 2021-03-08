@@ -1,0 +1,11 @@
+{
+  "keyboard": "anavi/macropad2",
+  "keymap": "default",
+  "commit": "9682fca47b1d36dc5b502cc3e1f569464c41669a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B"
+    ]
+  ]
+}

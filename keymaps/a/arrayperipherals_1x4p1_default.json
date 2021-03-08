@@ -1,0 +1,14 @@
+{
+  "keyboard": "arrayperipherals/1x4p1",
+  "keymap": "default",
+  "commit": "5fde2d730c854eb6516771f1c5dcd22626f85efb",
+  "layout": "LAYOUT_ortho_1x5",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "KC_LSFT", "KC_LCTL", "TG(1)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "_______"
+    ]
+  ]
+}

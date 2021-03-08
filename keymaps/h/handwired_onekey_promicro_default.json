@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/promicro",
+  "keymap": "default",
+  "commit": "407d6a2b6779aa7ef4f87b53521aef3c3854f824",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

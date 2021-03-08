@@ -1,0 +1,14 @@
+{
+  "keyboard": "honeycomb",
+  "keymap": "default",
+  "commit": "d4e1e712f68567dfed6ff19cf762d01f6bb3d60c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_TRNS", "LCTL(KC_C)", "LCTL(KC_V)", "KC_MUTE",
+      "KC_4",    "KC_5",       "KC_6",       "KC_7",
+      "KC_8",    "KC_9",       "KC_A",       "KC_B",
+      "KC_C",    "KC_D",       "KC_E",       "KC_F"
+    ]
+  ]
+}

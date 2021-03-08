@@ -1,0 +1,17 @@
+{
+  "keyboard": "the_ruler",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(2)",   "KC_2",    "LCTL(LSFT(KC_ESC))", "LCTL(LALT(KC_DEL))", "KC_ESC",  "MO(1)"
+    ],
+    [
+      "RGB_TOG", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "RGB_VAD", "RGB_VAI", "RGB_MOD", "LCTL(LSFT(KC_ESC))", "RESET"
+    ]
+  ]
+}

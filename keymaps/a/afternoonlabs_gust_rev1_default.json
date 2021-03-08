@@ -1,0 +1,12 @@
+{
+  "keyboard": "afternoonlabs/gust/rev1",
+  "keymap": "default",
+  "commit": "42045f5b173fc50c61b8d033dae58848eeeed869",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6"
+    ]
+  ]
+}

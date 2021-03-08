@@ -1,0 +1,16 @@
+{
+  "keyboard": "kiwikeebs/macro",
+  "keymap": "default",
+  "commit": "ecb212106950d4ffc5dca64fc06f031b6b12fcc1",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_DEL",  "KC_HOME", "LT(1,KC_END)",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",      "KC_MUTE"
+    ],
+    [
+      "KC_1",    "KC_UP",   "_______",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "_______"
+    ]
+  ]
+}

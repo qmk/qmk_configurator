@@ -1,0 +1,12 @@
+{
+  "keyboard": "business_card/alpha",
+  "keymap": "default",
+  "commit": "67105b2a219f6d0e2d391706149152c24878a4e7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6"
+    ]
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "keyboard": "puck",
+  "keymap": "default",
+  "commit": "d79b5e67b691e367897a24008ec3f2188b1642f3",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "MO(2)",   "KC_P0",   "MO(1)"
+    ],
+    [
+      "KC_NLCK", "KC_PAST", "KC_NO",
+      "KC_PMNS", "KC_PENT", "KC_PPLS",
+      "KC_NO",   "KC_PSLS", "KC_NO",
+      "KC_NO",   "KC_PDOT", "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_VOLU", "KC_NO",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_NO",   "KC_VOLD", "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}

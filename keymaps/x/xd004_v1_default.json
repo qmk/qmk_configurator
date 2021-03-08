@@ -1,0 +1,11 @@
+{
+  "keyboard": "xd004/v1",
+  "keymap": "default",
+  "commit": "a200f194d14086e2da740ac48bac5ffdf36689d8",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+      "KC_L",    "KC_O",    "KC_V",    "KC_E"
+    ]
+  ]
+}

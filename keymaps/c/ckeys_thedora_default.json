@@ -1,0 +1,38 @@
+{
+  "keyboard": "ckeys/thedora",
+  "keymap": "default",
+  "commit": "6b27ebefc643f81d4f46949270c258ff0f2c2049",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PSLS", "MO(4)",   "MU_TOG",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PAST", "TG(3)",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PMNS", "TG(2)",
+      "KC_P0",   "KC_PDOT", "KC_PEQL", "KC_PPLS", "MO(1)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MU_MOD",
+      "KC_LCTL", "KC_LALT", "KC_TRNS", "KC_LGUI", "KC_TRNS"
+    ],
+    [
+      "MI_Ds_3", "MI_E_3",  "MI_F_3",  "MI_Fs_3", "MI_G_3",  "KC_TRNS",
+      "MI_As_2", "MI_B_2",  "MI_C_3",  "MI_Cs_3", "MI_D_3",
+      "MI_F_2",  "MI_Fs_2", "MI_G_2",  "MI_Gs_2", "TG(2)",
+      "MI_C_2",  "MI_Cs_2", "MI_D_2",  "MI_Ds_2", "MI_E_2"
+    ],
+    [
+      "KC_BTN5", "KC_TRNS", "KC_WH_U", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_BTN1", "KC_MS_U", "KC_BTN2", "TG(3)",
+      "KC_BTN4", "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_TRNS",
+      "KC_BTN3", "KC_WH_L", "KC_WH_D", "KC_WH_R", "KC_TRNS"
+    ],
+    [
+      "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "TG(4)",   "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

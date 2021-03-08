@@ -1,0 +1,12 @@
+{
+  "keyboard": "four_banger",
+  "keymap": "default",
+  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "layout": "LAYOUT_ortho_2x2",
+  "layers": [
+    [
+      "KC_1",    "KC_U",
+      "KC_P",    "KC_NO"
+    ]
+  ]
+}

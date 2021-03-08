@@ -1,0 +1,29 @@
+{
+  "keyboard": "pabile/p20/ver1",
+  "keymap": "default",
+  "commit": "741856dd57735dcd143987eb954ecc4a5ca2fc96",
+  "layout": "LAYOUT_ortho_5x4",
+  "layers": [
+    [
+      "KC_PSLS",     "KC_PMNS", "KC_PAST", "KC_MPLY",
+      "KC_P7",       "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",       "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",       "KC_P2",   "KC_P3",   "KC_TAB",
+      "LT(2,KC_P0)", "KC_PCMM", "KC_PDOT", "LT(1,KC_PENT)"
+    ],
+    [
+      "KC_NLCK", "KC_UNDS", "KC_NO",   "KC_NO",
+      "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_EQL",
+      "KC_DLR",  "KC_PERC", "KC_CIRC", "KC_NO",
+      "KC_EXLM", "KC_AT",   "KC_HASH", "KC_NO",
+      "KC_RPRN", "KC_NO",   "KC_PSLS", "KC_NO"
+    ],
+    [
+      "KC_NLCK", "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_BTN1", "KC_MS_U", "KC_BTN2", "KC_NO",
+      "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_TAB",
+      "KC_WH_U", "KC_NO",   "KC_WH_D", "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_DEL",  "KC_ESC"
+    ]
+  ]
+}

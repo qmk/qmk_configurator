@@ -1,0 +1,16 @@
+{
+  "keyboard": "8pack/rev12",
+  "keymap": "default",
+  "commit": "6766c5315eb89eeafaf60c089ad028a963c48ab1",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_V",    "KC_C",    "KC_X",    "MO(1)",
+      "KC_A",    "KC_S",    "KC_D",    "KC_F"
+    ],
+    [
+      "RGB_TOG", "RGB_RMOD", "RGB_MOD", "KC_NO",
+      "RESET",   "BL_DEC",   "BL_INC",  "BL_TOGG"
+    ]
+  ]
+}

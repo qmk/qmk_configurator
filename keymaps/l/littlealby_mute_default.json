@@ -1,0 +1,11 @@
+{
+  "keyboard": "littlealby/mute",
+  "keymap": "default",
+  "commit": "f487b726cd31f51f652f0c498e9767118faeff10",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "SGUI(KC_A)"
+    ]
+  ]
+}

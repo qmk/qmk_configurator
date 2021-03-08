@@ -1,0 +1,54 @@
+{
+  "version" : 1,
+  "keyboard" : "jian/handwired",
+  "keymap": "default",
+  "commit": "157319fbd03e6f7a6618111fd03ab3e53317893e",
+  "notes" : "This keymap is identical to jian/keymaps/default/keymap.c, except layers with dvorak/colemak/workman are not persistent (their 'on' state won't save after keyboard reboot)",
+  "documentation" : "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
+  "layout" : "LAYOUT",
+  "layers" : [
+    [
+      "KC_LGUI", "KC_GRV",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",       "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_LBRC",         "RGUI_T(KC_RBRC)",
+                 "KC_LCTL", "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",       "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN", "RCTL_T(KC_QUOT)",
+                 "KC_LALT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",       "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "RALT_T(KC_BSLS)",
+                                 "LT(5,KC_TAB)", "LSFT_T(KC_SPC)", "LT(4,KC_ENT)",    "LT(4,KC_ESC)", "RSFT_T(KC_BSPC)", "LT(5,KC_DEL)"
+    ],
+    [
+      "KC_LGUI", "KC_GRV",  "KC_QUOT", "KC_COMM", "KC_DOT",  "KC_P",    "KC_Y",       "KC_F",    "KC_G",    "KC_C",    "KC_R",    "KC_L",    "KC_LBRC",         "RGUI_T(KC_RBRC)",
+                 "KC_LCTL", "KC_A",    "KC_O",    "KC_E",    "KC_U",    "KC_I",       "KC_D",    "KC_H",    "KC_T",    "KC_N",    "KC_S",    "RCTL_T(KC_SLSH)",
+                 "KC_LALT", "KC_SCLN", "KC_Q",    "KC_J",    "KC_K",    "KC_X",       "KC_B",    "KC_M",    "KC_W",    "KC_V",    "KC_Z",    "RALT_T(KC_BSLS)",
+                                 "LT(5,KC_TAB)", "LSFT_T(KC_SPC)", "LT(4,KC_ENT)",    "LT(4,KC_ESC)", "RSFT_T(KC_BSPC)", "LT(5,KC_DEL)"
+    ],
+    [
+      "KC_LGUI", "KC_GRV",  "KC_Q",    "KC_W",    "KC_F",    "KC_P",    "KC_G",       "KC_J",    "KC_L",    "KC_U",    "KC_Y",    "KC_SCLN", "KC_LBRC",         "RGUI_T(KC_RBRC)",
+                 "KC_LCTL", "KC_A",    "KC_R",    "KC_S",    "KC_T",    "KC_D",       "KC_H",    "KC_N",    "KC_E",    "KC_I",    "KC_O",    "RCTL_T(KC_QUOT)",
+                 "KC_LALT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",       "KC_K",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "RALT_T(KC_BSLS)",
+                                 "LT(5,KC_TAB)", "LSFT_T(KC_SPC)", "LT(4,KC_ENT)",    "LT(4,KC_ESC)", "RSFT_T(KC_BSPC)", "LT(5,KC_DEL)"
+    ],
+    [
+      "KC_LGUI", "KC_GRV",  "KC_Q",    "KC_D",    "KC_R",    "KC_W",    "KC_B",       "KC_J",    "KC_F",    "KC_U",    "KC_P",    "KC_SCLN", "KC_LBRC",         "RGUI_T(KC_RBRC)",
+                 "KC_LCTL", "KC_A",    "KC_S",    "KC_H",    "KC_T",    "KC_G",       "KC_Y",    "KC_N",    "KC_E",    "KC_O",    "KC_I",    "RCTL_T(KC_QUOT)",
+                 "KC_LALT", "KC_Z",    "KC_X",    "KC_M",    "KC_C",    "KC_V",       "KC_K",    "KC_L",    "KC_COMM", "KC_DOT",  "KC_SLSH", "RALT_T(KC_BSLS)",
+                                 "LT(5,KC_TAB)", "LSFT_T(KC_SPC)", "LT(4,KC_ENT)",    "LT(4,KC_ESC)", "RSFT_T(KC_BSPC)", "LT(5,KC_DEL)"
+    ],
+    [
+      "KC_TRNS", "KC_UNDS",         "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",      "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",          "RGUI_T(KC_F12)",
+                 "LCTL_T(KC_EQL)",  "KC_EXLM", "KC_AT",   "KC_HASH", "KC_DLR",  "KC_PERC",    "KC_CIRC", "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_RPRN", "RCTL_T(KC_MINS)",
+                 "LALT_T(KC_PPLS)", "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",       "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_TRNS",
+                                                     "LT(6,KC_TAB)", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "LT(6,KC_DEL)"
+    ],
+    [
+      "KC_TRNS", "KC_NLCK",        "KC_PSLS", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",    "KC_VOLU", "KC_HOME", "KC_PSCR", "KC_PGUP", "KC_SLCK", "KC_CAPS",        "KC_TRNS",
+                 "LCTL_T(KC_EQL)", "KC_PAST", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",    "KC_MUTE", "KC_LEFT", "KC_UP",   "KC_RGHT", "KC_INS",  "RCTL_T(KC_APP)",
+                 "KC_TRNS",        "KC_P0",   "KC_P1",   "KC_P2",   "KC_P3",   "KC_PDOT",    "KC_VOLD", "KC_END",  "KC_DOWN", "KC_PGDN", "KC_PAUS", "KC_TRNS",
+                                                    "KC_TRNS", "KC_TRNS", "LT(6,KC_ENT)",    "LT(6,KC_ESC)", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "RESET",   "DEBUG",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "DEBUG",   "RESET",
+                 "KC_NO",   "DF(3)",   "DF(2)",   "DF(1)",   "DF(0)",   "KC_NO",      "KC_NO",   "DF(0)",   "DF(1)",   "DF(2)",   "DF(3)",   "KC_NO",
+                 "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                                                  "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ],
+  "author" : "KGOH"
+}

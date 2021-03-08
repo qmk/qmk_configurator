@@ -1,0 +1,11 @@
+{
+  "keyboard": "minimacro5",
+  "keymap": "default",
+  "commit": "bfbcfbc83e9c496abff002726f7cc07108d99003",
+  "layout": "LAYOUT_ortho_1x5",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E"
+    ]
+  ]
+}

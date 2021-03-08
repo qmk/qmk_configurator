@@ -1,0 +1,16 @@
+{
+  "keyboard": "bpiphany/sixshooter",
+  "keymap": "default",
+  "commit": "ffb75b720fd0d4d28ed0ae99b66313c06df47183",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(1)",   "KC_VOLD", "KC_VOLU",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ],
+    [
+      "KC_TRNS", "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}

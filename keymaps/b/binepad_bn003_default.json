@@ -1,0 +1,23 @@
+{
+  "keyboard": "binepad/bn003",
+  "keymap": "default",
+  "commit": "e4d46a1c00f60fa97d779f0c468c502416d29f02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",
+      "KC_1",
+      "KC_2"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ]
+  ]
+}

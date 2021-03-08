@@ -1,0 +1,20 @@
+{
+  "keyboard": "soup10",
+  "keymap": "default",
+  "commit": "788b1854b42a916919c3e8efc77b366ba03d2d8c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_F13",
+      "KC_F14",  "KC_F15",  "KC_F16",
+      "KC_F17",  "KC_F18",  "KC_F19",
+      "KC_F20",  "KC_F21",  "MO(1)"
+    ],
+    [
+                 "RESET",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

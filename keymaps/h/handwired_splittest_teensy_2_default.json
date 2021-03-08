@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/splittest/teensy_2",
+  "keymap": "default",
+  "commit": "22e499efdb12d277b9847dea8809ba1b717e071f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "RGB_MOD", "RESET"
+    ]
+  ]
+}

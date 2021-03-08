@@ -1,0 +1,11 @@
+{
+  "keyboard": "bigseries/3key",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C"
+    ]
+  ]
+}

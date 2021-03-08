@@ -1,0 +1,16 @@
+{
+  "keyboard": "touchpad",
+  "keymap": "default",
+  "commit": "edcedd53d1bfb761cca37553729ad881f2a738e6",
+  "layout": "LAYOUT_ortho_6x6",
+  "layers": [
+	[
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",
+	  "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F"
+	]
+  ]
+}

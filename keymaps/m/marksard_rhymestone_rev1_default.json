@@ -1,0 +1,32 @@
+{
+    "keyboard": "marksard/rhymestone/rev1",
+    "keymap": "default",
+    "commit": "6e32dd123ff0ff49768f43c97bbc10836ff8a629",
+    "layout": "LAYOUT_ortho_4x10",
+    "layers": [
+        [
+            "KC_Q", "KC_W", "KC_E", "KC_R", "KC_T", "KC_Y", "KC_U", "KC_I", "KC_O", "KC_P",
+            "KC_A", "KC_S", "KC_D", "KC_F", "KC_G", "KC_H", "KC_J", "KC_K", "KC_L", "KC_ENT",
+            "LSFT_T(KC_Z)", "KC_X", "KC_C", "KC_V", "KC_B", "KC_N", "KC_M", "KC_COMM", "KC_DOT", "RSFT_T(KC_SLSH)",
+            "KC_LCTL", "KC_LGUI", "KC_LALT", "MO(1)", "KC_BSPC", "KC_SPC", "MO(2)", "KC_RGUI", "KC_APP", "KC_RCTL"
+        ],
+        [
+            "KC_F1", "KC_F2", "KC_F3", "KC_F4", "KC_F5", "KC_MINS", "KC_EQL", "KC_LBRC", "KC_RBRC", "KC_BSLS",
+            "KC_F6", "KC_F7", "KC_F8", "KC_F9", "KC_F10", "KC_NO", "KC_NO", "KC_NO", "KC_SCLN", "KC_QUOT",
+            "LSFT_T(KC_F11)", "KC_F12", "KC_ESC", "KC_TAB", "LALT(KC_GRV)", "KC_DEL", "KC_NO", "KC_NO", "KC_RO", "RSFT_T(KC_GRV)",
+            "KC_NO", "KC_NO", "KC_NO", "KC_TRNS", "KC_DEL", "KC_NO", "MO(3)", "KC_NO", "KC_NO", "KC_NO"
+        ],
+        [
+            "KC_1", "KC_2", "KC_3", "KC_4", "KC_5", "KC_6", "KC_7", "KC_8", "KC_9", "KC_0",
+            "KC_LSFT", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_LEFT", "KC_DOWN", "KC_UP", "KC_RGHT", "KC_RSFT",
+            "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_MINS", "KC_RO", "KC_COMM", "KC_DOT", "RSFT_T(KC_SLSH)",
+            "KC_NO", "KC_NO", "KC_NO", "MO(3)", "KC_NO", "KC_NO", "KC_TRNS", "KC_NO", "KC_NO", "KC_NO"
+        ],
+        [
+            "RESET", "KC_NO", "AG_NORM", "AG_SWAP", "KC_NO", "KC_NO", "KC_NO", "KC_NO", "KC_INS", "KC_PSCR",
+            "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_NO", "KC_MS_L", "KC_MS_D", "KC_MS_U", "KC_MS_R", "KC_NLCK",
+            "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_NO", "KC_BTN1", "KC_BTN2", "KC_NO", "KC_NO", "KC_NO",
+            "KC_NO", "KC_NO", "KC_NO", "KC_TRNS", "KC_NO", "KC_NO", "KC_TRNS", "KC_NO", "KC_NO", "KC_NO"
+        ]
+    ]
+}

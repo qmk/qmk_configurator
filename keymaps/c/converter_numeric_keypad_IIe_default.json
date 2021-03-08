@@ -1,0 +1,14 @@
+{
+  "keyboard": "converter/numeric_keypad_IIe",
+  "keymap": "default",
+  "commit": "b5d85ddc90e248317fb12832f7072dfbcccd48e5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_P7",   "KC_P8",   "KC_P9",   "KC_LPRN",   "KC_RPRN",
+      "KC_LEFT", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PMNS",   "KC_PSLS",
+      "KC_RGHT", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PPLS",   "KC_PAST",
+      "KC_SPC",  "KC_P0",   "KC_PCMM", "KC_PDOT", "KC_RETURN", "KC_QUES"
+    ]
+  ]
+}

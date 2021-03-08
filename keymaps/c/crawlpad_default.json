@@ -1,0 +1,10 @@
+{
+  "keyboard": "crawlpad",
+  "keymap": "default",
+  "commit": "6630e4bb4156ec41f2a255dea4937f578cc62e06",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    ["KC_P7", "KC_P8", "KC_P9", "KC_PPLS", "KC_P4", "KC_P5", "KC_P6", "KC_PMNS", "KC_P1", "KC_P2", "KC_P3", "KC_PAST", "MO(1)", "KC_P0", "KC_PDOT", "KC_PENT"],
+    ["KC_NLCK", "KC_TRNS", "KC_TRNS", "KC_PSLS", "RESET", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"]
+  ]
+}

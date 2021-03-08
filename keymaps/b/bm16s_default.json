@@ -1,0 +1,20 @@
+{
+  "keyboard": "bm16s",
+  "keymap": "default",
+  "commit": "8725197ad679647d2eb7876aee3f9df32edb5766",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "MO(1)",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PMNS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PPLS",
+      "KC_P0",   "KC_PDOT", "KC_PCMM", "KC_PENT"
+    ],
+    [
+      "RESET",   "BL_STEP", "KC_TRNS", "KC_VOLU",
+      "BL_TOGG", "BL_DEC",  "BL_INC",  "KC_VOLD",
+      "RGB_TOG", "RGB_MOD", "RGB_HUI", "KC_MUTE",
+      "RGB_SAI", "RGB_SAD", "RGB_HUD", "KC_TRNS"
+    ]
+  ]
+}
