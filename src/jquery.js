@@ -472,6 +472,7 @@ function getExclusionList() {
     'duck/eagle_viper',
     'duck/octagon',
     'duck/orion',
+    'dumbpad',
     'eco',
     'eek',
     'ergo42',

@@ -77,6 +77,9 @@ const lookup = {
   drakon: {
     target: 'jagdpietr/drakon'
   },
+  dumbpad: {
+    target: 'dumbpad/v0x'
+  },
   'dztech/dz60rgb': {
     target: 'dztech/dz60rgb/v1'
   },
