@@ -108,8 +108,8 @@ const actions = {
           keyboards: {}
         };
         fake.keyboards[state.keyboard] = preview;
-        commit('processLayouts', fake);
         commit('setKeyboardMeta', {});
+        commit('processLayouts', fake);
         resolve(preview);
       });
       return p;
