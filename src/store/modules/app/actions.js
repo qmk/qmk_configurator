@@ -109,6 +109,7 @@ const actions = {
         };
         fake.keyboards[state.keyboard] = preview;
         commit('processLayouts', fake);
+        commit('setKeyboardMeta', {});
         resolve(preview);
       });
       return p;
@@ -116,6 +117,7 @@ const actions = {
     return axios
       .get(backend_keyboards_url + '/' + state.keyboard)
       .then(resp => {
+        commit('setKeyboardMeta', resp);
         commit('processLayouts', resp);
         return resp;
       });
