@@ -548,6 +548,7 @@ function getExclusionList() {
     'namecard2x4',
     'navi10',
     'nckiibs/vanana',
+    'nckiibs/waaffle/rev3',
     'nomu30',
     'oddball',
     'orthodox',
