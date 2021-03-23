@@ -34,6 +34,7 @@ function loadSettings() {
 
 const state = {
   keyboard: '',
+  keyboardMeta: {},
   configuratorSettings: loadSettings(),
   keyboards: [],
   appInitialized: false,

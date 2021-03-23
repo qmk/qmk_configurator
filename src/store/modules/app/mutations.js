@@ -45,6 +45,17 @@ const mutations = {
     state._keyboards = _keyboards; // make a 2nd copy
   },
   setLayout(state, _layout) {
+    if (
+      state.keyboardMeta &&
+      state.keyboard &&
+      state.keyboardMeta[state.keyboard]
+    ) {
+      const { layout_aliases } = state.keyboardMeta[state.keyboard];
+      if (layout_aliases && layout_aliases[_layout]) {
+        state.layout = layout_aliases[_layout];
+        return;
+      }
+    }
     state.layout = _layout;
   },
   setKeymapName(state, _keymapName) {
@@ -94,7 +105,9 @@ const mutations = {
       if (state.isPreview) {
         layouts = resp.keyboards[PREVIEW_LABEL].layouts;
       } else {
-        layouts = resp.data.keyboards[state.keyboard].layouts;
+        if (resp.data && resp.data.keyboards) {
+          layouts = resp.data.keyboards[state.keyboard].layouts;
+        }
       }
       if (size(layouts) === 0) {
         // API return empty layout object
@@ -173,6 +186,12 @@ const mutations = {
   },
   toggleSnowflakes(state) {
     state.snowflakes = !state.snowflakes;
+  },
+  setKeyboardMeta(state, value) {
+    if (value.status === 200) {
+      state.keyboardMeta =
+        value.data && value.data.keyboards ? value.data.keyboards : {};
+    }
   }
 };
 
