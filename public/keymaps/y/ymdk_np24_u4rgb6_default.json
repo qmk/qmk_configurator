@@ -1,0 +1,32 @@
+{
+  "keyboard": "ymdk/np24/u4rgb6",
+  "keymap": "default",
+  "commit": "e941ae38110c616884acbb7447350b150cdb9d4d",
+  "layout": "LAYOUT_ortho_6x4",
+  "layers": [
+    [
+      "KC_ESC",  "KC_CALC", "MO(1)",   "MO(2)",
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "BL_ON",   "_______", "BL_INC",
+      "_______", "BL_TOGG", "_______", "BL_INC",
+      "_______", "BL_OFF",  "_______", "BL_DEC",
+      "BL_BRTG", "_______", "_______", "BL_DEC"
+    ],
+    [
+      "_______", "_______",  "_______", "_______",
+      "_______", "_______",  "_______", "_______",
+      "_______", "RGB_MOD",  "_______", "RGB_VAI",
+      "_______", "RGB_TOG",  "_______", "RGB_VAI",
+      "_______", "RGB_RMOD", "_______", "RGB_VAD",
+      "RGB_M_R", "_______",  "_______", "RGB_VAD"
+    ]
+  ]
+}
