@@ -557,6 +557,7 @@ function getExclusionList() {
     'pinky',
     'planck',
     'ploopyco/trackball',
+    'ploopyco/trackball_mini',
     'polilla',
     'preonic',
     'primekb/prime_l',

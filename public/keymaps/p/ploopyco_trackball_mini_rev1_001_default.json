@@ -1,0 +1,12 @@
+{
+  "keyboard": "ploopyco/trackball_mini/rev1_001",
+  "keymap": "default",
+  "commit": "666623d39adc052d2f585e908694279a9d5a65c6",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_BTN1", "KC_BTN3", "KC_BTN2",
+           "KC_BTN4", "KC_BTN5"
+    ]
+  ]
+}
