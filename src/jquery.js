@@ -558,6 +558,8 @@ function getExclusionList() {
     'planck',
     'ploopyco/trackball',
     'ploopyco/trackball_mini',
+    'ploopyco/trackball_nano',
+    'ploopyco/trackball_nano/rev1_001',
     'polilla',
     'preonic',
     'primekb/prime_l',
