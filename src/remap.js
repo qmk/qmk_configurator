@@ -176,6 +176,9 @@ const lookup = {
   'keebio/dsp40': {
     target: 'keebio/dsp40/rev1'
   },
+  'keycapsss/kimiko': {
+    target: 'keycapsss/kimiko/rev1'
+  },
   'keycapsss/plaid_pad': {
     target: 'keycapsss/plaid_pad/rev1'
   },

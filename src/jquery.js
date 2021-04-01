@@ -513,6 +513,7 @@ function getExclusionList() {
     'keebio/rorschach',
     'keebio/sinc',
     'keebio/viterbi',
+    'keycapsss/kimiko',
     'keycapsss/plaid_pad',
     'kinesis',
     'kudox',
