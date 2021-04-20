@@ -1,7 +1,12 @@
 <template>
   <div class="backend-status">
     <div class="qmk-branding">
-      <div class="qmk-logo"></div>
+      <a
+        target="_blank"
+        rel="noopener"
+        href="https://github.com/qmk/qmk_configurator"
+        ><div title="See the QMK Configurator Repo" class="qmk-logo"></div
+      ></a>
       <div class="qmk-app-name">
         QMK Configurator
       </div>

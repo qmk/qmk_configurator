@@ -70,7 +70,7 @@ describe('Simple browsing', function() {
   it('Should set favorite keyboard to localstorage and reload it', () => {
     cy.clearLocalStorage();
     cy.visit('/');
-    cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
+    cy.get('.vs__selected', { timeout: 10000 }).should('be.visible');
     cy.get('.vs__selected').click();
     cy.get('.vs__search').type('2_milk');
     cy.get('.vs__dropdown-option.vs__dropdown-option--highlight').click();
