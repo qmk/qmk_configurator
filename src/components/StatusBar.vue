@@ -5,7 +5,7 @@
         target="_blank"
         rel="noopener"
         href="https://github.com/qmk/qmk_configurator"
-        ><div class="qmk-logo"></div
+        ><div title="See the QMK Configurator Repo" class="qmk-logo"></div
       ></a>
       <div class="qmk-app-name">
         QMK Configurator
