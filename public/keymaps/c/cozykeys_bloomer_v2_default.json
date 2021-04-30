@@ -1,7 +1,7 @@
 {
   "keyboard": "cozykeys/bloomer/v2",
   "keymap": "default",
-  "commit": "TODO",
+  "commit": "d3963a61cb9209efce1d8f052d5d8e7aaa2be48b",
   "layout": "LAYOUT",
   "layers": [
     [
