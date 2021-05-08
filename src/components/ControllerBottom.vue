@@ -254,7 +254,10 @@ export default {
         notes: this.notes
       });
 
-      this.download(`${this.exportKeymapName}.json`, JSON.stringify(data));
+      this.download(
+        `${this.exportKeymapName}.json`,
+        JSON.stringify(data, null, 2)
+      );
     },
     download(filename, data) {
       this.urlEncodedData = encoding + encodeURIComponent(data);
