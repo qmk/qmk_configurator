@@ -13,13 +13,8 @@
       </slot>
     </div>
     <div class="visual-tester-keymap" :style="styles">
-      <template v-for="meta in testerLayer">
-        <component
-          :layer="0"
-          v-bind:is="getComponent(meta)"
-          v-bind="meta"
-          :key="meta.id"
-        />
+      <template v-for="meta in testerLayer" :key="meta.id">
+        <component :layer="0" v-bind:is="getComponent(meta)" v-bind="meta" />
       </template>
     </div>
     <div class="info">
@@ -102,7 +97,7 @@ export default {
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.destroyKeyListeners();
   },
   computed: {

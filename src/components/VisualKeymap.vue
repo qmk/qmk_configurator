@@ -1,7 +1,7 @@
 <template>
   <div id="visual-keymap" :style="styles">
-    <template v-for="meta in currentLayer">
-      <transition name="fade" appear :key="meta.id">
+    <template v-for="meta in currentLayer" :key="meta.id">
+      <transition name="fade" appear>
         <component
           v-bind:is="getComponent(meta)"
           v-bind="meta"

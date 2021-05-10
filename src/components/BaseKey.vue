@@ -119,18 +119,23 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      meta_: Object.assign({}, this.meta)
+    };
+  },
   computed: {
     ...mapState('keymap', ['config']),
     ...mapState('keymap', { curLayer: 'layer' }),
     ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'colorwayOverride']),
     myTitle() {
-      return this.meta ? this.meta.code : '';
+      return this.meta_ ? this.meta_.code : '';
     },
     myid() {
       return `key-${this.id}`;
     },
     visible() {
-      return this.meta ? this.meta.code !== 'KC_NO' : false;
+      return this.meta_ ? this.meta_.code !== 'KC_NO' : false;
     },
     displayName() {
       if (this.displaySizes) {
@@ -140,17 +145,17 @@ export default {
             : `${this.uw} /\n ${this.uh}`
           : this.uw;
       }
-      if (isUndefined(this.meta)) {
+      if (isUndefined(this.meta_)) {
         return;
       }
-      if (isUndefined(substitute[this.meta.code])) {
-        return this.formatName(this.meta.name);
+      if (isUndefined(substitute[this.meta_.code])) {
+        return this.formatName(this.meta_.name);
       }
       return undefined;
     },
     icon() {
-      if (!this.displaySizes && this.meta && substitute[this.meta.code]) {
-        return substitute[this.meta.code];
+      if (!this.displaySizes && this.meta_ && substitute[this.meta_.code]) {
+        return substitute[this.meta_.code];
       }
       return undefined;
     },
@@ -178,25 +183,25 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta && this.meta.name.length >= 2 && !this.displaySizes) {
+      if (this.meta_ && this.meta_.name.length >= 2 && !this.displaySizes) {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
       classes.push(getKeySizeClass(this.uh, this.uw));
-      if (!isUndefined(this.meta) && !this.printable) {
-        if (this.colorwayOverride && this.colorwayOverride[this.meta.code]) {
+      if (!isUndefined(this.meta_) && !this.printable) {
+        if (this.colorwayOverride && this.colorwayOverride[this.meta_.code]) {
           // Colorway specific overrides by keycode
           classes.push(
-            `${this.colorway}-${this.colorwayOverride[this.meta.code]}`
+            `${this.colorway}-${this.colorwayOverride[this.meta_.code]}`
           );
         } else if (
           // Large alpha keys (like Numpad 0)
-          colorways.alphaCodes[this.meta.code]
+          colorways.alphaCodes[this.meta_.code]
         ) {
           classes.push(`${this.colorway}-key`);
         } else if (
           // Mod keys
-          colorways.modCodes[this.meta.code] ||
+          colorways.modCodes[this.meta_.code] ||
           (this.w <= KEY_WIDTH * 3 &&
             (this.w > KEY_WIDTH || this.h > KEY_HEIGHT))
         ) {
@@ -247,7 +252,7 @@ export default {
       this.setSelected(id);
     },
     setMeta(meta) {
-      this.meta = meta;
+      this.meta_ = meta;
     },
     dropped(ev) {
       this.setSelected(this.id);

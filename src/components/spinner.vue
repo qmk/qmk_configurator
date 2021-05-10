@@ -1,4 +1,4 @@
-<template functional>
+<template>
   <Veil :isVisible="props.isVisible">
     <template #contents>
       <div class="spinner">

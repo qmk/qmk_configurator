@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import { createApp, h } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -10,9 +10,6 @@ import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
 import VTooltip from 'v-tooltip';
-
-Vue.use(VueI18n);
-Vue.use(VTooltip);
 
 import messages from '@/i18n';
 
@@ -66,10 +63,7 @@ if (
 )
   electron.init(); // initializes code specific for the electron app
 
-Vue.component('Veil', Veil);
-Vue.component('v-select', vSelect);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
-Vue.use(VueSlideoutPanel);
+localVue.use(VueSlideoutPanel);
 
 const icons = [
   faApple,
@@ -102,25 +96,34 @@ const icons = [
 ];
 library.add(...icons);
 
-Vue.config.productionTip = false;
-
 // Make $i18n vm accessible in the store
 store.$i18n = i18n._vm;
 
-new Vue({
-  router,
-  store,
-  i18n,
-  render: h => h(App)
-}).$mount('#app');
+localVue.use(VTooltip);
 
-new Vue({
+createApp({
   i18n,
-  store,
-  render: h => h(StatusBar)
-}).$mount('#status-app');
+  render: () => h(App)
+})
+  .use(router)
+  .use(store)
+  .use(VueI18n)
+  .component('Veil', Veil)
+  .component('v-select', vSelect)
+  .component('font-awesome-icon', FontAwesomeIcon)
+  .mount('#app', { localVue });
 
-new Vue({
+createApp({
   i18n,
-  render: h => h(BrowserWarn)
-}).$mount('#browser-warn-container');
+  render: () => h(StatusBar)
+})
+  .use(store)
+  .use(VueI18n)
+  .mount('#status-app');
+
+createApp({
+  i18n,
+  render: () => h(BrowserWarn)
+})
+  .use(VueI18n)
+  .mount('#browser-warn-container');

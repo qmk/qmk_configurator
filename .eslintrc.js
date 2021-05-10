@@ -5,7 +5,7 @@ module.exports = {
   },
   plugins: ['cypress'],
   extends: [
-    'plugin:vue/essential',
+    'plugin:vue/vue3-essential',
     '@vue/prettier',
     'plugin:cypress/recommended'
   ],

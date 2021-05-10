@@ -1,4 +1,4 @@
-<template functional>
+<template>
   <div class="snowflakes" aria-hidden="true">
     <div class="snowflake">
       ❅

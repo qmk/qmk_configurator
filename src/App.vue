@@ -114,7 +114,7 @@ export default {
       this.toggleSettingsPanel
     );
   },
-  beforeDestroy() {
+  beforeUmount() {
     clearInterval(this.interval);
     if (isFunction(this.destroyWatcher)) {
       this.destroyWatcher();

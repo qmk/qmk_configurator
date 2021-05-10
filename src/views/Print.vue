@@ -57,8 +57,8 @@
       </table>
     </div>
     <div>
-      <template v-for="idx in activeLayers">
-        <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
+      <template v-for="idx in activeLayers" :key="idx">
+        <div class="layer-output" :class="firefoxOnly(idx)">
           <h3 class="layer-output-title">
             {{ i18n('layer.label') }} {{ idx }}
           </h3>
