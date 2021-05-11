@@ -123,7 +123,7 @@
   </div>
 </template>
 <script>
-import Vue from 'vue';
+import { nextTick } from 'vue';
 import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
@@ -215,7 +215,7 @@ export default {
       'loadLayouts'
     ]),
     ...mapActions('status', ['viewReadme']),
-    importUrlkeymap: function() {
+    importUrlkeymap() {
       this.loadKeymapFromUrl(this.urlImport)
         .then(data => {
           this.loadJsonData(data);
@@ -225,14 +225,14 @@ export default {
         });
       this.closeVeil();
     },
-    openVeil: function() {
+    async openVeil() {
       this.isVeilOpened = true;
       this.stopListening();
-      Vue.nextTick(() => {
+      await nextTick(() => {
         this.$refs.urlimport.focus();
       });
     },
-    closeVeil: function() {
+    closeVeil() {
       this.startListening();
       this.urlImport = '';
       this.isVeilOpened = false;
@@ -259,38 +259,38 @@ export default {
         JSON.stringify(data, null, 2)
       );
     },
-    download(filename, data) {
+    async download(filename, data) {
       this.urlEncodedData = encoding + encodeURIComponent(data);
       this.filename = filename;
       this.downloadElementEnabled = true;
-      Vue.nextTick(() => {
+      await nextTick(() => {
         this.$refs.downloadElement.click();
         this.downloadElementEnabled = false;
       });
     },
-    downloadFirmware() {
+    async downloadFirmware() {
       this.urlEncodedData = first(this.firmwareBinaryURL);
       this.filename = this.firmwareFile;
       this.downloadElementEnabled = true;
-      Vue.nextTick(() => {
+      await nextTick(() => {
         this.$refs.downloadElement.click();
         this.downloadElementEnabled = false;
       });
     },
-    downloadSource() {
+    async downloadSource() {
       this.urlEncodedData = first(this.firmwareSourceURL);
       this.filename = 'source.zip';
       this.downloadElementEnabled = true;
-      Vue.nextTick(() => {
+      await nextTick(() => {
         this.$refs.downloadElement.click();
         this.downloadElementEnabled = false;
       });
     },
-    downloadKeymap() {
+    async downloadKeymap() {
       this.urlEncodedData = first(this.keymapSourceURL);
       this.filename = 'source.zip';
       this.downloadElementEnabled = true;
-      Vue.nextTick(() => {
+      await nextTick(() => {
         this.$refs.downloadElement.click();
         this.downloadElementEnabled = false;
       });
@@ -419,7 +419,7 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.infoPreviewElement.value = ''; // clear value for chrome issue #83
     },
-    previewInfoOnLoad() {
+    async previewInfoOnLoad() {
       const jsonText = this.reader.result;
       let data;
       try {
@@ -447,10 +447,10 @@ export default {
        * TODO come up with a better way of resetting keymap than depending on visual keymap change detection
        */
       const store = this.$store;
-      this.loadLayouts(data).then(() => {
+      await this.loadLayouts(data).then(async () => {
         // This is a special hack to get around change detection
         this.setLayout('  ');
-        Vue.nextTick(() => {
+        await nextTick(() => {
           const layout = getPreferredLayout(store.state.app.layouts);
           this.clearKeymap();
           this.setLayout(layout);

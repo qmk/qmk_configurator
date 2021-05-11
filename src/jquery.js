@@ -1,5 +1,5 @@
 import axios from 'axios';
-import store from './store';
+import { store } from './store';
 import escape from 'lodash/escape';
 import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';

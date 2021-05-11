@@ -1,7 +1,7 @@
 import { createApp, h } from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import { store } from './store';
 import StatusBar from '@/components/StatusBar';
 import BrowserWarn from '@/components/BrowserWarn';
 import Veil from '@/components/Veil';

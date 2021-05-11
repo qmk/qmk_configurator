@@ -1,11 +1,11 @@
-import Vuex from 'vuex';
+import { createStore } from 'vuex';
 import app from './modules/app';
 import status from './modules/status';
 import keymap from './modules/keymap';
 import keycodes from './modules/keycodes';
 import tester from './modules/tester';
 
-export default Vuex.createStore({
+export const store = createStore({
   modules: {
     app,
     status,

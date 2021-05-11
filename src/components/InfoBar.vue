@@ -1,4 +1,4 @@
-<template functional>
+<template>
   <transition name="fadelong" appear>
     <div v-if="props.msg.length" class="bottom-fixed">{{ props.msg }}</div>
   </transition>

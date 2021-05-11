@@ -44,13 +44,11 @@
         /></span>
       </div>
       <div class="tab-area">
-        <template v-for="(key, index) in activeTab">
+        <template v-for="(key_, index) in activeTab" :key="index">
           <component
-            v-bind:is="getComponent(key.code)"
-            v-bind="key"
-            :key="index"
-            :class="filterClass(key)"
-            @mouseenter="message(key)"
+            v-bind:is="getComponent(key_.code)"
+            class="filterClass(key_)"
+            mouseenter="message(key_)"
           />
         </template>
       </div>

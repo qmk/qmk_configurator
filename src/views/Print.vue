@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import { nextTick } from 'vue';
 import PrintKeymap from '@/components/PrintKeymap';
 import { mapState, mapGetters } from 'vuex';
 export default {
@@ -126,14 +126,14 @@ export default {
     toggleDate() {
       this.dateToggle = !this.dateToggle;
     },
-    print() {
+    async print() {
       if (this._notes === '') {
         this._notes = this.$t('print.notes.empty');
       }
       if (this._author === '') {
         this._author = this.$t('print.anonymous.label');
       }
-      Vue.nextTick(() => {
+      await nextTick(() => {
         window.print();
       });
     },

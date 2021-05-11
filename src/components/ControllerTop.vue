@@ -77,7 +77,7 @@
 </template>
 
 <script>
-import Vue from 'vue';
+import { nextTick } from 'vue';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 
 import first from 'lodash/first';
@@ -119,14 +119,14 @@ export default {
       get() {
         return this.$store.state.app.keyboard;
       },
-      set(value) {
+      async set(value) {
         if (this.isDirty) {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
           ) {
             var old = this.keyboard;
             this.setKeyboard(''); // force a refresh
-            Vue.nextTick(() => {
+            await nextTick(() => {
               this.setKeyboard(old);
             });
             return false;
@@ -141,12 +141,12 @@ export default {
       get() {
         return this.$store.state.app.layout;
       },
-      set(value) {
+      async set(value) {
         if (this.isDirty) {
           if (!confirm(clearKeymapTemplate({ action: 'change your layout' }))) {
             const old = this.layout;
             this.setLayout(''); // force a refresh
-            Vue.nextTick(() => this.setLayout(old));
+            await nextTick(() => this.setLayout(old));
             return false;
           }
         }
@@ -377,10 +377,10 @@ export default {
     updateFilter(filter) {
       this.$store.commit('app/setFilter', filter);
     },
-    opened() {
+    async opened() {
       this.stopListening();
       const select = this.$refs.select;
-      Vue.nextTick(() => {
+      await nextTick(() => {
         const active = select.$el.querySelector(
           '.vs__dropdown-menu .vs__dropdown-option--selected'
         );
