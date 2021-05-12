@@ -435,7 +435,7 @@ export default {
   position: absolute;
   content: '';
   right: -1px;
-  top: calc(var(--default-key-x-spacing) - 2px);
+  top: calc(var(--default-key-x-spacing) - 1px);
   height: var(--default-key-height);
   width: calc(1.25 * var(--default-key-x-spacing) + 1 * var(--default-key-width) - 2px);
   border-radius: 6px 0px 6px 6px;
