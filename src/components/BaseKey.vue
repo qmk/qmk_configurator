@@ -78,6 +78,9 @@ const _getKeySizeClass = (unith, unitw) => {
   if (unith === 2 && unitw == 1.25) {
     return 'kiso';
   }
+  if (unith === 2 && unitw == 2.25) {
+    return 'kbae';
+  }
   return 'custom';
 };
 
@@ -418,4 +421,28 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 2px 0px 1px;
 }
+.kbae {
+  width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
+  height: calc(1.1 * var(--default-key-height));
+  padding: 0px;
+  margin-left: calc(var(--default-key-x-spacing) * 0.75);
+  border-radius: 6px 6px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
+}
+.kbae::after {
+  background: inherit;
+  position: absolute;
+  content: '';
+  right: -1px;
+  top: calc(var(--default-key-x-spacing) - 2px);
+  height: var(--default-key-height);
+  width: calc(1.25 * var(--default-key-x-spacing) + 1 * var(--default-key-width) - 2px);
+  border-radius: 6px 0px 6px 6px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0.1, 0, 0.1) 0px -2px 0px 2px inset,
+    rgba(0, 0, 0, 0.3) 0px 1px 0px 1px;
+}
+
 </style>
