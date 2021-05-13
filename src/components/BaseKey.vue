@@ -75,11 +75,12 @@ const _getKeySizeClass = (unith, unitw) => {
         return 'k2uh';
     }
   }
-  if (unith === 2 && unitw == 1.25) {
-    return 'kiso';
-  }
-  if (unith === 2 && unitw == 2.25) {
-    return 'kbae';
+  if (unith === 2) {
+    if (unitw == 1.25) {
+      return 'kiso';
+    } else if (unitw == 2.25) {
+      return 'kbae';
+    }
   }
   return 'custom';
 };
