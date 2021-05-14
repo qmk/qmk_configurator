@@ -438,12 +438,13 @@ export default {
   right: -1px;
   top: calc(var(--default-key-x-spacing) - 1px);
   height: var(--default-key-height);
-  width: calc(1.25 * var(--default-key-x-spacing) + 1 * var(--default-key-width) - 2px);
+  width: calc(
+    1.25 * var(--default-key-x-spacing) + 1 * var(--default-key-width) - 2px
+  );
   border-radius: 6px 0px 6px 6px;
   border-left: 1px solid rgba(0, 0, 0, 0.1);
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0.1, 0, 0.1) 0px -2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 1px 0px 1px;
 }
-
 </style>
