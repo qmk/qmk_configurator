@@ -76,9 +76,9 @@ const _getKeySizeClass = (unith, unitw) => {
     }
   }
   if (unith === 2) {
-    if (unitw == 1.25) {
+    if (unitw === 1.25) {
       return 'kiso';
-    } else if (unitw == 2.25) {
+    } else if (unitw === 2.25) {
       return 'kbae';
     }
   }
