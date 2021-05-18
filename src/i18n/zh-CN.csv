@@ -102,10 +102,10 @@ printKeymap:label,打印键位
 printKeymap:title,打印键位表
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
-settingsPanel:displaySizes:help,以按键单位显示键帽尺寸
+settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
 settingsPanel:displaySizes:label,显示按键尺寸
 settingsPanel:displaySizes:title,ctrl + alt + u
-settingsPanel:fastInput:help,不敲击每个位置通过键盘输入按键
+settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入
 settingsPanel:fastInput:title,ctrl + alt + f
 settingsPanel:language:help,更改用户界面语言
