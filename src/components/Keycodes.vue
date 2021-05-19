@@ -61,7 +61,6 @@ import isUndefined from 'lodash/isUndefined';
 import debounce from 'lodash/debounce';
 import Keycode from '@/components/Keycode';
 import Space from '@/components/Space';
-import store from '@/store';
 
 export default {
   name: 'keycodes',
@@ -140,7 +139,7 @@ export default {
         window.clearTimeout(this.clearTimeout);
       }
       this.clearTimeout = window.setTimeout(() => {
-        store.commit('app/setMessage', '');
+        this.setMessage('');
       }, 3000);
     },
     filterClass(key) {

@@ -8,12 +8,11 @@ import Veil from '@/components/Veil';
 import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
-import VueI18n from 'vue-i18n';
+import { createI18n } from 'vue-i18n';
 import VTooltip from 'v-tooltip';
 
 import messages from '@/i18n';
-
-const i18n = new VueI18n({
+const i18n = createI18n({
   locale: window.navigator.language.slice(0, 2),
   fallbackLocale: 'en',
   messages
@@ -63,7 +62,7 @@ if (
 )
   electron.init(); // initializes code specific for the electron app
 
-localVue.use(VueSlideoutPanel);
+// localVue.use(VueSlideoutPanel);
 
 const icons = [
   faApple,
@@ -99,31 +98,29 @@ library.add(...icons);
 // Make $i18n vm accessible in the store
 store.$i18n = i18n._vm;
 
-localVue.use(VTooltip);
-
 createApp({
-  i18n,
   render: () => h(App)
 })
   .use(router)
   .use(store)
-  .use(VueI18n)
+  .use(i18n)
+  .use(VTooltip)
   .component('Veil', Veil)
   .component('v-select', vSelect)
   .component('font-awesome-icon', FontAwesomeIcon)
-  .mount('#app', { localVue });
+  .mount('#app');
 
 createApp({
   i18n,
   render: () => h(StatusBar)
 })
   .use(store)
-  .use(VueI18n)
+  .use(i18n)
   .mount('#status-app');
 
 createApp({
   i18n,
   render: () => h(BrowserWarn)
 })
-  .use(VueI18n)
+  .use(i18n)
   .mount('#browser-warn-container');

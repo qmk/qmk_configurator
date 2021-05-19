@@ -1,11 +1,10 @@
 <template>
   <div class="print-keymap" :style="styles">
-    <template v-for="meta in currentLayer(layer)">
+    <template v-for="meta in currentLayer(layer)" :key="meta.id">
       <component
         :layer="layer"
         v-bind:is="getComponent(meta)"
         v-bind="meta"
-        :key="meta.id"
         :printable="true"
       />
     </template>

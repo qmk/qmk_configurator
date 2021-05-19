@@ -4,7 +4,7 @@ import Print from '../views/Print.vue';
 import Test from '../views/Test.vue';
 
 const router = createRouter({
-  hash: createWebHashHistory(),
+  history: createWebHashHistory(),
   routes: [
     { path: '/:keyboardP(.+)/:layoutP(.+)', component: Home, name: 'home' },
     { path: '/print', component: Print, name: 'print' },

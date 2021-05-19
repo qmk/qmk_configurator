@@ -157,7 +157,7 @@ export default {
       );
     }
   },
-  beforeDestroy() {
+  beforeUnmount() {
     this.resetListener();
   }
 };

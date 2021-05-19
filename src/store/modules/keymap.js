@@ -1,4 +1,3 @@
-import { set } from 'vue';
 import random from 'lodash/random';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
@@ -188,7 +187,7 @@ const actions = {
 };
 const mutations = {
   setKeymapTemplate(state, template) {
-    set(state.templates, 'keymap', template);
+    state.templates.keymap = template;
   },
   setSelected(state, index) {
     state.selectedIndex = index;
@@ -221,19 +220,19 @@ const mutations = {
       state.selectedContent = false;
     } else {
       // normal key selected
-      set(state.keymap[state.layer], state.selectedIndex, {
+      state.keymap[state.layer][state.selectedIndex] = {
         name,
         code,
         type
-      });
+      };
       if (type === 'layer') {
-        set(state.keymap[state.layer][state.selectedIndex], 'layer', 0);
+        state.keymap[state.layer][state.selectedIndex].layer = 0;
       }
       if (type === 'layer-container') {
         if (state.keymap[layer] === undefined) {
           mutations.initLayer(state, { layer });
         }
-        set(state.keymap[state.layer][state.selectedIndex], 'layer', layer);
+        state.keymap[state.layer][state.selectedIndex].layer = layer;
       }
       if (state.continuousInput) {
         const nextIndex = (state.selectedIndex + 1) % state.keymap[0].length;
@@ -245,37 +244,37 @@ const mutations = {
     mutations.setDirty(state);
   },
   setContents(state, { index, key }) {
-    set(state.keymap[state.layer][index], 'contents', key);
+    state.keymap[state.layer][index].contents = key;
   },
   assignKey(state, { _layer, index, name, code, type }) {
-    set(state.keymap[_layer], index, {
+    state.keymap[_layer][index] = {
       name: name,
       code: code,
       type: type
-    });
+    };
     var keycode = state.keymap[_layer][index];
     if (keycode.type === 'layer') {
-      set(state.keymap[_layer][index], 'layer', 0);
+      state.keymap[_layer][index].layer = 0;
     }
   },
   setKeyLayer(state, { layer, index, toLayer }) {
-    set(state.keymap[layer][index], 'layer', toLayer);
+    state.keymap[layer][index].layer = toLayer;
   },
   swapKeys(state, { layer, srcIndex, dstIndex }) {
     var temp = state.keymap[layer][srcIndex];
-    set(state.keymap[layer], srcIndex, state.keymap[layer][dstIndex]);
-    set(state.keymap[layer], dstIndex, temp);
+    state.keymap[layer][srcIndex] = state.keymap[layer][dstIndex];
+    state.keymap[layer][dstIndex] = temp;
     mutations.setSelected(state, undefined);
     mutations.setDirty(state);
   },
   setText(state, { layer, index, text }) {
-    set(state.keymap[layer][index], 'text', text);
+    state.keymap[layer][index].text = text;
   },
   setKey(state, { _layer, index, key }) {
-    set(state.keymap[_layer], index, key);
+    state.keymap[_layer][index] = key;
   },
   setLayers(state, layers) {
-    set(state, 'keymap', layers);
+    state.keymap = layers;
   },
   setDirty(state) {
     state.dirty = true;
@@ -298,7 +297,7 @@ const mutations = {
       );
       if (activeKeys.length === 0) {
         // clear empty layers because this is confusing to users
-        set(state.keymap, state.layer, undefined);
+        state.keymap[state.layer] = undefined;
       }
     }
     state.layer = newLayer;
@@ -315,39 +314,25 @@ const mutations = {
       KEY_X_SPACING,
       KEY_Y_SPACING
     } = state.config;
-    set(state.config, 'SCALE', (defaults.MAX_X / max.x).toFixed(3) * 1);
-    set(state.config, 'KEY_WIDTH', (KEY_WIDTH *= state.config.SCALE));
-    set(state.config, 'KEY_HEIGHT', (KEY_HEIGHT *= state.config.SCALE));
-    set(
-      state.config,
-      'SWAP_KEY_HEIGHT',
-      (SWAP_KEY_HEIGHT *= state.config.SCALE)
-    );
-    set(state.config, 'SWAP_KEY_WIDTH', (SWAP_KEY_WIDTH *= state.config.SCALE));
-    set(
-      state.config,
-      'KEY_X_SPACING',
-      (KEY_X_SPACING *= state.config.SCALE).toFixed(3) * 1
-    );
-    set(
-      state.config,
-      'KEY_Y_SPACING',
-      (KEY_Y_SPACING *= state.config.SCALE).toFixed(3) * 1
-    );
+    state.config['SCALE'] = (defaults.MAX_X / max.x).toFixed(3) * 1;
+    state.config['KEY_WIDTH'] = KEY_WIDTH *= state.config.SCALE;
+    state.config['KEY_HEIGHT'] = KEY_HEIGHT *= state.config.SCALE;
+    state.config['SWAP_KEY_HEIGHT'] = SWAP_KEY_HEIGHT *= state.config.SCALE;
+    state.config['SWAP_KEY_WIDTH'] = SWAP_KEY_WIDTH *= state.config.SCALE;
+    state.config['KEY_X_SPACING'] =
+      (KEY_X_SPACING *= state.config.SCALE).toFixed(3) * 1;
+    state.config['KEY_Y_SPACING'] =
+      (KEY_Y_SPACING *= state.config.SCALE).toFixed(3) * 1;
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
     const { name } = this.getters['keycodes/lookupKeycode'](code);
-    set(
-      state.keymap,
-      layer,
-      layout.map(() => {
-        return {
-          name,
-          code,
-          type: undefined
-        };
-      })
-    );
+    state.keymap[layer] = layout.map(() => {
+      return {
+        name,
+        code,
+        type: undefined
+      };
+    });
   },
   initLayer(state, { layer, code = 'KC_NO' }) {
     if (layer > 0) {
@@ -366,7 +351,7 @@ const mutations = {
           code: 'KC_NO'
         });
       } else {
-        set(state.keymap, layer, [[]]);
+        state.keymap[layer] = [[]];
       }
     }
   },

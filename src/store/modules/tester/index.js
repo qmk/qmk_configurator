@@ -1,6 +1,5 @@
 import defaults from '../config';
 import keys from 'lodash/keys';
-import { set } from 'vue';
 import qmkToPos from './qmk';
 import codeToPos from './codeToPos';
 import layouts from './layouts';
@@ -93,22 +92,22 @@ const mutations = {
     state.keymap = keymap;
   },
   setActive(state, { pos }) {
-    set(state.keymap[state.layout][pos], 'active', true);
-    set(state.keymap[state.layout][pos], 'detected', false);
+    state.keymap[state.layout][pos].active = true;
+    state.keymap[state.layout][pos].detected = false;
   },
   setDetected(state, { pos }) {
-    set(state.keymap[state.layout][pos], 'active', false);
-    set(state.keymap[state.layout][pos], 'detected', true);
+    state.keymap[state.layout][pos].active = false;
+    state.keymap[state.layout][pos].detected = true;
   },
   setChatterDetected(state, { pos }) {
     state.chatterDetected = true;
-    set(state.keymap[state.layout][pos], 'chatter', true);
+    state.keymap[state.layout][pos].chatter = true;
   },
   reset(state) {
     state.chatterDetected = false;
     state.keymap[state.layout].forEach((_, idx) => {
-      set(state.keymap[state.layout][idx], 'detected', false);
-      set(state.keymap[state.layout][idx], 'chatter', false);
+      state.keymap[state.layout][idx].detected = false;
+      state.keymap[state.layout][idx].chatter = false;
     });
   }
 };

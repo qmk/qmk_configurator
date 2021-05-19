@@ -1,4 +1,3 @@
-import { set } from 'vue';
 import size from 'lodash/size';
 import reduce from 'lodash/reduce';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
@@ -32,13 +31,13 @@ const mutations = {
     state.keyboard = _keyboard;
   },
   setCurrentLanguage(state, _language) {
-    set(state.configuratorSettings, 'language', _language);
+    state.configuratorSettings.language = _language;
   },
   setFavoriteKeyboard(state, _keyboard) {
     state.configuratorSettings.favoriteKeyboard = _keyboard;
   },
   setFavoriteColor(state, _color) {
-    set(state.configuratorSettings, 'favoriteColor', _color);
+    state.configuratorSettings.favoriteColor = _color;
   },
   setKeyboards(state, _keyboards) {
     state.keyboards = _keyboards;
