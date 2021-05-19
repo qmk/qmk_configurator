@@ -70,7 +70,8 @@ const state = {
     { value: 'ru', label: 'Русский' },
     { value: 'pt-BR', label: 'Brasileira' },
     { value: 'pl-PL', label: 'Polski' },
-    { value: 'ms', label: 'Bahasa Malaysia' }
+    { value: 'ms', label: 'Bahasa Malaysia' },
+    { value: 'zh-CN', label: '简体中文' }
   ],
   snowflakes: false
 };

@@ -9,6 +9,7 @@ import plPL from './pl-PL.csv';
 import ptBR from './pt-BR.csv';
 import ru from './ru.csv';
 import zh from './zh.csv';
+import zhCN from './zh-CN.csv';
 // During the import of the csv files
 // the loader will parse the files and generate
 // the translation objects
@@ -23,5 +24,6 @@ export default {
   ru,
   zh,
   'pl-PL': plPL,
-  'pt-BR': ptBR
+  'pt-BR': ptBR,
+  'zh-CN': zhCN
 };
