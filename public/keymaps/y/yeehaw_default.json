@@ -1,0 +1,24 @@
+{
+  "keyboard": "yeehaw",
+  "keymap": "default",
+  "commit": "3bee24a8275eba13ada7e22b94cc96649c05e96f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_VOLU",
+                 "KC_VOLD",
+                 "KC_MPRV", "XXXXXXX",    "KC_UP",   "XXXXXXX",
+      "MO(1)",   "KC_MNXT", "KC_LEFT",    "KC_DOWN", "KC_RGHT",
+                 "KC_MPLY", "LCTL(KC_S)",
+                      "RGB_TOG"
+    ],
+    [
+                 "RGB_HUI",
+                 "RGB_HUD",
+                 "RGB_SAI", "RGB_VAI", "RGB_VAD", "RGB_SPI",
+      "KC_TRNS", "RGB_SAD", "RGB_M_P", "RGB_MOD", "RGB_SPD",
+                 "KC_TRNS", "KC_TRNS",
+                      "RESET"
+    ]
+  ]
+}

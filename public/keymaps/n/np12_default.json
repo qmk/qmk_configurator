@@ -1,0 +1,14 @@
+{
+  "keyboard": "np12",
+  "keymap": "default",
+  "commit": "0bada398dfba61c93ee5dbec0aeb92b8af0f45a4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                       "KC_MPLY",
+      "KC_9",    "KC_6",    "KC_3",    "KC_PENT",
+      "KC_8",    "KC_5",    "KC_2",    "KC_BSPC",
+      "KC_7",    "KC_4",    "KC_1",    "KC_0"
+    ]
+  ]
+}

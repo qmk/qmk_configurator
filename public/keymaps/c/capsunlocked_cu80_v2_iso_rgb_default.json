@@ -1,7 +1,7 @@
 {
-  "keyboard": "capsunlocked/cu80/v2_iso_rgb",
+  "keyboard": "capsunlocked/cu80/v2_iso/rgb",
   "keymap": "default",
-  "commit": "75fd6bd2690583ae62c43f0b9a930cd9f6d8dbb3",
+  "commit": "1e19227b31f449b72542372b9c1cade126ecafa2",
   "layout": "LAYOUT_tkl_iso",
   "layers": [
     [
