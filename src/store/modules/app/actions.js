@@ -1,6 +1,9 @@
 import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
-import { backend_keyboards_url, backend_keyboard_list_url } from '@/store/modules/constants';
+import {
+  backend_keyboards_url,
+  backend_keyboard_list_url
+} from '@/store/modules/constants';
 import { getPreferredLayout, getExclusionList } from '@/jquery';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
