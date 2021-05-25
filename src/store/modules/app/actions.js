@@ -1,7 +1,6 @@
 import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
-import { backend_keyboards_url } from '@/store/modules/constants';
-import { backend_keyboard_list_url } from '@/store/modules/constants';
+import { backend_keyboards_url, backend_keyboard_list_url } from '@/store/modules/constants';
 import { getPreferredLayout, getExclusionList } from '@/jquery';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
@@ -116,7 +115,7 @@ const actions = {
       return p;
     }
     return axios
-      .get(backend_keyboards_url + '/' + state.keyboard + '/info.json')
+      .get(`${backend_keyboards_url}/${state.keyboard}/info.json`)
       .then(resp => {
         commit('setKeyboardMeta', resp);
         commit('processLayouts', resp);
