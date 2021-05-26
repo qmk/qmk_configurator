@@ -1,11 +1,11 @@
 import template from 'lodash/template';
 
 export const backend_baseurl = process.env.VUE_APP_API_URL;
-if (!backend_baseurl) {
+if (isUndefined(backend_baseurl)) {
   throw 'Backend URL has not been specified';
 }
 export const keyboards_baseurl = process.env.VUE_APP_KEYBOARDS_URL;
-if (!keyboards_baseurl) {
+if (isUndefined(keyboards_baseurl)) {
   throw 'Keyboard Metadata URL has not been specified';
 }
 export const backend_keyboards_url = `${keyboards_baseurl}/v1/keyboards`;
