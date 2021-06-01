@@ -1,7 +1,7 @@
 {
-  "keyboard": "crkbd/rev1/common",
+  "keyboard": "crkbd/rev1",
   "keymap": "default",
-  "commit": "503b76253891a9820ad2d21a89617654dc4414fb",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
