@@ -43,7 +43,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.0.0",
+    "babel-jest": "^27.0.0",
     "csv-parse": "^4.8.2",
     "csv-stringify": "^5.3.4",
     "cypress": "^7",
@@ -53,14 +53,14 @@
     "eslint-plugin-vue": "^6.1.2",
     "growl": "^1.10.0",
     "https-proxy-agent": "^2.2.0",
-    "jest": "24",
+    "jest": "27",
     "joi": "^17.4.0",
     "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "sass-loader": "8",
     "serialize-javascript": "^3.1.0",
     "start-server-and-test": "^1.10.0",
-    "vue-loader": "^15.7.0",
+    "vue-loader": "^15.9",
     "vue-template-compiler": "^2.6.11"
   }
 }
