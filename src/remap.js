@@ -104,6 +104,9 @@ const lookup = {
   'exclusive/e85': {
     target: 'exclusive/e85/hotswap'
   },
+  function96: {
+    target: 'function96/v1'
+  },
   gh60: {
     target: 'gh60/revc'
   },
