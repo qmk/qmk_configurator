@@ -41,9 +41,9 @@ describe('Simple browsing', function() {
       }
     });
     cy.clearLocalStorage();
-    cy.get('html[data-theme="dark"]', { timeout: 20000 }).should(
-      'not.be.visible'
-    );
+    //    cy.get('html[data-theme="dark"]', { timeout: 20000 }).should(
+    //     'not.be.visible'
+    //  );
     cy.get('.bes-controls', { timeout: 5000 }).click();
     cy.get('#setting-toggle-darkmode').click();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
