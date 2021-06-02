@@ -1,7 +1,7 @@
 {
-  "keyboard": "function96",
+  "keyboard": "function96/v1",
   "keymap": "default",
-  "commit": "186b1b2ba2550d9a7a864a241e8f9503c37f188b",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -104,6 +104,9 @@ const lookup = {
   'exclusive/e85': {
     target: 'exclusive/e85/hotswap'
   },
+  function96: {
+    target: 'function96/v1'
+  },
   gh60: {
     target: 'gh60/revc'
   },
@@ -286,6 +289,30 @@ const lookup = {
   },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
+  },
+  'nckiibs/flatbread60': {
+    target: 'delikeeb/flatbread60'
+  },
+  'nckiibs/vaguettelite': {
+    target: 'delikeeb/vaguettelite'
+  },
+  'nckiibs/vanana/rev1': {
+    target: 'delikeeb/vanana/rev1'
+  },
+  'nckiibs/vanana/rev2': {
+    target: 'delikeeb/vanana/rev2'
+  },
+  'nckiibs/vaneela': {
+    target: 'delikeeb/vaneela'
+  },
+  'nckiibs/vaneelaex': {
+    target: 'delikeeb/vaneelaex'
+  },
+  'nckiibs/waaffle/rev3/elite_c': {
+    target: 'delikeeb/waaffle/rev3/elite_c'
+  },
+  'nckiibs/waaffle/rev3/pro_micro': {
+    target: 'delikeeb/waaffle/rev3/pro_micro'
   },
   nomu30: {
     target: 'nomu30/rev1'
