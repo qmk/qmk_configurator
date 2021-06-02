@@ -1,3 +1,5 @@
+const timeout = 5000;
+const longTimeout = 5000;
 describe('Simple browsing', function() {
   before(() => {
     cy.viewport('macbook-15');
@@ -27,7 +29,7 @@ describe('Simple browsing', function() {
       }
     });
     cy.get('.bes-controls').click();
-    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
+    cy.get('html[data-theme="dark"]', { timeout }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
     cy.visit('/', {
@@ -41,14 +43,12 @@ describe('Simple browsing', function() {
       }
     });
     cy.clearLocalStorage();
-    //    cy.get('html[data-theme="dark"]', { timeout: 20000 }).should(
-    //     'not.be.visible'
-    //  );
-    cy.get('.bes-controls', { timeout: 5000 }).click();
+    cy.get('html[data-theme="dark"]', { timeout }).should('not.exist');
+    cy.get('.bes-controls', { timeout }).click();
     cy.get('#setting-toggle-darkmode').click();
-    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
+    cy.get('html[data-theme="dark"]', { timeout }).should('be.visible');
     cy.visit('/');
-    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
+    cy.get('html[data-theme="dark"]', { timeout }).should('be.visible');
   });
   it('Should load favorite keyboard from localstorage', () => {
     cy.clearLocalStorage();
@@ -64,21 +64,21 @@ describe('Simple browsing', function() {
         );
       }
     });
-    cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
-    cy.get('.vs__selected', { timeout: 5000 }).contains('1upkeyboards/super16');
+    cy.get('.vs__selected', { timeout }).should('be.visible');
+    cy.get('.vs__selected', { timeout }).contains('1upkeyboards/super16');
   });
   it('Should set favorite keyboard to localstorage and reload it', () => {
     cy.clearLocalStorage();
     cy.visit('/');
-    cy.get('.vs__selected', { timeout: 10000 }).should('be.visible');
+    cy.get('.vs__selected', { timeout: longTimeout }).should('be.visible');
     cy.get('.vs__selected').click();
     cy.get('.vs__search').type('2_milk');
     cy.get('.vs__dropdown-option.vs__dropdown-option--highlight').click();
-    cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
+    cy.get('.vs__selected', { timeout }).contains('2_milk');
     cy.get('#favorite-keyboard').click();
     cy.visit('/');
-    cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
-    cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
+    cy.get('.vs__selected', { timeout }).should('be.visible');
+    cy.get('.vs__selected', { timeout }).contains('2_milk');
     cy.get('#favorite-keyboard').should('have.class', 'active');
   });
   it('Should change language, set to localstorage and retrieve it', () => {
@@ -93,12 +93,16 @@ describe('Simple browsing', function() {
         });
       }
     });
-    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('keyboard');
+    cy.get('#drop-label-keyboard', { timeout: longTimeout }).contains(
+      'keyboard'
+    );
     cy.get('.bes-controls').click();
-    cy.get('.settings-panel', { timeout: 5000 }).should('be.visible');
+    cy.get('.settings-panel', { timeout }).should('be.visible');
     cy.get('#setting-panel-language').select('fr');
     cy.get('.slideout-panel-bg').click();
-    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
+    cy.get('#drop-label-keyboard', { timeout: longTimeout }).contains(
+      'clavier'
+    );
     cy.visit('/', {
       onBeforeLoad: win => {
         Object.defineProperty(win.navigator, 'language', {
@@ -109,6 +113,8 @@ describe('Simple browsing', function() {
         });
       }
     });
-    cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
+    cy.get('#drop-label-keyboard', { timeout: longTimeout }).contains(
+      'clavier'
+    );
   });
 });
