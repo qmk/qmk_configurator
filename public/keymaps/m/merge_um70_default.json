@@ -1,7 +1,7 @@
 {
   "keyboard": "merge/um70",
   "keymap": "default",
-  "commit": "02e19123718d8693ff06665f762abbfbe7072201",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_rspace_2u_bksp",
   "layers": [
     [

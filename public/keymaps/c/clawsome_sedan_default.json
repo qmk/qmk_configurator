@@ -1,7 +1,7 @@
 {
   "keyboard": "clawsome/sedan",
   "keymap": "default",
-  "commit": "2c0201e80f7d1e477440c3a0cfcb9b90575a002a",
+  "commit": "975e42ed3c18311d8da4abd11deb42d504b1a8c5",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

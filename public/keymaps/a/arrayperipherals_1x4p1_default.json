@@ -1,7 +1,7 @@
 {
   "keyboard": "arrayperipherals/1x4p1",
   "keymap": "default",
-  "commit": "5fde2d730c854eb6516771f1c5dcd22626f85efb",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_ortho_1x5",
   "layers": [
     [

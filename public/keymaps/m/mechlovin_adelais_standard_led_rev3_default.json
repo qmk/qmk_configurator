@@ -1,7 +1,7 @@
 {
   "keyboard": "mechlovin/adelais/standard_led/rev3",
   "keymap": "default",
-  "commit": "e9e6054ee7eaca4cbd8d1c7566f394559ea8770a",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_all",
   "layers": [
     [

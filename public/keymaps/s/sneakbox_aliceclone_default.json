@@ -1,7 +1,7 @@
 {
   "keyboard": "sneakbox/aliceclone",
   "keymap": "default",
-  "commit": "138c3e7042a3fb9e94a784c3b8f6b0815e71cf3b",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

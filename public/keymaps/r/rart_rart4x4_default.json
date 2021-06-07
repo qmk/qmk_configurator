@@ -1,7 +1,7 @@
 {
   "keyboard": "rart/rart4x4",
   "keymap": "default",
-  "commit": "11669bb45bd433af49d14b2836b208ed6d0877f3",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

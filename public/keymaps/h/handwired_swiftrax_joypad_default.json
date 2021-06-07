@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/joypad",
   "keymap": "default",
-  "commit": "bf959d79dc7a37e94fc368bb8d3a4ca52421faad",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [
