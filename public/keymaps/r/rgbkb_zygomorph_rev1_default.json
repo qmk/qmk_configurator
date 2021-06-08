@@ -1,7 +1,7 @@
 {
   "keyboard": "rgbkb/zygomorph/rev1",
   "keymap": "default",
-  "commit": "4cdb86c730528c8ca5ff90f5b9b01c395d31fc0e",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
