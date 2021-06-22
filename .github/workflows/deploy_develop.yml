@@ -1,0 +1,63 @@
+name: Deploy to the develop live server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  api_data:
+    runs-on: ubuntu-latest
+
+    # protect those who work in their fork
+    if: github.repository == 'qmk/qmk_configurator'
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - id: nodeversion
+        run: echo ::set-output name=NODE::$(cat .nvmrc)
+
+      - name: restore Cache
+        uses: actions/cache@master
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Use Node.js ${{steps.nodeversion.outputs.NODE}}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ steps.nodeversion.outputs.NODE }}
+
+      - name: install
+        run: |
+          yarn
+
+      - name: Lint
+        run: |
+          yarn run prettier:check
+          yarn run prettier:json:check
+          yarn run lint
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          start: yarn serve
+          wait-on: "http://localhost:8080"
+
+      - name: build
+        run: |
+          echo VUE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          yarn run build
+          echo config.develop.qmk.fm > dist/CNAME
+
+      - name: Deploy Develop Configurator
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.CONFIG_SPACE_DEVELOP }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.SPACES_ACCESS_KEY }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SPACES_SECRET_KEY }}
+          AWS_S3_ENDPOINT: https://nyc3.digitaloceanspaces.com
+          SOURCE_DIR: "dist"
