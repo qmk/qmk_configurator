@@ -1,7 +1,7 @@
 {
   "keyboard": "tkw/stoutgat/v1",
   "keymap": "default",
-  "commit": "06d4c0a3968f3f0ae0fc5deb36cb4b8de44b1428",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_encoder",
   "layers": [
     [

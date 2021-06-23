@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/prkl30/promicro",
   "keymap": "default",
-  "commit": "89ef9de98cc54462aa5b7938ec55bdc089541c74",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_all",
   "layers": [
     [
