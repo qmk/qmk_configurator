@@ -1,7 +1,7 @@
 {
   "keyboard": "capsunlocked/cu65",
   "keymap": "default",
-  "commit": "dfb8a29718f14e5b516150a7c1c416d1941dcc17",
+  "commit": "92a9fba353420f3bfdf933341fcf1b9ae0ab754e",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
