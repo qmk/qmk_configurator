@@ -1,0 +1,24 @@
+{
+  "keyboard": "xbows/numpad",
+  "keymap": "default",
+  "commit": "2af5d493e32dffe89d8b4908905d57a42aa47e53",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "KC_BSPC", "MO(1)",
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_EQL",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "RESET",   "EEP_RST", "KC_TRNS", "KC_TRNS",
+      "KC_CALC", "KC_MYCM", "KC_MSEL", "KC_MAIL",
+      "RGB_MOD", "RGB_VAI", "RGB_HUI", "KC_VOLD",
+      "RGB_SPD", "RGB_TOG", "RGB_SPI", "KC_VOLU",
+      "KC_TRNS", "RGB_VAD", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS"
+    ]
+  ]
+}
