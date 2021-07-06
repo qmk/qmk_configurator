@@ -1,0 +1,11 @@
+{
+  "keyboard": "nk1",
+  "keymap": "default",
+  "commit": "ad3169f500e027296adf6961fcd948caa023891d",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_ENT"
+    ]
+  ]
+}
