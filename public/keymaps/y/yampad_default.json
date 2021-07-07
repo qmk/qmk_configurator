@@ -1,0 +1,29 @@
+{
+  "keyboard": "yampad",
+  "keymap": "default",
+  "commit": "0aaddf697fb977c8457f3b0231c2f007ac1e0fb9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TG(1)",   "KC_PSLS", "KC_PAST", "LT(2,KC_PMNS)",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",   "XXXXXXX", "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_INS",  "KC_HOME", "KC_PGUP", "TG(1)",
+      "KC_DEL",  "KC_END",  "KC_PGDN",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "KC_UP",   "XXXXXXX",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "XXXXXXX"
+    ],
+    [
+      "RGB_MOD", "RGB_M_P", "RGB_TOG", "_______",
+      "RGB_HUD", "RGB_HUI", "XXXXXXX",
+      "RGB_SAD", "RGB_SAI", "XXXXXXX", "XXXXXXX",
+      "RGB_VAD", "RGB_VAI", "XXXXXXX",
+      "RESET",   "XXXXXXX", "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}
