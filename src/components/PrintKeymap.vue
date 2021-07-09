@@ -39,9 +39,9 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    currentLayer(layerIDX) {
+    currentLayer(layerIndex) {
       const layout = this.layouts[this.layout];
-      const keymap = this.getLayer(layerIDX);
+      const keymap = this.getLayer(layerIndex);
       if (isUndefined(layout) || isUndefined(keymap)) {
         return [];
       }

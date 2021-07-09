@@ -57,12 +57,12 @@
       </table>
     </div>
     <div>
-      <template v-for="idx in activeLayers">
-        <div class="layer-output" :class="firefoxOnly(idx)" :key="idx">
+      <template v-for="index in activeLayers">
+        <div class="layer-output" :class="firefoxOnly(index)" :key="index">
           <h3 class="layer-output-title">
-            {{ i18n('layer.label') }} {{ idx }}
+            {{ i18n('layer.label') }} {{ index }}
           </h3>
-          <PrintKeymap :layer="idx"></PrintKeymap>
+          <PrintKeymap :layer="index"></PrintKeymap>
         </div>
       </template>
     </div>
@@ -137,9 +137,9 @@ export default {
         window.print();
       });
     },
-    firefoxOnly(idx) {
+    firefoxOnly(index) {
       if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-        if ((idx / 3) % 3 == 0) {
+        if ((index / 3) % 3 == 0) {
           return 'layout-output-firefox';
         }
       }
