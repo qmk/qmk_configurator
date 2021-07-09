@@ -1,9 +1,8 @@
 <template>
   <div class="print-keymap" :style="styles">
     <template v-for="meta in currentLayer(layer)">
-      <component
+      <PrintKey
         :layer="layer"
-        v-bind:is="getComponent(meta)"
         v-bind="meta"
         :key="meta.id"
         :printable="true"
