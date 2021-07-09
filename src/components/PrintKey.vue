@@ -5,14 +5,15 @@
     :class="myclasses"
     :style="mystyles"
     :title="displayName"
-  >{{ displayName }}
+  >
+    {{ displayName }}
   </div>
 </template>
 <script>
-import BaseKey from "./BaseKey";
+import BaseKey from './BaseKey';
 
 export default {
-  name: "print-key",
+  name: 'print-key',
   props: {
     layer: Number
   },
@@ -22,18 +23,18 @@ export default {
       return `key-${this.layer}-${this.id}`;
     },
     displayName() {
-      if (this.meta.type === "layer") {
-        return this.meta.code.replace("layer", this.meta.layer);
+      if (this.meta.type === 'layer') {
+        return this.meta.code.replace('layer', this.meta.layer);
       }
-      if (this.meta.type === "text") {
+      if (this.meta.type === 'text') {
         return this.formatName(this.breakLines(this.meta.text));
       }
-      if (this.meta.type === "layer-container") {
+      if (this.meta.type === 'layer-container') {
         return `${this.meta.name.toUpperCase()},\n${this.formatName(
           this.meta.contents.code
         )}`;
       }
-      if (this.meta.type === "container") {
+      if (this.meta.type === 'container') {
         return `${this.meta.name.toUpperCase()}\n(${this.formatName(
           this.meta.contents.code
         )})`;
@@ -44,7 +45,7 @@ export default {
   methods: {
     breakLines(name) {
       if (this.uw < 1.75) {
-        name = name.replace(" ", "\n").replace("_", "_\n");
+        name = name.replace(' ', '\n').replace('_', '_\n');
       }
       return name;
     }
