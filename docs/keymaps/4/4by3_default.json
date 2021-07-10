@@ -1,0 +1,13 @@
+{
+  "keyboard": "4by3",
+  "keymap": "default",
+  "commit": "e0f91f37c4b944b328f9e022b18f2f1ad702fcf4",
+  "layout": "LAYOUT_horizontal",
+  "layers": [
+    [
+      "KC_VOLU", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_MUTE", "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_VOLD", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

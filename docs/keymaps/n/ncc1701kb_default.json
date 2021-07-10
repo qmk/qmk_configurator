@@ -1,0 +1,18 @@
+{
+  "keyboard": "ncc1701kb",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MUTE", "KC_MNXT",
+      "KC_MSTP", "KC_MPLY", "KC_MSEL",
+      "KC_CALC", "KC_MAIL", "LT(1,KC_MYCM)"
+    ],
+    [
+      "BL_TOGG", "KC_TRNS", "BL_BRTG",
+      "BL_INC",  "BL_DEC",  "BL_STEP",
+      "BL_ON",   "BL_OFF",  "KC_TRNS"
+    ]
+  ]
+}

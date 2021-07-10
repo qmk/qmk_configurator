@@ -1,0 +1,32 @@
+{
+  "keyboard":"handwired/arrow_pad",
+  "keymap":"default",
+  "commit":"952a30ef345e05051f62fa39960f88475817821d",
+  "layout":"LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "KC_BSLS", "MO(2)",
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PEQL",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_NO",
+      "KC_P0",   "KC_PCMM", "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_ESC",  "KC_TAB",     "KC_SPC",     "KC_TRNS",
+      "TG(1)",   "LCTL(KC_V)", "LCTL(KC_Y)", "LCTL(KC_Z)",
+      "KC_HOME", "KC_UP",      "KC_PGUP",    "KC_LALT",
+      "KC_LEFT", "LCTL(KC_C)", "KC_RGHT",    "KC_LCTL",
+      "KC_END",  "KC_DOWN",    "KC_PGDN",    "KC_NO",
+      "KC_BSPC", "KC_PENT",    "KC_DEL",     "KC_TRNS"
+    ],
+    [
+      "BL_TOGG", "BL_INC",  "BL_DEC",  "KC_TRNS",
+      "TG(1)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_NO",
+      "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

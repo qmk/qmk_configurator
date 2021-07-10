@@ -1,0 +1,12 @@
+{
+  "keyboard": "jkdlab/binary_monkey",
+  "keymap": "default",
+  "commit": "3990c0f43d9048b10097487595e969bfeb5bc859",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",    "KC_1",
+      "KC_ENT"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "keyboard": "ivy/rev1",
+  "keymap": "default",
+  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",
+      "KC_2",
+      "MO(1)"
+    ],
+    [
+      "LCTL(LALT(KC_DEL))",
+      "LCTL(LSFT(KC_ESC))",
+      "KC_TRNS"
+    ]
+  ]
+}

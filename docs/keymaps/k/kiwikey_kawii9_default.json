@@ -1,0 +1,18 @@
+{
+  "keyboard": "kiwikey/kawii9",
+  "keymap": "default",
+  "commit": "7ca4b619223260d17bcc0d065a02d1bbdce436b8",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_MUTE", "KC_VOLD",    "KC_VOLU",
+      "KC_MPLY", "KC_MPRV",    "KC_MNXT",
+      "MO(1)",   "LCTL(KC_C)", "LCTL(KC_V)"
+    ],
+    [
+      "RGB_TOG", "RGB_RMOD","RGB_MOD",
+      "KC_TRNS", "RGB_M_B", "RGB_M_R",
+      "KC_TRNS", "KC_TRNS", "RESET"
+    ]
+  ]
+}

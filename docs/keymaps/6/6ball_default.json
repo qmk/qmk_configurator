@@ -1,0 +1,16 @@
+{
+  "keyboard": "6ball",
+  "keymap": "default",
+  "commit": "4b1f60a3f5ed223e34ae8381e57f600551ccf085",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F",    "LT(1,KC_ESC)", "KC_LCTL",
+      "KC_R",    "KC_D",         "KC_M"
+    ],
+    [
+      "KC_F",    "KC_TRNS", "RGB_HUI",
+      "RGB_TOG", "RGB_MOD", "RGB_HUD"
+    ]
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "keyboard": "0xcb/1337",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MNXT", "KC_MPLY",
+      "KC_PGUP", "KC_PGDN", "TO(3)",
+      "KC_HOME", "KC_END",  "TO(1)"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "TO(0)",
+      "_______", "_______", "TO(2)"
+    ],
+    [
+      "RGB_HUI", "RGB_HUD", "RGB_MOD",
+      "RGB_SAI", "RGB_SAD", "TO(1)",
+      "RGB_SPI", "RGB_SPD", "TO(3)"
+    ],
+    [
+      "BL_STEP", "BL_BRTG", "BL_TOGG",
+      "BL_ON",   "BL_OFF",  "TO(2)",
+      "BL_INC",  "BL_DEC",  "TO(0)"
+    ]
+  ]
+}
