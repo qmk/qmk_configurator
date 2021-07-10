@@ -1,15 +1,17 @@
 <template>
-  <!-- prettier-ignore -->
   <div
     :id="myid"
     class="key"
     :class="myclasses"
     :style="mystyles"
     :title="displayName"
-  >{{ displayName }}</div>
+  >
+    {{ displayName }}
+  </div>
 </template>
 <script>
 import BaseKey from './BaseKey';
+
 export default {
   name: 'print-key',
   props: {

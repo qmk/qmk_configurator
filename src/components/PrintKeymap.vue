@@ -1,13 +1,7 @@
 <template>
   <div class="print-keymap" :style="styles">
     <template v-for="meta in currentLayer(layer)">
-      <component
-        :layer="layer"
-        v-bind:is="getComponent(meta)"
-        v-bind="meta"
-        :key="meta.id"
-        :printable="true"
-      />
+      <PrintKey :layer="layer" v-bind="meta" :key="meta.id" :printable="true" />
     </template>
   </div>
 </template>
@@ -40,9 +34,9 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    currentLayer(layerIDX) {
+    currentLayer(layerIndex) {
       const layout = this.layouts[this.layout];
-      const keymap = this.getLayer(layerIDX);
+      const keymap = this.getLayer(layerIndex);
       if (isUndefined(layout) || isUndefined(keymap)) {
         return [];
       }
