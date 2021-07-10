@@ -1,12 +1,7 @@
 <template>
   <div class="print-keymap" :style="styles">
     <template v-for="meta in currentLayer(layer)">
-      <PrintKey
-        :layer="layer"
-        v-bind="meta"
-        :key="meta.id"
-        :printable="true"
-      />
+      <PrintKey :layer="layer" v-bind="meta" :key="meta.id" :printable="true" />
     </template>
   </div>
 </template>
