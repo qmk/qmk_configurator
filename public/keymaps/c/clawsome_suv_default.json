@@ -1,7 +1,7 @@
 {
   "keyboard": "clawsome/suv",
   "keymap": "default",
-  "commit": "x",
+  "commit": "988942ce40ac73f614ef01fafa6a2f8712e4c2fc",
   "layout": "LAYOUT_all",
   "layers": [
     [
