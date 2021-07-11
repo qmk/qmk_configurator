@@ -1,11 +1,11 @@
 <template>
   <div class="print-layout">
     <div class="print-controls">
-      <button id="leavePrint" @click="gohome">
+      <button class="ui-button" @click="gohome">
         <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
         {{ i18n('back.title') }}
       </button>
-      <button id="leavePrint" @click="print()">
+      <button class="ui-button" @click="print()">
         <font-awesome-icon icon="print" size="lg" fixed-width />
         {{ i18n('print.title') }}
       </button>
