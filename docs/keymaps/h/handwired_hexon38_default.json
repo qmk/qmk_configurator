@@ -1,0 +1,14 @@
+{
+  "keyboard": "handwired/hexon38",
+  "keymap": "default",
+  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                 "KC_W",         "KC_E",         "KC_R",         "KC_T",         "KC_Y",    "KC_U",         "KC_I",         "KC_O",
+      "KC_Q",    "LCTL_T(KC_A)", "LALT_T(KC_S)", "LGUI_T(KC_D)", "LSFT_T(KC_F)", "KC_G",         "KC_H",    "LSFT_T(KC_J)", "LGUI_T(KC_K)", "LALT_T(KC_L)", "LCTL_T(KC_SCLN)", "KC_P",
+      "KC_B",    "KC_Z",         "KC_X",         "KC_C",         "KC_V",                                    "KC_M",         "KC_COMM",      "KC_DOT",       "KC_SLSH",         "KC_N",
+                                 "KC_LSFT",      "KC_SPC",       "KC_TAB",       "KC_TRNS",      "KC_SPC",  "KC_BSPC",      "KC_ENT",       "KC_RSFT"
+    ]
+  ]
+}

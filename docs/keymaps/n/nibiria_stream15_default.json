@@ -1,0 +1,13 @@
+{
+  "keyboard": "nibiria/stream15",
+  "keymap": "default",
+  "commit": "f0f61741368eaa7c27873cf4592ab36c66788022",
+  "layout": "LAYOUT_ortho_3x5",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",
+      "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5"
+    ]
+  ]
+}

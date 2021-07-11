@@ -1,0 +1,15 @@
+{
+  "keyboard": "ckeys/nakey",
+  "keymap": "default",
+  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "KC_NLCK", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}

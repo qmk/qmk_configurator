@@ -1,0 +1,28 @@
+{
+  "keyboard": "cassette42",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+               "KC_MUTE",                        "KC_ENT",
+      "LT(1,KC_MPRV)", "LT(2,KC_MPLY)", "LT(3,KC_MNXT)", "LT(4,KC_SPC)"
+    ],
+    [
+           "RGB_TOG",            "XXXXXXX",
+      "_______", "_______", "RGB_HUD", "RGB_HUI"
+    ],
+    [
+           "_______",            "_______",
+      "_______", "_______", "RGB_SAD", "RGB_SAI"
+    ],
+    [
+           "_______",            "_______",
+      "RGB_VAD", "RGB_VAI", "_______", "RGB_VAI"
+    ],
+    [
+           "_______",             "XXXXXXX",
+      "RGB_RMOD", "RGB_MOD", "RGB_MOD", "_______"
+    ]
+  ]
+}
