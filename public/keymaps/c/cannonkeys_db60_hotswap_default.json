@@ -1,5 +1,5 @@
 {
-  "keyboard": "cannonkeys/db60",
+  "keyboard": "cannonkeys/db60/hotswap",
   "keymap": "default",
   "commit": "27e7f322a51597423a828396d2783b63462aa446",
   "layout": "LAYOUT_60_ansi",
