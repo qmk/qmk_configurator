@@ -1,0 +1,24 @@
+{
+  "keyboard": "pistachio_mp",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                             "KC_MPLY",
+      "LT(1,KC_NLCK)", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",         "KC_P8",   "KC_P9",
+      "KC_P4",         "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",         "KC_P2",   "KC_P3",
+      "KC_P0",                    "KC_PDOT", "KC_PENT"
+    ],
+    [
+                                       "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "RGB_HUI", "RGB_SAI", "RGB_VAI",
+      "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_TOG",
+      "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",              "KC_NO",   "KC_NO"
+    ]
+  ]
+}

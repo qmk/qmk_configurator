@@ -1,7 +1,7 @@
 {
   "keyboard": "evyd13/quackfire",
   "keymap": "default",
-  "commit": "c66df1664497546f32662409778731143e45a552",
+  "commit": "92a9fba353420f3bfdf933341fcf1b9ae0ab754e",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
