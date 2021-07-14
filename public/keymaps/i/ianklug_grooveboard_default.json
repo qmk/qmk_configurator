@@ -1,0 +1,11 @@
+{
+  "keyboard": "ianklug/grooveboard",
+  "keymap": "default",
+  "commit": "6cdba3a43724f76076b8bf1f4d0809f53e7599d9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT"
+    ]
+  ]
+}
