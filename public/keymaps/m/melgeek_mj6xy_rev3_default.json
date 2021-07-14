@@ -1,7 +1,7 @@
 {
-  "keyboard": "cannonkeys/db60",
+  "keyboard": "melgeek/mj6xy/rev3",
   "keymap": "default",
-  "commit": "27e7f322a51597423a828396d2783b63462aa446",
+  "commit": "9c4916e2e8f40854d68e4c1f5d7e21ea69a8f4fd",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                                   "KC_RALT", "KC_RGUI", "MO(1)",   "KC_RCTL"
     ],
     [
-      "KC_GESC", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",
-      "RGB_TOG", "RGB_MOD", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "BL_BRTG", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "BL_INC",             "BL_DEC",  "BL_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_GRV",  "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
+      "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",
+      "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_TRNS", "KC_PSCR", "KC_SLCK", "KC_PAUS", "RESET",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_INS",  "KC_HOME", "KC_PGUP",            "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "BL_DEC",  "BL_TOGG", "BL_INC",  "BL_STEP", "KC_TRNS", "KC_DEL",  "KC_END",  "KC_PGDN",            "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }
