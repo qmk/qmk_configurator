@@ -1,19 +1,19 @@
 Key,Translation
 apiVersion,Версия API
-apiVersionPrefix,
-favoriteColor,
-favoriteKeyboard,
+apiVersionPrefix,API
+favoriteColor,Избранная расцветка
+favoriteKeyboard,Избранная клавиатура
 hostedOn,Размещено на GitHub Pages
-jobsAhead,
-jobsWaiting,шт. заданий ожидает
+jobsAhead,в работе
+jobsWaiting,ожидают
 maintain,"Данный проект поддерживается коллабораторами QMK и такими же участниками, как вы!"
-ready,
-searchKeycodes,
-serverIs,
+ready,Готово
+searchKeycodes,Поиск
+serverIs,Сервис
 serverStatus,Статус сервера
-settings,
+settings,Настройки
 statsTemplate,"
-Загружен(а/о) {layers} шт. слоев и {count} шт. кодов клавиш. Обнаружен(о) {any} код(ов) Any кодов клавиш
+Загружен(о) {layers} слой(ев) и {count} код(ов) клавиш. Обнаружен(о) {any} код(ов) клавиш
 "
 ColorwayTip:title,"Ctrl + Alt + N, чтобы перейти к следующему цветовому варианту"
 compile:label,Скомпилировать
@@ -39,7 +39,7 @@ help:label,Вызов волшебника
 importJSON:title,Импортировать раскладку QMK из JSON файла
 importUrlJSON:title,Импортировать раскладку QMK в виде JSON из URL
 keyboard:label,клавиатура
-keycodes:label,Коды клавиш
+keycodes:label,коды клавиш
 keycodesRef:label,Справочник по кодам клавиш
 keycodesTab:ANSI:label,ANSI
 keycodesTab:AppMediaMouse:label,"Приложение, медиа и мышь"
@@ -47,8 +47,8 @@ keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Настройки клавиатуры
 keycodesTab:Quantum:label,Quantum
 keymap:label,Раскладка
-keymapHelp:label,
-keymapHelp:title,
+keymapHelp:label,Помощь
+keymapHelp:title,Как использовать keymap.json?
 keymapName:label,Название раскладки
 keymapName:placeholder,название пользовательской раскладки
 layer:confirm,"Вы уверены, что хотите очистить слой?"
@@ -57,7 +57,7 @@ layer:title,Очистить слой
 layout:label,раскладка
 loadDefault:label,Значения по умолчанию
 loadDefault:title,Загрузить раскладку со значениями по умолчанию из QMK Firmware
-potato:1,Henry Spalding первым посадил картофель в Айдахо в 1837 году
+potato:1,Генри Сполдинг первым посадил картофель в Айдахо в 1837 году
 potato:10,Китай производит больше всего картофеля в мире.
 potato:11,"Картофель был первым овощем, выращенным в космосе."
 potato:12,Картофель совсем не содержит глютена.
@@ -135,6 +135,6 @@ tester:letters:keycode:label,код клавиши
 tester:page:label,Тестер клавиатуры
 tester:reset:label,Сброс
 tester:reset:title,Сброс обнаруженных клавиш
-tester:typewritericon:label,
-toggleTerminal:label,
-toggleTerminal:title,
+tester:typewritericon:label,Включить звуки нажатия во время тестирования
+toggleTerminal:label,"Нажмите, чтобы раскрыть"
+toggleTerminal:title,Отображение терминала
