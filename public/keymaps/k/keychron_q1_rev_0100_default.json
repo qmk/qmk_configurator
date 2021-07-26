@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/q1/rev_0100",
   "keymap": "default",
-  "commit": "8baa59b91447a1f454b71ca0c67080b77707bdf5",
+  "commit": "145d89ab9192d08b7e22a14105d27988944b7b0c",
   "layout": "LAYOUT_ansi_82",
   "layers":[
     [
