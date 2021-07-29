@@ -1,0 +1,12 @@
+{
+  "keyboard": "peranekofactory/tone/rev1",
+  "keymap": "default",
+  "commit": "8b0a996d5d4bec0ee5901ee217650d8f432b4f5a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "C(S(KC_E))", "S(KC_TAB)",  "KC_TAB",     "KC_0",
+      "KC_LSFT",    "C(KC_LEFT)", "C(KC_RGHT)", "C(KC_Z)"
+    ]
+  ]
+}
