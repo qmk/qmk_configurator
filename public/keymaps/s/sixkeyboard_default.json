@@ -1,8 +1,8 @@
 {
   "keyboard": "sixkeyboard",
   "keymap": "default",
-  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
-  "layout": "LAYOUT",
+  "commit": "7e698c71cd8b9d0cdef6c622cfdd88a13e2a6587",
+  "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [
       "KC_A",    "KC_B",    "KC_C",
