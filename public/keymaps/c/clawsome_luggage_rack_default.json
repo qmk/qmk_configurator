@@ -1,13 +1,14 @@
 {
   "keyboard": "clawsome/luggage_rack",
   "keymap": "default",
-  "commit": "0000000000000000000000000000000000000000",
+  "commit": "e1ce0d2836cb8428624861107806160b16c849d6",
   "layout": "LAYOUT",
   "layers": [
     [
       "KC_PSCR", "KC_SLCK", "KC_PAUS",
       "KC_INS",  "KC_HOME", "KC_PGUP",
       "KC_DEL",  "KC_END",  "KC_PGDN",
+
                  "KC_UP",
       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ]
