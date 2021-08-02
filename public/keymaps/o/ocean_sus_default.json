@@ -1,8 +1,8 @@
 {
   "keyboard": "ocean/sus",
   "keymap": "default",
-  "commit": "aa0b7079a4a7a3174c7f078fc5fa81e630df1775",
-  "layout": "LAYOUT_ortho_3x4",
+  "commit": "6823e03b0143ed839e594cd5e8d06872ba907a42",
+  "layout": "LAYOUT_ortho_4x3",
   "layers": [
     [
       "KC_P7",   "KC_P8",   "KC_P9",
