@@ -292,7 +292,7 @@ function load_converted_keymap(converted_keymap) {
       return acc;
     },
     {
-      stats: { count: 0, any: 0, layers: 0 },
+      stats: { count: 0, any: 0, layers: 0, errors: [], warnings: [] },
       layers: []
     }
   );
@@ -418,11 +418,8 @@ function parseKeycode(keycode, stats) {
 
   if (keycode.length < 4) {
     // unexpectedly short keycode
-    store.commit(
-      'status/append',
-      `Found an unexpected keycode '${escape(keycode)}' on layer ${
-        stats.layers
-      } in keymap. Setting to KC_TRNS\n`
+    stats.warnings.push(
+      `WARNING: Found an unexpected keycode ${keycode} on layer ${stats.layers} in keymap. Setting to KC_TRNS\n`
     );
     return store.getters['keycodes/lookupKeycode']('KC_TRNS');
   }

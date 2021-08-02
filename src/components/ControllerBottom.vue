@@ -140,6 +140,7 @@ import {
 import ElectronBottomControls from './ElectronBottomControls';
 
 import remap from '@/remap';
+import { statusError } from '../jquery';
 
 const encoding = 'data:application/json;charset=utf-8,';
 
@@ -383,7 +384,11 @@ export default {
         );
         promise.then(() => {
           const stats = load_converted_keymap(data.layers);
-          const msg = this.$t('statsTemplate', stats);
+          let msg = this.$t('statsTemplate', stats);
+          if (stats.warnings.length > 0 || stats.errors.length > 0) {
+            msg = `${msg}\n${stats.warnings.join('\n')}`;
+            msg = `${msg}\n${stats.errors.join('\n')}`;
+          }
           this.deferredMessage(msg);
           this.viewReadme(this.keyboard).then(() => {
             let keymapName = data.keymap;

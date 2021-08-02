@@ -17,7 +17,7 @@ const actions = {
     // signal scroll buffer to lastest message
     commit('startScroll');
   },
-  viewReadme({ state, commit }, _keyboard) {
+  viewReadme({ state, commit, dispatch }, _keyboard) {
     return axios
       .get(backend_readme_url_template({ keyboard: _keyboard }))
       .then(result => {
@@ -26,6 +26,7 @@ const actions = {
           commit('append', escape(result.data));
           commit('append', escape(state.deferredMessage));
           commit('deferredMessage', '');
+          dispatch('scrollToEnd');
         }
       });
   }

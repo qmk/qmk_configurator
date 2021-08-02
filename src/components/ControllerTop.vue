@@ -245,7 +245,11 @@ export default {
               // otherwise it overrides the default getter
               this.updateKeymapName('');
               const stats = load_converted_keymap(data.layers);
-              const msg = this.$t('statsTemplate', stats);
+              let msg = this.$t('statsTemplate', stats);
+              if (stats.warnings.length > 0 || stats.errors.length > 0) {
+                msg = `${msg}\n${stats.warnings.join('\n')}`;
+                msg = `${msg}\n${stats.errors.join('\n')}`;
+              }
               store.commit('status/append', msg);
               if (!isAutoInit) {
                 store.commit('keymap/setDirty');
