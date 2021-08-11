@@ -205,7 +205,7 @@ const actions = {
         return acc;
       },
       {
-        stats: { count: 0, any: 0, layers: 0 },
+        stats: { count: 0, any: 0, layers: 0, errors: [], warnings: [] },
         layers: []
       }
     );
