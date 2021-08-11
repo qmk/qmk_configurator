@@ -1,5 +1,7 @@
 import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
+import * as keypress from 'keypress.js';
+import { generateKeypressCombos } from './keypress';
 import {
   backend_keyboards_url,
   backend_keyboard_list_url
@@ -78,7 +80,7 @@ const actions = {
         commit('setLayout', nextLayout);
 
         // enable and disable steno in keycode UI
-        const stenoCheck = steno_keyboards.reduce((acc, keeb) => {
+        const stenoCheck = steno_keyboards.reduce((_, keeb) => {
           return { [keeb]: true };
         }, {});
         if (stenoCheck[keyboard]) {
@@ -202,6 +204,35 @@ const actions = {
         await dispatch('saveConfiguratorSettings');
       }
     }
+  },
+  // initialize keypress.js using helper functions in ./keypress.js
+  async initKeypressListener({ commit }) {
+    const store = this;
+    const keypressListener = new keypress.Listener();
+    const conf = generateKeypressCombos(
+      store,
+      store.getters['keycodes/keycodes']
+    );
+    keypressListener.register_many(conf);
+    keypressListener.simple_combo('ctrl shift i', () => {
+      if (!store.state.app.isPreview) {
+        commit('requestPreview');
+      }
+    });
+    keypressListener.simple_combo('ctrl alt n', () => {
+      store.commit('keymap/nextColorway');
+    });
+    keypressListener.simple_combo('ctrl alt u', () => {
+      store.commit('keymap/toggleDisplaySizes');
+    });
+    keypressListener.simple_combo('ctrl alt f', () => {
+      store.commit('keymap/toggleContinuousInput');
+    });
+    keypressListener.simple_combo('ctrl alt s', () => {
+      commit('toggleSettingsPanel');
+    });
+
+    commit('setKeypressListener', () => keypressListener);
   }
 };
 
