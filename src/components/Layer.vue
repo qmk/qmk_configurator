@@ -1,12 +1,12 @@
 <template>
   <div class="edited-layer">
     <div>
-      <button class="up-button" :disabled="isUpDisabled">
+      <button class="up-button button-defaults" :disabled="isUpDisabled">
         <font-awesome-icon size="lg" fixed-width :icon="arrowUp" />
       </button>
     </div>
     <div>
-      <button class="down-button" :disabled="isDownDisabled">
+      <button class="down-button button-defaults" :disabled="isDownDisabled">
         <font-awesome-icon size="lg" fixed-width :icon="arrowDown" />
       </button>
     </div>
@@ -15,17 +15,17 @@
       {{ layerSummary }}
     </div>
     <div>
-      <button class="copy-button" title="copy">
+      <button class="copy-button button-defaults" title="copy">
         <font-awesome-icon size="lg" fixed-width icon="copy" />
       </button>
     </div>
     <div>
-      <button class="paste-button" title="paste">
+      <button class="paste-button button-defaults" title="paste">
         <font-awesome-icon size="lg" fixed-width icon="paste" />
       </button>
     </div>
     <div>
-      <button class="trash-button" title="clear">
+      <button class="trash-button button-defaults" title="clear">
         <font-awesome-icon size="lg" fixed-width icon="trash" />
       </button>
     </div>
@@ -64,8 +64,13 @@ export default {
   display: grid;
   grid-template: 1fr / 1fr 1fr 1fr 10fr 1fr 1fr 1fr;
   border-radius: 10px;
-  border: 2px solid #3939bf;
-  padding: 10px 15px;
+  border: 2px solid #04e1d1;
+  padding: 8px 15px;
+  grid-gap: 4px;
+  margin-bottom: 4px;
+}
+.button-defaults {
+  border-radius: 4px;
 }
 .trash-button {
   background: #b33a3a;
