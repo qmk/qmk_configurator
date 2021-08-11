@@ -1,6 +1,8 @@
 <template>
   <div>
-    <layer :key="layer.id" v-for="layer in layers">{{ layer.id }}</layer>
+    <layer :layer="layer" :key="layer.id" v-for="layer in layers">{{
+      layer.id
+    }}</layer>
   </div>
 </template>
 <script>
@@ -18,4 +20,9 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.layers {
+  display: flex;
+  flex-direction: column;
+}
+</style>
