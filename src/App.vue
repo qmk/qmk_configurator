@@ -92,7 +92,7 @@ export default {
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,
-      panel: undefined,
+      settingsPanel: undefined,
       settingsClasses: '',
       hover: false
     };
@@ -177,19 +177,19 @@ export default {
     },
     toggleSettingsPanel(visible) {
       if (visible) {
-        this.panel = this.$showPanel({
+        this.settingsPanel = this.$showPanel({
           component: SettingsPanel,
           openOn: 'right',
           props: {},
           width: '300px'
         });
-        this.panel.promise.then(() => {
+        this.settingsPanel.promise.then(() => {
           // user clicked on veil
           this.setSettingsPanel(false);
         });
       } else {
-        this.panel.hide();
-        this.panel = undefined;
+        this.settingsPanel.hide();
+        this.settingsPanel = undefined;
       }
     },
     showSettings() {
