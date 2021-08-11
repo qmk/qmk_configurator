@@ -87,7 +87,7 @@ import isString from 'lodash/isString';
 
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 
-import { statusError, compileLayout, disableOtherButtons } from '@/jquery';
+import { statusError, compileLayout, disableOtherButtons } from '@/api';
 
 import { clearKeymapTemplate } from '@/common';
 

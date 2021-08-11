@@ -6,7 +6,7 @@ import {
   backend_keyboards_url,
   backend_keyboard_list_url
 } from '@/store/modules/constants';
-import { getPreferredLayout, getExclusionList } from '@/jquery';
+import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
 const steno_keyboards = ['gergo', 'georgi'];

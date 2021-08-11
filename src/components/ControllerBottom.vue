@@ -129,12 +129,8 @@ import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
-import {
-  disableCompileButton,
-  disableOtherButtons,
-  getPreferredLayout,
-  checkInvalidKeymap
-} from '@/jquery';
+import { disableCompileButton, disableOtherButtons } from '@/api';
+import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 
 import ElectronBottomControls from './ElectronBottomControls';
 
