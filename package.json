@@ -61,5 +61,15 @@
     "start-server-and-test": "^1.10.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "resolutions": {
+    "glob-parent": "^5.1.2",
+    "url-parse": "^1.5.2",
+    "tar": "^6.1.2",
+    "axios": "^0.21",
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.3",
+    "yargs-parser": "^18.1.2",
+    "trim-newlines": "^4.0.1"
   }
 }
