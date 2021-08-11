@@ -138,3 +138,11 @@ tester:reset:title,Reset detected keys
 tester:typewritericon:label,Click to hear typewriter sounds while testing
 toggleTerminal:label,Click to Expand
 toggleTerminal:title,Toggle the Terminal display
+layerEditorPanel:moveup:title,Move Layer Up
+layerEditorPanel:movedown:title,Move Layer Down
+layerEditorPanel:copy:title,Copy Layer
+layerEditorPanel:paste:title,Overwrite Layer
+layerEditorPanel:clear:title,Clear Layer
+layerEditorPanel:header,Layer Editor
+layerEditorPanel:helpText,"Edit layers by moving them up and down or copy and pasting them. Delete sets it to default key value. Caveats, empty layers take up more precious flash, so try not to leave empty intermediate layers. If a key isn't set to KC_TRNS it will not drop through to next layer. Layer 0 is the base layer. Layer 15 is the highest layer configurator supports."
+

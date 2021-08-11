@@ -57,6 +57,7 @@ const state = {
   spinnerMsg: '',
   message: '',
   settingsPanelVisible: false,
+  layerEditorPanelVisible: false,
   author: '',
   notes: '',
   tutorialEnabled: false,

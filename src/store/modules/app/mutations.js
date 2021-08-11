@@ -160,6 +160,9 @@ const mutations = {
   setSettingsPanel(state, next) {
     state.settingsPanelVisible = next;
   },
+  setLayerEditorPanel(state, next) {
+    state.layerEditorPanelVisible = next;
+  },
   toggleSettingsPanel(state) {
     state.settingsPanelVisible = !state.settingsPanelVisible;
   },

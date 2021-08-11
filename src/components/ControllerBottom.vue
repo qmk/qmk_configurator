@@ -129,18 +129,12 @@ import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import { clearKeymapTemplate } from '@/common.js';
 import { PREVIEW_LABEL } from '@/store/modules/constants';
-import {
-  load_converted_keymap,
-  disableCompileButton,
-  disableOtherButtons,
-  getPreferredLayout,
-  checkInvalidKeymap
-} from '@/jquery';
+import { disableCompileButton, disableOtherButtons } from '@/api';
+import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 
 import ElectronBottomControls from './ElectronBottomControls';
 
 import remap from '@/remap';
-import { statusError } from '../jquery';
 
 const encoding = 'data:application/json;charset=utf-8,';
 
@@ -216,6 +210,7 @@ export default {
       'loadLayouts'
     ]),
     ...mapActions('status', ['viewReadme']),
+    ...mapActions('keymap', ['load_converted_keymap']),
     importUrlkeymap: function() {
       this.loadKeymapFromUrl(this.urlImport)
         .then(data => {

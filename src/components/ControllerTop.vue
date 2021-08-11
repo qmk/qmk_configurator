@@ -87,12 +87,7 @@ import isString from 'lodash/isString';
 
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 
-import {
-  statusError,
-  load_converted_keymap,
-  compileLayout,
-  disableOtherButtons
-} from '@/jquery';
+import { statusError, compileLayout, disableOtherButtons } from '@/api';
 
 import { clearKeymapTemplate } from '@/common';
 
@@ -219,7 +214,7 @@ export default {
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
     ]),
-    ...mapActions('keymap', ['initTemplates']),
+    ...mapActions('keymap', ['initTemplates', 'load_converted_keymap']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -240,11 +235,11 @@ export default {
             this.updateLayout(data.layout);
             let promise = new Promise(resolve =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
-            ).then(() => {
+            ).then(async () => {
               // clear the keymap name for the default keymap
               // otherwise it overrides the default getter
               this.updateKeymapName('');
-              const stats = load_converted_keymap(data.layers);
+              const stats = this.load_converted_keymap(data.layers);
               let msg = this.$t('statsTemplate', stats);
               if (stats.warnings.length > 0 || stats.errors.length > 0) {
                 msg = `${msg}\n${stats.warnings.join('\n')}`;
