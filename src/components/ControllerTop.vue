@@ -114,7 +114,7 @@ export default {
       get() {
         return this.$store.state.app.keyboard;
       },
-      set(value) {
+      async set(value) {
         if (this.isDirty) {
           if (
             !confirm(clearKeymapTemplate({ action: 'change your keyboard' }))
@@ -127,9 +127,8 @@ export default {
             return false;
           }
         }
-        this.updateKeyboard(value).then(() => {
-          this.loadDefault(true);
-        });
+        await this.updateKeyboard(value);
+        await this.loadDefault(true);
       }
     },
     layout: {
@@ -221,45 +220,43 @@ export default {
      * @param {boolean} isAutoInit If the method is called by the code
      * @return {object} promise when it has completed
      */
-    loadDefault(isAutoInit = false) {
+    async loadDefault(isAutoInit = false) {
       if (this.isDirty) {
         if (!confirm(clearKeymapTemplate({ action: 'load default keymap' }))) {
           return false;
         }
       }
       const store = this.$store;
-      this.loadDefaultKeymap()
-        .then(data => {
-          if (data) {
-            console.log(data);
-            this.updateLayout(data.layout);
-            let promise = new Promise(resolve =>
-              store.commit('keymap/setLoadingKeymapPromise', resolve)
-            ).then(async () => {
-              // clear the keymap name for the default keymap
-              // otherwise it overrides the default getter
-              this.updateKeymapName('');
-              const stats = this.load_converted_keymap(data.layers);
-              let msg = this.$t('statsTemplate', stats);
-              if (stats.warnings.length > 0 || stats.errors.length > 0) {
-                msg = `${msg}\n${stats.warnings.join('\n')}`;
-                msg = `${msg}\n${stats.errors.join('\n')}`;
-              }
-              store.commit('status/append', msg);
-              if (!isAutoInit) {
-                store.commit('keymap/setDirty');
-              }
-            });
-            return promise;
-          }
-          return data;
-        })
-        .catch(error => {
-          statusError(
-            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+      try {
+        const data = await this.loadDefaultKeymap();
+        if (data) {
+          console.log(data);
+          this.updateLayout(data.layout);
+          let promise = await new Promise(resolve =>
+            store.commit('keymap/setLoadingKeymapPromise', resolve)
           );
-          console.log('error loadDefault', error);
-        });
+          // clear the keymap name for the default keymap
+          // otherwise it overrides the default getter
+          this.updateKeymapName('');
+          const stats = await this.load_converted_keymap(data.layers);
+          let msg = this.$t('statsTemplate', stats);
+          if (stats.warnings.length > 0 || stats.errors.length > 0) {
+            msg = `${msg}\n${stats.warnings.join('\n')}`;
+            msg = `${msg}\n${stats.errors.join('\n')}`;
+          }
+          store.commit('status/append', msg);
+          if (!isAutoInit) {
+            store.commit('keymap/setDirty');
+          }
+          return promise;
+        }
+        return data;
+      } catch (error) {
+        statusError(
+          `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+        );
+        console.log('error loadDefault', error);
+      }
     },
     // TODO: This needs to be moved in an action
     // selectInitialKeyboard
@@ -314,12 +311,13 @@ export default {
      * @param {string} newKeyboard to switch to
      * @return {object} promise when it has been done or error
      */
-    updateKeyboard(newKeyboard) {
+    async updateKeyboard(newKeyboard) {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
       }
-      return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
+      await this.changeKeyboard(newKeyboard);
+      this.postUpdateKeyboard;
     },
     favKeyboard() {
       if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
@@ -328,9 +326,9 @@ export default {
         this.setFavoriteKeyboard(this.keyboard);
       }
     },
-    postUpdateKeyboard() {
+    async postUpdateKeyboard() {
       this.$store.commit('status/clear');
-      this.$router
+      await this.$router
         .replace({
           path: `/${this.keyboard}/${this.layout}`
         })
@@ -348,10 +346,10 @@ export default {
      * @param {object\string} e event object or layout name
      * @return {undefined}
      */
-    updateLayout(e) {
+    async updateLayout(e) {
       const newLayout = e.target ? e.target.value : e;
       this.setLayout(newLayout);
-      this.$router
+      await this.$router
         .replace({ path: `/${this.keyboard}/${this.layout}` })
         .catch(err => {
           if (err.name !== 'NavigationDuplicated') {
@@ -404,11 +402,14 @@ export default {
       firstRun: true
     };
   },
-  mounted() {
-    this.initializeKeyboards().then(() => {
-      this.loadDefault(true);
-      this.initTemplates();
-    });
+  async mounted() {
+    try {
+      await this.initializeKeyboards();
+      await this.loadDefault(true);
+      await this.initTemplates();
+    } catch (err) {
+      console.log('Unexpected error', err);
+    }
   }
 };
 </script>

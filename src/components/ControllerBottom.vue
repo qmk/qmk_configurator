@@ -211,24 +211,23 @@ export default {
     ]),
     ...mapActions('status', ['viewReadme']),
     ...mapActions('keymap', ['load_converted_keymap']),
-    importUrlkeymap: function() {
-      this.loadKeymapFromUrl(this.urlImport)
-        .then(data => {
-          this.loadJsonData(data);
-        })
-        .catch(() => {
-          alert('Seems like there is an issue trying to get the file');
-        });
+    async importUrlkeymap() {
+      try {
+        const data = await this.loadKeymapFromUrl(this.urlImport);
+        await this.loadJsonData(data);
+      } catch (err) {
+        alert('Seems like there is an issue trying to get the file');
+      }
       this.closeVeil();
     },
-    openVeil: function() {
+    openVeil() {
       this.isVeilOpened = true;
       this.stopListening();
       Vue.nextTick(() => {
         this.$refs.urlimport.focus();
       });
     },
-    closeVeil: function() {
+    closeVeil() {
       this.startListening();
       this.urlImport = '';
       this.isVeilOpened = false;
@@ -333,7 +332,7 @@ export default {
         ? this.remapKeyboard(keyboard, layout, ++depth)
         : { keyboard, layout };
     },
-    loadJsonData(data) {
+    async loadJsonData(data) {
       if (data.version && data.keyboard && data.keyboard.settings) {
         alert(this.$t('errors.kbfirmwareJSONUnsupported'));
         return;
@@ -359,10 +358,11 @@ export default {
       );
 
       this.setKeyboard(data.keyboard);
-      this.changeKeyboard(this.keyboard).then(() => {
+      try {
+        await this.changeKeyboard(this.keyboard);
         this.setLayout(data.layout);
         // todo validate these values
-        this.$router
+        await this.$router
           .replace({
             path: `/${data.keyboard}/${data.layout}`
           })
@@ -374,33 +374,33 @@ export default {
           });
 
         var store = this.$store;
-        let promise = new Promise(resolve =>
+        let promise = await new Promise(resolve =>
           this.setLoadingKeymapPromise(resolve)
         );
-        promise.then(() => {
-          const stats = this.load_converted_keymap(data.layers);
-          let msg = this.$t('statsTemplate', stats);
-          if (stats.warnings.length > 0 || stats.errors.length > 0) {
-            msg = `${msg}\n${stats.warnings.join('\n')}`;
-            msg = `${msg}\n${stats.errors.join('\n')}`;
+        const stats = await this.load_converted_keymap(data.layers);
+        let msg = this.$t('statsTemplate', stats);
+        if (stats.warnings.length > 0 || stats.errors.length > 0) {
+          msg = `${msg}\n${stats.warnings.join('\n')}`;
+          msg = `${msg}\n${stats.errors.join('\n')}`;
+        }
+        this.deferredMessage(msg);
+        this.viewReadme(this.keyboard).then(() => {
+          let keymapName = data.keymap;
+          if (keymapName.endsWith('.json')) {
+            keymapName = keymapName.replace(/.json$/, '');
           }
-          this.deferredMessage(msg);
-          this.viewReadme(this.keyboard).then(() => {
-            let keymapName = data.keymap;
-            if (keymapName.endsWith('.json')) {
-              keymapName = keymapName.replace(/.json$/, '');
-            }
-            this.setKeymapName(keymapName);
-            this.setDirty();
-          });
+          this.setKeymapName(keymapName);
+          this.setDirty();
         });
         disableOtherButtons();
-      });
+      } catch (err) {
+        console.log('Unexpected error', err);
+      }
     },
-    importJSONOnLoad() {
+    async importJSONOnLoad() {
       try {
         const data = JSON.parse(this.reader.result);
-        this.loadJsonData(data);
+        await this.loadJsonData(data);
       } catch (error) {
         console.log(error);
         alert(this.$t('errors.invalidQMKKeymap'));
@@ -419,7 +419,7 @@ export default {
       this.reader.readAsText(first(files));
       this.$refs.infoPreviewElement.value = ''; // clear value for chrome issue #83
     },
-    previewInfoOnLoad() {
+    async previewInfoOnLoad() {
       const jsonText = this.reader.result;
       let data;
       try {
@@ -447,7 +447,8 @@ export default {
        * TODO come up with a better way of resetting keymap than depending on visual keymap change detection
        */
       const store = this.$store;
-      this.loadLayouts(data).then(() => {
+      try {
+        await this.loadLayouts(data);
         // This is a special hack to get around change detection
         this.setLayout('  ');
         Vue.nextTick(() => {
@@ -468,7 +469,9 @@ export default {
             ].join('\n')
           );
         });
-      });
+      } catch (err) {
+        console.log('unexpected error', err);
+      }
     },
     printKeymaps() {
       this.$router.push('/print');
