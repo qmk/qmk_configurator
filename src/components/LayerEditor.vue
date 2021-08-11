@@ -6,7 +6,7 @@
   </div>
 </template>
 <script>
-import Layer from 'Layer';
+import Layer from './Layer';
 export default {
   name: 'layer-editor',
   components: {

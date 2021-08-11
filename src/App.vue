@@ -78,6 +78,7 @@ import { createNamespacedHelpers, mapActions, mapGetters } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
 import SnowFlake from '@/components/SnowFlake';
+import LayerEditorPanel from '@/components/LayerEditorPanel';
 
 export default {
   name: 'app',
@@ -91,8 +92,10 @@ export default {
       revision: process.env.VUE_APP_TRAVIS_COMMIT || 'dev',
       potatoFact: 'QMK for potatoes',
       interval: 120000,
-      destroyWatcher: undefined,
+      settingsWatcher: undefined,
       settingsPanel: undefined,
+      layerEditorPanel: undefined,
+      layerEditorWatcher: undefined,
       settingsClasses: '',
       hover: false
     };
@@ -109,15 +112,22 @@ export default {
     window.addEventListener('beforeunload', this.showConfirmationPrompt);
   },
   mounted() {
-    this.destroyWatcher = this.$store.watch(
+    this.settingsWatcher = this.$store.watch(
       state => state.app.settingsPanelVisible,
       this.toggleSettingsPanel
+    );
+    this.layerEditorWatcher = this.$store.watch(
+      state => state.app.layerEditorPanelVisible,
+      this.toggleLayerEditorPanel
     );
   },
   beforeDestroy() {
     clearInterval(this.interval);
-    if (isFunction(this.destroyWatcher)) {
-      this.destroyWatcher();
+    if (isFunction(this.settingsWatcher)) {
+      this.settingsWatcher();
+    }
+    if (isFunction(this.layerEditorWatcher)) {
+      this.layerEditorWatcher();
     }
     // remove event listener
     window.removeEventListener('beforeunload', this.showConfirmationPrompt);
@@ -147,7 +157,8 @@ export default {
       'setShowSpinner',
       'setSettingsPanel',
       'toggleTutorial',
-      'setMessage'
+      'setMessage',
+      'setLayerEditorPanel'
     ]),
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
@@ -194,6 +205,23 @@ export default {
     },
     showSettings() {
       this.setSettingsPanel(true);
+    },
+    toggleLayerEditorPanel(visible) {
+      if (visible) {
+        this.layerEditorPanel = this.$showPanel({
+          component: LayerEditorPanel,
+          openOn: 'left',
+          props: {},
+          width: '700px'
+        });
+        this.layerEditorPanel.promise.then(() => {
+          // user clicked veil
+          this.setLayerEditorPanel(false);
+        });
+      } else {
+        this.layerEditorPanel.hide();
+        this.layerEditorPanel = undefined;
+      }
     }
   }
 };

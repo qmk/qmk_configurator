@@ -16,7 +16,7 @@
     <button
       class="clear-button"
       v-tooltip="$t('layer.title')"
-      @click="clearLayer"
+      @click="editLayers"
     >
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
@@ -57,6 +57,7 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['changeLayer', 'initLayer']),
+    ...mapMutations('app', ['setLayerEditorPanel']),
     clicked(id) {
       if (isUndefined(this.getLayer(id))) {
         this.initLayer({
@@ -74,6 +75,9 @@ export default {
         });
         this.$store.commit('keymap/setDirty');
       }
+    },
+    editLayers() {
+      this.setLayerEditorPanel(true);
     }
   }
 };
