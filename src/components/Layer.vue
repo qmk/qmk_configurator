@@ -1,12 +1,12 @@
 <template>
   <div class="edited-layer">
     <div>
-      <button :disabled="isUpDisabled">
+      <button class="up-button" :disabled="isUpDisabled">
         <font-awesome-icon size="lg" fixed-width :icon="arrowUp" />
       </button>
     </div>
     <div>
-      <button :disabled="isDownDisabled">
+      <button class="down-button" :disabled="isDownDisabled">
         <font-awesome-icon size="lg" fixed-width :icon="arrowDown" />
       </button>
     </div>
@@ -15,13 +15,19 @@
       {{ layerSummary }}
     </div>
     <div>
-      <button><font-awesome-icon size="lg" fixed-width icon="copy" /></button>
+      <button class="copy-button" title="copy">
+        <font-awesome-icon size="lg" fixed-width icon="copy" />
+      </button>
     </div>
     <div>
-      <button><font-awesome-icon size="lg" fixed-width icon="paste" /></button>
+      <button class="paste-button" title="paste">
+        <font-awesome-icon size="lg" fixed-width icon="paste" />
+      </button>
     </div>
     <div>
-      <button><font-awesome-icon size="lg" fixed-width icon="trash" /></button>
+      <button class="trash-button" title="clear">
+        <font-awesome-icon size="lg" fixed-width icon="trash" />
+      </button>
     </div>
   </div>
 </template>
@@ -61,7 +67,21 @@ export default {
   border: 2px solid #3939bf;
   padding: 10px 15px;
 }
-.margin-right-1 {
-  margin-right: 5px;
+.trash-button {
+  background: #b33a3a;
+  color: #eee;
+  border-color: #a32a2a;
+}
+.paste-button {
+  background: #fca307;
+  border-color: #dc9307;
+  color: #eee;
+}
+.copy-button,
+.up-button,
+.down-button {
+  background: #a1d078;
+  border-color: #91c068;
+  color: #eee;
 }
 </style>
