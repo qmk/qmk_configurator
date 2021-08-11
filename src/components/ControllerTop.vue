@@ -239,7 +239,7 @@ export default {
               // clear the keymap name for the default keymap
               // otherwise it overrides the default getter
               this.updateKeymapName('');
-              const stats = load_converted_keymap(data.layers);
+              const stats = this.load_converted_keymap(data.layers);
               let msg = this.$t('statsTemplate', stats);
               if (stats.warnings.length > 0 || stats.errors.length > 0) {
                 msg = `${msg}\n${stats.warnings.join('\n')}`;

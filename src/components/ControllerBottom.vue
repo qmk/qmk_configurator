@@ -135,7 +135,6 @@ import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 import ElectronBottomControls from './ElectronBottomControls';
 
 import remap from '@/remap';
-import { statusError } from '../jquery';
 
 const encoding = 'data:application/json;charset=utf-8,';
 
