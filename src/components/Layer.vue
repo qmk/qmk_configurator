@@ -1,12 +1,20 @@
 <template>
   <div class="edited-layer">
     <div>
-      <button class="up-button button-defaults" :disabled="isUpDisabled">
+      <button
+        class="up-button button-defaults"
+        :disabled="isUpDisabled"
+        v-tooltip="$t('layerEditorPanel.moveup.title')"
+      >
         <font-awesome-icon size="lg" fixed-width :icon="arrowUp" />
       </button>
     </div>
     <div>
-      <button class="down-button button-defaults" :disabled="isDownDisabled">
+      <button
+        class="down-button button-defaults"
+        :disabled="isDownDisabled"
+        v-tooltip="$t('layerEditorPanel.movedown.title')"
+      >
         <font-awesome-icon size="lg" fixed-width :icon="arrowDown" />
       </button>
     </div>
@@ -15,17 +23,26 @@
       {{ layerSummary }}
     </div>
     <div>
-      <button class="copy-button button-defaults" title="copy">
+      <button
+        class="copy-button button-defaults"
+        v-tooltip="$t('layerEditorPanel.copy.title')"
+      >
         <font-awesome-icon size="lg" fixed-width icon="copy" />
       </button>
     </div>
     <div>
-      <button class="paste-button button-defaults" title="paste">
+      <button
+        class="paste-button button-defaults"
+        v-tooltip="$t('layerEditorPanel.paste.title')"
+      >
         <font-awesome-icon size="lg" fixed-width icon="paste" />
       </button>
     </div>
     <div>
-      <button class="trash-button button-defaults" title="clear">
+      <button
+        class="trash-button button-defaults"
+        v-tooltip="$t('layerEditorPanel.clear.title')"
+      >
         <font-awesome-icon size="lg" fixed-width icon="trash" />
       </button>
     </div>

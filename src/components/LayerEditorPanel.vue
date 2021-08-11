@@ -1,12 +1,8 @@
 <template>
   <div class="layer-editor-panel">
-    <h2>Layer Editor</h2>
+    <h2>{{ $t('layerEditorPanel.header') }}</h2>
     <p style="text-align: justify;">
-      Edit layers by moving them up and down or copy and pasting them. Delete
-      sets it to default key value. Caveats, empty layers take up more precious
-      flash, so try not to leave empty intermediate layers. If a key isn't set
-      to KC_TRNS it will not drop through to next layer. Layer 0 is the base
-      layer. Layer 15 is the highest layer configurator supports.
+      {{ $t('layerEditorPanel.helpText') }}
     </p>
     <LayerEditor :layers="layers"></LayerEditor>
   </div>
