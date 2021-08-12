@@ -1,8 +1,8 @@
 {
   "keyboard": "poker87c",
   "keymap": "default",
-  "commit": "b976fcbb44203e10fc8a106dec38cdb72224e43f",
-  "layout": "LAYOUT",
+  "commit": "71ce2b0d79eb3c09c056d91c787e9c793f645b37",
+  "layout": "LAYOUT_all",
   "layers": [
     [
       "KC_ESC",             "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",                "KC_PSCR", "KC_SLCK", "KC_PAUS",
