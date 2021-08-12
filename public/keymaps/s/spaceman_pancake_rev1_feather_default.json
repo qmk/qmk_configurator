@@ -1,7 +1,7 @@
 {
-  "keyboard": "spaceman/pancake/promicro",
+  "keyboard": "spaceman/pancake/rev1/feather",
   "keymap": "default",
-  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
+  "commit": "bfa7449041fe5f137f37199804cd4dd9e02d47a8",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
