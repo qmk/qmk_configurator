@@ -588,6 +588,7 @@ function getExclusionList() {
     'suihankey/split',
     'tkw/stoutgat/v2',
     'treadstone48',
+    'tronguylabs/m122_3270',
     'underscore33',
     'unison',
     'uzu42',
