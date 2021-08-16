@@ -2189,7 +2189,7 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.3, ajv@^6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^8.0.1:
+ajv@^8.0.1, ajv@^8.6.2:
   version "8.6.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.6.2.tgz#2fb45e0e5fcbc0813326c1c3da535d1881bb0571"
   integrity sha512-9807RlWAgT564wT+DjeyU5OFMPjmzxVobvDFmNAhY+5zD6A2ly3jDp6sgnfyDtlIQ+7H97oc/DGCzzfu9rjw9w==
@@ -11176,6 +11176,11 @@ v8-compile-cache@^2.0.3:
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.3.0.tgz#2de19618c66dc247dcfb6f99338035d8245a2cee"
   integrity sha512-l8lCEmLcLYZh4nbunNZvQCJc5pv7+RCwa8q/LdUx8u7lsWvPDKmpodJAJNwkAhJC//dFY48KuIEmjtd4RViDrA==
 
+valid-json-cli@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/valid-json-cli/-/valid-json-cli-1.4.1.tgz#ba2ae4f6a19fc9929a5f1744a0aff5e95ac5a541"
+  integrity sha512-VFnnxOwOEK1fe1iMkZkQ3VZyYuEOaW9ZtFG9fr5FZRpE6oMdbTNkZk59YN6fxWIv5ld3ugmEsVIzOQpyne9oyQ==
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -11183,6 +11188,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+validjson@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/validjson/-/validjson-0.1.0.tgz#926b3212b2360b5d37eb6fe3b3d27d991f07e9fa"
+  integrity sha1-kmsyErI2C10362/js9J9mR8H6fo=
 
 vary@~1.1.2:
   version "1.1.2"
