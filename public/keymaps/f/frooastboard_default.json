@@ -1,0 +1,36 @@
+{
+  "keyboard": "frooastboard",
+  "keymap": "default",
+  "commit": "0014c3237556b8c94bbf6d287d53a7b55534fa69",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",         "KC_X",
+      "LT(1,KC_ESC)", "KC_TILD"
+    ],
+    [
+      "KC_F23",  "KC_F24",
+      "KC_TRNS", "TO(2)"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD",
+      "TO(3)",   "TO(0)"
+    ],
+    [
+      "RGB_HUD", "RGB_HUI",
+      "TO(4)",   "TO(2)"
+    ],
+    [
+      "RGB_SAD", "RGB_SAI",
+      "TO(5)",   "TO(3)"
+    ],
+    [
+      "RGB_VAD", "RGB_VAI",
+      "TO(6)",   "TO(4)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS",
+      "RESET",   "TO(5)"
+    ]
+  ]
+}
