@@ -62,8 +62,6 @@
     "sass-loader": "8",
     "serialize-javascript": "^3.1.0",
     "start-server-and-test": "^1.10.0",
-    "valid-json-cli": "^1.4.1",
-    "validjson": "^0.1.0",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.11"
   },
