@@ -24,17 +24,19 @@ async function* walk(dir) {
   }
 }
 
+const validate = ajv.compile(schema); // compile schema to avoid busy work
+
 const [, , dirToScan] = process.argv;
 let count = 0;
 let error = false;
 async function main() {
   for await (const p of walk(dirToScan)) {
-    if (!p.endsWith('.json')) {
+    if (path.extname(p) != '.json') {
       continue;
     }
     try {
       const jsonFile = fs.readFileSync(p, { utf8: true });
-      const valid = ajv.validate(schema, JSON.parse(jsonFile));
+      const valid = validate(JSON.parse(jsonFile));
       count++;
       if (!valid) {
         console.log(`${p} ${JSON.stringify(ajv.errors)}`);
