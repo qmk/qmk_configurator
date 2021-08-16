@@ -1,6 +1,6 @@
 <template>
   <div id="app" @click="dismiss">
-    <span style="display:none">{{ revision }}</span>
+    <span style="display: none">{{ revision }}</span>
     <div>
       <header>
         <p class="random-potato">{{ potatoFact }}</p>
@@ -13,7 +13,7 @@
     <footer>
       <p>{{ $t('maintain') }}</p>
       <p>{{ $t('hostedOn') }}</p>
-      <p style="font-size:10px">version: {{ revision }}</p>
+      <p style="font-size: 10px">version: {{ revision }}</p>
     </footer>
     <div
       class="help"
@@ -110,7 +110,7 @@ export default {
   },
   mounted() {
     this.destroyWatcher = this.$store.watch(
-      state => state.app.settingsPanelVisible,
+      (state) => state.app.settingsPanelVisible,
       this.toggleSettingsPanel
     );
   },

@@ -33,7 +33,7 @@ export default {
     ...mapState('app', ['configuratorSettings']),
     ...mapGetters('keymap', ['getLayer']),
     layers() {
-      let layers = rangeRight(16).map(layer => {
+      let layers = rangeRight(16).map((layer) => {
         let clazz = [layer];
         let _layer = this.getLayer(layer);
         if (!isUndefined(_layer)) {

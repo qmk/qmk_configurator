@@ -40,8 +40,9 @@
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
-              >{{ name }}</option
             >
+              {{ name }}
+            </option>
           </select>
           <a
             id="favorite-colorway"
@@ -97,11 +98,11 @@ export default {
       }
     },
     displayColorways() {
-      return this.colorways.map(keyset => {
+      return this.colorways.map((keyset) => {
         return keyset
           .replace(/-/g, ' ')
           .split(' ')
-          .map(word => capitalize(word))
+          .map((word) => capitalize(word))
           .join(' ')
           .replace(/Gmk/, 'GMK')
           .replace(/^Sa/, 'SA')
@@ -141,9 +142,10 @@ export default {
     await this.initKeypressListener();
     // Loading favorite color
     if (this.configuratorSettings.favoriteColor) {
-      const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+      const favoriteColor =
+        this.configuratorSettings.favoriteColor.toLowerCase();
       this.curIndex = this.displayColorways.findIndex(
-        color => color.toLowerCase() === favoriteColor
+        (color) => color.toLowerCase() === favoriteColor
       );
     }
   },

@@ -246,9 +246,6 @@ export default {
       }
       this.setSelected(id);
     },
-    setMeta(meta) {
-      this.meta = meta;
-    },
     dropped(ev) {
       this.setSelected(this.id);
       let json = JSON.parse(ev.dataTransfer.getData('application/json'));

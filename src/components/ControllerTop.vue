@@ -34,8 +34,9 @@
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-            >{{ layoutName }}</option
           >
+            {{ layoutName }}
+          </option>
         </select>
       </div>
       <div class="topctrl-keymap-name">
@@ -167,17 +168,17 @@ export default {
      * When changes happen locally we update the store.
      * When changes happen to the store we update the local version.
      */
-    keymapName: function(newKeymapName, oldKeymapName) {
+    keymapName: function (newKeymapName, oldKeymapName) {
       if (newKeymapName !== oldKeymapName) {
         this.updateKeymapName(newKeymapName);
       }
     },
-    realKeymapName: function(newName, oldName) {
+    realKeymapName: function (newName, oldName) {
       if (newName !== oldName) {
         this.keymapName = newName;
       }
     },
-    $route: function(to /*, from*/) {
+    $route: function (to /*, from*/) {
       if (to.query) {
         const filter = to.query.filter;
         if (!isUndefined(filter)) {
@@ -232,7 +233,7 @@ export default {
         if (data) {
           console.log(data);
           this.updateLayout(data.layout);
-          let promise = await new Promise(resolve =>
+          let promise = await new Promise((resolve) =>
             store.commit('keymap/setLoadingKeymapPromise', resolve)
           );
           // clear the keymap name for the default keymap
@@ -332,7 +333,7 @@ export default {
         .replace({
           path: `/${this.keyboard}/${this.layout}`
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.name !== 'NavigationDuplicated') {
             // ignore this harmless error otherwise report
             throw err;
@@ -351,7 +352,7 @@ export default {
       this.setLayout(newLayout);
       await this.$router
         .replace({ path: `/${this.keyboard}/${this.layout}` })
-        .catch(err => {
+        .catch((err) => {
           if (err.name !== 'NavigationDuplicated') {
             throw err;
           }

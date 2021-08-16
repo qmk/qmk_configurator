@@ -111,16 +111,16 @@ new Vue({
   router,
   store,
   i18n,
-  render: h => h(App)
+  render: (h) => h(App)
 }).$mount('#app');
 
 new Vue({
   i18n,
   store,
-  render: h => h(StatusBar)
+  render: (h) => h(StatusBar)
 }).$mount('#status-app');
 
 new Vue({
   i18n,
-  render: h => h(BrowserWarn)
+  render: (h) => h(BrowserWarn)
 }).$mount('#browser-warn-container');

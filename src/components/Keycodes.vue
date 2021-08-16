@@ -4,7 +4,7 @@
 -->
 <template>
   <div id="keycodes-section">
-    <div style="text-align: left; margin-left: 10px;">
+    <div style="text-align: left; margin-left: 10px">
       <p>
         <label>{{ $t('keycodes.label') }}:</label>
         <span class="hint">
@@ -33,7 +33,7 @@
           ></span
         >
         <span class="end-tab"
-          ><font-awesome-icon class="keycode-search-icon" icon="search"/><input
+          ><font-awesome-icon class="keycode-search-icon" icon="search" /><input
             @focus="stopListening"
             @blur="startListening"
             type="text"

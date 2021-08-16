@@ -19,7 +19,7 @@ const actions = {
     const r = await axios.get(backend_keyboard_list_url);
     if (r.status === 200) {
       const exclude = getExclusionList();
-      const results = r.data.keyboards.filter(keeb => {
+      const results = r.data.keyboards.filter((keeb) => {
         return isUndefined(exclude[keeb]);
       });
       commit('setKeyboards', results);
@@ -36,7 +36,7 @@ const actions = {
     const keyboardName = state.keyboard.replace(/\//g, '_');
     return axios
       .get(`keymaps/${keyboardPath}/${keyboardName}_default.json`)
-      .then(r => {
+      .then((r) => {
         if (r.status === 200) {
           return r.data;
         }
@@ -46,7 +46,7 @@ const actions = {
    * load keymap from the selected URL
    */
   async loadKeymapFromUrl(_, url) {
-    return axios.get(url).then(r => {
+    return axios.get(url).then((r) => {
       return r.data;
     });
   },
@@ -59,7 +59,7 @@ const actions = {
   changeKeyboard({ state, commit, dispatch }, keyboard) {
     const store = this;
     let clearKeymap = false;
-    const promise = new Promise(resolve => {
+    const promise = new Promise((resolve) => {
       commit('disablePreview');
       commit('enableCompile');
       if (state.keyboard !== keyboard) {
@@ -108,7 +108,7 @@ const actions = {
   loadLayouts({ commit, state }, preview) {
     if (!isUndefined(preview)) {
       preview.layouts['  '] = { layout: [] };
-      let p = new Promise(resolve => {
+      let p = new Promise((resolve) => {
         let fake = {
           keyboards: {}
         };
@@ -121,7 +121,7 @@ const actions = {
     }
     return axios
       .get(`${backend_keyboards_url}/${state.keyboard}/info.json`)
-      .then(resp => {
+      .then((resp) => {
         commit('setKeyboardMeta', resp);
         commit('processLayouts', resp);
         return resp;

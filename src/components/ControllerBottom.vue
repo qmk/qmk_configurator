@@ -366,7 +366,7 @@ export default {
           .replace({
             path: `/${data.keyboard}/${data.layout}`
           })
-          .catch(err => {
+          .catch((err) => {
             if (err.name !== 'NavigationDuplicated') {
               // ignore nav errors
               console.error(err);
@@ -374,7 +374,7 @@ export default {
           });
 
         var store = this.$store;
-        let promise = await new Promise(resolve =>
+        let promise = await new Promise((resolve) =>
           this.setLoadingKeymapPromise(resolve)
         );
         const stats = await this.load_converted_keymap(data.layers);

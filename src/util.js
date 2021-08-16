@@ -35,7 +35,7 @@ function getPreferredLayout(layouts) {
     return 'KEYMAP';
   }
   // avoid keymaps ending with _kc unless we have no other choice
-  let nextBest = mykeys.filter(key => !key.endsWith('_kc'));
+  let nextBest = mykeys.filter((key) => !key.endsWith('_kc'));
   if (nextBest.length > 0) {
     return first(nextBest);
   }

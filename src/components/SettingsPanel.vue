@@ -86,9 +86,9 @@
       </div>
       <div>
         <select id="setting-panel-language" v-model="language">
-          <option v-for="l in languages" :key="l.value" :value="l.value">{{
-            l.label
-          }}</option>
+          <option v-for="l in languages" :key="l.value" :value="l.value">
+            {{ l.label }}
+          </option>
         </select>
       </div>
       <div>

@@ -25,7 +25,7 @@ const mutations = {
   },
   disablePreview(state) {
     state.isPreview = false;
-    state.keyboards = state.keyboards.filter(k => k !== PREVIEW_LABEL);
+    state.keyboards = state.keyboards.filter((k) => k !== PREVIEW_LABEL);
     state.keymapName = '';
   },
   setKeyboard(state, _keyboard) {
@@ -81,7 +81,7 @@ const mutations = {
   },
   setFilter(state, filter) {
     state.filter = filter;
-    let keyboards = state._keyboards.filter(k => {
+    let keyboards = state._keyboards.filter((k) => {
       if (state.filter === '') {
         return true;
       }
@@ -116,7 +116,7 @@ const mutations = {
         // parse the layouts into internal format
         state.layouts = reduce(
           layouts,
-          function(acc, _layout, key) {
+          function (acc, _layout, key) {
             acc[key] = _layout.layout ? _layout.layout : _layout;
             return acc;
           },

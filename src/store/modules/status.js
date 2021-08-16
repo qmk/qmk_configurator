@@ -8,9 +8,9 @@ const state = {
   deferredMessage: ''
 };
 const getters = {
-  message: state => state.message,
-  empty: state => state.message === '',
-  scrollToLatest: state => state.scrollToLatest
+  message: (state) => state.message,
+  empty: (state) => state.message === '',
+  scrollToLatest: (state) => state.scrollToLatest
 };
 const actions = {
   scrollToEnd({ commit }) {
@@ -20,7 +20,7 @@ const actions = {
   viewReadme({ state, commit, dispatch }, _keyboard) {
     return axios
       .get(backend_readme_url_template({ keyboard: _keyboard }))
-      .then(result => {
+      .then((result) => {
         if (result.status === 200) {
           commit('clear');
           commit('append', escape(result.data));

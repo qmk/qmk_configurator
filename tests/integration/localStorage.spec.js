@@ -1,4 +1,4 @@
-describe('Simple browsing', function() {
+describe('Simple browsing', function () {
   before(() => {
     cy.viewport('macbook-15');
     cy.server();
@@ -15,7 +15,7 @@ describe('Simple browsing', function() {
   it('Should load darkmode from localstorage', () => {
     cy.clearLocalStorage();
     cy.visit('/', {
-      onBeforeLoad: contentWindow => {
+      onBeforeLoad: (contentWindow) => {
         contentWindow.localStorage.setItem(
           'configuratorSettings',
           JSON.stringify({
@@ -53,7 +53,7 @@ describe('Simple browsing', function() {
   it('Should load favorite keyboard from localstorage', () => {
     cy.clearLocalStorage();
     cy.visit('/', {
-      onBeforeLoad: contentWindow => {
+      onBeforeLoad: (contentWindow) => {
         contentWindow.localStorage.setItem(
           'configuratorSettings',
           JSON.stringify({
@@ -84,7 +84,7 @@ describe('Simple browsing', function() {
   it('Should change language, set to localstorage and retrieve it', () => {
     cy.clearLocalStorage();
     cy.visit('/', {
-      onBeforeLoad: win => {
+      onBeforeLoad: (win) => {
         Object.defineProperty(win.navigator, 'language', {
           value: 'en-US'
         });
@@ -100,7 +100,7 @@ describe('Simple browsing', function() {
     cy.get('.slideout-panel-bg').click();
     cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
     cy.visit('/', {
-      onBeforeLoad: win => {
+      onBeforeLoad: (win) => {
         Object.defineProperty(win.navigator, 'language', {
           value: 'en-US'
         });

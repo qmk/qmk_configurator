@@ -33,7 +33,7 @@ function compileLayout(_keyboard, _keymapName, _layout) {
   );
   axios
     .post(backend_compile_url, request)
-    .then(resp => {
+    .then((resp) => {
       const { status, data } = resp;
       if (status === 200) {
         store.commit('app/setShowSpinner', true);
@@ -47,7 +47,7 @@ function compileLayout(_keyboard, _keymapName, _layout) {
         throw resp;
       }
     })
-    .catch(err => {
+    .catch((err) => {
       window.alert('Unexpected error ', console.log(err));
     });
 }
@@ -82,7 +82,7 @@ function check_status() {
   const start = performance.now();
   axios
     .get(url)
-    .then(resp => {
+    .then((resp) => {
       console.log(`response in ${performance.now() - start}ms`, resp);
       let msg;
       let { status, data } = resp;
@@ -148,7 +148,7 @@ function check_status() {
       store.dispatch('status/scrollToEnd');
       compile_status = data.status;
     })
-    .catch(err => {
+    .catch((err) => {
       window.alert('Unexpected error while compiling ', console.log(err));
     });
 }

@@ -1,8 +1,8 @@
-describe('Tester feature', function() {
+describe('Tester feature', function () {
   beforeEach(() => {
     cy.viewport('macbook-15');
     cy.visit('/#/test', {
-      onBeforeLoad: win => {
+      onBeforeLoad: (win) => {
         Object.defineProperty(win.navigator, 'language', {
           value: 'en-US'
         });
@@ -12,23 +12,19 @@ describe('Tester feature', function() {
       }
     });
   });
-  it('Tester should be accessible and instantiated', function() {
+  it('Tester should be accessible and instantiated', function () {
     cy.get('.visual-tester-keymap', { timeout: 4000 }).should('be.visible');
   });
-  it('Should have an ANSI layout default', function() {
+  it('Should have an ANSI layout default', function () {
     // Ansi has 104 keys
-    cy.get('.visual-tester-keymap')
-      .find('div')
-      .should('have.length', 104);
+    cy.get('.visual-tester-keymap').find('div').should('have.length', 104);
   });
-  it('Should change layout', function() {
+  it('Should change layout', function () {
     // ISO has 105 keys
     cy.get('.layout-selector-radios > :nth-child(2)').click();
-    cy.get('.visual-tester-keymap')
-      .find('div')
-      .should('have.length', 105);
+    cy.get('.visual-tester-keymap').find('div').should('have.length', 105);
   });
-  it('Handle typing', function() {
+  it('Handle typing', function () {
     cy.get('body').trigger('keydown', { keyCode: 80, code: 'KeyP', key: 'p' });
     cy.get('.tester-key[title="P"]').should('have.class', 'active');
     cy.get('body').trigger('keyup', { keyCode: 80, code: 'KeyP', key: 'p' });
@@ -43,10 +39,8 @@ describe('Tester feature', function() {
     cy.get('.status-log').contains('80');
     cy.get('.status-log').contains('KEY-UP');
   });
-  it('Detects chatter', function() {
-    cy.get('#chatter-threshold')
-      .clear()
-      .type('666');
+  it('Detects chatter', function () {
+    cy.get('#chatter-threshold').clear().type('666');
     cy.get('body').click();
     cy.get('body').trigger('keydown', { keyCode: 80, code: 'KeyP', key: 'p' });
     cy.get('body').trigger('keyup', { keyCode: 80, code: 'KeyP', key: 'p' });
