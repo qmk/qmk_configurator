@@ -1,7 +1,7 @@
 {   
     "keyboard": "mini_elixivy",
-    "keymap": "default_d997cad",
-    "commit": "d997cad04f3c253e6f04bf4848e6378f8c3af3db",
+    "keymap": "default",
+    "commit": "8392729d7410246ab3228d47df272da5b0c72c99",
     "layout": "LAYOUT_65_ansi",
     "layers": [
         [
