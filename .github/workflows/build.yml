@@ -28,7 +28,7 @@ jobs:
       - name: Lint
         run: |
           yarn run prettier:check
-          yarn run prettier:json:check
+          yarn run json:check
           yarn run lint
       - name: Cypress run
         uses: cypress-io/github-action@v2

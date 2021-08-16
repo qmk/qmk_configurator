@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "yarn json:check && vue-cli-service lint",
+    "lint": "vue-cli-service lint",
     "i18n:chk": "node scripts/i18n/csv-sync.js chk",
     "i18n:sync": "node scripts/i18n/csv-sync.js sync",
     "prettier:check": "prettier -c \"./src/**/*.{js,vue,scss,css}\"",
