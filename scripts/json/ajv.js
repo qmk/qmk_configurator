@@ -27,11 +27,15 @@ async function* walk(dir) {
 const validate = ajv.compile(schema); // compile schema to avoid busy work
 
 const [, , dirToScan] = process.argv;
+
+// count of files processed
 let count = 0;
+// record an error happened. Keep going so we have a list of all bad files
 let error = false;
 async function main() {
   for await (const p of walk(dirToScan)) {
     if (path.extname(p) != '.json') {
+      // skip non-json files
       continue;
     }
     try {
