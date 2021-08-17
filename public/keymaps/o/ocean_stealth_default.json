@@ -1,0 +1,24 @@
+{
+  "keyboard": "ocean/stealth",
+  "keymap": "default",
+  "commit": "1e4f0d9dcf7fdcfce701e0b31dc3a9dfbda01fbf",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LSFT",
+      "KC_LCTL", "KC_N"
+    ],
+    [
+      "KC_TRNS",
+      "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",
+      "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",
+      "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
