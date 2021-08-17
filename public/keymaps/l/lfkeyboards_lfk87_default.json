@@ -1,7 +1,7 @@
 {
   "keyboard": "lfkeyboards/lfk87",
   "keymap": "default",
-  "commit": "f14629ed1cd7c7ec9089604d64f29a99981558e8",
+  "commit": "b1d8efeb596cfe088d25948484526e3cf5e6f360",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
@@ -21,12 +21,12 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_PGDN",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [
-      "TO(0)",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "BL_DEC",       "KC_NO",   "KC_NO",   "KC_NO",
-      "TO(0)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "BL_DEC",  "BL_INC",  "BL_TOGG",      "RGB_TOG", "RGB_VAI", "KC_NO",
-      "MU_MOD",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",        "RGB_MOD", "RGB_VAD", "KC_NO",
-      "AU_TOG",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "RESET",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "MU_TOG",  "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",                   "RGB_HUI",
-      "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                                    "KC_NO",   "KC_NO",   "KC_NO",   "KC_TRNS",      "RGB_SAD", "RGB_HUD", "RGB_SAI"
+      "TO(0)",              "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "BL_DEC",       "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "TO(0)",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "BL_DEC",  "BL_INC",  "BL_TOGG",      "RGB_TOG", "RGB_VAI", "XXXXXXX",
+      "MU_MOD",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",      "RGB_MOD", "RGB_VAD", "XXXXXXX",
+      "AU_TOG",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "RESET",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "MU_TOG",  "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX",                 "RGB_HUI",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX",                                  "XXXXXXX",                                  "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",      "RGB_SAD", "RGB_HUD", "RGB_SAI"
     ]
   ]
 }
