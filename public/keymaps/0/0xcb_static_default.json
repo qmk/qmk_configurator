@@ -1,8 +1,8 @@
 {
   "keyboard": "0xcb/static",
   "keymap": "default",
-  "commit": "8bba77db0da2aa189103ef9498780d2c915ad4e9",
-  "layout": "LAYOUT",
+  "commit": "be9031d01d3195f75243ef3bd2b3fed369e2c85a",
+  "layout": "LAYOUT_all",
   "layers": [
     [
                                                                                                                                "KC_MPLY",
