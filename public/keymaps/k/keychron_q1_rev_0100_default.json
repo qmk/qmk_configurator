@@ -2,7 +2,7 @@
   "keyboard": "keychron/q1/rev_0100",
   "keymap": "default",
   "commit": "145d89ab9192d08b7e22a14105d27988944b7b0c",
-  "layout": "LAYOUT_ANSI_82",
+  "layout": "LAYOUT_ansi_82",
   "layers":[
     [
      "KC_ESC",                "KC_BRID",  "KC_BRIU",   "KC_F3",     "KC_F4",    "RGB_VAD",  "RGB_VAI",  "KC_MPRV",  "KC_MPLY",  "KC_MNXT",  "KC_MUTE",  "KC_VOLD",  "KC_VOLU",  "KC_DEL",   "KC_INS",   
