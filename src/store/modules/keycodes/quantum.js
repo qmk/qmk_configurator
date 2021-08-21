@@ -313,7 +313,7 @@ export default [
     type: 'container',
     title: 'Left Control, Alt and GUI'
   },
-  { width: 250 },
+  { width: 2250 },
   {
     name: 'Meh',
     code: 'MEH(kc)',
