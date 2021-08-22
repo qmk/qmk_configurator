@@ -148,18 +148,19 @@ export default [
 
   {
     label:
-      'Mod key combinations (A = Alt, C = Control, G = Windows/Command, S = Shift)',
+      'Mod key combinations (A = Alt, C = Control, G = Windows/Command/GUI, S = Shift)',
     width: 'label'
   },
 
-  { name: 'LSft', code: 'LSFT(kc)', type: 'container' },
-  { name: 'LCtl', code: 'LCTL(kc)', type: 'container' },
-  { name: 'LAlt', code: 'LALT(kc)', type: 'container' },
-  { name: 'LGui', code: 'LGUI(kc)', type: 'container' },
-  { name: 'RSft', code: 'RSFT(kc)', type: 'container' },
-  { name: 'RCtl', code: 'RCTL(kc)', type: 'container' },
-  { name: 'RAlt', code: 'RALT(kc)', type: 'container' },
-  { name: 'RGui', code: 'RGUI(kc)', type: 'container' },
+  { name: 'LSft', code: 'LSFT(kc)', type: 'container', title: 'Left Shift' },
+  { name: 'LCtl', code: 'LCTL(kc)', type: 'container', title: 'Left Control' },
+  { name: 'LAlt', code: 'LALT(kc)', type: 'container', title: 'Left Alt' },
+  { name: 'LGui', code: 'LGUI(kc)', type: 'container', title: 'Left GUI' },
+  { width: 250 },
+  { name: 'RSft', code: 'RSFT(kc)', type: 'container', title: 'Right Shift' },
+  { name: 'RCtl', code: 'RCTL(kc)', type: 'container', title: 'Right Control' },
+  { name: 'RAlt', code: 'RALT(kc)', type: 'container', title: 'Right Alt' },
+  { name: 'RGui', code: 'RGUI(kc)', type: 'container', title: 'Right GUI' },
   { width: 0 },
   {
     name: 'LSft_T',
@@ -185,6 +186,7 @@ export default [
     type: 'container',
     title: 'Left GUI when held, kc when tapped'
   },
+  { width: 250 },
   {
     name: 'RSft_T',
     code: 'RSFT_T(kc)',
@@ -209,6 +211,7 @@ export default [
     type: 'container',
     title: 'Right GUI when held, kc when tapped'
   },
+  { width: 250 },
   {
     name: 'C_S_T',
     code: 'C_S_T(kc)',
@@ -216,71 +219,112 @@ export default [
     title: 'Left Control + Left Shift when held, kc when tapped'
   },
   {
-    name: 'All_T',
-    code: 'ALL_T(kc)',
+    name: 'LCA_T',
+    code: 'LCA_T(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT + LGUI when held, kc when tapped'
-  },
-  {
-    name: 'Meh_T',
-    code: 'MEH_T(kc)',
-    type: 'container',
-    title: 'LCTL + LSFT + LALT when held, kc when tapped'
-  },
-  {
-    name: 'LCAG_T',
-    code: 'LCAG_T(kc)',
-    type: 'container',
-    title: 'LCTL + LALT + LGUI when held, kc when tapped'
-  },
-  {
-    name: 'RCAG_T',
-    code: 'RCAG_T(kc)',
-    type: 'container',
-    title: 'RCTL + RALT + RGUI when held, kc when tapped'
+    title: 'Left Control + Left Alt when held, kc when tapped'
   },
   {
     name: 'SGUI_T',
     code: 'SGUI_T(kc)',
     type: 'container',
-    title: 'LGUI + LSFT when held, kc when tapped'
+    title: 'Left Shift + Left GUI when held, kc when tapped'
+  },
+  { width: 250 },
+  {
+    name: 'LCAG_T',
+    code: 'LCAG_T(kc)',
+    type: 'container',
+    title: 'Left Control, Alt and GUI when held, kc when tapped'
   },
   {
-    name: 'LCA_T',
-    code: 'LCA_T(kc)',
+    name: 'RCAG_T',
+    code: 'RCAG_T(kc)',
     type: 'container',
-    title: 'LCTL + LALT when held, kc when tapped'
+    title: 'Right Control, Alt and GUI when held, kc when tapped'
+  },
+  { width: 250 },
+  {
+    name: 'Meh_T',
+    code: 'MEH_T(kc)',
+    type: 'container',
+    title: 'Left Control, Shift and Alt when held, kc when tapped'
+  },
+  {
+    name: 'All_T',
+    code: 'ALL_T(kc)',
+    type: 'container',
+    title: 'Left Control, Shift, Alt and GUI when held, kc when tapped'
   },
   { width: 0 },
   {
-    name: 'Hyper',
-    code: 'HYPR(kc)',
+    name: 'LCA',
+    code: 'LCA(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT + LGUI'
+    title: 'Left Control + Left Alt'
   },
   {
-    name: 'Meh',
-    code: 'MEH(kc)',
+    name: 'LSA',
+    code: 'LSA(kc)',
     type: 'container',
-    title: 'LCTL + LSFT + LALT'
-  },
-  {
-    name: 'LCAG',
-    code: 'LCAG(kc)',
-    type: 'container',
-    title: 'LCTL + LALT + LGUI'
+    title: 'Left Shift + Left Alt'
   },
   {
     name: 'SGUI',
     code: 'SGUI(kc)',
     type: 'container',
-    title: 'LGUI + LSFT'
+    title: 'Left Shift + Left GUI'
   },
   {
-    name: 'LCA',
-    code: 'LCA(kc)',
+    name: 'LAG',
+    code: 'LAG(kc)',
     type: 'container',
-    title: 'LCTL + LALT'
+    title: 'Left Alt + Left GUI'
+  },
+  { width: 250 },
+  {
+    name: 'RCS',
+    code: 'RCS(kc)',
+    type: 'container',
+    title: 'Right Control + Right Shift'
+  },
+  {
+    name: 'RSA',
+    code: 'RSA(kc)',
+    type: 'container',
+    title: 'Right Shift + Right Alt'
+  },
+  {
+    name: 'RSG',
+    code: 'RSG(kc)',
+    type: 'container',
+    title: 'Right Shift + Right GUI'
+  },
+  {
+    name: 'RAG',
+    code: 'RAG(kc)',
+    type: 'container',
+    title: 'Right Alt + Right GUI'
+  },
+  { width: 250 },
+  {
+    name: 'LCAG',
+    code: 'LCAG(kc)',
+    type: 'container',
+    title: 'Left Control, Alt and GUI'
+  },
+  { width: 2250 },
+  {
+    name: 'Meh',
+    code: 'MEH(kc)',
+    type: 'container',
+    title: 'Left Control, Shift and Alt'
+  },
+  {
+    name: 'Hyper',
+    code: 'HYPR(kc)',
+    type: 'container',
+    title: 'Left Control, Shift, Alt and GUI'
   },
 
   { width: 0 },
