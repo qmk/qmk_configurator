@@ -1,7 +1,7 @@
 {
-  "keyboard": "clawsome/gamebuddy",
+  "keyboard": "clawsome/gamebuddy/v1_0",
   "keymap": "default",
-  "commit": "60be8d9f245c03db60e6297e357fec516b31bc62",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT",
   "layers": [
     [

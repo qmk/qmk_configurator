@@ -1,4 +1,5 @@
 const lookup = {
+'clawsome/gamebuddy': { target: 'clawsome/gamebuddy/v1_0' },
 'xd96': { target: 'xiudi/xd96' },
 'xd87': { target: 'xiudi/xd87' },
 'xd84pro': { target: 'xiudi/xd84pro' },
