@@ -1,7 +1,7 @@
 {
-  "keyboard": "xd84pro",
+  "keyboard": "xiudi/xd84pro",
   "keymap": "default",
-  "commit": "d46fa2274cac7d1dad2e6c684d3fabf729efaa2e",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [
