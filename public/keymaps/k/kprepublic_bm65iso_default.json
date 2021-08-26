@@ -1,7 +1,7 @@
 {
-  "keyboard": "bm65iso",
+  "keyboard": "kprepublic/bm65iso",
   "keymap": "default",
-  "commit": "4445455c1fbbdc960e7b8ae5cfc6559712d0323a",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_65_iso_blocker",
   "layers": [
     [

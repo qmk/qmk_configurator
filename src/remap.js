@@ -1,4 +1,5 @@
 const lookup = {
+'bm65iso': { target: 'kprepublic/bm65iso' },
 'bm60rgb_iso': { target: 'kprepublic/bm60rgb_iso' },
 'bm60rgb': { target: 'kprepublic/bm60rgb' },
 'bm60poker': { target: 'kprepublic/bm60poker' },
