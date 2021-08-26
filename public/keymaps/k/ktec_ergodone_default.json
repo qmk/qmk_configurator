@@ -1,7 +1,7 @@
 {
-  "keyboard": "ergodone",
+  "keyboard": "ktec/ergodone",
   "keymap": "default",
-  "commit": "267a85c885a97219b544a3c706809821c4f28344",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_ergodox",
   "layers": [
     [
