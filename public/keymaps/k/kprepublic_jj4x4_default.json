@@ -1,7 +1,7 @@
 {
-  "keyboard": "jj4x4",
+  "keyboard": "kprepublic/jj4x4",
   "keymap": "default",
-  "commit": "8650b9f10ced7a9e1502ababe8164635bfc454bc",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
