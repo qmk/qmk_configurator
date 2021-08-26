@@ -1,5 +1,5 @@
 {
-  "keyboard": "lfkeyboards/smk65/revf",
+  "keyboard": "lfkeyboards/smk65",
   "keymap": "default",
   "commit": "b1d8efeb596cfe088d25948484526e3cf5e6f360",
   "layout": "LAYOUT_65_ansi",
