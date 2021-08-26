@@ -1,4 +1,5 @@
 const lookup = {
+'mechlovin/hannah65/mechlovin9': { target: 'mechlovin/mechlovin9' },
 'kyria/rev1': { target: 'splitkb/kyria/rev1' },
 'handwired/p1800fl': { target: 'team0110/p1800fl' },
 'gmmk/pro': { target: 'gmmk/pro/ansi' },
