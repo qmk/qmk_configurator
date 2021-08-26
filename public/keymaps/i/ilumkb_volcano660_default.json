@@ -1,7 +1,7 @@
 {
-  "keyboard": "dztech/volcano660",
+  "keyboard": "ilumkb/volcano660",
   "keymap": "default",
-  "commit": "13de2f415fcc9874462335282b9cd067bec1465f",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_all",
   "layers": [
     [
