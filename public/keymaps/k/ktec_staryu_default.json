@@ -1,7 +1,7 @@
 {
-  "keyboard": "staryu",
+  "keyboard": "ktec/staryu",
   "keymap": "default",
-  "commit": "6cf574396adfb08f7fe7fe6f7ce68387fd474018",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT",
   "layers": [
     [
