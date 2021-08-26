@@ -1,4 +1,5 @@
 const lookup = {
+'cospad': { target: 'kprepublic/cospad' },
 'bm68rgb': { target: 'kprepublic/bm68rgb' },
 'bm65iso': { target: 'kprepublic/bm65iso' },
 'bm60rgb_iso': { target: 'kprepublic/bm60rgb_iso' },
