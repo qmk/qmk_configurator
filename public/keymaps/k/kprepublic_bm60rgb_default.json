@@ -1,7 +1,7 @@
 {
-  "keyboard": "bm60rgb",
+  "keyboard": "kprepublic/bm60rgb",
   "keymap": "default",
-  "commit": "939ce6a4867fa0829f60ed6eb8e432337fa01a4a",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_60_ansi_arrow",
   "layers": [
     [
