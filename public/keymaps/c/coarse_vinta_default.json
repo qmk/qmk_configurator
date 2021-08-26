@@ -1,7 +1,7 @@
 {
-  "keyboard": "vinta",
+  "keyboard": "coarse/vinta",
   "keymap": "default",
-  "commit": "4d98c69e0297973789564ce508f2e8dafe69c32b",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_69_ansi",
   "layers": [
     [

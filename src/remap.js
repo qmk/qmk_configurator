@@ -1,4 +1,5 @@
 const lookup = {
+'vinta': { target: 'coarse/vinta' },
 'peiorisboards/ixora': { target: 'coarse/ixora' },
 'mechlovin/hannah65/mechlovin9': { target: 'mechlovin/mechlovin9' },
 'kyria/rev1': { target: 'splitkb/kyria/rev1' },
