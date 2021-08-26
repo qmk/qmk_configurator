@@ -1,7 +1,7 @@
 {
-  "keyboard": "bakeneko65",
+  "keyboard": "bakeneko65/rev2",
   "keymap": "default",
-  "commit": "461153150bd753291d5b96538ee578246cf4f80e",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_65_ansi_split_bs",
   "layers": [
     [
