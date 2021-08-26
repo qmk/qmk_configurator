@@ -1,4 +1,5 @@
 const lookup = {
+'gmmk/pro': { target: 'gmmk/pro/ansi' },
 'dztech/volcano660': { target: 'ilumkb/volcano660' },
 'durgod/k320': { target: 'durgod/k3x0/k320/base' },
 'clawsome/gamebuddy': { target: 'clawsome/gamebuddy/v1_0' },
