@@ -1,7 +1,7 @@
 {
-  "keyboard": "xd004/v1",
+  "keyboard": "xiudi/xd004/v1",
   "keymap": "default",
-  "commit": "a200f194d14086e2da740ac48bac5ffdf36689d8",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_all",
   "layers": [
     [
