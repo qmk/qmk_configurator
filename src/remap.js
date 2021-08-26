@@ -1,4 +1,5 @@
 const lookup = {
+'xd002': { target: 'xiudi/xd002' },
 'staryu': { target: 'ktec/staryu' },
 'ergodone': { target: 'ktec/ergodone' },
 'daisy': { target: 'ktec/daisy' },
