@@ -1,7 +1,7 @@
 {
-  "keyboard": "bm40hsrgb",
+  "keyboard": "kprepublic/bm40hsrgb",
   "keymap": "default",
-  "commit": "4f7cd5699e686053620127fefc3b30e237d4aa40",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT_planck_mit",
   "layers": [
     [
