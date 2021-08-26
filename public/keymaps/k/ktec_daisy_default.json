@@ -1,7 +1,7 @@
 {
-  "keyboard": "daisy",
+  "keyboard": "ktec/daisy",
   "keymap": "default",
-  "commit": "92a9fba353420f3bfdf933341fcf1b9ae0ab754e",
+  "commit": "%FUTURE%",
   "layout": "LAYOUT",
   "layers": [
     [

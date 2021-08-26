@@ -1,4 +1,5 @@
 const lookup = {
+'daisy': { target: 'ktec/daisy' },
 'jj50': { target: 'kprepublic/jj50' },
 'jj4x4': { target: 'kprepublic/jj4x4' },
 'jj40': { target: 'kprepublic/jj40' },
