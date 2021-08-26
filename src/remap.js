@@ -1,4 +1,5 @@
 const lookup = {
+'bm16a': { target: 'kprepublic/bm16a' },
 'bakeneko65': { target: 'bakeneko65/rev2' },
   '2_milk': {
     target: 'spaceman/2_milk'
