@@ -1,4 +1,5 @@
 const lookup = {
+'xd87': { target: 'xiudi/xd87' },
 'xd84pro': { target: 'xiudi/xd84pro' },
 'xd84': { target: 'xiudi/xd84' },
 'xd75': { target: 'xiudi/xd75' },
