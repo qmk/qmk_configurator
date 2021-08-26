@@ -1,4 +1,5 @@
 const lookup = {
+'xd68': { target: 'xiudi/xd68' },
 'xd60/rev3': { target: 'xiudi/xd60/rev3' },
 'xd60/rev2': { target: 'xiudi/xd60/rev2' },
 'xd004/v1': { target: 'xiudi/xd004/v1' },
