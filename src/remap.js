@@ -1,41 +1,115 @@
 const lookup = {
-'tokyo60': { target: 'tokyokeyboard/tokyo60' },
-'vinta': { target: 'coarse/vinta' },
-'peiorisboards/ixora': { target: 'coarse/ixora' },
-'mechlovin/hannah65/mechlovin9': { target: 'mechlovin/mechlovin9' },
-'kyria/rev1': { target: 'splitkb/kyria/rev1' },
-'handwired/p1800fl': { target: 'team0110/p1800fl' },
-'gmmk/pro': { target: 'gmmk/pro/ansi' },
-'dztech/volcano660': { target: 'ilumkb/volcano660' },
-'durgod/k320': { target: 'durgod/k3x0/k320/base' },
-'clawsome/gamebuddy': { target: 'clawsome/gamebuddy/v1_0' },
-'xd96': { target: 'xiudi/xd96' },
-'xd87': { target: 'xiudi/xd87' },
-'xd84pro': { target: 'xiudi/xd84pro' },
-'xd84': { target: 'xiudi/xd84' },
-'xd75': { target: 'xiudi/xd75' },
-'xd68': { target: 'xiudi/xd68' },
-'xd60/rev3': { target: 'xiudi/xd60/rev3' },
-'xd60/rev2': { target: 'xiudi/xd60/rev2' },
-'xd004/v1': { target: 'xiudi/xd004/v1' },
-'xd002': { target: 'xiudi/xd002' },
-'staryu': { target: 'ktec/staryu' },
-'ergodone': { target: 'ktec/ergodone' },
-'daisy': { target: 'ktec/daisy' },
-'jj50': { target: 'kprepublic/jj50' },
-'jj4x4': { target: 'kprepublic/jj4x4' },
-'jj40': { target: 'kprepublic/jj40' },
-'cospad': { target: 'kprepublic/cospad' },
-'bm68rgb': { target: 'kprepublic/bm68rgb' },
-'bm65iso': { target: 'kprepublic/bm65iso' },
-'bm60rgb_iso': { target: 'kprepublic/bm60rgb_iso' },
-'bm60rgb': { target: 'kprepublic/bm60rgb' },
-'bm60poker': { target: 'kprepublic/bm60poker' },
-'bm43a': { target: 'kprepublic/bm43a' },
-'bm40hsrgb': { target: 'kprepublic/bm40hsrgb' },
-'bm16s': { target: 'kprepublic/bm16s' },
-'bm16a': { target: 'kprepublic/bm16a' },
-'bakeneko65': { target: 'bakeneko65/rev2' },
+  tokyo60: {
+    target: 'tokyokeyboard/tokyo60'
+  },
+  vinta: {
+    target: 'coarse/vinta'
+  },
+  'peiorisboards/ixora': {
+    target: 'coarse/ixora'
+  },
+  'mechlovin/hannah65/mechlovin9': {
+    target: 'mechlovin/mechlovin9'
+  },
+  'kyria/rev1': {
+    target: 'splitkb/kyria/rev1'
+  },
+  'handwired/p1800fl': {
+    target: 'team0110/p1800fl'
+  },
+  'gmmk/pro': {
+    target: 'gmmk/pro/ansi'
+  },
+  'dztech/volcano660': {
+    target: 'ilumkb/volcano660'
+  },
+  'durgod/k320': {
+    target: 'durgod/k3x0/k320/base'
+  },
+  'clawsome/gamebuddy': {
+    target: 'clawsome/gamebuddy/v1_0'
+  },
+  xd96: {
+    target: 'xiudi/xd96'
+  },
+  xd87: {
+    target: 'xiudi/xd87'
+  },
+  xd84pro: {
+    target: 'xiudi/xd84pro'
+  },
+  xd84: {
+    target: 'xiudi/xd84'
+  },
+  xd75: {
+    target: 'xiudi/xd75'
+  },
+  xd68: {
+    target: 'xiudi/xd68'
+  },
+  'xd60/rev3': {
+    target: 'xiudi/xd60/rev3'
+  },
+  'xd60/rev2': {
+    target: 'xiudi/xd60/rev2'
+  },
+  'xd004/v1': {
+    target: 'xiudi/xd004/v1'
+  },
+  xd002: {
+    target: 'xiudi/xd002'
+  },
+  staryu: {
+    target: 'ktec/staryu'
+  },
+  ergodone: {
+    target: 'ktec/ergodone'
+  },
+  daisy: {
+    target: 'ktec/daisy'
+  },
+  jj50: {
+    target: 'kprepublic/jj50'
+  },
+  jj4x4: {
+    target: 'kprepublic/jj4x4'
+  },
+  jj40: {
+    target: 'kprepublic/jj40'
+  },
+  cospad: {
+    target: 'kprepublic/cospad'
+  },
+  bm68rgb: {
+    target: 'kprepublic/bm68rgb'
+  },
+  bm65iso: {
+    target: 'kprepublic/bm65iso'
+  },
+  bm60rgb_iso: {
+    target: 'kprepublic/bm60rgb_iso'
+  },
+  bm60rgb: {
+    target: 'kprepublic/bm60rgb'
+  },
+  bm60poker: {
+    target: 'kprepublic/bm60poker'
+  },
+  bm43a: {
+    target: 'kprepublic/bm43a'
+  },
+  bm40hsrgb: {
+    target: 'kprepublic/bm40hsrgb'
+  },
+  bm16s: {
+    target: 'kprepublic/bm16s'
+  },
+  bm16a: {
+    target: 'kprepublic/bm16a'
+  },
+  bakeneko65: {
+    target: 'bakeneko65/rev2'
+  },
   '2_milk': {
     target: 'spaceman/2_milk'
   },
