@@ -1,4 +1,5 @@
 const lookup = {
+'tokyo60': { target: 'tokyokeyboard/tokyo60' },
 'vinta': { target: 'coarse/vinta' },
 'peiorisboards/ixora': { target: 'coarse/ixora' },
 'mechlovin/hannah65/mechlovin9': { target: 'mechlovin/mechlovin9' },
