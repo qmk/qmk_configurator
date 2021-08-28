@@ -274,7 +274,7 @@ export default {
      * @param {object} the API Response
      * @returns {undefined}
      */
-    initializeKeyboards() {
+    async initializeKeyboards() {
       console.info(`initializeKeyboards: ${this.keyboard}`);
       let _keyboard = '';
       if (this.$route.query) {
@@ -410,11 +410,10 @@ export default {
       firstRun: true
     };
   },
-  mounted() {
-    this.initializeKeyboards().then(() => {
-      this.loadDefault(true);
-      this.initTemplates();
-    });
+  async mounted() {
+    await this.initializeKeyboards();
+    this.loadDefault(true);
+    this.initTemplates();
   }
 };
 </script>
