@@ -66,7 +66,14 @@ export default {
   computed: {
     ...mapState('app', ['settingsPanelVisible']),
     currentStatusClass() {
-      return this.status === 'UP' ? 'bes-status-up' : 'bes-status-down';
+      switch (this.status) {
+        case 'running':
+          return 'bes-status-running';
+        case 'degraded':
+          return 'bes-status-degraded';
+        default:
+          return 'bes-status-down';
+      }
     },
     jobCountClass() {
       if (this.jobCount < warningWaterMark) {
@@ -98,9 +105,7 @@ export default {
             this.jobs = `${this.jobCount} ${this.$t('jobsAhead')}`;
           }
           if (this.jobCount < highWaterMark) {
-            var stat = data.status;
-            stat = stat === 'running' ? 'UP' : stat;
-            this.status = escape(`${stat}`);
+            this.status = data.status;
             this.hasError = false;
           } else {
             this.status = 'Redis is probably down. Please contact devs on ';
