@@ -178,12 +178,12 @@ export default {
         this.keymapName = newName;
       }
     },
-    $route: function (to /*, from*/) {
+    $route: async function (to /*, from*/) {
       if (to.query) {
         const filter = to.query.filter;
         if (!isUndefined(filter)) {
           this.updateFilter(filter);
-          this.updateKeyboard(first(this.keyboards));
+          await this.updateKeyboard(first(this.keyboards));
           return;
         }
         if (to.params) {
@@ -191,7 +191,7 @@ export default {
           if (!this.previewRequested) {
             // don't update the keyboard if we are in preview mode
             // otherwise we can't select the different layouts
-            this.updateKeyboard(to.params.keyboardP);
+            await this.updateKeyboard(to.params.keyboardP);
           }
           return;
         }
