@@ -1,22 +1,22 @@
 import size from 'lodash/size';
 import isUndefined from 'lodash/isUndefined';
 const getters = {
-  firmwareFile: state => state.firmwareFile,
-  validateKeyboard: state => keyboard => {
+  firmwareFile: (state) => state.firmwareFile,
+  validateKeyboard: (state) => (keyboard) => {
     const valid = state.keyboards.includes(keyboard);
     console.info(`Validate keyboard:${keyboard} valid:${valid}`);
     return valid;
   },
-  filter: state => state.filter,
+  filter: (state) => state.filter,
   /**
    * keymapName
    * @param {object} state of store
    * @return {string} parsed filtered keymap name
    */
-  keymapName: state => {
+  keymapName: (state) => {
     return state.keymapName.replace(/\s/g, '_').toLowerCase();
   },
-  exportKeymapName: state => {
+  exportKeymapName: (state) => {
     let exportName = state.keymapName.replace(/[\s/]/g, '_').toLowerCase();
     if (exportName === '') {
       let keyboardName = state.keyboard.replace(/[\s/]/g, '_').toLowerCase();
@@ -26,7 +26,7 @@ const getters = {
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');
     return exportName;
   },
-  keyCount: state => {
+  keyCount: (state) => {
     if (
       size(state.layouts) > 0 &&
       !isUndefined(state.layout) &&

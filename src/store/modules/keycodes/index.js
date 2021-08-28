@@ -18,15 +18,17 @@ const state = {
 };
 
 const getters = {
-  keycodes: state => state.keycodes,
-  lookupKeyPressCode: (state, getters) => searchTerm =>
+  keycodes: (state) => state.keycodes,
+  lookupKeyPressCode: (state, getters) => (searchTerm) =>
     getters.lookupKeycode(searchTerm, true),
-  lookupKeycode: state => (searchTerm, isKeys = false) => {
-    var found = state.keycodes.find(({ code, keys }) => {
-      return code === searchTerm || (isKeys && keys && keys === searchTerm);
-    });
-    return found;
-  }
+  lookupKeycode:
+    (state) =>
+    (searchTerm, isKeys = false) => {
+      var found = state.keycodes.find(({ code, keys }) => {
+        return code === searchTerm || (isKeys && keys && keys === searchTerm);
+      });
+      return found;
+    }
 };
 
 function countMatches(filter, collection) {

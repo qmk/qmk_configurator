@@ -40,8 +40,9 @@
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
-              >{{ name }}</option
             >
+              {{ name }}
+            </option>
           </select>
           <a
             id="favorite-colorway"
@@ -66,22 +67,12 @@
 
 <script>
 import capitalize from 'lodash/capitalize';
-import {
-  mapMutations as _mapMutations,
-  createNamespacedHelpers,
-  mapState as _mapState,
-  mapGetters as _mapGetters,
-  mapActions
-} from 'vuex';
-const { mapState, mapGetters, mapMutations } = createNamespacedHelpers(
-  'keymap'
-);
+import { mapMutations, mapState, mapGetters, mapActions } from 'vuex';
 import ControllerTop from '@/components/ControllerTop';
 import StatusPanel from '@/components/StatusPanel';
 import ControllerBottom from '@/components/ControllerBottom';
 import VisualKeymap from '@/components/VisualKeymap';
 import LayerControl from '@/components/LayerControl';
-import * as jquery from '@/jquery';
 
 export default {
   name: 'Main',
@@ -94,10 +85,10 @@ export default {
     LayerControl
   },
   computed: {
-    ..._mapState('app', ['appInitialized', 'configuratorSettings']),
-    ..._mapGetters('app', ['keyCount']),
-    ...mapState(['continuousInput']),
-    ...mapGetters(['colorwayIndex', 'colorways', 'size']),
+    ...mapState('app', ['appInitialized', 'configuratorSettings']),
+    ...mapGetters('app', ['keyCount']),
+    ...mapState('keymap', ['continuousInput']),
+    ...mapGetters('keymap', ['colorwayIndex', 'colorways', 'size']),
     curIndex: {
       get() {
         return this.colorwayIndex;
@@ -107,11 +98,11 @@ export default {
       }
     },
     displayColorways() {
-      return this.colorways.map(keyset => {
+      return this.colorways.map((keyset) => {
         return keyset
           .replace(/-/g, ' ')
           .split(' ')
-          .map(word => capitalize(word))
+          .map((word) => capitalize(word))
           .join(' ')
           .replace(/Gmk/, 'GMK')
           .replace(/^Sa/, 'SA')
@@ -136,9 +127,9 @@ export default {
     }
   },
   methods: {
-    ...mapActions('app', ['setFavoriteColor']),
-    ...mapMutations(['nextColorway']),
-    ..._mapMutations('app', ['resetListener']),
+    ...mapActions('app', ['setFavoriteColor', 'initKeypressListener']),
+    ...mapMutations('keymap', ['nextColorway']),
+    ...mapMutations('app', ['resetListener']),
     favColor() {
       if (this.isFavoriteColor) {
         this.setFavoriteColor('');
@@ -147,13 +138,14 @@ export default {
       }
     }
   },
-  mounted() {
-    jquery.init();
+  async mounted() {
+    await this.initKeypressListener();
     // Loading favorite color
     if (this.configuratorSettings.favoriteColor) {
-      const favoriteColor = this.configuratorSettings.favoriteColor.toLowerCase();
+      const favoriteColor =
+        this.configuratorSettings.favoriteColor.toLowerCase();
       this.curIndex = this.displayColorways.findIndex(
-        color => color.toLowerCase() === favoriteColor
+        (color) => color.toLowerCase() === favoriteColor
       );
     }
   },

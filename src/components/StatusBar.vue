@@ -7,9 +7,7 @@
         href="https://github.com/qmk/qmk_configurator"
         ><div title="See the QMK Configurator Repo" class="qmk-logo"></div
       ></a>
-      <div class="qmk-app-name">
-        QMK Configurator
-      </div>
+      <div class="qmk-app-name">QMK Configurator</div>
       <div class="bes-version">
         {{ $t('apiVersionPrefix') }}
         <span class="version-num">v{{ version }}</span>
@@ -112,7 +110,7 @@ export default {
             this.hasError = true;
           }
         })
-        .catch(json => {
+        .catch((json) => {
           this.status = 'DOWN';
           this.hasError = true;
           console.error('API status error', json);

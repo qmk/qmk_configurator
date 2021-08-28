@@ -34,8 +34,9 @@
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
             v-bind:value="layoutName"
-            >{{ layoutName }}</option
           >
+            {{ layoutName }}
+          </option>
         </select>
       </div>
       <div class="topctrl-keymap-name">
@@ -87,12 +88,7 @@ import isString from 'lodash/isString';
 
 import { PREVIEW_LABEL } from '@/store/modules/constants';
 
-import {
-  statusError,
-  load_converted_keymap,
-  compileLayout,
-  disableOtherButtons
-} from '@/jquery';
+import { statusError, compileLayout, disableOtherButtons } from '@/api';
 
 import { clearKeymapTemplate } from '@/common';
 
@@ -173,17 +169,17 @@ export default {
      * When changes happen locally we update the store.
      * When changes happen to the store we update the local version.
      */
-    keymapName: function(newKeymapName, oldKeymapName) {
+    keymapName: function (newKeymapName, oldKeymapName) {
       if (newKeymapName !== oldKeymapName) {
         this.updateKeymapName(newKeymapName);
       }
     },
-    realKeymapName: function(newName, oldName) {
+    realKeymapName: function (newName, oldName) {
       if (newName !== oldName) {
         this.keymapName = newName;
       }
     },
-    $route: function(to /*, from*/) {
+    $route: function (to /*, from*/) {
       if (to.query) {
         const filter = to.query.filter;
         if (!isUndefined(filter)) {
@@ -219,7 +215,7 @@ export default {
       'loadDefaultKeymap',
       'setFavoriteKeyboard'
     ]),
-    ...mapActions('keymap', ['initTemplates']),
+    ...mapActions('keymap', ['initTemplates', 'load_converted_keymap']),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -234,32 +230,37 @@ export default {
       }
       const store = this.$store;
       this.loadDefaultKeymap()
-        .then(data => {
+        .then((data) => {
           if (data) {
             console.log(data);
             this.updateLayout(data.layout);
-            let promise = new Promise(resolve =>
+            let promise = new Promise((resolve) =>
               store.commit('keymap/setLoadingKeymapPromise', resolve)
-            ).then(() => {
+            ).then(async () => {
               // clear the keymap name for the default keymap
               // otherwise it overrides the default getter
               this.updateKeymapName('');
-              const stats = load_converted_keymap(data.layers);
+              const stats = await this.load_converted_keymap(data.layers);
               let msg = this.$t('statsTemplate', stats);
               if (stats.warnings.length > 0 || stats.errors.length > 0) {
                 msg = `${msg}\n${stats.warnings.join('\n')}`;
                 msg = `${msg}\n${stats.errors.join('\n')}`;
               }
-              store.commit('status/append', msg);
               if (!isAutoInit) {
                 store.commit('keymap/setDirty');
+              } else {
+                // This is a dirty hack so that the status message appears both after pressing load default
+                // and switching keyboards. This entire flow needs redesigning as it was written
+                // when I had a poor understanding of vue observability.
+                store.commit('status/append', msg);
+                store.commit('status/deferredMessage', msg);
               }
             });
             return promise;
           }
           return data;
         })
-        .catch(error => {
+        .catch((error) => {
           statusError(
             `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
@@ -273,7 +274,7 @@ export default {
      * @param {object} the API Response
      * @returns {undefined}
      */
-    initializeKeyboards() {
+    async initializeKeyboards() {
       console.info(`initializeKeyboards: ${this.keyboard}`);
       let _keyboard = '';
       if (this.$route.query) {
@@ -339,7 +340,7 @@ export default {
         .replace({
           path: `/${this.keyboard}/${this.layout}`
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.name !== 'NavigationDuplicated') {
             // ignore this harmless error otherwise report
             throw err;
@@ -358,7 +359,7 @@ export default {
       this.setLayout(newLayout);
       this.$router
         .replace({ path: `/${this.keyboard}/${this.layout}` })
-        .catch(err => {
+        .catch((err) => {
           if (err.name !== 'NavigationDuplicated') {
             throw err;
           }
@@ -409,11 +410,10 @@ export default {
       firstRun: true
     };
   },
-  mounted() {
-    this.initializeKeyboards().then(() => {
-      this.loadDefault(true);
-      this.initTemplates();
-    });
+  async mounted() {
+    await this.initializeKeyboards();
+    this.loadDefault(true);
+    this.initTemplates();
   }
 };
 </script>

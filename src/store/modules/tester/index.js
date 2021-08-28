@@ -46,7 +46,7 @@ const getters = {
     return keys(state.layouts).sort();
   },
   getQMKCode(state) {
-    return pos => {
+    return (pos) => {
       if (isUndefined(pos)) {
         return '';
       }
@@ -66,7 +66,7 @@ const getters = {
 
 function mapKeymap(store, arr) {
   // Create look up table for QMK Code to Layout position
-  return arr.map(code => {
+  return arr.map((code) => {
     const meta = store.getters['keycodes/lookupKeycode'](code);
     return {
       ...meta

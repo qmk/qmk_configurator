@@ -7,6 +7,7 @@ import colorways from '@/components/colorways';
 import defaults from './config';
 import axios from 'axios';
 import { backend_skeletons_url } from './constants';
+import { parseKeycode } from './parse.js';
 
 const state = {
   keymap: [[]], // array of arrays
@@ -36,96 +37,102 @@ const state = {
 };
 // Use for computed properties
 const getters = {
-  colorway: state => state.colorways[state.colorwayIndex].name,
-  colorways: state => state.colorways.map(colorway => colorway.name),
-  colorwayOverride: state => state.colorways[state.colorwayIndex].override,
-  colorwayIndex: state => state.colorwayIndex,
-  loadingKeymapPromise: state => state.loadingKeymapPromise,
-  defaults: state => Object.assign({}, state.defaults),
-  getSelectedKey: state => state.selectedIndex,
-  getKey: state => ({ _layer = state.layer, index }) =>
-    state.keymap[_layer][index],
-  getLayer: state => _layer => {
+  colorway: (state) => state.colorways[state.colorwayIndex].name,
+  colorways: (state) => state.colorways.map((colorway) => colorway.name),
+  colorwayOverride: (state) => state.colorways[state.colorwayIndex].override,
+  colorwayIndex: (state) => state.colorwayIndex,
+  loadingKeymapPromise: (state) => state.loadingKeymapPromise,
+  defaults: (state) => Object.assign({}, state.defaults),
+  getSelectedKey: (state) => state.selectedIndex,
+  getKey:
+    (state) =>
+    ({ _layer = state.layer, index }) =>
+      state.keymap[_layer][index],
+  getLayer: (state) => (_layer) => {
     return state.keymap[_layer];
   },
-  size: state => (_layer = 0) => {
-    return size(state.keymap[_layer]);
-  },
-  isDirty: state => state.dirty,
+  size:
+    (state) =>
+    (_layer = 0) => {
+      return size(state.keymap[_layer]);
+    },
+  isDirty: (state) => state.dirty,
   /**
    * Convert internal representation of keycodes into QMK keycodes for export or compilation
    * @param {boolean} compiler is the target
    */
-  exportLayers: state => ({ compiler }) => {
-    var highestActiveLayer = state.keymap.reduce((acc, layer, index) => {
-      if (!isUndefined(layer)) {
-        return index;
-      }
-      return acc;
-    }, 0);
-
-    return reduce(
-      state.keymap,
-      function convertALayer(exportedLayers, _layer, currentLayerIdx) {
-        // Ignore Empty layers if there are no layers above this layer
-        if (currentLayerIdx > highestActiveLayer) {
-          return exportedLayers;
+  exportLayers:
+    (state) =>
+    ({ compiler }) => {
+      var highestActiveLayer = state.keymap.reduce((acc, layer, index) => {
+        if (!isUndefined(layer)) {
+          return index;
         }
+        return acc;
+      }, 0);
 
-        exportedLayers[currentLayerIdx] = [];
-        // Work around backend not handling sparse keymaps
-        // insert an dummy layer filled with KC_TRNS
-        if (
-          compiler &&
-          currentLayerIdx < highestActiveLayer &&
-          (isUndefined(_layer) || _layer.length === 0)
-        ) {
-          _layer = state.keymap[0].map(() => {
-            return {
-              name: '',
-              code: 'KC_TRNS',
-              type: undefined
-            };
-          });
-        }
+      return reduce(
+        state.keymap,
+        function convertALayer(exportedLayers, _layer, currentLayerIdx) {
+          // Ignore Empty layers if there are no layers above this layer
+          if (currentLayerIdx > highestActiveLayer) {
+            return exportedLayers;
+          }
 
-        // Convert internal representation to QMK keycodes
-        // lodash/reduce handles null/undefined safely and returns empty array
-        var aLayer = reduce(
-          _layer,
-          function exportQMKKeycode(newLayer, key, i) {
-            var keycode = key.code;
-            if (keycode) {
-              if (keycode.endsWith('(kc)') || keycode.endsWith(',kc)')) {
-                if (key.contents) {
-                  keycode = keycode.replace('kc', key.contents.code);
-                } else {
-                  keycode = keycode.replace('kc', 'KC_NO');
+          exportedLayers[currentLayerIdx] = [];
+          // Work around backend not handling sparse keymaps
+          // insert an dummy layer filled with KC_TRNS
+          if (
+            compiler &&
+            currentLayerIdx < highestActiveLayer &&
+            (isUndefined(_layer) || _layer.length === 0)
+          ) {
+            _layer = state.keymap[0].map(() => {
+              return {
+                name: '',
+                code: 'KC_TRNS',
+                type: undefined
+              };
+            });
+          }
+
+          // Convert internal representation to QMK keycodes
+          // lodash/reduce handles null/undefined safely and returns empty array
+          var aLayer = reduce(
+            _layer,
+            function exportQMKKeycode(newLayer, key, i) {
+              var keycode = key.code;
+              if (keycode) {
+                if (keycode.endsWith('(kc)') || keycode.endsWith(',kc)')) {
+                  if (key.contents) {
+                    keycode = keycode.replace('kc', key.contents.code);
+                  } else {
+                    keycode = keycode.replace('kc', 'KC_NO');
+                  }
                 }
+                if (keycode.endsWith('(layer)')) {
+                  keycode = keycode.replace('layer', key.layer);
+                }
+                if (keycode === 'text') {
+                  // add a special ANY marker to keycodes that were defined using ANY
+                  // This will be stripped back off on import.
+                  keycode = compiler ? key.text : `ANY(${key.text})`;
+                }
+              } else {
+                // eslint-disable-next-line
+                console.error(`ERROR: unexpected keycode ${key}`, k, i, _layer);
               }
-              if (keycode.endsWith('(layer)')) {
-                keycode = keycode.replace('layer', key.layer);
-              }
-              if (keycode === 'text') {
-                // add a special ANY marker to keycodes that were defined using ANY
-                // This will be stripped back off on import.
-                keycode = compiler ? key.text : `ANY(${key.text})`;
-              }
-            } else {
-              // eslint-disable-next-line
-              console.error(`ERROR: unexpected keycode ${key}`, k, i, _layer);
-            }
-            newLayer.push(keycode);
-            return newLayer;
-          },
-          []
-        );
-        exportedLayers[currentLayerIdx] = aLayer;
-        return exportedLayers;
-      },
-      []
-    );
-  },
+              newLayer.push(keycode);
+              return newLayer;
+            },
+            []
+          );
+          exportedLayers[currentLayerIdx] = aLayer;
+          return exportedLayers;
+        },
+        []
+      );
+    },
   activeLayers(state) {
     const active = state.keymap.reduce(
       (active, layer, idx) => {
@@ -133,7 +140,7 @@ const getters = {
           // layer 0 is always active
           return active;
         }
-        const hasKeys = layer.filter(key => key.code !== 'KC_NO').length > 0;
+        const hasKeys = layer.filter((key) => key.code !== 'KC_NO').length > 0;
         if (hasKeys) {
           active.push(idx);
         }
@@ -171,7 +178,7 @@ const actions = {
   initTemplates({ commit }) {
     return axios
       .get(`${backend_skeletons_url}/keymap`)
-      .then(resp => {
+      .then((resp) => {
         if (resp.status === 200) {
           let template = Object.assign({}, resp.data);
           delete template.keyboard;
@@ -181,9 +188,36 @@ const actions = {
           commit('setKeymapTemplate', template);
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.warn('unable to get keymap template. error:', err);
       });
+  },
+  //Function that takes in a keymap loops over it and fills populates the keymap variable
+  load_converted_keymap({ commit }, converted_keymap) {
+    const store = this;
+    //Loop over each layer from the keymap
+    console.log('converted_keymap', converted_keymap);
+    const acc = converted_keymap.reduce(
+      (acc, layerData, _layer) => {
+        //Add layer object for every layer that exists
+        commit('initLayer', { layer: _layer });
+        //Loop over each keycode in the layer
+        acc.layers.push(
+          layerData.map((keycode) => {
+            return parseKeycode(store, keycode, acc.stats);
+          })
+        );
+        acc.stats.layers += 1;
+        return acc;
+      },
+      {
+        stats: { count: 0, any: 0, layers: 0, errors: [], warnings: [] },
+        layers: []
+      }
+    );
+    commit('setLayers', acc.layers);
+    console.log('stat', acc.stats);
+    return acc.stats;
   }
 };
 const mutations = {
@@ -294,7 +328,7 @@ const mutations = {
     if (state.layer !== 0) {
       // Only make a layer active if there are actual keys on it
       const activeKeys = state.keymap[state.layer].filter(
-        k => k.code !== 'KC_NO'
+        (k) => k.code !== 'KC_NO'
       );
       if (activeKeys.length === 0) {
         // clear empty layers because this is confusing to users

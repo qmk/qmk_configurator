@@ -261,10 +261,7 @@ export default {
     writeToStatus(msg) {
       this.status += msg + '\n';
       if (this.status.length > 1000) {
-        this.status = this.status
-          .split('\n')
-          .slice(-20)
-          .join('\n');
+        this.status = this.status.split('\n').slice(-20).join('\n');
       }
       this.scrollToEnd();
     },

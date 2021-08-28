@@ -100,6 +100,8 @@ print:print:title,打印
 print:source:title,源码
 printKeymap:label,打印键位
 printKeymap:title,打印键位表
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
 settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
@@ -108,6 +110,8 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,
+settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面语言
 settingsPanel:language:title,语言
 settingsPanel:off:label,关闭
