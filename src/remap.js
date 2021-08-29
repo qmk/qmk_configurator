@@ -32,11 +32,41 @@ const lookup = {
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
   },
+  bakeneko65: {
+    target: 'bakeneko65/rev2'
+  },
   bear_65: {
     target: 'jacky_studio/bear_65'
   },
   bear_face: {
     target: 'bear_face/v1'
+  },
+  bm16a: {
+    target: 'kprepublic/bm16a'
+  },
+  bm16s: {
+    target: 'kprepublic/bm16s'
+  },
+  bm40hsrgb: {
+    target: 'kprepublic/bm40hsrgb'
+  },
+  bm43a: {
+    target: 'kprepublic/bm43a'
+  },
+  bm60poker: {
+    target: 'kprepublic/bm60poker'
+  },
+  bm60rgb: {
+    target: 'kprepublic/bm60rgb'
+  },
+  bm60rgb_iso: {
+    target: 'kprepublic/bm60rgb_iso'
+  },
+  bm65iso: {
+    target: 'kprepublic/bm65iso'
+  },
+  bm68rgb: {
+    target: 'kprepublic/bm68rgb'
   },
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
@@ -53,14 +83,23 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  'clawsome/gamebuddy': {
+    target: 'clawsome/gamebuddy/v1_0'
+  },
   'cmm_studio/saka68': {
     target: 'cmm_studio/saka68/solder'
+  },
+  cospad: {
+    target: 'kprepublic/cospad'
   },
   'crkbd/rev1/legacy': {
     target: 'crkbd/rev1'
   },
   'crkbd/rev1/common': {
     target: 'crkbd/rev1'
+  },
+  daisy: {
+    target: 'ktec/daisy'
   },
   'doro67/multi': {
     layouts: {
@@ -83,6 +122,9 @@ const lookup = {
   dumbpad: {
     target: 'dumbpad/v0x'
   },
+  'durgod/k320': {
+    target: 'durgod/k3x0/k320/base'
+  },
   'dztech/dz60rgb': {
     target: 'dztech/dz60rgb/v1'
   },
@@ -95,8 +137,14 @@ const lookup = {
   'dztech/dz65rgb': {
     target: 'dztech/dz65rgb/v1'
   },
+  'dztech/volcano660': {
+    target: 'ilumkb/volcano660'
+  },
   eek: {
     target: 'eek/silk_down'
+  },
+  ergodone: {
+    target: 'ktec/ergodone'
   },
   ergoinu: {
     target: 'dm9records/ergoinu'
@@ -110,8 +158,14 @@ const lookup = {
   gh60: {
     target: 'gh60/revc'
   },
+  'gmmk/pro': {
+    target: 'gmmk/pro/ansi'
+  },
   'handwired/ferris': {
     target: 'ferris/0_1'
+  },
+  'handwired/p1800fl': {
+    target: 'team0110/p1800fl'
   },
   'handwired/pill60': {
     target: 'handwired/pill60/bluepill'
@@ -164,6 +218,15 @@ const lookup = {
       LAYOUT: 'LAYOUT_all'
     }
   },
+  jj40: {
+    target: 'kprepublic/jj40'
+  },
+  jj4x4: {
+    target: 'kprepublic/jj4x4'
+  },
+  jj50: {
+    target: 'kprepublic/jj50'
+  },
   jones: {
     target: 'jones/v03_1'
   },
@@ -190,6 +253,9 @@ const lookup = {
   },
   kudox: {
     target: 'kudox/rev1'
+  },
+  'kyria/rev1': {
+    target: 'splitkb/kyria/rev1'
   },
   'lfkeyboards/lfk78': {
     target: 'lfkeyboards/lfk78/revj'
@@ -275,6 +341,9 @@ const lookup = {
   'mechlovin/hannah60rgb': {
     target: 'mechlovin/hannah60rgb/rev1'
   },
+  'mechlovin/hannah65/mechlovin9': {
+    target: 'mechlovin/mechlovin9'
+  },
   'melgeek/z70ultra': {
     target: 'melgeek/z70ultra/rev1'
   },
@@ -336,6 +405,9 @@ const lookup = {
   },
   'pancake/promicro': {
     target: 'spaceman/pancake/promicro'
+  },
+  'peiorisboards/ixora': {
+    target: 'coarse/ixora'
   },
   'percent/canoe': {
     layouts: {
@@ -429,6 +501,9 @@ const lookup = {
   speedo: {
     target: 'cozykeys/speedo/v2'
   },
+  staryu: {
+    target: 'ktec/staryu'
+  },
   stoutgat: {
     target: 'tkw/stoutgat/v1'
   },
@@ -447,10 +522,14 @@ const lookup = {
   'tkw/stoutgat/v2': {
     target: 'tkw/stoutgat/v2/f411'
   },
+  tokyo60: {
+    target: 'tokyokeyboard/tokyo60'
+  },
   underscore33: {
     target: 'underscore33/rev1'
   },
   vinta: {
+    target: 'coarse/vinta',
     layouts: {
       LAYOUT_67_ansi: 'LAYOUT_65_ansi_blocker'
     }
@@ -463,6 +542,36 @@ const lookup = {
   },
   'whale/sk': {
     target: 'whale/sk/v3'
+  },
+  xd002: {
+    target: 'xiudi/xd002'
+  },
+  'xd004/v1': {
+    target: 'xiudi/xd004/v1'
+  },
+  'xd60/rev2': {
+    target: 'xiudi/xd60/rev2'
+  },
+  'xd60/rev3': {
+    target: 'xiudi/xd60/rev3'
+  },
+  xd68: {
+    target: 'xiudi/xd68'
+  },
+  xd75: {
+    target: 'xiudi/xd75'
+  },
+  xd84: {
+    target: 'xiudi/xd84'
+  },
+  xd84pro: {
+    target: 'xiudi/xd84pro'
+  },
+  xd87: {
+    target: 'xiudi/xd87'
+  },
+  xd96: {
+    target: 'xiudi/xd96'
   },
   'xelus/dawn60': {
     target: 'xelus/dawn60/rev1'

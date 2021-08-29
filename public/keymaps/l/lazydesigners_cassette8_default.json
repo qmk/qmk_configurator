@@ -1,0 +1,20 @@
+{
+  "keyboard": "lazydesigners/cassette8",
+  "keymap": "default",
+  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "LT(1,KC_SPC)"
+    ],
+    [
+      "RESET",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}
