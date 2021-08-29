@@ -25,7 +25,7 @@
         @click="exportJSON"
         v-tooltip.bottom="$t('downloadJSON.title')"
       >
-        <font-awesome-icon icon="download" size="lg" fixed-width />
+        <font-awesome-icon icon="upload" size="lg" fixed-width />
       </button>
       <span class="label-button">{{ $t('downloadJSON.label') }}</span>
       <button
@@ -33,7 +33,7 @@
         v-tooltip.bottom="$t('importJSON.title')"
         @click="importKeymap"
       >
-        <font-awesome-icon icon="upload" size="lg" fixed-width />
+        <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
       <button
         id="import-url"
