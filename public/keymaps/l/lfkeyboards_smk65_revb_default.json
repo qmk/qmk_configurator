@@ -1,7 +1,7 @@
 {
   "keyboard": "lfkeyboards/smk65",
   "keymap": "default",
-  "commit": "b1d8efeb596cfe088d25948484526e3cf5e6f360",
+  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

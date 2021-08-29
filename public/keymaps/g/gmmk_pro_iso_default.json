@@ -1,7 +1,7 @@
 {
   "keyboard": "gmmk/pro/iso",
   "keymap": "default",
-  "commit": "%FUTURE%",
+  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
   "layout": "LAYOUT",
   "layers": [
     [
