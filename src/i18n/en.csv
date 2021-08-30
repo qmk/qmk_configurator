@@ -21,7 +21,7 @@ compile:title,Compile Keymap
 downloadFirmware:label,Firmware
 downloadFirmware:title,Download firmware file for flashing
 downloadJSON:label,Keymap.JSON
-downloadJSON:title,Export QMK Keymap JSON file
+downloadJSON:title,Download this QMK Keymap JSON file
 downloadKeymap:label,keymap only
 downloadKeymap:title,Download keymap.c only
 downloadSource:label,Full Source
@@ -36,7 +36,7 @@ flashFile:title,Flash User Selected file to MCU
 flashFirmware:label,Auto-Flash
 flashFirmware:title,Automatically Flash compiled Firmware to MCU
 help:label,Summon Wizard
-importJSON:title,Import QMK Keymap JSON file
+importJSON:title,Upload a QMK Keymap JSON file
 importUrlJSON:title,Import QMK Keymap JSON from URL
 keyboard:label,keyboard
 keycodes:label,Keycodes
