@@ -21,9 +21,9 @@ compile:title,キーマップのコンパイル
 downloadFirmware:label,Firmware
 downloadFirmware:title,書き込み用ファームウェアファイルのダウンロード
 downloadJSON:label,Keymap.JSON
-downloadJSON:title,QMK Keymap JSONファイルをエクスポート
+downloadJSON:title,このQMK Keymap JSONファイルをダウンロード
 downloadKeymap:label,keymap only
-downloadKeymap:title,keymap.c のみダウンロード
+downloadKeymap:title,keymap.cのみダウンロード
 downloadSource:label,Full Source
 downloadSource:title,QMK全ソースコードのダウンロード
 downloadToolbox:label,QMK Toolboxを入手
@@ -36,7 +36,7 @@ flashFile:title,ユーザが選択したファイルをMCUに書き込む
 flashFirmware:label,Auto-Flash
 flashFirmware:title,コンパイルされたファームウェアをMCUに自動的に書き込む
 help:label,ウィザード召喚
-importJSON:title,QMK Keymap JSONファイルをインポート
+importJSON:title,QMK Keymap JSONファイルをアップロード
 importUrlJSON:title,URLからQMK Keymap JSONをインポート
 keyboard:label,keyboard
 keycodes:label,Keycodes
