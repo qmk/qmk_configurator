@@ -12,7 +12,7 @@ const ROW1 = [
   'F10',
   'F11',
   'F12',
-  'F13',
+  'PrintScreen',
   'ScrollLock',
   'Pause'
 ];
