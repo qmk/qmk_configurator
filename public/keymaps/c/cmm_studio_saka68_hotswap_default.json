@@ -1,8 +1,8 @@
 {
   "keyboard": "cmm_studio/saka68/hotswap",
   "keymap": "default",
-  "commit": "677789df773479dcedd0c3d71885ff5e89b7b5b6",
-  "layout": "LAYOUT",
+  "commit": "5c2d15573d32b839f0cf7915ef141812ab03bfdf",
+  "layout": "LAYOUT_68_ansi",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_INS",  "KC_SPC",
