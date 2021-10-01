@@ -1,7 +1,7 @@
 {
   "keyboard": "baguette",
   "keymap": "default",
-  "commit": "1741e39e3463ac3cc6164656b0cc7afa8c33cc00",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
