@@ -1,7 +1,7 @@
 {
   "keyboard": "ai03/soyuz",
   "keymap": "default",
-  "commit": "0874502757505850920e9f5782f482296e3f7f6c",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
