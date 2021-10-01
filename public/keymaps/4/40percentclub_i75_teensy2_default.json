@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/i75/teensy2",
   "keymap": "default",
-  "commit": "368de26996fbd54eefbf54c567a90bf0d81e20c7",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [
     [
