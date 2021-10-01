@@ -1,7 +1,7 @@
 {
   "keyboard": "0xcb/static",
   "keymap": "default",
-  "commit": "be9031d01d3195f75243ef3bd2b3fed369e2c85a",
+  "commit": "4e1c5887c5c08ebd2cf7868c8d9292aa728e7bf0",
   "layout": "LAYOUT_all",
   "layers": [
     [
