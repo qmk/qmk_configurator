@@ -1,0 +1,20 @@
+{
+  "keyboard": "3keyecosystem/2key2",
+  "keymap": "default",
+  "commit": "22dd68520b4f55ed7c953a67cfb904f85cc88982",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
