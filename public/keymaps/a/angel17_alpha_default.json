@@ -1,7 +1,7 @@
 {
   "keyboard": "angel17/alpha",
   "keymap": "default",
-  "commit": "20a16d29fe50f30b8309e68790c628832dc4906c",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
