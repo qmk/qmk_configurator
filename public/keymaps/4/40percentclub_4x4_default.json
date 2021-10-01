@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/4x4",
   "keymap": "default",
-  "commit": "b173c05cc25e9394c6e50081c1af707443950104",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ortho_4x16",
   "layers": [
     [
