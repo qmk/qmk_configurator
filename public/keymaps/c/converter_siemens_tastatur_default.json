@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/siemens_tastatur",
   "keymap": "default",
-  "commit": "105c90bd1c9be4b8239afd553c2a1afbd13986e1",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT",
   "layers": [
     [
