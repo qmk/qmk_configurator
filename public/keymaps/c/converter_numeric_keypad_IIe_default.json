@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/numeric_keypad_IIe",
   "keymap": "default",
-  "commit": "b5d85ddc90e248317fb12832f7072dfbcccd48e5",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT",
   "layers": [
     [
