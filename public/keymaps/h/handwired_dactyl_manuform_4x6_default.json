@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_manuform/4x6",
   "keymap": "default",
-  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
+  "commit": "468f7054558153cbf7f7ece3cf8775e1f3d28fe9",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -14,22 +14,22 @@
                                                                         "KC_BSPC", "KC_GRV",  "KC_LGUI", "KC_LALT"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LBRC",                                             "KC_RBRC", "KC_P7",   "KC_P8",   "KC_P9",   "RESET",   "KC_PLUS",
-      "KC_TRNS", "KC_HOME", "KC_PGUP", "KC_PGDN", "KC_END",  "KC_LPRN",                                             "KC_RPRN", "KC_P4",   "KC_P5",   "KC_P6",   "KC_MINS", "KC_PIPE",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                                             "KC_TRNS", "KC_P1",   "KC_P2",   "KC_P3",   "KC_EQL",  "KC_UNDS",
-                            "KC_TRNS", "KC_PSCR",                                                                                         "KC_TRNS", "KC_P0",
-                                                  "KC_TRNS", "KC_TRNS",                                             "KC_TRNS", "KC_TRNS",
-                                                                        "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-                                                                        "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______", "_______", "KC_LBRC",                                             "KC_RBRC", "KC_P7",   "KC_P8",   "KC_P9",   "RESET",   "KC_PLUS",
+      "_______", "KC_HOME", "KC_PGUP", "KC_PGDN", "KC_END",  "KC_LPRN",                                             "KC_RPRN", "KC_P4",   "KC_P5",   "KC_P6",   "KC_MINS", "KC_PIPE",
+      "_______", "_______", "_______", "_______", "_______", "_______",                                             "_______", "KC_P1",   "KC_P2",   "KC_P3",   "KC_EQL",  "KC_UNDS",
+                            "_______", "KC_PSCR",                                                                                         "_______", "KC_P0",
+                                                  "_______", "_______",                                             "_______", "_______",
+                                                                        "_______", "_______", "_______", "_______",
+                                                                        "_______", "_______", "_______", "_______"
     ],
     [
-      "KC_TRNS", "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LBRC",                                             "KC_RBRC", "KC_TRNS", "KC_NLCK", "KC_INS",  "KC_SLCK", "KC_MUTE",
-      "KC_TRNS", "KC_LEFT", "KC_UP",   "KC_DOWN", "KC_RGHT", "KC_LPRN",                                             "KC_RPRN", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_TRNS", "KC_VOLU",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                                             "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLD",
-                            "KC_TRNS", "KC_TRNS",                                                                                         "KC_EQL",  "KC_TRNS",
-                                                  "KC_TRNS", "KC_TRNS",                                             "KC_TRNS", "KC_TRNS",
-                                                                        "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-                                                                        "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "RESET",   "_______", "_______", "_______", "KC_LBRC",                                             "KC_RBRC", "_______", "KC_NLCK", "KC_INS",  "KC_SLCK", "KC_MUTE",
+      "_______", "KC_LEFT", "KC_UP",   "KC_DOWN", "KC_RGHT", "KC_LPRN",                                             "KC_RPRN", "KC_MPRV", "KC_MPLY", "KC_MNXT", "_______", "KC_VOLU",
+      "_______", "_______", "_______", "_______", "_______", "_______",                                             "_______", "_______", "_______", "_______", "_______", "KC_VOLD",
+                            "_______", "_______",                                                                                         "KC_EQL",  "_______",
+                                                  "_______", "_______",                                             "_______", "_______",
+                                                                        "_______", "_______", "_______", "_______",
+                                                                        "_______", "_______", "_______", "_______"
     ]
   ]
 }
