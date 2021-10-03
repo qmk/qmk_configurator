@@ -1,7 +1,7 @@
 {
   "keyboard": "hs60/v2/ansi",
   "keymap": "default",
-  "commit": "f7730567509619e31742ce0a2aa5ae7cfe21d23e",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [
