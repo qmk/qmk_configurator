@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbd4x",
   "keymap": "default",
-  "commit": "b49dbf9b19264e7558253a34ca737dcd301487b1",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_planck_mit",
   "layers": [
     [
