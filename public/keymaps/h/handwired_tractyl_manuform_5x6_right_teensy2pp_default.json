@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/tractyl_manuform/5x6_right/teensy2pp",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "b7cf9a888a607dc024d74ee72c0ebbd8e0ddfdbe",
   "layout": "LAYOUT_5x6_right",
   "layers": [
     [
