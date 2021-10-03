@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/ibm122m",
   "keymap": "default",
-  "commit": "404db1d06fa9c0dd25fff3bfa1b2ebed7273a8fc",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT",
   "layers": [
     [
