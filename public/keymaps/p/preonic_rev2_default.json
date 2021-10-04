@@ -1,7 +1,7 @@
 {
   "keyboard": "preonic/rev2",
   "keymap": "default",
-  "commit": "050457818c8c8710124d1aba454f80260c57ae7f",
+  "commit": "a68c4d8b8150d936b700a4d1f2f9670f97b78b87",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
