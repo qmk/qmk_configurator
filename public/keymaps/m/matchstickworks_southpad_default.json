@@ -1,7 +1,7 @@
 {
   "keyboard": "matchstickworks/southpad",
   "keymap": "default",
-  "commit": "f00e56eb0b4e8ab220d52a30f89f3a9213d431fa",
+  "commit": "7575bc23a677c9d34f4416dcfd2db6eafc1fd623",
   "layout": "LAYOUT_numpad_6x4_southpaw",
   "layers": [
     [
