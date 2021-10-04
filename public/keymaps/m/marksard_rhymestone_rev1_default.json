@@ -1,7 +1,7 @@
 {
     "keyboard": "marksard/rhymestone/rev1",
     "keymap": "default",
-    "commit": "6e32dd123ff0ff49768f43c97bbc10836ff8a629",
+    "commit": "4e1c5887c5c08ebd2cf7868c8d9292aa728e7bf0",
     "layout": "LAYOUT_ortho_4x10",
     "layers": [
         [
