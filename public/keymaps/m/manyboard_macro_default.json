@@ -1,7 +1,7 @@
 {
   "keyboard": "manyboard/macro",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "b8a1e14f53489eea63bd747d1b94d7d9b7da5ac9",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
