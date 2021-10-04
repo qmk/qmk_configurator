@@ -1,7 +1,7 @@
 {
   "keyboard": "tokyokeyboard/tokyo60",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "f5c2f7153d7e8c5d4356551bbf8b374da545b8fc",
   "layout": "LAYOUT_60_hhkb",
   "layers": [
     [
