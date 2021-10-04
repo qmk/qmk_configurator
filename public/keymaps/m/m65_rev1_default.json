@@ -1,7 +1,7 @@
 {
   "keyboard": "m65/rev1",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "184c2e35affd51abcfa74bdc90564058b6a39a41",
   "layout": "LAYOUT_ortho_5x13",
   "layers": [
     [
