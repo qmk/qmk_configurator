@@ -1,7 +1,7 @@
 {
   "keyboard": "mechkeys/mk60",
   "keymap": "default",
-  "commit": "98b68bec53ee814310cfc003b5b51504951601ec",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT",
   "layers": [
     [
