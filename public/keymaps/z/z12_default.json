@@ -1,0 +1,14 @@
+{
+  "keyboard": "z12",
+  "keymap": "default",
+  "commit": "574b3d8a5a6891fff6d8058abc5c091f65f8dec2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_Q",    "KC_W",
+      "KC_E",    "KC_R",    "KC_T",    "KC_Y",
+      "KC_U",         "KC_I",          "KC_O",
+      "KC_P",         "KC_K",          "KC_A"
+    ]
+  ]
+}
