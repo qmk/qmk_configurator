@@ -1,7 +1,7 @@
 {
   "keyboard": "westfoxtrot/aanzee",
   "keymap": "default",
-  "commit": "63d53b0f2860dd89c87ff477bd5064d17ec96635",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
