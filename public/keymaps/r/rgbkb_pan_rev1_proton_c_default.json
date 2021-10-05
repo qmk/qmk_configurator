@@ -1,7 +1,7 @@
 {
   "keyboard": "rgbkb/pan/rev1/proton_c",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "4e1c5887c5c08ebd2cf7868c8d9292aa728e7bf0",
   "layout": "LAYOUT_all",
   "layers": [
     [

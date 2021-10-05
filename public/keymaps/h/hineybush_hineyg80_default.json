@@ -1,7 +1,7 @@
 {
   "keyboard": "hineybush/hineyg80",
   "keymap": "default",
-  "commit": "61ce41ae13242adb113f61ec03dd9ed26acee26b",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_ansi_100u_mods",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "sentraq/number_pad",
   "keymap": "default",
-  "commit": "b6fbcd9d6210524fe73921db12209e8703c74d2d",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [

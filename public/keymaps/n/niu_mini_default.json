@@ -1,7 +1,7 @@
 {
   "keyboard": "niu_mini",
   "keymap": "default",
-  "commit": "4c4ee4a26b7331c1015f7d043716730d141905f2",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_planck_mit",
   "layers": [
     [

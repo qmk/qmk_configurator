@@ -1,7 +1,7 @@
 {
   "keyboard": "aeboards/ext65/rev2",
   "keymap": "default",
-  "commit": "c66df1664497546f32662409778731143e45a552",
+  "commit": "4e1c5887c5c08ebd2cf7868c8d9292aa728e7bf0",
   "layout": "LAYOUT_ext65",
   "layers": [
     [

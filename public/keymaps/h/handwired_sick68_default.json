@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/sick68",
   "keymap": "default",
-  "commit": "2f936420ddaffed0d1a22b94b4d666225466193a",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

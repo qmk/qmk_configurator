@@ -1,8 +1,8 @@
 {
   "keyboard": "flehrad/downbubble",
   "keymap": "default",
-  "commit": "200444f8d2c12ac04fd081745c74020c92d5da16",
-  "layout": "LAYOUT_all",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "layout": "LAYOUT_standard",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",                                                         "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_PSCR", "KC_NLCK", "KC_HOME", "KC_TRNS",

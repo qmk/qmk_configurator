@@ -1,7 +1,7 @@
 {
   "keyboard": "durgod/dgk6x/hades",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "4188d2272ca2f4b542bb8506e785b5334bc93750",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

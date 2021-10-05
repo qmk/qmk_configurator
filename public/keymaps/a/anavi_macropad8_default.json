@@ -1,7 +1,7 @@
 {
   "keyboard": "anavi/macropad8",
   "keymap": "default",
-  "commit": "3c156e130b3e7a24166eb20bf862aaaac8ceff53",
+  "commit": "4e1c5887c5c08ebd2cf7868c8d9292aa728e7bf0",
   "layout": "LAYOUT_ortho_2x4",
   "layers": [
     [

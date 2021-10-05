@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/steamvan/rev1",
   "keymap": "default",
-  "commit": "50045624411df31968f7e2d2996ad342d689fe4f",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_standard",
   "layers": [
     [

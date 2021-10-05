@@ -1,7 +1,7 @@
 {
   "keyboard": "sck/osa",
   "keymap": "default",
-  "commit": "19b60c273ab63c250db748e5eead6baba88cd0d8",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_default_ansi",
   "layers": [
     [

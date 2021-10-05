@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbd67/rev1",
   "keymap": "default",
-  "commit": "f7601dba13390947c291b97e23c677b5e3d1f9c4",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

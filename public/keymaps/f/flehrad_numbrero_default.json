@@ -1,7 +1,7 @@
 {
   "keyboard": "flehrad/numbrero",
   "keymap": "default",
-  "commit": "200444f8d2c12ac04fd081745c74020c92d5da16",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_numbrero_numpad",
   "layers": [
     [

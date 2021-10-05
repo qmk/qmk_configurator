@@ -1,7 +1,7 @@
 {
   "keyboard": "sck/m0116b",
   "keymap": "default",
-  "commit": "c7a8cab8831f18778e4d46e3c6bfe36803656986",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_m0116_ansi",
   "layers": [
     [

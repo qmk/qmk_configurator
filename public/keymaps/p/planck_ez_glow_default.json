@@ -1,7 +1,7 @@
 {
   "keyboard": "planck/ez/glow",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "a68c4d8b8150d936b700a4d1f2f9670f97b78b87",
   "layout": "LAYOUT_planck_1x2uC",
   "layers": [
     [
