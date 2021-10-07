@@ -1,5 +1,5 @@
 {
-  "keyboard": "ibm/model_m_4th_gen",
+  "keyboard": "ibm/model_m_4th_gen/overnumpad_1xb",
   "keymap": "default",
   "commit": "376968ade4e102f7a526252599755af4c16dd525",
   "layout": "LAYOUT_all",
