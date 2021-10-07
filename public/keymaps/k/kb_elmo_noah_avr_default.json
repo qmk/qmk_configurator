@@ -1,7 +1,7 @@
 {
   "keyboard": "kb_elmo/noah_avr",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "9aedf515c094b0c2d77417d9559062a5717d0d8e",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
