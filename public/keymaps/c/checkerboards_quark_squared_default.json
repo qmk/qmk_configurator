@@ -1,7 +1,7 @@
 {
   "keyboard": "checkerboards/quark_squared",
   "keymap": "default",
-  "commit": "f061ca497464fe85284906fb163a33eaee7a91ef",
+  "commit": "3455e2408dd8e3f11854fd6660e2b40027bcd92e",
   "layout": "LAYOUT_ortho_2x225u",
   "layers": [
     [

@@ -1,5 +1,5 @@
 {
-    "keyboard": "ez_maker/directpins/promicro",
+    "keyboard": "ez_maker/directpins/teensy_2pp",
     "keymap": "default",
     "commit": "60a36863bca9f52cad6984de4e877f8dcd30a88f",
     "layout": "LAYOUT_all",

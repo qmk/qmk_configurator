@@ -1,7 +1,7 @@
 {
   "keyboard": "nk65",
   "keymap": "default",
-  "commit": "acd3e79add2d47ab664b831936e5b6e71d3b8e15",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
