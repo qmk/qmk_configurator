@@ -28,12 +28,12 @@ function processOneShotMods(store, keycode) {
 
   // tokenizers
   let mods = internal.split('|');
-  mods = mods.map((amod) => {
+  mods = mods.map(amod => {
     return amod.trim();
   });
 
   // parser
-  mods = mods.map((amod) => {
+  mods = mods.map(amod => {
     // MOD_LCTL = 0b00001, MOD_RCTL = 0b10001,
     // MOD_LSFT = 0b00010, MOD_RSFT = 0b10010,
     // MOD_LALT = 0b00100, MOD_RALT = 0b10100,

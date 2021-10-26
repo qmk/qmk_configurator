@@ -33,7 +33,7 @@
           ></span
         >
         <span class="end-tab"
-          ><font-awesome-icon class="keycode-search-icon" icon="search" /><input
+          ><font-awesome-icon class="keycode-search-icon" icon="search"/><input
             @focus="stopListening"
             @blur="startListening"
             type="text"

@@ -382,7 +382,6 @@ export default [
   makeOSM('MOD_RCTL|MOD_RALT|MOD_RGUI'),
   makeOSM('MOD_RSFT|MOD_RALT|MOD_RGUI'),
 
-
   { label: 'Special action keys', width: 'label' },
 
   {
