@@ -30,7 +30,25 @@ const osmLookup = {
   'MOD_LALT|MOD_LGUI': ['AG', 'Alt and GUI'],
   'MOD_LCTL|MOD_LSFT|MOD_LGUI': ['CSG', 'Control, Shift, and GUI'],
   'MOD_LCTL|MOD_LALT|MOD_LGUI': ['CAG', 'Control, Alt, and GUI'],
-  'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI']
+  'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI'],
+  'MOD_RCTL|MOD_RSFT': ['RCS', 'Right Control and Right Shift'],
+  'MOD_RCTL|MOD_RALT': ['RCA', 'Right Control and Right Alt'],
+  'MOD_RCTL|MOD_RGUI': ['RCG', 'Right Control and Right GUI'],
+  'MOD_RSFT|MOD_RALT': ['RSA', 'Right Shift and Right Alt'],
+  'MOD_RSFT|MOD_RGUI': ['RSG', 'Right Shift and Right GUI'],
+  'MOD_RALT|MOD_RGUI': ['RAG', 'Right Alt and Right GUI'],
+  'MOD_RCTL|MOD_RSFT|MOD_RGUI': [
+    'RCSG',
+    'Right Control, Right Shift, and Right GUI'
+  ],
+  'MOD_RCTL|MOD_RALT|MOD_RGUI': [
+    'RCAG',
+    'Right Control, Right Alt, and Right GUI'
+  ],
+  'MOD_RSFT|MOD_RALT|MOD_RGUI': [
+    'RSAG',
+    'Right Shift, Right Alt, and Right GUI'
+  ]
 };
 function makeOSM(mod, width = 1000) {
   const tuple = osmLookup[mod];
@@ -334,11 +352,6 @@ export default [
   makeOSM('MOD_LALT'),
   makeOSM('MOD_LGUI'),
   { width: 250 },
-  makeOSM('MOD_RSFT'),
-  makeOSM('MOD_RCTL'),
-  makeOSM('MOD_RALT'),
-  makeOSM('MOD_RGUI'),
-  { width: 250 },
   makeOSM('MOD_LCTL|MOD_LSFT'),
   makeOSM('MOD_LCTL|MOD_LALT'),
   makeOSM('MOD_LCTL|MOD_LGUI'),
@@ -352,7 +365,23 @@ export default [
   { width: 250 },
   makeOSM('MOD_MEH'),
   makeOSM('MOD_HYPR'),
+  { width: 0 },
+  makeOSM('MOD_RSFT'),
+  makeOSM('MOD_RCTL'),
+  makeOSM('MOD_RALT'),
+  makeOSM('MOD_RGUI'),
   { width: 250 },
+  makeOSM('MOD_RCTL|MOD_RSFT'),
+  makeOSM('MOD_RCTL|MOD_RALT'),
+  makeOSM('MOD_RCTL|MOD_RGUI'),
+  makeOSM('MOD_RSFT|MOD_RALT'),
+  makeOSM('MOD_RSFT|MOD_RGUI'),
+  makeOSM('MOD_RALT|MOD_RGUI'),
+  { width: 250 },
+  makeOSM('MOD_RCTL|MOD_RSFT|MOD_RGUI'),
+  makeOSM('MOD_RCTL|MOD_RALT|MOD_RGUI'),
+  makeOSM('MOD_RSFT|MOD_RALT|MOD_RGUI'),
+
 
   { label: 'Special action keys', width: 'label' },
 
