@@ -70,22 +70,22 @@ export default {
   components: { Keycode, Space },
   props: {},
   data() {
-    const userLang = navigator.language || navigator.userLanguage;
-    let active = 'ANSI';
-    if (userLang.toLowerCase().indexOf('en') < 0) {
-      active = 'ISO/JIS';
-    }
     return {
-      active: active,
+      active: 'ANSI',
       clearTimeout: undefined
     };
   },
   mounted() {
     this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
+    this.active = this.defaultTab;
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
+    ...mapState('app', ['configuratorSettings']),
     ...mapState('keycodes', ['searchFilter', 'searchCounters']),
+    defaultTab() {
+      return this.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI';
+    },
     activeTab() {
       return this.keycodesByGroup[this.active];
     },

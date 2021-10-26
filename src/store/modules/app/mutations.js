@@ -181,6 +181,9 @@ const mutations = {
   setDarkmode(state, value) {
     state.configuratorSettings.darkmodeEnabled = value;
   },
+  setIso(state, value) {
+    state.configuratorSettings.iso = value;
+  },
   setClearLayerDefault(state, value) {
     state.configuratorSettings.clearLayerDefault = value;
   },

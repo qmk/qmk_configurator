@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Mod Gelap
+settingsPanel:iso:help,Paparkan lagenda ISO secara lalai
+settingsPanel:iso:label,ISO
 settingsPanel:displaySizes:help,Tunjukkan saiz kekunci dalam Unit Kekunci
 settingsPanel:displaySizes:label,Tunjukkan saiz kekunci
 settingsPanel:displaySizes:title,ctrl + alt + u

@@ -22,11 +22,17 @@ const getters = {
   lookupKeyPressCode: (state, getters) => (searchTerm) =>
     getters.lookupKeycode(searchTerm, true),
   lookupKeycode:
-    (state) =>
+    (state, _, rootState) =>
     (searchTerm, isKeys = false) => {
-      var found = state.keycodes.find(({ code, keys }) => {
-        return code === searchTerm || (isKeys && keys && keys === searchTerm);
-      });
+      const matcher = ({ code, keys }) =>
+        code === searchTerm || (isKeys && keys && keys === searchTerm);
+      var found;
+      if (rootState.app.configuratorSettings.iso) {
+        found = iso_jis.find(matcher);
+      }
+      if (!found) {
+        found = state.keycodes.find(matcher);
+      }
       return found;
     }
 };

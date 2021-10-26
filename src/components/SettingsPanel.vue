@@ -109,6 +109,24 @@
           />
         </div>
       </div>
+      <div>
+        <label
+          class="settings-panel--text"
+          @mouseover="help('iso')"
+          :title="$t('settingsPanel.iso.label')"
+          >{{ $t('settingsPanel.iso.label') }}</label
+        >
+      </div>
+      <div>
+        <toggle-button
+          id="setting-toggle-iso"
+          :value="configuratorSettings.iso"
+          :width="defaultWidth"
+          :sync="true"
+          :labels="labels"
+          @change="iso"
+        />
+      </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
@@ -156,13 +174,17 @@ export default {
     ...mapActions('app', [
       'toggleDarkMode',
       'changeLanguage',
-      'toggleClearLayerDefault'
+      'toggleClearLayerDefault',
+      'toggleIso'
     ]),
     darkMode() {
       this.toggleDarkMode();
     },
     clearLayerDefault() {
       this.toggleClearLayerDefault();
+    },
+    iso() {
+      this.toggleIso();
     },
     help(key) {
       switch (key) {
@@ -183,6 +205,9 @@ export default {
           break;
         case 'clearLayer':
           this.helpText = this.$t('settingsPanel.clearLayer.help');
+          break;
+        case 'iso':
+          this.helpText = this.$t('settingsPanel.iso.help');
           break;
       }
 

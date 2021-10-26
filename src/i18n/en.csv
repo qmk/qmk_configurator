@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,Change the default keycode for clear layer
 settingsPanel:clearLayer:title,Clear Layer Default
 settingsPanel:darkmode:help,Use QMK Configurator's dark theme
 settingsPanel:darkmode:label,Dark Mode
+settingsPanel:iso:help,Display ISO legends by default
+settingsPanel:iso:label,ISO
 settingsPanel:displaySizes:help,Show keycap sizes in Key Units
 settingsPanel:displaySizes:label,Show Key Sizes
 settingsPanel:displaySizes:title,ctrl + alt + u

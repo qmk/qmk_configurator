@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Darkmode
+settingsPanel:iso:help,Exibir legendas ISO por padrão
+settingsPanel:iso:label,ISO
 settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
 settingsPanel:displaySizes:label,Mostrar tamanho de teclas
 settingsPanel:displaySizes:title,ctrl + alt + u
