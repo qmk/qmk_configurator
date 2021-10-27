@@ -78,6 +78,12 @@ export default {
   mounted() {
     this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
     this.active = this.defaultTab;
+    this.unsubscribe = store.subscribe((mutation) => {
+      if (mutation.type === 'app/setIso') this.active = this.defaultTab;
+    });
+  },
+  beforeDestroy() {
+    this.unsubscribe();
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
