@@ -22,19 +22,12 @@ const getters = {
   lookupKeyPressCode: (state, getters) => (searchTerm) =>
     getters.lookupKeycode(searchTerm, true),
   lookupKeycode:
-    (state, _, rootState) =>
-    (searchTerm, isKeys = false) => {
-      const matcher = ({ code, keys }) =>
-        code === searchTerm || (isKeys && keys && keys === searchTerm);
-      let found;
-      if (rootState.app.configuratorSettings.iso) {
-        found = iso_jis.find(matcher);
-      }
-      if (!found) {
-        found = state.keycodes.find(matcher);
-      }
-      return found;
-    }
+    (state) =>
+    (searchTerm, isKeys = false) =>
+      state.keycodes.find(
+        ({ code, keys }) =>
+          code === searchTerm || (isKeys && keys && keys === searchTerm)
+      )
 };
 
 function countMatches(filter, collection) {
@@ -56,17 +49,56 @@ function countMatches(filter, collection) {
 const actions = {};
 const mutations = {
   enableSteno(state) {
-    state.keycodes = [
-      ...ansi,
-      ...iso_jis,
-      ...quantum,
-      ...settings,
-      ...media,
-      ...steno
-    ];
+    if (state.keycodes[0].label === 'ISO/JIS')
+      state.keycodes = [
+        ...iso_jis,
+        ...ansi,
+        ...quantum,
+        ...settings,
+        ...media,
+        ...steno
+      ];
+    else
+      state.keycodes = [
+        ...ansi,
+        ...iso_jis,
+        ...quantum,
+        ...settings,
+        ...media,
+        ...steno
+      ];
   },
   disableSteno(state) {
-    state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+    if (state.keycodes[0].label === 'ISO/JIS')
+      state.keycodes = [...iso_jis, ...ansi, ...quantum, ...settings, ...media];
+    else
+      state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+  },
+  enableIso(state) {
+    if (state.keycodes.findIndex(({ label }) => label && label === 'Steno') < 0)
+      state.keycodes = [...iso_jis, ...ansi, ...quantum, ...settings, ...media];
+    else
+      state.keycodes = [
+        ...iso_jis,
+        ...ansi,
+        ...quantum,
+        ...settings,
+        ...media,
+        ...steno
+      ];
+  },
+  disableIso(state) {
+    if (state.keycodes.findIndex(({ label }) => label && label === 'Steno') < 0)
+      state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+    else
+      state.keycodes = [
+        ...ansi,
+        ...iso_jis,
+        ...quantum,
+        ...settings,
+        ...media,
+        ...steno
+      ];
   },
   setSearchFilter(state, newVal) {
     state.searchFilter = newVal;
