@@ -160,6 +160,7 @@ const actions = {
       iso = !iso;
     }
     commit('setIso', iso);
+    this.commit(`keycodes/${iso ? 'enable' : 'disable'}Iso`);
     await dispatch('saveConfiguratorSettings');
   },
   async toggleClearLayerDefault({ commit, state, dispatch }) {
