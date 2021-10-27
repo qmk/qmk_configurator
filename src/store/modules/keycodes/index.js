@@ -26,7 +26,7 @@ const getters = {
     (searchTerm, isKeys = false) => {
       const matcher = ({ code, keys }) =>
         code === searchTerm || (isKeys && keys && keys === searchTerm);
-      var found;
+      let found;
       if (rootState.app.configuratorSettings.iso) {
         found = iso_jis.find(matcher);
       }
