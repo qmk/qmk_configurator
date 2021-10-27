@@ -5,6 +5,7 @@ import quantum from './quantum';
 import settings from './kb-settings';
 import media from './app-media-mouse';
 import steno from './steno';
+import store from '@/store';
 const state = {
   keycodes: [...ansi, ...iso_jis, ...quantum, ...settings, ...media],
   searchFilter: '',
@@ -49,7 +50,7 @@ function countMatches(filter, collection) {
 const actions = {};
 const mutations = {
   enableSteno(state) {
-    if (state.keycodes[0].label === 'ISO/JIS')
+    if (store.state.app.configuratorSettings.iso) {
       state.keycodes = [
         ...iso_jis,
         ...ansi,
@@ -58,7 +59,7 @@ const mutations = {
         ...media,
         ...steno
       ];
-    else
+    } else {
       state.keycodes = [
         ...ansi,
         ...iso_jis,
@@ -67,12 +68,14 @@ const mutations = {
         ...media,
         ...steno
       ];
+    }
   },
   disableSteno(state) {
-    if (state.keycodes[0].label === 'ISO/JIS')
+    if (store.state.app.configuratorSettings.iso) {
       state.keycodes = [...iso_jis, ...ansi, ...quantum, ...settings, ...media];
-    else
+    } else {
       state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
+    }
   },
   enableIso(state) {
     if (state.keycodes.findIndex(({ label }) => label && label === 'Steno') < 0)
