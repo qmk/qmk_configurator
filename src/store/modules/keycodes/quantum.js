@@ -345,7 +345,14 @@ export default [
     title: 'Left Control, Shift, Alt and GUI'
   },
 
-  { width: 0 },
+  {
+    label: 'One-Shot Mod keys',
+    icon: 'exclamation-triangle',
+    iconClass: 'warning',
+    width: 'label',
+    title:
+      'Note: Combining left-hand and right-side modifier keys will be sent as all right-hand modifiers'
+  },
 
   makeOSM('MOD_LSFT'),
   makeOSM('MOD_LCTL'),
