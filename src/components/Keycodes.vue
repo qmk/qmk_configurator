@@ -193,7 +193,7 @@ export default {
   float: right;
 }
 .tab-area {
-  height: 350px;
+  height: 412px;
   padding: 10px 5px;
   border: 1px solid;
   border-radius: 0 4px 4px 4px;
