@@ -31,11 +31,11 @@ function isISO() {
   return store.state.app.configuratorSettings.iso;
 }
 
-function generateKeycodes() {
+function generateKeycodes(isIso, isSteno) {
   const keycodes = [
-    ...(isISO() ? keycodeLayout.ISO : keycodeLayout.ANSI),
+    ...(isIso ? keycodeLayout.ISO : keycodeLayout.ANSI),
     ...keycodeLayout.normal,
-    ...(state.steno ? steno : [])
+    ...(isSteno ? steno : [])
   ];
   return keycodes;
 }
@@ -76,20 +76,20 @@ const mutations = {
   },
   enableSteno(state) {
     state.steno = true;
-    state.keycodes = generateKeycodes();
+    state.keycodes = generateKeycodes(isISO(), state.steno);
   },
   disableSteno(state) {
     state.steno = false;
-    state.keycodes = generateKeycodes();
+    state.keycodes = generateKeycodes(isISO(), state.steno);
   },
   enableIso(state) {
-    state.keycodes = generateKeycodes();
+    state.keycodes = generateKeycodes(isISO(), state.steno);
     if (state.active === 'ANSI') {
       state.active = 'ISO/JIS';
     }
   },
   disableIso(state) {
-    state.keycodes = generateKeycodes();
+    state.keycodes = generateKeycodes(isISO(), state.steno);
     if (state.active === 'ISO/JIS') {
       state.active = 'ANSI';
     }
