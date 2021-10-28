@@ -123,6 +123,7 @@ export default {
     ...mapState('keymap', ['config']),
     ...mapState('keymap', { curLayer: 'layer' }),
     ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'colorwayOverride']),
+    ...mapGetters('keycodes', ['lookupKeycode']),
     myTitle() {
       return this.meta ? this.meta.code : '';
     },
@@ -144,7 +145,8 @@ export default {
         return;
       }
       if (isUndefined(substitute[this.meta.code])) {
-        return this.formatName(this.meta.name);
+        const { name } = this.lookupKeycode(this.meta.code);
+        return this.formatName(name ? name : this.meta.name);
       }
       return undefined;
     },

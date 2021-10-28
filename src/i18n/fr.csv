@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Mode Sombre
+settingsPanel:iso:help,Afficher les légendes ISO par défaut
+settingsPanel:iso:label,Utiliser les légendes des clés ISO
 settingsPanel:displaySizes:help,Montre la taille des touches (une touche classique = 1 u)
 settingsPanel:displaySizes:label,Taille des touches
 settingsPanel:displaySizes:title,ctrl + alt + u

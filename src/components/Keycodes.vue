@@ -70,13 +70,7 @@ export default {
   components: { Keycode, Space },
   props: {},
   data() {
-    const userLang = navigator.language || navigator.userLanguage;
-    let active = 'ANSI';
-    if (userLang.toLowerCase().indexOf('en') < 0) {
-      active = 'ISO/JIS';
-    }
     return {
-      active: active,
       clearTimeout: undefined
     };
   },
@@ -85,7 +79,11 @@ export default {
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
-    ...mapState('keycodes', ['searchFilter', 'searchCounters']),
+    ...mapState('app', ['configuratorSettings']),
+    ...mapState('keycodes', ['searchFilter', 'searchCounters', 'active']),
+    defaultTab() {
+      return this.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI';
+    },
     activeTab() {
       return this.keycodesByGroup[this.active];
     },
@@ -113,7 +111,7 @@ export default {
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
-    ...mapMutations('keycodes', ['setSearchFilter']),
+    ...mapMutations('keycodes', ['setSearchFilter', 'changeActive']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -123,9 +121,6 @@ export default {
         classes.push('active');
       }
       return classes.join(' ');
-    },
-    changeActive(index) {
-      this.active = index;
     },
     message(key) {
       let msg = '';

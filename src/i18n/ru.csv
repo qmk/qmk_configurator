@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Темный режим
+settingsPanel:iso:help,Отображать легенды ISO по умолчанию
+settingsPanel:iso:label,Используйте ключевые легенды ISO
 settingsPanel:displaySizes:help,Показывать размеры клавиш в Key Units
 settingsPanel:displaySizes:label,Показывать размеры клавиш
 settingsPanel:displaySizes:title,ctrl + alt + u

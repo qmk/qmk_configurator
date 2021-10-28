@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
+settingsPanel:iso:help,默认显示 ISO 图例
+settingsPanel:iso:label,使用 ISO 密钥图例
 settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
 settingsPanel:displaySizes:label,显示按键尺寸
 settingsPanel:displaySizes:title,ctrl + alt + u

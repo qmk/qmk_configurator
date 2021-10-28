@@ -104,6 +104,8 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambia Modalità scura
+settingsPanel:iso:help,Visualizza le legende ISO per impostazione predefinita
+settingsPanel:iso:label,Usa legende chiavi ISO
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
 settingsPanel:displaySizes:label,Mostra dimensione chiave
 settingsPanel:displaySizes:title,ctrl + alt + u
