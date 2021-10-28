@@ -7,23 +7,11 @@ import media from './app-media-mouse';
 import steno from './steno';
 import store from '@/store';
 
-function isISO() {
-  return store.state.app.configuratorSettings.iso;
-}
 const keycodeLayout = {
   ANSI: [...ansi, ...iso_jis],
   ISO: [...iso_jis, ...ansi],
   normal: [...quantum, ...settings, ...media]
 };
-
-function generateKeycodes(iso, steno) {
-  let keycodes = [];
-  keycodes = [...keycodeLayout[iso ? 'ISO' : 'ANSI'], ...keycodeLayout.normal];
-  if (steno) {
-    keycodes = [...keycodes, ...steno];
-  }
-  return keycodes;
-}
 
 const state = {
   keycodes: [...keycodeLayout.ANSI, ...keycodeLayout.normal],
@@ -38,6 +26,19 @@ const state = {
   steno: false,
   active: 'ANSI'
 };
+
+function isISO() {
+  return store.state.app.configuratorSettings.iso;
+}
+
+function generateKeycodes() {
+  const keycodes = [
+    ...keycodeLayout[isISO() ? 'ISO' : 'ANSI'],
+    ...keycodeLayout.normal,
+    ...(state.steno ? steno : [])
+  ];
+  return keycodes;
+}
 
 const getters = {
   keycodes: (state) => state.keycodes,
@@ -75,20 +76,20 @@ const mutations = {
   },
   enableSteno(state) {
     state.steno = true;
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes();
   },
   disableSteno(state) {
     state.steno = false;
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes();
   },
   enableIso(state) {
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes();
     if (state.active === 'ANSI') {
       state.active = 'ISO/JIS';
     }
   },
   disableIso(state) {
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes();
     if (state.active === 'ISO/JIS') {
       state.active = 'ANSI';
     }
