@@ -6,8 +6,27 @@ import settings from './kb-settings';
 import media from './app-media-mouse';
 import steno from './steno';
 import store from '@/store';
+
+function isISO() {
+  return store.state.app.configuratorSettings.iso;
+}
+const keycodeLayout = {
+  ANSI: [...ansi, ...iso_jis],
+  ISO: [...iso_jis, ...ansi],
+  normal: [...quantum, ...settings, ...media]
+};
+
+function generateKeycodes(iso, steno) {
+  let keycodes = [];
+  keycodes = [...keycodeLayout[iso ? 'ISO' : 'ANSI'], ...keycodeLayout.normal];
+  if (steno) {
+    keycodes = [...keycodes, ...steno];
+  }
+  return keycodes;
+}
+
 const state = {
-  keycodes: [...ansi, ...iso_jis, ...quantum, ...settings, ...media],
+  keycodes: [...keycodeLayout.ANSI, ...keycodeLayout.normal],
   searchFilter: '',
   searchCounters: {
     ANSI: 0,
@@ -15,7 +34,9 @@ const state = {
     Quantum: 0,
     KeyboardSettings: 0,
     AppMediaMouse: 0
-  }
+  },
+  steno: false,
+  active: 'ANSI'
 };
 
 const getters = {
@@ -49,59 +70,28 @@ function countMatches(filter, collection) {
 
 const actions = {};
 const mutations = {
+  changeActive(state, newActive) {
+    state.active = newActive;
+  },
   enableSteno(state) {
-    if (store.state.app.configuratorSettings.iso) {
-      state.keycodes = [
-        ...iso_jis,
-        ...ansi,
-        ...quantum,
-        ...settings,
-        ...media,
-        ...steno
-      ];
-    } else {
-      state.keycodes = [
-        ...ansi,
-        ...iso_jis,
-        ...quantum,
-        ...settings,
-        ...media,
-        ...steno
-      ];
-    }
+    state.steno = true;
+    state.keycodes = generateKeycodes(isISO(), state.steno);
   },
   disableSteno(state) {
-    if (store.state.app.configuratorSettings.iso) {
-      state.keycodes = [...iso_jis, ...ansi, ...quantum, ...settings, ...media];
-    } else {
-      state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
-    }
+    state.steno = false;
+    state.keycodes = generateKeycodes(isISO(), state.steno);
   },
   enableIso(state) {
-    if (state.keycodes.findIndex(({ label }) => label && label === 'Steno') < 0)
-      state.keycodes = [...iso_jis, ...ansi, ...quantum, ...settings, ...media];
-    else
-      state.keycodes = [
-        ...iso_jis,
-        ...ansi,
-        ...quantum,
-        ...settings,
-        ...media,
-        ...steno
-      ];
+    state.keycodes = generateKeycodes(isISO(), state.steno);
+    if (state.active === 'ANSI') {
+      state.active = 'ISO/JIS';
+    }
   },
   disableIso(state) {
-    if (state.keycodes.findIndex(({ label }) => label && label === 'Steno') < 0)
-      state.keycodes = [...ansi, ...iso_jis, ...quantum, ...settings, ...media];
-    else
-      state.keycodes = [
-        ...ansi,
-        ...iso_jis,
-        ...quantum,
-        ...settings,
-        ...media,
-        ...steno
-      ];
+    state.keycodes = generateKeycodes(isISO(), state.steno);
+    if (state.active === 'ISO/JIS') {
+      state.active = 'ANSI';
+    }
   },
   setSearchFilter(state, newVal) {
     state.searchFilter = newVal;
