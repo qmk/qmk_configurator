@@ -351,7 +351,7 @@ export default [
     iconClass: 'warning',
     width: 'label',
     title:
-      'Note: Combining left-hand and right-side modifier keys will be sent as all right-hand modifiers'
+      'Note: One-Shot keys combining left-hand and right-side modifiers will be sent with all right-hand modifiers'
   },
 
   makeOSM('MOD_LSFT'),
