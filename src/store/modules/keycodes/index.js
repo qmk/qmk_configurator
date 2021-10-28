@@ -33,7 +33,7 @@ function isISO() {
 
 function generateKeycodes() {
   const keycodes = [
-    ...keycodeLayout[isISO() ? 'ISO' : 'ANSI'],
+    ...(isISO() ? keycodeLayout.ISO : keycodeLayout.ANSI),
     ...keycodeLayout.normal,
     ...(state.steno ? steno : [])
   ];
