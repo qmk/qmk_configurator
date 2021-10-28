@@ -71,24 +71,16 @@ export default {
   props: {},
   data() {
     return {
-      active: 'ANSI',
       clearTimeout: undefined
     };
   },
   mounted() {
     this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
-    this.active = this.defaultTab;
-    this.unsubscribe = store.subscribe((mutation) => {
-      if (mutation.type === 'app/setIso') this.active = this.defaultTab;
-    });
-  },
-  beforeDestroy() {
-    this.unsubscribe();
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
     ...mapState('app', ['configuratorSettings']),
-    ...mapState('keycodes', ['searchFilter', 'searchCounters']),
+    ...mapState('keycodes', ['searchFilter', 'searchCounters', 'active']),
     defaultTab() {
       return this.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI';
     },
@@ -119,7 +111,7 @@ export default {
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
-    ...mapMutations('keycodes', ['setSearchFilter']),
+    ...mapMutations('keycodes', ['setSearchFilter', 'changeActive']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -129,9 +121,6 @@ export default {
         classes.push('active');
       }
       return classes.join(' ');
-    },
-    changeActive(index) {
-      this.active = index;
     },
     message(key) {
       let msg = '';
