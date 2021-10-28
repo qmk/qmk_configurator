@@ -105,7 +105,7 @@ settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Włącz/wyłącz tryb nocny
 settingsPanel:iso:help,Domyślnie wyświetlaj legendy ISO
-settingsPanel:iso:label,ISO
+settingsPanel:iso:label,Użyj legendy kluczy ISO
 settingsPanel:displaySizes:help,Wyświetla rozmiary klawiszy używając jako skali szerokości klawisza alfanumerycznego.
 settingsPanel:displaySizes:label,Pokaż rozmiary klawiszy
 settingsPanel:displaySizes:title,Ctrl + Alt + U

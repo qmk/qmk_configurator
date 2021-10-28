@@ -105,7 +105,7 @@ settingsPanel:clearLayer:title,レイヤクリア時のデフォルト
 settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
 settingsPanel:darkmode:label,ダークモード
 settingsPanel:iso:help,デフォルトでISO凡例を表示
-settingsPanel:iso:label,ISO
+settingsPanel:iso:label,ISOキーの凡例を使用する
 settingsPanel:displaySizes:help,キーキャップサイズをキーユニットで表示
 settingsPanel:displaySizes:label,キーサイズの表示
 settingsPanel:displaySizes:title,ctrl + alt + u

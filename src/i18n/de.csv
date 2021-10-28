@@ -105,7 +105,7 @@ settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Die Seite dunkler machen
 settingsPanel:iso:help,ISO-Legenden standardmäßig anzeigen
-settingsPanel:iso:label,ISO
+settingsPanel:iso:label,Verwenden Sie ISO-Schlüssellegenden
 settingsPanel:displaySizes:help,Tastengrößen relativ zur Standardgröße anzeigen
 settingsPanel:displaySizes:label,Zeige Tastengröße
 settingsPanel:displaySizes:title,strg + alt + u

@@ -105,7 +105,7 @@ settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambiar Modo oscuro
 settingsPanel:iso:help,Mostrar leyendas ISO de forma predeterminada
-settingsPanel:iso:label,ISO
+settingsPanel:iso:label,Utilice leyendas clave ISO
 settingsPanel:displaySizes:help,Mostrar tamaños de keycaps en Unidades de Tecla
 settingsPanel:displaySizes:label,Mostrar tamaño de teclas
 settingsPanel:displaySizes:title,ctrl + alt + u
