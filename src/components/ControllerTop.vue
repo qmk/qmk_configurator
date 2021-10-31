@@ -29,7 +29,7 @@
         <label class="drop-label" id="drop-label-version"
           >{{ $t('layout.label') }}:</label
         >
-        <select id="layout" v-model="layout">
+        <select id="layout" v-model="layout" @focus="focus" @blur="blur">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
