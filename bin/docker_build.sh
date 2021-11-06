@@ -4,12 +4,15 @@
 set -e
 #set -x
 
-# Install node
+
+# Activate nvm
 . /root/.nvm/nvm.sh
-nvm install 11.12
+
+# Install node
+cd /qmk_configurator
+nvm install
 
 # Setup configurator to build
-cd /qmk_configurator
 nvm use
 yarn install
 

@@ -25,7 +25,7 @@ RUN curl https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 COPY . /qmk_configurator/
 
 # Build configurator
-RUN /bin/bash -i /qmk_configurator/bin/docker_build.sh
+RUN /bin/bash /qmk_configurator/bin/docker_build.sh
 
 ## Second Stage- Run
 FROM nginx as run
