@@ -166,7 +166,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .hint-right {
   display: grid;
   justify-content: end;
@@ -199,6 +199,11 @@ export default {
 }
 .keymap--keyset {
   float: right;
+  border-radius: 4px;
+  border: 1px solid;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 .keymap--area {
   margin-top: 1em;

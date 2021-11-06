@@ -427,7 +427,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 #drop-label-keyboard {
   min-width: 137px;
 }
@@ -483,6 +483,9 @@ export default {
   border: 1px solid;
   width: 288px;
   width: 30rem;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 .drop-label {
   display: inline-block;
