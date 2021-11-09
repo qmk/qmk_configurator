@@ -1,0 +1,24 @@
+name: build container image
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  build:
+    name: Build image
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: redhat-actions/buildah-build@v2
+      id: build-image
+      with:
+        image: qmk/qmk_configurator
+        tags: latest ${{ github.sha }}
+        containerfiles: |
+          ./Dockerfile
