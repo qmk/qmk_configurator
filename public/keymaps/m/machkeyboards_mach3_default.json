@@ -1,0 +1,13 @@
+{
+  "keyboard": "machkeyboards/mach3",
+  "keymap": "default",
+  "commit": "a0b7c1618af74cc1e18a482ac79ed1ddedcda2df",
+  "layout": "LAYOUT_3x3",
+  "layers": [
+    [
+      "BL_INC",  "BL_DEC",  "BL_BRTG",
+      "BL_INC",  "BL_DEC",  "BL_BRTG",
+      "BL_INC",  "BL_DEC",  "BL_BRTG"
+    ]
+  ]
+}
