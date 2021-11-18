@@ -1,0 +1,13 @@
+{
+  "keyboard": "the_uni/pro_micro",
+  "keymap": "default",
+  "commit": "772f67484f49a48b7b408a4128006aa022b45cf0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "STN_S1",  "STN_TL",  "STN_PL",  "STN_HL",  "STN_ST1", "STN_ST3", "STN_FR",  "STN_PR",  "STN_LR",  "STN_TR",  "STN_DR",
+      "STN_S2",  "STN_KL",  "STN_WL",  "STN_RL",  "STN_ST2", "STN_ST4", "STN_RR",  "STN_BR",  "STN_GR",  "STN_SR",  "STN_ZR",
+                            "STN_N1",  "STN_A",   "STN_O",   "STN_E",   "STN_U",   "STN_N2"
+    ]
+  ]
+}
