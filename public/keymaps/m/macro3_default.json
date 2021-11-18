@@ -1,0 +1,16 @@
+{
+  "keyboard": "macro3",
+  "keymap": "default",
+  "commit": "22eba600418696542a6b84125f4dff2f37638c1e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_HOME", "KC_MUTE", "KC_MPLY", "KC_MSEL",
+      "KC_UNDO", "KC_CUT",  "KC_COPY", "LT(1,KC_PSTE)"
+    ],
+    [
+      "_______", "_______", "_______", "_______",
+      "RESET",   "_______", "_______", "_______"
+    ]
+  ]
+}

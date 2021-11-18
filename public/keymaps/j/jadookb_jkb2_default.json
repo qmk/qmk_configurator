@@ -1,0 +1,11 @@
+{
+  "keyboard": "jadookb/jkb2",
+  "keymap": "default",
+  "commit": "463cb40e16006acd31ddbb6210d2939dfb5838f2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_X"
+    ]
+  ]
+}

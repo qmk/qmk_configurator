@@ -1,0 +1,22 @@
+{
+  "keyboard": "teleport/numpad",
+  "keymap": "default",
+  "commit": "1989eb17ec391d4f9e8c1c1ea3fc746f96d43942",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "LT(1,KC_NLCK)", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",         "KC_P8",   "KC_P9",
+      "KC_P4",         "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",         "KC_P2",   "KC_P3",
+      "KC_P0",                    "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS", "RESET"
+    ]
+  ]
+}
