@@ -16,6 +16,9 @@
     "test:cypress:ci": "start-server-and-test serve http://localhost:8080 test:cypress"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^4.5.1",
+    "@fontsource/roboto": "^4.5.1",
+    "@fontsource/roboto-mono": "^4.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/free-brands-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
@@ -60,8 +63,8 @@
     "sass-loader": "8",
     "serialize-javascript": "^3.1.0",
     "start-server-and-test": "^1.10.0",
-    "vue-loader": "^15.7.0",
     "tar": "^6.1.9",
+    "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.11"
   },
   "resolutions": {
