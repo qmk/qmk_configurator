@@ -1,7 +1,7 @@
 {
   "keyboard": "dztech/duo_s",
   "keymap": "default",
-  "commit": "b441efbdf64d30031854c68a9c76376b38339b1e",
+  "commit": "ee9da1fcf39913593c6802719fd67d63cd9a284e",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
