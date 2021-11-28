@@ -1,8 +1,8 @@
 {
   "keyboard": "cassette42",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
-  "layout": "LAYOUT",
+  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
+  "layout": "//LAYOUT",
   "layers": [
     [
                "KC_MUTE",                        "KC_ENT",
