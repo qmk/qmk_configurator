@@ -1,5 +1,5 @@
 {
-  "keyboard": "mechlovin/adelais/standard_led/rev2",
+  "keyboard": "mechlovin/adelais/standard_led/arm/rev4/apm32f103",
   "keymap": "default",
   "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
   "layout": "LAYOUT_all",
