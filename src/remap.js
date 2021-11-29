@@ -263,6 +263,9 @@ const lookup = {
   'kprepublic/bm65iso': {
     target: 'kprepublic/bm65hsrgb_iso'
   },
+  'kprepublic/bm68rgb': {
+    target: 'kprepublic/bm68hsrgb'
+  },
   kudox: {
     target: 'kudox/rev1'
   },
