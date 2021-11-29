@@ -251,6 +251,9 @@ const lookup = {
   'keycapsss/plaid_pad': {
     target: 'keycapsss/plaid_pad/rev1'
   },
+  'kprepublic/bm60poker': {
+    target: 'kprepublic/bm60hsrgb_poker/rev1'
+  },
   kudox: {
     target: 'kudox/rev1'
   },
