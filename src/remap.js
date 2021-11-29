@@ -266,6 +266,9 @@ const lookup = {
   'kprepublic/bm68rgb': {
     target: 'kprepublic/bm68hsrgb'
   },
+  'kprepublic/bm80': {
+    target: 'kprepublic/bm80hsrgb'
+  },
   kudox: {
     target: 'kudox/rev1'
   },
