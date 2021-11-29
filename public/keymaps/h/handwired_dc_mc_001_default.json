@@ -5,10 +5,11 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_TRNS"
+      "KC_MUTE",
+      "KC_MSTP",
+      "KC_MPRV",
+      "KC_MNXT",
+      "KC_MPLY"
     ]
   ]
 }
-
-
-
