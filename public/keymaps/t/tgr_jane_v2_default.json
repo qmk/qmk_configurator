@@ -1,7 +1,7 @@
 {
-  "keyboard": "tgr/jane",
+  "keyboard": "tgr/jane/v2",
   "keymap": "default",
-  "commit": "2367e3e1fd6e5b93fe998399befa26d4de6a93ab",
+  "commit": "796db50895a62179ea40e6b9c38f5a21e707f166",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
