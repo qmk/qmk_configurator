@@ -254,6 +254,9 @@ const lookup = {
   'kprepublic/bm60poker': {
     target: 'kprepublic/bm60hsrgb_poker/rev1'
   },
+  'kprepublic/bm60rgb': {
+    target: 'kprepublic/bm60hsrgb/rev1'
+  },
   kudox: {
     target: 'kudox/rev1'
   },
