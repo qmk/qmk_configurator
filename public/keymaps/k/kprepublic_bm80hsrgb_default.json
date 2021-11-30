@@ -1,7 +1,7 @@
 {
-  "keyboard": "kprepublic/bm80",
+  "keyboard": "kprepublic/bm80hsrgb",
   "keymap": "default",
-  "commit": "2742d0c4c119c35980997ee43d9ce0fc412ec250",
+  "commit": "c5f1e9797ac905c24edc39d1bb12ed2e5537f00a",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

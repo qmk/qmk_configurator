@@ -251,6 +251,24 @@ const lookup = {
   'keycapsss/plaid_pad': {
     target: 'keycapsss/plaid_pad/rev1'
   },
+  'kprepublic/bm60poker': {
+    target: 'kprepublic/bm60hsrgb_poker/rev1'
+  },
+  'kprepublic/bm60rgb': {
+    target: 'kprepublic/bm60hsrgb/rev1'
+  },
+  'kprepublic/bm60rgb_iso': {
+    target: 'kprepublic/bm60hsrgb_iso/rev1'
+  },
+  'kprepublic/bm65iso': {
+    target: 'kprepublic/bm65hsrgb_iso'
+  },
+  'kprepublic/bm68rgb': {
+    target: 'kprepublic/bm68hsrgb'
+  },
+  'kprepublic/bm80': {
+    target: 'kprepublic/bm80hsrgb'
+  },
   kudox: {
     target: 'kudox/rev1'
   },

@@ -1,0 +1,22 @@
+{
+  "keyboard": "kapcave/paladinpad/rev2",
+  "keymap": "default",
+  "commit": "6779d5b990bf94cba28a74246c2378e5bb5047b4",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "MO(1)",   "KC_PAST", "KC_PSLS", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+                 "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "RGB_TOG", "RGB_MOD", "KC_TRNS",
+      "RGB_HUI", "RGB_SAI", "RGB_VAI",
+      "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "RESET",   "KC_NLCK"
+    ]
+  ]
+}
