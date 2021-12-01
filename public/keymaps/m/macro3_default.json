@@ -1,12 +1,12 @@
 {
   "keyboard": "macro3",
   "keymap": "default",
-  "commit": "22eba600418696542a6b84125f4dff2f37638c1e",
+  "commit": "35a18a8bcd393bf17f4be326d8ef067ce6bfaf50",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_HOME", "KC_MUTE", "KC_MPLY", "KC_MSEL",
-      "KC_UNDO", "KC_CUT",  "KC_COPY", "LT(1,KC_PSTE)"
+      "KC_MUTE", "KC_MPLY", "KC_MRWD", "LT(1,KC_MFFD)",
+      "C(KC_Z)", "C(KC_X)", "C(KC_C)", "C(KC_V)"
     ],
     [
       "_______", "_______", "_______", "_______",
