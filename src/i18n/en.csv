@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,"App, Media and Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
+keycodesTab:Steno:label,Steno
 keymap:label,Keymap
 keymapHelp:label,Help
 keymapHelp:title,How do I use keymap.json?
@@ -104,14 +105,14 @@ settingsPanel:clearLayer:help,Change the default keycode for clear layer
 settingsPanel:clearLayer:title,Clear Layer Default
 settingsPanel:darkmode:help,Use QMK Configurator's dark theme
 settingsPanel:darkmode:label,Dark Mode
-settingsPanel:iso:help,Display ISO legends by default
-settingsPanel:iso:label,Use ISO key legends
 settingsPanel:displaySizes:help,Show keycap sizes in Key Units
 settingsPanel:displaySizes:label,Show Key Sizes
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Input keys via keyboard without clicking each position.
 settingsPanel:fastInput:label,Fast Input
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:iso:help,Display ISO legends by default
+settingsPanel:iso:label,Use ISO key legends
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Change the language of the user interface

@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,"App, Media and Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Keyboard Settings
 keycodesTab:Quantum:label,Quantum
+keycodesTab:Steno:label,
 keymap:label,Keymap
 keymapHelp:label,ヘルプ
 keymapHelp:title,keymap.jsonを使用するにはどうすればいいですか？
@@ -104,14 +105,14 @@ settingsPanel:clearLayer:help,レイヤクリア時のデフォルトのキー�
 settingsPanel:clearLayer:title,レイヤクリア時のデフォルト
 settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
 settingsPanel:darkmode:label,ダークモード
-settingsPanel:iso:help,デフォルトでISO凡例を表示
-settingsPanel:iso:label,ISOキーの凡例を使用する
 settingsPanel:displaySizes:help,キーキャップサイズをキーユニットで表示
 settingsPanel:displaySizes:label,キーサイズの表示
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
 settingsPanel:fastInput:label,高速入力
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:iso:help,デフォルトでISO凡例を表示
+settingsPanel:iso:label,ISOキーの凡例を使用する
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,ユーザインタフェースの言語を変更する
