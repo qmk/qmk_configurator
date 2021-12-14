@@ -69,7 +69,7 @@ const state = {
     { value: 'es', label: 'Español' },
     { value: 'ja', label: 'Japanese' },
     { value: 'ru', label: 'Русский' },
-    { value: 'pt-BR', label: 'Português' },
+    { value: 'pt-BR', label: 'Português brasileiro' },
     { value: 'pl-PL', label: 'Polski' },
     { value: 'ms', label: 'Bahasa Malaysia' },
     { value: 'zh-CN', label: '简体中文' }
