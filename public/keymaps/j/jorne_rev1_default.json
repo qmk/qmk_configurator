@@ -23,15 +23,14 @@
       "KC_TRNS", "KC_NLCK",        "KC_PSLS", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",    "KC_VOLU", "KC_HOME", "KC_PSCR", "KC_PGUP", "KC_SLCK", "KC_CAPS",        "KC_TRNS",
                  "LCTL_T(KC_EQL)", "KC_PAST", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",    "KC_MUTE", "KC_LEFT", "KC_UP",   "KC_RGHT", "KC_INS",  "RCTL_T(KC_APP)",
                  "KC_TRNS",        "KC_P0",   "KC_P1",   "KC_P2",   "KC_P3",   "KC_PDOT",    "KC_VOLD", "KC_END",  "KC_DOWN", "KC_PGDN", "KC_PAUS", "KC_TRNS",
-                                                         "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS"
+                                                    "LT(3,KC_TAB)", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "LT(3,KC_DEL)"
     ],
     [
       "RESET",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",    "KC_NO",   "RESET",
                  "RGB_TOG",  "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "RGB_VAI",  "RGB_SAI", "RGB_HUI", "RGB_TOG",
                  "RGB_MOD",  "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "RGB_VAD",  "RGB_SAD", "RGB_HUD", "RGB_MOD",
-                                                   "KC_TRNS", "KC_NO",   "KC_TRNS",    "KC_TRNS", "KC_NO",   "KC_TRNS"
+                                             "KC_TRNS", "KC_NO",   "LT(3,KC_ENT)",     "LT(3,KC_ESC)", "KC_NO",   "KC_TRNS"
     ]
   ],
   "author" : "joric"
 }
-
