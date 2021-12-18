@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,应用、多媒体和鼠标
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,键盘设置
 keycodesTab:Quantum:label,量子
+keycodesTab:Steno:label,
 keymap:label,键位
 keymapHelp:label,帮助
 keymapHelp:title,如何使用 keymap.json？
@@ -104,14 +105,14 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
-settingsPanel:iso:help,默认显示 ISO 图例
-settingsPanel:iso:label,使用 ISO 密钥图例
 settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
 settingsPanel:displaySizes:label,显示按键尺寸
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:iso:help,默认显示 ISO 图例
+settingsPanel:iso:label,使用 ISO 密钥图例
 settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面语言

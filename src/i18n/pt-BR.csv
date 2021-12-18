@@ -46,6 +46,7 @@ keycodesTab:AppMediaMouse:label,"App, Midia e Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Configurações de teclado
 keycodesTab:Quantum:label,Quantum
+keycodesTab:Steno:label,
 keymap:label,Keymap
 keymapHelp:label,
 keymapHelp:title,
@@ -104,14 +105,14 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Darkmode
-settingsPanel:iso:help,Exibir legendas ISO por padrão
-settingsPanel:iso:label,Use as legendas da chave ISO
 settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
 settingsPanel:displaySizes:label,Mostrar tamanho de teclas
 settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:iso:help,Exibir legendas ISO por padrão
+settingsPanel:iso:label,Use as legendas da chave ISO
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
