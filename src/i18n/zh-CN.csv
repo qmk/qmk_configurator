@@ -46,7 +46,7 @@ keycodesTab:AppMediaMouse:label,应用、多媒体和鼠标
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,键盘设置
 keycodesTab:Quantum:label,量子
-keycodesTab:Steno:label,
+keycodesTab:Steno:label,Steno
 keymap:label,键位
 keymapHelp:label,帮助
 keymapHelp:title,如何使用 keymap.json？
@@ -101,8 +101,8 @@ print:print:title,打印
 print:source:title,源码
 printKeymap:label,打印键位
 printKeymap:title,打印键位表
-settingsPanel:clearLayer:help,
-settingsPanel:clearLayer:title,
+settingsPanel:clearLayer:help,更改“清除层”功能所使用的默认键码
+settingsPanel:clearLayer:title,清除层默认键码
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
 settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
