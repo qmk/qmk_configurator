@@ -1,7 +1,7 @@
 {
   "keyboard": "mechbrewery/mb65s",
   "keymap": "default",
-  "commit": "e9731c19c70c8411b99775bf12303a1b2baf585c",
+  "commit": "98a82225aa82a5f9d4a2db80883661d3f34c9e7c",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
