@@ -65,13 +65,13 @@ const state = {
   languages: [
     { value: 'en', label: 'English' },
     { value: 'de', label: 'Deutsch' },
-    { value: 'fr', label: 'Français' },
     { value: 'es', label: 'Español' },
-    { value: 'ja', label: 'Japanese' },
-    { value: 'ru', label: 'Русский' },
-    { value: 'pt-BR', label: 'Português brasileiro' },
-    { value: 'pl-PL', label: 'Polski' },
+    { value: 'fr', label: 'Français' },
     { value: 'ms', label: 'Bahasa Malaysia' },
+    { value: 'pl-PL', label: 'Polski' },
+    { value: 'pt-BR', label: 'Português brasileiro' },
+    { value: 'ru', label: 'Русский' },
+    { value: 'ja', label: '日本語' },
     { value: 'zh-CN', label: '简体中文' }
   ],
   snowflakes: false
