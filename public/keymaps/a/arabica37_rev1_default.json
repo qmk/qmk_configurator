@@ -1,7 +1,7 @@
 {
   "keyboard": "arabica37/rev1",
   "keymap": "default",
-  "commit": "8812e3724aeb1f2d6018ba080aa4f2179b00b178",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -26,7 +26,7 @@
                                                   "KC_TRNS",                       "KC_TRNS"
     ],
     [
-      "KC_TRNS", "KC_NO",   "RGB_TOG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_TRNS", "RGBRST",  "RGB_TOG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_TRNS", "RGB_HUI", "RGB_SAI", "RGB_VAI", "AG_SWAP", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_TRNS", "RGB_HUD", "RGB_SAD", "RGB_VAD", "AG_NORM", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",
