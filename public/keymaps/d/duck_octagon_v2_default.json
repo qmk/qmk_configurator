@@ -1,7 +1,7 @@
 {
   "keyboard": "duck/octagon/v2",
   "keymap": "default",
-  "commit": "3916b06168f39233f77a252fbf5f9cfdae3df4fe",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [
