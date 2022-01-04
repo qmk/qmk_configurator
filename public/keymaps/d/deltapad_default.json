@@ -1,0 +1,32 @@
+{
+  "keyboard": "deltapad",
+  "keymap": "default",
+  "commit": "76f94a4275ca1d6417c85c9ad173ae61247f0d19",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",
+      "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",
+      "KC_F21",  "KC_F22",  "KC_F23",  "KC_F24",
+      "TO(1)",   "OSL(2)",  "OSL(3)",  "LCA(KC_J)"
+    ],
+    [
+      "LALT(KC_P1)", "LALT(KC_P2)", "LALT(KC_P3)", "LALT(KC_P4)",
+      "LALT(KC_P5)", "LALT(KC_P6)", "LALT(KC_P7)", "LALT(KC_P8)",
+      "LALT(KC_P9)", "LALT(KC_A)",  "LALT(KC_B)",  "LALT(KC_C)",
+      "TO(2)",       "LALT(KC_D)",  "LALT(KC_E)",  "LALT(KC_F)"
+    ],
+    [
+      "LCA(KC_F1)", "LCA(KC_F2)",  "LCA(KC_F3)",  "LCA(KC_F4)",
+      "LCA(KC_F5)", "LCA(KC_F6)",  "LCA(KC_F7)",  "LCA(KC_F8)",
+      "LCA(KC_F9)", "LCA(KC_F10)", "LCA(KC_F11)", "LCA(KC_F12)",
+      "TO(3)",      "LCA(KC_D)",   "LCA(KC_E)",   "LCA(KC_F)"
+    ],
+    [
+      "LCA(KC_F13)", "LCA(KC_F14)", "LCA(KC_F15)", "LCA(KC_F16)",
+      "LCA(KC_F17)", "LCA(KC_F18)", "LCA(KC_F19)", "LCA(KC_F20)",
+      "LCA(KC_F21)", "LCA(KC_F22)", "LCA(KC_F23)", "LCA(KC_F24)",
+      "TO(0)",       "LCA(KC_G)",   "LCA(KC_H)",   "LCA(KC_I)"
+    ]
+  ]
+}
