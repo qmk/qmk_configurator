@@ -1,7 +1,7 @@
 {
   "keyboard": "checkerboards/axon40",
   "keymap": "default",
-  "commit": "6db4b49fec258d792fd88792e416f5ea684446c1",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_all",
   "layers": [
     [
