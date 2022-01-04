@@ -1,0 +1,24 @@
+{
+  "keyboard": "handwired/mechboards_micropad",
+  "keymap": "default",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "https://mechboards.co.uk/",
+      {"action":"tap", "keycodes": ["ENT"]}
+    ],
+    [
+      "https://qmk.fm/",
+      {"action":"tap", "keycodes": ["ENT"]}
+    ],
+    [
+      "MKUK4 was amazing!"
+    ]
+  ],
+  "layers": [
+    [
+      "MACRO_0", "MACRO_1", "MACRO_2", "XXXXXXX"
+    ]
+  ]
+}
