@@ -1,7 +1,7 @@
 {
   "keyboard": "walletburner/cajal",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "58f7aefadd075d9cb335b99d24629744164013c7",
   "layout": "LAYOUT_stagger",
   "layers": [
     [
