@@ -1,7 +1,7 @@
 {
   "keyboard": "maxipad/teensy2",
   "keymap": "default",
-  "commit": "36fce12d080a4dd37a00f504396bd94b7a06e203",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT",
   "layers": [
     [
