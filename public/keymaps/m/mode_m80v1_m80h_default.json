@@ -1,7 +1,7 @@
 {
-  "keyboard": "mode/eighty/m80h",
+  "keyboard": "mode/m80v1/m80h",
   "keymap": "default",
-  "commit": "457042f1795f56a47becad3c51a2250d7447fb59",
+  "commit": "dea23720e67d95278830a1172dac57a4e502a050",
   "layout": "LAYOUT_eighty_m80h",
   "layers": [
     [
