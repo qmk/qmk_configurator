@@ -1,0 +1,15 @@
+{
+  "keyboard": "mini_ten_key_plus",
+  "keymap": "default",
+  "commit": "17c87710002c3993ce86f8dc6a96c940dedc1da8",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+      "KC_ESC",  "KC_CALC", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_BSPC", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_LPRN", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_RPRN", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_Y",    "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}
