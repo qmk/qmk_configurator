@@ -1,7 +1,7 @@
 {
   "keyboard": "percent/skog_lite",
   "keymap": "default",
-  "commit": "ec053c8283a58de59954f6fe9a9438ef29a24918",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
