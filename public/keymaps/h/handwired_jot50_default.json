@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/jot50",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "commit": "100a3e5d7a1f36616b6c134dd498819f55fc8090",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

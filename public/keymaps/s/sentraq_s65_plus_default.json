@@ -1,7 +1,7 @@
 {
   "keyboard": "sentraq/s65_plus",
   "keymap": "default",
-  "commit": "9b232a7f885e320061aae994713acd31297eac5c",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

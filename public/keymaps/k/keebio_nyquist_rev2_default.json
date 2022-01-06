@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/nyquist/rev2",
   "keymap": "default",
-  "commit": "42696a4f8c9170f9dbf3a1ec05ca95079b7a77a9",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

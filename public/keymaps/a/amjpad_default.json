@@ -1,7 +1,7 @@
 {
   "keyboard": "amjpad",
   "keymap": "default",
-  "commit": "0072fdd799ffe61bf64f12c23335da3adeb083e5",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [

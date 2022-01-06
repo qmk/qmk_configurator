@@ -1,0 +1,24 @@
+{
+  "keyboard": "dailycraft/stickey4",
+  "keymap": "default",
+  "commit": "7e58ab88ffb5a7ac556e3ca4184628ef41ba8d20",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}

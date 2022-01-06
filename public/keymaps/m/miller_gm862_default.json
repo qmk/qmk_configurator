@@ -1,7 +1,7 @@
 {
   "keyboard": "miller/gm862",
   "keymap": "default",
-  "commit": "4ef10a424ae1174bc108de9014dfd1f0ff6751e0",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

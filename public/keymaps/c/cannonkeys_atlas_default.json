@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/atlas",
   "keymap": "default",
-  "commit": "b0e99c803dba3f8768ad8f0c8df8ce0b3183794a",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

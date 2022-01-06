@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/nein",
   "keymap": "default",
-  "commit": "8bcefc92d0b1494b890dae3f41516acf831f539c",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [
@@ -10,9 +10,9 @@
       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "RESET",   "KC_TRNS", "KC_STOP",
-      "KC_TRNS", "KC_TRNS", "RGB_MOD",
-      "KC_MPRV", "KC_TRNS", "KC_MNXT"
+      "RESET",   "_______", "KC_STOP",
+      "_______", "_______", "RGB_MOD",
+      "KC_MPRV", "_______", "KC_MNXT"
     ]
   ]
 }

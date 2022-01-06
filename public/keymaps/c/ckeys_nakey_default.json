@@ -1,7 +1,7 @@
 {
   "keyboard": "ckeys/nakey",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [

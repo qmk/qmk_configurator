@@ -1,7 +1,7 @@
 {
   "keyboard": "kprepublic/bm16s",
   "keymap": "default",
-  "commit": "78ccd9c201199444bc06161b05ee8d7ba9c31613",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

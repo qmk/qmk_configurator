@@ -1,7 +1,7 @@
 {
   "keyboard": "exclusive/e6v2/oe_bmc",
   "keymap": "default",
-  "commit": "2557bc8e6f6e61352fa5875646d861126c42a3b0",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

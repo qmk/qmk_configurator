@@ -1,7 +1,7 @@
 {
   "keyboard": "massdrop/alt",
   "keymap": "default",
-  "commit": "16fe4b8b77c2eee7fb1598063d2903086bd03ca4",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
