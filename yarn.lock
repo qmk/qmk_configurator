@@ -6808,11 +6808,6 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite-plugin-csv@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vite-plugin-csv/-/vite-plugin-csv-1.0.0.tgz#ac088f826cc9f490d00f794ff57c988616fa3de3"
-  integrity sha512-pc0XhALjGQcnbLh8rCKHWzQNX4pth2qUZhQ52YkzDcUldKTrmPS+hXSroF5YklAD2DAd7hFMxUrfwA8cm/X5Jw==
-
 vite-plugin-vue2@^1.9.2:
   version "1.9.2"
   resolved "https://registry.yarnpkg.com/vite-plugin-vue2/-/vite-plugin-vue2-1.9.2.tgz#bf09cc23777eaed77b793d42114a316662b84445"

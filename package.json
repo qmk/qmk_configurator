@@ -63,7 +63,6 @@
     "start-server-and-test": "^1.10.0",
     "tar": "^6.1.9",
     "vite": "^2.7.12",
-    "vite-plugin-csv": "^1.0.0",
     "vite-plugin-vue2": "^1.9.2",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.14"

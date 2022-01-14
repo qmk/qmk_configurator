@@ -2,7 +2,7 @@
 const path = require('path');
 import { defineConfig } from 'vite';
 import { createVuePlugin as vue } from 'vite-plugin-vue2';
-import CSV from 'vite-plugin-csv';
+import CSV from './scripts/i18n/loader.js';
 
 export default defineConfig({
   plugins: [vue(), CSV()],
@@ -11,4 +11,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   }
-})
+});
