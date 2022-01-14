@@ -1,6 +1,6 @@
 import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
-import * as keypress from 'keypress.js';
+import { keypress } from 'keypress.js';
 import { generateKeypressCombos } from './keypress-utils.js';
 import {
   backend_keyboards_url,
@@ -9,6 +9,7 @@ import {
 import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
+console.log(keypress);
 const steno_keyboards = ['gergo', 'georgi'];
 
 const actions = {
