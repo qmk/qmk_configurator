@@ -132,7 +132,7 @@ import { PREVIEW_LABEL } from '@/store/modules/constants';
 import { disableCompileButton, disableOtherButtons } from '@/api';
 import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 
-import ElectronBottomControls from './ElectronBottomControls';
+import ElectronBottomControls from './ElectronBottomControls.vue';
 
 import remap from '@/remap';
 

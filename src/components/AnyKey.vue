@@ -29,7 +29,7 @@
 </template>
 <script>
 import { mapMutations } from 'vuex';
-import BaseKey from './BaseKey';
+import BaseKey from './BaseKey.vue';
 export default {
   name: 'any-key',
   extends: BaseKey,

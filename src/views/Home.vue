@@ -11,8 +11,8 @@
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/Main';
-import Keycodes from '@/components/Keycodes';
+import Main from '@/components/Main.vue';
+import Keycodes from '@/components/Keycodes.vue';
 
 export default {
   name: 'configurator',

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="description" content="QMK Configurator is an online tool used for easily creating firmware files for keyboards supported in qmk_firmware">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="icon" href="/favicon.ico">
     <title>QMK Configurator</title>
     <style>
         .qmk-hidden-drag-n-drop {
@@ -13,11 +13,11 @@
         }
     </style>
  </head>
-  </head>
   <body>
     <noscript>
       <strong>We're sorry but configurator doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <script type="module" src="/src/main.js"></script>
     <div id="browser-warn-container"></div>
     <div id="status-app"></div>
     <div class="qmk-hidden-drag-n-drop"></div>

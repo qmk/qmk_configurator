@@ -8,8 +8,8 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
-import BaseKeymap from '@/components/BaseKeymap';
-import PrintKey from '@/components/PrintKey';
+import BaseKeymap from '@/components/BaseKeymap.vue';
+import PrintKey from '@/components/PrintKey.vue';
 
 export default {
   name: 'print-keymap',

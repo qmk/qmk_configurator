@@ -1,16 +1,13 @@
-@import './scss/qmk_colors';
-@import './scss/themes';
-@import './scss/status-bar';
-@import './scss/tooltip.scss';
+@import '@/scss/qmk_colors';
+@import '@/scss/themes';
+@import '@/scss/status-bar';
+@import '@/scss/tooltip.scss';
 
 /*
 TO REFACTOR: import of style.css
 */
 
 /* prevent draggable elements from being selected */
-@import '~@fontsource/roboto-mono/400.css';
-@import '~@fontsource/roboto/400.css';
-@import '~@fontsource/roboto/700.css';
 
 [draggable] {
   -moz-user-select: none;

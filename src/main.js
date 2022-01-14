@@ -2,14 +2,19 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import StatusBar from '@/components/StatusBar';
-import BrowserWarn from '@/components/BrowserWarn';
-import Veil from '@/components/Veil';
+import StatusBar from '@/components/StatusBar.vue';
+import BrowserWarn from '@/components/BrowserWarn.vue';
+import Veil from '@/components/Veil.vue';
 import vSelect from 'vue-select';
 import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
 import VTooltip from 'v-tooltip';
+import '@fontsource/roboto-mono/400.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/700.css';
+import '@fontsource/montserrat/400.css';
+
 
 Vue.use(VueI18n);
 Vue.use(VTooltip);

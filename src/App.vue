@@ -70,14 +70,14 @@
 </template>
 <script>
 import size from 'lodash/size';
-import InfoBar from '@/components/InfoBar';
+import InfoBar from '@/components/InfoBar.vue';
 import random from 'lodash/random';
-import Spinner from '@/components/spinner';
-import SettingsPanel from '@/components/SettingsPanel';
+import Spinner from '@/components/spinner.vue';
+import SettingsPanel from '@/components/SettingsPanel.vue';
 import { createNamespacedHelpers, mapActions, mapGetters } from 'vuex';
 const { mapState, mapMutations } = createNamespacedHelpers('app');
 import isFunction from 'lodash/isFunction';
-import SnowFlake from '@/components/SnowFlake';
+import SnowFlake from '@/components/SnowFlake.vue';
 
 export default {
   name: 'app',
@@ -88,7 +88,7 @@ export default {
   },
   data() {
     return {
-      revision: process.env.VUE_APP_TRAVIS_COMMIT || 'dev',
+      revision: import.meta.VITE_TRAVIS_COMMIT || 'dev',
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,
@@ -199,7 +199,7 @@ export default {
 };
 </script>
 <style lang="scss">
-@import './scss/style.scss';
+@import '@/scss/style.scss';
 #app {
   display: grid;
   grid-template: 1fr / minmax(1000px, 1300px);

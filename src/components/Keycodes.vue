@@ -61,8 +61,8 @@
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import isUndefined from 'lodash/isUndefined';
 import debounce from 'lodash/debounce';
-import Keycode from '@/components/Keycode';
-import Space from '@/components/Space';
+import Keycode from '@/components/Keycode.vue';
+import Space from '@/components/Space.vue';
 import store from '@/store';
 
 export default {

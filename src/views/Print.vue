@@ -71,7 +71,7 @@
 
 <script>
 import Vue from 'vue';
-import PrintKeymap from '@/components/PrintKeymap';
+import PrintKeymap from '@/components/PrintKeymap.vue';
 import { mapState, mapGetters } from 'vuex';
 export default {
   name: 'printerator',

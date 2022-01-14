@@ -27,7 +27,7 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapMutations } from 'vuex';
-import BaseKey from './BaseKey';
+import BaseKey from './BaseKey.vue';
 export default {
   name: 'layer-container-key',
   extends: BaseKey,

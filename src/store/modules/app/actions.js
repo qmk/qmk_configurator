@@ -1,7 +1,7 @@
 import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
 import * as keypress from 'keypress.js';
-import { generateKeypressCombos } from './keypress';
+import { generateKeypressCombos } from './keypress-utils.js';
 import {
   backend_keyboards_url,
   backend_keyboard_list_url

@@ -90,8 +90,8 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
-import BaseKeymap from '@/components/BaseKeymap';
-import TesterKey from '@/components/TesterKey';
+import BaseKeymap from '@/components/BaseKeymap.vue';
+import TesterKey from '@/components/TesterKey.vue';
 import { Howl } from 'howler';
 
 export default {

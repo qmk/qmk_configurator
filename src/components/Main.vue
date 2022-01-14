@@ -68,11 +68,11 @@
 <script>
 import capitalize from 'lodash/capitalize';
 import { mapMutations, mapState, mapGetters, mapActions } from 'vuex';
-import ControllerTop from '@/components/ControllerTop';
-import StatusPanel from '@/components/StatusPanel';
-import ControllerBottom from '@/components/ControllerBottom';
-import VisualKeymap from '@/components/VisualKeymap';
-import LayerControl from '@/components/LayerControl';
+import ControllerTop from '@/components/ControllerTop.vue';
+import StatusPanel from '@/components/StatusPanel.vue';
+import ControllerBottom from '@/components/ControllerBottom.vue';
+import VisualKeymap from '@/components/VisualKeymap.vue';
+import LayerControl from '@/components/LayerControl.vue';
 
 export default {
   name: 'Main',
