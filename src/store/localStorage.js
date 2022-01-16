@@ -21,4 +21,3 @@ export function localStoreRemove(key) {
     localStorage.removeItem(key);
   }
 }
-

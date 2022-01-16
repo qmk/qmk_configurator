@@ -6,7 +6,6 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "vite lint",
     "test:unit": "vue-cli-service test:unit",
     "i18n:chk": "node scripts/i18n/csv-sync.js chk",
     "i18n:sync": "node scripts/i18n/csv-sync.js sync",
