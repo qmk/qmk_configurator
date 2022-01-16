@@ -1,5 +1,5 @@
 <template functional>
-  <Veil :isVisible="props.isVisible">
+  <VeilComponent :isVisible="props.isVisible">
     <template #contents>
       <div class="spinner">
         <h1 class="status">{{ props.status }}</h1>
@@ -12,7 +12,7 @@
         <h3 class="message" v-html="props.message"></h3>
       </div>
     </template>
-  </Veil>
+  </VeilComponent>
 </template>
 <script>
 export default {

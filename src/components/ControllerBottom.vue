@@ -1,6 +1,6 @@
 <template>
   <div id="controller-bottom" class="botctrl">
-    <Veil :isVisible="isVeilOpened">
+    <VeilComponent :isVisible="isVeilOpened">
       <template #contents>
         <div class="input-url-modal">
           <div>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </template>
-    </Veil>
+    </VeilComponent>
     <div class="botctrl-1-1">
       <button
         id="export"
