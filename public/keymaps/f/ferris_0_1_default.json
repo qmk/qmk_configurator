@@ -1,8 +1,8 @@
 {
   "keyboard": "ferris/0_1",
   "keymap": "default",
-  "commit": "23becac3a650ac06e202bac8158b058a8b7b48f2",
-  "layout": "LAYOUT",
+  "commit": "e2d1547f31c0ceda27b68e26e79224b49cadaa97",
+  "layout": "LAYOUT_split_3x5_2",
   "layers": [
     [
       "KC_Q",         "KC_W",         "KC_E",         "KC_R",       "KC_T",       "KC_Y",         "KC_U",       "KC_I",            "KC_O",           "KC_P",
@@ -52,5 +52,6 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_EXLM", "KC_TRNS",    "DF(0)",   "KC_TRNS", "RALT_T(KC_COMM)", "RCTL_T(KC_DOT)", "RESET",
                                        "KC_TRNS", "KC_TAB",     "KC_NO",   "KC_TRNS"
     ]
-  ]
+  ],
+  "author": "@pierrec83"
 }
