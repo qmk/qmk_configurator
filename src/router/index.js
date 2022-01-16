@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from '../views/Home.vue';
-import Print from '../views/Print.vue';
-import Test from '../views/Test.vue';
+const Home = () => import('../views/Home.vue');
+const Print = () => import('../views/Print.vue');
+const Test = () => import('../views/Test.vue');
 
 Vue.use(Router);
 
