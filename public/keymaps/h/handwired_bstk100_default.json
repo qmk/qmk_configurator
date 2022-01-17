@@ -1,0 +1,23 @@
+{
+  "keyboard": "handwired/bstk100",
+  "keymap": "default",
+  "commit": "604fca4aa9eff07254a91b21625bfe736f323002",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action": "up","keycodes": ["P0"]},
+      {"action": "up","keycodes": ["P0"]}
+    ]
+  ],
+  "layers": [
+
+    [
+      "KC_NLCK",
+      "KC_TAB",  "KC_PSLS", "KC_PAST", "KC_BSPC",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "MACRO_0", "KC_PDOT"
+    ]
+  ]
+}

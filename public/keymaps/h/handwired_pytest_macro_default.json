@@ -1,0 +1,17 @@
+{
+  "keyboard": "handwired/pytest/macro",
+  "keymap": "default",
+  "commit": "08ce0142bad40f22d05d33fdef8a7c8907154e96",
+  "layout": "LAYOUT_ortho_1x1",
+  "macros": [
+    [
+      "Hello, World!",
+      {"action":"tap", "keycodes":["ENTER"]}
+    ]
+  ],
+  "layers": [
+    [
+      "MACRO_0"
+    ]
+  ]
+}

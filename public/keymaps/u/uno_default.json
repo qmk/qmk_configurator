@@ -1,0 +1,11 @@
+{
+  "keyboard": "uno",
+  "keymap": "default",
+  "commit": "cfc9a358c584e65782b2dade05d31700719a18e7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LCMD(KC_N)"
+    ]
+  ]
+}
