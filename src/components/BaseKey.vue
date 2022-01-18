@@ -321,6 +321,8 @@ export default {
 @import '../scss/gmk-abs';
 @import '../scss/sp-abs';
 @import '../scss/sp-pbt';
+@import '../scss/mt3-pbt';
+@import '../scss/mt3-abs';
 @import '../scss/pantone';
 @import '../scss/colorways';
 
