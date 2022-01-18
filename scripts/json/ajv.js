@@ -33,25 +33,35 @@ let count = 0;
 // record an error happened. Keep going so we have a list of all bad files
 let error = false;
 async function main() {
-  for await (const p of walk(dirToScan)) {
-    if (path.extname(p) != '.json') {
-      // skip non-json files
-      continue;
-    }
-    try {
-      const jsonFile = fs.readFileSync(p, { utf8: true });
-      const valid = validate(JSON.parse(jsonFile));
-      count++;
-      if (!valid) {
-        console.log(`${p} ${JSON.stringify(ajv.errors)}`);
+  return new Promise(async (resolve, reject) => {
+    for await (const p of walk(dirToScan)) {
+      if (path.extname(p) != '.json') {
+        // skip non-json files
+        continue;
+      }
+      try {
+        const jsonFile = fs.readFileSync(p, { utf8: true });
+        const valid = validate(JSON.parse(jsonFile));
+        count++;
+        if (!valid) {
+          console.warn(`${p} ${JSON.stringify(ajv.errors)}`);
+          error = true;
+        }
+      } catch (err) {
+        console.error(`Error ${p} ${err}`);
         error = true;
       }
-    } catch (err) {
-      console.log(`Error ${p} ${err}`);
-      error = true;
     }
-  }
-  console.log(`scanned ${count} files.`);
-  return error ? 1 : 0;
+    console.info(`scanned ${count} files.`);
+    return error ? reject() : resolve();
+  });
 }
-main();
+
+(async () => {
+  try {
+    await main();
+    process.exit(0);
+  } catch (err) {
+    process.exit(1);
+  }
+})();
