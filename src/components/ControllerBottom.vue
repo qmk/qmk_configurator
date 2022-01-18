@@ -134,6 +134,9 @@ import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 
 import ElectronBottomControls from './ElectronBottomControls.vue';
 
+import VueRouter from 'vue-router';
+const { isNavigationFailure, NavigationFailureType } = VueRouter;
+
 import remap from '@/remap';
 
 const encoding = 'data:application/json;charset=utf-8,';
@@ -367,10 +370,14 @@ export default {
             path: `/${data.keyboard}/${data.layout}`
           })
           .catch((err) => {
-            if (err.name !== 'NavigationDuplicated') {
-              // ignore nav errors
-              console.error(err);
+            if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+              return;
             }
+            if (isNavigationFailure(err, NavigationFailureType.cancelled)) {
+              return;
+            }
+
+            throw err;
           });
 
         var store = this.$store;

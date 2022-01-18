@@ -1,3 +1,4 @@
+import { cy, describe, before, it } from 'local-cypress';
 describe('Tester feature', function () {
   beforeEach(() => {
     cy.viewport('macbook-15');
@@ -25,6 +26,7 @@ describe('Tester feature', function () {
     cy.get('.visual-tester-keymap').find('div').should('have.length', 105);
   });
   it('Handle typing', function () {
+    cy.wait(2000); // wait for keyboard handler to take over body
     cy.get('body').trigger('keydown', { keyCode: 80, code: 'KeyP', key: 'p' });
     cy.get('.tester-key[title="P"]').should('have.class', 'active');
     cy.get('body').trigger('keyup', { keyCode: 80, code: 'KeyP', key: 'p' });

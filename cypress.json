@@ -1,6 +1,8 @@
 {
-  "baseUrl": "http://localhost:8080/",
+  "baseUrl": "http://localhost:3000/",
   "integrationFolder": "tests/integration",
+  "componentFolder": "src",
+  "testFiles": "**/*.spec.js",
   "chromeWebSecurity": false,
   "video": false
 }

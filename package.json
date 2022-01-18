@@ -14,7 +14,7 @@
     "prettier:fix": "prettier -c \"./src/**/*.{js,vue,scss,css,json}\" --write",
     "json:check": "node scripts/json/ajv.js public/keymaps",
     "test:cypress": "cypress run",
-    "test:cypress:ci": "start-server-and-test serve http://localhost:8080 test:cypress"
+    "test:cypress:ci": "start-server-and-test dev http-get://localhost:3000 test:cypress"
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
@@ -33,14 +33,17 @@
     "vue": "2.6",
     "vue-i18n": "^8.10.0",
     "vue-js-toggle-button": "^1.3.2",
-    "vue-router": "^3.0.1",
+    "vue-router": "^3.5.3",
     "vue-select": "^3",
     "vue2-slideout-panel": "^2.2.3",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@cypress/vite-dev-server": "^2.2.2",
+    "@cypress/vue": "2",
     "@types/lodash": "^4.14.178",
     "@vitejs/plugin-vue": "^2.0.1",
+    "@vue/cli-plugin-babel": "^4.5.15",
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.0-beta.20",
     "ajv": "^8.6.2",
@@ -48,7 +51,7 @@
     "babel-jest": "^24.0.0",
     "csv-parse": "^4.8.2",
     "csv-stringify": "^5.3.4",
-    "cypress": "^3.4.1",
+    "cypress": "9.2.1",
     "eslint": "8",
     "eslint-plugin-cypress": "^2.6.1",
     "eslint-plugin-prettier": "^3.1.1",
@@ -56,6 +59,7 @@
     "growl": "^1.10.0",
     "https-proxy-agent": "^2.2.0",
     "jest": "24",
+    "local-cypress": "^1.2.3",
     "node-sass": "^4.13.1",
     "prettier": "^2",
     "sass": "^1.48.0",
