@@ -9,7 +9,6 @@ import {
 import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
-console.log(keypress);
 const steno_keyboards = ['gergo', 'georgi'];
 
 const actions = {
