@@ -37,7 +37,7 @@ jobs:
           wait-on: 'http://localhost:3000'
       - name: build
         run: |
-          echo VUE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          echo VITE_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
           yarn run build
           echo config.qmk.fm > dist/CNAME
       - name: Deploy

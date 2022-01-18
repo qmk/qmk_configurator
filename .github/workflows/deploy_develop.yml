@@ -47,8 +47,8 @@ jobs:
 
       - name: build
         run: |
-          sed -i 's,\(VUE_APP_KEYBOARDS_URL=\).*,\1https://keyboards.develop.qmk.fm,' .env.production
-          echo VUE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          sed -i 's,\(VITE_APP_KEYBOARDS_URL=\).*,\1https://keyboards.develop.qmk.fm,' .env.production
+          echo VITE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
           yarn run build
 
       - name: Deploy Develop Configurator
