@@ -1375,3 +1375,25 @@
   background: rgb(192, 208, 54);
   color: rgb(54, 71, 92);
 }
+
+// mt3 sets
+.mt3-dev-tty-key {
+  background: rgb(100,100,100);
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-dev-tty-mod {
+  background: $color-mt3-pbt-gray1;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-dev-tty-accent {
+  background: $color-mt3-pbt-red1;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-dev-tty-kb {
+  // placeholder
+}
+
+
