@@ -13,8 +13,10 @@ export default defineConfig({
     dedupe: ['vue']
   },
   build: {
+    /*
     rollupOptions: {
       external: ['vue']
     }
+    */
   }
 });
