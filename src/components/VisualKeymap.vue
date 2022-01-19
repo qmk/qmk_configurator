@@ -14,12 +14,12 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
-import BaseKeymap from '@/components/BaseKeymap';
-import BaseKey from '@/components/BaseKey';
-import AnyKey from '@/components/AnyKey';
-import LayerKey from '@/components/LayerKey';
-import ContainerKey from '@/components/ContainerKey';
-import LayerContainerKey from '@/components/LayerContainerKey';
+import BaseKeymap from '@/components/BaseKeymap.vue';
+import BaseKey from '@/components/BaseKey.vue';
+import AnyKey from '@/components/AnyKey.vue';
+import LayerKey from '@/components/LayerKey.vue';
+import ContainerKey from '@/components/ContainerKey.vue';
+import LayerContainerKey from '@/components/LayerContainerKey.vue';
 
 export default {
   name: 'visual-keymap',

@@ -317,7 +317,6 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '~@fontsource/montserrat/400.css';
 @import '../scss/gmk-abs';
 @import '../scss/sp-abs';
 @import '../scss/sp-pbt';

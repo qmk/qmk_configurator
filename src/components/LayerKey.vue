@@ -34,7 +34,7 @@
 import isNumber from 'lodash/isNumber';
 import isNaN from 'lodash/isNaN';
 import { mapState, mapMutations, mapActions } from 'vuex';
-import BaseKey from './BaseKey';
+import BaseKey from './BaseKey.vue';
 export default {
   name: 'layer-key',
   extends: BaseKey,

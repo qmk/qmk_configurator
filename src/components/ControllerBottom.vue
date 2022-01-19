@@ -1,6 +1,6 @@
 <template>
   <div id="controller-bottom" class="botctrl">
-    <Veil :isVisible="isVeilOpened">
+    <VeilComponent :isVisible="isVeilOpened">
       <template #contents>
         <div class="input-url-modal">
           <div>
@@ -18,7 +18,7 @@
           </div>
         </div>
       </template>
-    </Veil>
+    </VeilComponent>
     <div class="botctrl-1-1">
       <button
         id="export"
@@ -132,7 +132,10 @@ import { PREVIEW_LABEL } from '@/store/modules/constants';
 import { disableCompileButton, disableOtherButtons } from '@/api';
 import { getPreferredLayout, checkInvalidKeymap } from '@/util';
 
-import ElectronBottomControls from './ElectronBottomControls';
+import ElectronBottomControls from './ElectronBottomControls.vue';
+
+import VueRouter from 'vue-router';
+const { isNavigationFailure, NavigationFailureType } = VueRouter;
 
 import remap from '@/remap';
 
@@ -367,10 +370,14 @@ export default {
             path: `/${data.keyboard}/${data.layout}`
           })
           .catch((err) => {
-            if (err.name !== 'NavigationDuplicated') {
-              // ignore nav errors
-              console.error(err);
+            if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+              return;
             }
+            if (isNavigationFailure(err, NavigationFailureType.cancelled)) {
+              return;
+            }
+
+            throw err;
           });
 
         var store = this.$store;

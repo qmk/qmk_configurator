@@ -11,7 +11,7 @@ WORKDIR /qmk_configurator/
 
 # Build configurator
 RUN yarn install
-ENV VUE_APP_API_URL=/api
+ENV VITE_API_URL=/api
 RUN yarn run build
 
 ## Second Stage- Run

@@ -92,6 +92,9 @@ import { statusError, compileLayout, disableOtherButtons } from '@/api';
 
 import { clearKeymapTemplate } from '@/common';
 
+import VueRouter from 'vue-router';
+const { isNavigationFailure, NavigationFailureType } = VueRouter;
+
 export default {
   name: 'ControllerTop',
   computed: {
@@ -340,11 +343,14 @@ export default {
         .replace({
           path: `/${this.keyboard}/${this.layout}`
         })
-        .catch((err) => {
-          if (err.name !== 'NavigationDuplicated') {
-            // ignore this harmless error otherwise report
-            throw err;
+        .catch((failure) => {
+          if (isNavigationFailure(failure, NavigationFailureType.duplicated)) {
+            return;
           }
+          if (isNavigationFailure(failure, NavigationFailureType.cancelled)) {
+            return;
+          }
+          throw err;
         });
       this.$store.dispatch('status/viewReadme', this.keyboard);
       disableOtherButtons();
@@ -359,10 +365,14 @@ export default {
       this.setLayout(newLayout);
       this.$router
         .replace({ path: `/${this.keyboard}/${this.layout}` })
-        .catch((err) => {
-          if (err.name !== 'NavigationDuplicated') {
-            throw err;
+        .catch((failure) => {
+          if (isNavigationFailure(failure, NavigationFailureType.duplicated)) {
+            return;
           }
+          if (isNavigationFailure(failure, NavigationFailureType.cancelled)) {
+            return;
+          }
+          throw err;
         });
     },
     updateKeymapName(newKeymapName) {

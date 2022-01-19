@@ -16,7 +16,9 @@ jobs:
       - name: restore Cache
         uses: actions/cache@master
         with:
-          path: node_modules
+          path: |
+            node_modules
+            /home/runner/.cache/Cypress
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Use Node.js ${{steps.nodeversion.outputs.NODE}}
         uses: actions/setup-node@v1
@@ -33,11 +35,12 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          start: yarn serve
-          wait-on: 'http://localhost:8080'
+          cache-key: node-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
+          start: yarn dev
+          wait-on: 'http://localhost:3000'
       - name: build
         run: |
-          echo VUE_APP_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          echo VITE_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
           yarn run build
           echo config.qmk.fm > dist/CNAME
       - name: Deploy

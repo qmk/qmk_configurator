@@ -9,7 +9,7 @@
   >{{ displayName }}</div>
 </template>
 <script>
-import BaseKey from './BaseKey';
+import BaseKey from './BaseKey.vue';
 export default {
   name: 'tester-key',
   props: {

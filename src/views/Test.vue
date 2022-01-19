@@ -15,7 +15,7 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-import VisualTesterKeymap from '@/components/VisualTesterKeymap';
+import VisualTesterKeymap from '@/components/VisualTesterKeymap.vue';
 export default {
   name: 'testerator',
   computed: {

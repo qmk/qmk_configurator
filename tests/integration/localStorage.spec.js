@@ -1,16 +1,18 @@
+import { cy, describe, before, it } from 'local-cypress';
 describe('Simple browsing', function () {
   before(() => {
     cy.viewport('macbook-15');
-    cy.server();
-    cy.route('https://api.qmk.fm/v1/keyboards', [
-      '1upkeyboards/1up60hse',
-      '1upkeyboards/1up60hte',
-      '1upkeyboards/1up60rgb',
-      '1upkeyboards/super16',
-      '1upkeyboards/sweet16',
-      '2_milk',
-      '30wer'
-    ]);
+    cy.intercept('https://keyboards.qmk.fm/v1/keyboard_list.json', () => {
+      keyboards: [
+        '1upkeyboards/1up60hse',
+        '1upkeyboards/1up60hte',
+        '1upkeyboards/1up60rgb',
+        '1upkeyboards/super16',
+        '1upkeyboards/sweet16',
+        '2_milk',
+        '30wer'
+      ]
+    });
   });
   it('Should load darkmode from localstorage', () => {
     cy.clearLocalStorage();
@@ -30,7 +32,7 @@ describe('Simple browsing', function () {
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
-    cy.visit('/', {
+    cy.visit('/keebio/iris/v1', {
       onBeforeLoad(win) {
         // force false, even if OS has requested change
         cy.stub(win, 'matchMedia')
@@ -41,9 +43,7 @@ describe('Simple browsing', function () {
       }
     });
     cy.clearLocalStorage();
-    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should(
-      'not.be.visible'
-    );
+    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('not.exist');
     cy.get('.bes-controls', { timeout: 5000 }).click();
     cy.get('#setting-toggle-darkmode').click();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');

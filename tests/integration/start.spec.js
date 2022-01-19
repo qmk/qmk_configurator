@@ -1,16 +1,20 @@
+import { cy, describe, before, it } from 'local-cypress';
 describe('Simple browsing', function () {
   before(() => {
     cy.viewport('macbook-15');
-    cy.server();
-    cy.route('https://api.qmk.fm/v1/keyboards', [
-      '1upkeyboards/1up60hse',
-      '1upkeyboards/1up60hte',
-      '1upkeyboards/1up60rgb',
-      '1upkeyboards/super16',
-      '1upkeyboards/sweet16',
-      '2_milk',
-      '30wer'
-    ]);
+    cy.intercept('https://keyboards.qmk.fm/v1/keyboard_list.json', () => {
+      return {
+        keyboards: [
+          '1upkeyboards/1up60hse',
+          '1upkeyboards/1up60hte',
+          '1upkeyboards/1up60rgb',
+          '1upkeyboards/super16',
+          '1upkeyboards/sweet16',
+          '2_milk',
+          '30wer'
+        ]
+      };
+    });
   });
   beforeEach(() => {
     cy.visit('/');
