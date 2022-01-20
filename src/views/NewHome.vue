@@ -1,6 +1,6 @@
 <template>
-  <default-layout class="h-100">
-    <template #topbar><info-bar /></template>
+  <default-layout>
+    <template #infobar><info-bar /></template>
     <template #application>
       <configurator-layout>
         <template #controlpanel>

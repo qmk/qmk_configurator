@@ -1,9 +1,9 @@
 <template>
-  <div class="rounded-lg mt-3 bg-white-app text-black p-4 min-h-max">
-    <div>
-      <slot name="topbar" />
+  <div class="rounded-lg bg-white-app text-black pr-4 pl-4 min-h-max pt-2 pb-2">
+    <div class="m-2">
+      <slot name="infobar" />
     </div>
-    <main class=""><slot name="application" /></main>
+    <div class="gap-0"><slot name="application" /></div>
     <footer>
       <slot name="footer" />
     </footer>

@@ -17,7 +17,6 @@ import '@fontsource/montserrat/400.css';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 
-
 Vue.use(VueI18n);
 Vue.use(VTooltip);
 
@@ -121,6 +120,7 @@ new Vue({
   render: (h) => h(App)
 }).$mount('#app');
 
+/*
 new Vue({
   i18n,
   store,
@@ -131,3 +131,4 @@ new Vue({
   i18n,
   render: (h) => h(BrowserWarn)
 }).$mount('#browser-warn-container');
+*/
