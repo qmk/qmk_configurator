@@ -17,7 +17,6 @@ import '@fontsource/montserrat/400.css';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 
-
 Vue.use(VueI18n);
 Vue.use(VTooltip);
 
