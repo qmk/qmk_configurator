@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-12 grid-rows-configurator">
+  <div class="grid grid-cols-12 grid-rows-configurator gap-4">
     <div class="col-span-4">
       <slot name="controlpanel"> CONTROL PANEL </slot>
     </div>

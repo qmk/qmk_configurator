@@ -3,11 +3,22 @@
     <template #topbar><info-bar /></template>
     <template #application>
       <configurator-layout>
+        <template #controlpanel>
+          <div class="h-100"></div>
+        </template>
+        <template #keyboardlayout
+          ><div class="rounded-lg bg-white-panel h-100"></div
+        ></template>
+        <template #layerpicker>
+          <div class="rounded-lg bg-white-panel h-100"></div>
+        </template>
         <template #about
-          ><div class="align-bottom text-left">
-            This project is maintained by QMK Collaborators and contributors
-            like you!<br />&nbsp;<br />Hosted on GitHub Pages<br />&nbsp;<br />Version:
-            dev
+          ><div class="relative h-100 w-100">
+            <div class="absolute bottom-0 left-0 text-black text-left">
+              This project is maintained by QMK Collaborators and contributors
+              like you!<br />&nbsp;<br />Hosted on GitHub Pages<br />&nbsp;<br />Version:
+              dev
+            </div>
           </div></template
         >
         <template #keycodes>
