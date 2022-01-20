@@ -1,12 +1,20 @@
 <template>
-  <div class="">
-    <div>
-      <slot name="topbar" />
+  <div class="grid grid-cols-12 grid-rows-configurator">
+    <div class="col-span-4">
+      <slot name="controlpanel"> CONTROL PANEL </slot>
     </div>
-    <main class=""><slot name="application" /></main>
-    <footer>
-      <slot name="footer" />
-    </footer>
+    <div class="col-span-7">
+      <slot name="keyboardlayout"> KEYBOARD LAYOUT </slot>
+    </div>
+    <div class="col-span-1">
+      <slot name="layerpicker">Layer Picker</slot>
+    </div>
+    <div class="col-span-4">
+      <slot name="about">ABOUT</slot>
+    </div>
+    <div class="col-span-8">
+      <slot name="keycodes">KEYCODES</slot>
+    </div>
   </div>
 </template>
 <script>

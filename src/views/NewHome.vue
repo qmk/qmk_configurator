@@ -1,16 +1,31 @@
 <template>
-  <configurator-layout class="h-100">
-    <template #topbar>New Configurator Goes Here</template>
-    <template #application>Application Goes Here</template>
+  <default-layout class="h-100">
+    <template #topbar><info-bar /></template>
+    <template #application>
+      <configurator-layout>
+        <template #about
+          ><div class="align-bottom text-left">
+            This project is maintained by QMK Collaborators and contributors
+            like you!<br />&nbsp;<br />Hosted on GitHub Pages<br />&nbsp;<br />Version:
+            dev
+          </div></template
+        >
+        <template #keycodes>
+          <div class="rounded-lg bg-white-panel h-full w-full"></div>
+        </template>
+      </configurator-layout>
+    </template>
     <template #footer>Footer Here</template>
-  </configurator-layout>
+  </default-layout>
 </template>
 
 <script>
+import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
+import InfoBar from '@/components/redesign/InfoBar.vue';
 import ConfiguratorLayout from '@/components/layouts/ConfiguratorLayout.vue';
 export default {
   name: 'configuratorTwo',
-  components: { ConfiguratorLayout },
+  components: { DefaultLayout, InfoBar, ConfiguratorLayout },
   methods: {}
 };
 </script>
