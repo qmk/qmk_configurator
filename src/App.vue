@@ -88,7 +88,7 @@ export default {
   },
   data() {
     return {
-      revision: import.meta.VITE_TRAVIS_COMMIT || 'dev',
+      revision: import.meta.env.VITE_TRAVIS_COMMIT || 'dev',
       potatoFact: 'QMK for potatoes',
       interval: 120000,
       destroyWatcher: undefined,

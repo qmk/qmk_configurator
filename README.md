@@ -30,7 +30,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
+yarn run dev
 ```
 
 ### Compiles and minifies for production
@@ -66,7 +66,7 @@ yarn run test:unit
 ```
 
 ### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+See [Configuration Reference](https://vitejs.dev/config/).
 
 ## Docker
 
@@ -76,7 +76,7 @@ If you don't have a webserver already and don't already have one in mind you can
 
 You can specify a different backend URL by setting `VUE_APP_API_URL`:
 
-    docker run -e VUE_APP_API_URL=http://localhost:8080 -p 8080:80 qmkfm/qmk_configurator:latest
+    docker run -e VITE_API_URL=http://localhost:8080 -p 8080:80 qmkfm/qmk_configurator:latest
 
 If you'd like to develop locally you can use a volume to tie your local filesystem to the container:
 
