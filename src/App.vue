@@ -1,20 +1,18 @@
 <template>
-  <div id="app" @click="dismiss">
-    <span style="display: none">{{ revision }}</span>
-    <div>
-      <header>
+  <div id="configurator" @click="dismiss">
+    <!-- span style="display: none">{{ revision }}</span-->
+    <!--header>
         <p class="random-potato">{{ potatoFact }}</p>
-      </header>
-      <router-view />
-      <spinner :isVisible="showSpinner" :status="spinnerMsg" />
-      <InfoBar :msg="message" />
-    </div>
+      </header-->
+    <router-view />
+    <spinner :isVisible="showSpinner" :status="spinnerMsg" />
+    <InfoBar :msg="message" />
     <slideout-panel></slideout-panel>
-    <footer>
+    <!-- footer>
       <p>{{ $t('maintain') }}</p>
       <p>{{ $t('hostedOn') }}</p>
       <p style="font-size: 10px">version: {{ revision }}</p>
-    </footer>
+    </footer-->
     <div
       class="help"
       :class="helpClasses"
@@ -200,10 +198,10 @@ export default {
 </script>
 <style lang="scss">
 @import '@/scss/style.scss';
-#app {
+#configurator {
   display: grid;
-  grid-template: 1fr / minmax(1000px, 1300px);
-  justify-content: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: minmax(1200px, 1728px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

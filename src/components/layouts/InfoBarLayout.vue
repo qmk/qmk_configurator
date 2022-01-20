@@ -1,9 +1,9 @@
 <template>
-  <div class="grid grid-cols-infobar">
-    <div class="text-left"><slot name="branding" /></div>
-    <div class=""><slot name="service" /></div>
-    <div class=""><slot name="help" /></div>
-    <div class=""><slot name="settings" /></div>
+  <div class="grid grid-cols-2">
+    <div class="flex flex-row items-center p-0 text-left">
+      <slot name="branding" />
+    </div>
+    <div><slot name="statusbar" /></div>
   </div>
 </template>
 <script>

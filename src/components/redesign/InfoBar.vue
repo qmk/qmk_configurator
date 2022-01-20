@@ -1,21 +1,16 @@
 <template>
   <info-bar-layout>
     <template #branding>QMK Configurator</template>
-    <template #service>Service ready</template>
-    <template #help>
-      <font-awesome-icon icon="question-circle" size="lg" />
-    </template>
-    <template #settings>
-      <font-awesome-icon icon="cog" size="lg" />
-    </template>
+    <template #statusbar><status-bar /></template>
   </info-bar-layout>
 </template>
 <script>
 import { defineComponent } from '@vue/composition-api';
 import InfoBarLayout from '@/components/layouts/InfoBarLayout.vue';
+import StatusBar from '@/components/redesign/StatusBar.vue';
 
 export default defineComponent({
-  components: { InfoBarLayout },
+  components: { InfoBarLayout, StatusBar },
   name: 'info-bar',
   setup() {}
 });
