@@ -32,11 +32,5 @@ export default defineComponent({
 .btn {
   @apply font-bold py-2 px-4 rounded;
 }
-.btn-blue {
-  @apply bg-blue-500 text-white;
-}
-.btn-blue-2 {
-  @apply bg-blue-300 text-white;
-  @apply text-blue-600;
-}
+
 </style>

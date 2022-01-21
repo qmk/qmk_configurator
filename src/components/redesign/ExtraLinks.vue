@@ -11,6 +11,7 @@
 import { defineComponent } from '@vue/composition-api';
 
 export default defineComponent({
+  name: 'extra-links',
   setup() {}
 });
 </script>
