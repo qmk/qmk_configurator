@@ -4,7 +4,7 @@
     <template #application>
       <configurator-layout>
         <template #controlpanel>
-          <div class="h-100"></div>
+          <control-panel />
         </template>
         <template #keyboardlayout
           ><div class="rounded-lg bg-white-panel h-100"></div
@@ -34,9 +34,10 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
 import InfoBar from '@/components/redesign/InfoBar.vue';
 import ConfiguratorLayout from '@/components/layouts/ConfiguratorLayout.vue';
+import ControlPanel from '@/components/redesign/ControlPanel.vue';
 export default {
   name: 'configuratorTwo',
-  components: { DefaultLayout, InfoBar, ConfiguratorLayout },
+  components: { DefaultLayout, InfoBar, ConfiguratorLayout, ControlPanel },
   methods: {}
 };
 </script>
