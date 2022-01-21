@@ -22,9 +22,22 @@
           active:text-black active:bg-upload-active
         "
         @click="toggleImporting"
+        v-if="!importing"
       >
         Import URL
       </button>
+      <div class="py-3 px-4 flex item-center" v-if="importing">
+        <a
+          class="
+            w-56px
+            visited:text-upload-active
+            text-upload-active
+            hover:text-blue-900
+          "
+          @click="toggleImporting"
+          >Close</a
+        >
+      </div>
     </div>
     <transition name="slide-fade">
       <div class="w-full flex flex-row p-2" v-show="importing">
@@ -67,15 +80,14 @@ export default defineComponent({
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
 .slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateY(-20px);
   opacity: 0;
 }
-</style>
 </style>
