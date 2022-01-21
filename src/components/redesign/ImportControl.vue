@@ -10,8 +10,28 @@
       rounded-lg
     "
   >
-    <button class="btn btn-blue">Upload .JSON</button>
-    <button class="btn btn-blue-2">Import URL</button>
+    <button
+      class="
+        btn
+        bg-upload-active
+        text-white
+        hover:bg-upload-focus hover:text-upload-active
+        active:text-black active:bg-upload-active
+      "
+    >
+      Upload .JSON
+    </button>
+    <button
+      class="
+        btn
+        bg-upload-active
+        text-white
+        hover:bg-upload-focus hover:text-upload-active
+        active:text-black active:bg-upload-active
+      "
+    >
+      Import URL
+    </button>
   </div>
 </template>
 <script>
