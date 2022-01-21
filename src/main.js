@@ -16,9 +16,11 @@ import '@fontsource/roboto/700.css';
 import '@fontsource/montserrat/400.css';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
+import VueCompositionAPI from '@vue/composition-api';
 
 Vue.use(VueI18n);
 Vue.use(VTooltip);
+Vue.use(VueCompositionAPI);
 
 import messages from '@/i18n';
 

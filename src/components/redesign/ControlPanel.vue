@@ -30,7 +30,7 @@ export default defineComponent({
 </script>
 <style>
 .btn {
-  @apply font-bold py-2 px-4 rounded;
+  @apply font-bold py-2 px-4 rounded-lg;
 }
 
 </style>
