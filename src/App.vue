@@ -205,6 +205,9 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 14px;
 }
 .embedded-tutorial {
   position: fixed;
