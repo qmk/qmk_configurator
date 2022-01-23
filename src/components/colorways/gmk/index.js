@@ -18,6 +18,7 @@ import gmk_grand_prix from './grand_prix';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
 import gmk_handarbeit_plus from './handarbeit_plus';
+import gmk_hazakura from './hazakura';
 import gmk_ishtar from './ishtar';
 import gmk_ishtar_kuro from './ishtar_kuro';
 import gmk_jamon from './jamon';
@@ -63,6 +64,7 @@ export default [
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
   gmk_handarbeit_plus,
+  gmk_hazakura,
   gmk_ishtar,
   gmk_ishtar_kuro,
   gmk_jamon,
