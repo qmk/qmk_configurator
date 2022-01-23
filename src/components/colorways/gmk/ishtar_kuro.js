@@ -8,6 +8,7 @@ export default {
     KC_UP: 'accent',
     KC_DOWN: 'accent',
     KC_LEFT: 'accent',
-    KC_RGHT: 'accent'
+    KC_RGHT: 'accent',
+    KC_SPC: 'accent'
   }
 };
