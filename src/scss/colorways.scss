@@ -320,6 +320,21 @@
   color: $color-gmk-abs-CR;
 }
 
+.gmk-alter-key {
+  background: #2b2c42;
+  color: #bb1e10;
+}
+.gmk-alter-mod {
+  background: #312f36;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#312f36, 8%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#312f36, lighten(#bb1e10, 0%));
+  }
+}
+
 .gmk-analog-dreams-key {
   background: $color-gmk-abs-L9;
   color: #ac4fc6;
