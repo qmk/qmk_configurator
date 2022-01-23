@@ -742,6 +742,31 @@
   color: #bb1e10;
 }
 
+.gmk-ishtar-kuro-key {
+  background: #2a292a;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#2a292a, 5%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#2a292a, lighten(#bb1e10, 0%));
+  }
+}
+.gmk-ishtar-kuro-mod {
+  background: #2a292a;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#2a292a, 5%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#2a292a, lighten(#bb1e10, 0%));
+  }
+}
+.gmk-ishtar-kuro-accent {
+  background: #f6a950;
+  color: #bb1e10;
+}
+
 .gmk-jamon-key {
   background: #84172c;
   color: #ece4d0;
