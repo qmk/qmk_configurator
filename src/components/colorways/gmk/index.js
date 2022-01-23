@@ -17,6 +17,7 @@ import gmk_grand_prix from './grand_prix';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
 import gmk_handarbeit_plus from './handarbeit_plus';
+import gmk_ishtar from './ishtar';
 import gmk_jamon from './jamon';
 import gmk_merlin from './merlin';
 import gmk_metaverse from './metaverse';
@@ -59,6 +60,7 @@ export default [
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
   gmk_handarbeit_plus,
+  gmk_ishtar,
   gmk_jamon,
   gmk_merlin,
   gmk_metaverse,

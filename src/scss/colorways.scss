@@ -717,6 +717,31 @@
   // placeholder
 }
 
+.gmk-ishtar-key {
+  background: #e6d2b5;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#e6d2b5, 12%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#e6d2b5, lighten(#bb1e10, 0%));
+  }
+}
+.gmk-ishtar-mod {
+  background: #2a292a;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#2a292a, 5%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#2a292a, lighten(#bb1e10, 0%));
+  }
+}
+.gmk-ishtar-accent {
+  background: #f6a950;
+  color: #bb1e10;
+}
+
 .gmk-jamon-key {
   background: #84172c;
   color: #ece4d0;
