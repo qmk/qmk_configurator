@@ -619,6 +619,31 @@
   // placeholder
 }
 
+.gmk-frost-witch-key {
+  background: #c9c2dd;
+  color: #776ea2;
+  input,
+  .key-contents {
+    background: darken(#c9c2dd, 5%);
+    color: lighten(#776ea2, 0%);
+    border-color: mix(#c9c2dd, lighten(#776ea2, 0%));
+  }
+}
+.gmk-frost-witch-mod {
+  background: #776ea2;
+  color: #c9c2dd;
+  input,
+  .key-contents {
+    background: darken(#776ea2, 5%);
+    color: lighten(#c9c2dd, 0%);
+    border-color: mix(#776ea2, lighten(#c9c2dd, 0%));
+  }
+}
+.gmk-frost-witch-accent {
+  background: #553a76;
+  color: #c9c2dd;
+}
+
 .gmk-hammerhead-dark-key {
   background: $color-pantone-533C;
   color: $color-pantone-3258C;

@@ -13,6 +13,7 @@ import gmk_dolch from './dolch';
 import gmk_dracula from './dracula';
 import gmk_dualshot from './dualshot';
 import gmk_fro_dot_yo from './fro_dot_yo';
+import gmk_frost_witch from './frost_witch';
 import gmk_grand_prix from './grand_prix';
 import gmk_hammerhead_dark from './hammerhead_dark';
 import gmk_hammerhead_light from './hammerhead_light';
@@ -57,6 +58,7 @@ export default [
   gmk_dracula,
   gmk_dualshot,
   gmk_fro_dot_yo,
+  gmk_frost_witch,
   gmk_grand_prix,
   gmk_hammerhead_dark,
   gmk_hammerhead_light,
