@@ -51,4 +51,29 @@ function checkInvalidKeymap({ keyboard, keymap, layout, layers }) {
   return res;
 }
 
-export { getExclusionList, getPreferredLayout, checkInvalidKeymap };
+/**
+ * navigator.platform has been deprecated. Provide a shim that tries to call
+ * userAgentData first and failing that uses the original field
+ * @returns @see https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform
+ */
+function getPlatform() {
+  if (window) {
+    const { navigator } = window;
+    if (navigator) {
+      const { userAgentData, platform } = navigator;
+      if (userAgentData) {
+        return userAgentData.platform;
+      } else {
+        return platform;
+      }
+    }
+  }
+  return 'Unknown';
+}
+
+export {
+  getExclusionList,
+  getPreferredLayout,
+  checkInvalidKeymap,
+  getPlatform
+};

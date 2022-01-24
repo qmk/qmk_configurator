@@ -27,11 +27,11 @@
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import colorways from './colorways';
-
+import { getPlatform } from '@/util';
 let substitute = Object.assign(
   {},
   colorways.iconCodes,
-  colorways.platformIcons(window.navigator.platform)
+  colorways.platformIcons(getPlatform())
 );
 
 const _getKeySizeClass = (unith, unitw) => {
