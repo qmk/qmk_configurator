@@ -1,7 +1,7 @@
 {
-  "keyboard": "handwired/horrortroll/k552",
+  "keyboard": "horrortroll/handwired_k552",
   "keymap": "default",
-  "commit": "f59cbfb75c0b161187d22d07b58e242ef225611a",
+  "commit": "814821727e0107a2cf3247eb807ed1f3703b7327",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
