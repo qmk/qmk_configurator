@@ -22,10 +22,13 @@ export default {
   },
   /**
    * returns the correct icons for the identified platform
+   * @see https://wicg.github.io/ua-client-hints/#sec-ch-ua-platform
    */
   platformIcons(platform) {
     let icon = [];
     switch (platform) {
+      case 'macOS':
+      case 'iOS':
       case 'MacIntel':
       case 'Macintosh':
       case 'MacPPC':
@@ -33,11 +36,15 @@ export default {
       case 'iPad':
         icon = ['fab', 'apple'];
         break;
+      case 'Linux':
+      case 'Android':
+      case 'Chrome OS':
       case 'Linux i686':
       case 'Linux x86_64':
       case 'Linux armv7l':
         icon = ['fab', 'linux'];
         break;
+      case 'Windows':
       case 'Win32':
         icon = ['fab', 'windows'];
         break;
