@@ -1,5 +1,5 @@
 <template>
-  <div id="configurator" @click="dismiss">
+  <div class="mt-5" id="configurator" @click="dismiss">
     <!-- span style="display: none">{{ revision }}</span-->
     <!--header>
         <p class="random-potato">{{ potatoFact }}</p>
