@@ -122,7 +122,6 @@ new Vue({
   render: (h) => h(App)
 }).$mount('#app');
 
-
 new Vue({
   i18n,
   store,
