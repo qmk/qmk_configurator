@@ -14,6 +14,7 @@ import '@fontsource/roboto-mono/400.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/700.css';
 import '@fontsource/montserrat/400.css';
+import 'xterm/css/xterm.css';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 import VueCompositionAPI from '@vue/composition-api';
