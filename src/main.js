@@ -57,7 +57,10 @@ import {
   faVolumeUp,
   faBars,
   faLessThan,
-  faGreaterThan
+  faGreaterThan,
+  faBookOpen,
+  faCompressAlt,
+  faExpandAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -110,7 +113,10 @@ const icons = [
   faVolumeUp,
   faVolumeMute,
   faLessThan,
-  faGreaterThan
+  faGreaterThan,
+  faBookOpen,
+  faCompressAlt,
+  faExpandAlt
 ];
 library.add(...icons);
 
