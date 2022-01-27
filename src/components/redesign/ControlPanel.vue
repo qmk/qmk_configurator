@@ -2,6 +2,7 @@
   <div class="h-full w-full">
     <div class="flex flex-col w-full gap-2">
       <import-control />
+      <console-control />
       <export-control />
       <potato-facts />
       <compile-control />
@@ -16,6 +17,7 @@ import ExportControl from '@/components/redesign/ExportControl.vue';
 import PotatoFacts from '@/components/redesign/PotatoFacts.vue';
 import ExtraLinks from '@/components/redesign/ExtraLinks.vue';
 import CompileControl from '@/components/redesign/CompileControl.vue';
+import ConsoleControl from '@/components/redesign/ConsoleControl.vue';
 
 export default defineComponent({
   components: {
@@ -23,7 +25,8 @@ export default defineComponent({
     ExportControl,
     PotatoFacts,
     ExtraLinks,
-    CompileControl
+    CompileControl,
+    ConsoleControl
   },
   setup() {}
 });
