@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full">
+  <div class="h-full w-full max-h-20em">
     <div class="flex flex-col w-full gap-2">
       <import-control />
       <console-control />
@@ -7,6 +7,11 @@
       <potato-facts />
       <compile-control />
       <extra-links />
+      <div class="text-black text-left">
+        This project is maintained by QMK Collaborators and contributors like
+        you!<br />&nbsp;<br />Hosted on GitHub Pages<br />&nbsp;<br />Version:
+        dev
+      </div>
     </div>
   </div>
 </template>
