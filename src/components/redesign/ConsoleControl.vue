@@ -23,11 +23,13 @@ export default defineComponent({
     this.term.write('hello world! https://config.qmk.fm');
   },
   setup() {
-    const term = new Terminal({ rows: 25, cols: 80 });
-    term.options.fontFamily = 'Courier';
-    term.options.theme.background = '#CCD9F7';
-    term.options.theme.foreground = '#333';
-    term.options.scrollback = 400;
+    const term = new Terminal({
+      rows: 25,
+      cols: 80,
+      fontFamily: 'Courier',
+      theme: { background: '#ccd9f7', foreground: '#333' },
+      scrollback: 400
+    });
     term.loadAddon(new WebLinksAddon());
     const fitAddon = new FitAddon();
     term.loadAddon(fitAddon);
