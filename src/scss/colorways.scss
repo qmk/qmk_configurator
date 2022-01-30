@@ -718,28 +718,28 @@
 }
 
 .gmk-hazakura-key {
-  background: #ecece7;
-  color: #cb555d;
+  background: $color-gmk-abs-WS1;
+  color: $color-pantone-2346C;
   input,
   .key-contents {
-    background: darken(#ecece7, 7%);
-    color: lighten(#cb555d, 0%);
-    border-color: mix(#ecece7, lighten(#cb555d, 0%));
+    background: darken($color-gmk-abs-WS1, 7%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-gmk-abs-WS1, lighten($color-pantone-2346C, 0%));
   }
 }
 .gmk-hazakura-mod {
-  background: #e6bad2;
-  color: #cb555d;
+  background: $color-pantone-182C;
+  color: $color-pantone-2346C;
   input,
   .key-contents {
-    background: darken(#e6bad2, 5%);
-    color: lighten(#cb555d, 0%);
-    border-color: mix(#e6bad2, lighten(#cb555d, 0%));
+    background: darken($color-pantone-182C, 5%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-pantone-182C, lighten($color-pantone-2346C, 0%));
   }
 }
 .gmk-hazakura-accent {
-  background: #cb555d;
-  color: #e6bad2;
+  background: $color-pantone-2346C;
+  color: $color-pantone-182C;
 }
 
 .gmk-jamon-key {
