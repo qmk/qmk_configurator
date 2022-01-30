@@ -21,7 +21,7 @@ export default {
     KC_UP: 'accent2',
     KC_DOWN: 'accent3',
     KC_LEFT: 'accent4',
-    KC_RIGHT: 'accent5',
+    KC_RGHT: 'accent5',
     KC_SPC: 'accent6',
     KC_F1: 'func',
     KC_F2: 'func',
