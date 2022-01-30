@@ -97,6 +97,3 @@ This process will take a while. You may want to go make some tea or something. W
 ## Internationalization Guide
 
 Please refer to [this document](internationalization_guide.md)
-
-
-NAX WUZ HERE
