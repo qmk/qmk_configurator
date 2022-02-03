@@ -1,6 +1,16 @@
 <template>
-  <div class="w-full bg-white-panel rounded-lg flex flex-col">
-    <div class="w-full h-56px p-8px flex flex-row justify-between">
+  <div
+    class="
+      w-full
+      bg-white-panel
+      rounded-lg
+      flex flex-col
+      transition-maxheight
+      ease-in-out
+    "
+    :class="importing ? ['max-h-112px'] : ['max-h-56px']"
+  >
+    <div class="w-full min-h-56px h-56px p-8px flex flex-row justify-between">
       <button
         class="
           btn
@@ -44,7 +54,7 @@
         <input
           class="
             flex-grow
-            rounded-md
+            rounded-lg
             h-40px
             bg-white-700
             placeholder-gray-700
@@ -85,9 +95,18 @@ export default defineComponent({
 .slide-fade-leave-active {
   transition: all 0.3s ease;
 }
+.slide-fade-enter {
+  transition-delay: 600;
+}
+.slide-fade-exit {
+  transition-delay: 0;
+}
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateY(-20px);
   opacity: 0;
+}
+.transition-maxheight {
+  transition: max-height 0.2s;
 }
 </style>

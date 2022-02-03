@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full max-h-20em">
+  <div class="h-1080px w-full max-h-1080px overflow-y-hidden">
     <div class="flex flex-col w-full gap-2">
       <import-control />
       <console-control />
