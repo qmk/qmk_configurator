@@ -36,25 +36,28 @@
       >
         Import URL
       </button>
-      <div class="py-3 px-4 flex item-center" v-if="importing">
-        <a
-          class="
-            w-56px
-            visited:text-upload-active
-            text-upload-active
-            hover:text-blue-900
-          "
-          @click="toggleImporting"
-          >Close</a
-        >
-      </div>
+     
+        <button
+        class="
+          btn
+        
+          text-blue
+          hover:bg-glow-blue hover:text-blue
+          active:text-black active:bg-upload-active
+        "
+        @click="toggleImporting"
+        v-if="importing"
+      >
+        Close
+      </button>
+
     </div>
     <transition name="slide-fade">
       <div class="w-full flex flex-row p-2" v-show="importing">
         <input
           class="
             flex-grow
-            rounded-lg
+            rounded-sm
             h-40px
             bg-white-700
             placeholder-gray-700
