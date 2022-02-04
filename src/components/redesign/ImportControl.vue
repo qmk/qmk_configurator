@@ -40,7 +40,7 @@
         <button
         class="
           btn
-        
+          min-w-72px
           text-blue
           hover:bg-glow-blue hover:text-blue
           active:text-black active:bg-upload-active
@@ -52,11 +52,12 @@
       </button>
 
     </div>
-    <transition name="slide-fade">
-      <div class="w-full flex flex-row p-2" v-show="importing">
+   
+      <div class="w-full flex flex-row p-2" :style="importing ?'hidden':'visible'">
         <input
           class="
             flex-grow
+            min-w-72px
             rounded-sm
             h-40px
             bg-white-700
@@ -68,7 +69,6 @@
           placeholder="Paste URL here"
         />
       </div>
-    </transition>
   </div>
 </template>
 <script>
