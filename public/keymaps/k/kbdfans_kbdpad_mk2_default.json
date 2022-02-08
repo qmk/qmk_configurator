@@ -1,5 +1,5 @@
 {
-  "keyboard": "kbdfans/kbdpad_mk2",
+  "keyboard": "kbdfans/kbdpad/mk2",
   "keymap": "default",
   "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
   "layout": "LAYOUT_ortho_6x4",
