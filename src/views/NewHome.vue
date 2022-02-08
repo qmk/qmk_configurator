@@ -10,7 +10,9 @@
           ><div class="rounded-lg bg-white-panel h-100"></div
         ></template>
         <template #layerpicker>
-          <div class="rounded-lg bg-white-panel h-100"></div>
+          <div class="rounded-lg bg-white-panel h-100">
+            <layer-picker></layer-picker>
+          </div>
         </template>
         <template #about
           ><div class="relative h-100 w-100">
@@ -35,9 +37,16 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
 import InfoBar from '@/components/redesign/InfoBar.vue';
 import ConfiguratorLayout from '@/components/layouts/ConfiguratorLayout.vue';
 import ControlPanel from '@/components/redesign/ControlPanel.vue';
+import LayerPicker from '../components/redesign/LayerPicker.vue';
 export default {
   name: 'configuratorTwo',
-  components: { DefaultLayout, InfoBar, ConfiguratorLayout, ControlPanel },
+  components: {
+    DefaultLayout,
+    InfoBar,
+    ConfiguratorLayout,
+    ControlPanel,
+    LayerPicker
+  },
   methods: {}
 };
 </script>

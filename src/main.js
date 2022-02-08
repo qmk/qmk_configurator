@@ -18,7 +18,9 @@ import 'xterm/css/xterm.css';
 import 'virtual:windi.css';
 import 'virtual:windi-devtools';
 import VueCompositionAPI from '@vue/composition-api';
+import VueFeather from 'vue-feather';
 
+Vue.use(VueFeather);
 Vue.use(VueI18n);
 Vue.use(VTooltip);
 Vue.use(VueCompositionAPI);

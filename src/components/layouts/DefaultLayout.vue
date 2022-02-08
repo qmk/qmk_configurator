@@ -3,7 +3,7 @@
     <div class="m-2">
       <slot name="infobar" />
     </div>
-    <div class="gap-0"><slot name="application" /></div>
+    <div class=""><slot name="application" /></div>
     <footer>
       <slot name="footer" />
     </footer>

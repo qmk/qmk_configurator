@@ -200,7 +200,6 @@ export default {
 @import '@/scss/style.scss';
 #configurator {
   display: grid;
-  grid-template-rows: 1fr;
   grid-template-columns: minmax(1200px, 1728px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
