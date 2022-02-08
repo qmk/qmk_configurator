@@ -36,8 +36,8 @@
       >
         Import URL
       </button>
-     
-        <button
+
+      <button
         class="
           btn
           min-w-72px
@@ -50,25 +50,27 @@
       >
         Close
       </button>
-
     </div>
-   
-      <div class="w-full flex flex-row p-2" :style="importing ?'hidden':'visible'">
-        <input
-          class="
-            flex-grow
-            min-w-72px
-            rounded-sm
-            h-40px
-            bg-white-700
-            placeholder-gray-700
-            pl-16px
-            mw-80
-          "
-          type="text"
-          placeholder="Paste URL here"
-        />
-      </div>
+
+    <div
+      class="w-full flex flex-row p-2"
+      :style="importing ? 'hidden' : 'visible'"
+    >
+      <input
+        class="
+          flex-grow
+          min-w-72px
+          rounded-sm
+          h-40px
+          bg-white-700
+          placeholder-gray-700
+          pl-16px
+          mw-80
+        "
+        type="text"
+        placeholder="Paste URL here"
+      />
+    </div>
   </div>
 </template>
 <script>
