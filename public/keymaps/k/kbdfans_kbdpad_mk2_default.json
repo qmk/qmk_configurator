@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbdpad/mk2",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "2100a7ca7b67eabba43ead29a49e630de24c835e",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [
