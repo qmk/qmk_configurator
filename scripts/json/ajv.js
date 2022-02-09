@@ -5,6 +5,7 @@ const ajv = new Ajv();
 
 const schema = {
   type: 'object',
+  required: ['keyboard', 'keymap', 'layout', 'layers'],
   properties: {
     keyboard: { type: 'string' },
     keymap: { type: 'string' },
@@ -12,7 +13,6 @@ const schema = {
     layout: { type: 'string' },
     layers: { type: 'array' }
   },
-  required: ['keyboard', 'keymap', 'commit', 'layout', 'layers'],
   additionalProperties: true
 };
 
