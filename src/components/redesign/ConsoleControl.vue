@@ -21,7 +21,7 @@ export default defineComponent({
     window.setTimeout(() => {
       this.term.open(this.$refs.terminal);
       this.fitAddon.fit();
-      this.term.write('hello world! https://config.qmk.fm');
+      this.term.write('hello NAX! https://config.qmk.fm');
     }, 500);
   },
   setup() {

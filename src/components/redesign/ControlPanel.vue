@@ -1,5 +1,13 @@
 <template>
-  <div class="h-800px w-full max-h-800px overflow-y-hidden">
+  <div
+    class="
+      h-800px
+      w-full
+      max-h-full
+      overflow-y-hidden overflow-y-scroll
+      scrollable-panel
+    "
+  >
     <div class="flex flex-col w-full gap-2">
       <import-control />
       <console-control />
@@ -39,5 +47,11 @@ export default defineComponent({
 <style>
 .btn {
   @apply font-bold py-2 px-4 rounded-lg;
+}
+.scrollable-panel {
+  scrollbar-width: 0;
+}
+.scrollable-panel::-webkit-scrollbar {
+  width: 0;
 }
 </style>
