@@ -1,7 +1,7 @@
 {
   "keyboard": "horrortroll/chinese_pcb/devil68_pro",
   "keymap": "default",
-  "commit": "b2ea12aaa50a47e3a142fc334018873f2a05b8b2",
+  "commit": "812836e22f7e1c49723140cb75065ab2dc00af87",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
