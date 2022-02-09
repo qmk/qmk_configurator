@@ -1,8 +1,8 @@
 {
   "keyboard": "keebsforall/freebirdtkl",
   "keymap": "default",
-  "commit": "5414e61f01b3524fb761f5508ba12bd1b218f83d",
-  "layout": "LAYOUT_ansi",
+  "commit": "59ebe28cd5e50ffda700f127060f936c2d60ed0a",
+  "layout": "LAYOUT_tkl_f13_ansi",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_F13",     "KC_PSCR", "KC_SLCK", "KC_PAUS",
