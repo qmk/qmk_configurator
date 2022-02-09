@@ -1055,6 +1055,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/iosevka@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/iosevka/-/iosevka-4.5.2.tgz#e930d4711d5501cebee8b7de1d6b071543d86d36"
+  integrity sha512-1llgLcHtwZf8cKYbCMZ4z+zD+iDuHrpAQGjoVKkh0HUuLtBL0fB+6+LyhCiYlehN6PTdS6pRsq4gLvvO5GkAug==
+
 "@fontsource/montserrat@^4.5.1":
   version "4.5.1"
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.1.tgz#64a33ffdb77bbc63484c0321710bed272cc5b16f"

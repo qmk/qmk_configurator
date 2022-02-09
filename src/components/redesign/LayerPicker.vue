@@ -1,12 +1,12 @@
 <template>
   <div class="grid grid-layout">
     <div class="header mt-16px m-auto font-bold">LAYER</div>
-    <div class="layer-left flex flex-col-reverse">
+    <div class="layers-common layer-left flex flex-col-reverse">
       <div v-for="layer in leftColumn" :key="layer" class="layer-button">
         {{ layer }}
       </div>
     </div>
-    <div class="layer-right flex flex-col-reverse">
+    <div class="layer-common layer-right flex flex-col-reverse">
       <div v-for="layer in rightColumn" :key="layer" class="layer-button">
         {{ layer }}
       </div>
@@ -42,6 +42,11 @@ export default defineComponent({
 }
 .header {
   grid-area: head;
+}
+.layer-common {
+  font-family: Iosevka;
+  font-weight: normal;
+  font-weight: 400;
 }
 .layer-left {
   grid-area: layerLeft;

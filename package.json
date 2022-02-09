@@ -17,6 +17,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/iosevka": "^4.5.2",
     "@fontsource/montserrat": "^4.5.1",
     "@fontsource/roboto": "^4.5.1",
     "@fontsource/roboto-mono": "^4.5.0",

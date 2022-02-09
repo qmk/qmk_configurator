@@ -18,15 +18,18 @@ import { FitAddon } from 'xterm-addon-fit';
 export default defineComponent({
   name: 'console-control',
   mounted() {
-    this.term.open(this.$refs.terminal);
-    this.fitAddon.fit();
-    this.term.write('hello world! https://config.qmk.fm');
+    window.setTimeout(() => {
+      this.term.open(this.$refs.terminal);
+      this.fitAddon.fit();
+      this.term.write('hello world! https://config.qmk.fm');
+    }, 500);
   },
   setup() {
     const term = new Terminal({
       rows: 25,
       cols: 80,
-      fontFamily: 'Courier',
+      fontFamily: 'Iosevka',
+      fontWeight: 400,
       theme: { background: '#ccd9f7', foreground: '#333' },
       scrollback: 400
     });
