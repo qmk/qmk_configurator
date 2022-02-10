@@ -11,7 +11,7 @@
         ></template>
         <template #layerpicker>
           <div class="rounded-lg bg-white-panel h-100">
-            <layer-picker></layer-picker>
+            <layer-picker :activeLayers="[1, 2, 3, 4]"></layer-picker>
           </div>
         </template>
         <template #about

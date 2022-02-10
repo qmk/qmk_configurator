@@ -48,7 +48,7 @@ export default defineComponent({
   props: {
     activeLayers: {
       type: Array,
-      default: () => [1, 2, 3]
+      default: () => []
     },
     selectedLayer: {
       type: Number,
