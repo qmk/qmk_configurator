@@ -1,38 +1,83 @@
 <template>
-  <div class="grid grid-layout">
-    <div class="header mt-16px m-auto font-bold">LAYER</div>
-    <div class="layers-common layer-left flex flex-col-reverse">
-      <div v-for="layer in leftColumn" :key="layer" class="layer-button">
+  <div class="grid" :class="$style.gridLayout">
+    <div class="mt-16px m-auto font-bold" :class="[$style.header]">LAYER</div>
+    <div
+      class="flex flex-col-reverse w-44px"
+      :class="[$style.layersCommon, $style.layerLeft]"
+    >
+      <div
+        v-for="layer in leftColumn"
+        :key="layer"
+        :class="{
+          [$style.layerButton]: true,
+          [$style.layerButtonLeft]: true,
+          [$style.selectedLayer]: selectedLayer === layer,
+          [$style.activeLayer]: activeMap[layer]
+        }"
+      >
         {{ layer }}
       </div>
     </div>
-    <div class="layer-common layer-right flex flex-col-reverse">
-      <div v-for="layer in rightColumn" :key="layer" class="layer-button">
+
+    <div
+      class="flex flex-col-reverse w-44px"
+      :class="[$style.layerCommon, $style.layerRight]"
+    >
+      <div
+        v-for="layer in rightColumn"
+        :key="layer"
+        :class="{
+          [$style.layerButton]: true,
+          [$style.layerButtonRight]: true,
+          [$style.selectedLayer]: selectedLayer === layer,
+          [$style.activeLayer]: activeMap[layer]
+        }"
+      >
         {{ layer }}
       </div>
     </div>
-    <div class="controls m-16px"><feather type="trash-2"></feather></div>
+    <div class="m-16px" :class="[$style.controls]">
+      <feather type="trash-2"></feather>
+    </div>
   </div>
 </template>
 <script>
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, ref } from '@vue/composition-api';
 
 export default defineComponent({
+  props: {
+    activeLayers: {
+      type: Array,
+      default: () => [1, 2, 3]
+    },
+    selectedLayer: {
+      type: Number,
+      default: 1
+    }
+  },
+  emits: ['selectedLayerChanged'],
   data() {
     return {};
   },
-  setup() {
+  setup(props) {
+    const activeMap = ref(
+      props.activeLayers.reduce((acc, layer) => {
+        acc[layer] = true;
+        return acc;
+      }, {})
+    );
     const rightColumn = [9, 10, 11, 12, 13, 14, 15, 16];
     const leftColumn = [1, 2, 3, 4, 5, 6, 7, 8];
     return {
       leftColumn,
-      rightColumn
+      rightColumn,
+      activeMap
     };
   }
 });
 </script>
-<style scoped>
-.grid-layout {
+<style module>
+.gridLayout {
   grid-template:
     'head head'
     'layerLeft layerRight'
@@ -43,23 +88,39 @@ export default defineComponent({
 .header {
   grid-area: head;
 }
-.layer-common {
+.layerCommon {
   font-family: Iosevka;
   font-weight: normal;
   font-weight: 400;
 }
-.layer-left {
+.layerLeft {
   grid-area: layerLeft;
 }
-.layer-right {
+.layerRight {
   grid-area: layerRight;
 }
 .controls {
   grid-area: controls;
 }
 
-.layer-button {
-  @apply min-h-28px max-h-28px min-w-28px min-w-28px m-5px;
+.layerButton {
+  @apply rounded-full h-28px w-28px min-h-28px max-h-28px min-w-28px min-w-28px;
   @apply text-lg;
+  @apply hover:bg-white-700 hover:text-grey-200;
+  @apply active:bg-grey-300 hover:text-white-800;
+  @apply cursor-pointer;
+}
+.layerButtonLeft {
+  @apply ml-10px mr-7px mt-5px mb-5px;
+}
+.layerButtonRight {
+  @apply mr-10px ml-7px mt-5px mb-5px;
+}
+.activeLayer {
+  @apply bg-white-700 text-grey-200;
+}
+
+.selectedLayer {
+  @apply bg-grey-300 text-white-800;
 }
 </style>

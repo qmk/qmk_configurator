@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     borderRadius: {
       sm: '8px',
-      lg: '16px'
+      lg: '16px',
+      full: '9999px'
     },
     darkMode: 'class',
     extend: {
@@ -13,9 +14,9 @@ module.exports = {
       colors: {
         'white-panel': '#CCD9F7',
         'white-app': '#ECF2FF',
-        'white-900': 'ECF2FF',
+        'white-900': '#ECF2FF',
         'white-app': '#ECF2FF',
-        'white-800': 'CCD9F6',
+        'white-800': '#CCD9F6',
         'white-panel': '#CCD9F6',
         'white-700': '#B1C1E9',
         'grey-500': '#69718D',
