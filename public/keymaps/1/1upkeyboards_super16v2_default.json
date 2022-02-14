@@ -1,0 +1,20 @@
+{
+  "keyboard": "1upkeyboards/super16v2",
+  "keymap": "default",
+  "commit": "c212b65e48bc203a05cd627ba0830b9be0b3d90a",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PSLS",
+      "MO(1)",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",
+      "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
+    ]
+  ]
+}
