@@ -717,6 +717,31 @@
   // placeholder
 }
 
+.gmk-hazakura-key {
+  background: $color-gmk-abs-WS1;
+  color: darken($color-pantone-2346C, 10%);
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-WS1, 7%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-gmk-abs-WS1, lighten($color-pantone-2346C, 0%));
+  }
+}
+.gmk-hazakura-mod {
+  background: $color-pantone-182C;
+  color: darken($color-pantone-2346C, 10%);
+  input,
+  .key-contents {
+    background: darken($color-pantone-182C, 5%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-pantone-182C, lighten($color-pantone-2346C, 0%));
+  }
+}
+.gmk-hazakura-accent {
+  background: $color-pantone-2346C;
+  color: lighten($color-pantone-182C, 10%);
+}
+
 .gmk-jamon-key {
   background: #84172c;
   color: #ece4d0;
