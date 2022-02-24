@@ -1,0 +1,16 @@
+{
+  "keyboard": "hineybush/h08_ocelot",
+  "keymap": "default",
+  "commit": "38e3be4c749f9d35a6d37e501d0fbaa737197240",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "MO(1)"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
