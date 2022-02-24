@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/stick",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "302ed624ac0910eea80ff4376dc2b8df5fd94b3f",
   "layout": "LAYOUT",
   "layers": [
     [
