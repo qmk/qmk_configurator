@@ -125,6 +125,8 @@
 <script>
 import Vue from 'vue';
 import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
+import { mapStores } from 'pinia';
+import { useStatusStore } from '@/stores/status';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import { clearKeymapTemplate } from '@/common.js';
@@ -145,6 +147,7 @@ export default {
   name: 'bottom-controller',
   components: { ElectronBottomControls },
   computed: {
+    ...mapStores(useStatusStore),
     ...mapState('keymap', ['templates']),
     ...mapState('app', [
       'keyboard',
@@ -205,14 +208,14 @@ export default {
     ]),
     ...mapMutations('keymap', ['setLoadingKeymapPromise', 'setDirty', 'clear']),
     ...mapMutations('keymap', { clearKeymap: 'clear' }),
-    ...mapMutations('status', ['deferredMessage', 'append']),
-    ...mapMutations('status', { clearStatus: 'clear' }),
+    // ...mapMutations('status', ['deferredMessage', 'append']),
+    // ...mapMutations('status', { clearStatus: 'clear' }),
     ...mapActions('app', [
       'changeKeyboard',
       'loadKeymapFromUrl',
       'loadLayouts'
     ]),
-    ...mapActions('status', ['viewReadme']),
+    // ...mapActions('status', ['viewReadme']),
     ...mapActions('keymap', ['load_converted_keymap']),
     async importUrlkeymap() {
       try {
@@ -390,8 +393,9 @@ export default {
           msg = `${msg}\n${stats.warnings.join('\n')}`;
           msg = `${msg}\n${stats.errors.join('\n')}`;
         }
-        this.deferredMessage(msg);
-        this.viewReadme(this.keyboard).then(() => {
+        await this.statusStore.viewReadme(this.keyboard).then(() => {
+          this.statusStore.append(msg);
+          this.statusStore.scrollToEnd();
           let keymapName = data.keymap;
           if (keymapName.endsWith('.json')) {
             keymapName = keymapName.replace(/.json$/, '');
@@ -465,8 +469,8 @@ export default {
           // clear the keymap data is now responsibility of code that changes layout
           this.clearKeymap();
           this.setKeymapName('info.json preview');
-          this.clearStatus();
-          this.append(
+          this.statusStore.clear();
+          this.statusStore.append(
             [
               'Preview info.json mode\n',
               'For Developers only, working on new keyboards.\n',

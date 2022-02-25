@@ -80,6 +80,8 @@
 <script>
 import Vue from 'vue';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapStores } from 'pinia';
+import { useStatusStore } from '@/stores/status';
 
 import first from 'lodash/first';
 import random from 'lodash/random';
@@ -98,6 +100,7 @@ const { isNavigationFailure, NavigationFailureType } = VueRouter;
 export default {
   name: 'ControllerTop',
   computed: {
+    ...mapStores(useStatusStore),
     ...mapGetters('keymap', ['isDirty']),
     ...mapGetters('app', ['exportKeymapName']),
     ...mapState('app', [
@@ -255,8 +258,8 @@ export default {
                 // This is a dirty hack so that the status message appears both after pressing load default
                 // and switching keyboards. This entire flow needs redesigning as it was written
                 // when I had a poor understanding of vue observability.
-                store.commit('status/append', msg);
-                store.commit('status/deferredMessage', msg);
+                this.statusStore.append(msg);
+                this.statusStore.setDeferredMessage(msg);
               }
             });
             return promise;
@@ -267,6 +270,7 @@ export default {
           statusError(
             `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
           );
+          this.statusStore.scrollToEnd();
           console.log('error loadDefault', error);
         });
     },
@@ -337,9 +341,9 @@ export default {
         this.setFavoriteKeyboard(this.keyboard);
       }
     },
-    postUpdateKeyboard() {
-      this.$store.commit('status/clear');
-      this.$router
+    async postUpdateKeyboard() {
+      // this.statusStore.clear();
+      await this.$router
         .replace({
           path: `/${this.keyboard}/${this.layout}`
         })
@@ -352,7 +356,7 @@ export default {
           }
           throw err;
         });
-      this.$store.dispatch('status/viewReadme', this.keyboard);
+      await this.statusStore.viewReadme(this.keyboard);
       disableOtherButtons();
     },
     /**

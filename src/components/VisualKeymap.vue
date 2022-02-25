@@ -14,6 +14,8 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapStores } from 'pinia';
+import { useStatusStore } from '@/stores/status';
 import BaseKeymap from '@/components/BaseKeymap.vue';
 import BaseKey from '@/components/BaseKey.vue';
 import AnyKey from '@/components/AnyKey.vue';
@@ -53,6 +55,7 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useStatusStore),
     ...mapState('keymap', ['config', 'displaySizes', 'layer']),
     ...mapGetters('keymap', [
       'getLayer',
@@ -106,8 +109,8 @@ export default {
       'resizeConfig',
       'setLoadingKeymapPromise'
     ]),
-    ...mapMutations('status', ['append']),
-    ...mapActions('status', ['scrollToEnd']),
+    // ...mapMutations('status', ['append']),
+    // ...mapActions('status', ['scrollToEnd']),
     /**
      * Due to a quirk in how reactivity works we have to clear the layout
      * name to reset the UI to it's old value.
@@ -165,8 +168,9 @@ export default {
       if (isUndefined(layout)) {
         const msg = `\n\nWARNING: layout ${newLayout} does not exist on this keyboard\n\n`;
         console.log(msg);
-        this.append(msg);
-        this.scrollToEnd();
+        this.statusStore.append(msg);
+        this.statusStore.setDeferredMessage(msg);
+        this.statusStore.scrollToEnd();
         return;
       }
       const max = layout.reduce(

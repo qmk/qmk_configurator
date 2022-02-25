@@ -1,5 +1,6 @@
 import axios from 'axios';
 import store from './store';
+import { useStatusStore } from '@/stores/status';
 
 import { backend_compile_url } from './store/modules/constants';
 
@@ -7,8 +8,9 @@ let compile_status = undefined;
 let baking = 'Baking';
 
 function statusError(message) {
-  store.commit('status/append', message);
-  store.dispatch('status/scrollToEnd');
+  const statusStore = useStatusStore();
+  statusStore.append(message);
+  statusStore.scrollToEnd();
 }
 
 function compileLayout(_keyboard, _keymapName, _layout) {
@@ -24,13 +26,11 @@ function compileLayout(_keyboard, _keymapName, _layout) {
     })
   );
   console.log(request);
-  if (store.getters['status/empty']) {
-    store.commit('status/append', '\n');
+  const statusStore = useStatusStore();
+  if (statusStore.empty) {
+    statusStore.append('\n');
   }
-  store.commit(
-    'status/append',
-    `* Sending ${_keyboard}:${_keymapName} with ${_layout}`
-  );
+  statusStore.append(`* Sending ${_keyboard}:${_keymapName} with ${_layout}`);
   axios
     .post(backend_compile_url, request)
     .then((resp) => {
@@ -38,8 +38,8 @@ function compileLayout(_keyboard, _keymapName, _layout) {
       if (status === 200) {
         store.commit('app/setShowSpinner', true);
         if (data.enqueued) {
-          store.commit('status/append', `\n* Received job_id: ${data.job_id}`);
-          store.dispatch('status/scrollToEnd');
+          statusStore.append(`\n* Received job_id: ${data.job_id}`);
+          statusStore.scrollToEnd();
           store.commit('app/setJobID', data.job_id);
           check_status();
         }
@@ -80,6 +80,7 @@ function disableOtherButtons() {
 function check_status() {
   const url = `${backend_compile_url}/${store.state.app.jobID}`;
   const start = performance.now();
+  const statusStore = useStatusStore();
   axios
     .get(url)
     .then((resp) => {
@@ -95,8 +96,7 @@ function check_status() {
         switch (data.status) {
           case 'finished':
             store.commit('app/setSpinnerMsg', 'Done!');
-            store.commit(
-              'status/append',
+            statusStore.append(
               `\n* Finished:\n${data.result.output.replace(/\[.*m/gi, '')}`
             );
             store.commit(
@@ -118,13 +118,13 @@ function check_status() {
           case 'queued':
             store.commit('app/setSpinnerMsg', 'Waiting for Oven');
             msg = compile_status === 'queued' ? ' .' : '\n* Queueing';
-            store.commit('status/append', msg);
+            statusStore.append(msg);
             setTimeout(check_status, pollInterval);
             break;
           case 'running':
             store.commit('app/setSpinnerMsg', baking);
             msg = compile_status === 'running' ? ' .' : '\n* Running';
-            store.commit('status/append', msg);
+            statusStore.append(msg);
             setTimeout(check_status, pollInterval);
             break;
           case 'unknown':

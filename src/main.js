@@ -10,6 +10,7 @@ import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
 import VTooltip from 'v-tooltip';
+import { createPinia, PiniaVuePlugin } from 'pinia';
 import '@fontsource/roboto-mono/400.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/700.css';
@@ -130,16 +131,21 @@ Vue.config.productionTip = false;
 // Make $i18n vm accessible in the store
 store.$i18n = i18n._vm;
 
+Vue.use(PiniaVuePlugin);
+const pinia = createPinia();
+
 new Vue({
   router,
   store,
   i18n,
+  pinia,
   render: (h) => h(App)
 }).$mount('#app');
 
 new Vue({
   i18n,
   store,
+  pinia,
   render: (h) => h(StatusBar)
 }).$mount('#status-app');
 
