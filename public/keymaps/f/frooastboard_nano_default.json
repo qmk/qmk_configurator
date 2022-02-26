@@ -1,7 +1,7 @@
 {
-  "keyboard": "frooastboard",
+  "keyboard": "frooastboard/nano",
   "keymap": "default",
-  "commit": "0014c3237556b8c94bbf6d287d53a7b55534fa69",
+  "commit": "2d12eacb4b9bf1b3d331cec0bd06fd1a58a5d217",
   "layout": "LAYOUT",
   "layers": [
     [
