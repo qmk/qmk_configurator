@@ -1,0 +1,20 @@
+{
+  "keyboard": "latincompass/latin6rgb",
+  "keymap": "default",
+  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "layout": "LAYOUT_numpad_2x3",
+  "layers": [
+    [
+      "KC_P4",   "KC_P5",   "MO(1)",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD", "MO(1)",
+      "AU_ON",   "AU_OFF",  "MI_ON"
+    ],
+    [
+      "KC_P4",   "KC_P5",   "MO(1)",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ]
+  ]
+}

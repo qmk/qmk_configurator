@@ -1,0 +1,11 @@
+{
+  "keyboard": "gboards/ergotaco",
+  "keymap": "default",
+  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",    "KC_H"
+    ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "keyboard": "kakunpc/business_card/beta",
+  "keymap": "default",
+  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",
+      "KC_3",    "KC_4",
+      "KC_5",    "KC_6"
+    ]
+  ]
+}
