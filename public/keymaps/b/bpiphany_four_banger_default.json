@@ -1,0 +1,12 @@
+{
+  "keyboard": "bpiphany/four_banger",
+  "keymap": "default",
+  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "layout": "LAYOUT_ortho_2x2",
+  "layers": [
+    [
+      "KC_1",    "KC_U",
+      "KC_P",    "KC_NO"
+    ]
+  ]
+}

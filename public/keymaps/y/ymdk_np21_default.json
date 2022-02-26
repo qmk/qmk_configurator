@@ -1,7 +1,7 @@
 {
-  "keyboard": "ymdk_np21",
+  "keyboard": "ymdk/np21",
   "keymap": "default",
-  "commit": "0032cb026b7d4143fd61ed3cb3378eda5bb41292",
+  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [
