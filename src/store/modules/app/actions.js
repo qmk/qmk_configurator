@@ -9,6 +9,8 @@ import {
 import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
+import { useKeycodesStore } from '@/stores/keycodes';
+
 const steno_keyboards = ['gergo', 'georgi'];
 
 const actions = {
@@ -83,10 +85,11 @@ const actions = {
         const stenoCheck = steno_keyboards.reduce((_, keeb) => {
           return { [keeb]: true };
         }, {});
+        const keycodesStore = useKeycodesStore();
         if (stenoCheck[keyboard]) {
-          this.commit('keycodes/enableSteno');
+          keycodesStore.enableSteno();
         } else {
-          this.commit('keycodes/disableSteno');
+          keycodesStore.disableSteno();
         }
 
         if (clearKeymap) {
@@ -161,7 +164,8 @@ const actions = {
     }
     commit('setIso', iso);
     const keyboardLayout = iso ? 'enableIso' : 'disableIso';
-    this.commit(`keycodes/${keyboardLayout}`);
+    const keycodesStore = useKeycodesStore();
+    iso ? keycodesStore.enableIso() : keycodesStore.disableIso();
     await dispatch('saveConfiguratorSettings');
   },
   async toggleClearLayerDefault({ commit, state, dispatch }) {
@@ -220,10 +224,8 @@ const actions = {
   async initKeypressListener({ commit }) {
     const store = this;
     const keypressListener = new keypress.Listener();
-    const conf = generateKeypressCombos(
-      store,
-      store.getters['keycodes/keycodes']
-    );
+    const keycodesStore = useKeycodesStore();
+    const conf = generateKeypressCombos(store, keycodesStore.getKeycodes);
     keypressListener.register_many(conf);
     keypressListener.simple_combo('ctrl shift i', () => {
       if (!store.state.app.isPreview) {

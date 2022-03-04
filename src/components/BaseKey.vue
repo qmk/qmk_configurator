@@ -28,6 +28,8 @@ import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 import colorways from './colorways';
 import { getPlatform } from '@/util';
+import { mapStores } from 'pinia';
+import { useKeycodesStore } from '@/stores/keycodes';
 let substitute = Object.assign(
   {},
   colorways.iconCodes,
@@ -120,10 +122,10 @@ export default {
     }
   },
   computed: {
+    ...mapStores(useKeycodesStore),
     ...mapState('keymap', ['config']),
     ...mapState('keymap', { curLayer: 'layer' }),
     ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'colorwayOverride']),
-    ...mapGetters('keycodes', ['lookupKeycode']),
     myTitle() {
       return this.meta ? this.meta.code : '';
     },
@@ -145,7 +147,7 @@ export default {
         return;
       }
       if (isUndefined(substitute[this.meta.code])) {
-        const { name } = this.lookupKeycode(this.meta.code);
+        const { name } = this.keycodesStore.lookupKeycode(this.meta.code);
         return this.formatName(name ? name : this.meta.name);
       }
       return undefined;

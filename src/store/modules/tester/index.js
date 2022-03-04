@@ -5,6 +5,7 @@ import qmkToPos from './qmk';
 import codeToPos from './codeToPos';
 import layouts from './layouts';
 import isUndefined from 'lodash/isUndefined';
+import { useKeycodesStore } from '@/stores/keycodes';
 
 function reduceCodeToPos(arr) {
   // Create look up table for Browser Code to Layout position
@@ -67,7 +68,8 @@ const getters = {
 function mapKeymap(store, arr) {
   // Create look up table for QMK Code to Layout position
   return arr.map((code) => {
-    const meta = store.getters['keycodes/lookupKeycode'](code);
+    const keycodesStore = useKeycodesStore();
+    const meta = keycodesStore.lookupKeycode(code);
     return {
       ...meta
     };
