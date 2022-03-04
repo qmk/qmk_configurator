@@ -1,42 +1,42 @@
 Key,Translation
 apiVersion,Versione API
-apiVersionPrefix,
-favoriteColor,
-favoriteKeyboard,
-hostedOn,Ospitato in GitHub Pages
-jobsAhead,
+apiVersionPrefix,API
+favoriteColor,Colore Preferito
+favoriteKeyboard,Tastiera Preferita
+hostedOn,Ospitato su GitHub Pages
+jobsAhead,lavori futuri
 jobsWaiting,lavori in attesa
-maintain,Questo progetto è gestito da collaboratori di QMK come lei!
-ready,
-searchKeycodes,
-serverIs,
+maintain,Questo progetto è gestito da collaboratori di QMK come te!
+ready,Pronto
+searchKeycodes,Ricerca
+serverIs,Servizio
 serverStatus,Stato Server
-settings,
+settings,Impostazioni
 statsTemplate,"
-Carico {layers} livellos e {count} codici chiave. Definito {any} Any chiave codice chiave
+Caricamento {layers} livelli e {count} codici chiave. Definiti {any} chiavi di codici chave.
 "
-ColorwayTip:title,Ctrl + Alt + N per cambiare il colore successivo
-compile:label,Compilare
+ColorwayTip:title,Ctrl + Alt + N per passare al colore successivo
+compile:label,Compila
 compile:title,Compila il keymap
 downloadFirmware:label,Firmware
-downloadFirmware:title,Scarica file firmware da installare
+downloadFirmware:title,Scarica il file firmware per l'installazione
 downloadJSON:label,Keymap.JSON
-downloadJSON:title,Esporta file JSON di Keymap QMK
+downloadJSON:title,Scarica questo file JSON di Keymap QMK
 downloadKeymap:label,solo keymap
 downloadKeymap:title,Scarica solo keymap.c
 downloadSource:label,Codice completo
 downloadSource:title,Scarica codice Firmware QMK
 downloadToolbox:label,Scarica QMK Toolbox
-errors:invalidQMKKeymap,Ma sembra che questo non sia un file valido keymap QMK.
-errors:kbfirmwareJSONUnsupported,Il Configuratore QMK non consente di importare i file JSON da kbfirmware.
-errors:unknownJSON,Questo non sembra essere un file keymap QMK.
+errors:invalidQMKKeymap,"Sembra che questo non sia un file valido keymap QMK."
+errors:kbfirmwareJSONUnsupported,"Il Configuratore QMK non consente di importare i file JSON kbfirmware."
+errors:unknownJSON,"Questo non sembra essere un file keymap QMK."
 errors:unsupportedBrowser,Stai usando un browser incompatibile. Utilizzare
 flashFile:label,Installazione personalizzata
 flashFile:title,Installa il file selezionato in MCU
-flashFirmware:label,Auto-Installare
-flashFirmware:title,Installa automaticamente il Firmware compilato in MCU
+flashFirmware:label,Auto-Installazione
+flashFirmware:title,Installare automaticamente il Firmware compilato in MCU
 help:label,Tutorial aperto
-importJSON:title,Importa file JSON di Keymap QMK
+importJSON:title,Carica file JSON di Keymap QMK
 importUrlJSON:title,Importa file JSON di Keymap QMK da URL
 keyboard:label,tastiera
 keycodes:label,Codici chiave
@@ -44,46 +44,46 @@ keycodesRef:label,Riferimento al codice chiave
 keycodesTab:ANSI:label,ANSI
 keycodesTab:AppMediaMouse:label,"App, Media e Mouse"
 keycodesTab:ISO/JIS:label,ISO/JIS
-keycodesTab:KeyboardSettings:label,Configurazione tastiera
+keycodesTab:KeyboardSettings:label,Configurazione Tastiera
 keycodesTab:Quantum:label,Quantum
-keycodesTab:Steno:label,
+keycodesTab:Steno:label,Steno
 keymap:label,Keymap
-keymapHelp:label,
-keymapHelp:title,
+keymapHelp:label,Assistenza
+keymapHelp:title,Come uso il file keymap.json?
 keymapName:label,Nome keymap
-keymapName:placeholder,nome keymap personalizzato
-layer:confirm,Sei sicuro di voler cancellare il livello?
+keymapName:placeholder,Nome keymap personalizzato
+layer:confirm,Sei sicurə di voler cancellare il livello?
 layer:label,Livello
 layer:title,Elimina livello
 layout:label,layout
-loadDefault:label,Carica Originale
+loadDefault:label,Carica Predefinito
 loadDefault:title,Carica il valore predefinito per il layout del Firmware QMK
 potato:1,Henry Spalding piantò per la prima volta patate in Idaho nel 1837.
 potato:10,La Cina è il più grande fornitore mondiale di patate.
 potato:11,Le patate sono state le prime verdure coltivate nello spazio.
 potato:12,Le patate sono completamente senza glutine.
-potato:13,Una delle misure di base Dell'Inca era il tempo necessario per cucinare una patata.
+potato:13,Una delle misure di base degli Inca era il tempo necessario per cucinare una patata.
 potato:14,"Se una patata viene esposta alla luce mentre cresce, diventerà verde e velenosa."
-potato:15,Ci vogliono 10.000 libbre di patate per preparare 2.500 libbre di patatine.
-potato:16,Oggi ci sono più di 4.000 varietà di patate.
-potato:17,"I papi appartengono ad una piccola famiglia, Belladonna o Solanaceae."
-potato:18,"Durante la corsa All'oro Klondike (1897-1898), le patate valevano praticamente il loro peso in oro."
-potato:19,Walter Raleigh introdusse i Papi in Inghilterra nel 1589 sui 40.000 acri di terreno vicino a Cork.
-potato:2,Le patatine fritte sono state rilasciate in America quando Thomas Jefferson le ha servite ad una cena alla Casa Bianca.
+potato:15,Ci vogliono 10.000 chilogrammi di patate per preparare 2.500 chilogrammi di patatine chips.
+potato:16,Al giorno d'oggi ci sono più di 4.000 varietà di patate.
+potato:17,"Le patate appartengono a una piccola famiglia, Belladonna o Solanaceae."
+potato:18,"Durante la corsa all'oro del Klondike (1897-1898), le patate valevano praticamente il loro peso in oro."
+potato:19,Walter Raleigh introdusse le patate in Inghilterra nel 1589 sui 16.000 ettari di terreno vicino a Cork.
+potato:2,Le patatine fritte sono state rilasciate in America quando Thomas Jefferson le ha servite a una cena alla Casa Bianca.
 potato:20,Le patate sono disponibili tutto l'anno perché vengono raccolte da qualche parte nel mondo ogni mese dell'anno.
-potato:21,"Originario Dell'Africa e Dell'Asia, le igname (camotes) variano in dimensioni, dalle dimensioni di una piccola patata alla regolazione record di 130 libbre."
-potato:22,Il 19 agosto e il 27 ottobre è il giorno Noacional del Papa.
-potato:23,"Le patate sono utilizzate anche per la produzione di bevande alcoliche come vodka, Poitin o aquavit."
+potato:21,"Originarie dell'Africa e dell'Asia, le patate dolci (camote) variano in dimensioni: da una piccola patata alla misura record di 60 chilogrammi."
+potato:22,Il 19 agosto e il 27 ottobre è il giorno Nazionale della Patata.
+potato:23,"Le patate sono utilizzate anche per la produzione di bevande alcoliche come Vodka, Poitin o Aquavit."
 potato:24,Le patate sono tra le verdure più verdi. Sono facili da coltivare e non richiedono grandi quantità di fertilizzanti e additivi chimici per prosperare come molti altri vegetali.
-potato:25,La patata viene dalla regione del Perù meridionale dove è stata addomesticata per la prima volta tra l ' 8000 A.C. e il 5000 A.C.
-potato:26,La parola inglese patata deriva dalla parola spagnola patata.
-potato:27,Le piante di patata sono di solito impollinate da insetti come le api.
-potato:28,Una patata è composta dall ' 80% di acqua e dal 20% di materia solida.
-potato:3,I fanatici americani di patate hanno ingerito più di 4 milioni di tonnellate di patatine in varie forme e dimensioni nel 2017.
+potato:25,La patata viene dalla regione del Perù meridionale dove è stata coltivata per la prima volta tra l'8000 A.C. e il 5000 A.C.
+potato:26,La parola italiana patata deriva dal calco della parola spagnola patata.
+potato:27,Le piante di patata sono generalmente impollinate da insetti come le api.
+potato:28,Una patata è composta dall'80% di acqua e dal 20% di materia solida.
+potato:3,Gli americani golosi di patate hanno ingerito più di 4 milioni di tonnellate di patatine in varie forme e dimensioni nel 2017.
 potato:4,"Le patate sono un afrodisiaco potente, secondo un medico irlandese."
-potato:5,L'americano medio mangia 140 libbre di patate ogni anno. I tedeschi mangiano più di 200 sterline all'anno.
-potato:6,"Il Papa piu ' grande pesava 18 sterline e 4 once, secondo il Libro dei Guinness dei primati. È stato coltivato in Inghilterra nel 1795."
-potato:7,"Le patate sono il quarto alimento base al mondo-dopo il grano, il mais e il riso."
+potato:5,Un americano medio mangia 60 chilogrammi di patate ogni anno. I tedeschi mangiano più di 90 chilogrammi all'anno.
+potato:6,"La patata più grande mai coltivata pesava 8 chilogrammi, secondo il Libro dei Guinness dei Primati. È stata coltivata in Inghilterra nel 1795."
+potato:7,"Le patate sono il quarto alimento base al mondo – dopo grano, mais e riso."
 potato:8,Le patate sono coltivate in più di 125 paesi.
 potato:9,Ogni anno il mondo produce abbastanza patate da coprire una strada a quattro corsie che circonda il mondo sei volte.
 print:anonymous:label,Anonimo
@@ -104,7 +104,7 @@ printKeymap:title,Stampa livelli keymap
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
-settingsPanel:darkmode:label,Cambia Modalità scura
+settingsPanel:darkmode:label,Cambia Modalità Scura
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
 settingsPanel:displaySizes:label,Mostra dimensione chiave
 settingsPanel:displaySizes:title,ctrl + alt + u
