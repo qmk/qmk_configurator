@@ -36,8 +36,8 @@ function getDefaultLayout() {
 
 function mapKeymap(arr) {
   // Create look up table for QMK Code to Layout position
+  const keycodesStore = useKeycodesStore();
   return arr.map((code) => {
-    const keycodesStore = useKeycodesStore();
     const meta = keycodesStore.lookupKeycode(code);
     return {
       ...meta
