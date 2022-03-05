@@ -62,13 +62,13 @@ potato:1,Henry Spalding piantò per la prima volta patate in Idaho nel 1837.
 potato:10,La Cina è il più grande fornitore mondiale di patate.
 potato:11,Le patate sono state le prime verdure coltivate nello spazio.
 potato:12,Le patate sono completamente senza glutine.
-potato:13,Una delle misure di base degli Inca era il tempo necessario per cucinare una patata.
+potato:13,Una delle misure degli Inca era il tempo necessario per cucinare una patata.
 potato:14,"Se una patata viene esposta alla luce mentre cresce, diventerà verde e velenosa."
 potato:15,Ci vogliono 10.000 chilogrammi di patate per preparare 2.500 chilogrammi di patatine chips.
 potato:16,Al giorno d'oggi ci sono più di 4.000 varietà di patate.
 potato:17,"Le patate appartengono a una piccola famiglia, Belladonna o Solanaceae."
 potato:18,"Durante la corsa all'oro del Klondike (1897-1898), le patate valevano praticamente il loro peso in oro."
-potato:19,Walter Raleigh introdusse le patate in Inghilterra nel 1589 sui 16.000 ettari di terreno vicino a Cork.
+potato:19,Walter Raleigh introdusse le patate in Inghilterra nel 1589 su 16.000 ettari di terreno vicino a Cork.
 potato:2,Le patatine fritte sono state rilasciate in America quando Thomas Jefferson le ha servite a una cena alla Casa Bianca.
 potato:20,Le patate sono disponibili tutto l'anno perché vengono raccolte da qualche parte nel mondo ogni mese dell'anno.
 potato:21,"Originarie dell'Africa e dell'Asia, le patate dolci (camote) variano in dimensioni: da una piccola patata alla misura record di 60 chilogrammi."
@@ -81,11 +81,11 @@ potato:27,Le piante di patata sono generalmente impollinate da insetti come le a
 potato:28,Una patata è composta dall'80% di acqua e dal 20% di materia solida.
 potato:3,Gli americani golosi di patate hanno ingerito più di 4 milioni di tonnellate di patatine in varie forme e dimensioni nel 2017.
 potato:4,"Le patate sono un afrodisiaco potente, secondo un medico irlandese."
-potato:5,Un americano medio mangia 60 chilogrammi di patate ogni anno. I tedeschi mangiano più di 90 chilogrammi di patate all'anno.
+potato:5,Un americano medio mangia 60 chilogrammi di patate ogni anno. I tedeschi ne mangiano più di 90 chilogrammi all'anno.
 potato:6,"La patata più grande mai coltivata pesava 8 chilogrammi, secondo il Libro dei Guinness dei Primati. È stata coltivata in Inghilterra nel 1795."
 potato:7,"Le patate sono il quarto alimento base al mondo – dopo grano, mais e riso."
 potato:8,Le patate sono coltivate in più di 125 paesi.
-potato:9,Ogni anno il mondo produce abbastanza patate da coprire una strada a quattro corsie che circonda il mondo sei volte.
+potato:9,Ogni anno nel mondo si producono abbastanza patate da coprire una strada a quattro corsie che circonda il mondo sei volte.
 print:anonymous:label,Anonimo
 print:author:placeholder,"Opzionalmente, Il Tuo Nome"
 print:author:title,Autore
@@ -107,10 +107,10 @@ settingsPanel:darkmode:help,Usa la modalità scura del configuratre QMK
 settingsPanel:darkmode:label,Modalità Scura
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
 settingsPanel:displaySizes:label,Mostra Dimensioni Chiave
-settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
 settingsPanel:fastInput:label,Ingresso rapido
-settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:fastInput:title,Ctrl + Alt + F
 settingsPanel:iso:help,Visualizza le legende ISO automaticamente
 settingsPanel:iso:label,Usa le legende delle chiavi ISO
 settingsPanel:kcno:label,KC_NO
