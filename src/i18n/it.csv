@@ -81,7 +81,7 @@ potato:27,Le piante di patata sono generalmente impollinate da insetti come le a
 potato:28,Una patata è composta dall'80% di acqua e dal 20% di materia solida.
 potato:3,Gli americani golosi di patate hanno ingerito più di 4 milioni di tonnellate di patatine in varie forme e dimensioni nel 2017.
 potato:4,"Le patate sono un afrodisiaco potente, secondo un medico irlandese."
-potato:5,Un americano medio mangia 60 chilogrammi di patate ogni anno. I tedeschi mangiano più di 90 chilogrammi all'anno.
+potato:5,Un americano medio mangia 60 chilogrammi di patate ogni anno. I tedeschi mangiano più di 90 chilogrammi di patate all'anno.
 potato:6,"La patata più grande mai coltivata pesava 8 chilogrammi, secondo il Libro dei Guinness dei Primati. È stata coltivata in Inghilterra nel 1795."
 potato:7,"Le patate sono il quarto alimento base al mondo – dopo grano, mais e riso."
 potato:8,Le patate sono coltivate in più di 125 paesi.
@@ -96,41 +96,41 @@ print:layer:label,Livello
 print:layout:label,Layout
 print:notes:empty,Il mio fantastico keymap
 print:notes:placeholder,Note su questa configurazione
-print:notes:title,Nota
+print:notes:title,Note
 print:print:title,Stampa
 print:source:title,Fonte
-printKeymap:label,Stampa keymap
-printKeymap:title,Stampa livelli keymap
-settingsPanel:clearLayer:help,
-settingsPanel:clearLayer:title,
-settingsPanel:darkmode:help,
-settingsPanel:darkmode:label,Cambia Modalità Scura
+printKeymap:label,Stampa Keymap
+printKeymap:title,Stampa Livelli Keymap
+settingsPanel:clearLayer:help,Cambia il keycode predefinito per 
+settingsPanel:clearLayer:title,Azzera Livello Automaticamente
+settingsPanel:darkmode:help,Usa la modalità scura del configuratre QMK
+settingsPanel:darkmode:label,Modalità Scura
 settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
-settingsPanel:displaySizes:label,Mostra dimensione chiave
+settingsPanel:displaySizes:label,Mostra Dimensioni Chiave
 settingsPanel:displaySizes:title,ctrl + alt + u
-settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ciascuna posizione.
+settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
 settingsPanel:fastInput:label,Ingresso rapido
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,Visualizza le legende ISO per impostazione predefinita
-settingsPanel:iso:label,Usa legende chiavi ISO
+settingsPanel:iso:help,Visualizza le legende ISO automaticamente
+settingsPanel:iso:label,Usa le legende delle chiavi ISO
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
-settingsPanel:language:help,
+settingsPanel:language:help,Cambia lingua dell'interfaccia utente
 settingsPanel:language:title,Lingua
 settingsPanel:off:label,Spegnimento
 settingsPanel:on:label,Accensione
-settingsPanel:snowflakes:label,
-settingsPanel:snowflakes:title,
-settingsPanel:title,Configuratore Impostazioni
-settingsPanel:toggleTutorial:help,MechMerlin guida video
+settingsPanel:snowflakes:label,Azionare fiocchi di neve
+settingsPanel:snowflakes:title,Fiocchi di neve
+settingsPanel:title,Impostazioni Configuratore
+settingsPanel:toggleTutorial:help,MechMerlin Configurazione QMK Video Tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
 testKeys:label,Prova tastiera
 testKeys:title,Prova ingresso tastiera
 tester:back:label,Indietro
 tester:back:title,Torna al Configuratore
 tester:chatter:detectedAlert,Le comunicazioni sono state rilevate!
-tester:chatter:label,Soglia di chatter (ms)
-tester:docs:paragraph,Nota: chiave e codice rilevati possono essere diversi a seconda della vostra posizione. Doc
+tester:chatter:label,Soglia di comunicazioni (ms)
+tester:docs:paragraph,Nota: la chiave e il codice rilevati possono essere diversi a seconda della vostra posizione. Docs
 tester:keycodeStatus:label,Codici chiave rilevati
 tester:letters:code:label,codice
 tester:letters:key:label,chiave
@@ -138,6 +138,6 @@ tester:letters:keycode:label,codici chiave
 tester:page:label,Collaudatore di tastiera
 tester:reset:label,Reimpostato
 tester:reset:title,Reimposta le chiavi rilevate
-tester:typewritericon:label,
-toggleTerminal:label,
-toggleTerminal:title,
+tester:typewritericon:label,Clicca per ascoltare i suoni della macchina da scrivere durante il test
+toggleTerminal:label,Clicca per espandere
+toggleTerminal:title,Azionare il videoterminale
