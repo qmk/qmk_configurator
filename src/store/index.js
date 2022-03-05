@@ -2,15 +2,13 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import app from './modules/app';
 import keymap from './modules/keymap';
-import tester from './modules/tester';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
     app,
-    keymap,
-    tester
+    keymap
   },
   state: {},
   mutations: {},
