@@ -106,7 +106,7 @@ export const useTesterStore = defineStore('tester', {
     },
     setChatterDetected({ pos }) {
       this.chatterDetected = true;
-      Vue.set(this.keymap[this.layout][pos], DETECTED, true);
+      Vue.set(this.keymap[this.layout][pos], CHATTER, true);
     },
     reset() {
       this.chatterDetected = false;
