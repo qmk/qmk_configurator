@@ -484,8 +484,8 @@ export default {
         console.log('unexpected error', err);
       }
     },
-    async printKeymaps() {
-      await this.$router.push('/print').catch((err) => {
+    printKeymaps() {
+      this.$router.push('/print').catch((err) => {
         if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
           return;
         }
@@ -496,8 +496,8 @@ export default {
         throw err;
       });
     },
-    async testKeys() {
-      await this.$router.push('/test').catch((err) => {
+    testKeys() {
+      this.$router.push('/test').catch((err) => {
         if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
           return;
         }
