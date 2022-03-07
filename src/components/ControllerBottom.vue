@@ -497,7 +497,7 @@ export default {
       });
     },
     async testKeys() {
-      this.$router.push('/test').catch((err) => {
+      await this.$router.push('/test').catch((err) => {
         if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
           return;
         }
