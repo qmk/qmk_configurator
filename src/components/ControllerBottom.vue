@@ -484,11 +484,29 @@ export default {
         console.log('unexpected error', err);
       }
     },
-    printKeymaps() {
-      this.$router.push('/print');
+    async printKeymaps() {
+      await this.$router.push('/print').catch((err) => {
+        if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+          return;
+        }
+        if (isNavigationFailure(err, NavigationFailureType.cancelled)) {
+          return;
+        }
+
+        throw err;
+      });
     },
-    testKeys() {
-      this.$router.push('/test');
+    async testKeys() {
+      this.$router.push('/test').catch((err) => {
+        if (isNavigationFailure(err, NavigationFailureType.duplicated)) {
+          return;
+        }
+        if (isNavigationFailure(err, NavigationFailureType.cancelled)) {
+          return;
+        }
+
+        throw err;
+      });
     }
   },
   data: () => {
