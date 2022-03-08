@@ -511,5 +511,10 @@ export default {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
+  border-radius: 4px;
+}
+
+.topctrl-keyboards .v-select:focus-within {
+  outline: 2px solid black;
 }
 </style>
