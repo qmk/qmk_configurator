@@ -29,7 +29,7 @@
         <label class="drop-label" id="drop-label-version"
           >{{ $t('layout.label') }}:</label
         >
-        <select id="layout" v-model="layout">
+        <select id="layout" v-model="layout" @focus="focus" @blur="blur">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
@@ -427,7 +427,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 #drop-label-keyboard {
   min-width: 137px;
 }
@@ -483,6 +483,9 @@ export default {
   border: 1px solid;
   width: 288px;
   width: 30rem;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 .drop-label {
   display: inline-block;
@@ -508,5 +511,10 @@ export default {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
+  border-radius: 4px;
+}
+
+.topctrl-keyboards .v-select:focus-within {
+  outline: 2px solid black;
 }
 </style>

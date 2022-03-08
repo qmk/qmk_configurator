@@ -34,6 +34,8 @@
             class="keymap--keyset"
             id="colorway-select"
             v-model="curIndex"
+            @focus="focus"
+            @blur="blur"
           >
             <option
               class="option"
@@ -129,13 +131,23 @@ export default {
   methods: {
     ...mapActions('app', ['setFavoriteColor', 'initKeypressListener']),
     ...mapMutations('keymap', ['nextColorway']),
-    ...mapMutations('app', ['resetListener']),
+    ...mapMutations('app', [
+      'resetListener',
+      'stopListening',
+      'startListening'
+    ]),
     favColor() {
       if (this.isFavoriteColor) {
         this.setFavoriteColor('');
       } else {
         this.setFavoriteColor(this.displayColorways[this.curIndex]);
       }
+    },
+    focus() {
+      this.stopListening();
+    },
+    blur() {
+      this.startListening();
     }
   },
   async mounted() {
@@ -154,7 +166,7 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .hint-right {
   display: grid;
   justify-content: end;
@@ -187,6 +199,11 @@ export default {
 }
 .keymap--keyset {
   float: right;
+  border-radius: 4px;
+  border: 1px solid;
+  &:focus {
+    outline: 2px solid black;
+  }
 }
 .keymap--area {
   margin-top: 1em;
