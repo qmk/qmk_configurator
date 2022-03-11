@@ -1,0 +1,12 @@
+{
+  "keyboard": "handwired/lemonpad",
+  "keymap": "default",
+  "commit": "d94b5d0b8219dfce42aad5798d3bb1d6cf7fec19",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F"
+    ]
+  ]
+}

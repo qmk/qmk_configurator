@@ -1,7 +1,7 @@
 {
-  "keyboard": "nk65/v1_4",
+  "keyboard": "novelkeys/nk65/v1_4",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "a483ab321313471bfa54e71f14bb68056130b7c3",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
