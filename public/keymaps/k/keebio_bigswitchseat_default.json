@@ -1,0 +1,20 @@
+{
+  "keyboard": "keebio/bigswitchseat",
+  "keymap": "default",
+  "commit": "022e1fdac86c38136d6f818aec15d34b1ab92be5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A"
+    ],
+    [
+      "_______"
+    ],
+    [
+      "_______"
+    ],
+    [
+      "_______"
+    ]
+  ]
+}
