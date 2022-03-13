@@ -1,0 +1,12 @@
+{
+  "keyboard": "machine_industries/m4_a",
+  "keymap": "default",
+  "commit": "d38696a4937525d34445bf23863f99675ec2f54c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_0"
+    ]
+  ]
+}
