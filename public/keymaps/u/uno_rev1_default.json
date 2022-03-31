@@ -1,0 +1,16 @@
+{
+  "keyboard": "uno/rev1",
+  "keymap": "default",
+  "commit": "8fe3864fe7601a7e6572e7db680775edeff771ac",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "Hello!"
+    ]
+  ],
+  "layers": [
+    [
+      "MACRO_0"
+    ]
+  ]
+}
