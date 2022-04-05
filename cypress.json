@@ -2,6 +2,7 @@
   "baseUrl": "http://localhost:3000/",
   "integrationFolder": "tests/integration",
   "componentFolder": "src",
+  "fixturesFolder": "tests/fixtures",
   "testFiles": "**/*.spec.js",
   "chromeWebSecurity": false,
   "video": false
