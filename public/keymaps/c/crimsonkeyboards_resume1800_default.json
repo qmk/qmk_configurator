@@ -1,6 +1,6 @@
 {
   "keyboard": "crimsonkeyboards/resume1800",
-  "keymap": "crimsonkeyboards_resume1800_layout_resume1800_ansi_all_default",
+  "keymap": "default",
   "commit": "f067f35cc4252e68ce0010b8f59a659aa4ace8cd",
   "layout": "LAYOUT_resume1800_ansi_all",
   "layers": [
