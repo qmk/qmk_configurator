@@ -1,7 +1,7 @@
 {
-  "keyboard": "acheron/shark",
+  "keyboard": "acheron/shark/alpha",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "5fe3b9ffa5bf1179c288f77a16e763e9fecaca0b",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
