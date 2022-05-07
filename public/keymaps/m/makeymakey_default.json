@@ -1,0 +1,13 @@
+{
+  "keyboard": "makeymakey",
+  "keymap": "default",
+  "commit": "1acb37db7fc28684785ee57d68452d127790c1db",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_UP",   "KC_DOWN", "KC_LEFT", "KC_RGHT", "KC_SPC",  "KC_BTN1",
+      "KC_W",    "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",
+      "KC_MS_U", "KC_MS_D", "KC_MS_L", "KC_MS_R", "KC_BTN1", "KC_BTN2"
+    ]
+  ]
+}
