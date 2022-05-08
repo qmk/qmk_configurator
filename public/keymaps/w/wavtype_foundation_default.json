@@ -1,8 +1,8 @@
 {
   "keyboard": "wavtype/foundation",
   "keymap": "default",
-  "commit": "019dddcfa3cb7a1e961e1fefb302eb71bea312f9",
-  "layout": "LAYOUT",
+  "commit": "8b438a9165ace0492d6e249f8064f07531ac6d15",
+  "layout": "LAYOUT_ansi_split_bs",
   "layers": [
     [
       "KC_F1",      "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_DEL",     "KC_INS",  "KC_HOME", "KC_PGUP",

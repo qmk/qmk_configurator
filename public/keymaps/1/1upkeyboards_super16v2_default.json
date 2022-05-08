@@ -1,7 +1,7 @@
 {
   "keyboard": "1upkeyboards/super16v2",
   "keymap": "default",
-  "commit": "c212b65e48bc203a05cd627ba0830b9be0b3d90a",
+  "commit": "2d05c7fc2500582fd0605569fe929e04bb8cc8ae",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
@@ -13,7 +13,7 @@
     [
       "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",
       "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "RGB_SPD", "RGB_SPI", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
     ]
   ]
