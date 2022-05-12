@@ -1,7 +1,7 @@
 {
-  "keyboard": "horrortroll/chinese_pcb/m63_rgb",
+  "keyboard": "mss_studio/m63_rgb",
   "keymap": "default",
-  "commit": "25cffa26171be0615ca2a5da8920985f7bc5cbe1",
+  "commit": "8a4ef2b3c4a388a563c95e75eb744514a210dfe2",
   "layout": "LAYOUT_60_ansi_arrow",
   "layers": [
     [
