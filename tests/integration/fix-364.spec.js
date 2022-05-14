@@ -31,7 +31,7 @@ describe('Issue #364', function () {
 
     cy.get('#printkeymaps').click();
 
-    cy.get('.ui-button').first({ timeout: 1000 }).click();
+    cy.get('#leavePrint', { timeout: 1000 }).click();
     cy.wait(1000);
 
     cy.get('#fwFile', { timeout: 1000 }).should('be.enabled');
