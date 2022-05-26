@@ -1425,6 +1425,12 @@
 .mt3-dev-tty-base-mod {
   background: $color-mt3-pbt-gray-dark;
   color: $color-mt3-pbt-black;
+  input,
+  .key-contents {
+    background: lighten($color-mt3-pbt-gray-dark, 5%);
+    color: $color-mt3-pbt-black;
+    border-color: $color-mt3-pbt-black;
+  }
 }
 
 .mt3-dev-tty-base-accent {
@@ -1445,6 +1451,12 @@
 .mt3-dev-tty-teal-mod {
   background: $color-mt3-pbt-teal;
   color: $color-mt3-pbt-black;
+  input,
+  .key-contents {
+    background: lighten($color-mt3-pbt-teal, 5%);
+    color: $color-mt3-pbt-black;
+    border-color: $color-mt3-pbt-black;
+  }
 }
 
 .mt3-dev-tty-teal-kb {
@@ -1460,6 +1472,12 @@
 .mt3-dev-tty-ortho-mod {
   background: $color-mt3-pbt-gray-dark;
   color: $color-mt3-pbt-black;
+  input,
+  .key-contents {
+    background: lighten($color-mt3-pbt-gray-dark, 5%);
+    color: $color-mt3-pbt-black;
+    border-color: $color-mt3-pbt-black;
+  }
 }
 
 .mt3-dev-tty-ortho-accent {
