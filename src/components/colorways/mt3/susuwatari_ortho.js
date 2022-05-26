@@ -18,6 +18,12 @@ export default {
     KC_DOWN: 'mod-blue',
     KC_RGHT: 'mod-blue',
     KC_MENU: 'mod-blue',
-    BL_STEP: 'mod-blue'
+    BL_STEP: 'mod-blue',
+    'MO(layer)': 'mod-blue',
+    'TG(layer)': 'mod-blue',
+    'TO(layer)': 'mod-blue',
+    'TT(layer)': 'mod-blue',
+    'DF(layer)': 'mod-blue',
+    'OSL(layer)': 'mod-blue'
   }
 };

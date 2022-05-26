@@ -1498,6 +1498,12 @@
 .mt3-susuwatari-base-mod-blue {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-blue;
+  input,
+  .key-contents {
+    background: darken($color-mt3-abs-gray-dark, 5%);
+    color: $color-mt3-abs-blue;
+    border-color: $color-mt3-abs-blue;
+  }
 }
 
 .mt3-susuwatari-base-mod {
@@ -1533,6 +1539,12 @@
 .mt3-susuwatari-ortho-mod-blue {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-blue;
+  input,
+  .key-contents {
+    background: darken($color-mt3-abs-gray-dark, 5%);
+    color: $color-mt3-abs-blue;
+    border-color: $color-mt3-abs-blue;
+  }
 }
 
 .mt3-susuwatari-ortho-mod {
