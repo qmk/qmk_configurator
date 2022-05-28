@@ -1,5 +1,5 @@
 export default {
-  name: 'mt3-dev-tty-teal',
+  name: 'mt3-lotr-dwarvish',
   override: {
     BL_STEP: 'mod',
     KC_RSPC: 'mod',
