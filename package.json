@@ -7,7 +7,6 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src",
-    "test:unit": "vue-cli-service test:unit",
     "i18n:chk": "node scripts/i18n/csv-sync.js chk",
     "i18n:sync": "node scripts/i18n/csv-sync.js sync",
     "prettier:check": "prettier -c \"./src/**/*.{js,vue,scss,css}\"",
@@ -66,7 +65,7 @@
     "serialize-javascript": "^3.1.0",
     "start-server-and-test": "^1.10.0",
     "tar": "^6.1.9",
-    "vite": "^2.7.12",
+    "vite": "2.9.9",
     "vite-plugin-vue2": "^1.9.2",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.14"
