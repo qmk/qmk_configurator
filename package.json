@@ -9,8 +9,8 @@
     "lint": "eslint src",
     "i18n:chk": "node scripts/i18n/csv-sync.js chk",
     "i18n:sync": "node scripts/i18n/csv-sync.js sync",
-    "prettier:check": "prettier -c \"./src/**/*.{js,vue,scss,css}\"",
-    "prettier:fix": "prettier -c \"./src/**/*.{js,vue,scss,css,json}\" --write",
+    "prettier:check": "pprettier \"./src/**/*.{js,vue,scss,css}\"",
+    "prettier:fix": "pprettier \"./src/**/*.{js,vue,scss,css,json}\" --write",
     "json:check": "node scripts/json/ajv.js public/keymaps",
     "test:cypress": "cypress run",
     "test:cypress:ci": "start-server-and-test dev http-get://localhost:3000 test:cypress"
@@ -40,6 +40,7 @@
   "devDependencies": {
     "@cypress/vite-dev-server": "^2.2.2",
     "@cypress/vue": "2",
+    "@mixer/parallel-prettier": "^2.0.2",
     "@types/lodash": "^4.14.178",
     "@vitejs/plugin-vue": "^2.0.1",
     "@vue/cli-plugin-babel": "^4.5.15",
