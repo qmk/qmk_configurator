@@ -1,8 +1,8 @@
 {
   "keyboard": "kbdfans/tiger80",
   "keymap": "default",
-  "commit": "84307744306e46d2699f9766be07f530af7c310e",
-  "layout": "LAYOUT_all",
+  "commit": "c4c67f2eb2d27bff909110e2b7fceb937e92277b",
+  "layout": "LAYOUT_tkl_f13_ansi_tsangan",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_MUTE",    "KC_PSCR", "KC_SCRL", "KC_PAUS",
