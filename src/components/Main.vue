@@ -114,6 +114,7 @@ export default {
           .replace(/Wob/, 'WOB')
           .replace(/Ta/, 'TA')
           .replace(/Mt3/, 'MT3')
+          .replace(/Dcs/, 'DCS')
           .replace(/Dev Tty/, '/dev/tty')
           .replace(/ ?Plus/g, '+')
           .replace(/ ?Dot ?/g, '\.');
