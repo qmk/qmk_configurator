@@ -13,7 +13,8 @@
     "prettier:fix": "pprettier \"./src/**/*.{js,vue,scss,css,json}\" --write",
     "json:check": "node scripts/json/ajv.js public/keymaps",
     "test:cypress": "cypress run",
-    "test:cypress:ci": "start-server-and-test dev http-get://localhost:3000 test:cypress"
+    "test:cypress:ci": "start-server-and-test dev http-get://localhost:3000 test:cypress",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
@@ -58,6 +59,7 @@
     "eslint-plugin-vue": "8",
     "growl": "^1.10.0",
     "https-proxy-agent": "^2.2.0",
+    "husky": "^8.0.1",
     "local-cypress": "^1.2.3",
     "node-sass": "^7.0.0",
     "prettier": "^2",
