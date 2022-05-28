@@ -17,7 +17,7 @@ export default {
     KC_NLCK: 'mod5',
     'MO(layer)': 'mod6',
     KC_ESC: 'accent',
-    KC_GESC: 'accent',
+    QK_GESC: 'accent',
     KC_UP: 'accent2',
     KC_DOWN: 'accent3',
     KC_LEFT: 'accent4',

@@ -18,6 +18,6 @@ export default {
     KC_INS: 'rdp',
     'MO(layer)': 'ppl',
     KC_ESC: 'rdp',
-    KC_GESC: 'rdp'
+    QK_GESC: 'rdp'
   }
 };

@@ -19,7 +19,7 @@ export default [
   { name: 'F12', code: 'KC_F12', keys: 'f12' },
   { width: 250 },
   { name: 'Print Screen', code: 'KC_PSCR' },
-  { name: 'Scroll Lock', code: 'KC_SLCK' },
+  { name: 'Scroll Lock', code: 'KC_SCRL' },
   { name: 'Pause', code: 'KC_PAUS' },
   { width: 0 },
 
@@ -42,7 +42,7 @@ export default [
   { name: 'Home', code: 'KC_HOME', keys: 'home' },
   { name: 'Page Up', code: 'KC_PGUP', keys: 'pageup' },
   { width: 250 },
-  { name: 'Num Lock', code: 'KC_NLCK', keys: 'num' },
+  { name: 'Num Lock', code: 'KC_NUM', keys: 'num' },
   { name: '/', code: 'KC_PSLS', keys: 'num_divide' },
   { name: '*', code: 'KC_PAST', keys: 'num_multiply' },
   { name: '-', code: 'KC_PMNS', keys: 'num_subtract' },

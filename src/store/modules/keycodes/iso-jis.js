@@ -19,7 +19,7 @@ export default [
   { name: 'F12', code: 'KC_F12', keys: 'f12' },
   { width: 250 },
   { name: 'Print Screen', code: 'KC_PSCR' },
-  { name: 'Scroll Lock', code: 'KC_SLCK' },
+  { name: 'Scroll Lock', code: 'KC_SCRL' },
   { name: 'Pause', code: 'KC_PAUS' },
   { width: 0 },
 
@@ -36,14 +36,14 @@ export default [
   { name: ')\n0', code: 'KC_0', keys: '0' },
   { name: '_\n-', code: 'KC_MINS', keys: '-' },
   { name: '+\n=', code: 'KC_EQL', keys: '=' },
-  { name: '|\n¥', code: 'KC_JYEN' },
+  { name: '|\n¥', code: 'KC_INT3', title: 'Japanese Yen Symbol' },
   { name: 'Back Space', code: 'KC_BSPC', keys: 'backspace' },
   { width: 250 },
   { name: 'Insert', code: 'KC_INS', keys: 'insert' },
   { name: 'Home', code: 'KC_HOME', keys: 'home' },
   { name: 'Page Up', code: 'KC_PGUP', keys: 'pageup' },
   { width: 250 },
-  { name: 'Num Lock', code: 'KC_NLCK', keys: 'num' },
+  { name: 'Num Lock', code: 'KC_NUM', keys: 'num' },
   { name: '/', code: 'KC_PSLS', keys: 'num_divide' },
   { name: '*', code: 'KC_PAST', keys: 'num_multiply' },
   { name: '-', code: 'KC_PMNS', keys: 'num_subtract' },
@@ -114,7 +114,7 @@ export default [
   { name: '<\n,', code: 'KC_COMM', keys: ',' },
   { name: '>\n.', code: 'KC_DOT', keys: '.' },
   { name: '?\n/', code: 'KC_SLSH', keys: '/' },
-  { name: '_\n\\', code: 'KC_RO', title: 'JIS \\ and _' },
+  { name: '_\n\\', code: 'KC_INT1', title: 'JIS \\ and _' },
   { name: 'Right Shift', code: 'KC_RSFT', width: 1750 },
   { width: 1250 },
   { name: 'Up', code: 'KC_UP', keys: 'up' },
@@ -128,12 +128,12 @@ export default [
   { name: 'Left Ctrl', code: 'KC_LCTL', keys: 'ctrl', width: 1250 },
   { name: 'Left OS', code: 'KC_LGUI', keys: 'cmd', width: 1250 },
   { name: 'Left Alt', code: 'KC_LALT', keys: 'alt', width: 1250 },
-  { name: '無変換', code: 'KC_MHEN', title: 'JIS Muhenkan', width: 1250 },
+  { name: '無変換', code: 'KC_INT5', title: 'JIS Muhenkan', width: 1250 },
   { name: 'Space', code: 'KC_SPC', keys: 'space', width: 3000 },
-  { name: '変換', code: 'KC_HENK', title: 'JIS Henkan', width: 1250 },
+  { name: '変換', code: 'KC_INT4', title: 'JIS Henkan', width: 1250 },
   {
     name: 'カタカナ\nひらがな',
-    code: 'KC_KANA',
+    code: 'KC_INT2',
     title: 'JIS Katakana/Hiragana',
     styles: { 'font-size': '8px' },
     width: 1250
@@ -153,10 +153,18 @@ export default [
 
   { label: 'Japanese and Korean', width: 'label' },
 
-  { name: '漢字', code: 'KC_HANJ', title: 'Korean Hanja' },
-  { name: '한영', code: 'KC_HAEN', title: 'Korean Han/Yeong' },
-  { name: 'かな', code: 'KC_LANG1', title: 'JP Mac Kana', width: 1250 },
-  { name: '英数', code: 'KC_LANG2', title: 'JP Mac Eisu', width: 1250 },
+  {
+    name: '한영\nかな',
+    code: 'KC_LNG1',
+    title: 'Korean Han/Yeong; Japanese Mac Kana',
+    width: 1250
+  },
+  {
+    name: '漢字\n英数',
+    code: 'KC_LNG2',
+    title: 'Korean Hanja; Japanese Mac Eisu',
+    width: 1250
+  },
 
   { label: 'Shifted symbols', width: 'label' },
 

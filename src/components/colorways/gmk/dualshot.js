@@ -2,7 +2,7 @@ export default {
   name: 'gmk-dualshot',
   override: {
     KC_ESC: 'mod2',
-    KC_GESC: 'mod2',
+    QK_GESC: 'mod2',
     KC_BSPC: 'mod2',
     KC_TAB: 'mod3',
     KC_BSLS: 'mod3',
