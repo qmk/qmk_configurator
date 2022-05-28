@@ -1195,10 +1195,10 @@
     debug "^4.3.2"
     get-port "^5.1.1"
 
-"@cypress/vue@2":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@cypress/vue/-/vue-2.2.3.tgz#81822914019c47b5a6011652e50c5aad6041c6cc"
-  integrity sha512-KgrUjiLVyoiU5xb5JAhsdFLDzyh7Njhm4TMuINFsoBZkt4PJptGCsMzdaI7lk1XX20NGvg8MPIFbbQi+L0L8qQ==
+"@cypress/vue@2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@cypress/vue/-/vue-2.2.4.tgz#a8d53e2b36816aae6ee3d7248b9e2e4b07d443e3"
+  integrity sha512-ve6aPUj1UHZRpfU9U/NKfsVgzCYVR2CeTdN/knhdWs8sbW5ERgbD1EkEdJ9+VCdqXcIoqRWdMQovnJUmJW6FLA==
   dependencies:
     "@cypress/mount-utils" "1.0.2"
     "@vue/test-utils" "^1.1.3"
