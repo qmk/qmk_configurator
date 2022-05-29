@@ -328,6 +328,11 @@ export default {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
       }
+
+      if (newKeyboard !== this.keyboard) {
+        disableOtherButtons();
+      }
+
       return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
     },
     favKeyboard() {
@@ -353,7 +358,6 @@ export default {
           throw err;
         });
       this.$store.dispatch('status/viewReadme', this.keyboard);
-      disableOtherButtons();
     },
     /**
      * updateLayout - switch the layout for this keyboard
