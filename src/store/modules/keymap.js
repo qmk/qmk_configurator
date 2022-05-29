@@ -9,6 +9,8 @@ import axios from 'axios';
 import { backend_skeletons_url } from './constants';
 import { parseKeycode } from './parse.js';
 
+import { useKeycodesStore } from '@/stores/keycodes';
+
 const state = {
   keymap: [[]], // array of arrays
   layer: 0,
@@ -165,7 +167,8 @@ const actions = {
         commit('initLayer', { layer: toLayer });
       }
       let store = this;
-      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
+      const keycodesStore = useKeycodesStore();
+      let { name, code } = keycodesStore.lookupKeycode('KC_TRNS');
       commit('assignKey', {
         _layer: toLayer,
         index,
@@ -243,7 +246,8 @@ const mutations = {
       return;
     }
     let store = this;
-    let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
+    const keycodesStore = useKeycodesStore();
+    let { name, code, type } = keycodesStore.lookupKeycode(_code);
 
     if (state.selectedContent) {
       // only set values on contents not container, does not support continuous input
@@ -374,7 +378,8 @@ const mutations = {
     );
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
-    const { name } = this.getters['keycodes/lookupKeycode'](code);
+    const keycodesStore = useKeycodesStore();
+    const { name } = keycodesStore.lookupKeycode(code);
     Vue.set(
       state.keymap,
       layer,

@@ -1,7 +1,7 @@
 <template>
   <div class="tester">
     <div class="layout-selector-radios">
-      <slot v-for="_layout in availableLayouts">
+      <slot v-for="_layout in testerStore.availableLayouts">
         <button
           class="layout-btn-select"
           v-on:click="layout = _layout"
@@ -46,7 +46,7 @@
         class="status-log"
         ref="status"
         spellcheck="false"
-        v-html="status"
+        v-html="mystatus"
       ></div>
       <div id="chatter-container">
         <span v-tooltip="$t('tester.typewritericon.label')">
@@ -89,32 +89,33 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapMutations } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap.vue';
 import TesterKey from '@/components/TesterKey.vue';
 import { Howl } from 'howler';
+
+import { useTesterStore } from '@/stores/tester';
+import { mapState, mapStores } from 'pinia';
 
 export default {
   name: 'visual-tester-keymap',
   extends: BaseKeymap,
   async mounted() {
     this.createKeyListeners();
-    await this.init();
+    this.testerStore.init();
     this.setSize(this.calculateMax(this.layout));
   },
   beforeDestroy() {
     this.destroyKeyListeners();
   },
   computed: {
-    ...mapState('tester', [
+    ...mapStores(useTesterStore),
+    ...mapState(useTesterStore, [
       'defaults',
       'layouts',
       'config',
       'keymap',
-      'chatterDetected'
-    ]),
-    ...mapGetters('keymap', ['colorway']),
-    ...mapGetters('tester', [
+      'chatterDetected',
       'availableLayouts',
       'getQMKCode',
       'activeKeymap',
@@ -123,15 +124,15 @@ export default {
     ]),
     layout: {
       get() {
-        return this.$store.state.tester.layout;
+        return this.testerStore.layout;
       },
       set(value) {
-        this.$store.commit('tester/reset', value);
-        this.$store.commit('tester/setLayout', value);
+        this.testerStore.reset(value);
+        this.testerStore.setLayout(value);
       }
     },
     testerLayer() {
-      const keymap = this.activeKeymap;
+      const keymap = this.testerStore.activeKeymap;
       if (isUndefined(keymap)) {
         return [];
       }
@@ -139,7 +140,7 @@ export default {
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
-      const curLayer = this.activeLayoutMeta.map((pos, index) => {
+      const curLayer = this.testerStore.activeLayoutMeta.map((pos, index) => {
         const _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
@@ -165,12 +166,6 @@ export default {
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
-    ...mapMutations('tester', [
-      'setActive',
-      'setDetected',
-      'setChatterDetected'
-    ]),
-    ...mapActions('tester', ['init']),
     toggleAudio() {
       this.audioIcon =
         this.audioIcon === 'volume-mute' ? 'volume-up' : 'volume-mute';
@@ -211,7 +206,7 @@ export default {
       const pos = this.codeToPosition[this.firefoxKeys(ev.code)];
       this.writeToStatus(this.formatLog('KEY-UP', pos, evStr));
       if (!isUndefined(pos)) {
-        this.setDetected({
+        this.testerStore.setDetected({
           pos
         });
       }
@@ -232,7 +227,7 @@ export default {
       this.lastCode = ev.code;
       this.lastKeyCode = ev.keyCode;
       if (!isUndefined(pos)) {
-        this.setActive({ pos });
+        this.testerStore.setActive({ pos });
 
         // Chatter detection is triggered when a switch
         // triggers an event too quickly after the last
@@ -244,7 +239,7 @@ export default {
           this.timingKeyDown[ev.code] - this.timingKeyUp[ev.code] <
             this.chatterThreshold
         ) {
-          this.setChatterDetected({ pos });
+          this.testerStore.setChatterDetected({ pos });
         }
       }
       if (this.audioIcon !== 'volume-mute') {
@@ -259,9 +254,9 @@ export default {
       });
     },
     writeToStatus(msg) {
-      this.status += msg + '\n';
-      if (this.status.length > 1000) {
-        this.status = this.status.split('\n').slice(-20).join('\n');
+      this.mystatus += msg + '\n';
+      if (this.mystatus.length > 1000) {
+        this.mystatus = this.mystatus.split('\n').slice(-20).join('\n');
       }
       this.scrollToEnd();
     },
@@ -315,7 +310,7 @@ export default {
       chatterThreshold: 8,
       width: 0,
       height: 0,
-      status: '',
+      mystatus: '',
       timingKeyUp: {},
       timingKeyDown: {},
       lastKey: '',

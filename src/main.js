@@ -10,13 +10,23 @@ import 'vue-select/dist/vue-select.css';
 import VueSlideoutPanel from 'vue2-slideout-panel';
 import VueI18n from 'vue-i18n';
 import VTooltip from 'v-tooltip';
+import { createPinia, PiniaVuePlugin } from 'pinia';
 import '@fontsource/roboto-mono/400.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/700.css';
 import '@fontsource/montserrat/400.css';
+import '@fontsource/iosevka/400.css';
+import '@fontsource/iosevka/700.css';
+import 'xterm/css/xterm.css';
+import 'virtual:windi.css';
+import 'virtual:windi-devtools';
+import VueCompositionAPI from '@vue/composition-api';
+import VueFeather from 'vue-feather';
 
+Vue.use(VueFeather);
 Vue.use(VueI18n);
 Vue.use(VTooltip);
+Vue.use(VueCompositionAPI);
 
 import messages from '@/i18n';
 
@@ -51,7 +61,12 @@ import {
   faQuestionCircle,
   faVolumeMute,
   faVolumeUp,
-  faBars
+  faBars,
+  faLessThan,
+  faGreaterThan,
+  faBookOpen,
+  faCompressAlt,
+  faExpandAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faApple,
@@ -102,7 +117,12 @@ const icons = [
   faWindows,
   faQuestionCircle,
   faVolumeUp,
-  faVolumeMute
+  faVolumeMute,
+  faLessThan,
+  faGreaterThan,
+  faBookOpen,
+  faCompressAlt,
+  faExpandAlt
 ];
 library.add(...icons);
 
@@ -111,20 +131,27 @@ Vue.config.productionTip = false;
 // Make $i18n vm accessible in the store
 store.$i18n = i18n._vm;
 
+Vue.use(PiniaVuePlugin);
+const pinia = createPinia();
+
 new Vue({
   router,
   store,
   i18n,
+  pinia,
   render: (h) => h(App)
 }).$mount('#app');
 
 new Vue({
   i18n,
   store,
+  pinia,
   render: (h) => h(StatusBar)
 }).$mount('#status-app');
 
+/*
 new Vue({
   i18n,
   render: (h) => h(BrowserWarn)
 }).$mount('#browser-warn-container');
+*/

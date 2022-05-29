@@ -2,14 +2,14 @@ import escape from 'lodash/escape';
 import isUndefined from 'lodash/isUndefined';
 
 import { longFormKeycodes } from '@/longFormKeycodes';
+import { useKeycodesStore } from '@/stores/keycodes';
 
-/* hasBitsSet
+/*
+ * hasBitsSet
+ * @param test (number)
+ * @param value (number)
  *
- * arguments:
- *   test (number)
- *   value (number)
- *
- * returns true if bit `value` of `test` is true, false otherwise
+ * @returns true if bit `value` of `test` is true, false otherwise
  */
 function hasBitsSet(test, value) {
   return (test & (1 << value)) === 2 ** value;
@@ -100,7 +100,8 @@ function processOneShotMods(store, keycode) {
   mods = cmods.join('|');
   keycode = `OSM(${mods})`;
 
-  const metadata = store.getters['keycodes/lookupKeycode'](keycode);
+  const keycodesStore = useKeycodesStore();
+  const metadata = keycodesStore.lookupKeycode(keycode);
   return newKey(metadata, keycode);
 }
 
@@ -119,7 +120,8 @@ function setLayerToNonEmpty(_layer) {
 */
 
 function newAnyKey(store, keycode) {
-  const anyKey = store.getters['keycodes/lookupKeycode']('text');
+  const keycodesStore = useKeycodesStore();
+  const anyKey = keycodesStore.lookupKeycode('text');
   // make a copy otherwise it uses a reference
   return Object.assign({}, anyKey, { text: keycode });
 }
@@ -142,19 +144,19 @@ function newKey(metadata, keycode, obj) {
 // We pre-assign the layers to make the UI easier to implement.
 function newLayerContainerKey(store, keycode, internal) {
   const internals = internal.split(',');
-  const LCKey = store.getters['keycodes/lookupKeycode'](
-    `${keycode}(${internals[0]},kc)`
-  );
+  const keycodesStore = useKeycodesStore();
+  const LCKey = keycodesStore.lookupKeycode(`${keycode}(${internals[0]},kc)`);
 
-  let contents = store.getters['keycodes/lookupKeycode'](internals[1]);
+  let contents = keycodesStore.lookupKeycode(internals[1]);
   if (isUndefined(contents)) {
-    contents = store.getters['keycodes/lookupKeycode']('KC_NO');
+    contents = keycodesStore.lookupKeycode('KC_NO');
   }
   let { code, layer, name, type } = LCKey;
   return Object.assign({ code, layer, name, type, contents: contents });
 }
 
 function parseKeycode(store, keycode, stats) {
+  const keycodesStore = useKeycodesStore();
   let metadata;
 
   keycode = stripANY(keycode);
@@ -190,7 +192,7 @@ function parseKeycode(store, keycode, stats) {
         return newLayerContainerKey(store, maincode, internal);
       }
       // combo keycode
-      metadata = store.getters['keycodes/lookupKeycode'](internal);
+      metadata = keycodesStore.lookupKeycode(internal);
       if (metadata === undefined) {
         stats.any += 1;
         return newAnyKey(store, keycode);
@@ -198,7 +200,7 @@ function parseKeycode(store, keycode, stats) {
       let internalkeycode = newKey(metadata, internal);
 
       outerKeycode = maincode + '(kc)';
-      metadata = store.getters['keycodes/lookupKeycode'](outerKeycode);
+      metadata = keycodesStore.lookupKeycode(outerKeycode);
       if (metadata === undefined) {
         stats.any += 1;
         return newAnyKey(store, keycode);
@@ -210,7 +212,7 @@ function parseKeycode(store, keycode, stats) {
 
     // layer switching
     outerKeycode = maincode + '(layer)';
-    metadata = store.getters['keycodes/lookupKeycode'](outerKeycode);
+    metadata = keycodesStore.lookupKeycode(outerKeycode);
     if (metadata === undefined) {
       stats.any += 1;
       return newAnyKey(store, keycode);
@@ -226,11 +228,11 @@ function parseKeycode(store, keycode, stats) {
         stats.layers
       } in keymap. Setting to KC_TRNS\n`
     );
-    return store.getters['keycodes/lookupKeycode']('KC_TRNS');
+    return keycodesStore.lookupKeycode('KC_TRNS');
   }
 
   // regular keycode
-  metadata = store.getters['keycodes/lookupKeycode'](keycode);
+  metadata = keycodesStore.lookupKeycode(keycode);
   if (metadata === undefined) {
     stats.any += 1;
     return newAnyKey(store, keycode);

@@ -25,11 +25,11 @@
           :class="classes(index)"
           v-for="(key, index) in keycodesByGroup"
           :key="index"
-          @click="changeActive(index)"
+          @click="keycodesStore.changeActive(index)"
           :title="$t('keycodesTab.' + index + '.label')"
           >{{ $t('keycodesTab.' + index + '.label')
-          }}<span v-if="searchFilter !== ''"
-            >({{ searchCounters[index] }})</span
+          }}<span v-if="keycodesStore.searchFilter !== ''"
+            >({{ keycodesStore.searchCounters[index] }})</span
           ></span
         >
         <span class="end-tab"
@@ -64,9 +64,11 @@ import debounce from 'lodash/debounce';
 import Keycode from '@/components/Keycode.vue';
 import Space from '@/components/Space.vue';
 import store from '@/store';
+import { mapStores } from 'pinia';
+import { useKeycodesStore } from '@/stores/keycodes';
 
 export default {
-  name: 'keycodes',
+  name: 'keycodes-component',
   components: { Keycode, Space },
   props: {},
   data() {
@@ -75,20 +77,22 @@ export default {
     };
   },
   mounted() {
-    this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
+    this.debouncedSetSearchFilter = debounce(
+      this.keycodesStore.setSearchFilter,
+      500
+    );
   },
   computed: {
-    ...mapGetters('keycodes', ['keycodes']),
+    ...mapStores(useKeycodesStore),
     ...mapState('app', ['configuratorSettings']),
-    ...mapState('keycodes', ['searchFilter', 'searchCounters', 'active']),
     defaultTab() {
       return this.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI';
     },
     activeTab() {
-      return this.keycodesByGroup[this.active];
+      return this.keycodesByGroup[this.keycodesStore.active];
     },
     keycodesByGroup() {
-      let section = this.keycodes.reduce((acc, value) => {
+      let section = this.keycodesStore.getKeycodes.reduce((acc, value) => {
         if (value.group) {
           acc[value.label] = [];
           acc.current = value.label;
@@ -102,7 +106,7 @@ export default {
     },
     searchFilter_: {
       get() {
-        return this.searchFilter;
+        return this.keycodesStore.searchFilter;
       },
       set(newVal) {
         this.debouncedSetSearchFilter(newVal);
@@ -111,7 +115,6 @@ export default {
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
-    ...mapMutations('keycodes', ['setSearchFilter', 'changeActive']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },
@@ -141,7 +144,7 @@ export default {
       }, 3000);
     },
     filterClass(key) {
-      if (this.searchFilter === '' || isUndefined(key.code)) {
+      if (this.keycodesStore.searchFilter === '' || isUndefined(key.code)) {
         return '';
       }
       const filter = this.searchFilter_.toUpperCase();

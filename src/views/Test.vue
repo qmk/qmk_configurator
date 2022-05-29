@@ -14,16 +14,18 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapState } from 'vuex';
+import { mapActions } from 'pinia';
 import VisualTesterKeymap from '@/components/VisualTesterKeymap.vue';
+import { useTesterStore } from '@/stores/tester';
 export default {
-  name: 'testerator',
+  name: 'testerator-component',
   computed: {
     ...mapState('app', ['keyboard', 'layout'])
   },
   components: { VisualTesterKeymap },
   methods: {
-    ...mapMutations('tester', ['reset']),
+    ...mapActions(useTesterStore, ['reset']),
     gohome() {
       this.$router.push(`/${this.keyboard}/${this.layout}`);
     }

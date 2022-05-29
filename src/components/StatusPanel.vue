@@ -2,7 +2,7 @@
   <div id="status">
     <textarea
       id="terminal"
-      v-model="message"
+      v-model="statusStore.messageStr"
       ref="terminal"
       readonly
       :class="terminalClasses"
@@ -26,24 +26,34 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapMutations, mapState } from 'vuex';
+import { useStatusStore } from '@/stores/status';
+import { mapState } from 'vuex';
+import { mapStores } from 'pinia';
 export default {
   name: 'status-panel',
   watch: {
-    message(newV, oldV) {
-      if (this.scrollToLatest && newV !== oldV) {
-        this.scrollToEnd();
-        this.doneScroll();
-      }
-    },
     compileDisabled(newV) {
       if (newV === true) {
         this.isTerminalOpen = true;
       }
     }
   },
+  mounted() {
+    const statusStore = useStatusStore();
+    this.statusStoreWatcher = statusStore.$subscribe(() => {
+      if (this.statusStore.scrollToLatest) {
+        this.statusStore.scrollToEnd();
+        this.statusStore.doneScroll();
+      }
+    });
+  },
+  beforeDestroy() {
+    if (this.statusStoreWatcher) {
+      this.statusStoreWatcher();
+    }
+  },
   methods: {
-    ...mapMutations('status', ['doneScroll']),
+    // ...mapMutations('status', ['doneScroll']),
     scrollToEnd() {
       let terminal = this.$refs.terminal;
       this.$nextTick(() => {
@@ -60,7 +70,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('status', ['message', 'scrollToLatest']),
+    ...mapStores(useStatusStore),
     ...mapState('app', ['compileDisabled']),
     terminalClasses() {
       const classes = [];
@@ -72,7 +82,8 @@ export default {
   },
   data: () => {
     return {
-      isTerminalOpen: true
+      isTerminalOpen: true,
+      statusStoreWatcher: undefined
     };
   }
 };
