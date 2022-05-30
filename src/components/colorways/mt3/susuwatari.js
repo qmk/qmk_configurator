@@ -1,5 +1,5 @@
 export default {
-  name: 'mt3-susuwatari-base',
+  name: 'mt3-susuwatari',
   override: {
     KC_ENT: 'accent-red',
     KC_ESC: 'accent-red',
@@ -19,6 +19,8 @@ export default {
     'TO(layer)': 'mod-blue',
     'TT(layer)': 'mod-blue',
     'DF(layer)': 'mod-blue',
-    'OSL(layer)': 'mod-blue'
+    'OSL(layer)': 'mod-blue',
+    KC_RSPC: 'mod-green',
+    KC_LSPO: 'mod-green'
   }
 };

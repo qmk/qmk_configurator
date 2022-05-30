@@ -1417,12 +1417,12 @@
 }
 
 // mt3 /dev/tty base graysets
-.mt3-dev-tty-base-key {
+.mt3-dev-tty-key {
   background: $color-mt3-pbt-gray-light;
   color: $color-mt3-pbt-black;
 }
 
-.mt3-dev-tty-base-mod {
+.mt3-dev-tty-mod {
   background: $color-mt3-pbt-gray-dark;
   color: $color-mt3-pbt-black;
   input,
@@ -1433,12 +1433,12 @@
   }
 }
 
-.mt3-dev-tty-base-accent {
+.mt3-dev-tty-accent {
   background: $color-mt3-pbt-red-back;
   color: $color-mt3-pbt-black;
 }
 
-.mt3-dev-tty-base-kb {
+.mt3-dev-tty-kb {
   // placeholder
 }
 
@@ -1490,12 +1490,12 @@
 }
 
 // mt3 susuwatari base colourway
-.mt3-susuwatari-base-key {
+.mt3-susuwatari-key {
   background: $color-mt3-abs-gray-light;
   color: $color-mt3-abs-white;
 }
 
-.mt3-susuwatari-base-mod-blue {
+.mt3-susuwatari-mod-blue {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-blue;
   input,
@@ -1506,27 +1506,27 @@
   }
 }
 
-.mt3-susuwatari-base-mod {
+.mt3-susuwatari-mod {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-white;
 }
 
-.mt3-susuwatari-base-mod-green {
+.mt3-susuwatari-mod-green {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-green;
 }
 
-.mt3-susuwatari-base-accent {
+.mt3-susuwatari-accent {
   background: $color-mt3-abs-red-back;
   color: $color-mt3-abs-white;
 }
 
-.mt3-susuwatari-base-accent-red {
+.mt3-susuwatari-accent-red {
   background: $color-mt3-abs-gray-dark;
   color: $color-mt3-abs-red;
 }
 
-.mt3-susuwatari-base-kb {
+.mt3-susuwatari-kb {
   // placeholder
 }
 
@@ -1569,4 +1569,164 @@
 
 .mt3-susuwatari-ortho-kb {
   // placeholder
+}
+
+.mt3-lotr-elvish-kb {
+  // placeholder
+}
+
+.mt3-lotr-elvish-key {
+  background: $color-mt3-pbt-elvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-mod {
+  background: $color-mt3-pbt-elvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-rivendell-kb {
+  // placeholder
+}
+
+.mt3-lotr-elvish-rivendell-key {
+  background: $color-mt3-pbt-elvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-rivendell-mod {
+  background: $color-mt3-pbt-elvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-rivendell-accent {
+  background: $color-mt3-pbt-elvish-rivendell;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-evenstar-kb {
+  // placeholder
+}
+
+.mt3-lotr-elvish-evenstar-key {
+  background: $color-mt3-pbt-elvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-evenstar-mod {
+  background: $color-mt3-pbt-elvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-evenstar-accent {
+  background: $color-mt3-pbt-elvish-evenstar;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-ortho-kb {
+  // placeholder
+}
+
+.mt3-lotr-elvish-ortho-key {
+  background: $color-mt3-pbt-elvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-elvish-ortho-mod {
+  background: $color-mt3-pbt-elvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-ortho-kb {
+  // placeholder
+}
+
+.mt3-lotr-dwarvish-ortho-key {
+  background: $color-mt3-pbt-dwarvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-ortho-mod {
+  background: $color-mt3-pbt-dwarvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-durin-kb {
+  // placeholder
+}
+
+.mt3-lotr-dwarvish-durin-key {
+  background: $color-mt3-pbt-dwarvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-durin-mod {
+  background: $color-mt3-pbt-dwarvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-durin-accent {
+  background: $color-mt3-pbt-dwarvish-durin;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-kb {
+  // placeholder
+}
+
+.mt3-lotr-dwarvish-key {
+  background: $color-mt3-pbt-dwarvish-alpha;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-lotr-dwarvish-mod {
+  background: $color-mt3-pbt-dwarvish-mod;
+  color: $color-mt3-pbt-black;
+}
+
+.mt3-3277-kb {
+  // placeholder
+}
+
+.mt3-3277-key {
+  background: $color-mt3-abs-3277-alpha;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-mod {
+  background: $color-mt3-abs-3277-mod;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-ortho-kb {
+  // placeholder
+}
+
+.mt3-3277-ortho-key {
+  background: $color-mt3-abs-3277-alpha;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-ortho-mod {
+  background: $color-mt3-abs-3277-mod;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-accent-red-kb {
+  // placeholder
+}
+
+.mt3-3277-accent-red-key {
+  background: $color-mt3-abs-3277-alpha;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-accent-red-mod {
+  background: $color-mt3-abs-3277-mod;
+  color: $color-mt3-abs-3277-legend;
+}
+
+.mt3-3277-accent-red-accent-red {
+  background: $color-mt3-abs-3277-red;
+  color: $color-mt3-abs-3277-legend;
 }
