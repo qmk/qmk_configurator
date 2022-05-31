@@ -1,7 +1,7 @@
 {
-  "keyboard": "wheatfield/split75",
+  "keyboard": "mt/split75",
   "keymap": "default",
-  "commit": "3f6de1ef546f5c8e355ce111f3602ca70bb60fc0",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [
