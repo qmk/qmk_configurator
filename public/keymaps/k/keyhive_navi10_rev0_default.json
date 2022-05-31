@@ -1,7 +1,7 @@
 {
-  "keyboard": "navi10/rev2",
+  "keyboard": "keyhive/navi10/rev0",
   "keymap": "default",
-  "commit": "6c834dea7b506db480ae7a96f3b35f955824d4ec",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [
