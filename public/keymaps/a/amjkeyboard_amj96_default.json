@@ -1,7 +1,7 @@
 {
-  "keyboard": "amj96",
+  "keyboard": "amjkeyboard/amj96",
   "keymap": "default",
-  "commit": "29f199f456e4ef364926d0d5babd96b708393955",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_all",
   "layers": [
     [
