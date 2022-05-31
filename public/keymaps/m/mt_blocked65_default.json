@@ -1,7 +1,7 @@
 {
-  "keyboard": "wheatfield/blocked65",
+  "keyboard": "mt/blocked65",
   "keymap": "default",
-  "commit": "fe3e5cba6915b49a9a20ca4b0a43b308d1512d53",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
