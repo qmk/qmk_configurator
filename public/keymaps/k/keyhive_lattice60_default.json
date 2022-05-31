@@ -1,7 +1,7 @@
 {
-  "keyboard": "lattice60",
+  "keyboard": "keyhive/lattice60",
   "keymap": "default",
-  "commit": "6e8876be39f829b0327f567d673b23be0f4f28c6",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_all",
   "layers": [
     [
