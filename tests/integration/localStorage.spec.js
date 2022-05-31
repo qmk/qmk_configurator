@@ -11,7 +11,7 @@ describe('Simple browsing', function () {
         '1upkeyboards/sweet16',
         '2_milk',
         '30wer'
-      ]
+      ];
     });
   });
   it('Should load darkmode from localstorage', () => {
@@ -29,7 +29,7 @@ describe('Simple browsing', function () {
       }
     });
     cy.get('.bes-controls').click();
-    cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
+    cy.get('html[data-theme="dark"]', { timeout: 10000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
     cy.visit('/keebio/iris/v1', {

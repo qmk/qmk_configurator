@@ -1,13 +1,13 @@
 export default {
-  name: 'mt3-dev-tty-ortho',
+  name: 'mt3-3277-ortho',
   override: {
-    KC_ENT: 'accent',
-    KC_ESC: 'accent',
+    KC_ENT: 'mod',
+    KC_ESC: 'mod',
     KC_DEL: 'mod',
     KC_QUOT: 'mod',
-    KC_GRV: 'mod',
     BL_STEP: 'mod',
     KC_RSPC: 'mod',
+    KC_GRV: 'mod',
     KC_LSPO: 'mod'
   }
 };

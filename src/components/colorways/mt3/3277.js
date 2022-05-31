@@ -1,5 +1,5 @@
 export default {
-  name: 'mt3-dev-tty-teal',
+  name: 'mt3-3277',
   override: {
     BL_STEP: 'mod',
     KC_RSPC: 'mod',
