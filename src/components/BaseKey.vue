@@ -323,6 +323,7 @@ export default {
 @import '../scss/mt3-pbt';
 @import '../scss/mt3-abs';
 @import '../scss/pantone';
+@import '../scss/qmk_colors';
 @import '../scss/colorways';
 
 .key.overme {
