@@ -1,7 +1,7 @@
 {
-  "keyboard": "melody96",
+  "keyboard": "ymdk/melody96",
   "keymap": "default",
-  "commit": "aab2ac22c5217afcbbbaff8b5444b02765f6de66",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_all",
   "layers": [
     [
