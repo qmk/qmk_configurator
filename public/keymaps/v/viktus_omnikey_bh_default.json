@@ -1,7 +1,7 @@
 {
-  "keyboard": "omnikey_bh",
+  "keyboard": "viktus/omnikey_bh",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [
