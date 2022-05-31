@@ -11,7 +11,7 @@ import modCodes from './modCodes';
 export default {
   alphaCodes,
   modCodes,
-  list: [...dsa, ...sa, ...gmk, ...jtk, ...kat, ...mt3, ...dcs],
+  list: [...dcs, ...dsa, ...sa, ...gmk, ...jtk, ...kat, ...mt3],
   /*
    * List of codes we should use icons for instead of text
    */
