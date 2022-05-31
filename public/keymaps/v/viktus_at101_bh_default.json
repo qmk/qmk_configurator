@@ -1,7 +1,7 @@
 {
-  "keyboard": "at101_bh",
+  "keyboard": "viktus/at101_bh",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [
