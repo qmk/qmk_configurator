@@ -1,7 +1,7 @@
 {
-  "keyboard": "uno/rev1",
+  "keyboard": "keyhive/uno/rev2",
   "keymap": "default",
-  "commit": "8fe3864fe7601a7e6572e7db680775edeff771ac",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "macros": [
     [

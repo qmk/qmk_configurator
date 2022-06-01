@@ -2,6 +2,9 @@ const lookup = {
   '2_milk': {
     target: 'spaceman/2_milk'
   },
+  absinthe: {
+    target: 'keyhive/absinthe'
+  },
   'aeboards/ext65': {
     target: 'aeboards/ext65/rev1'
   },
@@ -14,6 +17,18 @@ const lookup = {
   alice: {
     target: 'tgr/alice'
   },
+  amj40: {
+    target: 'amjkeyboard/amj40'
+  },
+  amj60: {
+    target: 'amjkeyboard/amj60'
+  },
+  amj96: {
+    target: 'amjkeyboard/amj96'
+  },
+  amjpad: {
+    target: 'amjkeyboard/amjpad'
+  },
   angel17: {
     target: 'angel17/alpha'
   },
@@ -22,6 +37,9 @@ const lookup = {
   },
   aplx6: {
     target: 'aplyard/aplx6/rev1'
+  },
+  at101_bh: {
+    target: 'viktus/at101_bh'
   },
   at101_blackheart: {
     target: 'at101_bh'
@@ -149,6 +167,9 @@ const lookup = {
   ergoinu: {
     target: 'dm9records/ergoinu'
   },
+  ergosaurus: {
+    target: 'keyhive/ergosaurus'
+  },
   'exclusive/e85': {
     target: 'exclusive/e85/hotswap'
   },
@@ -160,6 +181,12 @@ const lookup = {
   },
   'gmmk/pro': {
     target: 'gmmk/pro/ansi'
+  },
+  'gmmk/pro/ansi': {
+    target: 'gmmk/pro/rev1/ansi'
+  },
+  'gmmk/pro/iso': {
+    target: 'gmmk/pro/rev1/iso'
   },
   'handwired/ferris': {
     target: 'ferris/0_1'
@@ -208,6 +235,9 @@ const lookup = {
   },
   'helix/rev2/under/oled': {
     target: 'helix/rev2/under'
+  },
+  honeycomb: {
+    target: 'keyhive/honeycomb'
   },
   id80: {
     target: 'id80/ansi'
@@ -274,6 +304,9 @@ const lookup = {
   },
   'kyria/rev1': {
     target: 'splitkb/kyria/rev1'
+  },
+  lattice60: {
+    target: 'keyhive/lattice60'
   },
   'lfkeyboards/lfk78': {
     target: 'lfkeyboards/lfk78/revj'
@@ -368,6 +401,9 @@ const lookup = {
   'mechlovin/hannah65': {
     target: 'mechlovin/hannah65/rev1'
   },
+  melody96: {
+    target: 'ymdk/melody96'
+  },
   model01: {
     target: 'keyboardio/model01'
   },
@@ -376,6 +412,27 @@ const lookup = {
   },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
+  },
+  mt40: {
+    target: 'mt/mt40'
+  },
+  mt64rgb: {
+    target: 'mt/mt64rgb'
+  },
+  mt84: {
+    target: 'mt/mt84'
+  },
+  mt980: {
+    target: 'mt/mt980'
+  },
+  'navi10/rev0': {
+    target: 'keyhive/navi10/rev0'
+  },
+  'navi10/rev2': {
+    target: 'keyhive/navi10/rev2'
+  },
+  'navi10/rev3': {
+    target: 'keyhive/navi10/rev3'
   },
   'nckiibs/flatbread60': {
     target: 'delikeeb/flatbread60'
@@ -412,8 +469,14 @@ const lookup = {
   oddball: {
     target: 'oddball/v1'
   },
+  omnikey_bh: {
+    target: 'viktus/omnikey_bh'
+  },
   omnikey_blackheart: {
     target: 'omnikey_bh'
+  },
+  opus: {
+    target: 'keyhive/opus'
   },
   'pabile/p20': {
     target: 'pabile/p20/ver1'
@@ -513,8 +576,14 @@ const lookup = {
   skog: {
     target: 'percent/skog'
   },
+  smallice: {
+    target: 'keyhive/smallice'
+  },
   southpaw75: {
     target: 'fr4/southpaw75'
+  },
+  southpole: {
+    target: 'keyhive/southpole'
   },
   speedo: {
     target: 'cozykeys/speedo/v2'
@@ -546,6 +615,12 @@ const lookup = {
   underscore33: {
     target: 'underscore33/rev1'
   },
+  uno: {
+    target: 'keyhive/uno'
+  },
+  ut472: {
+    target: 'keyhive/ut472'
+  },
   vinta: {
     target: 'coarse/vinta',
     layouts: {
@@ -560,6 +635,12 @@ const lookup = {
   },
   'whale/sk': {
     target: 'whale/sk/v3'
+  },
+  'wheatfield/blocked65': {
+    target: 'mt/blocked65'
+  },
+  'wheatfield/split75': {
+    target: 'mt/split75'
   },
   xd002: {
     target: 'xiudi/xd002'
@@ -602,6 +683,9 @@ const lookup = {
   },
   ymd75: {
     target: 'ymd75/rev1'
+  },
+  z150_bh: {
+    target: 'viktus/z150_bh'
   },
   z150_blackheart: {
     target: 'z150_bh'

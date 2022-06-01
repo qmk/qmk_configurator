@@ -1,7 +1,7 @@
 {
-  "keyboard": "amj40",
+  "keyboard": "amjkeyboard/amj40",
   "keymap": "default",
-  "commit": "fa740f81298dc0965970a4dc7b0b67285bd1985c",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [

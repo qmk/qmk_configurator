@@ -1,7 +1,7 @@
 {
-  "keyboard": "opus",
+  "keyboard": "keyhive/opus",
   "keymap": "default",
-  "commit": "f90688e55060c3b4ebe797c42c483fd2d0412321",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [

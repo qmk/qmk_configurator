@@ -1,7 +1,7 @@
 {
-  "keyboard": "mt84",
+  "keyboard": "mt/mt84",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [

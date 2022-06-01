@@ -1,7 +1,7 @@
 {
-  "keyboard": "gmmk/pro/ansi",
+  "keyboard": "gmmk/pro/rev1/ansi",
   "keymap": "default",
-  "commit": "e13ad14cb788d8995d19df1de281039693906c42",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [

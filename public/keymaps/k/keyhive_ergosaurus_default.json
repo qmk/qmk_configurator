@@ -1,7 +1,7 @@
 {
-  "keyboard": "ergosaurus",
+  "keyboard": "keyhive/ergosaurus",
   "keymap": "default",
-  "commit": "138c3e7042a3fb9e94a784c3b8f6b0815e71cf3b",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

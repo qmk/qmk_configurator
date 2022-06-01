@@ -1,7 +1,7 @@
 {
-  "keyboard": "smallice",
+  "keyboard": "keyhive/smallice",
   "keymap": "default",
-  "commit": "5195f97d356ee76a7206112ae0cb62c4d3c532d8",
+  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
   "layout": "LAYOUT",
   "layers": [
     [
