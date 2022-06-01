@@ -11,7 +11,7 @@
       "KC_F20",  "KC_F21",  "MO(1)"
     ],
     [
-                 "RESET",
+                 "QK_BOOT",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS"

@@ -11,7 +11,7 @@
             "KC_P1",   "KC_P2",   "KC_P3"
         ],
         [
-            "RESET",   "KC_TRNS", "KC_NO",
+            "QK_BOOT", "KC_TRNS", "KC_NO",
             "AU_ON",   "AU_OFF",  "KC_NO",
             "CK_TOGG", "KC_NO",   "CK_UP",
             "CK_RST",  "KC_NO",   "CK_DOWN"

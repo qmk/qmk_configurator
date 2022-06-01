@@ -19,7 +19,7 @@
                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                "KC_TRNS", "KC_TRNS",            "KC_STOP", "KC_TRNS"
     ],
     [
-        "TG(2)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RESET",
+        "TG(2)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",     "RGB_TOG", "RGB_MOD",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",     "RGB_VAD", "RGB_VAI", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI",   "KC_NO",

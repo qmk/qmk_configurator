@@ -32,7 +32,7 @@
       "_______", "LGUI(KC_LBRC)", "LGUI(LSFT(KC_LBRC))", "KC_UP",   "LGUI(LSFT(KC_RBRC))", "LGUI(KC_RBRC)",    "KC_MUTE", "XXXXXXX",             "HYPR(KC_LEFT)", "HYPR(KC_F)", "HYPR(KC_RGHT)", "_______",
       "_______", "XXXXXXX",       "KC_LEFT",             "KC_DOWN", "KC_RGHT",             "KC_PGUP",          "KC_VOLU", "LALT(LSFT(KC_UP))",   "XXXXXXX",       "XXXXXXX",    "TO(0)",         "_______",
       "_______", "XXXXXXX",       "XXXXXXX",             "XXXXXXX", "XXXXXXX",             "KC_PGDN",          "KC_VOLD", "LALT(LSFT(KC_DOWN))", "XXXXXXX",       "XXXXXXX",    "TO(1)",         "_______",
-      "_______", "RESET",         "_______",             "_______", "KC_TRNS",             "KC_BSPC",          "_______", "KC_LSFT",             "KC_LGUI",       "KC_LALT",    "KC_LCTL",       "_______"
+      "_______", "QK_BOOT",       "_______",             "_______", "KC_TRNS",             "KC_BSPC",          "_______", "KC_LSFT",             "KC_LGUI",       "KC_LALT",    "KC_LCTL",       "_______"
     ]
   ]
 }
