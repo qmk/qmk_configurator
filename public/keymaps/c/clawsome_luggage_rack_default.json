@@ -5,7 +5,7 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_PSCR", "KC_SLCK", "KC_PAUS",
+      "KC_PSCR", "KC_SCRL", "KC_PAUS",
       "KC_INS",  "KC_HOME", "KC_PGUP",
       "KC_DEL",  "KC_END",  "KC_PGDN",
 

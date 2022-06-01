@@ -16,7 +16,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PSCR", "KC_VOLD", "KC_VOLU", "KC_MUTE",            "KC_END",
       "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MSTP", "KC_TRNS",            "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "BL_BRTG", "BL_STEP", "KC_SLEP", "KC_TRNS", "KC_TRNS", "KC_PGUP",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                       "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_PGDN", "KC_SLCK"
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",                       "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_PGDN", "KC_SCRL"
     ]
   ]
 }
