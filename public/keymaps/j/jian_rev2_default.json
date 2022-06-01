@@ -44,7 +44,7 @@
                                                     "KC_TRNS", "KC_TRNS", "LT(6,KC_ENT)",    "LT(6,KC_ESC)", "KC_TRNS", "KC_TRNS"
     ],
     [
-      "RESET",   "DEBUG",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "DEBUG",   "RESET",
+      "QK_BOOT", "DEBUG",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "DEBUG",   "QK_BOOT",
                  "KC_NO",   "DF(3)",   "DF(2)",   "DF(1)",   "DF(0)",   "KC_NO",      "KC_NO",   "DF(0)",   "DF(1)",   "DF(2)",   "DF(3)",   "KC_NO",
                  "TG(7)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "TG(7)",
                                                   "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS"

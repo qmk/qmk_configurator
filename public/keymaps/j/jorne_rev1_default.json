@@ -23,7 +23,7 @@
                                                           "_______", "_______", "_______",    "_______", "_______", "_______"
     ],
     [
-      "RESET",   "XXXXXXX", "KC_ASUP", "KC_ASTG", "KC_ASDN", "_______", "_______",    "_______", "_______", "KC_ASDN", "KC_ASTG", "KC_ASUP", "XXXXXXX", "RESET",
+      "QK_BOOT", "XXXXXXX", "KC_ASUP", "KC_ASTG", "KC_ASDN", "_______", "_______",    "_______", "_______", "KC_ASDN", "KC_ASTG", "KC_ASUP", "XXXXXXX", "QK_BOOT",
                  "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "_______", "_______",    "_______", "_______", "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_TOG",
                  "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "_______", "_______",    "_______", "_______", "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_MOD",
                                                   "_______", "SH_TG",   "_______",    "_______", "SH_TG",   "_______"

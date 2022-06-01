@@ -25,7 +25,7 @@
     [
       "_______",            "LGUI(KC_E)",  "KC_UP",   "LCTL(KC_PGUP)", "LALT(LSFT(KC_TAB))",     "LALT(KC_TAB)",        "LCTL(KC_PGDN)", "_______", "_______", "LGUI(KC_L)",
       "LCTL(LSFT(KC_ESC))", "KC_LEFT",     "KC_DOWN", "KC_RGHT",       "LCTL(LSFT(KC_PGUP))",    "LCTL(LSFT(KC_PGDN))", "KC_ENT",        "KC_LGUI", "_______", "LCTL(LALT(KC_DEL))",
-      "_______",            "LALT(KC_F4)", "_______", "LSFT(KC_INS)",  "RESET",                  "_______",             "_______",       "_______", "_______", "_______",
+      "_______",            "LALT(KC_F4)", "_______", "LSFT(KC_INS)",  "QK_BOOT",                "_______",             "_______",       "_______", "_______", "_______",
                                                       "_______",       "_______",                "_______",             "_______"
     ]
   ]
