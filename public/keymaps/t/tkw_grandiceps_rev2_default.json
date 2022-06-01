@@ -34,7 +34,7 @@
     ],
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "RGB_MOD",  "RGB_VAI", "RGB_SAI", "RGB_HUI", "XXXXXXX", "RGB_TOG",
-      "RESET",   "XXXXXXX", "DF(1)",   "DF(1)",   "CG_TOGG", "XXXXXXX",                       "RGB_RMOD", "RGB_VAD", "RGB_SAD", "RGB_HUD", "XXXXXXX", "XXXXXXX",
+      "QK_BOOT", "XXXXXXX", "DF(1)",   "DF(1)",   "CG_TOGG", "XXXXXXX",                       "RGB_RMOD", "RGB_VAD", "RGB_SAD", "RGB_HUD", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "CG_TOGG", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX",  "KC_VOLD", "KC_MUTE", "KC_VOLU", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",  "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX",
                             "_______", "_______", "_______", "_______", "_______", "_______", "_______",  "_______", "_______", "_______"
