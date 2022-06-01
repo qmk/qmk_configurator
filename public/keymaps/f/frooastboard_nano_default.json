@@ -30,7 +30,7 @@
     ],
     [
       "KC_TRNS", "KC_TRNS",
-      "RESET",   "TO(5)"
+      "QK_BOOT", "TO(5)"
     ]
   ]
 }
