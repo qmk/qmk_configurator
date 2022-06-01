@@ -12,7 +12,7 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                       "KC_SPC",  "KC_SPC",                        "KC_RALT", "KC_APP",  "MO(1)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "RESET",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_END",  "KC_INS",
+      "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_END",  "KC_INS",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_PGUP", "KC_PGDN",
       "KC_NO",   "KC_NO",   "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_NO",   "KC_VOLD", "KC_MUTE", "KC_VOLU", "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",
