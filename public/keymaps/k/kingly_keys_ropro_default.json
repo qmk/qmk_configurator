@@ -15,7 +15,7 @@
     [
                  "RGB_TOG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_SAD", "RGB_HUD", "RGB_HUI", "RGB_SAI", "KC_TRNS", "KC_TRNS", "RGB_VAD", "RGB_VAI",
                  "KC_GRV",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_EQL",
-      "KC_NLCK", "KC_TRNS", "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LBRC", "KC_RBRC", "KC_BSLS",
+      "KC_NUM",  "KC_TRNS", "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LBRC", "KC_RBRC", "KC_BSLS",
       "KC_HOME", "KC_TRNS", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_END",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PSCR"

@@ -12,7 +12,7 @@
       "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
     ],
     [
-      "TO(2)",   "KC_NLCK", "XXXXXXX", "XXXXXXX",
+      "TO(2)",   "KC_NUM",  "XXXXXXX", "XXXXXXX",
       "KC_HOME", "KC_UP",   "KC_PGUP", "XXXXXXX",
       "KC_LEFT", "XXXXXXX", "KC_RGHT", "XXXXXXX",
       "KC_END",  "KC_DOWN", "KC_PGDN", "KC_PENT",

@@ -12,7 +12,7 @@
       "KC_DEL",  "KC_SCLN", "KC_PDOT", "KC_P0"
     ],
     [
-      "KC_NLCK", "KC_PSCR", "KC_TRNS", "KC_TRNS",
+      "KC_NUM",  "KC_PSCR", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
