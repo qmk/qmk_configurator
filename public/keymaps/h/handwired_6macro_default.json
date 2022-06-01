@@ -13,7 +13,7 @@
       "RGB_HUI", "RGB_VAI", "MO(2)"
     ],
     [
-      "RESET",   "RGB_RMOD", "KC_NO",
+      "QK_BOOT", "RGB_RMOD", "KC_NO",
       "RGB_HUD", "RGB_VAD",  "KC_TRNS"
     ]
   ]

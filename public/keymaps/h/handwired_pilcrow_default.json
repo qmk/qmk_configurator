@@ -23,7 +23,7 @@
       "KC_TRNS",       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_ENT",  "KC_ENT",  "KC_TRNS", "KC_MNXT", "KC_VOLD", "KC_VOLU"
     ],
     [
-      "RESET",   "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_WH_D", "KC_MS_U", "KC_WH_U",
+      "QK_BOOT", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_WH_D", "KC_MS_U", "KC_WH_U",
       "KC_LEFT", "KC_DOWN", "KC_RGHT", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "KC_MS_L", "KC_MS_D", "KC_MS_R",
       "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_BTN1", "KC_BTN2", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"

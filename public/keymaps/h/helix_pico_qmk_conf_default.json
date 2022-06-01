@@ -35,7 +35,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MO(5)",   "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MPLY"
     ],
     [
-      "KC_TRNS", "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "AU_ON",   "AU_OFF",  "MU_TOG",  "MU_MOD",  "AG_NORM",                          "AG_SWAP", "TO(0)",   "TO(1)",   "TO(2)",   "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "CK_TOGG", "CK_RST",  "CK_UP",   "CK_DOWN", "KC_TRNS",                          "KC_TRNS", "KC_TRNS", "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD"

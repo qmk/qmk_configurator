@@ -33,7 +33,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_SPC",        "KC_TRNS", "KC_MPRV", "KC_VOLD", "KC_VOLU", "KC_MNXT"
     ],
     [
-      "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "RESET",
+      "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
       "RGB_TOG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_SLEP", "KC_PWR",
       "KC_NO",   "KC_SCRL", "KC_NO",   "KC_NO",   "KC_PSCR", "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "RGB_HUD", "RGB_HUI", "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NUM",  "KC_CAPS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "RGB_SAI", "RGB_SAI", "RGB_M_P",
