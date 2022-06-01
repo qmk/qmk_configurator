@@ -18,7 +18,7 @@
       "RGB_HUD", "RGB_HUI", "BL_ON",
       "RGB_SAD", "RGB_SAI", "BL_OFF",  "KC_TRNS",
       "RGB_VAD", "RGB_VAI", "BL_STEP",
-      "KC_TRNS",            "RESET",   "KC_TRNS"
+      "KC_TRNS",            "QK_BOOT", "KC_TRNS"
     ]
   ]
 }

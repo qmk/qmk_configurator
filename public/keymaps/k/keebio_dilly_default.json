@@ -30,7 +30,7 @@
       "KC_TRNS", "KC_TRNS", "LGUI(KC_C)", "KC_TRNS", "KC_BSPC", "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END"
     ],
     [
-      "RGB_TOG", "RGB_MOD", "KC_TRNS",    "RESET",   "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "RGB_TOG", "RGB_MOD", "KC_TRNS",    "QK_BOOT", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "DEBUG",      "KC_TRNS", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "BL_STEP", "KC_TRNS", "LGUI(KC_C)", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
