@@ -22,7 +22,7 @@
     [
       "KC_ESC",  "KC_LANG1", "KC_NO",   "RGB_TOG", "KC_MNXT", "KC_VOLU",
       "KC_CAPS", "KC_NUM",   "KC_NO",   "RGB_MOD", "KC_MPRV", "KC_VOLD",
-      "CG_NORM", "LCG_SWP",  "EEP_RST", "RESET",   "TO(0)",   "KC_MUTE"
+      "CG_NORM", "LCG_SWP",  "EEP_RST", "QK_BOOT", "TO(0)",   "KC_MUTE"
     ]
   ]
 }
