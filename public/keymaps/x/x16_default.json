@@ -11,7 +11,7 @@
       "MO(1)",   "KC_P0",   "KC_DOT",  "KC_ENT"
     ],
     [
-      "RESET",   "KC_TRNS", "KC_TRNS", "KC_DEL",
+      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_DEL",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPLY"

@@ -35,7 +35,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MO(5)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END"
     ],
     [
-      "BL_TOGG", "RESET",   "KC_TRNS", "KC_MRWD", "KC_MPLY", "KC_MFFD", "KC_PSCR", "KC_TRNS", "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_DEL",
+      "BL_TOGG", "QK_BOOT", "KC_TRNS", "KC_MRWD", "KC_MPLY", "KC_MFFD", "KC_PSCR", "KC_TRNS", "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_DEL",
       "BL_STEP", "RGB_MOD", "KC_TRNS", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "TO(0)",   "TO(1)",   "TO(2)",   "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_PSCR", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
