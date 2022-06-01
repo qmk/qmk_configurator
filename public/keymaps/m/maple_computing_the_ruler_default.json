@@ -11,7 +11,7 @@
       "RGB_TOG", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "KC_TRNS"
     ],
     [
-      "KC_TRNS", "RGB_VAD", "RGB_VAI", "RGB_MOD", "LCTL(LSFT(KC_ESC))", "RESET"
+      "KC_TRNS", "RGB_VAD", "RGB_VAI", "RGB_MOD", "LCTL(LSFT(KC_ESC))", "QK_BOOT"
     ]
   ]
 }

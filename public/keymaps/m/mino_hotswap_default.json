@@ -20,7 +20,7 @@
       "KC_UP",   "KC_EXLM", "KC_AT",   "KC_HASH", "KC_DLR",  "KC_PERC", "KC_CIRC", "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_RPRN", "XXXXXXX", "XXXXXXX",
       "KC_LEFT", "KC_DOWN", "KC_RGHT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "XXXXXXX",
       "XXXXXXX",            "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX", "RESET",   "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX"
+      "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX", "QK_BOOT", "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]
 }
