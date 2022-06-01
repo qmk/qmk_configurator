@@ -16,7 +16,7 @@
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_PGUP", "KC_PGDN",
       "KC_NO",   "KC_NO",   "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_NO",   "KC_VOLD", "KC_MUTE", "KC_VOLU", "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",
-      "EEP_RST", "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+      "EE_CLR",  "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
     ]
   ]
 }

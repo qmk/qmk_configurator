@@ -23,7 +23,7 @@
       "KC_VOLD", "KC_MUTE", "KC_VOLU",            "KC_TRNS", "KC_TRNS",                       "KC_NO",   "KC_NO",   "KC_NO"
     ],
     [
-      "EEP_RST", "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "EE_CLR",  "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "RGB_VAD", "RGB_TOG", "RGB_VAI",            "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO"
