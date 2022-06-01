@@ -23,7 +23,7 @@
       "KC_TRNS", "RGB_HUD", "RGB_SAD",  "RGB_VAD"
     ],
     [
-      "RESET",
+      "QK_BOOT",
       "HPT_TOG", "HPT_FBK",  "HPT_RST", "KC_BSPC",
       "KC_TRNS", "HPT_MODI", "KC_NO",   "KC_NO",
       "KC_TRNS", "HPT_MODD", "CK_TOGG", "KC_DEL"
