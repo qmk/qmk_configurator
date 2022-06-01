@@ -16,7 +16,7 @@
         ],
         [
             "KC_NO"  , "KC_NO", "KC_TRNS",
-            "EEP_RST", "QK_BOOT", "DEBUG"  ,
+            "EEP_RST", "QK_BOOT", "DB_TOGG"  ,
             "KC_NO"  , "KC_NO", "KC_NO"
         ]
     ]

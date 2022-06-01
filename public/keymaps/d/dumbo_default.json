@@ -24,7 +24,7 @@
     ],
     [
       "KC_TAB",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "QK_BOOT", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_ESC",
-      "KC_LCTL", "XXXXXXX", "XXXXXXX", "DEBUG",   "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "KC_LCTL", "XXXXXXX", "XXXXXXX", "DB_TOGG", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "KC_LSFT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_RSFT",
                             "KC_LGUI", "KC_DEL",  "KC_SPC",  "_______",    "_______", "KC_BSPC", "KC_ENT",  "KC_RALT"
     ]

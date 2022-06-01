@@ -14,7 +14,7 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                       "KC_SPC",                                   "KC_RALT", "KC_RCTL",            "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_P0",   "KC_PDOT"
     ],
     [
-      "QK_BOOT", "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",  "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",  "KC_F21",  "DM_REC1", "DM_REC2", "DM_RSTP", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "DEBUG",
+      "QK_BOOT", "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",  "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",  "KC_F21",  "DM_REC1", "DM_REC2", "DM_RSTP", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "DB_TOGG",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
