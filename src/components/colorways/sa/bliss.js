@@ -7,7 +7,7 @@ export default {
     KC_PENT: 'accent',
     KC_SPC: 'accent',
     KC_PSCR: 'accent',
-    KC_SLCK: 'accent',
+    KC_SCRL: 'accent',
     KC_PAUS: 'accent',
     KC_UP: 'accent',
     KC_LEFT: 'accent',
