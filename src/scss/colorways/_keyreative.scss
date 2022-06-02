@@ -1,0 +1,102 @@
+// Keyreative
+
+.dsa-drifter-key {
+  background: #e5e1e6;
+  color: #222222;
+  input {
+    background: lighten(#e5e1e6, 40%);
+  }
+}
+.dsa-drifter-mod {
+  background: #9b2242;
+  color: #71dbd4;
+  input {
+    background: lighten(#9b2242, 40%);
+  }
+}
+.dsa-drifter-kb {
+}
+
+.dsa-milkshake-key,
+.dsa-milkshake-mod {
+  background: white;
+  color: #232d43;
+}
+.dsa-milkshake-esc {
+  background: #f0849e;
+}
+.dsa-milkshake-backspace {
+  background: #f1ed8a;
+}
+.dsa-milkshake-enter {
+  background: #8ce1ce;
+}
+.dsa-milkshake-alt {
+  background: #75cde8;
+}
+.dsa-milkshake-os {
+  background: #c091ed;
+}
+
+.kat-hyperfuse-key {
+  background: $color-gmk-abs-2M;
+  color: $color-gmk-abs-DY;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2M, 10%);
+    color: lighten($color-gmk-abs-DY, 5%);
+    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
+  }
+}
+.kat-hyperfuse-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-TU2;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-2B, 10%);
+    color: $color-gmk-abs-TU2;
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
+  }
+}
+.kat-hyperfuse-accent {
+  background: $color-gmk-abs-TU2;
+  color: $color-gmk-abs-DY;
+  input {
+    background: lighten($color-gmk-abs-TU2, 40%);
+  }
+}
+.kat-hyperfuse-accent2 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-TU2;
+  input {
+    background: lighten($color-gmk-abs-DY, 40%);
+  }
+}
+
+.kat-oasis-key {
+  background: $color-pantone-155C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-155C, 10%);
+    color: lighten($color-pantone-7617C, 5%);
+    border-color: mix($color-pantone-155C, lighten($color-pantone-7617C, 5%));
+  }
+}
+.kat-oasis-mod {
+  background: $color-pantone-317C;
+  color: $color-pantone-7617C;
+  input,
+  .key-contents {
+    background: darken($color-pantone-317C, 10%);
+    color: $color-pantone-7617C;
+    border-color: mix($color-pantone-317C, $color-pantone-7617C);
+  }
+}
+.kat-oasis-accent {
+  background: $color-pantone-7617C;
+  color: $color-pantone-155C;
+  input {
+    background: lighten($color-pantone-7617C, 40%);
+  }
+}

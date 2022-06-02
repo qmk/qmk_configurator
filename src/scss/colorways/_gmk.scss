@@ -1,0 +1,1011 @@
+// GMK Keysets
+
+.gmk-8008-key {
+  background: #8d98a7;
+  color: #313943;
+}
+
+.gmk-8008-mod {
+  background: #313943;
+  color: #fe5487;
+}
+
+.gmk-8008-accent {
+  background: #fe5487;
+  color: #313943;
+}
+
+.gmk-9009-key {
+  background: $color-gmk-abs-L9;
+  color: $color-gmk-abs-CR;
+}
+
+.gmk-9009-mod {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-CR;
+}
+
+.gmk-9009-esc {
+  background: $color-gmk-abs-3C;
+  color: $color-gmk-abs-CR;
+}
+
+.gmk-9009-enter {
+  background: $color-gmk-abs-3B;
+  color: $color-gmk-abs-CR;
+}
+
+.gmk-alter-key {
+  background: #2b2c42;
+  color: #bb1e10;
+}
+.gmk-alter-mod {
+  background: #312f36;
+  color: #bb1e10;
+  input,
+  .key-contents {
+    background: darken(#312f36, 8%);
+    color: lighten(#bb1e10, 0%);
+    border-color: mix(#312f36, lighten(#bb1e10, 0%));
+  }
+}
+
+.gmk-analog-dreams-key {
+  background: $color-gmk-abs-L9;
+  color: #ac4fc6;
+}
+
+.gmk-analog-dreams-mod {
+  background: #9de7d7;
+  color: #ac4fc6;
+}
+
+.gmk-analog-dreams-esc {
+  background: #f2f0a1;
+  color: #ac4fc6;
+}
+
+.gmk-analog-dreams-enter {
+  background: #f1b2dc;
+  color: #ac4fc6;
+}
+
+.gmk-ascii-key,
+.gmk-ascii-mod {
+  background: $color-gmk-abs-2B;
+  color: $color-gmk-abs-2M;
+}
+
+.gmk-bento-key {
+  background: #fff3ef;
+  color: #3e728f;
+  input,
+  .key-contents {
+    background: #fff3ef;
+    color: darken(#3e728f, 9%);
+    border-color: mix(#fff3ef, darken(#3e728f, 9%));
+  }
+}
+.gmk-bento-mod {
+  background: #3e728f;
+  color: #fb7279;
+  input,
+  .key-contents {
+    background: darken(#3e728f, 17%);
+    color: lighten(#fb7279, 17%);
+    border-color: mix(#3e728f, lighten(#fb7279, 17%));
+  }
+}
+.gmk-bento-accent {
+  background: #fb7279;
+  color: #fff3ef;
+}
+
+.gmk-bingsu-key {
+  background: #946777;
+  color: $color-gmk-abs-CP;
+}
+.gmk-bingsu-mod {
+  background: #533d45;
+  color: $color-gmk-abs-CP;
+}
+.gmk-bingsu-accent {
+  background: $color-gmk-abs-CP;
+  color: #533d45;
+}
+
+.gmk-cafe-key {
+  background: $color-gmk-abs-L9;
+  color: #3d3635;
+}
+.gmk-cafe-mod {
+  background: #3d3635;
+  color: $color-gmk-abs-L9;
+}
+.gmk-cafe-accent {
+  background: #d0b084;
+  color: #3d3635;
+}
+
+.gmk-camping-key {
+  background: $color-sp-abs-WCK;
+  color: $color-sp-abs-VF;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-WCK, 10%);
+    color: $color-sp-abs-VF;
+    border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
+  }
+}
+.gmk-camping-mod {
+  background: $color-sp-abs-VF;
+  color: $color-sp-abs-WCK;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-VF, 10%);
+    color: $color-sp-abs-WCK;
+    border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
+  }
+}
+.gmk-camping-accent {
+  background: $color-sp-abs-RBC;
+  color: $color-sp-abs-WCK;
+}
+
+.gmk-calm-depths-key {
+  background: #2e3b51;
+  color: #22aabc;
+}
+.gmk-calm-depths-mod {
+  background: #4a4f58;
+  color: #22aabc;
+}
+
+.gmk-deku-key {
+  background: #298286;
+  color: #e5e1de;
+}
+.gmk-deku-mod {
+  background: #e5e1de;
+  color: #298286;
+}
+.gmk-deku-accent {
+  background: #b03232;
+  color: #e5e1de;
+}
+
+.gmk-dolch-key {
+  background: $color-gmk-abs-CC;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-CC, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
+  }
+}
+.gmk-dolch-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-N9, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
+  }
+}
+.gmk-dolch-kb {
+}
+
+.gmk-dracula-key {
+  background: #44475a;
+  color: #f8f8f2;
+}
+.gmk-dracula-mod {
+  background: #282a36;
+  color: #f8f8f2;
+}
+.gmk-dracula-mod2 {
+  background: #282a36;
+  color: #ff79c6;
+}
+.gmk-dracula-mod3 {
+  background: #282a36;
+  color: #bd93f9;
+}
+.gmk-dracula-mod4 {
+  background: #282a36;
+  color: #8be9fd;
+}
+.gmk-dracula-mod5 {
+  background: #282a36;
+  color: #f1fa8c;
+}
+.gmk-dracula-mod6 {
+  background: #282a36;
+  color: #50fa7b;
+}
+.gmk-dracula-accent {
+  background: #ff5555;
+  color: #282a36;
+}
+.gmk-dracula-accent2 {
+  background: #f1fa8c;
+  color: #282a36;
+}
+.gmk-dracula-accent3 {
+  background: #bd93f9;
+  color: #282a36;
+}
+.gmk-dracula-accent4 {
+  background: #ff79c6;
+  color: #282a36;
+}
+.gmk-dracula-accent5 {
+  background: #8be9fd;
+  color: #282a36;
+}
+.gmk-dracula-accent6 {
+  background: #f8f8f2;
+  color: #282a36;
+}
+.gmk-dracula-func {
+  background: #44475a;
+  color: #f8f8f2;
+}
+.gmk-dracula-func2 {
+  background: #282a36;
+  color: #f8f8f2;
+}
+.gmk-dracula-kb {
+  // placeholder
+}
+
+.gmk-dualshot-key {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
+}
+.gmk-dualshot-mod {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: darken($color-gmk-abs-N9, 12%);
+}
+.gmk-dualshot-mod2 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
+}
+.gmk-dualshot-mod3 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N6, 5%);
+}
+.gmk-dualshot-mod4 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-TU2, 9%);
+}
+.gmk-dualshot-mod5 {
+  background: darken($color-gmk-abs-2B, 5%);
+  color: lighten($color-gmk-abs-N5, 29%);
+}
+.gmk-dualshot-accent {
+  background: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent2 {
+  background: lighten($color-gmk-abs-N6, 5%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent3 {
+  background: lighten($color-gmk-abs-TU2, 9%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-accent4 {
+  background: lighten($color-gmk-abs-N5, 29%);
+  color: $color-gmk-abs-N9;
+}
+.gmk-dualshot-kb {
+  // placeholder
+}
+
+.gmk-fro-dot-yo-key,
+.gmk-fro-dot-yo-mod {
+  background: $color-gmk-abs-L9;
+  color: $color-gmk-abs-2B;
+}
+.gmk-fro-dot-yo-rdp {
+  background: $color-gmk-abs-L9;
+  color: $color-pantone-2345C;
+}
+.gmk-fro-dot-yo-grn {
+  background: $color-gmk-abs-L9;
+  color: $color-pantone-3395C;
+}
+.gmk-fro-dot-yo-blu {
+  background: $color-gmk-abs-L9;
+  color: $color-pantone-312C;
+}
+.gmk-fro-dot-yo-ppl {
+  background: $color-gmk-abs-L9;
+  color: $color-pantone-2088C;
+}
+.gmk-fro-dot-yo-ylw {
+  background: $color-gmk-abs-L9;
+  color: $color-gmk-abs-N6;
+}
+.gmk-fro-dot-yo-kb {
+  // placeholder
+}
+
+.gmk-grand-prix-key {
+  background: rgb(193, 199, 215);
+  color: rgb(54, 71, 92);
+  input,
+  .key-contents {
+    background: lighten(#c7e6f5, 5%);
+    color: darken(#f54730, 26%);
+    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+  }
+}
+.gmk-grand-prix-mod {
+  background: rgb(54, 71, 92);
+  color: rgb(192, 208, 54);
+  input,
+  .key-contents {
+    background: darken(rgb(54, 71, 92), 14%);
+    color: lighten(rgb(192, 208, 54), 14%);
+    border-color: mix(rgb(54, 71, 92), lighten(rgb(192, 208, 54), 14%));
+  }
+}
+.gmk-grand-prix-accent {
+  background: rgb(192, 208, 54);
+  color: rgb(54, 71, 92);
+}
+
+.gmk-hammerhead-dark-key {
+  background: $color-pantone-533C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-dark-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-dark-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
+}
+
+.gmk-hammerhead-light-key {
+  background: $color-pantone-536C;
+  color: $color-pantone-2378C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-536C, 10%);
+    color: darken($color-pantone-2378C, 5%);
+    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 5%));
+  }
+}
+.gmk-hammerhead-light-mod {
+  background: $color-pantone-2378C;
+  color: $color-pantone-3258C;
+  input,
+  .key-contents {
+    background: lighten($color-pantone-2378C, 10%);
+    color: darken($color-pantone-3258C, 5%);
+    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  }
+}
+.gmk-hammerhead-light-accent {
+  background: $color-pantone-3258C;
+  color: $color-pantone-2378C;
+}
+
+.gmk-handarbeit-plus-key {
+  background: $color-gmk-abs-P3;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-mod {
+  background: $color-gmk-abs-P3;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent2 {
+  background: $color-gmk-abs-3C;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent3 {
+  background: $color-gmk-abs-N6;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent4 {
+  background: $color-gmk-abs-N7;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent5 {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent6 {
+  background: $color-gmk-abs-DY;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent7 {
+  background: $color-gmk-abs-V2;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent8 {
+  background: $color-gmk-abs-3A;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-accent9 {
+  background: $color-gmk-abs-TU1;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-handarbeit-plus-kb {
+  // placeholder
+}
+
+.gmk-hazakura-key {
+  background: $color-gmk-abs-WS1;
+  color: darken($color-pantone-2346C, 10%);
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-WS1, 7%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-gmk-abs-WS1, lighten($color-pantone-2346C, 0%));
+  }
+}
+.gmk-hazakura-mod {
+  background: $color-pantone-182C;
+  color: darken($color-pantone-2346C, 10%);
+  input,
+  .key-contents {
+    background: darken($color-pantone-182C, 5%);
+    color: lighten($color-pantone-2346C, 0%);
+    border-color: mix($color-pantone-182C, lighten($color-pantone-2346C, 0%));
+  }
+}
+.gmk-hazakura-accent {
+  background: $color-pantone-2346C;
+  color: lighten($color-pantone-182C, 10%);
+}
+
+.gmk-jamon-key {
+  background: #84172c;
+  color: #ece4d0;
+  input,
+  .key-contents {
+    background: darken(#84172c, 10%);
+    color: #ece4d0;
+    border-color: mix(#84172c, #ece4d0);
+  }
+}
+.gmk-jamon-mod {
+  background: #ac2c32;
+  color: #ece4d0;
+  input,
+  .key-contents {
+    background: darken(#ac2c32, 10%);
+    color: #ece4d0;
+    border-color: mix(darken(#ac2c32, 10%), #ece4d0);
+  }
+}
+.gmk-jamon-accent {
+  background: #ece4d0;
+  color: #313337;
+  input {
+    background: lighten(#ece4d0, 40%);
+  }
+}
+.gmk-jamon-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
+
+.gmk-merlin-key {
+  background: $color-gmk-abs-CP;
+  color: $color-gmk-abs-TU1;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: darken($color-gmk-abs-TU1, 5%);
+    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-TU1, 5%));
+  }
+}
+.gmk-merlin-mod {
+  background: $color-gmk-abs-TU1;
+  color: $color-gmk-abs-N6;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-TU1, 10%);
+    color: $color-gmk-abs-N6;
+    border-color: mix($color-gmk-abs-TU1, $color-gmk-abs-N6);
+  }
+}
+.gmk-merlin-accent {
+  background: $color-gmk-abs-N6;
+  color: $color-gmk-abs-TU1;
+  input {
+    background: lighten($color-gmk-abs-N6, 40%);
+  }
+}
+.gmk-merlin-kb {
+}
+
+.gmk-metaverse-key {
+  background: $color-gmk-abs-WS1;
+  color: $color-gmk-abs-CR;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-WS1, 10%);
+    color: $color-gmk-abs-CR;
+    border-color: mix($color-gmk-abs-WS1, $color-gmk-abs-CR);
+  }
+}
+.gmk-metaverse-mod {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    color: $color-gmk-abs-WS1;
+    background: lighten($color-gmk-abs-CR, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
+  }
+}
+.gmk-metaverse-accent {
+  background: $color-gmk-abs-RO2;
+  color: $color-gmk-abs-WS1;
+}
+.gmk-metaverse-kb {
+  // placeholder
+}
+
+.gmk-metropolis-base-key {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-base-mod {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-base-mod2 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-142C;
+}
+.gmk-metropolis-base-mod3 {
+  background: $color-pantone-5395C;
+  color: $color-pantone-179C;
+}
+.gmk-metropolis-base-accent {
+  background: $color-pantone-142C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-accent2 {
+  background: $color-pantone-333C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-accent3 {
+  background: $color-pantone-179C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-base-kb {
+  // placeholder
+}
+
+.gmk-metropolis-midnight-key {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-midnight-mod {
+  background: $color-pantone-5395C;
+  color: $color-pantone-333C;
+}
+.gmk-metropolis-midnight-accent {
+  background: $color-pantone-333C;
+  color: $color-pantone-5395C;
+}
+.gmk-metropolis-midnight-kb {
+  // placeholder
+}
+
+.gmk-mizu-key {
+  background: #c2d9e4;
+  color: #444f58;
+  input,
+  .key-contents {
+    background: darken(#c2d9e4, 10%);
+    color: #444f58;
+    border-color: mix(#c2d9e4, #444f58);
+  }
+}
+.gmk-mizu-mod {
+  background: #444f58;
+  color: #f7eee3;
+  input,
+  .key-contents {
+    background: darken(#444f58, 5%);
+    color: #f7eee3;
+    border-color: mix(#444f58, #f7eee3);
+  }
+}
+.gmk-mizu-accent {
+  background: #f7eee3;
+  color: #444f58;
+}
+
+.gmk-nautilus-key {
+  background: $color-pantone-534C;
+  color: $color-gmk-abs-TU2;
+  input,
+  .key-contents {
+    background: darken($color-pantone-534C, 10%);
+    color: lighten($color-gmk-abs-TU2, 5%);
+    border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
+  }
+}
+.gmk-nautilus-mod {
+  background: $color-pantone-533C;
+  color: $color-gmk-abs-N6;
+  input,
+  .key-contents {
+    background: darken($color-pantone-533C, 10%);
+    color: $color-gmk-abs-N6;
+    border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
+  }
+}
+.gmk-nautilus-accent {
+  background: $color-gmk-abs-N6;
+  color: $color-pantone-533C;
+  input {
+    background: lighten($color-gmk-abs-N6, 40%);
+  }
+}
+.gmk-nautilus-kb {
+  // placeholder
+  background: $color-pantone-533C;
+}
+
+.gmk-nines-key {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+.gmk-nines-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-U9;
+}
+.gmk-nines-accent {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-N9;
+}
+.gmk-nines-kb {
+  // placeholder
+}
+
+.gmk-olivetti-key {
+  background: $color-gmk-abs-CP;
+  color: $color-gmk-abs-V4;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: darken($color-gmk-abs-V4, 5%);
+    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
+  }
+}
+.gmk-olivetti-mod {
+  background: $color-gmk-abs-U9;
+  color: $color-gmk-abs-V4;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-U9, 10%);
+    color: darken($color-gmk-abs-V4, 15%);
+    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
+  }
+}
+.gmk-olivetti-accent {
+  background: $color-gmk-abs-V4;
+  color: $color-gmk-abs-CP;
+}
+.gmk-olivetti-kb {
+}
+
+.gmk-olivia-key {
+  background: $color-gmk-abs-CP;
+  color: #363434;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-CP, 10%);
+    color: #363434;
+    border-color: mix($color-gmk-abs-CP, #363434);
+  }
+}
+.gmk-olivia-mod {
+  background: #363434;
+  color: #e8c4b8;
+  input,
+  .key-contents {
+    color: #e8c4b8;
+    background: darken(#363434, 10%);
+    border-color: mix(#363434, #e8c4b8);
+  }
+}
+.gmk-olivia-accent {
+  background: #e8c4b8;
+  color: #363434;
+}
+.gmk-olivia-kb {
+}
+
+.gmk-olivia-plus-plus-dark-key {
+  background: #2b2b2b;
+  color: #f1beb0;
+}
+.gmk-olivia-plus-plus-dark-mod {
+  background: #2b2b2b;
+  color: #f1beb0;
+}
+.gmk-olivia-plus-plus-dark-accent {
+  background: #f1beb0;
+  color: #2b2b2b;
+}
+.gmk-olivia-plus-plus-dark-kb {
+  // placeholder
+}
+
+.gmk-phosphorous-key {
+  background: $color-pantone-11C;
+  color: $color-pantone-311C;
+}
+.gmk-phosphorous-mod {
+  background: $color-pantone-11C;
+  color: $color-pantone-311C;
+}
+.gmk-phosphorous-accent {
+  background: $color-pantone-311C;
+  color: $color-pantone-11C;
+}
+.gmk-phosphorous-kb {
+  // placeholder
+}
+
+.gmk-plum-key {
+  background: #ded0af;
+  color: #736b7c;
+  input,
+  .key-contents {
+    background: lighten(#ded0af, 13%);
+    color: darken(#736b7c, 13%);
+    border-color: mix(#ded0af, darken(#736b7c, 13%));
+  }
+}
+.gmk-plum-mod {
+  background: #736b7c;
+  color: #ded0af;
+  input,
+  .key-contents {
+    background: darken(#736b7c, 13%);
+    color: lighten(#ded0af, 13%);
+    border-color: mix(#736b7c, lighten(#ded0af, 13%));
+  }
+}
+.gmk-plum-accent {
+  background: #863f48;
+  color: #ded0af;
+}
+
+.gmk-serika-key {
+  background: #ece4d0;
+  color: #333732;
+  input,
+  .key-contents {
+    background: lighten(#ece4d0, 10%);
+    color: #333732;
+    border-color: mix(#ece4d0, #333732);
+  }
+}
+.gmk-serika-mod {
+  background: #ffcd00;
+  color: #333732;
+  input,
+  .key-contents {
+    background: lighten(#ffcd00, 10%);
+    color: #333732;
+    border-color: mix(#ffcd00, #333732);
+  }
+}
+.gmk-serika-accent {
+  background: #333732;
+  color: #ece4d0;
+}
+.gmk-serika-kb {
+}
+
+.gmk-space-cadet-key {
+  background: $color-sp-abs-GD;
+  color: $color-gmk-abs-CP;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-GD, 10%);
+    color: lighten($color-gmk-abs-CP, 10%);
+    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 10%));
+  }
+}
+
+.gmk-space-cadet-mod {
+  background: $color-sp-abs-BFP;
+  color: $color-gmk-abs-CP;
+  input,
+  .key-contents {
+    background: darken($color-sp-abs-BFP, 10%);
+    color: lighten($color-gmk-abs-CP, 10%);
+    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 10%));
+  }
+}
+.gmk-space-cadet-kb {
+}
+
+.gmk-striker-key {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-mod {
+  background: #004d7c;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: darken(#004d7c, 5%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+  }
+}
+.gmk-striker-accent {
+  background: #002e51;
+  color: $color-gmk-abs-WS1;
+}
+
+.gmk-ta-royal-alpha-key {
+  background: $color-gmk-abs-3K;
+  color: $color-gmk-abs-N7;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-3K, 10%);
+    color: darken($color-gmk-abs-N7, 10%);
+    border-color: mix($color-gmk-abs-3K, darken($color-gmk-abs-N7, 10%));
+  }
+}
+.gmk-ta-royal-alpha-mod {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-CP;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-AE, 17%);
+    color: lighten($color-gmk-abs-CP, 10%);
+    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
+  }
+}
+.gmk-ta-royal-alpha-accent {
+  background: $color-gmk-abs-N7;
+  color: $color-gmk-abs-CP;
+}
+.gmk-ta-royal-alpha-kb {
+  // placeholder
+}
+
+.gmk-terminal-key,
+.gmk-terminal-mod {
+  background: $color-gmk-abs-N9;
+  color: $color-gmk-abs-AE;
+  input,
+  .key-contents {
+    background: darken($color-gmk-abs-N9, 10%);
+    color: lighten($color-gmk-abs-AE, 9%);
+    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 9%));
+  }
+}
+.gmk-terminal-accent {
+  background: $color-gmk-abs-AE;
+  color: $color-gmk-abs-N9;
+}
+
+.gmk-vaporwave-key {
+  $color-vaporwave-lighter-pink: scale-color(
+    #ff3eb5,
+    $lightness: 60%,
+    $saturation: -20%
+  );
+  $color-vaporwave-lighter-lilac: scale-color(#9595d2, $lightness: 5%);
+  background-color: $color-vaporwave-lighter-lilac;
+  color: $color-vaporwave-lighter-pink;
+  font-weight: bold;
+  input,
+  .key-contents {
+    background: lighten($color-vaporwave-lighter-lilac, 5%);
+    color: $color-vaporwave-lighter-pink;
+    border-color: mix(
+      $color-vaporwave-lighter-lilac,
+      $color-vaporwave-lighter-pink
+    );
+  }
+}
+
+.gmk-vaporwave-mod {
+  background-color: #6244bb;
+  color: #00bce3;
+  input,
+  .key-contents {
+    background: darken(#6244bb, 10%);
+    color: #00bce3;
+    border-color: mix(#6244bb, #00bce3);
+  }
+}
+
+.gmk-vaporwave-accent {
+  background-color: #00bce3;
+  color: #6244bb;
+}
+
+.gmk-wob-key {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-CR, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
+  }
+}
+.gmk-wob-mod {
+  background: $color-gmk-abs-CR;
+  color: $color-gmk-abs-WS1;
+  input,
+  .key-contents {
+    background: lighten($color-gmk-abs-CR, 10%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
+  }
+}
+.gmk-wob-kb {
+}
+
+.gmk-yuri-key {
+  background: #c7e6f5;
+  color: #f54730;
+  input,
+  .key-contents {
+    background: lighten(#c7e6f5, 5%);
+    color: darken(#f54730, 26%);
+    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+  }
+}
+.gmk-yuri-mod {
+  background: #2d394c;
+  color: #f54730;
+  input,
+  .key-contents {
+    background: darken(#2d394c, 14%);
+    color: lighten(#f54730, 14%);
+    border-color: mix(#2d394c, lighten(#f54730, 14%));
+  }
+}
+.gmk-yuri-accent {
+  background: #f54730;
+  color: #2d394c;
+}
