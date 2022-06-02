@@ -10,6 +10,7 @@ export default {
     KC_RGHT: 'accent-red',
     KC_SPC: 'accent-red',
     KC_ENT: 'accent-red',
+    KC_GESC: 'accent-red',
     KC_ESC: 'accent-red'
   }
 };

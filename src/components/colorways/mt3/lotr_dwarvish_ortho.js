@@ -3,6 +3,7 @@ export default {
   override: {
     KC_ENT: 'mod',
     KC_ESC: 'mod',
+    KC_GESC: 'mod',
     KC_DEL: 'mod',
     KC_QUOT: 'mod',
     BL_STEP: 'mod',
