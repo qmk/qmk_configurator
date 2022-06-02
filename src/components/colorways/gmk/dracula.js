@@ -14,7 +14,7 @@ export default {
     KC_RSFT: 'mod4',
     KC_LCTL: 'mod5',
     KC_RCTL: 'mod5',
-    KC_NLCK: 'mod5',
+    KC_NUM: 'mod5',
     'MO(layer)': 'mod6',
     KC_ESC: 'accent',
     QK_GESC: 'accent',
