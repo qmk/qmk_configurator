@@ -13,7 +13,7 @@
     [
       "KC_ESC",  "KC_QUES", "KC_UNDS", "KC_F1",   "KC_F2",      "KC_F3",   "KC_F4",   "KC_MINS", "KC_SLSH", "KC_BSPC",
       "KC_LSFT", "KC_TAB",  "KC_PGUP", "KC_F5",   "KC_F6",      "KC_F7",   "KC_F8",   "KC_HOME", "KC_LALT", "KC_ENT",
-      "KC_CLCK", "KC_SLCK", "KC_PGDN", "KC_F9",   "KC_F10",     "KC_F11",  "KC_F12",  "KC_END",  "KC_INS",  "KC_SLSH",
+      "KC_CLCK", "KC_SCRL", "KC_PGDN", "KC_F9",   "KC_F10",     "KC_F11",  "KC_F12",  "KC_END",  "KC_INS",  "KC_SLSH",
                                          "MO(3)", "_______",    "KC_DEL",  "MO(3)"
     ],
     [
@@ -25,7 +25,7 @@
     [
       "_______",            "LGUI(KC_E)",  "KC_UP",   "LCTL(KC_PGUP)", "LALT(LSFT(KC_TAB))",     "LALT(KC_TAB)",        "LCTL(KC_PGDN)", "_______", "_______", "LGUI(KC_L)",
       "LCTL(LSFT(KC_ESC))", "KC_LEFT",     "KC_DOWN", "KC_RGHT",       "LCTL(LSFT(KC_PGUP))",    "LCTL(LSFT(KC_PGDN))", "KC_ENT",        "KC_LGUI", "_______", "LCTL(LALT(KC_DEL))",
-      "_______",            "LALT(KC_F4)", "_______", "LSFT(KC_INS)",  "RESET",                  "_______",             "_______",       "_______", "_______", "_______",
+      "_______",            "LALT(KC_F4)", "_______", "LSFT(KC_INS)",  "QK_BOOT",                "_______",             "_______",       "_______", "_______", "_______",
                                                       "_______",       "_______",                "_______",             "_______"
     ]
   ]

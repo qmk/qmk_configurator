@@ -12,7 +12,7 @@
       "MO(1)",   "KC_LGUI", "KC_LALT", "KC_BSPC", "KC_ENT",  "KC_SPC",  "KC_MINS"
     ],
     [
-      "RGB_TOG",  "TO(0)",    "KC_NO",    "KC_NO",    "KC_NO",    "KC_NO",    "RESET",
+      "RGB_TOG",  "TO(0)",    "KC_NO",    "KC_NO",    "KC_NO",    "KC_NO",    "QK_BOOT",
       "RGB_M_K",  "KC_NO",    "RGB_RMOD", "RGB_HUI",  "RGB_MOD",  "KC_NO",    "KC_NO",
       "KC_NO",    "KC_NO",    "RGB_SAD",  "RGB_HUD",  "RGB_SAI",  "KC_NO",    "KC_NO",
       "KC_NO",    "KC_NO",    "RGB_VAD",  "KC_NO",    "RGB_VAI",  "KC_NO",    "KC_NO",

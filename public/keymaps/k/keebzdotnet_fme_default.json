@@ -10,7 +10,7 @@
       "KC_SPC",             "KC_SPC",  "KC_SPC",  "KC_SPC"
     ],
     [
-      "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",
+      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
       "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]

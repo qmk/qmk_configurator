@@ -9,7 +9,7 @@
       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "_______", "KC_HOME", "RESET",
+      "_______", "KC_HOME", "QK_BOOT",
       "KC_MPRV", "KC_END",  "KC_MNXT"
     ]
   ]

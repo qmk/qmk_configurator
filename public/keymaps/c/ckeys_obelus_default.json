@@ -5,7 +5,7 @@
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT",
       "TO(4)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "TO(1)",   "TO(2)",   "TO(3)",   "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
@@ -35,7 +35,7 @@
       "MU_TOG",  "MU_MOD",  "KC_NO",   "TO(0)"
     ],
     [
-      "KC_NLCK", "KC_TRNS", "KC_TRNS", "TO(0)",
+      "KC_NUM",  "KC_TRNS", "KC_TRNS", "TO(0)",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"

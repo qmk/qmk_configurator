@@ -26,7 +26,7 @@
       "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                        "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",       "KC_NO",         "KC_TRNS",
       "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                        "RGB_TOG", "RGB_MOD", "KC_NO",   "LCA(KC_DEL)", "LALT(KC_PSCR)", "KC_PSCR",
       "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                        "RGB_VAD", "RGB_VAI", "RGB_HUD", "RGB_HUI",     "RGB_SAD",       "RGB_SAI",
-                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET",  "RESET",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",     "KC_TRNS"
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT","QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",     "KC_TRNS"
     ]
   ]
 }

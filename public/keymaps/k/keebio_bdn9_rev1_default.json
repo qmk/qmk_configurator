@@ -10,7 +10,7 @@
       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "RESET",   "BL_STEP", "KC_STOP",
+      "QK_BOOT", "BL_STEP", "KC_STOP",
       "KC_TRNS", "KC_HOME", "RGB_MOD",
       "KC_MPRV", "KC_END",  "KC_MNXT"
     ]

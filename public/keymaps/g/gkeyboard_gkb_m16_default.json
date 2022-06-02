@@ -19,7 +19,7 @@
     [
       "RGB_MOD", "RGB_HUI", "RGB_SAI", "RGB_VAI",
       "RGB_RMOD","RGB_HUD", "RGB_SAD", "RGB_VAD",
-      "_______", "_______", "_______", "RESET",
+      "_______", "_______", "_______", "QK_BOOT",
       "RGB_TOG", "_______", "XXXXXXX", "XXXXXXX"
     ]
   ]

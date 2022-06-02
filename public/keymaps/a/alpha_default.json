@@ -20,7 +20,7 @@
       "RGB_VAI", "RGB_VAD", "RGB_HUI", "TO(0)",   "RGB_MOD",            "KC_MPLY", "KC_VOLD", "KC_VOLU"
     ],
     [
-      "RESET",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "TO(0)",   "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO"
     ]

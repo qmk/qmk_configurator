@@ -34,7 +34,7 @@
     ],
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RESET",   "XXXXXXX", "DF(0)",   "DF(1)",   "CG_TOGG", "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "QK_BOOT", "XXXXXXX", "DF(0)",   "DF(1)",   "CG_TOGG", "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "CG_TOGG", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX", "KC_VOLD", "KC_MUTE", "KC_VOLU", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX",
                             "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"

@@ -5,7 +5,7 @@
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
-      "KC_GESC",
+      "QK_GESC",
       "KC_1",
       "KC_2",
       "KC_3",
@@ -67,7 +67,7 @@
       "KC_RGHT"
     ],
     [
-      "KC_GESC",
+      "QK_GESC",
       "KC_1",
       "KC_2",
       "KC_3",
@@ -207,7 +207,7 @@
       "RGB_SAD",
       "RGB_VAI",
       "RGB_SAI",
-      "RESET",
+      "QK_BOOT",
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",

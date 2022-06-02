@@ -12,7 +12,7 @@
     [
                  "BL_STEP",
             "KC_8",    "KC_9",
-      "KC_0",    "KC_TRNS", "RESET"
+      "KC_0",    "KC_TRNS", "QK_BOOT"
     ]
   ]
 }

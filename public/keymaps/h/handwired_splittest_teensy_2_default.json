@@ -5,7 +5,7 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "RGB_MOD", "RESET"
+      "RGB_MOD", "QK_BOOT"
     ]
   ]
 }

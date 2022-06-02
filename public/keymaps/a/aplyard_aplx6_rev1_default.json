@@ -10,7 +10,7 @@
     ],
     [
       "KC_CALC", "KC_PGUP", "_______",
-      "KC_MYCM", "KC_PGDN", "RESET"
+      "KC_MYCM", "KC_PGDN", "QK_BOOT"
     ]
   ]
 }

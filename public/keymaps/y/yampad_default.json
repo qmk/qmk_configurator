@@ -23,7 +23,7 @@
       "RGB_HUD", "RGB_HUI", "XXXXXXX",
       "RGB_SAD", "RGB_SAI", "XXXXXXX", "XXXXXXX",
       "RGB_VAD", "RGB_VAI", "XXXXXXX",
-      "RESET",   "XXXXXXX", "XXXXXXX", "XXXXXXX"
+      "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]
 }

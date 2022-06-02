@@ -13,7 +13,7 @@ const ROW1 = [
   'KC_F11',
   'KC_F12',
   'KC_PSCR',
-  'KC_SLCK',
+  'KC_SCRL',
   'KC_PAUS'
 ];
 const ROW2 = [
@@ -34,7 +34,7 @@ const ROW2 = [
   'KC_INS',
   'KC_HOME',
   'KC_PGUP',
-  'KC_NLCK',
+  'KC_NUM',
   'KC_PSLS',
   'KC_PAST',
   'KC_PMNS'

@@ -12,7 +12,7 @@
       "KC_F9",   "KC_F10",  "LT(1,KC_NO)", "KC_LCTL", "KC_LALT", "KC_NO",   "LT(1,KC_NO)", "KC_SPC"
     ],
     [
-      "RESET",   "DEBUG",   "KC_TILD", "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",
+      "QK_BOOT", "DB_TOGG", "KC_TILD", "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",

@@ -37,7 +37,7 @@
       "LCTL(LSFT(KC_ESC))", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",     "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "LCTL(LALT(KC_DEL))",
       "KC_TRNS",            "KC_TRNS", "KC_TRNS", "AU_ON",   "AU_OFF",      "AG_NORM", "AG_SWAP", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS",            "MUV_DE",  "MUV_IN",  "MU_ON",   "MU_OFF",      "MI_ON",   "MI_OFF",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",     "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RESET"
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",     "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT"
     ]
   ]
 }

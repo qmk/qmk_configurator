@@ -23,7 +23,7 @@
       "KC_LCTL", "KC_LSFT", "KC_ESC",  "KC_LGUI", "MO(3)",   "KC_SPC",  "KC_ENT",  "KC_TRNS", "KC_RALT", "KC_DEL",  "KC_RSFT", "KC_RCTL"
     ],
     [
-      "KC_VOLU", "RESET",   "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_BRIU",
+      "KC_VOLU", "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_BRIU",
       "KC_VOLD", "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",                       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_BRID",
       "KC_MUTE", "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD",                       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_TRNS", "KC_NO",   "KC_NO",   "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"

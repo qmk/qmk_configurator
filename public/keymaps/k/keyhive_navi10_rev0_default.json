@@ -13,7 +13,7 @@
     ],
     [
       "TO(2)",   "KC_PAUS", "KC_VOLU",
-      "KC_ENT",  "KC_SLCK", "KC_VOLD",
+      "KC_ENT",  "KC_SCRL", "KC_VOLD",
 
                  "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS"

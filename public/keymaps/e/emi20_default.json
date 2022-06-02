@@ -20,10 +20,10 @@
     ],
     [
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "RESET",
+      "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_TRNS", "KC_NLCK", "KC_NO",   "KC_NO"
+      "KC_TRNS", "KC_NUM",  "KC_NO",   "KC_NO"
     ]
   ]
 }

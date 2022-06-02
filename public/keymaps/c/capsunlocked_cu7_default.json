@@ -11,7 +11,7 @@
     ],
     [
                  "_______",
-      "RGB_MOD", "KC_UP",   "RESET",
+      "RGB_MOD", "KC_UP",   "QK_BOOT",
       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ]
   ]

@@ -8,7 +8,7 @@
       "KC_PSCR", "KC_LSFT", "MO(1)"
     ],
     [
-      "RESET",   "KC_LCTL", "_______"
+      "QK_BOOT", "KC_LCTL", "_______"
     ]
   ]
 }

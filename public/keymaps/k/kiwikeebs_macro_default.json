@@ -9,7 +9,7 @@
       "KC_MPRV", "KC_MPLY", "KC_MNXT",      "KC_MUTE"
     ],
     [
-      "RESET",   "KC_UP",   "_______",
+      "QK_BOOT", "KC_UP",   "_______",
       "KC_LEFT", "KC_DOWN", "KC_RGHT", "NK_TOGG"
     ],
     [

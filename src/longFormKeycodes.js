@@ -23,8 +23,9 @@ export const longFormKeycodes = {
   KC_CAPSLOCK: 'KC_CAPS',
   KC_CLCK: 'KC_CAPS',
   KC_PSCREEN: 'KC_PSCR',
-  KC_SCROLLLOCK: 'KC_SLCK',
-  KC_BRMD: 'KC_SLCK',
+  KC_SCROLLLOCK: 'KC_SCRL',
+  KC_BRMD: 'KC_SCRL',
+  KC_SLCK: 'KC_SCRL',
   KC_PAUSE: 'KC_PAUS',
   KC_BRK: 'KC_PAUS',
   KC_BRMU: 'KC_PAUS',
@@ -32,7 +33,8 @@ export const longFormKeycodes = {
   KC_DELETE: 'KC_DEL',
   KC_PGDOWN: 'KC_PGDN',
   KC_RIGHT: 'KC_RGHT',
-  KC_NUMLOCK: 'KC_NLCK',
+  KC_NUMLOCK: 'KC_NUM',
+  KC_NLCK: 'KC_NUM',
   KC_KP_SLASH: 'KC_PSLS',
   KC_KP_ASTERISK: 'KC_PAST',
   KC_KP_MINUS: 'KC_PMNS',
@@ -60,13 +62,13 @@ export const longFormKeycodes = {
   KC_LOCKING_NUM: 'KC_LNUM',
   KC_LOCKING_SCROLL: 'KC_LSCR',
   KC_KP_COMMA: 'KC_PCMM',
-  KC_INT1: 'KC_RO',
-  KC_INT2: 'KC_KANA',
-  KC_INT3: 'KC_JYEN',
-  KC_INT4: 'KC_HENK',
-  KC_INT5: 'KC_MHEN',
-  KC_LANG1: 'KC_HAEN',
-  KC_LANG2: 'KC_HANJ',
+  KC_RO: 'KC_INT1',
+  KC_KANA: 'KC_INT2',
+  KC_JYEN: 'KC_INT3',
+  KC_HENK: 'KC_INT4',
+  KC_MHEN: 'KC_INT5',
+  KC_HAEN: 'KC_LNG1',
+  KC_HANJ: 'KC_LNG2',
   KC_ALT_ERASE: 'KC_ERAS',
   KC_CLEAR: 'KC_CLR',
   KC_LCTRL: 'KC_LCTL',
@@ -105,7 +107,10 @@ export const longFormKeycodes = {
   KC_BRIGHTNESS_DOWN: 'KC_BRID',
 
   // Quantum
-  EEPROM_RESET: 'EEP_RST',
+  RESET: 'QK_BOOT',
+  DEBUG: 'DB_TOGG',
+  EEPROM_RESET: 'EE_CLR',
+  EEP_RST: 'EE_CLR',
 
   // Audio Keys
   CLICKY_TOGGLE: 'CK_TOGG',
@@ -152,7 +157,8 @@ export const longFormKeycodes = {
   DYN_REC_STOP: 'DM_RSTP',
 
   // Grave Escape
-  GRAVE_ESC: 'KC_GESC',
+  GRAVE_ESC: 'QK_GESC',
+  KC_GESC: 'QK_GESC',
 
   // Mouse Keys
   KC_MS_UP: 'KC_MS_U',
@@ -181,6 +187,8 @@ export const longFormKeycodes = {
   G: 'LGUI',
   LCMD: 'LGUI',
   LWIN: 'LGUI',
+  LOPT: 'LALT',
+  ROPT: 'RALT',
   ALGR: 'RALT',
   RCMD: 'RGUI',
   RWIN: 'RGUI',

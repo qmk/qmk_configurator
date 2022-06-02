@@ -11,7 +11,7 @@
       "MO(2)",   "KC_P0",   "MO(1)"
     ],
     [
-      "KC_NLCK", "KC_PAST", "KC_NO",
+      "KC_NUM",  "KC_PAST", "KC_NO",
       "KC_PMNS", "KC_PENT", "KC_PPLS",
       "KC_NO",   "KC_PSLS", "KC_NO",
       "KC_NO",   "KC_PDOT", "KC_NO"

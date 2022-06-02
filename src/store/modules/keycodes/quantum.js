@@ -75,11 +75,11 @@ export default [
     code: 'KC_TRNS',
     title: 'Use the next lowest non-transparent key'
   },
-  { name: 'Reset', code: 'RESET', title: 'Reset the keyboard' },
-  { name: 'Debug', code: 'DEBUG', title: 'Toggle debug mode' },
+  { name: 'Reset', code: 'QK_BOOT', title: 'Reset the keyboard' },
+  { name: 'Debug', code: 'DB_TOGG', title: 'Toggle debug mode' },
   {
     name: 'EEPROM Reset',
-    code: 'EEP_RST',
+    code: 'EE_CLR',
     title: 'Resets EEPROM state',
     width: 1500
   },
@@ -393,7 +393,7 @@ export default [
 
   {
     name: 'Esc/~',
-    code: 'KC_GESC',
+    code: 'QK_GESC',
     title: 'Esc normally, but ~ when Shift or GUI is pressed'
   },
   {

@@ -18,7 +18,7 @@ export default {
     KC_SLCK: 'purple',
     KC_PAUS: 'purple',
     KC_GRV: 'mod',
-    KC_GESC: 'mod',
+    QK_GESC: 'mod',
     KC_1: 'mod',
     KC_2: 'mod',
     KC_3: 'mod',

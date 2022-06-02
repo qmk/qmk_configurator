@@ -18,7 +18,7 @@
                  "RGB_SAI", "RGB_VAI", "RGB_VAD", "RGB_SPI",
       "KC_TRNS", "RGB_SAD", "RGB_M_P", "RGB_MOD", "RGB_SPD",
                  "KC_TRNS", "KC_TRNS",
-                      "RESET"
+                      "QK_BOOT"
     ]
   ]
 }

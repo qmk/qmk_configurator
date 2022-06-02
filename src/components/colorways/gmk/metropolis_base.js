@@ -34,7 +34,7 @@ export default {
     KC_DOWN: 'mod3',
     KC_RGHT: 'mod3',
     KC_ESC: 'accent',
-    KC_GESC: 'accent',
+    QK_GESC: 'accent',
     KC_ENT: 'accent2',
     KC_PENT: 'accent2',
     'MO(layer)': 'accent3'

@@ -8,7 +8,7 @@ export default {
     KC_F4: 'accent2',
     KC_F5: 'accent3',
     KC_GRV: 'accent1',
-    KC_GESC: 'accent1',
+    QK_GESC: 'accent1',
     KC_1: 'accent1',
     KC_2: 'accent1',
     KC_3: 'accent1',

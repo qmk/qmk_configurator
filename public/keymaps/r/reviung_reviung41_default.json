@@ -25,7 +25,7 @@
     [
       "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_MOD", "KC_NO",   "RGB_TOG",            "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_RMOD","KC_NO",   "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "RESET",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
                                                   "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_TRNS", "KC_TRNS"
     ]
   ]
