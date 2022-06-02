@@ -1,0 +1,18 @@
+// JTKeycaps
+
+.jtk-suited-assassin-key,
+.jtk-suited-assassin-mod {
+  background: #312c2b;
+  color: #a79373;
+  input,
+  .key-contents {
+    background: lighten(#312c2b, 10%);
+    color: darken(#a79373, 5%);
+    border-color: mix(#312c2b, darken(#a79373, 5%));
+  }
+}
+
+.jtk-suited-assassin-accent {
+  background: #a79373;
+  color: #312c2b;
+}
