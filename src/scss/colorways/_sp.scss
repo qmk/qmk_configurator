@@ -187,9 +187,9 @@
   color: $color-sp-abs-YY;
   input,
   .key-contents {
-    background: darken($color-sp-abs-BFU, 10%);
+    background: darken($color-sp-abs-BFU, 4%);
     color: $color-sp-abs-YY;
-    border-color: mix($color-sp-abs-BFU, $color-sp-abs-YY);
+    border-color: mix(darken($color-sp-abs-BFU, 4%), $color-sp-abs-YY);
   }
 }
 .sa-danger-zone-mod {
@@ -197,9 +197,12 @@
   color: $color-sp-abs-YY;
   input,
   .key-contents {
-    background: darken($color-sp-abs-GSM, 10%);
-    color: $color-sp-abs-YY;
-    border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
+    background: darken($color-sp-abs-GSM, 5%);
+    color: lighten($color-sp-abs-YY, 13%);
+    border-color: mix(
+      darken($color-sp-abs-GSM, 5%),
+      lighten($color-sp-abs-YY, 13%)
+    );
   }
 }
 .sa-danger-zone-accent-yellow {
