@@ -3,7 +3,7 @@ export default {
   override: {
     KC_ENT: 'accent-red',
     KC_ESC: 'accent-red',
-    KC_GESC: 'accent-red',
+    QK_GESC: 'accent-red',
     KC_LALT: 'mod-blue',
     KC_RALT: 'mod-blue',
     KC_LGUI: 'mod-blue',
