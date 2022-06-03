@@ -260,20 +260,24 @@
   background: $color-sp-abs-NN;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-NN, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-NN, 4%);
     color: $color-sp-abs-WFK;
-    border-color: mix($color-sp-abs-NN, $color-sp-abs-WFK);
+    border-color: mix(darken($color-sp-abs-NN, 4%), $color-sp-abs-WFK);
   }
 }
 .sa-modern-selectric-mod {
   background: $color-sp-abs-BDH;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BDH, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BDH, 4%);
     color: $color-sp-abs-WFK;
-    border-color: mix($color-sp-abs-BDH, $color-sp-abs-WFK);
+    border-color: mix(darken($color-sp-abs-BDH, 4%), $color-sp-abs-WFK);
   }
 }
 .sa-modern-selectric-kb {
