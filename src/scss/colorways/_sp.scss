@@ -287,20 +287,24 @@
   background: $color-sp-abs-WV;
   color: $color-sp-abs-BBI;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WV, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WV, 4%);
     color: $color-sp-abs-BBI;
-    border-color: mix($color-sp-abs-WV, $color-sp-abs-BBI);
+    border-color: mix(lighten($color-sp-abs-WV, 4%), $color-sp-abs-BBI);
   }
 }
 .sa-nantucket-selectric-mod {
   background: $color-sp-abs-BBI;
   color: $color-sp-abs-YCF;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BBI, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BBI, 4%);
     color: $color-sp-abs-YCF;
-    border-color: mix($color-sp-abs-BBI, $color-sp-abs-YCF);
+    border-color: mix(darken($color-sp-abs-BBI, 4%), $color-sp-abs-YCF);
   }
 }
 .sa-nantucket-selectric-kb {
