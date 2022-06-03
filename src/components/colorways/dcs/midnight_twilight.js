@@ -3,7 +3,7 @@ export default {
   override: {
     BL_STEP: 'mod',
     KC_RSPC: 'mod',
-    KC_GESC: 'mod',
+    QK_GESC: 'mod',
     KC_LSPO: 'mod'
   }
 };

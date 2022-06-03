@@ -10,7 +10,7 @@ export default {
     KC_RGHT: 'accent',
     KC_SPC: 'accent',
     KC_ENT: 'accent',
-    KC_GESC: 'accent',
+    QK_GESC: 'accent',
     KC_ESC: 'accent'
   }
 };
