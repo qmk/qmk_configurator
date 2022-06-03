@@ -69,10 +69,12 @@
   background: $color-sp-pbt-BFE;
   color: $color-sp-pbt-BLACK;
   input,
-  .key-contents {
-    background: lighten($color-sp-pbt-BFE, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-pbt-BFE, 4%);
     color: $color-sp-pbt-BLACK;
-    border-color: mix($color-sp-pbt-BFE, $color-sp-pbt-BLACK);
+    border-color: mix(lighten($color-sp-pbt-BFE, 4%), $color-sp-pbt-BLACK);
   }
 }
 .dsa-galaxy-class-mod {
@@ -80,10 +82,12 @@
   background: $color-pantone-141C;
   color: $color-sp-pbt-BLACK;
   input,
-  .key-contents {
-    background: lighten($color-pantone-141C, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-141C, 4%);
     color: $color-sp-pbt-BLACK;
-    border-color: mix(lighten($color-pantone-141C, 10%), $color-sp-pbt-BLACK);
+    border-color: mix(lighten($color-pantone-141C, 4%), $color-sp-pbt-BLACK);
   }
 }
 .dsa-galaxy-class-purple {
