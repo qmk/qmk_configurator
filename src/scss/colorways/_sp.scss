@@ -220,20 +220,30 @@
   background: $color-sp-abs-TM;
   color: $color-sp-abs-RN;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-TM, 10%);
-    color: darken($color-sp-abs-RN, 10%);
-    border-color: mix($color-sp-abs-TM, darken($color-sp-abs-RN, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-TM, 6%);
+    color: darken($color-sp-abs-RN, 8%);
+    border-color: mix(
+      lighten($color-sp-abs-TM, 6%),
+      darken($color-sp-abs-RN, 8%)
+    );
   }
 }
 .sa-jukebox-mod {
   background: $color-sp-abs-VCO;
   color: $color-sp-abs-RN;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: lighten($color-sp-abs-VCO, 12%);
     color: darken($color-sp-abs-RN, 10%);
-    border-color: mix($color-sp-abs-VCO, darken($color-sp-abs-RN, 10%));
+    border-color: mix(
+      lighten($color-sp-abs-VCO, 12%),
+      darken($color-sp-abs-RN, 10%)
+    );
   }
 }
 .sa-jukebox-accent {
