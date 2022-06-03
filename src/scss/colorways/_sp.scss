@@ -128,13 +128,21 @@
 .dsa-galaxy-class-kb {
 }
 
-.sa-bliss-key {
-  background: $color-sp-abs-GC;
-  color: $color-pantone-13-1406TCX;
-}
+.sa-bliss-key,
 .sa-bliss-mod {
   background: $color-sp-abs-GC;
   color: $color-pantone-13-1406TCX;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GC, 4%);
+    color: lighten($color-pantone-13-1406TCX, 5%);
+    border-color: mix(
+      darken($color-sp-abs-GC, 4%),
+      lighten($color-pantone-13-1406TCX, 5%)
+    );
+  }
 }
 .sa-bliss-accent {
   background: $color-pantone-13-1406TCX;
