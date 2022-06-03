@@ -7,11 +7,27 @@
 .dcs-midnight-key {
   background: $color-sp-abs-GB;
   color: $color-sp-abs-VCO;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-sp-abs-GB;
+    color: lighten($color-sp-abs-VCO, 1%);
+    border-color: mix($color-sp-abs-GB, lighten($color-sp-abs-VCO, 1%));
+  }
 }
 
 .dcs-midnight-mod {
   background: $color-sp-abs-GEW;
   color: $color-sp-abs-VCO;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-sp-abs-GEW;
+    color: lighten($color-sp-abs-VCO, 14%);
+    border-color: mix($color-sp-abs-GEW, lighten($color-sp-abs-VCO, 14%));
+  }
 }
 
 .dcs-midnight-accent {
@@ -26,11 +42,27 @@
 .dcs-midnight-twilight-key {
   background: $color-sp-abs-GB;
   color: $color-sp-abs-VCO;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-sp-abs-GB;
+    color: lighten($color-sp-abs-VCO, 1%);
+    border-color: mix($color-sp-abs-GB, lighten($color-sp-abs-VCO, 1%));
+  }
 }
 
 .dcs-midnight-twilight-mod {
   background: $color-sp-abs-VCO;
   color: $qmk-black;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-sp-abs-VCO;
+    color: $qmk-black;
+    border-color: mix($color-sp-abs-VCO, $qmk-black);
+  }
 }
 
 .dsa-galaxy-class-key {
