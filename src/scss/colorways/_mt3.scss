@@ -106,39 +106,39 @@
 
 // mt3 /dev/tty base graysets
 .mt3-dev-tty-key {
-  background: $color-mt3-pbt-gray-light;
+  background: $color-mt3-pbt-dev-tty-alpha;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-pbt-gray-light, 5%);
+    background: darken($color-mt3-pbt-dev-tty-alpha, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
 }
 
 .mt3-dev-tty-mod {
-  background: $color-mt3-pbt-gray-dark;
+  background: $color-mt3-pbt-dev-tty-mod;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-mt3-pbt-gray-dark, 5%);
+    background: lighten($color-mt3-pbt-dev-tty-mod, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
 }
 
 .mt3-dev-tty-accent {
-  background: $color-mt3-pbt-red-back;
+  background: $color-mt3-pbt-dev-tty-accent-red;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-mt3-pbt-red-back, 5%);
+    background: lighten($color-mt3-pbt-dev-tty-accent-red, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
@@ -150,26 +150,26 @@
 
 // mt3 /dev/tty teal set
 .mt3-dev-tty-teal-key {
-  background: $color-mt3-pbt-gray-light;
+  background: $color-mt3-pbt-dev-tty-alpha;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-pbt-gray-light, 5%);
+    background: darken($color-mt3-pbt-dev-tty-alpha, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
 }
 
 .mt3-dev-tty-teal-mod {
-  background: $color-mt3-pbt-teal;
+  background: $color-mt3-pbt-dev-tty-teal;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-mt3-pbt-teal, 5%);
+    background: lighten($color-mt3-pbt-dev-tty-teal, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
@@ -181,39 +181,39 @@
 
 // mt3 /dev/tty ortho graysets
 .mt3-dev-tty-ortho-key {
-  background: $color-mt3-pbt-gray-light;
+  background: $color-mt3-pbt-dev-tty-alpha;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-pbt-gray-light, 5%);
+    background: darken($color-mt3-pbt-dev-tty-alpha, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
 }
 
 .mt3-dev-tty-ortho-mod {
-  background: $color-mt3-pbt-gray-dark;
+  background: $color-mt3-pbt-dev-tty-mod;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-mt3-pbt-gray-dark, 5%);
+    background: lighten($color-mt3-pbt-dev-tty-mod, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
 }
 
 .mt3-dev-tty-ortho-accent {
-  background: $color-mt3-pbt-red-back;
+  background: $color-mt3-pbt-dev-tty-accent-red;
   color: $color-mt3-pbt-black;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-mt3-pbt-red-back, 5%);
+    background: lighten($color-mt3-pbt-dev-tty-accent-red, 5%);
     color: $color-mt3-pbt-black;
     border-color: $color-mt3-pbt-black;
   }
@@ -475,80 +475,80 @@
 
 // mt3 susuwatari base colourway
 .mt3-susuwatari-key {
-  background: $color-mt3-abs-gray-light;
+  background: $color-mt3-abs-susu-alpha;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-light, 5%);
+    background: darken($color-mt3-abs-susu-alpha, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-mod-blue {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-blue;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-blue;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-blue;
-    border-color: $color-mt3-abs-blue;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-blue;
+    border-color: $color-mt3-abs-susu-legend-blue;
   }
 }
 
 .mt3-susuwatari-mod {
-  background: $color-mt3-abs-gray-dark;
+  background: $color-mt3-abs-susu-mod;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
+    background: darken($color-mt3-abs-susu-mod, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-mod-green {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-green;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-green;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-green;
-    border-color: $color-mt3-abs-green;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-green;
+    border-color: $color-mt3-abs-susu-legend-green;
   }
 }
 
 .mt3-susuwatari-accent {
-  background: $color-mt3-abs-red-back;
+  background: $color-mt3-abs-susu-accent-red;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-red-back, 5%);
+    background: darken($color-mt3-abs-susu-accent-red, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-accent-red {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-red;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-red;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-red;
-    border-color: $color-mt3-abs-red;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-red;
+    border-color: $color-mt3-abs-susu-legend-red;
   }
 }
 
@@ -558,80 +558,80 @@
 
 // mt3 susuwatari ortho colourway
 .mt3-susuwatari-ortho-key {
-  background: $color-mt3-abs-gray-light;
+  background: $color-mt3-abs-susu-alpha;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-light, 5%);
+    background: darken($color-mt3-abs-susu-alpha, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-ortho-mod-blue {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-blue;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-blue;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-blue;
-    border-color: $color-mt3-abs-blue;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-blue;
+    border-color: $color-mt3-abs-susu-legend-blue;
   }
 }
 
 .mt3-susuwatari-ortho-mod {
-  background: $color-mt3-abs-gray-dark;
+  background: $color-mt3-abs-susu-mod;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
+    background: darken($color-mt3-abs-susu-mod, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-ortho-accent {
-  background: $color-mt3-abs-red-back;
+  background: $color-mt3-abs-susu-accent-red;
   color: $color-mt3-abs-white;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-red-back, 5%);
+    background: darken($color-mt3-abs-susu-accent-red, 5%);
     color: $color-mt3-abs-white;
     border-color: $color-mt3-abs-white;
   }
 }
 
 .mt3-susuwatari-ortho-lwr {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-green;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-green;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-green;
-    border-color: $color-mt3-abs-green;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-green;
+    border-color: $color-mt3-abs-susu-legend-green;
   }
 }
 
 .mt3-susuwatari-ortho-rse {
-  background: $color-mt3-abs-gray-dark;
-  color: $color-mt3-abs-red;
+  background: $color-mt3-abs-susu-mod;
+  color: $color-mt3-abs-susu-legend-red;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-mt3-abs-gray-dark, 5%);
-    color: $color-mt3-abs-red;
-    border-color: $color-mt3-abs-red;
+    background: darken($color-mt3-abs-susu-mod, 5%);
+    color: $color-mt3-abs-susu-legend-red;
+    border-color: $color-mt3-abs-susu-legend-red;
   }
 }
 
