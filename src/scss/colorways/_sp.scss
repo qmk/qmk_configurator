@@ -156,10 +156,12 @@
   background: $color-sp-abs-WBO;
   color: $color-sp-abs-GQM;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WBO, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WBO, 4%);
     color: $color-sp-abs-GQM;
-    border-color: mix($color-sp-abs-WBO, $color-sp-abs-GQM);
+    border-color: mix(lighten($color-sp-abs-WBO, 4%), $color-sp-abs-GQM);
   }
 }
 .sa-carbon-mod {
@@ -167,9 +169,12 @@
   color: $color-sp-abs-OBC;
   input,
   .key-contents {
-    background: darken($color-sp-abs-GQM, 12%);
-    color: lighten($color-sp-abs-OBC, 19%);
-    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
+    background: darken($color-sp-abs-GQM, 4%);
+    color: lighten($color-sp-abs-OBC, 12%);
+    border-color: mix(
+      darken($color-sp-abs-GQM, 4%),
+      lighten($color-sp-abs-OBC, 12%)
+    );
   }
 }
 .sa-carbon-accent {
