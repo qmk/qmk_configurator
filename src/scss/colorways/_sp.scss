@@ -314,20 +314,30 @@
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WFK, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WFK, 4%);
     color: darken($color-sp-abs-GD, 10%);
-    border-color: mix($color-sp-abs-WFK, darken($color-sp-abs-GD, 10%));
+    border-color: mix(
+      lighten($color-sp-abs-WFK, 4%),
+      darken($color-sp-abs-GD, 10%)
+    );
   }
 }
 .sa-oblivion-hagoromo-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-GAL;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-GQM, 10%);
-    color: lighten($color-sp-abs-GAL, 17%);
-    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-GAL, 17%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GQM, 4%);
+    color: lighten($color-sp-abs-GAL, 5%);
+    border-color: mix(
+      darken($color-sp-abs-GQM, 4%),
+      lighten($color-sp-abs-GAL, 5%)
+    );
   }
 }
 .sa-oblivion-hagoromo-accent {
