@@ -347,25 +347,20 @@
 .sa-oblivion-hagoromo-kb {
 }
 
-.sa-vilebloom-key {
-  background: $color-pantone-7699C;
-  color: $color-sp-abs-WFK;
-  input,
-  .key-contents {
-    background: darken($color-pantone-7699C, 10%);
-    color: $color-sp-abs-WFK;
-    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
-  }
-}
-
+.sa-vilebloom-key,
 .sa-vilebloom-mod {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: darken($color-pantone-7699C, 10%);
-    color: $color-sp-abs-WFK;
-    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-7699C, 4%);
+    color: lighten($color-sp-abs-WFK, 8%);
+    border-color: mix(
+      darken($color-pantone-7699C, 4%),
+      lighten($color-sp-abs-WFK, 8%)
+    );
   }
 }
 
