@@ -128,13 +128,21 @@
 .dsa-galaxy-class-kb {
 }
 
-.sa-bliss-key {
-  background: $color-sp-abs-GC;
-  color: $color-pantone-13-1406TCX;
-}
+.sa-bliss-key,
 .sa-bliss-mod {
   background: $color-sp-abs-GC;
   color: $color-pantone-13-1406TCX;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GC, 4%);
+    color: lighten($color-pantone-13-1406TCX, 5%);
+    border-color: mix(
+      darken($color-sp-abs-GC, 4%),
+      lighten($color-pantone-13-1406TCX, 5%)
+    );
+  }
 }
 .sa-bliss-accent {
   background: $color-pantone-13-1406TCX;
@@ -148,10 +156,12 @@
   background: $color-sp-abs-WBO;
   color: $color-sp-abs-GQM;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WBO, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WBO, 4%);
     color: $color-sp-abs-GQM;
-    border-color: mix($color-sp-abs-WBO, $color-sp-abs-GQM);
+    border-color: mix(lighten($color-sp-abs-WBO, 4%), $color-sp-abs-GQM);
   }
 }
 .sa-carbon-mod {
@@ -159,9 +169,12 @@
   color: $color-sp-abs-OBC;
   input,
   .key-contents {
-    background: darken($color-sp-abs-GQM, 12%);
-    color: lighten($color-sp-abs-OBC, 19%);
-    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-OBC, 19%));
+    background: darken($color-sp-abs-GQM, 4%);
+    color: lighten($color-sp-abs-OBC, 12%);
+    border-color: mix(
+      darken($color-sp-abs-GQM, 4%),
+      lighten($color-sp-abs-OBC, 12%)
+    );
   }
 }
 .sa-carbon-accent {
@@ -174,9 +187,9 @@
   color: $color-sp-abs-YY;
   input,
   .key-contents {
-    background: darken($color-sp-abs-BFU, 10%);
+    background: darken($color-sp-abs-BFU, 4%);
     color: $color-sp-abs-YY;
-    border-color: mix($color-sp-abs-BFU, $color-sp-abs-YY);
+    border-color: mix(darken($color-sp-abs-BFU, 4%), $color-sp-abs-YY);
   }
 }
 .sa-danger-zone-mod {
@@ -184,9 +197,12 @@
   color: $color-sp-abs-YY;
   input,
   .key-contents {
-    background: darken($color-sp-abs-GSM, 10%);
-    color: $color-sp-abs-YY;
-    border-color: mix($color-sp-abs-GSM, $color-sp-abs-YY);
+    background: darken($color-sp-abs-GSM, 5%);
+    color: lighten($color-sp-abs-YY, 13%);
+    border-color: mix(
+      darken($color-sp-abs-GSM, 5%),
+      lighten($color-sp-abs-YY, 13%)
+    );
   }
 }
 .sa-danger-zone-accent-yellow {
@@ -204,20 +220,30 @@
   background: $color-sp-abs-TM;
   color: $color-sp-abs-RN;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-TM, 10%);
-    color: darken($color-sp-abs-RN, 10%);
-    border-color: mix($color-sp-abs-TM, darken($color-sp-abs-RN, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-TM, 6%);
+    color: darken($color-sp-abs-RN, 8%);
+    border-color: mix(
+      lighten($color-sp-abs-TM, 6%),
+      darken($color-sp-abs-RN, 8%)
+    );
   }
 }
 .sa-jukebox-mod {
   background: $color-sp-abs-VCO;
   color: $color-sp-abs-RN;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: lighten($color-sp-abs-VCO, 12%);
     color: darken($color-sp-abs-RN, 10%);
-    border-color: mix($color-sp-abs-VCO, darken($color-sp-abs-RN, 10%));
+    border-color: mix(
+      lighten($color-sp-abs-VCO, 12%),
+      darken($color-sp-abs-RN, 10%)
+    );
   }
 }
 .sa-jukebox-accent {
@@ -234,20 +260,24 @@
   background: $color-sp-abs-NN;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-NN, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-NN, 4%);
     color: $color-sp-abs-WFK;
-    border-color: mix($color-sp-abs-NN, $color-sp-abs-WFK);
+    border-color: mix(darken($color-sp-abs-NN, 4%), $color-sp-abs-WFK);
   }
 }
 .sa-modern-selectric-mod {
   background: $color-sp-abs-BDH;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BDH, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BDH, 4%);
     color: $color-sp-abs-WFK;
-    border-color: mix($color-sp-abs-BDH, $color-sp-abs-WFK);
+    border-color: mix(darken($color-sp-abs-BDH, 4%), $color-sp-abs-WFK);
   }
 }
 .sa-modern-selectric-kb {
@@ -257,20 +287,24 @@
   background: $color-sp-abs-WV;
   color: $color-sp-abs-BBI;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WV, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WV, 4%);
     color: $color-sp-abs-BBI;
-    border-color: mix($color-sp-abs-WV, $color-sp-abs-BBI);
+    border-color: mix(lighten($color-sp-abs-WV, 4%), $color-sp-abs-BBI);
   }
 }
 .sa-nantucket-selectric-mod {
   background: $color-sp-abs-BBI;
   color: $color-sp-abs-YCF;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BBI, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BBI, 4%);
     color: $color-sp-abs-YCF;
-    border-color: mix($color-sp-abs-BBI, $color-sp-abs-YCF);
+    border-color: mix(darken($color-sp-abs-BBI, 4%), $color-sp-abs-YCF);
   }
 }
 .sa-nantucket-selectric-kb {
@@ -280,20 +314,30 @@
   background: $color-sp-abs-WFK;
   color: $color-sp-abs-GD;
   input,
-  .key-contents {
-    background: lighten($color-sp-abs-WFK, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WFK, 4%);
     color: darken($color-sp-abs-GD, 10%);
-    border-color: mix($color-sp-abs-WFK, darken($color-sp-abs-GD, 10%));
+    border-color: mix(
+      lighten($color-sp-abs-WFK, 4%),
+      darken($color-sp-abs-GD, 10%)
+    );
   }
 }
 .sa-oblivion-hagoromo-mod {
   background: $color-sp-abs-GQM;
   color: $color-sp-abs-GAL;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-GQM, 10%);
-    color: lighten($color-sp-abs-GAL, 17%);
-    border-color: mix($color-sp-abs-GQM, lighten($color-sp-abs-GAL, 17%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GQM, 4%);
+    color: lighten($color-sp-abs-GAL, 5%);
+    border-color: mix(
+      darken($color-sp-abs-GQM, 4%),
+      lighten($color-sp-abs-GAL, 5%)
+    );
   }
 }
 .sa-oblivion-hagoromo-accent {
@@ -303,25 +347,20 @@
 .sa-oblivion-hagoromo-kb {
 }
 
-.sa-vilebloom-key {
-  background: $color-pantone-7699C;
-  color: $color-sp-abs-WFK;
-  input,
-  .key-contents {
-    background: darken($color-pantone-7699C, 10%);
-    color: $color-sp-abs-WFK;
-    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
-  }
-}
-
+.sa-vilebloom-key,
 .sa-vilebloom-mod {
   background: $color-pantone-7699C;
   color: $color-sp-abs-WFK;
   input,
-  .key-contents {
-    background: darken($color-pantone-7699C, 10%);
-    color: $color-sp-abs-WFK;
-    border-color: mix($color-pantone-7699C, $color-sp-abs-WFK);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-7699C, 4%);
+    color: lighten($color-sp-abs-WFK, 8%);
+    border-color: mix(
+      darken($color-pantone-7699C, 4%),
+      lighten($color-sp-abs-WFK, 8%)
+    );
   }
 }
 
