@@ -34,11 +34,27 @@
 .gmk-9009-key {
   background: $color-gmk-abs-L9;
   color: $color-gmk-abs-CR;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: $color-gmk-abs-CR;
+    border-color: mix(lighten($color-gmk-abs-L9, 4%), $color-gmk-abs-CR);
+  }
 }
 
 .gmk-9009-mod {
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-CR;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-U9, 4%);
+    color: $color-gmk-abs-CR;
+    border-color: mix(lighten($color-gmk-abs-U9, 4%), $color-gmk-abs-CR);
+  }
 }
 
 .gmk-9009-esc {
