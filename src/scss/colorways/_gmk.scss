@@ -3,11 +3,27 @@
 .gmk-8008-key {
   background: #8d98a7;
   color: #313943;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#8d98a7, 8%);
+    color: darken(#313943, 9%);
+    border-color: mix(#8d98a7, #313943);
+  }
 }
 
 .gmk-8008-mod {
   background: #313943;
   color: #fe5487;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#313943, 4%);
+    color: lighten(#fe5487, 15%);
+    border-color: mix(darken(#313943, 4%), lighten(#fe5487, 15%));
+  }
 }
 
 .gmk-8008-accent {
