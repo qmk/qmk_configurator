@@ -258,9 +258,11 @@
   background: $color-sp-abs-WCK;
   color: $color-sp-abs-VF;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-WCK, 10%);
-    color: $color-sp-abs-VF;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WCK, 4%);
+    color: darken($color-sp-abs-VF, 6%);
     border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
   }
 }
@@ -268,9 +270,11 @@
   background: $color-sp-abs-VF;
   color: $color-sp-abs-WCK;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-VF, 10%);
-    color: $color-sp-abs-WCK;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-VF, 4%);
+    color: lighten($color-sp-abs-WCK, 4%);
     border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
   }
 }
