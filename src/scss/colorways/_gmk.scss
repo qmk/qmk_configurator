@@ -342,10 +342,26 @@
 .gmk-dracula-key {
   background: #44475a;
   color: #f8f8f2;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#44475a, 4%);
+    color: #f8f8f2;
+    border-color: mix(#44475a, #f8f8f2);
+  }
 }
 .gmk-dracula-mod {
   background: #282a36;
   color: #f8f8f2;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#282a36, 4%);
+    color: #f8f8f2;
+    border-color: mix(#282a36, #f8f8f2);
+  }
 }
 .gmk-dracula-mod2 {
   background: #282a36;
@@ -366,6 +382,14 @@
 .gmk-dracula-mod6 {
   background: #282a36;
   color: #50fa7b;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#282a36, 4%);
+    color: #50fa7b;
+    border-color: mix(#282a36, #50fa7b);
+  }
 }
 .gmk-dracula-accent {
   background: #ff5555;
