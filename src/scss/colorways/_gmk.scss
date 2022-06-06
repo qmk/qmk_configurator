@@ -203,10 +203,26 @@
 .gmk-cafe-key {
   background: $color-gmk-abs-L9;
   color: #3d3635;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: #3d3635;
+    border-color: mix($color-gmk-abs-L9, #3d3635);
+  }
 }
 .gmk-cafe-mod {
   background: #3d3635;
   color: $color-gmk-abs-L9;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#3d3635, 4%);
+    color: $color-gmk-abs-L9;
+    border-color: mix(#3d3635, $color-gmk-abs-L9);
+  }
 }
 .gmk-cafe-accent {
   background: #d0b084;
