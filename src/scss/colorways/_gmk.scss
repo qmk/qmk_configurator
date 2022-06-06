@@ -174,10 +174,26 @@
 .gmk-bingsu-key {
   background: #946777;
   color: $color-gmk-abs-CP;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#946777, 4%);
+    color: lighten($color-gmk-abs-CP, 7%);
+    border-color: mix(#946777, lighten($color-gmk-abs-CP, 7%));
+  }
 }
 .gmk-bingsu-mod {
   background: #533d45;
   color: $color-gmk-abs-CP;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#533d45, 4%);
+    color: $color-gmk-abs-CP;
+    border-color: mix(#533d45, $color-gmk-abs-CP);
+  }
 }
 .gmk-bingsu-accent {
   background: $color-gmk-abs-CP;
