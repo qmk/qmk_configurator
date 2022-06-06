@@ -229,6 +229,31 @@
   color: #3d3635;
 }
 
+.gmk-calm-depths-key {
+  background: #2e3b51;
+  color: #22aabc;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2e3b51, 4%);
+    color: lighten(#22aabc, 6%);
+    border-color: mix(#2e3b51, lighten(#22aabc, 6%));
+  }
+}
+.gmk-calm-depths-mod {
+  background: #4a4f58;
+  color: #22aabc;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#4a4f58, 4%);
+    color: lighten(#22aabc, 7%);
+    border-color: mix(#4a4f58, lighten(#22aabc, 7%));
+  }
+}
+
 .gmk-camping-key {
   background: $color-sp-abs-WCK;
   color: $color-sp-abs-VF;
@@ -252,15 +277,6 @@
 .gmk-camping-accent {
   background: $color-sp-abs-RBC;
   color: $color-sp-abs-WCK;
-}
-
-.gmk-calm-depths-key {
-  background: #2e3b51;
-  color: #22aabc;
-}
-.gmk-calm-depths-mod {
-  background: #4a4f58;
-  color: #22aabc;
 }
 
 .gmk-deku-key {
