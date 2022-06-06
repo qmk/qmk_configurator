@@ -286,10 +286,26 @@
 .gmk-deku-key {
   background: #298286;
   color: #e5e1de;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#298286, 4%);
+    color: lighten(#e5e1de, 4%);
+    border-color: mix(#298286, lighten(#e5e1de, 4%));
+  }
 }
 .gmk-deku-mod {
   background: #e5e1de;
   color: #298286;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#e5e1de, 4%);
+    color: darken(#298286, 4%);
+    border-color: mix(#e5e1de, darken(#298286, 4%));
+  }
 }
 .gmk-deku-accent {
   background: #b03232;
