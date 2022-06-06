@@ -146,7 +146,9 @@
   background: #fff3ef;
   color: #3e728f;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: #fff3ef;
     color: darken(#3e728f, 9%);
     border-color: mix(#fff3ef, darken(#3e728f, 9%));
@@ -156,10 +158,12 @@
   background: #3e728f;
   color: #fb7279;
   input,
-  .key-contents {
-    background: darken(#3e728f, 17%);
-    color: lighten(#fb7279, 17%);
-    border-color: mix(#3e728f, lighten(#fb7279, 17%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#3e728f, 4%);
+    color: lighten(#fb7279, 20%);
+    border-color: mix(#3e728f, lighten(#fb7279, 20%));
   }
 }
 .gmk-bento-accent {
