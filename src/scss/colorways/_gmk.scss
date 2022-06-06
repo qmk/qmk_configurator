@@ -316,8 +316,10 @@
   background: $color-gmk-abs-CC;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-CC, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-CC, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
   }
@@ -326,8 +328,10 @@
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-N9, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
   }
