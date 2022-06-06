@@ -70,15 +70,25 @@
 .gmk-alter-key {
   background: #2b2c42;
   color: #bb1e10;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2b2c42, 4%);
+    color: lighten(#bb1e10, 22%);
+    border-color: mix(darken(#2b2c42, 4%), lighten(#bb1e10, 22%));
+  }
 }
 .gmk-alter-mod {
   background: #312f36;
   color: #bb1e10;
   input,
-  .key-contents {
-    background: darken(#312f36, 8%);
-    color: lighten(#bb1e10, 0%);
-    border-color: mix(#312f36, lighten(#bb1e10, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#312f36, 4%);
+    color: lighten(#bb1e10, 23%);
+    border-color: mix(darken(#312f36, 4%), lighten(#bb1e10, 23%));
   }
 }
 
