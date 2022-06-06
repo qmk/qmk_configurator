@@ -117,7 +117,8 @@ export default {
           .replace(/Dcs/, 'DCS')
           .replace(/Dev Tty/, '/dev/tty')
           .replace(/ ?Plus/g, '+')
-          .replace(/ ?Dot ?/g, '\.');
+          .replace(/ ?Dot ?/g, '\.')
+          .replace(/Ascii/, 'ASCII');
       });
     },
     redditPost() {

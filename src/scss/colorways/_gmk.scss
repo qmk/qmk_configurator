@@ -132,6 +132,14 @@
 .gmk-ascii-mod {
   background: $color-gmk-abs-2B;
   color: $color-gmk-abs-2M;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-2B, 6%);
+    color: lighten($color-gmk-abs-2M, 10%);
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-2M);
+  }
 }
 
 .gmk-bento-key {
