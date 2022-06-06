@@ -95,11 +95,27 @@
 .gmk-analog-dreams-key {
   background: $color-gmk-abs-L9;
   color: #ac4fc6;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 8%);
+    color: darken(#ac4fc6, 8%);
+    border-color: mix($color-gmk-abs-L9, #ac4fc6);
+  }
 }
 
 .gmk-analog-dreams-mod {
   background: #9de7d7;
   color: #ac4fc6;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#9de7d7, 8%);
+    color: darken(#ac4fc6, 8%);
+    border-color: mix(#9de7d7, #ac4fc6);
+  }
 }
 
 .gmk-analog-dreams-esc {
