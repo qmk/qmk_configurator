@@ -525,7 +525,9 @@
   background: rgb(193, 199, 215);
   color: rgb(54, 71, 92);
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: lighten(#c7e6f5, 5%);
     color: darken(#f54730, 26%);
     border-color: mix(#c7e6f5, darken(#f54730, 26%));
@@ -535,7 +537,9 @@
   background: rgb(54, 71, 92);
   color: rgb(192, 208, 54);
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: darken(rgb(54, 71, 92), 14%);
     color: lighten(rgb(192, 208, 54), 14%);
     border-color: mix(rgb(54, 71, 92), lighten(rgb(192, 208, 54), 14%));
