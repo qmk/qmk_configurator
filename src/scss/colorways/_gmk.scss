@@ -985,8 +985,10 @@
   background: $color-gmk-abs-CP;
   color: #363434;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: #363434;
     border-color: mix($color-gmk-abs-CP, #363434);
   }
@@ -995,9 +997,11 @@
   background: #363434;
   color: #e8c4b8;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#363434, 4%);
     color: #e8c4b8;
-    background: darken(#363434, 10%);
     border-color: mix(#363434, #e8c4b8);
   }
 }
