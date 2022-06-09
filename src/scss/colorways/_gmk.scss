@@ -929,13 +929,18 @@
   background: $color-pantone-533C;
 }
 
-.gmk-nines-key {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-U9;
-}
+.gmk-nines-key,
 .gmk-nines-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-U9;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
+    color: lighten($color-gmk-abs-U9, 10%);
+    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-U9);
+  }
 }
 .gmk-nines-accent {
   background: $color-gmk-abs-U9;
