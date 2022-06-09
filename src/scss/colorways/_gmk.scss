@@ -736,8 +736,10 @@
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-TU1;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: darken($color-gmk-abs-TU1, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-TU1, 5%));
   }
@@ -746,9 +748,11 @@
   background: $color-gmk-abs-TU1;
   color: $color-gmk-abs-N6;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-TU1, 10%);
-    color: $color-gmk-abs-N6;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-TU1, 4%);
+    color: lighten($color-gmk-abs-N6, 24%);
     border-color: mix($color-gmk-abs-TU1, $color-gmk-abs-N6);
   }
 }
