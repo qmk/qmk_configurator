@@ -586,20 +586,27 @@
   background: $color-pantone-536C;
   color: $color-pantone-2378C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-536C, 10%);
-    color: darken($color-pantone-2378C, 5%);
-    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-536C, 4%);
+    color: darken($color-pantone-2378C, 11%);
+    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 11%));
   }
 }
 .gmk-hammerhead-light-mod {
   background: $color-pantone-2378C;
   color: $color-pantone-3258C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-2378C, 10%);
-    color: darken($color-pantone-3258C, 5%);
-    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-2378C, 4%);
+    color: lighten($color-pantone-3258C, 22.1%);
+    border-color: mix(
+      $color-pantone-2378C,
+      lighten($color-pantone-3258C, 22.1%)
+    );
   }
 }
 .gmk-hammerhead-light-accent {
