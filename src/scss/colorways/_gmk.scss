@@ -618,8 +618,11 @@
 .gmk-handarbeit-plus-mod {
   background: $color-gmk-abs-P3;
   color: $color-gmk-abs-WS1;
-  input, .key-contents, .key-contents:empty, .key-contents::before {
-    background: $color-gmk-abs-P3;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-P3, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-P3, $color-gmk-abs-WS1);
   }
@@ -668,20 +671,24 @@
   background: $color-gmk-abs-WS1;
   color: darken($color-pantone-2346C, 10%);
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-WS1, 7%);
-    color: lighten($color-pantone-2346C, 0%);
-    border-color: mix($color-gmk-abs-WS1, lighten($color-pantone-2346C, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-WS1, 4%);
+    color: darken($color-pantone-2346C, 33%);
+    border-color: mix($color-gmk-abs-WS1, darken($color-pantone-2346C, 4%));
   }
 }
 .gmk-hazakura-mod {
   background: $color-pantone-182C;
   color: darken($color-pantone-2346C, 10%);
   input,
-  .key-contents {
-    background: darken($color-pantone-182C, 5%);
-    color: lighten($color-pantone-2346C, 0%);
-    border-color: mix($color-pantone-182C, lighten($color-pantone-2346C, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-182C, 4%);
+    color: darken($color-pantone-2346C, 30%);
+    border-color: mix($color-pantone-182C, darken($color-pantone-2346C, 30%));
   }
 }
 .gmk-hazakura-accent {
