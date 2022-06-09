@@ -480,6 +480,14 @@
 .gmk-fro-dot-yo-mod {
   background: $color-gmk-abs-L9;
   color: $color-gmk-abs-2B;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: darken($color-gmk-abs-2B, 8%);
+    border-color: mix($color-gmk-abs-L9, darken($color-gmk-abs-N9, 7%));
+  }
 }
 .gmk-fro-dot-yo-rdp {
   background: $color-gmk-abs-L9;
@@ -496,6 +504,14 @@
 .gmk-fro-dot-yo-ppl {
   background: $color-gmk-abs-L9;
   color: $color-pantone-2088C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: darken($color-pantone-2088C, 6%);
+    border-color: mix($color-gmk-abs-L9, darken($color-pantone-2088C, 6%));
+  }
 }
 .gmk-fro-dot-yo-ylw {
   background: $color-gmk-abs-L9;
