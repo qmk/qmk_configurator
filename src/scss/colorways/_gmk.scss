@@ -427,13 +427,18 @@
   // placeholder
 }
 
-.gmk-dualshot-key {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: darken($color-gmk-abs-N9, 12%);
-}
+.gmk-dualshot-key,
 .gmk-dualshot-mod {
   background: darken($color-gmk-abs-2B, 5%);
   color: darken($color-gmk-abs-N9, 12%);
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-gmk-abs-2B;
+    color: darken($color-gmk-abs-N9, 18%);
+    border-color: mix($color-gmk-abs-2B, darken($color-gmk-abs-N9, 12%));
+  }
 }
 .gmk-dualshot-mod2 {
   background: darken($color-gmk-abs-2B, 5%);
