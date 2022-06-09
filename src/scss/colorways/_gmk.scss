@@ -1012,13 +1012,18 @@
 .gmk-olivia-kb {
 }
 
-.gmk-olivia-plus-plus-dark-key {
-  background: #2b2b2b;
-  color: #f1beb0;
-}
+.gmk-olivia-plus-plus-dark-key,
 .gmk-olivia-plus-plus-dark-mod {
   background: #2b2b2b;
   color: #f1beb0;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2b2b2b, 4%);
+    color: #f1beb0;
+    border-color: mix(#2b2b2b, #f1beb0);
+  }
 }
 .gmk-olivia-plus-plus-dark-accent {
   background: #f1beb0;
