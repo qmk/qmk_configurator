@@ -1058,20 +1058,24 @@
   background: #ded0af;
   color: #736b7c;
   input,
-  .key-contents {
-    background: lighten(#ded0af, 13%);
-    color: darken(#736b7c, 13%);
-    border-color: mix(#ded0af, darken(#736b7c, 13%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ded0af, 4%);
+    color: darken(#736b7c, 4%);
+    border-color: mix(#ded0af, darken(#736b7c, 4%));
   }
 }
 .gmk-plum-mod {
   background: #736b7c;
   color: #ded0af;
   input,
-  .key-contents {
-    background: darken(#736b7c, 13%);
-    color: lighten(#ded0af, 13%);
-    border-color: mix(#736b7c, lighten(#ded0af, 13%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#736b7c, 4%);
+    color: lighten(#ded0af, 8%);
+    border-color: mix(#736b7c, lighten(#ded0af, 8%));
   }
 }
 .gmk-plum-accent {
