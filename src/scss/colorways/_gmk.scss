@@ -1033,13 +1033,18 @@
   // placeholder
 }
 
-.gmk-phosphorous-key {
-  background: $color-pantone-11C;
-  color: $color-pantone-311C;
-}
+.gmk-phosphorous-key,
 .gmk-phosphorous-mod {
   background: $color-pantone-11C;
   color: $color-pantone-311C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-11C, 4%);
+    color: lighten($color-pantone-311C, 4%);
+    border-color: mix($color-pantone-11C, $color-pantone-311C);
+  }
 }
 .gmk-phosphorous-accent {
   background: $color-pantone-311C;
