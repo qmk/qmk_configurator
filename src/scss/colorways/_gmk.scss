@@ -897,9 +897,11 @@
   background: $color-pantone-534C;
   color: $color-gmk-abs-TU2;
   input,
-  .key-contents {
-    background: darken($color-pantone-534C, 10%);
-    color: lighten($color-gmk-abs-TU2, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-534C, 4%);
+    color: lighten($color-gmk-abs-TU2, 9%);
     border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
   }
 }
@@ -907,8 +909,10 @@
   background: $color-pantone-533C;
   color: $color-gmk-abs-N6;
   input,
-  .key-contents {
-    background: darken($color-pantone-533C, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-533C, 4%);
     color: $color-gmk-abs-N6;
     border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
   }
