@@ -868,9 +868,11 @@
   background: #c2d9e4;
   color: #444f58;
   input,
-  .key-contents {
-    background: darken(#c2d9e4, 10%);
-    color: #444f58;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#c2d9e4, 4%);
+    color: darken(#444f58, 4%);
     border-color: mix(#c2d9e4, #444f58);
   }
 }
@@ -878,8 +880,10 @@
   background: #444f58;
   color: #f7eee3;
   input,
-  .key-contents {
-    background: darken(#444f58, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#444f58, 4%);
     color: #f7eee3;
     border-color: mix(#444f58, #f7eee3);
   }
