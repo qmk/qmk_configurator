@@ -798,13 +798,18 @@
   // placeholder
 }
 
-.gmk-metropolis-base-key {
-  background: $color-pantone-5395C;
-  color: $color-pantone-333C;
-}
+.gmk-metropolis-base-key,
 .gmk-metropolis-base-mod {
   background: $color-pantone-5395C;
   color: $color-pantone-333C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-5395C, 4%);
+    color: $color-pantone-333C;
+    border-color: mix($color-pantone-5395C, $color-pantone-333C);
+  }
 }
 .gmk-metropolis-base-mod2 {
   background: $color-pantone-5395C;
@@ -825,6 +830,14 @@
 .gmk-metropolis-base-accent3 {
   background: $color-pantone-179C;
   color: $color-pantone-5395C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-179C, 4%);
+    color: $color-pantone-5395C;
+    border-color: mix($color-pantone-179C, $color-pantone-5395C);
+  }
 }
 .gmk-metropolis-base-kb {
   // placeholder
