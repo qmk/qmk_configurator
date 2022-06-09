@@ -700,8 +700,10 @@
   background: #84172c;
   color: #ece4d0;
   input,
-  .key-contents {
-    background: darken(#84172c, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#84172c, 4%);
     color: #ece4d0;
     border-color: mix(#84172c, #ece4d0);
   }
@@ -710,10 +712,12 @@
   background: #ac2c32;
   color: #ece4d0;
   input,
-  .key-contents {
-    background: darken(#ac2c32, 10%);
-    color: #ece4d0;
-    border-color: mix(darken(#ac2c32, 10%), #ece4d0);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#ac2c32, 4%);
+    color: lighten(#ece4d0, 9%);
+    border-color: mix(#ac2c32, lighten(#ece4d0, 9%));
   }
 }
 .gmk-jamon-accent {
