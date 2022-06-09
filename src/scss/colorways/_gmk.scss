@@ -954,8 +954,10 @@
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: darken($color-gmk-abs-V4, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
   }
@@ -964,10 +966,12 @@
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-V4;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-U9, 10%);
-    color: darken($color-gmk-abs-V4, 15%);
-    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-U9, 4%);
+    color: darken($color-gmk-abs-V4, 18%);
+    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 18%));
   }
 }
 .gmk-olivetti-accent {
