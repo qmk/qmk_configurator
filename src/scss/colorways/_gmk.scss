@@ -1164,8 +1164,10 @@
   background: $color-gmk-abs-3K;
   color: $color-gmk-abs-N7;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-3K, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-3K, 4%);
     color: darken($color-gmk-abs-N7, 10%);
     border-color: mix($color-gmk-abs-3K, darken($color-gmk-abs-N7, 10%));
   }
@@ -1174,10 +1176,12 @@
   background: $color-gmk-abs-AE;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-AE, 17%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-AE, 4%);
+    color: lighten($color-gmk-abs-CP, 14%);
+    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 14%));
   }
 }
 .gmk-ta-royal-alpha-accent {
