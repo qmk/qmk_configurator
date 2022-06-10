@@ -1142,22 +1142,15 @@
 .gmk-space-cadet-kb {
 }
 
-.gmk-striker-key {
-  background: #004d7c;
-  color: $color-gmk-abs-WS1;
-  input,
-  .key-contents {
-    background: darken(#004d7c, 5%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix(#004d7c, $color-gmk-abs-WS1);
-  }
-}
+.gmk-striker-key,
 .gmk-striker-mod {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken(#004d7c, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#004d7c, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix(#004d7c, $color-gmk-abs-WS1);
   }
