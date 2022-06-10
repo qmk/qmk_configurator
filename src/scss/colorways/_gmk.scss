@@ -1271,20 +1271,24 @@
   background: #c7e6f5;
   color: #f54730;
   input,
-  .key-contents {
-    background: lighten(#c7e6f5, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#c7e6f5, 4%);
     color: darken(#f54730, 26%);
-    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+    border-color: mix(#c7e6f5, #f54730);
   }
 }
 .gmk-yuri-mod {
   background: #2d394c;
   color: #f54730;
   input,
-  .key-contents {
-    background: darken(#2d394c, 14%);
-    color: lighten(#f54730, 14%);
-    border-color: mix(#2d394c, lighten(#f54730, 14%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2d394c, 4%);
+    color: lighten(#f54730, 22%);
+    border-color: mix(#2d394c, #f54730);
   }
 }
 .gmk-yuri-accent {
