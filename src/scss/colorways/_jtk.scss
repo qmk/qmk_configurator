@@ -5,10 +5,12 @@
   background: #312c2b;
   color: #a79373;
   input,
-  .key-contents {
-    background: lighten(#312c2b, 10%);
-    color: darken(#a79373, 5%);
-    border-color: mix(#312c2b, darken(#a79373, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#312c2b, 4%);
+    color: lighten(#a79373, 10%);
+    border-color: mix(#312c2b, #a79373);
   }
 }
 
