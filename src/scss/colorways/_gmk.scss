@@ -1087,8 +1087,10 @@
   background: #ece4d0;
   color: #333732;
   input,
-  .key-contents {
-    background: lighten(#ece4d0, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ece4d0, 4%);
     color: #333732;
     border-color: mix(#ece4d0, #333732);
   }
@@ -1097,8 +1099,10 @@
   background: #ffcd00;
   color: #333732;
   input,
-  .key-contents {
-    background: lighten(#ffcd00, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ffcd00, 4%);
     color: #333732;
     border-color: mix(#ffcd00, #333732);
   }
