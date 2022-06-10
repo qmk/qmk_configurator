@@ -1197,10 +1197,12 @@
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-AE;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-N9, 10%);
-    color: lighten($color-gmk-abs-AE, 9%);
-    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 9%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
+    color: lighten($color-gmk-abs-AE, 20%);
+    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 20%));
   }
 }
 .gmk-terminal-accent {
