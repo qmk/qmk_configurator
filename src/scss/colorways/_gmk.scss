@@ -1221,9 +1221,11 @@
   color: $color-vaporwave-lighter-pink;
   font-weight: bold;
   input,
-  .key-contents {
-    background: lighten($color-vaporwave-lighter-lilac, 5%);
-    color: $color-vaporwave-lighter-pink;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-vaporwave-lighter-lilac, 4%);
+    color: lighten($color-vaporwave-lighter-pink, 8%);
     border-color: mix(
       $color-vaporwave-lighter-lilac,
       $color-vaporwave-lighter-pink
@@ -1235,9 +1237,11 @@
   background-color: #6244bb;
   color: #00bce3;
   input,
-  .key-contents {
-    background: darken(#6244bb, 10%);
-    color: #00bce3;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#6244bb, 4%);
+    color: lighten(#00bce3, 12%);
     border-color: mix(#6244bb, #00bce3);
   }
 }
