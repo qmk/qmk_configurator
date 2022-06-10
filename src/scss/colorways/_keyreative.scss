@@ -55,19 +55,23 @@
   background: $color-gmk-abs-2M;
   color: $color-gmk-abs-DY;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-2M, 10%);
-    color: lighten($color-gmk-abs-DY, 5%);
-    border-color: mix($color-gmk-abs-2M, lighten($color-gmk-abs-DY, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-2M, 6%);
+    color: darken($color-gmk-abs-DY, 7%);
+    border-color: mix($color-gmk-abs-2M, $color-gmk-abs-DY);
   }
 }
 .kat-hyperfuse-mod {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-TU2;
+  background: darken($color-gmk-abs-2B, 6%);
+  color: lighten($color-gmk-abs-TU2, 6%);
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-2B, 10%);
-    color: $color-gmk-abs-TU2;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-2B, 12%);
+    color: lighten($color-gmk-abs-TU2, 12%);
     border-color: mix($color-gmk-abs-2B, $color-gmk-abs-TU2);
   }
 }
