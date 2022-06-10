@@ -1118,10 +1118,12 @@
   background: $color-sp-abs-GD;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-GD, 10%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GD, 4%);
+    color: lighten($color-gmk-abs-CP, 4%);
+    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 4%));
   }
 }
 
@@ -1129,10 +1131,12 @@
   background: $color-sp-abs-BFP;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BFP, 10%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BFP, 4%);
+    color: lighten($color-gmk-abs-CP, 4%);
+    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 4%));
   }
 }
 .gmk-space-cadet-kb {
