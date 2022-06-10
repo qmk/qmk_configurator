@@ -1251,22 +1251,15 @@
   color: #6244bb;
 }
 
-.gmk-wob-key {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-WS1;
-  input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CR, 10%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
-  }
-}
+.gmk-wob-key,
 .gmk-wob-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CR, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-CR, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
   }
