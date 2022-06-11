@@ -3,11 +3,27 @@
 .gmk-8008-key {
   background: #8d98a7;
   color: #313943;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#8d98a7, 8%);
+    color: darken(#313943, 9%);
+    border-color: mix(#8d98a7, #313943);
+  }
 }
 
 .gmk-8008-mod {
   background: #313943;
   color: #fe5487;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#313943, 4%);
+    color: lighten(#fe5487, 15%);
+    border-color: mix(darken(#313943, 4%), lighten(#fe5487, 15%));
+  }
 }
 
 .gmk-8008-accent {
@@ -18,11 +34,27 @@
 .gmk-9009-key {
   background: $color-gmk-abs-L9;
   color: $color-gmk-abs-CR;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: $color-gmk-abs-CR;
+    border-color: mix(lighten($color-gmk-abs-L9, 4%), $color-gmk-abs-CR);
+  }
 }
 
 .gmk-9009-mod {
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-CR;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-U9, 4%);
+    color: $color-gmk-abs-CR;
+    border-color: mix(lighten($color-gmk-abs-U9, 4%), $color-gmk-abs-CR);
+  }
 }
 
 .gmk-9009-esc {
@@ -38,26 +70,52 @@
 .gmk-alter-key {
   background: #2b2c42;
   color: #bb1e10;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2b2c42, 4%);
+    color: lighten(#bb1e10, 22%);
+    border-color: mix(darken(#2b2c42, 4%), lighten(#bb1e10, 22%));
+  }
 }
 .gmk-alter-mod {
   background: #312f36;
   color: #bb1e10;
   input,
-  .key-contents {
-    background: darken(#312f36, 8%);
-    color: lighten(#bb1e10, 0%);
-    border-color: mix(#312f36, lighten(#bb1e10, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#312f36, 4%);
+    color: lighten(#bb1e10, 23%);
+    border-color: mix(darken(#312f36, 4%), lighten(#bb1e10, 23%));
   }
 }
 
 .gmk-analog-dreams-key {
   background: $color-gmk-abs-L9;
   color: #ac4fc6;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 8%);
+    color: darken(#ac4fc6, 8%);
+    border-color: mix($color-gmk-abs-L9, #ac4fc6);
+  }
 }
 
 .gmk-analog-dreams-mod {
   background: #9de7d7;
   color: #ac4fc6;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#9de7d7, 8%);
+    color: darken(#ac4fc6, 8%);
+    border-color: mix(#9de7d7, #ac4fc6);
+  }
 }
 
 .gmk-analog-dreams-esc {
@@ -74,13 +132,23 @@
 .gmk-ascii-mod {
   background: $color-gmk-abs-2B;
   color: $color-gmk-abs-2M;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-2B, 6%);
+    color: lighten($color-gmk-abs-2M, 10%);
+    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-2M);
+  }
 }
 
 .gmk-bento-key {
   background: #fff3ef;
   color: #3e728f;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: #fff3ef;
     color: darken(#3e728f, 9%);
     border-color: mix(#fff3ef, darken(#3e728f, 9%));
@@ -90,10 +158,12 @@
   background: #3e728f;
   color: #fb7279;
   input,
-  .key-contents {
-    background: darken(#3e728f, 17%);
-    color: lighten(#fb7279, 17%);
-    border-color: mix(#3e728f, lighten(#fb7279, 17%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#3e728f, 4%);
+    color: lighten(#fb7279, 20%);
+    border-color: mix(#3e728f, lighten(#fb7279, 20%));
   }
 }
 .gmk-bento-accent {
@@ -104,10 +174,26 @@
 .gmk-bingsu-key {
   background: #946777;
   color: $color-gmk-abs-CP;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#946777, 4%);
+    color: lighten($color-gmk-abs-CP, 7%);
+    border-color: mix(#946777, lighten($color-gmk-abs-CP, 7%));
+  }
 }
 .gmk-bingsu-mod {
   background: #533d45;
   color: $color-gmk-abs-CP;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#533d45, 4%);
+    color: $color-gmk-abs-CP;
+    border-color: mix(#533d45, $color-gmk-abs-CP);
+  }
 }
 .gmk-bingsu-accent {
   background: $color-gmk-abs-CP;
@@ -117,23 +203,66 @@
 .gmk-cafe-key {
   background: $color-gmk-abs-L9;
   color: #3d3635;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: #3d3635;
+    border-color: mix($color-gmk-abs-L9, #3d3635);
+  }
 }
 .gmk-cafe-mod {
   background: #3d3635;
   color: $color-gmk-abs-L9;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#3d3635, 4%);
+    color: $color-gmk-abs-L9;
+    border-color: mix(#3d3635, $color-gmk-abs-L9);
+  }
 }
 .gmk-cafe-accent {
   background: #d0b084;
   color: #3d3635;
 }
 
+.gmk-calm-depths-key {
+  background: #2e3b51;
+  color: #22aabc;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2e3b51, 4%);
+    color: lighten(#22aabc, 6%);
+    border-color: mix(#2e3b51, lighten(#22aabc, 6%));
+  }
+}
+.gmk-calm-depths-mod {
+  background: #4a4f58;
+  color: #22aabc;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#4a4f58, 4%);
+    color: lighten(#22aabc, 7%);
+    border-color: mix(#4a4f58, lighten(#22aabc, 7%));
+  }
+}
+
 .gmk-camping-key {
   background: $color-sp-abs-WCK;
   color: $color-sp-abs-VF;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-WCK, 10%);
-    color: $color-sp-abs-VF;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-sp-abs-WCK, 4%);
+    color: darken($color-sp-abs-VF, 6%);
     border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
   }
 }
@@ -141,9 +270,11 @@
   background: $color-sp-abs-VF;
   color: $color-sp-abs-WCK;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-VF, 10%);
-    color: $color-sp-abs-WCK;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-VF, 4%);
+    color: lighten($color-sp-abs-WCK, 4%);
     border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
   }
 }
@@ -152,22 +283,29 @@
   color: $color-sp-abs-WCK;
 }
 
-.gmk-calm-depths-key {
-  background: #2e3b51;
-  color: #22aabc;
-}
-.gmk-calm-depths-mod {
-  background: #4a4f58;
-  color: #22aabc;
-}
-
 .gmk-deku-key {
   background: #298286;
   color: #e5e1de;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#298286, 4%);
+    color: lighten(#e5e1de, 4%);
+    border-color: mix(#298286, lighten(#e5e1de, 4%));
+  }
 }
 .gmk-deku-mod {
   background: #e5e1de;
   color: #298286;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#e5e1de, 4%);
+    color: darken(#298286, 4%);
+    border-color: mix(#e5e1de, darken(#298286, 4%));
+  }
 }
 .gmk-deku-accent {
   background: #b03232;
@@ -178,8 +316,10 @@
   background: $color-gmk-abs-CC;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-CC, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-CC, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
   }
@@ -188,8 +328,10 @@
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-N9, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
   }
@@ -200,10 +342,26 @@
 .gmk-dracula-key {
   background: #44475a;
   color: #f8f8f2;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#44475a, 4%);
+    color: #f8f8f2;
+    border-color: mix(#44475a, #f8f8f2);
+  }
 }
 .gmk-dracula-mod {
   background: #282a36;
   color: #f8f8f2;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#282a36, 4%);
+    color: #f8f8f2;
+    border-color: mix(#282a36, #f8f8f2);
+  }
 }
 .gmk-dracula-mod2 {
   background: #282a36;
@@ -224,6 +382,14 @@
 .gmk-dracula-mod6 {
   background: #282a36;
   color: #50fa7b;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#282a36, 4%);
+    color: #50fa7b;
+    border-color: mix(#282a36, #50fa7b);
+  }
 }
 .gmk-dracula-accent {
   background: #ff5555;
@@ -261,13 +427,18 @@
   // placeholder
 }
 
-.gmk-dualshot-key {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: darken($color-gmk-abs-N9, 12%);
-}
+.gmk-dualshot-key,
 .gmk-dualshot-mod {
   background: darken($color-gmk-abs-2B, 5%);
   color: darken($color-gmk-abs-N9, 12%);
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: $color-gmk-abs-2B;
+    color: darken($color-gmk-abs-N9, 18%);
+    border-color: mix($color-gmk-abs-2B, darken($color-gmk-abs-N9, 12%));
+  }
 }
 .gmk-dualshot-mod2 {
   background: darken($color-gmk-abs-2B, 5%);
@@ -309,6 +480,14 @@
 .gmk-fro-dot-yo-mod {
   background: $color-gmk-abs-L9;
   color: $color-gmk-abs-2B;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: darken($color-gmk-abs-2B, 8%);
+    border-color: mix($color-gmk-abs-L9, darken($color-gmk-abs-N9, 7%));
+  }
 }
 .gmk-fro-dot-yo-rdp {
   background: $color-gmk-abs-L9;
@@ -325,6 +504,14 @@
 .gmk-fro-dot-yo-ppl {
   background: $color-gmk-abs-L9;
   color: $color-pantone-2088C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-L9, 4%);
+    color: darken($color-pantone-2088C, 6%);
+    border-color: mix($color-gmk-abs-L9, darken($color-pantone-2088C, 6%));
+  }
 }
 .gmk-fro-dot-yo-ylw {
   background: $color-gmk-abs-L9;
@@ -338,7 +525,9 @@
   background: rgb(193, 199, 215);
   color: rgb(54, 71, 92);
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: lighten(#c7e6f5, 5%);
     color: darken(#f54730, 26%);
     border-color: mix(#c7e6f5, darken(#f54730, 26%));
@@ -348,7 +537,9 @@
   background: rgb(54, 71, 92);
   color: rgb(192, 208, 54);
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
     background: darken(rgb(54, 71, 92), 14%);
     color: lighten(rgb(192, 208, 54), 14%);
     border-color: mix(rgb(54, 71, 92), lighten(rgb(192, 208, 54), 14%));
@@ -363,20 +554,27 @@
   background: $color-pantone-533C;
   color: $color-pantone-3258C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-2378C, 10%);
-    color: darken($color-pantone-3258C, 5%);
-    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-533C, 4%);
+    color: $color-pantone-3258C;
+    border-color: mix($color-pantone-533C, $color-pantone-3258C);
   }
 }
 .gmk-hammerhead-dark-mod {
   background: $color-pantone-2378C;
   color: $color-pantone-3258C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-2378C, 10%);
-    color: darken($color-pantone-3258C, 5%);
-    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-2378C, 4%);
+    color: lighten($color-pantone-3258C, 22.1%);
+    border-color: mix(
+      $color-pantone-2378C,
+      lighten($color-pantone-3258C, 22.1%)
+    );
   }
 }
 .gmk-hammerhead-dark-accent {
@@ -388,20 +586,27 @@
   background: $color-pantone-536C;
   color: $color-pantone-2378C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-536C, 10%);
-    color: darken($color-pantone-2378C, 5%);
-    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-536C, 4%);
+    color: darken($color-pantone-2378C, 11%);
+    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 11%));
   }
 }
 .gmk-hammerhead-light-mod {
   background: $color-pantone-2378C;
   color: $color-pantone-3258C;
   input,
-  .key-contents {
-    background: lighten($color-pantone-2378C, 10%);
-    color: darken($color-pantone-3258C, 5%);
-    border-color: mix($color-pantone-2378C, darken($color-pantone-3258C, 5%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-2378C, 4%);
+    color: lighten($color-pantone-3258C, 22.1%);
+    border-color: mix(
+      $color-pantone-2378C,
+      lighten($color-pantone-3258C, 22.1%)
+    );
   }
 }
 .gmk-hammerhead-light-accent {
@@ -409,13 +614,18 @@
   color: $color-pantone-2378C;
 }
 
-.gmk-handarbeit-plus-key {
-  background: $color-gmk-abs-P3;
-  color: $color-gmk-abs-WS1;
-}
+.gmk-handarbeit-plus-key,
 .gmk-handarbeit-plus-mod {
   background: $color-gmk-abs-P3;
   color: $color-gmk-abs-WS1;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-P3, 4%);
+    color: $color-gmk-abs-WS1;
+    border-color: mix($color-gmk-abs-P3, $color-gmk-abs-WS1);
+  }
 }
 .gmk-handarbeit-plus-accent {
   background: $color-gmk-abs-V4;
@@ -461,20 +671,24 @@
   background: $color-gmk-abs-WS1;
   color: darken($color-pantone-2346C, 10%);
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-WS1, 7%);
-    color: lighten($color-pantone-2346C, 0%);
-    border-color: mix($color-gmk-abs-WS1, lighten($color-pantone-2346C, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-WS1, 4%);
+    color: darken($color-pantone-2346C, 33%);
+    border-color: mix($color-gmk-abs-WS1, darken($color-pantone-2346C, 4%));
   }
 }
 .gmk-hazakura-mod {
   background: $color-pantone-182C;
   color: darken($color-pantone-2346C, 10%);
   input,
-  .key-contents {
-    background: darken($color-pantone-182C, 5%);
-    color: lighten($color-pantone-2346C, 0%);
-    border-color: mix($color-pantone-182C, lighten($color-pantone-2346C, 0%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-182C, 4%);
+    color: darken($color-pantone-2346C, 30%);
+    border-color: mix($color-pantone-182C, darken($color-pantone-2346C, 30%));
   }
 }
 .gmk-hazakura-accent {
@@ -486,8 +700,10 @@
   background: #84172c;
   color: #ece4d0;
   input,
-  .key-contents {
-    background: darken(#84172c, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#84172c, 4%);
     color: #ece4d0;
     border-color: mix(#84172c, #ece4d0);
   }
@@ -496,10 +712,12 @@
   background: #ac2c32;
   color: #ece4d0;
   input,
-  .key-contents {
-    background: darken(#ac2c32, 10%);
-    color: #ece4d0;
-    border-color: mix(darken(#ac2c32, 10%), #ece4d0);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#ac2c32, 4%);
+    color: lighten(#ece4d0, 9%);
+    border-color: mix(#ac2c32, lighten(#ece4d0, 9%));
   }
 }
 .gmk-jamon-accent {
@@ -518,8 +736,10 @@
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-TU1;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: darken($color-gmk-abs-TU1, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-TU1, 5%));
   }
@@ -528,9 +748,11 @@
   background: $color-gmk-abs-TU1;
   color: $color-gmk-abs-N6;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-TU1, 10%);
-    color: $color-gmk-abs-N6;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-TU1, 4%);
+    color: lighten($color-gmk-abs-N6, 24%);
     border-color: mix($color-gmk-abs-TU1, $color-gmk-abs-N6);
   }
 }
@@ -548,8 +770,10 @@
   background: $color-gmk-abs-WS1;
   color: $color-gmk-abs-CR;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-WS1, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-WS1, 4%);
     color: $color-gmk-abs-CR;
     border-color: mix($color-gmk-abs-WS1, $color-gmk-abs-CR);
   }
@@ -558,9 +782,10 @@
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    color: $color-gmk-abs-WS1;
-    background: lighten($color-gmk-abs-CR, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-CR, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
   }
@@ -573,13 +798,18 @@
   // placeholder
 }
 
-.gmk-metropolis-base-key {
-  background: $color-pantone-5395C;
-  color: $color-pantone-333C;
-}
+.gmk-metropolis-base-key,
 .gmk-metropolis-base-mod {
   background: $color-pantone-5395C;
   color: $color-pantone-333C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-5395C, 4%);
+    color: $color-pantone-333C;
+    border-color: mix($color-pantone-5395C, $color-pantone-333C);
+  }
 }
 .gmk-metropolis-base-mod2 {
   background: $color-pantone-5395C;
@@ -600,18 +830,31 @@
 .gmk-metropolis-base-accent3 {
   background: $color-pantone-179C;
   color: $color-pantone-5395C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-pantone-179C, 4%);
+    color: $color-pantone-5395C;
+    border-color: mix($color-pantone-179C, $color-pantone-5395C);
+  }
 }
 .gmk-metropolis-base-kb {
   // placeholder
 }
 
-.gmk-metropolis-midnight-key {
-  background: $color-pantone-5395C;
-  color: $color-pantone-333C;
-}
+.gmk-metropolis-midnight-key,
 .gmk-metropolis-midnight-mod {
   background: $color-pantone-5395C;
   color: $color-pantone-333C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-5395C, 4%);
+    color: $color-pantone-333C;
+    border-color: mix($color-pantone-5395C, $color-pantone-333C);
+  }
 }
 .gmk-metropolis-midnight-accent {
   background: $color-pantone-333C;
@@ -625,9 +868,11 @@
   background: #c2d9e4;
   color: #444f58;
   input,
-  .key-contents {
-    background: darken(#c2d9e4, 10%);
-    color: #444f58;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#c2d9e4, 4%);
+    color: darken(#444f58, 4%);
     border-color: mix(#c2d9e4, #444f58);
   }
 }
@@ -635,8 +880,10 @@
   background: #444f58;
   color: #f7eee3;
   input,
-  .key-contents {
-    background: darken(#444f58, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#444f58, 4%);
     color: #f7eee3;
     border-color: mix(#444f58, #f7eee3);
   }
@@ -650,9 +897,11 @@
   background: $color-pantone-534C;
   color: $color-gmk-abs-TU2;
   input,
-  .key-contents {
-    background: darken($color-pantone-534C, 10%);
-    color: lighten($color-gmk-abs-TU2, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-534C, 4%);
+    color: lighten($color-gmk-abs-TU2, 9%);
     border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
   }
 }
@@ -660,8 +909,10 @@
   background: $color-pantone-533C;
   color: $color-gmk-abs-N6;
   input,
-  .key-contents {
-    background: darken($color-pantone-533C, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-533C, 4%);
     color: $color-gmk-abs-N6;
     border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
   }
@@ -678,13 +929,18 @@
   background: $color-pantone-533C;
 }
 
-.gmk-nines-key {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-U9;
-}
+.gmk-nines-key,
 .gmk-nines-mod {
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-U9;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
+    color: lighten($color-gmk-abs-U9, 10%);
+    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-U9);
+  }
 }
 .gmk-nines-accent {
   background: $color-gmk-abs-U9;
@@ -698,8 +954,10 @@
   background: $color-gmk-abs-CP;
   color: $color-gmk-abs-V4;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: darken($color-gmk-abs-V4, 5%);
     border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
   }
@@ -708,10 +966,12 @@
   background: $color-gmk-abs-U9;
   color: $color-gmk-abs-V4;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-U9, 10%);
-    color: darken($color-gmk-abs-V4, 15%);
-    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 15%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-U9, 4%);
+    color: darken($color-gmk-abs-V4, 18%);
+    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 18%));
   }
 }
 .gmk-olivetti-accent {
@@ -725,8 +985,10 @@
   background: $color-gmk-abs-CP;
   color: #363434;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CP, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-CP, 4%);
     color: #363434;
     border-color: mix($color-gmk-abs-CP, #363434);
   }
@@ -735,9 +997,11 @@
   background: #363434;
   color: #e8c4b8;
   input,
-  .key-contents {
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#363434, 4%);
     color: #e8c4b8;
-    background: darken(#363434, 10%);
     border-color: mix(#363434, #e8c4b8);
   }
 }
@@ -748,13 +1012,18 @@
 .gmk-olivia-kb {
 }
 
-.gmk-olivia-plus-plus-dark-key {
-  background: #2b2b2b;
-  color: #f1beb0;
-}
+.gmk-olivia-plus-plus-dark-key,
 .gmk-olivia-plus-plus-dark-mod {
   background: #2b2b2b;
   color: #f1beb0;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2b2b2b, 4%);
+    color: #f1beb0;
+    border-color: mix(#2b2b2b, #f1beb0);
+  }
 }
 .gmk-olivia-plus-plus-dark-accent {
   background: #f1beb0;
@@ -764,13 +1033,18 @@
   // placeholder
 }
 
-.gmk-phosphorous-key {
-  background: $color-pantone-11C;
-  color: $color-pantone-311C;
-}
+.gmk-phosphorous-key,
 .gmk-phosphorous-mod {
   background: $color-pantone-11C;
   color: $color-pantone-311C;
+  input,
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-pantone-11C, 4%);
+    color: lighten($color-pantone-311C, 4%);
+    border-color: mix($color-pantone-11C, $color-pantone-311C);
+  }
 }
 .gmk-phosphorous-accent {
   background: $color-pantone-311C;
@@ -784,20 +1058,24 @@
   background: #ded0af;
   color: #736b7c;
   input,
-  .key-contents {
-    background: lighten(#ded0af, 13%);
-    color: darken(#736b7c, 13%);
-    border-color: mix(#ded0af, darken(#736b7c, 13%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ded0af, 4%);
+    color: darken(#736b7c, 4%);
+    border-color: mix(#ded0af, darken(#736b7c, 4%));
   }
 }
 .gmk-plum-mod {
   background: #736b7c;
   color: #ded0af;
   input,
-  .key-contents {
-    background: darken(#736b7c, 13%);
-    color: lighten(#ded0af, 13%);
-    border-color: mix(#736b7c, lighten(#ded0af, 13%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#736b7c, 4%);
+    color: lighten(#ded0af, 8%);
+    border-color: mix(#736b7c, lighten(#ded0af, 8%));
   }
 }
 .gmk-plum-accent {
@@ -809,8 +1087,10 @@
   background: #ece4d0;
   color: #333732;
   input,
-  .key-contents {
-    background: lighten(#ece4d0, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ece4d0, 4%);
     color: #333732;
     border-color: mix(#ece4d0, #333732);
   }
@@ -819,8 +1099,10 @@
   background: #ffcd00;
   color: #333732;
   input,
-  .key-contents {
-    background: lighten(#ffcd00, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#ffcd00, 4%);
     color: #333732;
     border-color: mix(#ffcd00, #333732);
   }
@@ -836,10 +1118,12 @@
   background: $color-sp-abs-GD;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-GD, 10%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-GD, 4%);
+    color: lighten($color-gmk-abs-CP, 4%);
+    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 4%));
   }
 }
 
@@ -847,31 +1131,26 @@
   background: $color-sp-abs-BFP;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-sp-abs-BFP, 10%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-sp-abs-BFP, 4%);
+    color: lighten($color-gmk-abs-CP, 4%);
+    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 4%));
   }
 }
 .gmk-space-cadet-kb {
 }
 
-.gmk-striker-key {
-  background: #004d7c;
-  color: $color-gmk-abs-WS1;
-  input,
-  .key-contents {
-    background: darken(#004d7c, 5%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix(#004d7c, $color-gmk-abs-WS1);
-  }
-}
+.gmk-striker-key,
 .gmk-striker-mod {
   background: #004d7c;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: darken(#004d7c, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#004d7c, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix(#004d7c, $color-gmk-abs-WS1);
   }
@@ -885,8 +1164,10 @@
   background: $color-gmk-abs-3K;
   color: $color-gmk-abs-N7;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-3K, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten($color-gmk-abs-3K, 4%);
     color: darken($color-gmk-abs-N7, 10%);
     border-color: mix($color-gmk-abs-3K, darken($color-gmk-abs-N7, 10%));
   }
@@ -895,10 +1176,12 @@
   background: $color-gmk-abs-AE;
   color: $color-gmk-abs-CP;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-AE, 17%);
-    color: lighten($color-gmk-abs-CP, 10%);
-    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 10%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-AE, 4%);
+    color: lighten($color-gmk-abs-CP, 14%);
+    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 14%));
   }
 }
 .gmk-ta-royal-alpha-accent {
@@ -914,10 +1197,12 @@
   background: $color-gmk-abs-N9;
   color: $color-gmk-abs-AE;
   input,
-  .key-contents {
-    background: darken($color-gmk-abs-N9, 10%);
-    color: lighten($color-gmk-abs-AE, 9%);
-    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 9%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-N9, 4%);
+    color: lighten($color-gmk-abs-AE, 20%);
+    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 20%));
   }
 }
 .gmk-terminal-accent {
@@ -936,9 +1221,11 @@
   color: $color-vaporwave-lighter-pink;
   font-weight: bold;
   input,
-  .key-contents {
-    background: lighten($color-vaporwave-lighter-lilac, 5%);
-    color: $color-vaporwave-lighter-pink;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-vaporwave-lighter-lilac, 4%);
+    color: lighten($color-vaporwave-lighter-pink, 8%);
     border-color: mix(
       $color-vaporwave-lighter-lilac,
       $color-vaporwave-lighter-pink
@@ -950,9 +1237,11 @@
   background-color: #6244bb;
   color: #00bce3;
   input,
-  .key-contents {
-    background: darken(#6244bb, 10%);
-    color: #00bce3;
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#6244bb, 4%);
+    color: lighten(#00bce3, 12%);
     border-color: mix(#6244bb, #00bce3);
   }
 }
@@ -962,22 +1251,15 @@
   color: #6244bb;
 }
 
-.gmk-wob-key {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-WS1;
-  input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CR, 10%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
-  }
-}
+.gmk-wob-key,
 .gmk-wob-mod {
   background: $color-gmk-abs-CR;
   color: $color-gmk-abs-WS1;
   input,
-  .key-contents {
-    background: lighten($color-gmk-abs-CR, 10%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken($color-gmk-abs-CR, 4%);
     color: $color-gmk-abs-WS1;
     border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
   }
@@ -989,20 +1271,24 @@
   background: #c7e6f5;
   color: #f54730;
   input,
-  .key-contents {
-    background: lighten(#c7e6f5, 5%);
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: lighten(#c7e6f5, 4%);
     color: darken(#f54730, 26%);
-    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+    border-color: mix(#c7e6f5, #f54730);
   }
 }
 .gmk-yuri-mod {
   background: #2d394c;
   color: #f54730;
   input,
-  .key-contents {
-    background: darken(#2d394c, 14%);
-    color: lighten(#f54730, 14%);
-    border-color: mix(#2d394c, lighten(#f54730, 14%));
+  .key-contents,
+  .key-contents:empty,
+  .key-contents::before {
+    background: darken(#2d394c, 4%);
+    color: lighten(#f54730, 22%);
+    border-color: mix(#2d394c, #f54730);
   }
 }
 .gmk-yuri-accent {
