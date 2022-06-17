@@ -1,7 +1,7 @@
 {
-  "keyboard": "mikeneko65/rev4",
+  "keyboard": "mikeneko65",
   "keymap": "default",
-  "commit": "f404ec329f62ef3978f78b516563619120557c8b",
+  "commit": "71b928fbecc42f8ed336776bb358756260407283",
   "layout": "LAYOUT_all",
   "layers": [
     [
