@@ -1,7 +1,7 @@
 {
   "keyboard": "adpenrose/kintsugi",
   "keymap": "default",
-  "commit": "36db7457b299d91f665f931a5f60bd059ada0210",
+  "commit": "de207b97fa2de4a66be407f8c43e6e5bae0723bc",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

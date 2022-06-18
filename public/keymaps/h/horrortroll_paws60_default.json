@@ -1,7 +1,7 @@
 {
   "keyboard": "horrortroll/paws60",
   "keymap": "default",
-  "commit": "ee67cdfeec17d80a90e5f47e80995a5bc27a1147",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
