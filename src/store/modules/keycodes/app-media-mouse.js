@@ -9,7 +9,12 @@ export default [
   { width: 1250 },
   { name: 'Exec', code: 'KC_EXEC', title: 'Execute' },
   { name: 'Help', code: 'KC_HELP', title: 'Help' },
-  { name: 'Menu', code: 'KC_MENU', title: 'Menu (Legacy)' },
+  {
+    name: 'Menu (Legacy)',
+    code: 'KC_MENU',
+    title: 'Menu (Legacy)',
+    width: 1250
+  },
   { name: 'Select', code: 'KC_SLCT', title: 'Select' },
   { name: 'Stop', code: 'KC_STOP', title: 'Stop' },
   { name: 'Again', code: 'KC_AGIN', title: 'Again' },
