@@ -1,0 +1,20 @@
+{
+  "keyboard": "spaceholdings/nebula12b",
+  "keymap": "default",
+  "commit": "1e643ba1d1fddf27113564e5ea9d8751cb9a9c01",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "MO(1)",   "KC_P0",   "KC_PDOT"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_PENT"
+    ]
+  ]
+}

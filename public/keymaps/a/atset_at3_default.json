@@ -1,0 +1,17 @@
+{
+  "keyboard": "atset/at3",
+  "keymap": "default",
+  "commit": "c725f6f7680b7d8f89974676ce46dd94b74431c0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_7",    "KC_8",    "KC_9"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}
