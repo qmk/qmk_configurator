@@ -1,0 +1,11 @@
+{
+  "keyboard": "massdrop/thekey_v2",
+  "keymap": "default",
+  "commit": "c10d0fc785a8c8972bc129c6db03e26360eddd45",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LCTL", "KC_C",    "KC_V"
+    ]
+  ]
+}
