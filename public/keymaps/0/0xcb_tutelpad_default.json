@@ -1,0 +1,12 @@
+{
+  "keyboard": "0xcb/tutelpad",
+  "keymap": "default",
+  "commit": "16c91e0cf2f01cc28b32c22d108e806538f7dba7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ]
+  ]
+}
