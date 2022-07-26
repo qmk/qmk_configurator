@@ -1,7 +1,7 @@
 {
   "keyboard": "boardsource/technik_o",
   "keymap": "default",
-  "commit": "400844453a48c63c0eb06ae6b5d714a1ac3918f3",
+  "commit": "2a3cd98fc6b362db82f0426229dfacf7c508e3f1",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

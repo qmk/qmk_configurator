@@ -1,0 +1,14 @@
+{
+  "keyboard": "rad",
+  "keymap": "default",
+  "commit": "c7e114e0bb1d8ecb76de632c93db165695f06873",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_SPC"
+    ]
+  ]
+}
