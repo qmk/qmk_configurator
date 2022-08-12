@@ -111,8 +111,12 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Input keys via keyboard without clicking each position.
 settingsPanel:fastInput:label,Fast Input
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,Display ISO legends by default
-settingsPanel:iso:label,Use ISO key legends
+settingsPanel:osKeyboardLayout:title,Host Keyboard Layout
+settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
+settingsPanel:osKeyboardLayout:label:keymap_us,English (US)
+settingsPanel:osKeyboardLayout:label:keymap_uk,English (UK)
+settingsPanel:osKeyboardLayout:label:keymap_german,German (Germany & Austria)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Russian
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Change the language of the user interface

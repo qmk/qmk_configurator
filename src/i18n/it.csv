@@ -111,8 +111,12 @@ settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
 settingsPanel:fastInput:label,Ingresso rapido
 settingsPanel:fastInput:title,Ctrl + Alt + F
-settingsPanel:iso:help,Visualizza le legende ISO automaticamente
-settingsPanel:iso:label,Usa le legende delle chiavi ISO
+settingsPanel:osKeyboardLayout:title,
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,Tedesco (Germania e Austria)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Russo
+settingsPanel:osKeyboardLayout:label:keymap_uk,Inglese (Regno Unito)
+settingsPanel:osKeyboardLayout:label:keymap_us,Inglese (US)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Cambia lingua dell'interfaccia utente

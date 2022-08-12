@@ -181,6 +181,9 @@ const mutations = {
   setDarkmode(state, value) {
     state.configuratorSettings.darkmodeEnabled = value;
   },
+  setOSKeyboardLayout(state, value) {
+    state.configuratorSettings.osKeyboardLayout = value;
+  },
   setIso(state, value) {
     state.configuratorSettings.iso = value;
   },

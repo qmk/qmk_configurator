@@ -111,8 +111,12 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,默认显示 ISO 图例
-settingsPanel:iso:label,使用 ISO 密钥图例
+settingsPanel:osKeyboardLayout:title,
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,德语（德国和奥地利）
+settingsPanel:osKeyboardLayout:label:keymap_russian,俄语
+settingsPanel:osKeyboardLayout:label:keymap_uk,英语（英国）
+settingsPanel:osKeyboardLayout:label:keymap_us,英语（美国）
 settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面语言

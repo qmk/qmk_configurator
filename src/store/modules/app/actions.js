@@ -136,6 +136,11 @@ const actions = {
     commit('setCurrentLanguage', lang);
     await dispatch('saveConfiguratorSettings');
   },
+  async changeOSKeyboardLayout({ dispatch, commit }, osLayout) {
+    commit('setOSKeyboardLayout', osLayout);
+    this.commit('keycodes/changeKeyLegends');
+    await dispatch('saveConfiguratorSettings');
+  },
   // if init state we just load and not toggling
   async toggleDarkMode({ commit, state, dispatch }, init) {
     let darkStatus = state.configuratorSettings.darkmodeEnabled;

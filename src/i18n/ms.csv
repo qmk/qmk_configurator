@@ -111,8 +111,12 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi.
 settingsPanel:fastInput:label,Input cepat
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,Paparkan lagenda ISO secara lalai
-settingsPanel:iso:label,Gunakan lagenda kunci ISO
+settingsPanel:osKeyboardLayout:title,
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,
+settingsPanel:osKeyboardLayout:label:keymap_russian,
+settingsPanel:osKeyboardLayout:label:keymap_uk,
+settingsPanel:osKeyboardLayout:label:keymap_us,
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,

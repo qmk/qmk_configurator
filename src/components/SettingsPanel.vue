@@ -93,6 +93,28 @@
       </div>
       <div>
         <label
+          class="settings-panel--text"
+          @mouseover="help('osKeyboardLayout')"
+          :title="$t('settingsPanel.osKeyboardLayout.title')"
+          >{{ $t('settingsPanel.osKeyboardLayout.title') }}</label
+        >
+      </div>
+      <div>
+        <select
+          id="setting-panel-os-keyboard-layout"
+          v-model="osKeyboardLayout"
+        >
+          <option
+            v-for="osLayout in osKeyboardLayouts"
+            :key="osLayout"
+            :value="osLayout"
+          >
+            {{ $t('settingsPanel.osKeyboardLayout.label.' + osLayout) }}
+          </option>
+        </select>
+      </div>
+      <div>
+        <label
           class="settings-panel--clear-keymap"
           @mouseover="help('clearLayer')"
           :title="$t('settingsPanel.clearLayer.title')"
@@ -108,24 +130,6 @@
             @change="clearLayerDefault"
           />
         </div>
-      </div>
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('iso')"
-          :title="$t('settingsPanel.iso.label')"
-          >{{ $t('settingsPanel.iso.label') }}</label
-        >
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-iso"
-          :value="configuratorSettings.iso"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="iso"
-        />
       </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
@@ -157,7 +161,8 @@ export default {
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
-      'languages'
+      'languages',
+      'osKeyboardLayouts'
     ]),
     language: {
       get() {
@@ -165,6 +170,14 @@ export default {
       },
       async set(value) {
         await this.changeLanguage(value);
+      }
+    },
+    osKeyboardLayout: {
+      get() {
+        return this.configuratorSettings.osKeyboardLayout;
+      },
+      async set(value) {
+        await this.changeOSKeyboardLayout(value);
       }
     }
   },
@@ -174,6 +187,7 @@ export default {
     ...mapActions('app', [
       'toggleDarkMode',
       'changeLanguage',
+      'changeOSKeyboardLayout',
       'toggleClearLayerDefault',
       'toggleIso'
     ]),
@@ -203,11 +217,14 @@ export default {
         case 'language':
           this.helpText = this.$t('settingsPanel.language.help');
           break;
-        case 'clearLayer':
-          this.helpText = this.$t('settingsPanel.clearLayer.help');
+        case 'osKeyboardLayout':
+          this.helpText = this.$t('settingsPanel.osKeyboardLayout.help');
           break;
         case 'iso':
           this.helpText = this.$t('settingsPanel.iso.help');
+          break;
+        case 'clearLayer':
+          this.helpText = this.$t('settingsPanel.clearLayer.help');
           break;
       }
 

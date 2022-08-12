@@ -15,7 +15,8 @@ function setDefaultConfiguratorSettings() {
     favoriteKeyboard: '',
     favoriteColor: '',
     clearLayerDefault: false,
-    iso: false
+    iso: false,
+    osKeyboardLayout: 'keymap_us'
   };
   localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
   return initialConfig;
@@ -74,6 +75,13 @@ const state = {
     { value: 'ru', label: 'Русский' },
     { value: 'ja', label: '日本語' },
     { value: 'zh-CN', label: '简体中文' }
+  ],
+  osKeyboardLayouts: [
+    // The labels are translatable strings
+    'keymap_us',
+    'keymap_uk',
+    'keymap_german',
+    'keymap_russian'
   ],
   snowflakes: false
 };
