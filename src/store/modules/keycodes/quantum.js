@@ -392,37 +392,37 @@ export default [
   { label: 'Special action keys', width: 'label' },
 
   {
-    name: 'Esc/~',
+    name: '` / ~\nEsc',
     code: 'QK_GESC',
-    title: 'Esc normally, but ~ when Shift or GUI is pressed'
+    title: 'Esc normally, but ` when GUI is active or ~ when Shift is active'
   },
   {
-    name: 'LS/(',
+    name: 'LS / (',
     code: 'KC_LSPO',
     title: 'Left Shift when held, ( when tapped'
   },
   {
-    name: 'RS/)',
+    name: 'RS / )',
     code: 'KC_RSPC',
     title: 'Right Shift when held, ) when tapped'
   },
   {
-    name: 'LC/(',
+    name: 'LC / (',
     code: 'KC_LCPO',
     title: 'Left Control when held, ( when tapped'
   },
   {
-    name: 'RC/)',
+    name: 'RC / )',
     code: 'KC_RCPC',
     title: 'Right Control when held, ) when tapped'
   },
   {
-    name: 'LA/(',
+    name: 'LA / (',
     code: 'KC_LAPO',
     title: 'Left Alt when held, ( when tapped'
   },
   {
-    name: 'RA/)',
+    name: 'RA / )',
     code: 'KC_RAPC',
     title: 'Right Alt when held, ) when tapped'
   },
