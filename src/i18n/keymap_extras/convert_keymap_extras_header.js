@@ -273,70 +273,38 @@ function convertLine(line, kcInfo, intl2us) {
   return line;
 }
 
-function generateMissingKcBsls(kcInfo) {
-  // If no explicit mapping for KC_BSLS exist, as is the case for many ISO layouts, fall
-  // back to the KC_NUHS mapping.
-  if (kcInfo.has('KC_BSLS')) {
-    return '';
+function generateMissingANSISOkeys(kcInfo) {
+  const fallbackKc = kcInfo.has('KC_BSLS') ? 'KC_BSLS' : 'KC_NUHS';
+  const missingKcs = ['KC_BSLS', 'KC_NUHS', 'KC_NUBS'].filter(
+    (kc) => !kcInfo.has(kc)
+  );
+  let missingKcInfoLines = [];
+  for (const missingKc of missingKcs) {
+    baseKcInfo = kcInfo.get(fallbackKc);
+    shiftedKcInfo = kcInfo.get(`S(${fallbackKc})`) || baseKcInfo;
+    if (baseKcInfo === undefined || shiftedKcInfo === undefined) {
+      throw new Error(
+        'The input file is missing a mapping to both KC_BSLS and KC_NUHS. At least one of them must be mapped to a locale alias!'
+      );
+    }
+    // Copy the KC_NUHS kc info object but replace the associated intl alias with KC_BSLS/KC_PIPE.
+    // Since it is pointless to repeat the US kc alias in the title, we only keep the clarification.
+    const missingKcInfo = {
+      ...baseKcInfo,
+      intlAlias: fallbackKc,
+      title: baseKcInfo.clarification
+    };
+    const missingShiftedKcInfo = {
+      ...shiftedKcInfo,
+      intlAlias: fallbackKc,
+      title: shiftedKcInfo.clarification
+    };
+    kcInfo.set(missingKc, missingKcInfo);
+    kcInfo.set(`S(${missingKc})`, missingShiftedKcInfo);
+    missingKcInfoLines.push(stringify(missingKc, missingKcInfo));
+    missingKcInfoLines.push(stringify(`S(${missingKc})`, missingShiftedKcInfo));
   }
-  if (!kcInfo.has('KC_NUHS')) {
-    throw new Error(
-      'The input file is missing a mapping to both KC_BSLS and KC_NUHS. At least one of them must be mapped to an locale alias!'
-    );
-  }
-  const kcNuhsInfo = kcInfo.get('KC_NUHS');
-  const shiftedNuhsInfo = kcInfo.get('S(KC_NUHS)');
-  // Copy the KC_NUHS kc info object but replace the associated intl alias with KC_BSLS/KC_PIPE.
-  // Since it is pointless to repeat the US kc alias in the title, we only keep the clarification.
-  const kcBslsInfo = {
-    ...kcNuhsInfo,
-    intlAlias: 'KC_BSLS',
-    title: kcNuhsInfo.clarification
-  };
-  const kcPipeInfo = {
-    ...shiftedNuhsInfo,
-    intlAlias: 'KC_PIPE',
-    title: shiftedNuhsInfo.clarification
-  };
-  kcInfo.set('KC_BSLS', kcBslsInfo);
-  kcInfo.set('S(KC_BSLS)', kcPipeInfo);
-  kcInfo.set('KC_PIPE', kcPipeInfo);
-  let bslsInfoLines = stringify('KC_BSLS', kcBslsInfo) + '\n';
-  bslsInfoLines += stringify('S(KC_BSLS)', kcPipeInfo) + '\n';
-  bslsInfoLines += stringify('KC_PIPE', kcPipeInfo);
-  return bslsInfoLines;
-}
-
-function generateMissingKcNuhs(kcInfo) {
-  // If no explicit mapping for KC_NUHS exist, as is the case for many ANSI layouts, fall
-  // back to the KC_BSLS mapping.
-  if (kcInfo.has('KC_NUHS')) {
-    return '';
-  }
-  if (!kcInfo.has('KC_BSLS')) {
-    throw new Error(
-      'The input file is missing a mapping to both KC_BSLS and KC_NUHS. At least one of them must be mapped to an locale alias!'
-    );
-  }
-  const kcBslsInfo = kcInfo.get('KC_BSLS');
-  const kcPipeInfo = kcInfo.get('S(KC_BSLS)');
-  // Copy the KC_BSLS kc info object but replace the associated intl alias with KC_NUHS.
-  // Since it is pointless to repeat the US kc alias in the title, we only keep the clarification.
-  const kcNuhsInfo = {
-    ...kcBslsInfo,
-    intlAlias: 'KC_NUHS',
-    title: kcBslsInfo.clarification
-  };
-  const shiftedNuhsInfo = {
-    ...kcPipeInfo,
-    intlAlias: 'S(KC_NUHS)',
-    title: kcPipeInfo.clarification
-  };
-  kcInfo.set('KC_NUHS', kcNuhsInfo);
-  kcInfo.set('S(KC_NUHS)', shiftedNuhsInfo);
-  let nuhsInfoLines = stringify('KC_NUHS', kcNuhsInfo) + '\n';
-  nuhsInfoLines += stringify('S(KC_NUHS)', shiftedNuhsInfo);
-  return nuhsInfoLines;
+  return missingKcInfoLines.join('\n');
 }
 
 function generateMissingShiftedAliasKcInfo(kcInfo) {
@@ -405,9 +373,7 @@ fs.readFile(process.argv.at(-1), 'utf8', function (err, data) {
     );
     console.log(convertedLines.join('\n'));
     console.log('/* Other keys */');
-    console.log(generateMissingKcBsls(kcInfo));
-    console.log(generateMissingKcNuhs(kcInfo));
-    console.log(generateMissingShiftedAliasKcInfo(kcInfo));
+    console.log(generateMissingANSISOkeys(kcInfo));
     spaceCadetKeycodes = [
       'KC_LSPO',
       'KC_RSPC',
