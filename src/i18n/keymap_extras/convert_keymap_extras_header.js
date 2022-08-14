@@ -291,12 +291,10 @@ function generateMissingANSISOkeys(kcInfo) {
     // Since it is pointless to repeat the US kc alias in the title, we only keep the clarification.
     const missingKcInfo = {
       ...baseKcInfo,
-      intlAlias: fallbackKc,
       title: baseKcInfo.clarification
     };
     const missingShiftedKcInfo = {
       ...shiftedKcInfo,
-      intlAlias: fallbackKc,
       title: shiftedKcInfo.clarification
     };
     kcInfo.set(missingKc, missingKcInfo);
@@ -316,7 +314,7 @@ function generateMissingShiftedAliasKcInfo(kcInfo) {
     const shiftedAliasKcInfo = {
       ...(kcInfo.get(shiftedKc) || kcInfo.get(extractBasicKc(shiftedKc)))
     };
-    shiftedAliasKcInfo.title = `S(${shiftedAliasKcInfo.title})`;
+    shiftedAliasKcInfo.title = `S(${shiftedAliasKcInfo.intlAlias})`;
     const letterRegExp = /^\p{L}$/u;
     if (letterRegExp.test(shiftedAliasKcInfo.keysym)) {
       shiftedAliasKcInfo.title += ` (capital ${shiftedAliasKcInfo.keysym})`;
@@ -374,6 +372,7 @@ fs.readFile(process.argv.at(-1), 'utf8', function (err, data) {
     console.log(convertedLines.join('\n'));
     console.log('/* Other keys */');
     console.log(generateMissingANSISOkeys(kcInfo));
+    console.log(generateMissingShiftedAliasKcInfo(kcInfo));
     spaceCadetKeycodes = [
       'KC_LSPO',
       'KC_RSPC',
