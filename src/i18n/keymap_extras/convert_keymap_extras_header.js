@@ -174,9 +174,9 @@ function computeKcInfo(lines, intl2us) {
     } else if (keysym.length === 1 && invisibleChar2readableName.has(keysym)) {
       readableKeysym = invisibleChar2readableName.get(keysym);
     }
-    if (keysym.length > 1) {
+    if (keysym.length > 3) {
       console.error(
-        `Warning: parsing the line below associated a keysym of length greater than 1 (${keysym}) to ${intlAlias} aka ${macroExpansion}. This may cause the key legend text to overflow.`
+        `Warning: parsing the line below associated a keysym of length greater than 3 (${keysym}) to ${intlAlias} aka ${macroExpansion}. This may cause the key legend text to overflow.`
       );
       console.error(fullMatch);
     }
