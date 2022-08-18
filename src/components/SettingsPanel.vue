@@ -105,7 +105,7 @@
           v-model="osKeyboardLayout"
         >
           <option
-            v-for="osLayout in osKeyboardLayouts"
+            v-for="osLayout in sortedOSKeyboardLayouts"
             :key="osLayout"
             :value="osLayout"
           >
@@ -179,6 +179,14 @@ export default {
       async set(value) {
         await this.changeOSKeyboardLayout(value);
       }
+    },
+    sortedOSKeyboardLayouts: function () {
+      // Locale-aware sort of the OS keyboard layouts by their labels.
+      const translatedLayoutName = (osLayout) =>
+        this.$t('settingsPanel.osKeyboardLayout.label.' + osLayout);
+      return [...this.osKeyboardLayouts].sort((a, b) =>
+        translatedLayoutName(a).localeCompare(translatedLayoutName(b))
+      );
     }
   },
   methods: {
