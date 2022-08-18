@@ -36,7 +36,7 @@ export default {
     prefix: 'UK',
     sendstring: 'uk',
     isANSI: false,
-    locales: ['en-UK', 'en-GB', 'en'],
+    locales: ['en-GB', 'en'],
     keycodeLUT: uk
   },
   keymap_german: {
