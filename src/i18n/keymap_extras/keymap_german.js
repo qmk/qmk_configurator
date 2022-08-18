@@ -167,10 +167,9 @@ export default {
   /* Other keys */
   KC_BSLS: { name: "'\n#", title: '' },
   'S(KC_BSLS)': { name: "'", title: '' },
-  KC_PIPE: { name: "'", title: '' },
-
   KC_LCBR: { name: 'Ü', title: 'S(DE_UDIA) (capital Ü)' },
   KC_COLN: { name: 'Ö', title: 'S(DE_ODIA) (capital Ö)' },
+  KC_PIPE: { name: "'", title: 'DE_QUOT' },
   KC_DQUO: { name: 'Ä', title: 'S(DE_ADIA) (capital Ä)' },
 
   KC_LSPO: { name: 'LS / )', title: 'Left Shift when held, ) when tapped' },

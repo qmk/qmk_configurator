@@ -142,9 +142,10 @@ export default {
   'ALGR(KC_8)': { name: '₽', title: 'RU_RUBL' },
 
   /* Other keys */
-
   KC_NUHS: { name: '/\n\\', title: '' },
   'S(KC_NUHS)': { name: '/', title: '' },
+  KC_NUBS: { name: '/\n\\', title: '' },
+  'S(KC_NUBS)': { name: '/', title: '' },
   KC_TILD: { name: 'Ё', title: 'S(RU_YO) (capital Ё)' },
   KC_LCBR: { name: 'Х', title: 'S(RU_HA) (capital Х)' },
   KC_RCBR: { name: 'Ъ', title: 'S(RU_HARD) (capital Ъ)' },

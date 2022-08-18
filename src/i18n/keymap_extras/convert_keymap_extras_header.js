@@ -314,7 +314,14 @@ function generateMissingShiftedAliasKcInfo(kcInfo) {
     const shiftedAliasKcInfo = {
       ...(kcInfo.get(shiftedKc) || kcInfo.get(extractBasicKc(shiftedKc)))
     };
-    shiftedAliasKcInfo.title = `S(${shiftedAliasKcInfo.intlAlias})`;
+    // In virtue of `generateMissingANSISOkeys`, the intlAlias of the kc info object associated
+    // to S(KC_BSLS)/KC_PIPE is already a shifted keycode to begin with, no need to surround it
+    // with `S()`.
+    if (shiftedAlias === 'KC_PIPE') {
+      shiftedAliasKcInfo.title = shiftedAliasKcInfo.intlAlias;
+    } else {
+      shiftedAliasKcInfo.title = `S(${shiftedAliasKcInfo.intlAlias})`;
+    }
     const letterRegExp = /^\p{L}$/u;
     if (letterRegExp.test(shiftedAliasKcInfo.keysym)) {
       shiftedAliasKcInfo.title += ` (capital ${shiftedAliasKcInfo.keysym})`;

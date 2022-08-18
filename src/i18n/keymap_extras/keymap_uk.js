@@ -168,7 +168,7 @@ export default {
   /* Other keys */
   KC_BSLS: { name: '~\n#', title: '' },
   'S(KC_BSLS)': { name: '~', title: '' },
-  KC_PIPE: { name: '~', title: '' },
+  KC_PIPE: { name: '~', title: 'UK_TILD' },
 
   KC_LSPO: { name: 'LS / (', title: 'Left Shift when held, ( when tapped' },
   KC_RSPC: { name: 'RS / )', title: 'Right Shift when held, ) when tapped' },
