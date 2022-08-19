@@ -69,7 +69,7 @@ export default {
   KC_SCLN: { name: 'ç\nò', title: 'IT_OGRV' },
   KC_QUOT: { name: '°\nà', title: 'IT_AGRV' },
   // Row 4
-  KC_NUBS: { name: '|\n(backslash, not physically present)', title: 'IT_BSLS' },
+  KC_NUBS: { name: '|\n\\', title: 'IT_BSLS' },
   KC_Z: { name: 'Z', title: 'IT_Z' },
   KC_X: { name: 'X', title: 'IT_X' },
   KC_C: { name: 'C', title: 'IT_C' },
@@ -134,7 +134,7 @@ export default {
   'S(KC_QUOT)': { name: '°', title: 'IT_DEG' },
   KC_DQUO: { name: '°', title: 'IT_DEG' },
   // Row 4
-  'S(KC_NUBS)': { name: '|', title: 'IT_PIPE (not physically present)' },
+  'S(KC_NUBS)': { name: '|', title: 'IT_PIPE' },
   'S(KC_COMM)': { name: ';', title: 'IT_SCLN' },
   KC_LT: { name: ';', title: 'IT_SCLN' },
   'S(KC_DOT)': { name: ':', title: 'IT_COLN' },
@@ -196,7 +196,7 @@ export default {
   'A(KC_QUOT)': { name: '#', title: 'IT_HASH' },
   'A(KC_BSLS)': { name: '¶', title: 'IT_PILC' },
   // Row 4
-  'A(KC_NUBS)': { name: '`', title: 'IT_GRV (not physically present)' },
+  'A(KC_NUBS)': { name: '`', title: 'IT_GRV' },
   'A(KC_Z)': { name: '∑', title: 'IT_NARS' },
   'A(KC_X)': { name: '†', title: 'IT_DAGG' },
   'A(KC_C)': { name: '©', title: 'IT_COPY' },
