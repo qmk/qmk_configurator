@@ -36,8 +36,8 @@ export default {
    */
   // Row 1
   KC_GRV: {
-    name: 'Zenkaku ↔ Hankaku ↔ Kanji',
-    title: 'JP_ZKHK (半角 ↔ 全角 ↔ 漢字)'
+    name: '半角 / 全角',
+    title: 'JP_ZKHK (半角 Zenkaku ↔ 全角 Hankaku ↔ 漢字 Kanji)'
   },
   KC_1: { name: '!\n1', title: 'JP_1' },
   KC_2: { name: '"\n2', title: 'JP_2' },
@@ -92,11 +92,11 @@ export default {
   KC_SLSH: { name: '?\n/', title: 'JP_SLSH' },
   KC_INT1: { name: '_\n\\', title: 'JP_BSLS' },
   // Row 5
-  KC_INT5: { name: 'Muhenkan', title: 'JP_MHEN (無変換)' },
-  KC_INT4: { name: 'Henkan', title: 'JP_HENK (変換)' },
+  KC_INT5: { name: '無変換', title: 'JP_MHEN (無変換 Muhenkan)' },
+  KC_INT4: { name: '変換', title: 'JP_HENK (変換 Henkan)' },
   KC_INT2: {
-    name: 'Katakana ↔ Hiragana ↔ Rōmaji',
-    title: 'JP_KANA (カタカナ ↔ ひらがな ↔ ローマ字)'
+    name: 'カタカナ\nひらがな',
+    title: 'JP_KANA (カタカナ Katakana ↔ ひらがな Hiragana ↔ ローマ字 Rōmaji)'
   },
 
   /* Shifted symbols
@@ -162,7 +162,7 @@ export default {
   'S(KC_BSLS)': { name: '}', title: '' },
   KC_NUBS: { name: '}\n]', title: '' },
   'S(KC_NUBS)': { name: '}', title: '' },
-  KC_TILD: { name: 'Zenkaku ↔ Hankaku ↔ Kanji', title: 'S(JP_ZKHK)' },
+  KC_TILD: { name: '半角 / 全角', title: 'S(JP_ZKHK)' },
   KC_RPRN: { name: '0', title: 'S(JP_0)' },
   KC_PIPE: { name: '}', title: 'JP_RCBR' },
 
@@ -174,7 +174,7 @@ export default {
   KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
   QK_GESC: {
-    name: 'Zenkaku ↔ Hankaku ↔ Kanji\nEsc',
+    name: '半角 / 全角\nEsc',
     title:
       'Esc normally, but Zenkaku ↔ Hankaku ↔ Kanji when Shift or GUI is active'
   }
