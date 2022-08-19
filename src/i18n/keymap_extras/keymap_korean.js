@@ -80,8 +80,8 @@ export default {
   KC_DOT: { name: '>\n.', title: 'KR_DOT' },
   KC_SLSH: { name: '?\n/', title: 'KR_SLSH' },
   // Row 5
-  KC_LNG2: { name: 'Hanja', title: 'KR_HANJ (한자)' },
-  KC_LNG1: { name: 'Han ↔ Yeong', title: 'KR_HAEN (한 ↔ 영)' },
+  KC_LNG2: { name: '한자', title: 'KR_HANJ (한자 Hanja)' },
+  KC_LNG1: { name: '한 / 영', title: 'KR_HAEN (한 Han ↔ 영 Yeong)' },
 
   /* Shifted symbols
    * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
