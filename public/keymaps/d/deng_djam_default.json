@@ -1,0 +1,13 @@
+{
+    "keyboard": "deng/djam",
+    "keymap": "default",
+    "commit": "ddae04bca129772d74bb87a29ef65dba94fb47e9",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+                       "KC_S",    "KC_D",    "KC_F",                                     "KC_J",    "KC_K",    "KC_L",
+            "KC_A",    "KC_Z",    "KC_X",    "KC_C",                                     "KC_N",    "KC_M",    "KC_COMM", "KC_SCLN",
+            "KC_LEFT", "KC_RGHT",                       "BL_TOGG", "KC_SPC",  "BL_STEP",                       "KC_UP",   "KC_DOWN"
+        ]
+    ]
+}
