@@ -38,251 +38,249 @@
  * Source: https://norme-azerty.fr
  */
 
-
-
-
-
 export default {
+  /*
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ @ │ à │ é │ è │ ê │ ( │ ) │ ‘ │ ’ │ « │ » │ ' │ ^ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │ A │ Z │ E │ R │ T │ Y │ U │ I │ O │ P │ - │ + │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │ Q │ S │ D │ F │ G │ H │ J │ K │ L │ M │ / │ * │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ < │ W │ X │ C │ V │ B │ N │ . │ , │ : │ ; │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  KC_GRV: { name: '#\n@', title: 'FR_AT' },
+  KC_1: { name: '1\nà', title: 'FR_AGRV' },
+  KC_2: { name: '2\né', title: 'FR_EACU' },
+  KC_3: { name: '3\nè', title: 'FR_EGRV' },
+  KC_4: { name: '4\nê', title: 'FR_ECIR' },
+  KC_5: { name: '5\n(', title: 'FR_LPRN' },
+  KC_6: { name: '6\n)', title: 'FR_RPRN' },
+  KC_7: { name: '7\n‘', title: 'FR_LSQU' },
+  KC_8: { name: '8\n’', title: 'FR_RSQU' },
+  KC_9: { name: '9\n«', title: 'FR_LDAQ' },
+  KC_0: { name: '0\n»', title: 'FR_RDAQ' },
+  KC_MINS: { name: '"\n\'', title: 'FR_QUOT' },
+  KC_EQL: { name: '¨\n^', title: 'FR_DCIR (dead)' },
+  // Row 2
+  KC_Q: { name: 'A', title: 'FR_A' },
+  KC_W: { name: 'Z', title: 'FR_Z' },
+  KC_E: { name: 'E', title: 'FR_E' },
+  KC_R: { name: 'R', title: 'FR_R' },
+  KC_T: { name: 'T', title: 'FR_T' },
+  KC_Y: { name: 'Y', title: 'FR_Y' },
+  KC_U: { name: 'U', title: 'FR_U' },
+  KC_I: { name: 'I', title: 'FR_I' },
+  KC_O: { name: 'O', title: 'FR_O' },
+  KC_P: { name: 'P', title: 'FR_P' },
+  KC_LBRC: { name: '–\n-', title: 'FR_MINS' },
+  KC_RBRC: { name: '±\n+', title: 'FR_PLUS' },
+  // Row 3
+  KC_A: { name: 'Q', title: 'FR_Q' },
+  KC_S: { name: 'S', title: 'FR_S' },
+  KC_D: { name: 'D', title: 'FR_D' },
+  KC_F: { name: 'F', title: 'FR_F' },
+  KC_G: { name: 'G', title: 'FR_G' },
+  KC_H: { name: 'H', title: 'FR_H' },
+  KC_J: { name: 'J', title: 'FR_J' },
+  KC_K: { name: 'K', title: 'FR_K' },
+  KC_L: { name: 'L', title: 'FR_L' },
+  KC_SCLN: { name: 'M', title: 'FR_M' },
+  KC_QUOT: { name: '\\\n/', title: 'FR_SLSH' },
+  KC_NUHS: { name: '½\n*', title: 'FR_ASTR' },
+  // Row 4
+  KC_NUBS: { name: '>\n<', title: 'FR_LABK' },
+  KC_Z: { name: 'W', title: 'FR_W' },
+  KC_X: { name: 'X', title: 'FR_X' },
+  KC_C: { name: 'C', title: 'FR_C' },
+  KC_V: { name: 'V', title: 'FR_V' },
+  KC_B: { name: 'B', title: 'FR_B' },
+  KC_N: { name: 'N', title: 'FR_N' },
+  KC_M: { name: '?\n.', title: 'FR_DOT' },
+  KC_COMM: { name: '!\n,', title: 'FR_COMM' },
+  KC_DOT: { name: '…\n:', title: 'FR_COLN' },
+  KC_SLSH: { name: '=\n;', title: 'FR_SCLN' },
 
-/*
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ @ │ à │ é │ è │ ê │ ( │ ) │ ‘ │ ’ │ « │ » │ ' │ ^ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ A │ Z │ E │ R │ T │ Y │ U │ I │ O │ P │ - │ + │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ Q │ S │ D │ F │ G │ H │ J │ K │ L │ M │ / │ * │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ < │ W │ X │ C │ V │ B │ N │ . │ , │ : │ ; │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'KC_GRV': {"name":"#\n@","title":"FR_AT"},
-'KC_1': {"name":"1\nà","title":"FR_AGRV"},
-'KC_2': {"name":"2\né","title":"FR_EACU"},
-'KC_3': {"name":"3\nè","title":"FR_EGRV"},
-'KC_4': {"name":"4\nê","title":"FR_ECIR"},
-'KC_5': {"name":"5\n(","title":"FR_LPRN"},
-'KC_6': {"name":"6\n)","title":"FR_RPRN"},
-'KC_7': {"name":"7\n‘","title":"FR_LSQU"},
-'KC_8': {"name":"8\n’","title":"FR_RSQU"},
-'KC_9': {"name":"9\n«","title":"FR_LDAQ"},
-'KC_0': {"name":"0\n»","title":"FR_RDAQ"},
-'KC_MINS': {"name":"\"\n'","title":"FR_QUOT"},
-'KC_EQL': {"name":"¨\n^","title":"FR_DCIR (dead)"},
-// Row 2
-'KC_Q': {"name":"A","title":"FR_A"},
-'KC_W': {"name":"Z","title":"FR_Z"},
-'KC_E': {"name":"E","title":"FR_E"},
-'KC_R': {"name":"R","title":"FR_R"},
-'KC_T': {"name":"T","title":"FR_T"},
-'KC_Y': {"name":"Y","title":"FR_Y"},
-'KC_U': {"name":"U","title":"FR_U"},
-'KC_I': {"name":"I","title":"FR_I"},
-'KC_O': {"name":"O","title":"FR_O"},
-'KC_P': {"name":"P","title":"FR_P"},
-'KC_LBRC': {"name":"–\n-","title":"FR_MINS"},
-'KC_RBRC': {"name":"±\n+","title":"FR_PLUS"},
-// Row 3
-'KC_A': {"name":"Q","title":"FR_Q"},
-'KC_S': {"name":"S","title":"FR_S"},
-'KC_D': {"name":"D","title":"FR_D"},
-'KC_F': {"name":"F","title":"FR_F"},
-'KC_G': {"name":"G","title":"FR_G"},
-'KC_H': {"name":"H","title":"FR_H"},
-'KC_J': {"name":"J","title":"FR_J"},
-'KC_K': {"name":"K","title":"FR_K"},
-'KC_L': {"name":"L","title":"FR_L"},
-'KC_SCLN': {"name":"M","title":"FR_M"},
-'KC_QUOT': {"name":"\\\n/","title":"FR_SLSH"},
-'KC_NUHS': {"name":"½\n*","title":"FR_ASTR"},
-// Row 4
-'KC_NUBS': {"name":">\n<","title":"FR_LABK"},
-'KC_Z': {"name":"W","title":"FR_W"},
-'KC_X': {"name":"X","title":"FR_X"},
-'KC_C': {"name":"C","title":"FR_C"},
-'KC_V': {"name":"V","title":"FR_V"},
-'KC_B': {"name":"B","title":"FR_B"},
-'KC_N': {"name":"N","title":"FR_N"},
-'KC_M': {"name":"?\n.","title":"FR_DOT"},
-'KC_COMM': {"name":"!\n,","title":"FR_COMM"},
-'KC_DOT': {"name":"…\n:","title":"FR_COLN"},
-'KC_SLSH': {"name":"=\n;","title":"FR_SCLN"},
+  /* Shifted symbols
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ # │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ " │ ¨ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │   │   │   │   │   │   │   │   │   │   │ – │ ± │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │   │   │   │   │   │   │   │   │   │   │ \ │ ½ │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ > │   │   │   │   │   │   │ ? │ ! │ … │ = │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  'S(KC_GRV)': { name: '#', title: 'FR_HASH' },
+  KC_TILD: { name: '#', title: 'FR_HASH' },
+  'S(KC_1)': { name: '1', title: 'FR_1' },
+  KC_EXLM: { name: '1', title: 'FR_1' },
+  'S(KC_2)': { name: '2', title: 'FR_2' },
+  KC_AT: { name: '2', title: 'FR_2' },
+  'S(KC_3)': { name: '3', title: 'FR_3' },
+  KC_HASH: { name: '3', title: 'FR_3' },
+  'S(KC_4)': { name: '4', title: 'FR_4' },
+  KC_DLR: { name: '4', title: 'FR_4' },
+  'S(KC_5)': { name: '5', title: 'FR_5' },
+  KC_PERC: { name: '5', title: 'FR_5' },
+  'S(KC_6)': { name: '6', title: 'FR_6' },
+  KC_CIRC: { name: '6', title: 'FR_6' },
+  'S(KC_7)': { name: '7', title: 'FR_7' },
+  KC_AMPR: { name: '7', title: 'FR_7' },
+  'S(KC_8)': { name: '8', title: 'FR_8' },
+  KC_ASTR: { name: '8', title: 'FR_8' },
+  'S(KC_9)': { name: '9', title: 'FR_9' },
+  KC_LPRN: { name: '9', title: 'FR_9' },
+  'S(KC_0)': { name: '0', title: 'FR_0' },
+  KC_RPRN: { name: '0', title: 'FR_0' },
+  'S(KC_MINS)': { name: '"', title: 'FR_DQUO' },
+  KC_UNDS: { name: '"', title: 'FR_DQUO' },
+  'S(KC_EQL)': { name: '¨', title: 'FR_DIAE (dead)' },
+  KC_PLUS: { name: '¨', title: 'FR_DIAE (dead)' },
+  // Row 2
+  'S(KC_LBRC)': { name: '–', title: 'FR_NDSH' },
+  KC_LCBR: { name: '–', title: 'FR_NDSH' },
+  'S(KC_RBRC)': { name: '±', title: 'FR_PLMN' },
+  KC_RCBR: { name: '±', title: 'FR_PLMN' },
+  // Row 3
+  'S(KC_QUOT)': { name: '\\', title: 'FR_BSLS' },
+  KC_DQUO: { name: '\\', title: 'FR_BSLS' },
+  'S(KC_NUHS)': { name: '½', title: 'FR_HALF' },
+  // Row 4
+  'S(KC_NUBS)': { name: '>', title: 'FR_RABK' },
+  'S(KC_M)': { name: '?', title: 'FR_QUES' },
+  'S(KC_COMM)': { name: '!', title: 'FR_EXLM' },
+  KC_LT: { name: '!', title: 'FR_EXLM' },
+  'S(KC_DOT)': { name: '…', title: 'FR_ELLP' },
+  KC_GT: { name: '…', title: 'FR_ELLP' },
+  'S(KC_SLSH)': { name: '=', title: 'FR_EQL' },
+  KC_QUES: { name: '=', title: 'FR_EQL' },
 
-/* Shifted symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ # │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ " │ ¨ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │   │   │   │   │   │   │ – │ ± │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │   │ \ │ ½ │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ > │   │   │   │   │   │   │ ? │ ! │ … │ = │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'S(KC_GRV)': {"name":"#","title":"FR_HASH"},
-'KC_TILD': {"name":"#","title":"FR_HASH"},
-'S(KC_1)': {"name":"1","title":"FR_1"},
-'KC_EXLM': {"name":"1","title":"FR_1"},
-'S(KC_2)': {"name":"2","title":"FR_2"},
-'KC_AT': {"name":"2","title":"FR_2"},
-'S(KC_3)': {"name":"3","title":"FR_3"},
-'KC_HASH': {"name":"3","title":"FR_3"},
-'S(KC_4)': {"name":"4","title":"FR_4"},
-'KC_DLR': {"name":"4","title":"FR_4"},
-'S(KC_5)': {"name":"5","title":"FR_5"},
-'KC_PERC': {"name":"5","title":"FR_5"},
-'S(KC_6)': {"name":"6","title":"FR_6"},
-'KC_CIRC': {"name":"6","title":"FR_6"},
-'S(KC_7)': {"name":"7","title":"FR_7"},
-'KC_AMPR': {"name":"7","title":"FR_7"},
-'S(KC_8)': {"name":"8","title":"FR_8"},
-'KC_ASTR': {"name":"8","title":"FR_8"},
-'S(KC_9)': {"name":"9","title":"FR_9"},
-'KC_LPRN': {"name":"9","title":"FR_9"},
-'S(KC_0)': {"name":"0","title":"FR_0"},
-'KC_RPRN': {"name":"0","title":"FR_0"},
-'S(KC_MINS)': {"name":"\"","title":"FR_DQUO"},
-'KC_UNDS': {"name":"\"","title":"FR_DQUO"},
-'S(KC_EQL)': {"name":"¨","title":"FR_DIAE (dead)"},
-'KC_PLUS': {"name":"¨","title":"FR_DIAE (dead)"},
-// Row 2
-'S(KC_LBRC)': {"name":"–","title":"FR_NDSH"},
-'KC_LCBR': {"name":"–","title":"FR_NDSH"},
-'S(KC_RBRC)': {"name":"±","title":"FR_PLMN"},
-'KC_RCBR': {"name":"±","title":"FR_PLMN"},
-// Row 3
-'S(KC_QUOT)': {"name":"\\","title":"FR_BSLS"},
-'KC_DQUO': {"name":"\\","title":"FR_BSLS"},
-'S(KC_NUHS)': {"name":"½","title":"FR_HALF"},
-// Row 4
-'S(KC_NUBS)': {"name":">","title":"FR_RABK"},
-'S(KC_M)': {"name":"?","title":"FR_QUES"},
-'S(KC_COMM)': {"name":"!","title":"FR_EXLM"},
-'KC_LT': {"name":"!","title":"FR_EXLM"},
-'S(KC_DOT)': {"name":"…","title":"FR_ELLP"},
-'KC_GT': {"name":"…","title":"FR_ELLP"},
-'S(KC_SLSH)': {"name":"=","title":"FR_EQL"},
-'KC_QUES': {"name":"=","title":"FR_EQL"},
+  /* AltGr symbols
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ ˘ │ § │ ´ │ ` │ & │ [ │ ] │ ¯ │ _ │ “ │ ” │ ° │ ˇ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │ æ │ £ │ € │ ® │ { │ } │ ù │ ˙ │ œ │ % │ − │ † │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │ θ │ ß │ $ │ ¤ │ µ │ Eu│   │ ∕ │ | │ ∞ │ ÷ │ × │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ ≤ │ ʒ │ © │ ç │ ¸ │ − │ ~ │ ¿ │ ¡ │ · │ ≃ │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  'ALGR(KC_GRV)': { name: '˘', title: 'FR_BREV (dead)' },
+  'ALGR(KC_1)': { name: '§', title: 'FR_SECT' },
+  'ALGR(KC_2)': { name: '´', title: 'FR_ACUT (dead)' },
+  'ALGR(KC_3)': { name: '`', title: 'FR_GRV (dead)' },
+  'ALGR(KC_4)': { name: '&', title: 'FR_AMPR' },
+  'ALGR(KC_5)': { name: '[', title: 'FR_LBRC' },
+  'ALGR(KC_6)': { name: ']', title: 'FR_RBRC' },
+  'ALGR(KC_7)': { name: '¯', title: 'FR_MACR (dead)' },
+  'ALGR(KC_8)': { name: '_', title: 'FR_UNDS' },
+  'ALGR(KC_9)': { name: '“', title: 'FR_LDQU' },
+  'ALGR(KC_0)': { name: '”', title: 'FR_RDQU' },
+  'ALGR(KC_MINS)': { name: '°', title: 'FR_DEG' },
+  'ALGR(KC_EQL)': { name: 'ˇ', title: 'FR_CARN (dead)' },
+  // Row 2
+  'ALGR(KC_Q)': { name: 'æ', title: 'FR_AE' },
+  'ALGR(KC_W)': { name: '£', title: 'FR_PND' },
+  'ALGR(KC_E)': { name: '€', title: 'FR_EURO' },
+  'ALGR(KC_R)': { name: '®', title: 'FR_REGD' },
+  'ALGR(KC_T)': { name: '{', title: 'FR_LCBR' },
+  'ALGR(KC_Y)': { name: '}', title: 'FR_RCBR' },
+  'ALGR(KC_U)': { name: 'ù', title: 'FR_UGRV' },
+  'ALGR(KC_I)': { name: '˙', title: 'FR_DOTA (dead)' },
+  'ALGR(KC_O)': { name: 'œ', title: 'FR_OE' },
+  'ALGR(KC_P)': { name: '%', title: 'FR_PERC' },
+  'ALGR(KC_LBRC)': { name: '−', title: 'FR_MMNS' },
+  'ALGR(KC_RBRC)': { name: '†', title: 'FR_DAGG' },
+  // Row 3
+  'ALGR(KC_A)': { name: 'θ', title: 'FR_THET' },
+  'ALGR(KC_S)': { name: 'ß', title: 'FR_SS' },
+  'ALGR(KC_D)': { name: '$', title: 'FR_DLR' },
+  'ALGR(KC_F)': { name: '¤', title: 'FR_CURR (dead monetary key)' },
+  'ALGR(KC_G)': { name: 'µ', title: 'FR_DGRK (dead Greek key)' },
+  'ALGR(KC_H)': { name: 'Eu', title: 'FR_EU (dead European symbol key)' },
+  'ALGR(KC_K)': { name: '∕', title: 'FR_DSLS (dead)' },
+  'ALGR(KC_L)': { name: '|', title: 'FR_PIPE' },
+  'ALGR(KC_SCLN)': { name: '∞', title: 'FR_INFN' },
+  'ALGR(KC_QUOT)': { name: '÷', title: 'FR_DIV' },
+  'ALGR(KC_NUHS)': { name: '×', title: 'FR_MUL' },
+  // Row 4
+  'ALGR(KC_NUBS)': { name: '≤', title: 'FR_LEQL' },
+  'ALGR(KC_Z)': { name: 'ʒ', title: 'FR_EZH' },
+  'ALGR(KC_X)': { name: '©', title: 'FR_COPY' },
+  'ALGR(KC_C)': { name: 'ç', title: 'FR_CCED' },
+  'ALGR(KC_V)': { name: '¸', title: 'FR_CEDL (dead)' },
+  'ALGR(KC_B)': { name: '−', title: 'FR_DMNS (dead)' },
+  'ALGR(KC_N)': { name: '~', title: 'FR_DTIL (dead)' },
+  'ALGR(KC_M)': { name: '¿', title: 'FR_IQUE' },
+  'ALGR(KC_COMM)': { name: '¡', title: 'FR_IEXL' },
+  'ALGR(KC_DOT)': { name: '·', title: 'FR_MDDT' },
+  'ALGR(KC_SLSH)': { name: '≃', title: 'FR_AEQL' },
 
-/* AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ˘ │ § │ ´ │ ` │ & │ [ │ ] │ ¯ │ _ │ “ │ ” │ ° │ ˇ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ æ │ £ │ € │ ® │ { │ } │ ù │ ˙ │ œ │ % │ − │ † │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ θ │ ß │ $ │ ¤ │ µ │ Eu│   │ ∕ │ | │ ∞ │ ÷ │ × │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ ≤ │ ʒ │ © │ ç │ ¸ │ − │ ~ │ ¿ │ ¡ │ · │ ≃ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'ALGR(KC_GRV)': {"name":"˘","title":"FR_BREV (dead)"},
-'ALGR(KC_1)': {"name":"§","title":"FR_SECT"},
-'ALGR(KC_2)': {"name":"´","title":"FR_ACUT (dead)"},
-'ALGR(KC_3)': {"name":"`","title":"FR_GRV (dead)"},
-'ALGR(KC_4)': {"name":"&","title":"FR_AMPR"},
-'ALGR(KC_5)': {"name":"[","title":"FR_LBRC"},
-'ALGR(KC_6)': {"name":"]","title":"FR_RBRC"},
-'ALGR(KC_7)': {"name":"¯","title":"FR_MACR (dead)"},
-'ALGR(KC_8)': {"name":"_","title":"FR_UNDS"},
-'ALGR(KC_9)': {"name":"“","title":"FR_LDQU"},
-'ALGR(KC_0)': {"name":"”","title":"FR_RDQU"},
-'ALGR(KC_MINS)': {"name":"°","title":"FR_DEG"},
-'ALGR(KC_EQL)': {"name":"ˇ","title":"FR_CARN (dead)"},
-// Row 2
-'ALGR(KC_Q)': {"name":"æ","title":"FR_AE"},
-'ALGR(KC_W)': {"name":"£","title":"FR_PND"},
-'ALGR(KC_E)': {"name":"€","title":"FR_EURO"},
-'ALGR(KC_R)': {"name":"®","title":"FR_REGD"},
-'ALGR(KC_T)': {"name":"{","title":"FR_LCBR"},
-'ALGR(KC_Y)': {"name":"}","title":"FR_RCBR"},
-'ALGR(KC_U)': {"name":"ù","title":"FR_UGRV"},
-'ALGR(KC_I)': {"name":"˙","title":"FR_DOTA (dead)"},
-'ALGR(KC_O)': {"name":"œ","title":"FR_OE"},
-'ALGR(KC_P)': {"name":"%","title":"FR_PERC"},
-'ALGR(KC_LBRC)': {"name":"−","title":"FR_MMNS"},
-'ALGR(KC_RBRC)': {"name":"†","title":"FR_DAGG"},
-// Row 3
-'ALGR(KC_A)': {"name":"θ","title":"FR_THET"},
-'ALGR(KC_S)': {"name":"ß","title":"FR_SS"},
-'ALGR(KC_D)': {"name":"$","title":"FR_DLR"},
-'ALGR(KC_F)': {"name":"¤","title":"FR_CURR (dead monetary key)"},
-'ALGR(KC_G)': {"name":"µ","title":"FR_DGRK (dead Greek key)"},
-'ALGR(KC_H)': {"name":"Eu","title":"FR_EU (dead European symbol key)"},
-'ALGR(KC_K)': {"name":"∕","title":"FR_DSLS (dead)"},
-'ALGR(KC_L)': {"name":"|","title":"FR_PIPE"},
-'ALGR(KC_SCLN)': {"name":"∞","title":"FR_INFN"},
-'ALGR(KC_QUOT)': {"name":"÷","title":"FR_DIV"},
-'ALGR(KC_NUHS)': {"name":"×","title":"FR_MUL"},
-// Row 4
-'ALGR(KC_NUBS)': {"name":"≤","title":"FR_LEQL"},
-'ALGR(KC_Z)': {"name":"ʒ","title":"FR_EZH"},
-'ALGR(KC_X)': {"name":"©","title":"FR_COPY"},
-'ALGR(KC_C)': {"name":"ç","title":"FR_CCED"},
-'ALGR(KC_V)': {"name":"¸","title":"FR_CEDL (dead)"},
-'ALGR(KC_B)': {"name":"−","title":"FR_DMNS (dead)"},
-'ALGR(KC_N)': {"name":"~","title":"FR_DTIL (dead)"},
-'ALGR(KC_M)': {"name":"¿","title":"FR_IQUE"},
-'ALGR(KC_COMM)': {"name":"¡","title":"FR_IEXL"},
-'ALGR(KC_DOT)': {"name":"·","title":"FR_MDDT"},
-'ALGR(KC_SLSH)': {"name":"≃","title":"FR_AEQL"},
+  /* Shift+AltGr symbols
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ ̑  │   │   │   │   │ ˝ │ ̏  │   │ — │ ‹ │ › │ ˚ │   │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │   │   │   │   │ ™ │   │   │ ̣  │   │ ‰ │ ‑ │ ‡ │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │   │   │   │   │   │ ˍ │   │   │   │   │ √ │ ¼ │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ ≥ │   │   │   │ ˛ │   │   │   │ ̦  │   │ ≠ │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  'S(ALGR(KC_GRV))': { name: '◌̑', title: 'FR_IBRV (dead)' },
+  'S(ALGR(KC_5))': { name: '˝', title: 'FR_DACU (dead)' },
+  'S(ALGR(KC_6))': { name: '◌̏', title: 'FR_DGRV (dead)' },
+  'S(ALGR(KC_8))': { name: '—', title: 'FR_MDSH' },
+  'S(ALGR(KC_9))': { name: '‹', title: 'FR_LSAQ' },
+  'S(ALGR(KC_0))': { name: '›', title: 'FR_RSAQ' },
+  'S(ALGR(KC_MINS))': { name: '˚', title: 'FR_RNGA (dead)' },
+  // Row 2
+  'S(ALGR(KC_T))': { name: '™', title: 'FR_TM' },
+  'S(ALGR(KC_I))': { name: '◌̣', title: 'FR_DOTB (dead)' },
+  'S(ALGR(KC_P))': { name: '‰', title: 'FR_PERM' },
+  'S(ALGR(KC_LBRC))': { name: '‑', title: 'FR_NBHY (non-breaking hyphen)' },
+  'S(ALGR(KC_RBRC))': { name: '‡', title: 'FR_DDAG' },
+  // Row 3
+  'S(ALGR(KC_H))': { name: 'ˍ', title: 'FR_MACB (dead)' },
+  'S(ALGR(KC_QUOT))': { name: '√', title: 'FR_SQRT' },
+  'S(ALGR(KC_NUHS))': { name: '¼', title: 'FR_QRTR' },
+  // Row 4
+  'S(ALGR(KC_NUBS))': { name: '≥', title: 'FR_GEQL' },
+  'S(ALGR(KC_V))': { name: '˛', title: 'FR_OGON (dead)' },
+  'S(ALGR(KC_COMM))': { name: '◌̦', title: 'FR_DCMM (dead)' },
+  'S(ALGR(KC_SLSH))': { name: '≠', title: 'FR_NEQL' },
 
-/* Shift+AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ̑  │   │   │   │   │ ˝ │ ̏  │   │ — │ ‹ │ › │ ˚ │   │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │ ™ │   │   │ ̣  │   │ ‰ │ ‑ │ ‡ │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │ ˍ │   │   │   │   │ √ │ ¼ │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ ≥ │   │   │   │ ˛ │   │   │   │ ̦  │   │ ≠ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'S(ALGR(KC_GRV))': {"name":"◌̑","title":"FR_IBRV (dead)"},
-'S(ALGR(KC_5))': {"name":"˝","title":"FR_DACU (dead)"},
-'S(ALGR(KC_6))': {"name":"◌̏","title":"FR_DGRV (dead)"},
-'S(ALGR(KC_8))': {"name":"—","title":"FR_MDSH"},
-'S(ALGR(KC_9))': {"name":"‹","title":"FR_LSAQ"},
-'S(ALGR(KC_0))': {"name":"›","title":"FR_RSAQ"},
-'S(ALGR(KC_MINS))': {"name":"˚","title":"FR_RNGA (dead)"},
-// Row 2
-'S(ALGR(KC_T))': {"name":"™","title":"FR_TM"},
-'S(ALGR(KC_I))': {"name":"◌̣","title":"FR_DOTB (dead)"},
-'S(ALGR(KC_P))': {"name":"‰","title":"FR_PERM"},
-'S(ALGR(KC_LBRC))': {"name":"‑","title":"FR_NBHY (non-breaking hyphen)"},
-'S(ALGR(KC_RBRC))': {"name":"‡","title":"FR_DDAG"},
-// Row 3
-'S(ALGR(KC_H))': {"name":"ˍ","title":"FR_MACB (dead)"},
-'S(ALGR(KC_QUOT))': {"name":"√","title":"FR_SQRT"},
-'S(ALGR(KC_NUHS))': {"name":"¼","title":"FR_QRTR"},
-// Row 4
-'S(ALGR(KC_NUBS))': {"name":"≥","title":"FR_GEQL"},
-'S(ALGR(KC_V))': {"name":"˛","title":"FR_OGON (dead)"},
-'S(ALGR(KC_COMM))': {"name":"◌̦","title":"FR_DCMM (dead)"},
-'S(ALGR(KC_SLSH))': {"name":"≠","title":"FR_NEQL"},
+  /* Other keys */
+  KC_BSLS: { name: '½\n*', title: '' },
+  'S(KC_BSLS)': { name: '½', title: '' },
+  KC_COLN: { name: 'M', title: 'S(FR_M) (capital M)' },
+  KC_PIPE: { name: '½', title: 'FR_HALF' },
 
-/* Other keys */
-'KC_BSLS': {"name":"½\n*","title":""},
-'S(KC_BSLS)': {"name":"½","title":""},
-'KC_COLN': {"name":"M","title":"S(FR_M) (capital M)"},
-'KC_PIPE': {"name":"½","title":"FR_HALF"},
+  KC_LSPO: { name: 'LS / 9', title: 'Left Shift when held, 9 when tapped' },
+  KC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
+  KC_LCPO: { name: 'LC / 9', title: 'Left Control when held, 9 when tapped' },
+  KC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
+  KC_LAPO: { name: 'LA / 9', title: 'Left Alt when held, 9 when tapped' },
+  KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
-'KC_LSPO': {"name":"LS / 9","title":"Left Shift when held, 9 when tapped"},
-'KC_RSPC': {"name":"RS / 0","title":"Right Shift when held, 0 when tapped"},
-'KC_LCPO': {"name":"LC / 9","title":"Left Control when held, 9 when tapped"},
-'KC_RCPC': {"name":"RC / 0","title":"Right Control when held, 0 when tapped"},
-'KC_LAPO': {"name":"LA / 9","title":"Left Alt when held, 9 when tapped"},
-'KC_RAPC': {"name":"RA / 0","title":"Right Alt when held, 0 when tapped"},
-
-'QK_GESC': {"name":"@ / #\nEsc","title":"Esc normally, but @ when GUI is active or # when Shift is active"},
-}
+  QK_GESC: {
+    name: '@ / #\nEsc',
+    title: 'Esc normally, but @ when GUI is active or # when Shift is active'
+  }
+};

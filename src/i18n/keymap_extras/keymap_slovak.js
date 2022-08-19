@@ -14,197 +14,195 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-
-
-
 export default {
+  /*
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ ; │ + │ ľ │ š │ č │ ť │ ž │ ý │ á │ í │ é │ = │ ´ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │ Q │ W │ E │ R │ T │ Z │ U │ I │ O │ P │ ú │ ä │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ô │ § │ ň │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ & │ Y │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  KC_GRV: { name: '°\n;', title: 'SK_SCLN' },
+  KC_1: { name: '1\n+', title: 'SK_PLUS' },
+  KC_2: { name: '2\nľ', title: 'SK_LCAR' },
+  KC_3: { name: '3\nš', title: 'SK_SCAR' },
+  KC_4: { name: '4\nč', title: 'SK_CCAR' },
+  KC_5: { name: '5\nť', title: 'SK_TCAR' },
+  KC_6: { name: '6\nž', title: 'SK_ZCAR' },
+  KC_7: { name: '7\ný', title: 'SK_YACU' },
+  KC_8: { name: '8\ná', title: 'SK_AACU' },
+  KC_9: { name: '9\ní', title: 'SK_IACU' },
+  KC_0: { name: '0\né', title: 'SK_EACU' },
+  KC_MINS: { name: '%\n=', title: 'SK_EQL' },
+  KC_EQL: { name: 'ˇ\n´', title: 'SK_ACUT (dead)' },
+  // Row 2
+  KC_Q: { name: 'Q', title: 'SK_Q' },
+  KC_W: { name: 'W', title: 'SK_W' },
+  KC_E: { name: 'E', title: 'SK_E' },
+  KC_R: { name: 'R', title: 'SK_R' },
+  KC_T: { name: 'T', title: 'SK_T' },
+  KC_Y: { name: 'Z', title: 'SK_Z' },
+  KC_U: { name: 'U', title: 'SK_U' },
+  KC_I: { name: 'I', title: 'SK_I' },
+  KC_O: { name: 'O', title: 'SK_O' },
+  KC_P: { name: 'P', title: 'SK_P' },
+  KC_LBRC: { name: '/\nú', title: 'SK_UACU' },
+  KC_RBRC: { name: '(\nä', title: 'SK_ADIA' },
+  // Row 3
+  KC_A: { name: 'A', title: 'SK_A' },
+  KC_S: { name: 'S', title: 'SK_S' },
+  KC_D: { name: 'D', title: 'SK_D' },
+  KC_F: { name: 'F', title: 'SK_F' },
+  KC_G: { name: 'G', title: 'SK_G' },
+  KC_H: { name: 'H', title: 'SK_H' },
+  KC_J: { name: 'J', title: 'SK_J' },
+  KC_K: { name: 'K', title: 'SK_K' },
+  KC_L: { name: 'L', title: 'SK_L' },
+  KC_SCLN: { name: '"\nô', title: 'SK_OCIR' },
+  KC_QUOT: { name: '!\n§', title: 'SK_SECT' },
+  KC_NUHS: { name: ')\nň', title: 'SK_NCAR' },
+  // Row 4
+  KC_NUBS: { name: '*\n&', title: 'SK_AMPR' },
+  KC_Z: { name: 'Y', title: 'SK_Y' },
+  KC_X: { name: 'X', title: 'SK_X' },
+  KC_C: { name: 'C', title: 'SK_C' },
+  KC_V: { name: 'V', title: 'SK_V' },
+  KC_B: { name: 'B', title: 'SK_B' },
+  KC_N: { name: 'N', title: 'SK_N' },
+  KC_M: { name: 'M', title: 'SK_M' },
+  KC_COMM: { name: '?\n,', title: 'SK_COMM' },
+  KC_DOT: { name: ':\n.', title: 'SK_DOT' },
+  KC_SLSH: { name: '_\n-', title: 'SK_MINS' },
 
-/*
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ; │ + │ ľ │ š │ č │ ť │ ž │ ý │ á │ í │ é │ = │ ´ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ Q │ W │ E │ R │ T │ Z │ U │ I │ O │ P │ ú │ ä │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ ô │ § │ ň │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ & │ Y │ X │ C │ V │ B │ N │ M │ , │ . │ - │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'KC_GRV': {"name":"°\n;","title":"SK_SCLN"},
-'KC_1': {"name":"1\n+","title":"SK_PLUS"},
-'KC_2': {"name":"2\nľ","title":"SK_LCAR"},
-'KC_3': {"name":"3\nš","title":"SK_SCAR"},
-'KC_4': {"name":"4\nč","title":"SK_CCAR"},
-'KC_5': {"name":"5\nť","title":"SK_TCAR"},
-'KC_6': {"name":"6\nž","title":"SK_ZCAR"},
-'KC_7': {"name":"7\ný","title":"SK_YACU"},
-'KC_8': {"name":"8\ná","title":"SK_AACU"},
-'KC_9': {"name":"9\ní","title":"SK_IACU"},
-'KC_0': {"name":"0\né","title":"SK_EACU"},
-'KC_MINS': {"name":"%\n=","title":"SK_EQL"},
-'KC_EQL': {"name":"ˇ\n´","title":"SK_ACUT (dead)"},
-// Row 2
-'KC_Q': {"name":"Q","title":"SK_Q"},
-'KC_W': {"name":"W","title":"SK_W"},
-'KC_E': {"name":"E","title":"SK_E"},
-'KC_R': {"name":"R","title":"SK_R"},
-'KC_T': {"name":"T","title":"SK_T"},
-'KC_Y': {"name":"Z","title":"SK_Z"},
-'KC_U': {"name":"U","title":"SK_U"},
-'KC_I': {"name":"I","title":"SK_I"},
-'KC_O': {"name":"O","title":"SK_O"},
-'KC_P': {"name":"P","title":"SK_P"},
-'KC_LBRC': {"name":"/\nú","title":"SK_UACU"},
-'KC_RBRC': {"name":"(\nä","title":"SK_ADIA"},
-// Row 3
-'KC_A': {"name":"A","title":"SK_A"},
-'KC_S': {"name":"S","title":"SK_S"},
-'KC_D': {"name":"D","title":"SK_D"},
-'KC_F': {"name":"F","title":"SK_F"},
-'KC_G': {"name":"G","title":"SK_G"},
-'KC_H': {"name":"H","title":"SK_H"},
-'KC_J': {"name":"J","title":"SK_J"},
-'KC_K': {"name":"K","title":"SK_K"},
-'KC_L': {"name":"L","title":"SK_L"},
-'KC_SCLN': {"name":"\"\nô","title":"SK_OCIR"},
-'KC_QUOT': {"name":"!\n§","title":"SK_SECT"},
-'KC_NUHS': {"name":")\nň","title":"SK_NCAR"},
-// Row 4
-'KC_NUBS': {"name":"*\n&","title":"SK_AMPR"},
-'KC_Z': {"name":"Y","title":"SK_Y"},
-'KC_X': {"name":"X","title":"SK_X"},
-'KC_C': {"name":"C","title":"SK_C"},
-'KC_V': {"name":"V","title":"SK_V"},
-'KC_B': {"name":"B","title":"SK_B"},
-'KC_N': {"name":"N","title":"SK_N"},
-'KC_M': {"name":"M","title":"SK_M"},
-'KC_COMM': {"name":"?\n,","title":"SK_COMM"},
-'KC_DOT': {"name":":\n.","title":"SK_DOT"},
-'KC_SLSH': {"name":"_\n-","title":"SK_MINS"},
+  /* Shifted symbols
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │ ° │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ % │ ˇ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │   │   │   │   │   │   │   │   │   │   │ / │ ( │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │   │   │   │   │   │   │   │   │   │ " │ ! │ ) │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ * │   │   │   │   │   │   │   │ ? │ : │ _ │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  'S(KC_GRV)': { name: '°', title: 'SK_RNGA (dead)' },
+  KC_TILD: { name: '°', title: 'SK_RNGA (dead)' },
+  'S(KC_1)': { name: '1', title: 'SK_1' },
+  KC_EXLM: { name: '1', title: 'SK_1' },
+  'S(KC_2)': { name: '2', title: 'SK_2' },
+  KC_AT: { name: '2', title: 'SK_2' },
+  'S(KC_3)': { name: '3', title: 'SK_3' },
+  KC_HASH: { name: '3', title: 'SK_3' },
+  'S(KC_4)': { name: '4', title: 'SK_4' },
+  KC_DLR: { name: '4', title: 'SK_4' },
+  'S(KC_5)': { name: '5', title: 'SK_5' },
+  KC_PERC: { name: '5', title: 'SK_5' },
+  'S(KC_6)': { name: '6', title: 'SK_6' },
+  KC_CIRC: { name: '6', title: 'SK_6' },
+  'S(KC_7)': { name: '7', title: 'SK_7' },
+  KC_AMPR: { name: '7', title: 'SK_7' },
+  'S(KC_8)': { name: '8', title: 'SK_8' },
+  KC_ASTR: { name: '8', title: 'SK_8' },
+  'S(KC_9)': { name: '9', title: 'SK_9' },
+  KC_LPRN: { name: '9', title: 'SK_9' },
+  'S(KC_0)': { name: '0', title: 'SK_0' },
+  KC_RPRN: { name: '0', title: 'SK_0' },
+  'S(KC_MINS)': { name: '%', title: 'SK_PERC' },
+  KC_UNDS: { name: '%', title: 'SK_PERC' },
+  'S(KC_EQL)': { name: 'ˇ', title: 'SK_CARN (dead)' },
+  KC_PLUS: { name: 'ˇ', title: 'SK_CARN (dead)' },
+  // Row 2
+  'S(KC_LBRC)': { name: '/', title: 'SK_SLSH' },
+  KC_LCBR: { name: '/', title: 'SK_SLSH' },
+  'S(KC_RBRC)': { name: '(', title: 'SK_LPRN' },
+  KC_RCBR: { name: '(', title: 'SK_LPRN' },
+  // Row 3
+  'S(KC_SCLN)': { name: '"', title: 'SK_DQUO' },
+  KC_COLN: { name: '"', title: 'SK_DQUO' },
+  'S(KC_QUOT)': { name: '!', title: 'SK_EXLM' },
+  KC_DQUO: { name: '!', title: 'SK_EXLM' },
+  'S(KC_NUHS)': { name: ')', title: 'SK_RPRN' },
+  // Row 4
+  'S(KC_NUBS)': { name: '*', title: 'SK_ASTR' },
+  'S(KC_COMM)': { name: '?', title: 'SK_QUES' },
+  KC_LT: { name: '?', title: 'SK_QUES' },
+  'S(KC_DOT)': { name: ':', title: 'SK_COLN' },
+  KC_GT: { name: ':', title: 'SK_COLN' },
+  'S(KC_SLSH)': { name: '_', title: 'SK_UNDS' },
+  KC_QUES: { name: '_', title: 'SK_UNDS' },
 
-/* Shifted symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │ ° │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │ 8 │ 9 │ 0 │ % │ ˇ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │   │   │   │   │   │   │   │   │   │   │ / │ ( │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │   │   │   │   │   │   │   │   │ " │ ! │ ) │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ * │   │   │   │   │   │   │   │ ? │ : │ _ │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'S(KC_GRV)': {"name":"°","title":"SK_RNGA (dead)"},
-'KC_TILD': {"name":"°","title":"SK_RNGA (dead)"},
-'S(KC_1)': {"name":"1","title":"SK_1"},
-'KC_EXLM': {"name":"1","title":"SK_1"},
-'S(KC_2)': {"name":"2","title":"SK_2"},
-'KC_AT': {"name":"2","title":"SK_2"},
-'S(KC_3)': {"name":"3","title":"SK_3"},
-'KC_HASH': {"name":"3","title":"SK_3"},
-'S(KC_4)': {"name":"4","title":"SK_4"},
-'KC_DLR': {"name":"4","title":"SK_4"},
-'S(KC_5)': {"name":"5","title":"SK_5"},
-'KC_PERC': {"name":"5","title":"SK_5"},
-'S(KC_6)': {"name":"6","title":"SK_6"},
-'KC_CIRC': {"name":"6","title":"SK_6"},
-'S(KC_7)': {"name":"7","title":"SK_7"},
-'KC_AMPR': {"name":"7","title":"SK_7"},
-'S(KC_8)': {"name":"8","title":"SK_8"},
-'KC_ASTR': {"name":"8","title":"SK_8"},
-'S(KC_9)': {"name":"9","title":"SK_9"},
-'KC_LPRN': {"name":"9","title":"SK_9"},
-'S(KC_0)': {"name":"0","title":"SK_0"},
-'KC_RPRN': {"name":"0","title":"SK_0"},
-'S(KC_MINS)': {"name":"%","title":"SK_PERC"},
-'KC_UNDS': {"name":"%","title":"SK_PERC"},
-'S(KC_EQL)': {"name":"ˇ","title":"SK_CARN (dead)"},
-'KC_PLUS': {"name":"ˇ","title":"SK_CARN (dead)"},
-// Row 2
-'S(KC_LBRC)': {"name":"/","title":"SK_SLSH"},
-'KC_LCBR': {"name":"/","title":"SK_SLSH"},
-'S(KC_RBRC)': {"name":"(","title":"SK_LPRN"},
-'KC_RCBR': {"name":"(","title":"SK_LPRN"},
-// Row 3
-'S(KC_SCLN)': {"name":"\"","title":"SK_DQUO"},
-'KC_COLN': {"name":"\"","title":"SK_DQUO"},
-'S(KC_QUOT)': {"name":"!","title":"SK_EXLM"},
-'KC_DQUO': {"name":"!","title":"SK_EXLM"},
-'S(KC_NUHS)': {"name":")","title":"SK_RPRN"},
-// Row 4
-'S(KC_NUBS)': {"name":"*","title":"SK_ASTR"},
-'S(KC_COMM)': {"name":"?","title":"SK_QUES"},
-'KC_LT': {"name":"?","title":"SK_QUES"},
-'S(KC_DOT)': {"name":":","title":"SK_COLN"},
-'KC_GT': {"name":":","title":"SK_COLN"},
-'S(KC_SLSH)': {"name":"_","title":"SK_UNDS"},
-'KC_QUES': {"name":"_","title":"SK_UNDS"},
+  /* AltGr symbols
+   * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
+   * │   │ ~ │   │ ^ │ ˘ │ ° │ ˛ │ ` │ ˙ │   │ ˝ │ ¨ │ ¸ │       │
+   * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
+   * │     │ \ │ | │ € │   │   │   │   │   │   │ ' │ ÷ │ × │     │
+   * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
+   * │      │   │ đ │ Đ │ [ │ ] │   │   │ ł │ Ł │ $ │ ß │ ¤ │    │
+   * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
+   * │    │ < │ > │ # │   │ @ │ { │ } │   │   │   │   │          │
+   * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
+   * │    │    │    │                        │    │    │    │    │
+   * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
+   */
+  // Row 1
+  'ALGR(KC_1)': { name: '~', title: 'SK_TILD' },
+  'ALGR(KC_3)': { name: '^', title: 'SK_CIRC (dead)' },
+  'ALGR(KC_4)': { name: '˘', title: 'SK_BREV (dead)' },
+  'ALGR(KC_5)': { name: '˛', title: 'SK_OGON (dead)' },
+  'ALGR(KC_6)': { name: '`', title: 'SK_GRV' },
+  'ALGR(KC_7)': { name: '˙', title: 'SK_DOTA (dead)' },
+  'ALGR(KC_0)': { name: '˝', title: 'SK_DACU (dead)' },
+  'ALGR(KC_MINS)': { name: '¨', title: 'SK_DIAE (dead)' },
+  'ALGR(KC_EQL)': { name: '¸', title: 'SK_CEDL (dead)' },
+  // Row 2
+  'ALGR(KC_Q)': { name: '\\', title: 'SK_BSLS' },
+  'ALGR(KC_W)': { name: '|', title: 'SK_PIPE' },
+  'ALGR(KC_E)': { name: '€', title: 'SK_EURO' },
+  'ALGR(KC_P)': { name: "'", title: 'SK_QUOT' },
+  'ALGR(KC_LBRC)': { name: '÷', title: 'SK_DIV' },
+  'ALGR(KC_RBRC)': { name: '×', title: 'SK_MUL' },
+  // Row 3
+  'ALGR(KC_S)': { name: 'đ', title: 'SK_LDST' },
+  'ALGR(KC_D)': { name: 'Đ', title: 'SK_CDST' },
+  'ALGR(KC_F)': { name: '[', title: 'SK_LBRC' },
+  'ALGR(KC_G)': { name: ']', title: 'SK_RBRC' },
+  'ALGR(KC_K)': { name: 'ł', title: 'SK_LLST' },
+  'ALGR(KC_L)': { name: 'Ł', title: 'SK_CLST' },
+  'ALGR(KC_SCLN)': { name: '$', title: 'SK_DLR' },
+  'ALGR(KC_QUOT)': { name: 'ß', title: 'SK_SS' },
+  'ALGR(KC_NUHS)': { name: '¤', title: 'SK_CURR' },
+  // Row 4
+  'ALGR(KC_NUBS)': { name: '<', title: 'SK_LABK' },
+  'ALGR(KC_Z)': { name: '>', title: 'SK_RABK' },
+  'ALGR(KC_X)': { name: '#', title: 'SK_HASH' },
+  'ALGR(KC_V)': { name: '@', title: 'SK_AT' },
+  'ALGR(KC_B)': { name: '{', title: 'SK_LCBR' },
+  'ALGR(KC_N)': { name: '}', title: 'SK_RCBR' },
 
-/* AltGr symbols
- * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │   │ ~ │   │ ^ │ ˘ │ ° │ ˛ │ ` │ ˙ │   │ ˝ │ ¨ │ ¸ │       │
- * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │     │ \ │ | │ € │   │   │   │   │   │   │ ' │ ÷ │ × │     │
- * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐    │
- * │      │   │ đ │ Đ │ [ │ ] │   │   │ ł │ Ł │ $ │ ß │ ¤ │    │
- * ├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴────┤
- * │    │ < │ > │ # │   │ @ │ { │ } │   │   │   │   │          │
- * ├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
- * │    │    │    │                        │    │    │    │    │
- * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
- */
-// Row 1
-'ALGR(KC_1)': {"name":"~","title":"SK_TILD"},
-'ALGR(KC_3)': {"name":"^","title":"SK_CIRC (dead)"},
-'ALGR(KC_4)': {"name":"˘","title":"SK_BREV (dead)"},
-'ALGR(KC_5)': {"name":"˛","title":"SK_OGON (dead)"},
-'ALGR(KC_6)': {"name":"`","title":"SK_GRV"},
-'ALGR(KC_7)': {"name":"˙","title":"SK_DOTA (dead)"},
-'ALGR(KC_0)': {"name":"˝","title":"SK_DACU (dead)"},
-'ALGR(KC_MINS)': {"name":"¨","title":"SK_DIAE (dead)"},
-'ALGR(KC_EQL)': {"name":"¸","title":"SK_CEDL (dead)"},
-// Row 2
-'ALGR(KC_Q)': {"name":"\\","title":"SK_BSLS"},
-'ALGR(KC_W)': {"name":"|","title":"SK_PIPE"},
-'ALGR(KC_E)': {"name":"€","title":"SK_EURO"},
-'ALGR(KC_P)': {"name":"'","title":"SK_QUOT"},
-'ALGR(KC_LBRC)': {"name":"÷","title":"SK_DIV"},
-'ALGR(KC_RBRC)': {"name":"×","title":"SK_MUL"},
-// Row 3
-'ALGR(KC_S)': {"name":"đ","title":"SK_LDST"},
-'ALGR(KC_D)': {"name":"Đ","title":"SK_CDST"},
-'ALGR(KC_F)': {"name":"[","title":"SK_LBRC"},
-'ALGR(KC_G)': {"name":"]","title":"SK_RBRC"},
-'ALGR(KC_K)': {"name":"ł","title":"SK_LLST"},
-'ALGR(KC_L)': {"name":"Ł","title":"SK_CLST"},
-'ALGR(KC_SCLN)': {"name":"$","title":"SK_DLR"},
-'ALGR(KC_QUOT)': {"name":"ß","title":"SK_SS"},
-'ALGR(KC_NUHS)': {"name":"¤","title":"SK_CURR"},
-// Row 4
-'ALGR(KC_NUBS)': {"name":"<","title":"SK_LABK"},
-'ALGR(KC_Z)': {"name":">","title":"SK_RABK"},
-'ALGR(KC_X)': {"name":"#","title":"SK_HASH"},
-'ALGR(KC_V)': {"name":"@","title":"SK_AT"},
-'ALGR(KC_B)': {"name":"{","title":"SK_LCBR"},
-'ALGR(KC_N)': {"name":"}","title":"SK_RCBR"},
+  /* Other keys */
+  KC_BSLS: { name: ')\nň', title: '' },
+  'S(KC_BSLS)': { name: ')', title: '' },
+  KC_PIPE: { name: ')', title: 'SK_RPRN' },
 
-/* Other keys */
-'KC_BSLS': {"name":")\nň","title":""},
-'S(KC_BSLS)': {"name":")","title":""},
-'KC_PIPE': {"name":")","title":"SK_RPRN"},
+  KC_LSPO: { name: 'LS / 9', title: 'Left Shift when held, 9 when tapped' },
+  KC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
+  KC_LCPO: { name: 'LC / 9', title: 'Left Control when held, 9 when tapped' },
+  KC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
+  KC_LAPO: { name: 'LA / 9', title: 'Left Alt when held, 9 when tapped' },
+  KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
-'KC_LSPO': {"name":"LS / 9","title":"Left Shift when held, 9 when tapped"},
-'KC_RSPC': {"name":"RS / 0","title":"Right Shift when held, 0 when tapped"},
-'KC_LCPO': {"name":"LC / 9","title":"Left Control when held, 9 when tapped"},
-'KC_RCPC': {"name":"RC / 0","title":"Right Control when held, 0 when tapped"},
-'KC_LAPO': {"name":"LA / 9","title":"Left Alt when held, 9 when tapped"},
-'KC_RAPC': {"name":"RA / 0","title":"Right Alt when held, 0 when tapped"},
-
-'QK_GESC': {"name":"; / °\nEsc","title":"Esc normally, but ; when GUI is active or ° when Shift is active"},
-}
+  QK_GESC: {
+    name: '; / °\nEsc',
+    title: 'Esc normally, but ; when GUI is active or ° when Shift is active'
+  }
+};
