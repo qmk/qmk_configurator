@@ -1,12 +1,8 @@
 <template>
   <div id="visual-keymap" :style="styles">
     <template v-for="meta in currentLayer">
-      <transition name="fade" appear :key="meta.id">
-        <component
-          v-bind:is="getComponent(meta)"
-          v-bind="meta"
-          :key="meta.id"
-        />
+      <transition :key="meta.id" name="fade" appear>
+        <component :is="getComponent(meta)" v-bind="meta" :key="meta.id" />
       </transition>
     </template>
   </div>
@@ -22,7 +18,8 @@ import ContainerKey from '@/components/ContainerKey.vue';
 import LayerContainerKey from '@/components/LayerContainerKey.vue';
 
 export default {
-  name: 'visual-keymap',
+  name: 'VisualKeymap',
+  components: { BaseKey, AnyKey, LayerKey, ContainerKey },
   extends: BaseKeymap,
   props: {
     profile: Boolean,
@@ -31,26 +28,11 @@ export default {
       default: false
     }
   },
-  watch: {
-    layout(newLayout, oldLayout) {
-      // eslint-disable-next-line no-console
-      this.profile && console.time('layout');
-      if (
-        !isUndefined(newLayout) &&
-        !this.isLayoutUIUpdate(newLayout, oldLayout) &&
-        newLayout !== oldLayout
-      ) {
-        this.recalcEverything(newLayout);
-      } else if (
-        isUndefined(newLayout) &&
-        !isUndefined(oldLayout) &&
-        oldLayout !== ''
-      ) {
-        this.recalcEverything(oldLayout);
-      }
-      // eslint-disable-next-line no-console
-      this.profile && console.timeEnd('layout');
-    }
+  data() {
+    return {
+      width: 0,
+      height: 0
+    };
   },
   computed: {
     ...mapState('keymap', ['config', 'displaySizes', 'layer']),
@@ -97,6 +79,27 @@ export default {
         _promise();
       }
       return curLayer;
+    }
+  },
+  watch: {
+    layout(newLayout, oldLayout) {
+      // eslint-disable-next-line no-console
+      this.profile && console.time('layout');
+      if (
+        !isUndefined(newLayout) &&
+        !this.isLayoutUIUpdate(newLayout, oldLayout) &&
+        newLayout !== oldLayout
+      ) {
+        this.recalcEverything(newLayout);
+      } else if (
+        isUndefined(newLayout) &&
+        !isUndefined(oldLayout) &&
+        oldLayout !== ''
+      ) {
+        this.recalcEverything(oldLayout);
+      }
+      // eslint-disable-next-line no-console
+      this.profile && console.timeEnd('layout');
     }
   },
   methods: {
@@ -194,14 +197,7 @@ export default {
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::scale');
     }
-  },
-  data() {
-    return {
-      width: 0,
-      height: 0
-    };
-  },
-  components: { BaseKey, AnyKey, LayerKey, ContainerKey }
+  }
 };
 </script>
 <style>
