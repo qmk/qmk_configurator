@@ -3,10 +3,10 @@
     <div class="layout-selector-radios">
       <slot v-for="_layout in availableLayouts">
         <button
-          class="layout-btn-select"
-          v-on:click="layout = _layout"
           :key="_layout"
+          class="layout-btn-select"
           :class="{ active: _layout === layout }"
+          @click="layout = _layout"
         >
           {{ _layout }}
         </button>
@@ -15,10 +15,10 @@
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
         <component
-          :layer="0"
-          v-bind:is="getComponent(meta)"
-          v-bind="meta"
+          :is="getComponent(meta)"
           :key="meta.id"
+          :layer="0"
+          v-bind="meta"
         />
       </template>
     </div>
@@ -43,8 +43,8 @@
         </div>
       </div>
       <div
-        class="status-log"
         ref="status"
+        class="status-log"
         spellcheck="false"
         v-html="status"
       ></div>
@@ -61,15 +61,15 @@
         <label>{{ $t('tester.chatter.label') }}:</label>
         <input
           id="chatter-threshold"
-          @focus="destroyKeyListeners"
-          @blur="createKeyListeners"
-          type="number"
           v-model="chatterThreshold"
+          type="number"
           min="1"
           max="100"
           step="1"
+          @blur="createKeyListeners"
+          @focus="destroyKeyListeners"
         />
-        <span id="chatter-alert" v-show="chatterDetected">
+        <span v-show="chatterDetected" id="chatter-alert">
           {{ $t('tester.chatter.detectedAlert') }}
         </span>
       </div>
@@ -95,15 +95,37 @@ import TesterKey from '@/components/TesterKey.vue';
 import { Howl } from 'howler';
 
 export default {
-  name: 'visual-tester-keymap',
+  name: 'VisualTesterKeymap',
+  components: { TesterKey },
   extends: BaseKeymap,
-  async mounted() {
-    this.createKeyListeners();
-    await this.init();
-    this.setSize(this.calculateMax(this.layout));
-  },
-  beforeDestroy() {
-    this.destroyKeyListeners();
+  data() {
+    const sound = new Howl({
+      src: ['typewriter-2.mp3'],
+      sprite: {
+        0: [107, 207],
+        1: [304, 270],
+        2: [646, 219],
+        3: [862, 144],
+        4: [1013, 263]
+      },
+      html5: true
+    });
+    return {
+      chatterThreshold: 8,
+      width: 0,
+      height: 0,
+      status: '',
+      timingKeyUp: {},
+      timingKeyDown: {},
+      lastKey: '',
+      lastCode: '',
+      lastKeyCode: '',
+      displayHex: false,
+      audioIcon: 'volume-mute',
+      curIndex: 0,
+      sound,
+      index: Object.keys(sound._sprite)
+    };
   },
   computed: {
     ...mapState('tester', [
@@ -162,6 +184,14 @@ export default {
         ? `0x${this.lastKeyCode.toString(16)}`
         : this.lastKeyCode;
     }
+  },
+  async mounted() {
+    this.createKeyListeners();
+    await this.init();
+    this.setSize(this.calculateMax(this.layout));
+  },
+  beforeDestroy() {
+    this.destroyKeyListeners();
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
@@ -298,37 +328,7 @@ export default {
     togglehex() {
       this.displayHex = !this.displayHex;
     }
-  },
-  data() {
-    const sound = new Howl({
-      src: ['typewriter-2.mp3'],
-      sprite: {
-        0: [107, 207],
-        1: [304, 270],
-        2: [646, 219],
-        3: [862, 144],
-        4: [1013, 263]
-      },
-      html5: true
-    });
-    return {
-      chatterThreshold: 8,
-      width: 0,
-      height: 0,
-      status: '',
-      timingKeyUp: {},
-      timingKeyDown: {},
-      lastKey: '',
-      lastCode: '',
-      lastKeyCode: '',
-      displayHex: false,
-      audioIcon: 'volume-mute',
-      curIndex: 0,
-      sound,
-      index: Object.keys(sound._sprite)
-    };
-  },
-  components: { TesterKey }
+  }
 };
 </script>
 <style>
