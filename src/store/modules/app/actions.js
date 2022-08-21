@@ -159,6 +159,7 @@ const actions = {
     const keyboardLayout = iso ? 'enableIso' : 'disableIso';
     this.commit(`keycodes/${keyboardLayout}`);
     this.commit('keymap/updateKeycodeNames');
+    await this.dispatch('tester/init');
     await dispatch('saveConfiguratorSettings');
   },
   async toggleClearLayerDefault({ commit, state, dispatch }) {
