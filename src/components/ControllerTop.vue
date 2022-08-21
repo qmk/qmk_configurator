@@ -225,50 +225,49 @@ export default {
      * @param {boolean} isAutoInit If the method is called by the code
      * @return {object} promise when it has completed
      */
-    loadDefault(isAutoInit = false) {
+    async loadDefault(isAutoInit = false) {
       if (this.isDirty) {
         if (!confirm(clearKeymapTemplate({ action: 'load default keymap' }))) {
           return false;
         }
       }
       const store = this.$store;
-      this.loadDefaultKeymap()
-        .then((data) => {
-          if (data) {
-            console.log(data);
-            this.updateLayout(data.layout);
-            let promise = new Promise((resolve) =>
-              store.commit('keymap/setLoadingKeymapPromise', resolve)
-            ).then(async () => {
-              // clear the keymap name for the default keymap
-              // otherwise it overrides the default getter
-              this.updateKeymapName('');
-              const stats = await this.load_converted_keymap(data.layers);
-              let msg = this.$t('statsTemplate', stats);
-              if (stats.warnings.length > 0 || stats.errors.length > 0) {
-                msg = `${msg}\n${stats.warnings.join('\n')}`;
-                msg = `${msg}\n${stats.errors.join('\n')}`;
-              }
-              if (!isAutoInit) {
-                store.commit('keymap/setDirty');
-              } else {
-                // This is a dirty hack so that the status message appears both after pressing load default
-                // and switching keyboards. This entire flow needs redesigning as it was written
-                // when I had a poor understanding of vue observability.
-                store.commit('status/append', msg);
-                store.commit('status/deferredMessage', msg);
-              }
-            });
-            return promise;
-          }
-          return data;
-        })
-        .catch((error) => {
-          statusError(
-            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
-          );
-          console.log('error loadDefault', error);
-        });
+      try {
+        const data = await this.loadDefaultKeymap();
+        if (data) {
+          console.log(data);
+          this.updateLayout(data.layout);
+          let promise = new Promise((resolve) =>
+            store.commit('keymap/setLoadingKeymapPromise', resolve)
+          ).then(async () => {
+            // clear the keymap name for the default keymap
+            // otherwise it overrides the default getter
+            this.updateKeymapName('');
+            const stats = await this.load_converted_keymap(data.layers);
+            let msg = this.$t('statsTemplate', stats);
+            if (stats.warnings.length > 0 || stats.errors.length > 0) {
+              msg = `${msg}\n${stats.warnings.join('\n')}`;
+              msg = `${msg}\n${stats.errors.join('\n')}`;
+            }
+            if (!isAutoInit) {
+              store.commit('keymap/setDirty');
+            } else {
+              // This is a dirty hack so that the status message appears both after pressing load default
+              // and switching keyboards. This entire flow needs redesigning as it was written
+              // when I had a poor understanding of vue observability.
+              store.commit('status/append', msg);
+              store.commit('status/deferredMessage', msg);
+            }
+          });
+          return promise;
+        }
+        return data;
+      } catch (error) {
+        statusError(
+          `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+        );
+        console.log('error loadDefault', error);
+      }
     },
     // TODO: This needs to be moved in an action
     // selectInitialKeyboard
@@ -426,7 +425,7 @@ export default {
   },
   async mounted() {
     await this.initializeKeyboards();
-    this.loadDefault(true);
+    await this.loadDefault(true);
     this.initTemplates();
   }
 };

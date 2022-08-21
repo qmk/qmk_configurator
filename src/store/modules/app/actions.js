@@ -34,13 +34,13 @@ const actions = {
     const keyboardPath = state.keyboard.slice(0, 1);
     // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
-    return axios
-      .get(`keymaps/${keyboardPath}/${keyboardName}_default.json`)
-      .then((r) => {
-        if (r.status === 200) {
-          return r.data;
-        }
-      });
+    const resp = await axios.get(
+      `keymaps/${keyboardPath}/${keyboardName}_default.json`
+    );
+    if (resp.status === 200) {
+      return resp.data;
+    }
+    return undefined;
   },
   /**
    * load keymap from the selected URL
