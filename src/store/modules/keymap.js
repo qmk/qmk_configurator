@@ -248,9 +248,14 @@ const mutations = {
     // assumes the keycode store has changed due to layout update
     state.keymap = state.keymap.reduce((layers, layer) => {
       const transformedLayer = layer.map((meta) => {
+        if (meta.contents) {
+          meta.contents.name = store.getters['keycodes/lookupKeycode'](
+            meta.contents.code
+          ).name;
+        }
         return {
           ...meta,
-          name: store.getters['keycodes/lookupKeycode'].name
+          name: store.getters['keycodes/lookupKeycode'](meta.code).name
         };
       });
       layers.push(transformedLayer);
