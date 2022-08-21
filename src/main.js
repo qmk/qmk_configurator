@@ -71,8 +71,8 @@ if (
   electron.init(); // initializes code specific for the electron app
 
 Vue.component('VeilComponent', Veil);
-Vue.component('v-select', vSelect);
-Vue.component('font-awesome-icon', FontAwesomeIcon);
+Vue.component('VSelect', vSelect);
+Vue.component('FontAwesomeIcon', FontAwesomeIcon);
 Vue.use(VueSlideoutPanel);
 
 const icons = [
