@@ -5,35 +5,35 @@
         <a
           id="favorite-keyboard"
           v-tooltip="$t('favoriteKeyboard')"
-          @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
           }"
+          @click="favKeyboard"
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
-        <label class="drop-label" id="drop-label-keyboard"
+        <label id="drop-label-keyboard" class="drop-label"
           >{{ $t('keyboard.label') }}:</label
         >
         <v-select
-          @search:focus="opened"
-          @search:blur="blur"
-          maxHeight="600px"
+          ref="select"
           v-model="keyboard"
+          max-height="600px"
           :clearable="false"
           :options="keyboards"
-          ref="select"
+          @search:focus="opened"
+          @search:blur="blur"
         ></v-select>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label" id="drop-label-version"
+        <label id="drop-label-version" class="drop-label"
           >{{ $t('layout.label') }}:</label
         >
         <select id="layout" v-model="layout" @focus="focus" @blur="blur">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
-            v-bind:value="layoutName"
+            :value="layoutName"
           >
             {{ layoutName }}
           </option>
@@ -41,15 +41,15 @@
       </div>
       <div class="topctrl-keymap-name">
         <label
+          v-tooltip="$t('keymapName.label')"
           class="drop-label"
           :class="fontAdjustClasses"
-          v-tooltip="$t('keymapName.label')"
           >{{ $t('keymapName.label') }}:</label
         >
         <input
           id="keymap-name"
-          type="text"
           v-model="keymapName"
+          type="text"
           :placeholder="$t('keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
@@ -67,7 +67,7 @@
         <button
           id="compile"
           v-tooltip="$t('compile.title')"
-          v-bind:disabled="compileDisabled"
+          :disabled="compileDisabled"
           @click="compile"
         >
           {{ $t('compile.label') }}
@@ -97,6 +97,12 @@ const { isNavigationFailure, NavigationFailureType } = VueRouter;
 
 export default {
   name: 'ControllerTop',
+  data: () => {
+    return {
+      keymapName: '',
+      firstRun: true
+    };
+  },
   computed: {
     ...mapGetters('keymap', ['isDirty']),
     ...mapGetters('app', ['exportKeymapName']),
@@ -201,6 +207,11 @@ export default {
         }
       }
     }
+  },
+  async mounted() {
+    await this.initializeKeyboards();
+    await this.loadDefault(true);
+    await this.initTemplates();
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig', 'clear']),
@@ -421,17 +432,6 @@ export default {
     blur() {
       this.startListening();
     }
-  },
-  data: () => {
-    return {
-      keymapName: '',
-      firstRun: true
-    };
-  },
-  async mounted() {
-    await this.initializeKeyboards();
-    await this.loadDefault(true);
-    this.initTemplates();
   }
 };
 </script>
