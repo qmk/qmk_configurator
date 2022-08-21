@@ -316,14 +316,14 @@ export default {
       }
 
       this.setLayout(layoutP);
-      return this.updateKeyboard(_keyboard);
+      await this.updateKeyboard(_keyboard);
     },
     /**
      * updateKeyboard - triggers a keyboard update action on the store
      * @param {string} newKeyboard to switch to
      * @return {object} promise when it has been done or error
      */
-    updateKeyboard(newKeyboard) {
+    async updateKeyboard(newKeyboard) {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
@@ -333,7 +333,7 @@ export default {
         disableOtherButtons();
       }
 
-      return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
+      await this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
     },
     favKeyboard() {
       if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {

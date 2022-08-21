@@ -56,47 +56,43 @@ const actions = {
    *  @param {string} keyboard new keyboard we are switching to
    *  @return {object} promise that will be fulfilled once action is complete
    */
-  changeKeyboard({ state, commit, dispatch }, keyboard) {
+  async changeKeyboard({ state, commit, dispatch }, keyboard) {
     const store = this;
     let clearKeymap = false;
-    const promise = new Promise((resolve) => {
-      commit('disablePreview');
-      commit('enableCompile');
-      if (state.keyboard !== keyboard) {
-        // wait until the layouts have loaded to clear the
-        // keymap to get the correct number of positions.
-        clearKeymap = true;
-      }
-      commit('setKeyboard', keyboard);
-      const oldLayout = state.layout || '';
-      commit('setLayout', undefined);
-      dispatch('loadLayouts').then(() => {
-        let nextLayout = getPreferredLayout(state.layouts);
-        // eslint-disable-next-line
-        console.info(getPreferredLayout(state.layouts));
-        if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
-          nextLayout = oldLayout;
-        }
-        commit('setLayout', nextLayout);
+    commit('disablePreview');
+    commit('enableCompile');
+    if (state.keyboard !== keyboard) {
+      // wait until the layouts have loaded to clear the
+      // keymap to get the correct number of positions.
+      clearKeymap = true;
+    }
+    commit('setKeyboard', keyboard);
+    const oldLayout = state.layout || '';
+    commit('setLayout', undefined);
+    await dispatch('loadLayouts');
+    let nextLayout = getPreferredLayout(state.layouts);
+    // eslint-disable-next-line
+    console.info(getPreferredLayout(state.layouts));
+    if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
+      nextLayout = oldLayout;
+    }
+    commit('setLayout', nextLayout);
 
-        // enable and disable steno in keycode UI
-        const stenoCheck = steno_keyboards.reduce((_, keeb) => {
-          return { [keeb]: true };
-        }, {});
-        if (stenoCheck[keyboard]) {
-          this.commit('keycodes/enableSteno');
-        } else {
-          this.commit('keycodes/disableSteno');
-        }
+    // enable and disable steno in keycode UI
+    const stenoCheck = steno_keyboards.reduce((_, keeb) => {
+      return { [keeb]: true };
+    }, {});
+    if (stenoCheck[keyboard]) {
+      this.commit('keycodes/enableSteno');
+    } else {
+      this.commit('keycodes/disableSteno');
+    }
 
-        if (clearKeymap) {
-          store.commit('keymap/clear');
-        }
+    if (clearKeymap) {
+      store.commit('keymap/clear');
+    }
 
-        resolve();
-      });
-    });
-    return promise;
+    return Promise.resolve();
   },
   /**
    * loadLayouts
