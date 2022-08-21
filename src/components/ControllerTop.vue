@@ -237,7 +237,12 @@ export default {
         if (data) {
           console.log(data);
           this.updateLayout(data.layout);
-          let promise = new Promise((resolve) =>
+          const promise = new Promise((resolve) =>
+            // OK this is a hack that let's the VisualKeymap signal to this ControllerTop that's
+            // it's finished calculating the new visual keymap layout.
+            // we set a promise in the store and wait for it to finish before updating the stats
+            // for the keyboard so we don't get overwritten by the keyboard loading the README in the console
+            // code. Hacky.
             store.commit('keymap/setLoadingKeymapPromise', resolve)
           ).then(async () => {
             // clear the keymap name for the default keymap

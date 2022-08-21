@@ -67,11 +67,6 @@ export default {
       if (isUndefined(layout) || isUndefined(keymap)) {
         return [];
       }
-      if (this.loadingKeymapPromise) {
-        const _promise = this.loadingKeymapPromise;
-        this.setLoadingKeymapPromise(undefined);
-        _promise();
-      }
       // Calculate Max with given layout
       // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
@@ -94,6 +89,13 @@ export default {
       });
       // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
+      if (this.loadingKeymapPromise) {
+        // signal to observers of keymap loading that UI component has finished calculations
+        // this is a tricky way to introduce async signalling into a sync computed property
+        const _promise = this.loadingKeymapPromise;
+        this.setLoadingKeymapPromise(undefined);
+        _promise();
+      }
       return curLayer;
     }
   },
