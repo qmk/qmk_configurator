@@ -4,7 +4,7 @@
       <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
       {{ $t('tester.back.label') }}
     </button>
-    <button id="resetTest" @click="reset()" :title="$t('tester.reset.title')">
+    <button id="resetTest" :title="$t('tester.reset.title')" @click="reset()">
       <font-awesome-icon icon="undo" size="lg" fixed-width />
       {{ $t('tester.reset.label') }}
     </button>
@@ -17,11 +17,11 @@
 import { mapState, mapMutations } from 'vuex';
 import VisualTesterKeymap from '@/components/VisualTesterKeymap.vue';
 export default {
-  name: 'testerator',
+  name: 'TesteratorComponent',
+  components: { VisualTesterKeymap },
   computed: {
     ...mapState('app', ['keyboard', 'layout'])
   },
-  components: { VisualTesterKeymap },
   methods: {
     ...mapMutations('tester', ['reset']),
     gohome() {

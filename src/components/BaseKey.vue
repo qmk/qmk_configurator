@@ -144,9 +144,9 @@ export default {
       if (isUndefined(this.meta)) {
         return;
       }
+      // if OS icons exist don't display keycode
       if (isUndefined(substitute[this.meta.code])) {
-        const { name } = this.lookupKeycode(this.meta.code);
-        return this.formatName(name ? name : this.meta.name);
+        return this.formatName(this.meta.name);
       }
       return undefined;
     },

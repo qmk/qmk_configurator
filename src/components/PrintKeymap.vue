@@ -1,7 +1,7 @@
 <template>
   <div class="print-keymap" :style="styles">
     <template v-for="meta in currentLayer(layer)">
-      <PrintKey :layer="layer" v-bind="meta" :key="meta.id" :printable="true" />
+      <PrintKey :key="meta.id" :layer="layer" v-bind="meta" :printable="true" />
     </template>
   </div>
 </template>
@@ -12,14 +12,21 @@ import BaseKeymap from '@/components/BaseKeymap.vue';
 import PrintKey from '@/components/PrintKey.vue';
 
 export default {
-  name: 'print-keymap',
+  name: 'PrintKeymap',
+  components: { PrintKey },
   extends: BaseKeymap,
   props: {
     profile: Boolean,
-    layer: Number
+    layer: {
+      type: Number,
+      default: 0
+    }
   },
-  mounted() {
-    this.setSize(this.calculateMax(this.layout));
+  data() {
+    return {
+      width: 0,
+      height: 0
+    };
   },
   computed: {
     ...mapState('app', ['layout', 'displaySizes']),
@@ -31,6 +38,9 @@ export default {
       'defaults'
     ]),
     ...mapState('app', ['layout', 'layouts', 'previewRequested'])
+  },
+  mounted() {
+    this.setSize(this.calculateMax(this.layout));
   },
   methods: {
     ...mapMutations('keymap', ['resizeConfig']),
@@ -67,14 +77,7 @@ export default {
     getComponent() {
       return PrintKey;
     }
-  },
-  data() {
-    return {
-      width: 0,
-      height: 0
-    };
-  },
-  components: { PrintKey }
+  }
 };
 </script>
 <style>

@@ -20,7 +20,7 @@ const state = {
   // super hacky way to wait for visual keymap to be done
   // basically when we load a keymap create a promise that will run the keymap loading code
   // but let the visualkeymap signal when it is done and resolve the promise at that time
-  // otherwise they race against each other and the visual keymap erases the keymapd data
+  // otherwise they race against each other and the visual keymap erases the keymap data
   loadingKeymapPromise: undefined,
   colorways: colorways.list,
   colorwayIndex: random(0, colorways.list.length - 1),
@@ -175,22 +175,21 @@ const actions = {
       });
     }
   },
-  initTemplates({ commit }) {
-    return axios
-      .get(`${backend_skeletons_url}/keymap`)
-      .then((resp) => {
-        if (resp.status === 200) {
-          let template = Object.assign({}, resp.data);
-          delete template.keyboard;
-          delete template.keymap;
-          delete template.layout;
-          delete template.layers;
-          commit('setKeymapTemplate', template);
-        }
-      })
-      .catch((err) => {
-        console.warn('unable to get keymap template. error:', err);
-      });
+  async initTemplates({ commit }) {
+    try {
+      const resp = await axios.get(`${backend_skeletons_url}/keymap`);
+      if (resp.status === 200) {
+        let template = Object.assign({}, resp.data);
+        delete template.keyboard;
+        delete template.keymap;
+        delete template.layout;
+        delete template.layers;
+        commit('setKeymapTemplate', template);
+      }
+      return resp;
+    } catch (err) {
+      console.warn('unable to get keymap template. error:', err);
+    }
   },
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   load_converted_keymap({ commit }, converted_keymap) {
@@ -237,6 +236,31 @@ const mutations = {
       state.selectedContent = true;
     }
     state.selectedIndex = index;
+  },
+  /**
+   * Use this after switching out the keycodes for a new layout to keep the keymap
+   * in sync. It has it's own copy of the labels, which need to be updated for
+   * correct ISO support.
+   * @param {} state
+   */
+  updateKeycodeNames(state) {
+    let store = this;
+    // assumes the keycode store has changed due to layout update
+    state.keymap = state.keymap.reduce((layers, layer) => {
+      const transformedLayer = layer.map((meta) => {
+        if (meta.contents) {
+          meta.contents.name = store.getters['keycodes/lookupKeycode'](
+            meta.contents.code
+          ).name;
+        }
+        return {
+          ...meta,
+          name: store.getters['keycodes/lookupKeycode'](meta.code).name
+        };
+      });
+      layers.push(transformedLayer);
+      return layers;
+    }, []);
   },
   setKeycode(state, { _code, layer }) {
     if (isUndefined(state.selectedIndex)) {

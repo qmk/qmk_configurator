@@ -22,7 +22,8 @@ describe('Tester feature', function () {
   });
   it('Should change layout', function () {
     // ISO has 105 keys
-    cy.get('.layout-selector-radios > :nth-child(2)').click();
+    cy.get('.bes-controls').click();
+    cy.get('#setting-toggle-iso').click();
     cy.get('.visual-tester-keymap').find('div').should('have.length', 105);
   });
   it('Handle typing', function () {

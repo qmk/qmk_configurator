@@ -5,35 +5,35 @@
         <a
           id="favorite-keyboard"
           v-tooltip="$t('favoriteKeyboard')"
-          @click="favKeyboard"
           :class="{
             active: isFavoriteKeyboard
           }"
+          @click="favKeyboard"
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
-        <label class="drop-label" id="drop-label-keyboard"
+        <label id="drop-label-keyboard" class="drop-label"
           >{{ $t('keyboard.label') }}:</label
         >
         <v-select
-          @search:focus="opened"
-          @search:blur="blur"
-          maxHeight="600px"
+          ref="select"
           v-model="keyboard"
+          max-height="600px"
           :clearable="false"
           :options="keyboards"
-          ref="select"
+          @search:focus="opened"
+          @search:blur="blur"
         ></v-select>
       </div>
       <div class="topctrl-layouts">
-        <label class="drop-label" id="drop-label-version"
+        <label id="drop-label-version" class="drop-label"
           >{{ $t('layout.label') }}:</label
         >
         <select id="layout" v-model="layout" @focus="focus" @blur="blur">
           <option
             v-for="(aLayout, layoutName) in layouts"
             :key="layoutName"
-            v-bind:value="layoutName"
+            :value="layoutName"
           >
             {{ layoutName }}
           </option>
@@ -41,15 +41,15 @@
       </div>
       <div class="topctrl-keymap-name">
         <label
+          v-tooltip="$t('keymapName.label')"
           class="drop-label"
           :class="fontAdjustClasses"
-          v-tooltip="$t('keymapName.label')"
           >{{ $t('keymapName.label') }}:</label
         >
         <input
           id="keymap-name"
-          type="text"
           v-model="keymapName"
+          type="text"
           :placeholder="$t('keymapName.placeholder')"
           spellcheck="false"
           @focus="focus"
@@ -67,7 +67,7 @@
         <button
           id="compile"
           v-tooltip="$t('compile.title')"
-          v-bind:disabled="compileDisabled"
+          :disabled="compileDisabled"
           @click="compile"
         >
           {{ $t('compile.label') }}
@@ -97,6 +97,12 @@ const { isNavigationFailure, NavigationFailureType } = VueRouter;
 
 export default {
   name: 'ControllerTop',
+  data: () => {
+    return {
+      keymapName: '',
+      firstRun: true
+    };
+  },
   computed: {
     ...mapGetters('keymap', ['isDirty']),
     ...mapGetters('app', ['exportKeymapName']),
@@ -202,6 +208,11 @@ export default {
       }
     }
   },
+  async mounted() {
+    await this.initializeKeyboards();
+    await this.loadDefault(true);
+    await this.initTemplates();
+  },
   methods: {
     ...mapMutations('keymap', ['resizeConfig', 'clear']),
     ...mapMutations('app', [
@@ -225,50 +236,54 @@ export default {
      * @param {boolean} isAutoInit If the method is called by the code
      * @return {object} promise when it has completed
      */
-    loadDefault(isAutoInit = false) {
+    async loadDefault(isAutoInit = false) {
       if (this.isDirty) {
         if (!confirm(clearKeymapTemplate({ action: 'load default keymap' }))) {
           return false;
         }
       }
       const store = this.$store;
-      this.loadDefaultKeymap()
-        .then((data) => {
-          if (data) {
-            console.log(data);
-            this.updateLayout(data.layout);
-            let promise = new Promise((resolve) =>
-              store.commit('keymap/setLoadingKeymapPromise', resolve)
-            ).then(async () => {
-              // clear the keymap name for the default keymap
-              // otherwise it overrides the default getter
-              this.updateKeymapName('');
-              const stats = await this.load_converted_keymap(data.layers);
-              let msg = this.$t('statsTemplate', stats);
-              if (stats.warnings.length > 0 || stats.errors.length > 0) {
-                msg = `${msg}\n${stats.warnings.join('\n')}`;
-                msg = `${msg}\n${stats.errors.join('\n')}`;
-              }
-              if (!isAutoInit) {
-                store.commit('keymap/setDirty');
-              } else {
-                // This is a dirty hack so that the status message appears both after pressing load default
-                // and switching keyboards. This entire flow needs redesigning as it was written
-                // when I had a poor understanding of vue observability.
-                store.commit('status/append', msg);
-                store.commit('status/deferredMessage', msg);
-              }
-            });
-            return promise;
-          }
-          return data;
-        })
-        .catch((error) => {
-          statusError(
-            `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
-          );
-          console.log('error loadDefault', error);
-        });
+      try {
+        const data = await this.loadDefaultKeymap();
+        if (data) {
+          console.log(data);
+          this.updateLayout(data.layout);
+          const promise = new Promise((resolve) =>
+            // OK this is a hack that let's the VisualKeymap signal to this ControllerTop that's
+            // it's finished calculating the new visual keymap layout.
+            // we set a promise in the store and wait for it to finish before updating the stats
+            // for the keyboard so we don't get overwritten by the keyboard loading the README in the console
+            // code. Hacky.
+            store.commit('keymap/setLoadingKeymapPromise', resolve)
+          ).then(async () => {
+            // clear the keymap name for the default keymap
+            // otherwise it overrides the default getter
+            this.updateKeymapName('');
+            const stats = await this.load_converted_keymap(data.layers);
+            let msg = this.$t('statsTemplate', stats);
+            if (stats.warnings.length > 0 || stats.errors.length > 0) {
+              msg = `${msg}\n${stats.warnings.join('\n')}`;
+              msg = `${msg}\n${stats.errors.join('\n')}`;
+            }
+            if (!isAutoInit) {
+              store.commit('keymap/setDirty');
+            } else {
+              // This is a dirty hack so that the status message appears both after pressing load default
+              // and switching keyboards. This entire flow needs redesigning as it was written
+              // when I had a poor understanding of vue observability.
+              store.commit('status/append', msg);
+              store.commit('status/deferredMessage', msg);
+            }
+          });
+          return promise;
+        }
+        return data;
+      } catch (error) {
+        statusError(
+          `\n* Sorry there is no default for the ${this.keyboard} keyboard... yet!`
+        );
+        console.log('error loadDefault', error);
+      }
     },
     // TODO: This needs to be moved in an action
     // selectInitialKeyboard
@@ -316,14 +331,14 @@ export default {
       }
 
       this.setLayout(layoutP);
-      return this.updateKeyboard(_keyboard);
+      await this.updateKeyboard(_keyboard);
     },
     /**
      * updateKeyboard - triggers a keyboard update action on the store
      * @param {string} newKeyboard to switch to
      * @return {object} promise when it has been done or error
      */
-    updateKeyboard(newKeyboard) {
+    async updateKeyboard(newKeyboard) {
       if (this.firstRun) {
         // ignore initial load keyboard selection event if it's default
         this.firstRun = false;
@@ -333,7 +348,7 @@ export default {
         disableOtherButtons();
       }
 
-      return this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
+      await this.changeKeyboard(newKeyboard).then(this.postUpdateKeyboard);
     },
     favKeyboard() {
       if (this.keyboard === this.configuratorSettings.favoriteKeyboard) {
@@ -417,17 +432,6 @@ export default {
     blur() {
       this.startListening();
     }
-  },
-  data: () => {
-    return {
-      keymapName: '',
-      firstRun: true
-    };
-  },
-  async mounted() {
-    await this.initializeKeyboards();
-    this.loadDefault(true);
-    this.initTemplates();
   }
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
   <!-- prettier-ignore -->
   <div
-    draggable
     :id="myid"
+    draggable
     class="key key-container"
     :class="myclasses"
     :style="mystyles"
@@ -30,7 +30,7 @@ import isUndefined from 'lodash/isUndefined';
 import { mapMutations } from 'vuex';
 import BaseKey from './BaseKey.vue';
 export default {
-  name: 'container-key',
+  name: 'ContainerKey',
   extends: BaseKey,
   data() {
     return {
