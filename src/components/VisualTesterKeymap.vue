@@ -1,6 +1,17 @@
 <template>
   <div class="tester">
-    <div class="layout-selector-radios"></div>
+    <div class="layout-selector-radios">
+      <slot v-for="_layout in availableLayouts">
+        <button
+          class="layout-btn-select"
+          v-on:click="layout = _layout"
+          :key="_layout"
+          :class="{ active: _layout === layout }"
+        >
+          {{ _layout }}
+        </button>
+      </slot>
+    </div>
     <div class="visual-tester-keymap" :style="styles">
       <template v-for="meta in testerLayer">
         <component
