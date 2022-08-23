@@ -111,18 +111,18 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
 settingsPanel:fastInput:label,高速入力
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:osKeyboardLayout:title,
-settingsPanel:osKeyboardLayout:help,
-settingsPanel:osKeyboardLayout:label:keymap_german,ドイツ語（ドイツ・オーストリア）
-settingsPanel:osKeyboardLayout:label:keymap_russian,ロシア語
-settingsPanel:osKeyboardLayout:label:keymap_uk,英語 (UK)
-settingsPanel:osKeyboardLayout:label:keymap_us,英語 (US)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,ユーザインタフェースの言語を変更する
 settingsPanel:language:title,言語
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,ドイツ語（ドイツ・オーストリア）
+settingsPanel:osKeyboardLayout:label:keymap_russian,ロシア語
+settingsPanel:osKeyboardLayout:label:keymap_uk,英語 (UK)
+settingsPanel:osKeyboardLayout:label:keymap_us,英語 (US)
+settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,雪の切り替え
 settingsPanel:snowflakes:title,雪
 settingsPanel:title,Configuratorの設定

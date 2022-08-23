@@ -111,18 +111,18 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
 settingsPanel:fastInput:label,Быстрый ввод
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:osKeyboardLayout:title,Раскладка клавиатуры операционной системы
-settingsPanel:osKeyboardLayout:help,Изменяет легенды клавиш в соответствии с раскладкой клавиатуры операционной системы.
-settingsPanel:osKeyboardLayout:label:keymap_german,Немецкий (Германия и Австрия)
-settingsPanel:osKeyboardLayout:label:keymap_russian,Русский
-settingsPanel:osKeyboardLayout:label:keymap_uk,Английский (Великобритания)
-settingsPanel:osKeyboardLayout:label:keymap_us,Английский (США)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Язык
 settingsPanel:off:label,Выкл
 settingsPanel:on:label,Вкл
+settingsPanel:osKeyboardLayout:help,Изменяет легенды клавиш в соответствии с раскладкой клавиатуры операционной системы.
+settingsPanel:osKeyboardLayout:label:keymap_german,Немецкий (Германия и Австрия)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Русский
+settingsPanel:osKeyboardLayout:label:keymap_uk,Английский (Великобритания)
+settingsPanel:osKeyboardLayout:label:keymap_us,Английский (США)
+settingsPanel:osKeyboardLayout:title,Раскладка клавиатуры операционной системы
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Настройки конфигуратора
