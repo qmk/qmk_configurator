@@ -117,7 +117,7 @@ settingsPanel:language:help,
 settingsPanel:language:title,Langue
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
-settingsPanel:osKeyboardLayout:help,Change les légendes des touches pour qu'elles collent avec la disposition des touches du système.
+settingsPanel:osKeyboardLayout:help,Change les légendes des touches pour qu'elles correspondent à la disposition des touches du système.
 settingsPanel:osKeyboardLayout:label:keymap_german,Allemand (Allemagne & Autriche)
 settingsPanel:osKeyboardLayout:label:keymap_russian,Russe
 settingsPanel:osKeyboardLayout:label:keymap_uk,Anglais (Royaume-Uni)
