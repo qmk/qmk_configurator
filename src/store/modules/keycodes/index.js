@@ -33,10 +33,19 @@ const state = {
 
 function getOSKeyboardLayout() {
   const fallbackOSKeyboardLayout = 'keymap_us';
-  return (
-    store.state.app.configuratorSettings.osKeyboardLayout ||
-    fallbackOSKeyboardLayout
-  );
+  const osKeyboardLayout =
+    store.state.app.configuratorSettings.osKeyboardLayout;
+  if (
+    isUndefined(osKeyboardLayout) ||
+    !Object.keys(keymapExtras).includes(osKeyboardLayout)
+  ) {
+    console.log(
+      `The stored OS keyboard layout value (${osKeyboardLayout}) is not a valid value! Falling back to '${fallbackOSKeyboardLayout}'.`
+    );
+    store.state.app.configuratorSettings.osKeyboardLayout =
+      fallbackOSKeyboardLayout;
+  }
+  return store.state.app.configuratorSettings.osKeyboardLayout;
 }
 
 function isANSI() {
@@ -70,12 +79,6 @@ function generateKeycodes(osKeyboardLayout, isSteno) {
     ...keycodePickerTabLayout.special,
     ...(isSteno ? steno : [])
   ];
-  if (!Object.keys(keymapExtras).includes(getOSKeyboardLayout())) {
-    console.log(
-      `${getOSKeyboardLayout()} is not a valid OS keyboard layout value!`
-    );
-    return keycodes;
-  }
   const { keycodeLUT } = keymapExtras[getOSKeyboardLayout()];
   return keycodes.map((keycodeObject) =>
     toLocaleKeycode(keycodeLUT, keycodeObject)
