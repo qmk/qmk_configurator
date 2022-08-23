@@ -23,7 +23,7 @@ describe('Tester feature', function () {
   it('Should change layout', function () {
     // ISO has 105 keys
     cy.get('.bes-controls').click();
-    cy.get('#setting-toggle-iso').click();
+    cy.get('#setting-panel-os-keyboard-layout').select('keymap_uk');
     cy.get('.visual-tester-keymap').find('div').should('have.length', 105);
   });
   it('Handle typing', function () {
