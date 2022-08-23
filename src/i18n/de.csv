@@ -117,12 +117,12 @@ settingsPanel:language:help,
 settingsPanel:language:title,Sprache
 settingsPanel:off:label,Aus
 settingsPanel:on:label,An
-settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:help,Stellen Sie die Tastenbeschriftung auf das Systemlayout.
 settingsPanel:osKeyboardLayout:label:keymap_german,Deutsch (Deutschland & Österreich)
 settingsPanel:osKeyboardLayout:label:keymap_russian,Russisch
 settingsPanel:osKeyboardLayout:label:keymap_uk,Englisch (UK)
 settingsPanel:osKeyboardLayout:label:keymap_us,Englisch (US)
-settingsPanel:osKeyboardLayout:title,
+settingsPanel:osKeyboardLayout:title,Systemlayout
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Einstellungen
