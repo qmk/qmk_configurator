@@ -79,11 +79,10 @@ const state = {
     { value: 'zh-CN', label: '简体中文' }
   ],
   osKeyboardLayouts: [
-    // The labels are translatable strings
-    'keymap_us',
-    'keymap_uk',
     'keymap_german',
-    'keymap_russian'
+    'keymap_russian',
+    'keymap_uk',
+    'keymap_us'
   ],
   snowflakes: false
 };
