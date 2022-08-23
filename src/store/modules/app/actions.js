@@ -136,9 +136,15 @@ const actions = {
     commit('setCurrentLanguage', lang);
     await dispatch('saveConfiguratorSettings');
   },
-  async changeOSKeyboardLayout({ dispatch, commit }, osLayout) {
+  async changeOSKeyboardLayout({ dispatch, state, commit }, osLayout) {
     commit('setOSKeyboardLayout', osLayout);
-    this.commit('keycodes/changeKeyLegends');
+    this.commit('keycodes/updateKeycodeNames');
+    this.commit('keymap/updateKeycodeNames');
+    this.commit(
+      'tester/setLayout',
+      state.configuratorSettings.iso ? 'ISO' : 'ANSI'
+    );
+    await this.dispatch('tester/init');
     await dispatch('saveConfiguratorSettings');
   },
   // if init state we just load and not toggling
@@ -161,8 +167,6 @@ const actions = {
       iso = !iso;
     }
     commit('setIso', iso);
-    const keyboardLayout = iso ? 'enableIso' : 'disableIso';
-    this.commit(`keycodes/${keyboardLayout}`);
     this.commit('keymap/updateKeycodeNames');
     this.commit('tester/setLayout', iso ? 'ISO' : 'ANSI');
     await this.dispatch('tester/init');

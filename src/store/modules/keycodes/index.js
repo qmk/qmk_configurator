@@ -124,7 +124,7 @@ const mutations = {
     state.steno = false;
     state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
   },
-  changeKeyLegends(state) {
+  updateKeycodeNames(state) {
     state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
     if (isANSI()) {
       if (state.active === 'ISO/JIS') {
