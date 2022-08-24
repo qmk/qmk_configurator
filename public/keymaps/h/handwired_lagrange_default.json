@@ -9,8 +9,8 @@
       "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",                 "KC_T",                                                   "KC_Y",    "KC_U",                "KC_I",    "KC_O",    "KC_P",    "KC_BSLS",
       "KC_CAPS", "KC_A",    "KC_S",    "KC_D",    "KC_F",                 "KC_G",                                                   "KC_H",    "KC_J",                "KC_K",    "KC_L",    "KC_SCLN", "KC_QUOT",
       "KC_LSFT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",                 "KC_B",                                                   "KC_N",    "KC_M",                "KC_COMM", "KC_DOT",  "KC_SLSH", "KC_RSFT",
-      "KC_LCPO",            "KC_INS",  "KC_LBRC", "MT(MOD_LALT,KC_MINS)", "KC_BSPC", "KC_DEL",  "KC_PSCR",    "KC_PAUS", "KC_ENT",  "KC_SPC",  "MT(MOD_RALT,KC_EQL)", "KC_RBRC", "KC_DEL",             "KC_RCPC",
-                                                  "MT(MOD_LGUI,KC_HOME)", "KC_PGUP", "KC_END",                           "KC_LEFT", "KC_UP",   "MT(MOD_RGUI,KC_RGHT)",
+      "KC_LCPO",            "KC_INS",  "KC_LBRC", "LALT_T(KC_MINS)", "KC_BSPC", "KC_DEL",  "KC_PSCR",    "KC_PAUS", "KC_ENT",  "KC_SPC",  "RALT_T(KC_EQL)", "KC_RBRC", "KC_DEL",             "KC_RCPC",
+                                                  "LGUI_T(KC_HOME)", "KC_PGUP", "KC_END",                           "KC_LEFT", "KC_UP",   "RGUI_T(KC_RGHT)",
                                                                           "KC_PGDN",                                                "KC_DOWN"
     ],
     [
