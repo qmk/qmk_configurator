@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/splittest/bluepill",
+  "keymap": "default",
+  "commit": "92bcbee22615114286916bbbc4df4256c2818f0d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "RGB_MOD", "QK_BOOT"
+    ]
+  ]
+}
