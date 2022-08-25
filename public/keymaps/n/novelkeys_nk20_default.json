@@ -1,0 +1,24 @@
+{
+  "keyboard": "novelkeys/nk20",
+  "keymap": "default",
+  "commit": "5de655023e7d66ecaaba73d85409468aa95a701a",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+      "KC_VOLD", "KC_VOLU", "KC_MUTE",
+      "MO(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "KC_NLCK", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "RGB_SPD", "RGB_SPI", "KC_TRNS",
+      "RGB_TOG", "RGB_MOD", "RGB_HUD", "KC_TRNS",
+      "RGB_SAD", "RGB_SAI", "RGB_HUI",
+      "RGB_VAD", "RGB_VAI", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS"
+    ]
+  ]
+}
