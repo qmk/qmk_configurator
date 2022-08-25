@@ -117,6 +117,7 @@ settingsPanel:language:help,Change the language of the user interface
 settingsPanel:language:title,Language
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
 settingsPanel:osKeyboardLayout:label:keymap_belgian,Belgian
 settingsPanel:osKeyboardLayout:label:keymap_bepo,French (France)
 settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,Portuguese (Brazil)
@@ -178,6 +179,7 @@ settingsPanel:osKeyboardLayout:label:keymap_us_international,English (US Int'l)
 settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,English (US Int'l Linux)
 settingsPanel:osKeyboardLayout:label:keymap_workman,Workman
 settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Workman ZXCVM
+settingsPanel:osKeyboardLayout:title,Host Keyboard Layout
 settingsPanel:snowflakes:label,Toggle Snowflakes
 settingsPanel:snowflakes:title,Snowflakes
 settingsPanel:title,Configurator Settings
