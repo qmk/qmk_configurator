@@ -1,7 +1,7 @@
 {
-  "keyboard": "redox/rev1",
+  "keyboard": "redox/rev1/base",
   "keymap": "default",
-  "commit": "944feb2da52a3e6a9656e1c71cae75e4ca83a2e5",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT",
   "layers": [
     [
