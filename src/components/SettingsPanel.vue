@@ -169,7 +169,12 @@ export default {
         return this.configuratorSettings.language;
       },
       async set(value) {
-        await this.changeLanguage(value);
+        try {
+          await this.changeLanguage(value);
+        } catch (error) {
+          console.error('Setting a new value for the language failed!');
+          console.errror(error);
+        }
       }
     },
     osKeyboardLayout: {
@@ -177,7 +182,14 @@ export default {
         return this.configuratorSettings.osKeyboardLayout;
       },
       async set(value) {
-        await this.changeOSKeyboardLayout(value);
+        try {
+          await this.changeOSKeyboardLayout(value);
+        } catch (error) {
+          console.error(
+            'Setting a new value for the OS keyboard layout failed!'
+          );
+          console.errror(error);
+        }
       }
     },
     sortedOSKeyboardLayouts: function () {
