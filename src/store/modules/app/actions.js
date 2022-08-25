@@ -138,8 +138,13 @@ const actions = {
   },
   async changeOSKeyboardLayout({ dispatch, state, commit }, osLayout) {
     commit('setOSKeyboardLayout', osLayout);
+    // Important to call keycodes/updateKeycodeNames *before* keymap/updateKeycodeNames.
     this.commit('keycodes/updateKeycodeNames');
     this.commit('keymap/updateKeycodeNames');
+    this.commit(
+      'keycodes/changeActive',
+      state.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI'
+    );
     this.commit(
       'tester/setLayout',
       state.configuratorSettings.iso ? 'ISO' : 'ANSI'

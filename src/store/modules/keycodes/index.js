@@ -129,15 +129,6 @@ const mutations = {
   },
   updateKeycodeNames(state) {
     state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
-    if (isANSI()) {
-      if (state.active === 'ISO/JIS') {
-        state.active = 'ANSI';
-      }
-    } else {
-      if (state.active === 'ANSI') {
-        state.active = 'ISO/JIS';
-      }
-    }
   },
   setSearchFilter(state, newVal) {
     state.searchFilter = newVal;
