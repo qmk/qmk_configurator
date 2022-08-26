@@ -1,7 +1,7 @@
 {
-  "keyboard": "xelus/rs60",
+  "keyboard": "xelus/rs60/rev1",
   "keymap": "default",
-  "commit": "759d1927f099ba319ad09c69a2cc71026d775713",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

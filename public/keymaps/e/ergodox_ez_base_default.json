@@ -1,5 +1,5 @@
 {
-  "keyboard": "ergodox_ez",
+  "keyboard": "ergodox_ez/base",
   "keymap": "default",
   "commit": "d45da3f0fb76222a2af63b0b61f21ae78117b2d4",
   "layout": "LAYOUT_ergodox_pretty",
