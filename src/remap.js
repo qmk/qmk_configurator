@@ -1307,6 +1307,9 @@ const lookup = {
   },
   'zinc/reva': {
     target: '25keys/zinc/reva'
+  },
+  'ergodox_ez': {
+    target: 'ergodox_ez/base'
   }
 };
 
