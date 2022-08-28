@@ -399,7 +399,7 @@ fs.readFile(process.argv.at(-1), 'utf8', function (err, data) {
     if (tildeKeysym !== grvKeysym) {
       console.log(
         stringify('QK_GESC', {
-          name: `${grvKeysym} / ${tildeKeysym}\nEsc`,
+          name: `${grvKeysym}/${tildeKeysym}\nEsc`,
           title: `Esc normally, but ${grvKeysym} when GUI is active or ${tildeKeysym} when Shift is active`
         })
       );
