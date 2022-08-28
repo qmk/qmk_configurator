@@ -71,7 +71,7 @@ function toLocaleKeycode(keycodeLUT, keycodeObject) {
 }
 
 function generateKeycodes(osKeyboardLayout, isSteno) {
-  store.state.app.configuratorSettings.iso = !isANSI();
+  store.commit('app/setIso', !isANSI());
   const keycodes = [
     ...(isANSI()
       ? keycodePickerTabLayout.ANSI_ISO
