@@ -198,7 +198,7 @@ export default {
   KC_RAPC: { name: 'RA / Ö', title: 'Right Alt when held, Ö when tapped' },
 
   QK_GESC: {
-    name: '0 / §\nEsc',
+    name: '0/§\nEsc',
     title: 'Esc normally, but 0 when GUI is active or § when Shift is active'
   }
 };

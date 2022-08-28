@@ -174,7 +174,7 @@ export default {
   KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
   QK_GESC: {
-    name: '半角 / 全角\nEsc',
+    name: '半角/全角\nEsc',
     title:
       'Esc normally, but Zenkaku ↔ Hankaku ↔ Kanji when Shift or GUI is active'
   }
