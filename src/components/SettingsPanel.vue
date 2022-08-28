@@ -109,7 +109,7 @@
             :key="osLayout"
             :value="osLayout"
           >
-            {{ $t('settingsPanel.osKeyboardLayout.label.' + osLayout) }}
+            {{ $t(`settingsPanel.osKeyboardLayout.label.${osLayout}`) }}
           </option>
         </select>
       </div>
