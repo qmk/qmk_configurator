@@ -35,6 +35,9 @@ const getters = {
       return state.layouts[state.layout].length;
     }
     return 0;
+  },
+  osKeyboardLayout: (state) => {
+    return state.configuratorSettings.osKeyboardLayout;
   }
 };
 

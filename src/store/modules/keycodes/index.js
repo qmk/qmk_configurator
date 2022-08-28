@@ -32,20 +32,19 @@ const state = {
 };
 
 function getOSKeyboardLayout() {
-  const fallbackOSKeyboardLayout = 'keymap_us';
-  const osKeyboardLayout =
-    store.state.app.configuratorSettings.osKeyboardLayout;
+  let osKeyboardLayout = store.getters['app/osKeyboardLayout'];
   if (
     isUndefined(osKeyboardLayout) ||
     !Object.keys(keymapExtras).includes(osKeyboardLayout)
   ) {
+    const fallbackOSKeyboardLayout = 'keymap_us';
     console.log(
       `The stored OS keyboard layout value (${osKeyboardLayout}) is not a valid value! Falling back to '${fallbackOSKeyboardLayout}'.`
     );
-    store.state.app.configuratorSettings.osKeyboardLayout =
-      fallbackOSKeyboardLayout;
+    store.commit('app/setOSKeyboardLayout', fallbackOSKeyboardLayout);
+    osKeyboardLayout = fallbackOSKeyboardLayout;
   }
-  return store.state.app.configuratorSettings.osKeyboardLayout;
+  return osKeyboardLayout;
 }
 
 function isANSI() {
