@@ -41,10 +41,10 @@
       "TO(0)",   "KC_NO",   "KC_NO",   "KC_C",    "KC_V",    "KC_NO",   "KC_NO",   "KC_N",    "KC_M",    "KC_NO",   "KC_NO",   "KC_NO"
     ],
     [
-      "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_DEL",
-      "KC_TRNS", "KC_TRNS", "MU_MOD",  "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "DF(0)",   "DF(1)",    "DF(2)",   "TO(5)",   "KC_TRNS",
-      "KC_TRNS", "MUV_DE",  "MUV_IN",  "MU_ON",   "MU_OFF",  "MI_ON",   "MI_OFF",  "TERM_ON", "TERM_OFF", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_DEL",
+      "KC_TRNS", "KC_TRNS", "MU_MOD",  "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "DF(0)",   "DF(1)",   "DF(2)",   "TO(5)",   "KC_TRNS",
+      "KC_TRNS", "MUV_DE",  "MUV_IN",  "MU_ON",   "MU_OFF",  "MI_ON",   "MI_OFF",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }
