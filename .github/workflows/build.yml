@@ -37,7 +37,7 @@ jobs:
         with:
           cache-key: node-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
           start: yarn dev
-          wait-on: 'http://localhost:3000'
+          wait-on: 'http://localhost:5173'
       - name: build
         run: |
           echo VITE_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
