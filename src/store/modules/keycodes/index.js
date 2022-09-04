@@ -6,15 +6,19 @@ import settings from './kb-settings';
 import media from './app-media-mouse';
 import steno from './steno';
 import store from '@/store';
+import keymapExtras from '@/i18n/keymap_extras';
 
-const keycodeLayout = {
-  ANSI: [...ansi, ...iso_jis],
-  ISO: [...iso_jis, ...ansi],
-  normal: [...quantum, ...settings, ...media]
+const keycodePickerTabLayout = {
+  ANSI_ISO: [...ansi, ...iso_jis],
+  ISO_ANSI: [...iso_jis, ...ansi],
+  special: [...quantum, ...settings, ...media]
 };
 
 const state = {
-  keycodes: [...keycodeLayout.ANSI, ...keycodeLayout.normal],
+  keycodes: [
+    ...keycodePickerTabLayout.ANSI_ISO,
+    ...keycodePickerTabLayout.special
+  ],
   searchFilter: '',
   searchCounters: {
     ANSI: 0,
@@ -27,17 +31,57 @@ const state = {
   active: 'ANSI'
 };
 
-function isISO() {
-  return store.state.app.configuratorSettings.iso;
+function getOSKeyboardLayout() {
+  let osKeyboardLayout = store.getters['app/osKeyboardLayout'];
+  if (
+    isUndefined(osKeyboardLayout) ||
+    !Object.keys(keymapExtras).includes(osKeyboardLayout)
+  ) {
+    const fallbackOSKeyboardLayout = 'keymap_us';
+    console.log(
+      `The stored OS keyboard layout value (${osKeyboardLayout}) is not a valid value! Falling back to '${fallbackOSKeyboardLayout}'.`
+    );
+    store.commit('app/setOSKeyboardLayout', fallbackOSKeyboardLayout);
+    osKeyboardLayout = fallbackOSKeyboardLayout;
+  }
+  return osKeyboardLayout;
 }
 
-function generateKeycodes(isIso, isSteno) {
+function isANSI() {
+  return keymapExtras[getOSKeyboardLayout()].isANSI;
+}
+
+function toLocaleKeycode(keycodeLUT, keycodeObject) {
+  console.assert(!isUndefined(keycodeLUT));
+  if (
+    !Object.keys(keycodeObject).includes('name') ||
+    !Object.keys(keycodeObject).includes('code')
+  ) {
+    // Not an object describing a keyboard key; return as is
+    return keycodeObject;
+  }
+  if (keycodeLUT[keycodeObject.code]) {
+    // Clone in a shallow manner the original keycodeObject object and
+    // override the name, title, and possibly other fields
+    return { ...keycodeObject, ...keycodeLUT[keycodeObject.code] };
+  } else {
+    return keycodeObject;
+  }
+}
+
+function generateKeycodes(osKeyboardLayout, isSteno) {
+  store.commit('app/setIso', !isANSI());
   const keycodes = [
-    ...(isIso ? keycodeLayout.ISO : keycodeLayout.ANSI),
-    ...keycodeLayout.normal,
+    ...(isANSI()
+      ? keycodePickerTabLayout.ANSI_ISO
+      : keycodePickerTabLayout.ISO_ANSI),
+    ...keycodePickerTabLayout.special,
     ...(isSteno ? steno : [])
   ];
-  return keycodes;
+  const { keycodeLUT } = keymapExtras[getOSKeyboardLayout()];
+  return keycodes.map((keycodeObject) =>
+    toLocaleKeycode(keycodeLUT, keycodeObject)
+  );
 }
 
 const getters = {
@@ -76,23 +120,14 @@ const mutations = {
   },
   enableSteno(state) {
     state.steno = true;
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
   },
   disableSteno(state) {
     state.steno = false;
-    state.keycodes = generateKeycodes(isISO(), state.steno);
+    state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
   },
-  enableIso(state) {
-    state.keycodes = generateKeycodes(isISO(), state.steno);
-    if (state.active === 'ANSI') {
-      state.active = 'ISO/JIS';
-    }
-  },
-  disableIso(state) {
-    state.keycodes = generateKeycodes(isISO(), state.steno);
-    if (state.active === 'ISO/JIS') {
-      state.active = 'ANSI';
-    }
+  updateKeycodeNames(state) {
+    state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
   },
   setSearchFilter(state, newVal) {
     state.searchFilter = newVal;

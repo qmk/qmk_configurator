@@ -136,6 +136,22 @@ const actions = {
     commit('setCurrentLanguage', lang);
     await dispatch('saveConfiguratorSettings');
   },
+  async changeOSKeyboardLayout({ dispatch, state, commit }, osLayout) {
+    commit('setOSKeyboardLayout', osLayout);
+    // Important to call keycodes/updateKeycodeNames *before* keymap/updateKeycodeNames.
+    this.commit('keycodes/updateKeycodeNames');
+    this.commit('keymap/updateKeycodeNames');
+    this.commit(
+      'keycodes/changeActive',
+      state.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI'
+    );
+    this.commit(
+      'tester/setLayout',
+      state.configuratorSettings.iso ? 'ISO' : 'ANSI'
+    );
+    await this.dispatch('tester/init');
+    await dispatch('saveConfiguratorSettings');
+  },
   // if init state we just load and not toggling
   async toggleDarkMode({ commit, state, dispatch }, init) {
     let darkStatus = state.configuratorSettings.darkmodeEnabled;
@@ -156,8 +172,6 @@ const actions = {
       iso = !iso;
     }
     commit('setIso', iso);
-    const keyboardLayout = iso ? 'enableIso' : 'disableIso';
-    this.commit(`keycodes/${keyboardLayout}`);
     this.commit('keymap/updateKeycodeNames');
     this.commit('tester/setLayout', iso ? 'ISO' : 'ANSI');
     await this.dispatch('tester/init');

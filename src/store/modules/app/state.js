@@ -4,7 +4,7 @@ import {
   CONSTS
 } from '@/store/localStorage';
 
-function setDefaultConfiguratorSettings() {
+function getDefaultConfiguratorSettings() {
   // detect if OS supports dark mode and set as default
   const osDarkMode =
     window.matchMedia &&
@@ -15,21 +15,24 @@ function setDefaultConfiguratorSettings() {
     favoriteKeyboard: '',
     favoriteColor: '',
     clearLayerDefault: false,
-    iso: false
+    iso: false,
+    osKeyboardLayout: 'keymap_us'
   };
-  localStorageSet(CONSTS.configuratorSettings, JSON.stringify(initialConfig));
   return initialConfig;
 }
 
 function loadSettings() {
   try {
-    let conf = JSON.parse(localStorageLoad(CONSTS.configuratorSettings));
-    if (!conf) {
-      return setDefaultConfiguratorSettings();
-    }
+    // Locally stored configuratorSettings can miss properties that were added in a new update,
+    // so it is important to merge them with the default configurator settings to ensure that all
+    // settings are set.
+    let conf = {
+      ...getDefaultConfiguratorSettings(),
+      ...JSON.parse(localStorageLoad(CONSTS.configuratorSettings))
+    };
     return conf;
   } catch {
-    return setDefaultConfiguratorSettings();
+    return getDefaultConfiguratorSettings();
   }
 }
 
@@ -74,6 +77,12 @@ const state = {
     { value: 'ru', label: 'Русский' },
     { value: 'ja', label: '日本語' },
     { value: 'zh-CN', label: '简体中文' }
+  ],
+  osKeyboardLayouts: [
+    'keymap_german',
+    'keymap_russian',
+    'keymap_uk',
+    'keymap_us'
   ],
   snowflakes: false
 };

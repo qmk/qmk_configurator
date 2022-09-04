@@ -111,14 +111,18 @@ settingsPanel:displaySizes:title,strg + alt + u
 settingsPanel:fastInput:help,"Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken"
 settingsPanel:fastInput:label,Schnelle Eingabe
 settingsPanel:fastInput:title,strg + alt + f
-settingsPanel:iso:help,ISO-Legenden standardmäßig anzeigen
-settingsPanel:iso:label,Verwenden Sie ISO-Schlüssellegenden
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Sprache
 settingsPanel:off:label,Aus
 settingsPanel:on:label,An
+settingsPanel:osKeyboardLayout:help,Stellen Sie die Tastenbeschriftung auf das Systemlayout.
+settingsPanel:osKeyboardLayout:label:keymap_german,Deutsch (Deutschland & Österreich)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Russisch
+settingsPanel:osKeyboardLayout:label:keymap_uk,Englisch (UK)
+settingsPanel:osKeyboardLayout:label:keymap_us,Englisch (US)
+settingsPanel:osKeyboardLayout:title,Systemlayout
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Einstellungen

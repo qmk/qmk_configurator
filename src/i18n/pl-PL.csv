@@ -111,14 +111,18 @@ settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego.
 settingsPanel:fastInput:label,Szybkie wprowadzanie
 settingsPanel:fastInput:title,Ctrl + Alt + F
-settingsPanel:iso:help,Domyślnie wyświetlaj legendy ISO
-settingsPanel:iso:label,Użyj legendy kluczy ISO
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Język
 settingsPanel:off:label,Wył
 settingsPanel:on:label,Wł
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,Niemiecki (Niemcy i Austria)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Rosyjski
+settingsPanel:osKeyboardLayout:label:keymap_uk,Angielski (UK)
+settingsPanel:osKeyboardLayout:label:keymap_us,Angielski (US)
+settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Ustawienia konfiguratora

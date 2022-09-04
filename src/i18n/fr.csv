@@ -111,14 +111,18 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position.
 settingsPanel:fastInput:label,Entrée Rapide
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,Afficher les légendes ISO par défaut
-settingsPanel:iso:label,Utiliser les légendes des clés ISO
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Langue
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
+settingsPanel:osKeyboardLayout:help,Change les légendes des touches pour qu'elles correspondent à la disposition des touches du système.
+settingsPanel:osKeyboardLayout:label:keymap_german,Allemand (Allemagne & Autriche)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Russe
+settingsPanel:osKeyboardLayout:label:keymap_uk,Anglais (Royaume-Uni)
+settingsPanel:osKeyboardLayout:label:keymap_us,Anglais (États-Unis)
+settingsPanel:osKeyboardLayout:title,Disposition des touches du système d'opération
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Paramètres du Configurateur

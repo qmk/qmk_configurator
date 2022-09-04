@@ -111,14 +111,18 @@ settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ingresar teclas por medio del teclado sin hacer click en cada posición.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
-settingsPanel:iso:help,Mostrar leyendas ISO de forma predeterminada
-settingsPanel:iso:label,Utilice leyendas clave ISO
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Idioma
 settingsPanel:off:label,No
 settingsPanel:on:label,Sí
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_german,Alemán (Alemania y Austria)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Ruso
+settingsPanel:osKeyboardLayout:label:keymap_uk,Inglés (Reino Unido)
+settingsPanel:osKeyboardLayout:label:keymap_us,Inglés (Estados Unidos)
+settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
 settingsPanel:title,Configuración de Configurator
