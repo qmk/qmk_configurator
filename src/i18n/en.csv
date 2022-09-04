@@ -119,14 +119,14 @@ settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
 settingsPanel:osKeyboardLayout:label:keymap_belgian,Belgian (Belgium)
-settingsPanel:osKeyboardLayout:label:keymap_bepo,French (France)
+settingsPanel:osKeyboardLayout:label:keymap_bepo,French (BÉPO)
 settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,Portuguese (Brazil)
 settingsPanel:osKeyboardLayout:label:keymap_canadian_multilingual,French (Canadian multilingual)
 settingsPanel:osKeyboardLayout:label:keymap_colemak,Colemak
 settingsPanel:osKeyboardLayout:label:keymap_croatian,Croatian (Croatia)
 settingsPanel:osKeyboardLayout:label:keymap_czech,Czech (Czechia)
 settingsPanel:osKeyboardLayout:label:keymap_danish,Danish (Denmark)
-settingsPanel:osKeyboardLayout:label:keymap_dvorak_fr,French Dvorak
+settingsPanel:osKeyboardLayout:label:keymap_dvorak_fr,French (Dvorak)
 settingsPanel:osKeyboardLayout:label:keymap_dvorak,Dvorak (DSK)
 settingsPanel:osKeyboardLayout:label:keymap_dvorak_programmer,Programmer's Dvorak
 settingsPanel:osKeyboardLayout:label:keymap_estonian,Estonian (Estonia)
