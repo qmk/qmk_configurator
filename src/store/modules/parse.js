@@ -146,7 +146,9 @@ function newLayerContainerKey(store, keycode, internal) {
     `${keycode}(${internals[0]},kc)`
   );
 
-  let contents = store.getters['keycodes/lookupKeycode'](internals[1]);
+  let contents = store.getters['keycodes/lookupKeycode'](
+    longFormKeycodes[internals[1]] || internals[1]
+  );
   if (isUndefined(contents)) {
     contents = store.getters['keycodes/lookupKeycode']('KC_NO');
   }
@@ -183,13 +185,13 @@ function parseKeycode(store, keycode, stats) {
       return processOneShotMods(store, keycode);
     }
 
-    //Check whether it is a layer switching code or combo keycode
+    //Check whether it is a layer switching code, mod-tap, or combo keycode
     if (internal.includes('KC')) {
       // Layer Tap keycode
       if (maincode === 'LT') {
         return newLayerContainerKey(store, maincode, internal);
       }
-      // combo keycode
+      internal = longFormKeycodes[internal] || internal;
       metadata = store.getters['keycodes/lookupKeycode'](internal);
       if (metadata === undefined) {
         stats.any += 1;
