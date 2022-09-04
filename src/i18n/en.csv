@@ -118,7 +118,7 @@ settingsPanel:language:title,Language
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
-settingsPanel:osKeyboardLayout:label:keymap_belgian,Belgian
+settingsPanel:osKeyboardLayout:label:keymap_belgian,Belgian (Belgium)
 settingsPanel:osKeyboardLayout:label:keymap_bepo,French (France)
 settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,Portuguese (Brazil)
 settingsPanel:osKeyboardLayout:label:keymap_canadian_multilingual,French (Canadian multilingual)
@@ -148,7 +148,7 @@ settingsPanel:osKeyboardLayout:label:keymap_korean,Korean (South Korea)
 settingsPanel:osKeyboardLayout:label:keymap_latvian,Latvian (Latvia)
 settingsPanel:osKeyboardLayout:label:keymap_lithuanian_azerty,Lithuanian AZERTY (Lithuania)
 settingsPanel:osKeyboardLayout:label:keymap_lithuanian_qwerty,Lithuanian QWERTY (Lithuania)
-settingsPanel:osKeyboardLayout:label:keymap_neo2,NEO 2
+settingsPanel:osKeyboardLayout:label:keymap_neo2,German (NEO 2)
 settingsPanel:osKeyboardLayout:label:keymap_norman,Norman
 settingsPanel:osKeyboardLayout:label:keymap_norwegian,Norwegian (Norway)
 settingsPanel:osKeyboardLayout:label:keymap_polish,Polish (Poland)
@@ -160,7 +160,7 @@ settingsPanel:osKeyboardLayout:label:keymap_serbian,Serbian Cyrillic (Serbia)
 settingsPanel:osKeyboardLayout:label:keymap_serbian_latin,Serbian Latin (Serbia)
 settingsPanel:osKeyboardLayout:label:keymap_slovak,Slovak (Slovakia)
 settingsPanel:osKeyboardLayout:label:keymap_slovenian,Slovenian (Slovenia)
-settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,Spanish Dvorak
+settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,Spanish (Dvorak)
 settingsPanel:osKeyboardLayout:label:keymap_spanish,Catalan (Spain)
 settingsPanel:osKeyboardLayout:label:keymap_swedish,Swedish (Sweden)
 settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,Swedish (Mac ANSI)
