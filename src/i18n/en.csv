@@ -175,8 +175,8 @@ settingsPanel:osKeyboardLayout:label:keymap_uk,English (UK)
 settingsPanel:osKeyboardLayout:label:keymap_ukrainian,Ukrainian (Ukraine)
 settingsPanel:osKeyboardLayout:label:keymap_us,English (US)
 settingsPanel:osKeyboardLayout:label:keymap_us_extended,English (US Extended)
-settingsPanel:osKeyboardLayout:label:keymap_us_international,English (US Int'l)
-settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,English (US Int'l Linux)
+settingsPanel:osKeyboardLayout:label:keymap_us_international,English (US International)
+settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,English (US International Linux)
 settingsPanel:osKeyboardLayout:label:keymap_workman,Workman
 settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Workman ZXCVM
 settingsPanel:osKeyboardLayout:title,Host Keyboard Layout
