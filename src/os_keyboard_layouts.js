@@ -1,4 +1,4 @@
-export const osKeyboardLayouts = [
+export default [
   'keymap_belgian',
   'keymap_bepo',
   'keymap_brazilian_abnt2',

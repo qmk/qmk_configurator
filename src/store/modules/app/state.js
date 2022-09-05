@@ -3,7 +3,7 @@ import {
   localStorageLoad,
   CONSTS
 } from '@/store/localStorage';
-import { osKeyboardLayouts } from '@/osKeyboardLayouts';
+import osKeyboardLayouts from '@/os_keyboard_layouts';
 
 function getDefaultConfiguratorSettings() {
   // detect if OS supports dark mode and set as default
