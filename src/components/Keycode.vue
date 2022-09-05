@@ -60,7 +60,7 @@ export default {
       return classes.join(' ');
     },
     displayName() {
-      return this.name.length === 1 ? this.name.toUpperCase() : this.name;
+      return this.name;
     },
     displayTitle() {
       return this.title ? `${this.code}\n${this.title}` : this.code;
