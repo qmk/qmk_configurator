@@ -99,7 +99,7 @@ export default {
   name: 'ControllerTop',
   data: () => {
     return {
-      keymapName: '',
+      // keymapName: '',
       firstRun: true
     };
   },
@@ -117,8 +117,16 @@ export default {
     isFavoriteKeyboard() {
       return this.keyboard === this.configuratorSettings.favoriteKeyboard;
     },
-    realKeymapName() {
-      return this.$store.getters['app/keymapName'];
+    // realKeymapName() {
+    //   return this.$store.getters['app/keymapName'];
+    // },
+    keymapName: {
+      get() {
+        return this.$store.state.app.keymapName;
+      },
+      set(value) {
+        this.setKeymapName(value);
+      }
     },
     keyboard: {
       get() {
@@ -178,16 +186,16 @@ export default {
      * When changes happen locally we update the store.
      * When changes happen to the store we update the local version.
      */
-    keymapName: function (newKeymapName, oldKeymapName) {
-      if (newKeymapName !== oldKeymapName) {
-        this.updateKeymapName(newKeymapName);
-      }
-    },
-    realKeymapName: function (newName, oldName) {
-      if (newName !== oldName) {
-        this.keymapName = newName;
-      }
-    },
+    // keymapName: function (newKeymapName, oldKeymapName) {
+    //   if (newKeymapName !== oldKeymapName) {
+    //     this.updateKeymapName(newKeymapName);
+    //   }
+    // },
+    // realKeymapName: function (newName, oldName) {
+    //   if (newName !== oldName) {
+    //     this.keymapName = newName;
+    //   }
+    // },
     $route: function (to /*, from*/) {
       if (to.query) {
         const filter = to.query.filter;
@@ -260,7 +268,10 @@ export default {
           ).then(async () => {
             // clear the keymap name for the default keymap
             // otherwise it overrides the default getter
-            this.updateKeymapName('');
+
+            // this.updateKeymapName('');
+            this.setKeymapName('');
+
             const stats = await this.load_converted_keymap(data.layers);
             let msg = this.$t('statsTemplate', stats);
             if (stats.warnings.length > 0 || stats.errors.length > 0) {
@@ -396,12 +407,12 @@ export default {
           throw err;
         });
     },
-    updateKeymapName(newKeymapName) {
-      this.keymapName = newKeymapName;
-      this.setKeymapName(newKeymapName);
-    },
+    // updateKeymapName(newKeymapName) {
+    //   this.keymapName = newKeymapName;
+    //   this.setKeymapName(newKeymapName);
+    // },
     compile() {
-      let keymapName = this.realKeymapName;
+      let keymapName = this.keymapName;
       let _keymapName = this.exportKeymapName;
       // TODO extract this name function to the store
       keymapName =
