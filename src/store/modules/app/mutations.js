@@ -26,7 +26,6 @@ const mutations = {
   disablePreview(state) {
     state.isPreview = false;
     state.keyboards = state.keyboards.filter((k) => k !== PREVIEW_LABEL);
-    state.keymapName = '';
   },
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
