@@ -210,7 +210,9 @@ export default {
   },
   async mounted() {
     await this.initializeKeyboards();
-    await this.loadDefault(true);
+    if (!this.isDirty) {
+      await this.loadDefault(true);
+    }
     await this.initTemplates();
   },
   methods: {
