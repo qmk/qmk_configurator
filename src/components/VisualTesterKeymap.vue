@@ -187,6 +187,7 @@ export default {
   },
   async mounted() {
     this.createKeyListeners();
+    this.$store.commit('keycodes/updateKeycodeNames');
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },
