@@ -32,11 +32,15 @@ describe('Simple browsing', function () {
     cy.get('html[data-theme="dark"]', { timeout: 10000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
-    cy.visit('/keebio/iris/v1', {
+    cy.visit('/keebio/iris/rev1', {
       onBeforeLoad(win) {
         // force false, even if OS has requested change
         cy.stub(win, 'matchMedia')
           .withArgs('(prefers-color-scheme: dark)')
+          .returns({
+            matches: false
+          })
+          .withArgs('(prefers-reduced-motion: reduce)')
           .returns({
             matches: false
           });

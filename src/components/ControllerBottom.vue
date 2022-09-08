@@ -1,15 +1,15 @@
 <template>
   <div id="controller-bottom" class="botctrl">
-    <VeilComponent :isVisible="isVeilOpened">
+    <VeilComponent :is-visible="isVeilOpened">
       <template #contents>
         <div class="input-url-modal">
           <div>
             <label for="url-import-field">Url:</label>
             <input
-              ref="urlimport"
               id="url-import-field"
-              type="text"
+              ref="urlimport"
               v-model="urlImport"
+              type="text"
             />
           </div>
           <div>
@@ -22,8 +22,8 @@
     <div class="botctrl-1-1">
       <button
         id="export"
-        @click="exportJSON"
         v-tooltip.bottom="$t('downloadJSON.title')"
+        @click="exportJSON"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
       </button>
@@ -50,8 +50,8 @@
       >
         <button
           id="keymapHelp"
-          class="ui-button"
           v-tooltip.bottom="$t('keymapHelp.title')"
+          class="ui-button"
         >
           <font-awesome-icon icon="question-circle" size="lg" fixed-width />
           <span class="hide-small">{{ $t('keymapHelp.label') }}</span>
@@ -75,50 +75,46 @@
       </button>
       <input
         id="fileImport"
-        type="file"
         ref="fileImportElement"
+        type="file"
         accept="application/json"
         @change="fileImportChanged"
       />
       <input
         id="infoPreview"
+        ref="infoPreviewElement"
         type="file"
         accept="application/json"
-        ref="infoPreviewElement"
         @change="infoPreviewChanged"
       />
     </div>
-    <div v-if="this.electron" class="botctrl-1-2">
-      <ElectronBottomControls :disableDownloadBinary="disableDownloadBinary">
+    <div v-if="electron" class="botctrl-1-2">
+      <ElectronBottomControls :disable-download-binary="disableDownloadBinary">
       </ElectronBottomControls>
     </div>
     <div v-else class="botctrl-1-2">
       <button
-        class="fixed-size"
         id="source"
-        @click="downloadSource"
         v-tooltip="$t('downloadSource.title')"
-        v-bind:disabled="disableDownloadSource"
+        :disabled="disableDownloadSource"
+        class="fixed-size"
+        @click="downloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
         {{ $t('downloadSource.label') }}
       </button>
       <button
         id="fwFile"
-        @click="downloadFirmware"
         v-tooltip="$t('downloadFirmware.title')"
-        v-bind:disabled="disableDownloadBinary"
+        :disabled="disableDownloadBinary"
+        @click="downloadFirmware"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
         {{ $t('downloadFirmware.label') }}
       </button>
     </div>
     <div v-if="downloadElementEnabled">
-      <a
-        ref="downloadElement"
-        v-bind:href="urlEncodedData"
-        v-bind:download="filename"
-      />
+      <a ref="downloadElement" :href="urlEncodedData" :download="filename" />
     </div>
   </div>
 </template>
@@ -142,8 +138,18 @@ import remap from '@/remap';
 const encoding = 'data:application/json;charset=utf-8,';
 
 export default {
-  name: 'bottom-controller',
+  name: 'BottomController',
   components: { ElectronBottomControls },
+  data: () => {
+    return {
+      isVeilOpened: false,
+      downloadElementEnabled: false,
+      urlEncodedData: '',
+      filename: '',
+      urlImport: '',
+      reader: undefined
+    };
+  },
   computed: {
     ...mapState('keymap', ['templates']),
     ...mapState('app', [
@@ -486,16 +492,6 @@ export default {
     testKeys() {
       this.$router.push('/test');
     }
-  },
-  data: () => {
-    return {
-      isVeilOpened: false,
-      downloadElementEnabled: false,
-      urlEncodedData: '',
-      filename: '',
-      urlImport: '',
-      reader: undefined
-    };
   }
 };
 </script>

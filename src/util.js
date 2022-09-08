@@ -1,15 +1,9 @@
-import axios from 'axios';
-import store from './store';
 import isUndefined from 'lodash/isUndefined';
 import includes from 'lodash/includes';
 import first from 'lodash/first';
 import keys from 'lodash/keys';
 
-import { backend_compile_url } from './store/modules/constants';
 import exclusion_list from './exclusion_list';
-
-let compile_status = undefined;
-let baking = 'Baking';
 
 function getExclusionList() {
   return exclusion_list.reduce((acc, k) => {

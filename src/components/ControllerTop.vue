@@ -12,7 +12,10 @@
         >
           <font-awesome-icon icon="star" size="lg" fixed-width />
         </a>
-        <label id="drop-label-keyboard" class="drop-label"
+        <label
+          id="drop-label-keyboard"
+          v-tooltip="`${keyboards.length} keyboards`"
+          class="drop-label"
           >{{ $t('keyboard.label') }}:</label
         >
         <v-select
@@ -26,7 +29,10 @@
         ></v-select>
       </div>
       <div class="topctrl-layouts">
-        <label id="drop-label-version" class="drop-label"
+        <label
+          id="drop-label-version"
+          v-tooltip.top-end="`${Object.keys(layouts).length} layouts`"
+          class="drop-label"
           >{{ $t('layout.label') }}:</label
         >
         <select id="layout" v-model="layout" @focus="focus" @blur="blur">
@@ -40,10 +46,7 @@
         </select>
       </div>
       <div class="topctrl-keymap-name">
-        <label
-          v-tooltip="$t('keymapName.label')"
-          class="drop-label"
-          :class="fontAdjustClasses"
+        <label class="drop-label" :class="fontAdjustClasses"
           >{{ $t('keymapName.label') }}:</label
         >
         <input
