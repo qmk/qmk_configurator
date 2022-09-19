@@ -3,6 +3,7 @@ import {
   localStorageLoad,
   CONSTS
 } from '@/store/localStorage';
+import osKeyboardLayouts from '@/os_keyboard_layouts';
 
 function getDefaultConfiguratorSettings() {
   // detect if OS supports dark mode and set as default
@@ -78,12 +79,7 @@ const state = {
     { value: 'ja', label: '日本語' },
     { value: 'zh-CN', label: '简体中文' }
   ],
-  osKeyboardLayouts: [
-    'keymap_german',
-    'keymap_russian',
-    'keymap_uk',
-    'keymap_us'
-  ],
+  osKeyboardLayouts,
   snowflakes: false
 };
 

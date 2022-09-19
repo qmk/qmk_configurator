@@ -118,10 +118,67 @@ settingsPanel:language:title,Language
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
+settingsPanel:osKeyboardLayout:label:keymap_belgian,Belgian (Belgium)
+settingsPanel:osKeyboardLayout:label:keymap_bepo,French (BÉPO)
+settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,Portuguese (Brazil)
+settingsPanel:osKeyboardLayout:label:keymap_canadian_multilingual,French (Canadian multilingual)
+settingsPanel:osKeyboardLayout:label:keymap_colemak,Colemak
+settingsPanel:osKeyboardLayout:label:keymap_croatian,Croatian (Croatia)
+settingsPanel:osKeyboardLayout:label:keymap_czech,Czech (Czechia)
+settingsPanel:osKeyboardLayout:label:keymap_danish,Danish (Denmark)
+settingsPanel:osKeyboardLayout:label:keymap_dvorak,Dvorak (DSK)
+settingsPanel:osKeyboardLayout:label:keymap_dvorak_fr,French (Dvorak)
+settingsPanel:osKeyboardLayout:label:keymap_dvorak_programmer,Programmer's Dvorak
+settingsPanel:osKeyboardLayout:label:keymap_estonian,Estonian (Estonia)
+settingsPanel:osKeyboardLayout:label:keymap_finnish,Finnish (Finland)
+settingsPanel:osKeyboardLayout:label:keymap_french,French (France)
+settingsPanel:osKeyboardLayout:label:keymap_french_afnor,French (AFNOR)
+settingsPanel:osKeyboardLayout:label:keymap_french_mac_iso,French (Mac ISO)
 settingsPanel:osKeyboardLayout:label:keymap_german,German (Germany & Austria)
-settingsPanel:osKeyboardLayout:label:keymap_russian,Russian
+settingsPanel:osKeyboardLayout:label:keymap_greek,Greek (Greece)
+settingsPanel:osKeyboardLayout:label:keymap_hebrew,Hebrew (Israel)
+settingsPanel:osKeyboardLayout:label:keymap_hungarian,Hungarian (Hungary)
+settingsPanel:osKeyboardLayout:label:keymap_icelandic,Icelandic (Iceland)
+settingsPanel:osKeyboardLayout:label:keymap_irish,English (Ireland)
+settingsPanel:osKeyboardLayout:label:keymap_italian,Italian (Italy)
+settingsPanel:osKeyboardLayout:label:keymap_italian_mac_ansi,Italian (Mac ANSI)
+settingsPanel:osKeyboardLayout:label:keymap_italian_mac_iso,Italian (Mac ISO)
+settingsPanel:osKeyboardLayout:label:keymap_japanese,Japanese JP106 (Japan)
+settingsPanel:osKeyboardLayout:label:keymap_korean,Korean (South Korea)
+settingsPanel:osKeyboardLayout:label:keymap_latvian,Latvian (Latvia)
+settingsPanel:osKeyboardLayout:label:keymap_lithuanian_azerty,Lithuanian AZERTY (Lithuania)
+settingsPanel:osKeyboardLayout:label:keymap_lithuanian_qwerty,Lithuanian QWERTY (Lithuania)
+settingsPanel:osKeyboardLayout:label:keymap_neo2,German (NEO 2)
+settingsPanel:osKeyboardLayout:label:keymap_norman,Norman
+settingsPanel:osKeyboardLayout:label:keymap_norwegian,Norwegian (Norway)
+settingsPanel:osKeyboardLayout:label:keymap_polish,Polish (Poland)
+settingsPanel:osKeyboardLayout:label:keymap_portuguese,Portuguese (Portugal)
+settingsPanel:osKeyboardLayout:label:keymap_portuguese_mac_iso,Portuguese (Mac ISO)
+settingsPanel:osKeyboardLayout:label:keymap_romanian,Romanian (Romania)
+settingsPanel:osKeyboardLayout:label:keymap_russian,Russian (Russia)
+settingsPanel:osKeyboardLayout:label:keymap_serbian,Serbian Cyrillic (Serbia)
+settingsPanel:osKeyboardLayout:label:keymap_serbian_latin,Serbian Latin (Serbia)
+settingsPanel:osKeyboardLayout:label:keymap_slovak,Slovak (Slovakia)
+settingsPanel:osKeyboardLayout:label:keymap_slovenian,Slovenian (Slovenia)
+settingsPanel:osKeyboardLayout:label:keymap_spanish,Spanish (Spain)
+settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,Spanish (Dvorak)
+settingsPanel:osKeyboardLayout:label:keymap_swedish,Swedish (Sweden)
+settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,Swedish (Mac ANSI)
+settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_iso,Swedish (Mac ISO)
+settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_ansi,Swedish (Mac Pro ANSI)
+settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_iso,Swedish (Mac Pro ISO)
+settingsPanel:osKeyboardLayout:label:keymap_swiss_de,German (Switzerland)
+settingsPanel:osKeyboardLayout:label:keymap_swiss_fr,French (Switzerland)
+settingsPanel:osKeyboardLayout:label:keymap_turkish_f,Turkish F (Turkey)
+settingsPanel:osKeyboardLayout:label:keymap_turkish_q,Turkish Q (Turkey)
 settingsPanel:osKeyboardLayout:label:keymap_uk,English (UK)
+settingsPanel:osKeyboardLayout:label:keymap_ukrainian,Ukrainian (Ukraine)
 settingsPanel:osKeyboardLayout:label:keymap_us,English (US)
+settingsPanel:osKeyboardLayout:label:keymap_us_extended,English (US Extended)
+settingsPanel:osKeyboardLayout:label:keymap_us_international,English (US International)
+settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,English (US International Linux)
+settingsPanel:osKeyboardLayout:label:keymap_workman,Workman
+settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Workman ZXCVM
 settingsPanel:osKeyboardLayout:title,Host Keyboard Layout
 settingsPanel:snowflakes:label,Toggle Snowflakes
 settingsPanel:snowflakes:title,Snowflakes
