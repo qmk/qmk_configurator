@@ -202,3 +202,5 @@ tester:reset:title,検出されたキーをリセットする
 tester:typewritericon:label,クリックすると、テスト中にタイプライターの音を鳴らします
 toggleTerminal:label,展開するにはクリックします
 toggleTerminal:title,ターミナル表示の切り替え
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,

@@ -202,3 +202,5 @@ tester:reset:title,Сброс обнаруженных клавиш
 tester:typewritericon:label,Включить звуки нажатия во время тестирования
 toggleTerminal:label,"Нажмите, чтобы раскрыть"
 toggleTerminal:title,Отображение терминала
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,

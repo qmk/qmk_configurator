@@ -202,3 +202,5 @@ tester:reset:title,Reset detected keys
 tester:typewritericon:label,Click to hear typewriter sounds while testing
 toggleTerminal:label,Click to Expand
 toggleTerminal:title,Toggle the Terminal display
+githubKeyboardFolder:label,Keyboard folder
+githubKeyboardFolder:title,Keyboard folder in qmk_firmware repository

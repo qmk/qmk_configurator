@@ -202,3 +202,5 @@ tester:reset:title,Set semula key yang dikesan
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,

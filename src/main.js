@@ -56,7 +56,8 @@ import {
 import {
   faApple,
   faWindows,
-  faLinux
+  faLinux,
+  faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import isObject from 'lodash/isObject';
@@ -89,6 +90,7 @@ const icons = [
   faCog,
   faDownload,
   faExclamationTriangle,
+  faGithub,
   faHatWizard,
   faKeyboard,
   faLinux,

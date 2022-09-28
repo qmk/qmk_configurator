@@ -202,3 +202,5 @@ tester:reset:title,Restablecer las teclas detectadas
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,
