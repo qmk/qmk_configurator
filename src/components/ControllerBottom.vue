@@ -73,21 +73,6 @@
         <font-awesome-icon icon="keyboard" size="lg" fixed-width />
         <span class="hide-small">{{ $t('testKeys.label') }}</span>
       </button>
-      <a
-        rel="noopener"
-        class="button-padding"
-        target="_blank"
-        :href="githubKeyboardFolderURL"
-      >
-        <button
-          id="githubKeyboardFolder"
-          v-tooltip.bottom="$t('githubKeyboardFolder.title')"
-          class="ui-button"
-        >
-          <font-awesome-icon icon="fa-brands fa-github" />
-          <span class="hide-small">{{ $t('githubKeyboardFolder.label') }}</span>
-        </button>
-      </a>
       <input
         id="fileImport"
         ref="fileImportElement"
@@ -196,9 +181,6 @@ export default {
     },
     configuratorDocsURL() {
       return 'https://docs.qmk.fm/#/configurator_troubleshooting';
-    },
-    githubKeyboardFolderURL() {
-      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${this.keyboard}`;
     }
   },
   watch: {
