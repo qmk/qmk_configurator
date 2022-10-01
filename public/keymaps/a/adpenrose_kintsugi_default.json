@@ -1,8 +1,8 @@
 {
   "keyboard": "adpenrose/kintsugi",
   "keymap": "default",
-  "commit": "de207b97fa2de4a66be407f8c43e6e5bae0723bc",
-  "layout": "LAYOUT_65_ansi_blocker",
+  "commit": "848e1ec318889b727403228c1ca2f3e206a4fec0",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC",
