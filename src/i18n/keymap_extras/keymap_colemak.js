@@ -78,7 +78,7 @@ export default {
   KC_M: { name: 'M', title: 'CM_M' },
   KC_COMM: { name: '<\n,', title: 'CM_COMM' },
   KC_DOT: { name: '>\n.', title: 'CM_DOT' },
-  KC_SLSH: { name: '/\n/', title: 'CM_SLSH' },
+  KC_SLSH: { name: '?\n/', title: 'CM_SLSH' },
 
   /* Shifted symbols
    * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -136,8 +136,8 @@ export default {
   KC_LT: { name: '<', title: 'CM_LABK' },
   'S(KC_DOT)': { name: '>', title: 'CM_RABK' },
   KC_GT: { name: '>', title: 'CM_RABK' },
-  'S(KC_SLSH)': { name: '/', title: 'CM_QUES' },
-  KC_QUES: { name: '/', title: 'CM_QUES' },
+  'S(KC_SLSH)': { name: '?', title: 'CM_QUES' },
+  KC_QUES: { name: '?', title: 'CM_QUES' },
 
   /* Other keys */
   KC_NUHS: { name: '|\n\\', title: '' },
