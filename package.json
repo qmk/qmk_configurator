@@ -16,7 +16,7 @@
     "test:cypress:open": "cypress open",
     "test:cypress:ci": "start-server-and-test dev http-get://localhost:5173 test:cypress",
     "prepare": "husky install",
-    "concurrently": "concurrently --prefix \"precommit\" \"yarn:prettier:fix\" \"yarn:lint\" \"yarn:json:check\" \"yarn:i18n:chk\""
+    "concurrently": "concurrently --prefix \"precommit\" \"yarn:lint\" \"yarn:json:check\" \"yarn:i18n:chk\""
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
