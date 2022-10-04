@@ -291,7 +291,7 @@ export default {
       );
     },
     formatName(name) {
-      return name.length === 1 ? name.toUpperCase() : name;
+      return name;
     },
     remove() {
       this.setSelected(this.id);
