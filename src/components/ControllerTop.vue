@@ -27,6 +27,15 @@
           @search:focus="opened"
           @search:blur="blur"
         ></v-select>
+        <a
+          id="open-on-github"
+          rel="noopener"
+          target="_blank"
+          :href="githubKeyboardFolderURL"
+          v-tooltip.bottom="$t('githubKeyboardFolder.title')"
+        >
+          <font-awesome-icon icon="fa-brands fa-github" size="lg" fixed-width />
+        </a>
       </div>
       <div class="topctrl-layouts">
         <label
@@ -122,6 +131,9 @@ export default {
     },
     realKeymapName() {
       return this.$store.getters['app/keymapName'];
+    },
+    githubKeyboardFolderURL() {
+      return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${this.keyboard}`;
     },
     keyboard: {
       get() {
@@ -527,5 +539,10 @@ export default {
 
 .topctrl-keyboards .v-select:focus-within {
   outline: 2px solid black;
+}
+#open-on-github {
+  cursor: pointer;
+  margin-left: 8px;
+  color: white;
 }
 </style>

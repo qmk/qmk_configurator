@@ -202,3 +202,5 @@ tester:reset:title,Erfasste Tasten zurücksetzen
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,

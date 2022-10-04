@@ -202,3 +202,5 @@ tester:reset:title,Reset detected keys
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,

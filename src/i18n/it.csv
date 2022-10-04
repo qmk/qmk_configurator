@@ -202,3 +202,5 @@ tester:reset:title,Reimposta le chiavi rilevate
 tester:typewritericon:label,Clicca per ascoltare i suoni della macchina da scrivere durante il test
 toggleTerminal:label,Clicca per espandere
 toggleTerminal:title,Azionare il videoterminale
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,
