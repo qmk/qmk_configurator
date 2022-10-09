@@ -6,7 +6,6 @@ module.exports = {
   plugins: ['cypress'],
   extends: [
     'plugin:vue/recommended',
-    '@vue/prettier',
     'plugin:cypress/recommended'
   ],
   rules: {
