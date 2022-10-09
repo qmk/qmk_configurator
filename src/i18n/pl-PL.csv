@@ -202,3 +202,5 @@ tester:reset:title,Zresetuj wykryte kody klawiszy
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
+githubKeyboardFolder:label,
+githubKeyboardFolder:title,
