@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-yarn concurrently
+#yarn concurrently
+npx concurrently --prefix "precommit" \
+  "npx lint-staged" \
+  "yarn:lint" \
+  "yarn:json:check" \
+  "yarn:i18n:chk" \
