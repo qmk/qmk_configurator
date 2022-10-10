@@ -8,14 +8,6 @@ const getters = {
     return valid;
   },
   filter: (state) => state.filter,
-  /**
-   * keymapName
-   * @param {object} state of store
-   * @return {string} parsed filtered keymap name
-   */
-  keymapName: (state) => {
-    return state.keymapName.replace(/\s/g, '_').toLowerCase();
-  },
   exportKeymapName: (state) => {
     let exportName = state.keymapName.replace(/[\s/]/g, '_').toLowerCase();
     if (exportName === '') {

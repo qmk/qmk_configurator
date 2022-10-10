@@ -111,7 +111,6 @@ export default {
   name: 'ControllerTop',
   data: () => {
     return {
-      keymapName: '',
       firstRun: true
     };
   },
@@ -129,8 +128,13 @@ export default {
     isFavoriteKeyboard() {
       return this.keyboard === this.configuratorSettings.favoriteKeyboard;
     },
-    realKeymapName() {
-      return this.$store.getters['app/keymapName'];
+    keymapName: {
+      get() {
+        return this.$store.state.app.keymapName;
+      },
+      set(value) {
+        this.updateKeymapName(value);
+      }
     },
     githubKeyboardFolderURL() {
       return `https://github.com/qmk/qmk_firmware/tree/master/keyboards/${this.keyboard}`;
@@ -193,16 +197,6 @@ export default {
      * When changes happen locally we update the store.
      * When changes happen to the store we update the local version.
      */
-    keymapName: function (newKeymapName, oldKeymapName) {
-      if (newKeymapName !== oldKeymapName) {
-        this.updateKeymapName(newKeymapName);
-      }
-    },
-    realKeymapName: function (newName, oldName) {
-      if (newName !== oldName) {
-        this.keymapName = newName;
-      }
-    },
     $route: function (to /*, from*/) {
       if (to.query) {
         const filter = to.query.filter;
@@ -225,7 +219,9 @@ export default {
   },
   async mounted() {
     await this.initializeKeyboards();
-    await this.loadDefault(true);
+    if (!this.isDirty) {
+      await this.loadDefault(true);
+    }
     await this.initTemplates();
   },
   methods: {
@@ -235,13 +231,13 @@ export default {
       'stopListening',
       'startListening',
       'previewRequested',
-      'setKeyboard',
-      'setKeymapName'
+      'setKeyboard'
     ]),
     ...mapActions('app', [
       'changeKeyboard',
       'fetchKeyboards',
       'loadDefaultKeymap',
+      'updateKeymapName',
       'setFavoriteKeyboard'
     ]),
     ...mapActions('keymap', ['initTemplates', 'load_converted_keymap']),
@@ -409,12 +405,8 @@ export default {
           throw err;
         });
     },
-    updateKeymapName(newKeymapName) {
-      this.keymapName = newKeymapName;
-      this.setKeymapName(newKeymapName);
-    },
     compile() {
-      let keymapName = this.realKeymapName;
+      let keymapName = this.keymapName;
       let _keymapName = this.exportKeymapName;
       // TODO extract this name function to the store
       keymapName =
