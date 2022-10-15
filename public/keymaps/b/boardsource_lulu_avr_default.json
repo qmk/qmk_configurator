@@ -1,7 +1,7 @@
 {
-  "keyboard": "boardsource/lulu",
+  "keyboard": "boardsource/lulu/avr",
   "keymap": "default",
-  "commit": "19c57a2a6a7aa73dca7e06acdfe93508288ddfb0",
+  "commit": "98312417b524b7ef4717c5a5523ab87d94aeee52",
   "layout": "LAYOUT",
   "layers": [
     [
