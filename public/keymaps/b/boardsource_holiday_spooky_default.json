@@ -1,7 +1,7 @@
 {
   "keyboard": "boardsource/holiday/spooky",
   "keymap": "default",
-  "commit": "7e698c71cd8b9d0cdef6c622cfdd88a13e2a6587",
+  "commit": "8a1ca7f6b854163983bf79111d87e03428f93d33",
   "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [
