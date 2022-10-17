@@ -1,8 +1,8 @@
 {
   "keyboard": "novelkeys/nk20",
   "keymap": "default",
-  "commit": "5de655023e7d66ecaaba73d85409468aa95a701a",
-  "layout": "LAYOUT_all",
+  "commit": "14e18864056f836f359258521d63ddf7597d0dd7",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_VOLD", "KC_VOLU", "KC_MUTE",
