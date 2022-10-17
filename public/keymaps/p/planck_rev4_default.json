@@ -1,8 +1,8 @@
 {
   "keyboard": "planck/rev4",
   "keymap": "default",
-  "commit": "3307a8e057bcd2590f6943d954647c520a823458",
-  "layout": "LAYOUT_ortho_4x12",
+  "commit": "854547330704fb1b1f07d547d49728da8b92b2a3",
+  "layout": "LAYOUT_planck_grid",
   "layers": [
     [
       "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",
