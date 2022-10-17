@@ -1,7 +1,7 @@
 {
-  "keyboard": "idobao/id80/v1/iso",
+  "keyboard": "idobao/id80/v2/iso",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "52dc16b75819a735b4939496c850ae7df9ce96b0",
   "layout": "LAYOUT_iso",
   "layers": [
     [
