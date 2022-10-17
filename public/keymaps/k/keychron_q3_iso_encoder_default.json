@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/q3/iso_encoder",
   "keymap": "default",
-  "commit": "64950a2fb3418e9eaf910cfbac04fcec82d438e9",
+  "commit": "d5b908186461814cfc999fd5878d5d1ed5df2370",
   "layout": "LAYOUT_tkl_f13_iso",
   "layers": [
     [
