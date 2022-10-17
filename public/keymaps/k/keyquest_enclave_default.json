@@ -1,8 +1,8 @@
 {
   "keyboard": "keyquest/enclave",
   "keymap": "default",
-  "commit": "07fc37541d80a4eaad7ce0b14d780d24c9f8090b",
-  "layout": "LAYOUT",
+  "commit": "357eeafd394c737917309e779890e59dd3a77ac5",
+  "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [
       "KC_MPRV",    "KC_MPLY",    "KC_MNXT",
