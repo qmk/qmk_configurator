@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/elrgo_s",
   "keymap": "default",
-  "commit": "c59212821918736504074da24f33108551e8bdde",
+  "commit": "bbc3bc55f2d52b90881470695ee132f5a57bfaa3",
   "layout": "LAYOUT_split_3x6_5",
   "layers": [
     [

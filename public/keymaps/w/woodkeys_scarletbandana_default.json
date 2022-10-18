@@ -1,7 +1,7 @@
 {
   "keyboard": "woodkeys/scarletbandana",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "efdd4f4d50e09e0f71d09333d15acf197406a09c",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -12,25 +12,25 @@
       "KC_F9",   "KC_F10",  "KC_LCTL", "KC_LGUI", "KC_LALT",            "MO(2)",   "KC_SPC",  "MO(1)",              "KC_RALT", "KC_APP",  "KC_RCTL",            "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "RGB_MOD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "RGB_MOD", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______", "_______",
+      "_______", "_______", "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______"
     ],
     [
-      "RGB_MOD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "RGB_MOD", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______", "_______",
+      "_______", "_______", "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______"
     ],
     [
-      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "QK_BOOT", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______", "_______",
+      "_______", "_______", "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______",            "_______", "_______", "_______"
     ]
   ]
 }
