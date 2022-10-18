@@ -1,0 +1,13 @@
+{
+  "keyboard": "tweetydabird/lbs6",
+  "keymap": "default",
+  "commit": "dab9edeabb1ccbaa0d71d10b5b349c6862dea771",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_MPLY",
+      "RGB_MOD", "RGB_VAI", "RGB_TOG",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ]
+  ]
+}
