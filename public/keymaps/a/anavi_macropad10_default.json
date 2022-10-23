@@ -1,0 +1,13 @@
+{
+  "keyboard": "anavi/macropad10",
+  "keymap": "default",
+  "commit": "a3d2c89c4cff53f2a72dc349227ad2075e61c363",
+  "layout": "LAYOUT_mp10",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "RGB_M_R", "RGB_MOD", "RGB_TOG"
+    ]
+  ]
+}

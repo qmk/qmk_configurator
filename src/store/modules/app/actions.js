@@ -257,6 +257,21 @@ const actions = {
     });
 
     commit('setKeypressListener', () => keypressListener);
+  },
+
+  /**
+   * update keymapName and set/clear dirty in store
+   */
+  async updateKeymapName({ commit, rootState }, _keymapName) {
+    const store = this;
+
+    commit('setKeymapName', _keymapName);
+    if (_keymapName !== '' && !rootState.keymap.dirty) {
+      store.commit('keymap/setDirty');
+    }
+    if (_keymapName === '' && rootState.keymap.dirty) {
+      store.commit('keymap/clearDirty');
+    }
   }
 };
 

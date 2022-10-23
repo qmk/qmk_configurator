@@ -1,7 +1,7 @@
 {
   "keyboard": "maple_computing/launchpad/rev1",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "efdd4f4d50e09e0f71d09333d15acf197406a09c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -14,7 +14,7 @@
       "KC_Q",    "LCTL(LALT(KC_DEL))",
       "KC_A",    "LCTL(LSFT(KC_ESC))",
       "KC_Z",    "KC_X",
-      "KC_TRNS", "KC_C"
+      "_______", "KC_C"
     ]
   ]
 }

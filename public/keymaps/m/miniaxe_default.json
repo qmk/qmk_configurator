@@ -1,13 +1,13 @@
 {
   "keyboard": "miniaxe",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "efdd4f4d50e09e0f71d09333d15acf197406a09c",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [
-      "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",                   "KC_Y",                "KC_U",    "KC_I",                 "KC_O",    "KC_P",
-      "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",                   "KC_H",                "KC_J",    "KC_K",                 "KC_L",    "KC_SCLN",
-      "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",                   "KC_N",                "KC_M",    "KC_COMM",              "KC_DOT",  "KC_SLSH",
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",              "KC_Y",           "KC_U",    "KC_I",            "KC_O",    "KC_P",
+      "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",              "KC_H",           "KC_J",    "KC_K",            "KC_L",    "KC_SCLN",
+      "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",              "KC_N",           "KC_M",    "KC_COMM",         "KC_DOT",  "KC_SLSH",
                             "KC_LGUI", "MO(1)",   "LCTL_T(KC_ESC)",    "LSFT_T(KC_SPC)", "MO(2)",   "LALT_T(KC_BSPC)"
     ],
     [
