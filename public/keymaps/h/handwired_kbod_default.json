@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/kbod",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "5fdb49b5dbf11025e0425950a1e32b88e21d596f",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,24 +13,24 @@
     ],
     [
       "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",
-      "TT(3)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_INS",
-      "TT(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_HOME",            "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGUP", "KC_PGDN", "KC_END",             "KC_UP",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_LEFT", "KC_DOWN", "KC_RGHT"
+      "TT(3)",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_INS",
+      "TT(2)",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_HOME",            "_______",
+      "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_PGUP", "KC_PGDN", "KC_END",             "KC_UP",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "TO(0)",   "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_P7",   "KC_P8",   "KC_P9",   "KC_P0",   "KC_PMNS", "KC_PPLS", "KC_BSPC",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_P4",   "KC_P5",   "KC_P6",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_P1",   "KC_P2",   "KC_P3",   "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_P0",   "KC_PDOT", "KC_BTN1", "KC_MS_U",            "KC_BTN2",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_BTN3"
+      "TO(0)",   "KC_1",    "KC_2",    "KC_3",    "ALT_F4",  "KC_5",    "KC_6",    "KC_P7",   "KC_P8",   "KC_P9",   "KC_P0",   "KC_PMNS", "KC_PPLS", "KC_BSPC",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_P4",   "KC_P5",   "KC_P6",   "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_P1",   "KC_P2",   "KC_P3",   "_______", "_______",            "_______",
+      "_______",            "_______", "_______", "_______", "_______", "_______", "_______", "KC_P0",   "KC_PDOT", "KC_BTN1", "KC_MS_U",            "KC_BTN2",
+      "_______", "_______", "_______",                                  "_______",                                  "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_BTN3"
     ],
     [
-      "TO(0)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_WAKE", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MSTP", "KC_MPRV", "KC_MNXT", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_SLEP", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_PWR",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_BTN1", "KC_WH_U",            "KC_BTN2",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_MPLY",                                  "KC_WH_L", "KC_WH_D", "KC_WH_R", "KC_BTN3"
+      "TO(0)",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_MUTE", "KC_VOLD", "KC_VOLU", "_______",
+      "_______", "_______", "KC_WAKE", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_MSTP", "KC_MPRV", "KC_MNXT", "_______",
+      "_______", "_______", "KC_SLEP", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",
+      "_______",            "_______", "KC_PWR",  "_______", "_______", "_______", "_______", "_______", "_______", "KC_BTN1", "KC_WH_U",            "KC_BTN2",
+      "_______", "_______", "_______",                                  "KC_MPLY",                                  "KC_WH_L", "KC_WH_D", "KC_WH_R", "KC_BTN3"
     ]
   ]
 }
