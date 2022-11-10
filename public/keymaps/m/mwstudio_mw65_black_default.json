@@ -1,8 +1,8 @@
 {
   "keyboard": "mwstudio/mw65_black",
   "keymap": "default",
-  "commit": "32c5c97ee338f56bdcbee16fe8d32c17816861a9",
-  "layout": "LAYOUT",
+  "commit": "51dd63c9268220a4810e7568b63edffcb96260df",
+  "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "RGB_TOG",
