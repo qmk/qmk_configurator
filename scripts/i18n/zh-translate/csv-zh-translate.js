@@ -119,16 +119,19 @@ function ModifyTranslation(csvDataArray, key, translation) {
 //only convert the empty or missing translation field
 function convertEmptyTranslation(src, target, getConvertResult) {
   for (const line of src) {
+    if (!line.Translation) continue;
+
     const trans = getConvertResult(line.Translation);
-    console.log(getByKey(target, line.Key));
 
     if (!getByKey(target, line.Key)) {
       target.push({
         Key: line.Key,
         Translation: trans
       });
+      console.log(`Add Trans -> ${line.Key}, ${trans}`);
     } else if (!getTranslation(target, line.Key)) {
       ModifyTranslation(target, line.Key, trans);
+      console.log(`Modify Trans -> ${line.Key}, ${trans}`);
     }
   }
 }

@@ -9,6 +9,7 @@
     "lint": "eslint src",
     "i18n:chk": "node scripts/i18n/csv-sync.js chk",
     "i18n:sync": "node scripts/i18n/csv-sync.js sync",
+    "i18n:convertcn": "node scripts/i18n/zh-translate/csv-zh-translate.js",
     "prettier:check": "pprettier \"./src/**/*.{js,vue,scss,css}\"",
     "prettier:fix": "pprettier \"./src/**/*.{js,vue,scss,css,json}\" --write",
     "json:check": "node scripts/json/ajv.js public/keymaps",
