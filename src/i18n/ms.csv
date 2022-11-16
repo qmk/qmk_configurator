@@ -35,6 +35,7 @@ flashFile:label,Custom-Flash
 flashFile:title,Flash file pilihan penguna kepada MCU
 flashFirmware:label,Auto-Flash
 flashFirmware:title,Flash perisian tegar yang dikompil kepada MCU secara automatik
+githubKeyboardFolder:title,
 help:label,Panggil Wizard
 importJSON:title,Import fail JSON QMK Keymap
 importUrlJSON:title,Import fail JSON QMK Keymap dari URL
@@ -202,5 +203,3 @@ tester:reset:title,Set semula key yang dikesan
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

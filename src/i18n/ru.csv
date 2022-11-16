@@ -35,6 +35,7 @@ flashFile:label,Пользовательская прошивка
 flashFile:title,Прошить микроконтроллер выбранным пользовательским файлом
 flashFirmware:label,Авто-прошивка
 flashFirmware:title,Автоматически прошить микроконтроллер скомпилированной прошивкой
+githubKeyboardFolder:title,
 help:label,Вызов волшебника
 importJSON:title,Импортировать раскладку QMK из JSON файла
 importUrlJSON:title,Импортировать раскладку QMK в виде JSON из URL
@@ -202,5 +203,3 @@ tester:reset:title,Сброс обнаруженных клавиш
 tester:typewritericon:label,Включить звуки нажатия во время тестирования
 toggleTerminal:label,"Нажмите, чтобы раскрыть"
 toggleTerminal:title,Отображение терминала
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

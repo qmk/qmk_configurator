@@ -35,6 +35,7 @@ flashFile:label,Eigener Flash
 flashFile:title,Selbst gewählte Datei auf Mikrochip flashen
 flashFirmware:label,Auto-Flash
 flashFirmware:title,Kompilierte Firmware automatisch auf Mikrochip flashen
+githubKeyboardFolder:title,
 help:label,Hilfe holen
 importJSON:title,QMK Keymap aus JSON Datei importieren
 importUrlJSON:title,QMK Keymap aus JSON von URL importieren
@@ -202,5 +203,3 @@ tester:reset:title,Erfasste Tasten zurücksetzen
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,
