@@ -1,8 +1,11 @@
 // translate zh-CN to zh-HK and zh-TW
+const {
+  Simplify2Traditional_tw,
+  Simplify2Traditional_hk
+} = require('simplify-traditional');
 
 const fs = require('fs');
 const path = require('path');
-const Translator = require('./ToolGood.Words.Translate.js'); //type 0、繁体中文，1、港澳繁体，2、台湾正体
 const parse = require('csv-parse/lib/sync');
 const stringify = require('csv-stringify');
 
@@ -10,13 +13,6 @@ const PATH_CSV = path.resolve(process.cwd(), 'src', 'i18n');
 const File_cn = `${PATH_CSV}/zh-CN.csv`;
 const File_tw = `${PATH_CSV}/zh-TW.csv`;
 const File_hk = `${PATH_CSV}/zh-HK.csv`;
-const translator = new Translator();
-
-function CreateTranslateMethod(type) {
-  return function (text) {
-    return translator.ToTraditionalChinese(text, type);
-  };
-}
 
 //start convert
 function Start(operations) {
@@ -38,13 +34,13 @@ function main() {
       name: 'zh_TW',
       from: File_cn,
       to: File_tw,
-      method: CreateTranslateMethod(2)
+      method: Simplify2Traditional_tw
     },
     {
       name: 'zh_HK',
       from: File_cn,
       to: File_hk,
-      method: CreateTranslateMethod(1)
+      method: Simplify2Traditional_hk
     }
   ];
 
