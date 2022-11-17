@@ -1,8 +1,5 @@
 // translate zh-CN to zh-HK and zh-TW
-const {
-  Simplify2Traditional_tw,
-  Simplify2Traditional_hk
-} = require('simplify-traditional');
+const {simplecc} = require('simplecc-wasm')
 
 const fs = require('fs');
 const path = require('path');
@@ -28,19 +25,25 @@ function Start(operations) {
   }
 }
 
+function getConvertFcun(type) {
+  return function (text) {
+    return simplecc(text, type);
+  };
+}
+
 function main() {
   const operations = [
     {
       name: 'zh_TW',
       from: File_cn,
       to: File_tw,
-      method: Simplify2Traditional_tw
+      method: getConvertFcun('s2twp')
     },
     {
       name: 'zh_HK',
       from: File_cn,
       to: File_hk,
-      method: Simplify2Traditional_hk
+      method: getConvertFcun('s2hk')
     }
   ];
 

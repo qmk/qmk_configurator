@@ -19,7 +19,7 @@ It won't modify the row If there is already a translate, which allows to modify 
 
 ### The Deps:
 
-script: this translate script -> package: simplify-traditional -> dictionary: [Repo](https://github.com/toolgood/ToolGood.Words)
+script: this translate script -> package: simplify-traditional -> dictionary: [Repo](https://github.com/fengkx/simplecc-wasm)
 
 
 ---

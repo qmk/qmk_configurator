@@ -15,7 +15,7 @@ settings,設置
 statsTemplate,"
 已加載 {layers} 個層和 {count} 個鍵位碼，已定義 {any} 任意鍵位碼
 "
-ColorwayTip:title,Ctrl + Alt + N 切換下一箇配色
+ColorwayTip:title,Ctrl + Alt + N 切換下一個配色
 compile:label,編譯
 compile:title,編譯鍵位
 downloadFirmware:label,固件
@@ -27,16 +27,16 @@ downloadKeymap:title,僅下載 keymap.c
 downloadSource:label,全部代碼
 downloadSource:title,下載 QMK 固件代碼
 downloadToolbox:label,獲取 QMK Toolbox
-errors:invalidQMKKeymap,對不起，這不是一箇合法的 QMK keymap 文件
+errors:invalidQMKKeymap,對不起，這不是一個合法的 QMK keymap 文件
 errors:kbfirmwareJSONUnsupported,對不起，QMK Configurator 不支持 kbfirmware JSON 文件。
-errors:unknownJSON,對不起，這似乎不是一箇 QMK keymap 文件
-errors:unsupportedBrowser,你正在使用一箇不支持的瀏覽器。建議使用
+errors:unknownJSON,對不起，這似乎不是一個 QMK keymap 文件
+errors:unsupportedBrowser,你正在使用一個不支持的瀏覽器。建議使用
 flashFile:label,自定義刷寫
 flashFile:title,刷寫選擇的固件文件到 MCU
 flashFirmware:label,自動刷寫
 flashFirmware:title,自動將編譯好的固件刷寫到 MCU
 githubKeyboardFolder:title,在Github上查看這個鍵盤
-help:label,開啟嚮導
+help:label,開啓嚮導
 importJSON:title,導入 Keymap JSON 文件
 importUrlJSON:title,從 URL 導入 Keymap JSON 文件
 keyboard:label,鍵盤
@@ -67,7 +67,7 @@ potato:13,印加對於時間最基本的衡量標準之一是煮土豆所需的�
 potato:14,如果馬鈴薯暴露在光線中生長，它會變綠並且帶有毒性。
 potato:15,"“製造2500磅薯片需要10,000磅土豆。”"
 potato:16,如今有4000多種不同的土豆。
-potato:17,“馬鈴薯屬於一箇科，茄屬植物或茄科。”
+potato:17,“馬鈴薯屬於一個科，茄屬植物或茄科。”
 potato:18,“在阿拉斯加克朗代克淘金熱期間（1897年至1898年），土豆在重量上和黃金實際上是等值的。”
 potato:19,"“沃爾特·羅利爵士於1589年在科克附近的40,000英畝土地上將土豆引入了愛爾蘭。”"
 potato:2,法式薯條由托馬斯·傑斐遜在一次白宮晚宴中帶到美國。
@@ -76,10 +76,10 @@ potato:21,“原產於非洲和亞洲的洋芋大小不一，從小土豆到創�
 potato:22,8月19日和10月27日是美國的國家馬鈴薯日。
 potato:23,“馬鈴薯還可以用來釀造酒精飲料，例如伏特加，波奇恩或阿誇維特。”
 potato:24,“馬鈴薯是最環保的蔬菜之一。它們易於種植，不需要像許多其他蔬菜一樣大量依賴肥料和化學添加劑。”
-potato:25,馬鈴薯起源於南祕魯地區，最早在公元前8000年至5000年之間被馴化。
+potato:25,馬鈴薯起源於南秘魯地區，最早在公元前8000年至5000年之間被馴化。
 potato:26,馬鈴薯的英文 potato 源自西班牙語詞彙 patata。
 potato:27,馬鈴薯通常由昆蟲授粉，比如黃蜂。
-potato:28,一箇土豆由80%的水和20%的固體構成。
+potato:28,一個土豆由80%的水和20%的固體構成。
 potato:3,2017年，美國的土豆愛好者消費了400萬噸不同形狀和尺寸的薯條。
 potato:4,土豆是一種強力的催情劑，一名愛爾蘭物理學家表示。
 potato:5,美國人每年人均食用140鎊土豆。德國人每年人均食用200鎊土豆。
@@ -117,7 +117,7 @@ settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面語言
 settingsPanel:language:title,語言
 settingsPanel:off:label,關閉
-settingsPanel:on:label,開啟
+settingsPanel:on:label,開啓
 settingsPanel:osKeyboardLayout:help,
 settingsPanel:osKeyboardLayout:label:keymap_belgian,
 settingsPanel:osKeyboardLayout:label:keymap_bepo,
@@ -181,7 +181,7 @@ settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,
 settingsPanel:osKeyboardLayout:label:keymap_workman,
 settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
 settingsPanel:osKeyboardLayout:title,
-settingsPanel:snowflakes:label,開啟 Snowflakes
+settingsPanel:snowflakes:label,開啓 Snowflakes
 settingsPanel:snowflakes:title,Snowflakes
 settingsPanel:title,配置選項
 settingsPanel:toggleTutorial:help,MechMerlin 的視頻教程
@@ -199,7 +199,7 @@ tester:letters:key:label,鍵位值
 tester:letters:keycode:label,鍵位碼
 tester:page:label,重置
 tester:reset:label,重置已測試按鍵
-tester:reset:title,開啟打字機音效
-tester:typewritericon:label,開啟打字機音效
+tester:reset:title,開啓打字機音效
+tester:typewritericon:label,開啓打字機音效
 toggleTerminal:label,點擊展開
-toggleTerminal:title,開啟終端顯示
+toggleTerminal:title,開啓終端顯示
