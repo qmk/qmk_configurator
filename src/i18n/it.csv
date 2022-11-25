@@ -35,6 +35,7 @@ flashFile:label,Installazione personalizzata
 flashFile:title,Installa il file selezionato in MCU
 flashFirmware:label,Auto-Installazione
 flashFirmware:title,Installare automaticamente il Firmware compilato in MCU
+githubKeyboardFolder:title,
 help:label,Tutorial aperto
 importJSON:title,Carica file JSON di Keymap QMK
 importUrlJSON:title,Importa file JSON di Keymap QMK da URL
@@ -202,5 +203,3 @@ tester:reset:title,Reimposta le chiavi rilevate
 tester:typewritericon:label,Clicca per ascoltare i suoni della macchina da scrivere durante il test
 toggleTerminal:label,Clicca per espandere
 toggleTerminal:title,Azionare il videoterminale
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

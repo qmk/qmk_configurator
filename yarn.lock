@@ -6653,6 +6653,11 @@ signal-exit@^3.0.3:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
+simplecc-wasm@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.npmjs.org/simplecc-wasm/-/simplecc-wasm-0.1.4.tgz#8da038e858fe8846f9ea0e8b490ced85513ab7ae"
+  integrity sha512-MSEGfvYjilmicNJ4YvDHpqNxHxOnZp1afDpoeLUiqbDROv0i/DJqrz7tMS3m22HDQbHeZaS6j/SHuDSkRoCD5g==
+
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"

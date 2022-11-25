@@ -35,6 +35,7 @@ flashFile:label,自定义刷写
 flashFile:title,刷写选择的固件文件到 MCU
 flashFirmware:label,自动刷写
 flashFirmware:title,自动将编译好的固件刷写到 MCU
+githubKeyboardFolder:title,在Github上查看这个键盘
 help:label,开启向导
 importJSON:title,导入 Keymap JSON 文件
 importUrlJSON:title,从 URL 导入 Keymap JSON 文件
@@ -202,5 +203,3 @@ tester:reset:title,开启打字机音效
 tester:typewritericon:label,开启打字机音效
 toggleTerminal:label,点击展开
 toggleTerminal:title,开启终端显示
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

@@ -65,11 +65,8 @@ function deleteDeprecatedTranslations(dialectArray, referenceArray) {
 
 function syncTranslationFiles(referenceTranslations) {
   files.forEach(f => {
-    let dialect = fs.readFileSync(`${PATH_CSV}${f}`, 'utf8');
-    let records = parse(dialect, {
-      columns: true,
-      skip_empty_lines: true
-    });
+    let records = readTranslation(f)
+
     referenceTranslations.forEach(t => {
       updateMissingTranslation(t, records);
     });

@@ -35,6 +35,7 @@ flashFile:label,Flash-Customizado
 flashFile:title,Enviar arquivo selecionado pelo usuário para o MCU
 flashFirmware:label,Auto-Flash
 flashFirmware:title,Enviar firmware para MCU automaticamente
+githubKeyboardFolder:title,
 help:label,Invocar mago
 importJSON:title,Importar JSON do keymap QMK
 importUrlJSON:title,Importar JSON da URL QMK Keymap JSON
@@ -202,5 +203,3 @@ tester:reset:title,Reset detected keys
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

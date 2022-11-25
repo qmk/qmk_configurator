@@ -35,6 +35,7 @@ flashFile:label,Custom-Flash
 flashFile:title,ユーザが選択したファイルをMCUに書き込む
 flashFirmware:label,Auto-Flash
 flashFirmware:title,コンパイルされたファームウェアをMCUに自動的に書き込む
+githubKeyboardFolder:title,
 help:label,ウィザード召喚
 importJSON:title,QMK Keymap JSONファイルをアップロード
 importUrlJSON:title,URLからQMK Keymap JSONをインポート
@@ -202,5 +203,3 @@ tester:reset:title,検出されたキーをリセットする
 tester:typewritericon:label,クリックすると、テスト中にタイプライターの音を鳴らします
 toggleTerminal:label,展開するにはクリックします
 toggleTerminal:title,ターミナル表示の切り替え
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

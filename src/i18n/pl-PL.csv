@@ -35,6 +35,7 @@ flashFile:label,Wgrywanie ręczne
 flashFile:title,Wybierz plik z firmware do wgrania do klawiatury
 flashFirmware:label,Auto-Wgrywanie
 flashFirmware:title,Automatyczne wgrywanie pliku firmware do klawiatury
+githubKeyboardFolder:title,
 help:label,Przywołaj czarodzieja
 importJSON:title,Wczytaj mapę klawiszy QMK w formacie JSON z pliku
 importUrlJSON:title,Wczytaj mapę klawiszy QMK w formacie JSON z adresu URL
@@ -202,5 +203,3 @@ tester:reset:title,Zresetuj wykryte kody klawiszy
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,
