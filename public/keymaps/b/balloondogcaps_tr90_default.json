@@ -12,7 +12,7 @@
     [
       "KC_7",    "KC_8",    "KC_9",
       "KC_0",    "KC_MINS", "KC_PLUS",
-      "RESET",   "KC_AT",   "KC_TRNS"
+      "QK_BOOT", "KC_AT",   "KC_TRNS"
     ]
   ]
 }

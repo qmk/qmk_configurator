@@ -5,13 +5,13 @@
   "layout": "LAYOUT_diag_4x14",
   "layers": [
     [
-      "KC_TAB",             "KC_Q",    "KC_W",    "KC_E",             "KC_R",         "KC_T",       "KC_Y",           "KC_U",           "KC_I",             "KC_O",    "KC_P",            "KC_LBRC",       "KC_BSPC",
-      "KC_LCTL",            "KC_A",    "KC_S",    "KC_D",             "LT(2,KC_F)",   "KC_G",       "KC_H",           "KC_J",           "KC_K",             "KC_L",    "RSFT_T(KC_SCLN)", "LT(3,KC_QUOT)", "KC_ENT",
-      "KC_LSFT", "TG(4)",   "KC_Z",    "KC_X",    "KC_C",             "LT(3,KC_V)",   "KC_B",       "LT(2,KC_N)",     "KC_M",           "KC_COMM",          "KC_DOT",  "KC_SLSH",                          "KC_RSFT",
-      "KC_BTN1", "KC_BTN2", "KC_LALT",            "LGUI_T(KC_LANG2)", "LT(1,KC_SPC)",               "RCTL_T(KC_ESC)", "RGUI_T(KC_ENT)", "RALT_T(KC_LANG1)", "KC_INT1", "KC_DEL",                           "MU_TOG"
+      "KC_TAB",             "KC_Q",    "KC_W",    "KC_E",            "KC_R",         "KC_T",       "KC_Y",           "KC_U",           "KC_I",            "KC_O",    "KC_P",            "KC_LBRC",       "KC_BSPC",
+      "KC_LCTL",            "KC_A",    "KC_S",    "KC_D",            "LT(2,KC_F)",   "KC_G",       "KC_H",           "KC_J",           "KC_K",            "KC_L",    "RSFT_T(KC_SCLN)", "LT(3,KC_QUOT)", "KC_ENT",
+      "KC_LSFT", "TG(4)",   "KC_Z",    "KC_X",    "KC_C",            "LT(3,KC_V)",   "KC_B",       "LT(2,KC_N)",     "KC_M",           "KC_COMM",         "KC_DOT",  "KC_SLSH",                          "KC_RSFT",
+      "KC_BTN1", "KC_BTN2", "KC_LALT",            "LGUI_T(KC_LNG2)", "LT(1,KC_SPC)",               "RCTL_T(KC_ESC)", "RGUI_T(KC_ENT)", "RALT_T(KC_LNG1)", "KC_INT1", "KC_DEL",                           "MU_TOG"
     ],
     [
-      "RESET",              "KC_EXEC", "KC_HELP", "KC_MENU", "KC_SLCT", "KC_STOP",    "KC_BTN2",         "KC_INT1",         "KC_MINS", "KC_EQL",  "KC_INT3", "LSFT(KC_LBRC)", "KC_TRNS",
+      "QK_BOOT",            "KC_EXEC", "KC_HELP", "KC_MENU", "KC_SLCT", "KC_STOP",    "KC_BTN2",         "KC_INT1",         "KC_MINS", "KC_EQL",  "KC_INT3", "LSFT(KC_LBRC)", "KC_TRNS",
       "KC_TRNS",            "KC_AGIN", "KC_FIND", "KC_PGUP", "KC_PGDN", "KC_F19",     "KC_LEFT",         "KC_DOWN",         "KC_UP",   "KC_RGHT", "KC_ENT",  "LSFT(KC_7)",    "RSFT(KC_2)",
       "KC_TRNS", "KC_TRNS", "KC_UNDO", "KC_CUT",  "KC_COPY", "KC_PSTE", "KC_APP",     "KC_BSPC",         "KC_DEL",          "KC_RBRC", "KC_BSLS", "KC_HOME",                  "KC_END",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",               "RCTL_T(KC_INT7)", "RGUI_T(KC_INT8)", "KC_TRNS", "KC_INT2", "KC_INT4",                  "MU_MOD"
