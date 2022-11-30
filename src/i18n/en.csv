@@ -35,6 +35,7 @@ flashFile:label,Custom-Flash
 flashFile:title,Flash User Selected file to MCU
 flashFirmware:label,Auto-Flash
 flashFirmware:title,Automatically Flash compiled Firmware to MCU
+githubKeyboardFolder:title,Open keyboard folder on GitHub
 help:label,Summon Wizard
 importJSON:title,Upload a QMK Keymap JSON file
 importUrlJSON:title,Import QMK Keymap JSON from URL
@@ -202,4 +203,3 @@ tester:reset:title,Reset detected keys
 tester:typewritericon:label,Click to hear typewriter sounds while testing
 toggleTerminal:label,Click to Expand
 toggleTerminal:title,Toggle the Terminal display
-githubKeyboardFolder:title,Open keyboard folder on GitHub

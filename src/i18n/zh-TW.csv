@@ -1,0 +1,205 @@
+Key,Translation
+apiVersion,API 版本
+apiVersionPrefix,API
+favoriteColor,收藏配色
+favoriteKeyboard,收藏鍵盤
+hostedOn,部署在 GitHub Pages
+jobsAhead,前往
+jobsWaiting,個任務等待中
+maintain,該專案由 QMK 開發者和貢獻者維護
+ready,就緒
+searchKeycodes,搜尋
+serverIs,服務
+serverStatus,服務狀態
+settings,設定
+statsTemplate,"
+已載入 {layers} 個層和 {count} 個鍵位碼，已定義 {any} 任意鍵位碼
+"
+ColorwayTip:title,Ctrl + Alt + N 切換下一個配色
+compile:label,編譯
+compile:title,編譯鍵位
+downloadFirmware:label,韌體
+downloadFirmware:title,下載韌體
+downloadJSON:label,Keymap.JSON
+downloadJSON:title,匯出 Keymap JSON 檔案
+downloadKeymap:label,僅鍵位
+downloadKeymap:title,僅下載 keymap.c
+downloadSource:label,全部程式碼
+downloadSource:title,下載 QMK 韌體程式碼
+downloadToolbox:label,獲取 QMK Toolbox
+errors:invalidQMKKeymap,對不起，這不是一個合法的 QMK keymap 檔案
+errors:kbfirmwareJSONUnsupported,對不起，QMK Configurator 不支援 kbfirmware JSON 檔案。
+errors:unknownJSON,對不起，這似乎不是一個 QMK keymap 檔案
+errors:unsupportedBrowser,你正在使用一個不支援的瀏覽器。建議使用
+flashFile:label,自定義刷寫
+flashFile:title,刷寫選擇的韌體檔案到 MCU
+flashFirmware:label,自動刷寫
+flashFirmware:title,自動將編譯好的韌體刷寫到 MCU
+githubKeyboardFolder:title,在Github上檢視這個鍵盤
+help:label,開啟嚮導
+importJSON:title,匯入 Keymap JSON 檔案
+importUrlJSON:title,從 URL 匯入 Keymap JSON 檔案
+keyboard:label,鍵盤
+keycodes:label,鍵位碼
+keycodesRef:label,鍵位碼參考
+keycodesTab:ANSI:label,ANSI
+keycodesTab:AppMediaMouse:label,應用、多媒體和滑鼠
+keycodesTab:ISO/JIS:label,ISO/JIS
+keycodesTab:KeyboardSettings:label,鍵盤設定
+keycodesTab:Quantum:label,量子
+keycodesTab:Steno:label,
+keymap:label,鍵位
+keymapHelp:label,幫助
+keymapHelp:title,如何使用 keymap.json？
+keymapName:label,鍵位名
+keymapName:placeholder,自定義鍵位名
+layer:confirm,確認清除該層？
+layer:label,鍵位層
+layer:title,清除層
+layout:label,配列
+loadDefault:label,載入預設
+loadDefault:title,從 QMK 韌體載入預設鍵位
+potato:1,亨利·斯伯丁於1837年在愛達荷首次種植馬鈴薯。
+potato:10,中國是最大的馬鈴薯生產國。
+potato:11,馬鈴薯是第一種在太空中種植的蔬菜。
+potato:12,土豆是完全無麩質。
+potato:13,印加對於時間最基本的衡量標準之一是煮土豆所需的時間。
+potato:14,如果馬鈴薯暴露在光線中生長，它會變綠並且帶有毒性。
+potato:15,"“製造2500磅薯片需要10,000磅土豆。”"
+potato:16,如今有4000多種不同的土豆。
+potato:17,“馬鈴薯屬於一個科，茄屬植物或茄科。”
+potato:18,“在阿拉斯加克朗代克淘金熱期間（1897年至1898年），土豆在重量上和黃金實際上是等值的。”
+potato:19,"“沃爾特·羅利爵士於1589年在科克附近的40,000英畝土地上將土豆引入了愛爾蘭。”"
+potato:2,法式薯條由托馬斯·傑斐遜在一次白宮晚宴中帶到美國。
+potato:20,一年四季都可以收穫馬鈴薯，因為它們每個月都會在某個地方收穫。
+potato:21,“原產於非洲和亞洲的洋芋大小不一，從小土豆到創紀錄的130磅。”
+potato:22,8月19日和10月27日是美國的國家馬鈴薯日。
+potato:23,“馬鈴薯還可以用來釀造酒精飲料，例如伏特加，波奇恩或阿誇維特。”
+potato:24,“馬鈴薯是最環保的蔬菜之一。它們易於種植，不需要像許多其他蔬菜一樣大量依賴肥料和化學新增劑。”
+potato:25,馬鈴薯起源於南秘魯地區，最早在公元前8000年至5000年之間被馴化。
+potato:26,馬鈴薯的英文 potato 源自西班牙語詞彙 patata。
+potato:27,馬鈴薯通常由昆蟲授粉，比如黃蜂。
+potato:28,一個土豆由80%的水和20%的固體構成。
+potato:3,2017年，美國的土豆愛好者消費了400萬噸不同形狀和尺寸的薯條。
+potato:4,土豆是一種強力的催情劑，一名愛爾蘭物理學家表示。
+potato:5,美國人每年人均食用140鎊土豆。德國人每年人均食用200鎊土豆。
+potato:6,根據吉尼斯世界紀錄，最大的土豆重18鎊4盎司，於1795年在英格蘭長成。
+potato:7,馬鈴薯是世界第四大主食，排在小麥、玉米和大米之後。
+potato:8,馬鈴薯在超過125個國家種植。
+potato:9,世界每年的馬鈴薯產量足以覆蓋一條4車道馬路環繞地球6圈。
+print:anonymous:label,匿名
+print:author:placeholder,你的名字（可選）
+print:author:title,作者
+print:back:title,返回
+print:date:title,日期
+print:keyboard:label,鍵盤
+print:layer:label,層
+print:layout:label,配列
+print:notes:empty,預設鍵位
+print:notes:placeholder,該配置的說明
+print:notes:title,說明
+print:print:title,列印
+print:source:title,原始碼
+printKeymap:label,列印鍵位
+printKeymap:title,列印鍵位表
+settingsPanel:clearLayer:help,更改“清除層”功能所使用的預設鍵碼
+settingsPanel:clearLayer:title,清除層預設鍵碼
+settingsPanel:darkmode:help,使用 QMK 深色主題
+settingsPanel:darkmode:label,深色模式
+settingsPanel:displaySizes:help,以按鍵單位(u)顯示鍵帽尺寸
+settingsPanel:displaySizes:label,顯示按鍵尺寸
+settingsPanel:displaySizes:title,ctrl + alt + u
+settingsPanel:fastInput:help,直接透過鍵盤輸入鍵位
+settingsPanel:fastInput:label,快速輸入
+settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:kcno:label,
+settingsPanel:kctrns:label,
+settingsPanel:language:help,更改使用者介面語言
+settingsPanel:language:title,語言
+settingsPanel:off:label,關閉
+settingsPanel:on:label,開啟
+settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:label:keymap_belgian,
+settingsPanel:osKeyboardLayout:label:keymap_bepo,
+settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,
+settingsPanel:osKeyboardLayout:label:keymap_canadian_multilingual,
+settingsPanel:osKeyboardLayout:label:keymap_colemak,
+settingsPanel:osKeyboardLayout:label:keymap_croatian,
+settingsPanel:osKeyboardLayout:label:keymap_czech,
+settingsPanel:osKeyboardLayout:label:keymap_danish,
+settingsPanel:osKeyboardLayout:label:keymap_dvorak,
+settingsPanel:osKeyboardLayout:label:keymap_dvorak_fr,
+settingsPanel:osKeyboardLayout:label:keymap_dvorak_programmer,
+settingsPanel:osKeyboardLayout:label:keymap_estonian,
+settingsPanel:osKeyboardLayout:label:keymap_finnish,
+settingsPanel:osKeyboardLayout:label:keymap_french,
+settingsPanel:osKeyboardLayout:label:keymap_french_afnor,
+settingsPanel:osKeyboardLayout:label:keymap_french_mac_iso,
+settingsPanel:osKeyboardLayout:label:keymap_german,德語（德國和奧地利）
+settingsPanel:osKeyboardLayout:label:keymap_greek,
+settingsPanel:osKeyboardLayout:label:keymap_hebrew,
+settingsPanel:osKeyboardLayout:label:keymap_hungarian,
+settingsPanel:osKeyboardLayout:label:keymap_icelandic,
+settingsPanel:osKeyboardLayout:label:keymap_irish,
+settingsPanel:osKeyboardLayout:label:keymap_italian,
+settingsPanel:osKeyboardLayout:label:keymap_italian_mac_ansi,
+settingsPanel:osKeyboardLayout:label:keymap_italian_mac_iso,
+settingsPanel:osKeyboardLayout:label:keymap_japanese,
+settingsPanel:osKeyboardLayout:label:keymap_korean,
+settingsPanel:osKeyboardLayout:label:keymap_latvian,
+settingsPanel:osKeyboardLayout:label:keymap_lithuanian_azerty,
+settingsPanel:osKeyboardLayout:label:keymap_lithuanian_qwerty,
+settingsPanel:osKeyboardLayout:label:keymap_neo2,
+settingsPanel:osKeyboardLayout:label:keymap_norman,
+settingsPanel:osKeyboardLayout:label:keymap_norwegian,
+settingsPanel:osKeyboardLayout:label:keymap_polish,
+settingsPanel:osKeyboardLayout:label:keymap_portuguese,
+settingsPanel:osKeyboardLayout:label:keymap_portuguese_mac_iso,
+settingsPanel:osKeyboardLayout:label:keymap_romanian,
+settingsPanel:osKeyboardLayout:label:keymap_russian,俄語
+settingsPanel:osKeyboardLayout:label:keymap_serbian,
+settingsPanel:osKeyboardLayout:label:keymap_serbian_latin,
+settingsPanel:osKeyboardLayout:label:keymap_slovak,
+settingsPanel:osKeyboardLayout:label:keymap_slovenian,
+settingsPanel:osKeyboardLayout:label:keymap_spanish,
+settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,
+settingsPanel:osKeyboardLayout:label:keymap_swedish,
+settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,
+settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_iso,
+settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_ansi,
+settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_iso,
+settingsPanel:osKeyboardLayout:label:keymap_swiss_de,
+settingsPanel:osKeyboardLayout:label:keymap_swiss_fr,
+settingsPanel:osKeyboardLayout:label:keymap_turkish_f,
+settingsPanel:osKeyboardLayout:label:keymap_turkish_q,
+settingsPanel:osKeyboardLayout:label:keymap_uk,英語（英國）
+settingsPanel:osKeyboardLayout:label:keymap_ukrainian,
+settingsPanel:osKeyboardLayout:label:keymap_us,英語（美國）
+settingsPanel:osKeyboardLayout:label:keymap_us_extended,
+settingsPanel:osKeyboardLayout:label:keymap_us_international,
+settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,
+settingsPanel:osKeyboardLayout:label:keymap_workman,
+settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
+settingsPanel:osKeyboardLayout:title,
+settingsPanel:snowflakes:label,開啟 Snowflakes
+settingsPanel:snowflakes:title,Snowflakes
+settingsPanel:title,配置選項
+settingsPanel:toggleTutorial:help,MechMerlin 的影片教程
+settingsPanel:toggleTutorial:label,影片教程
+testKeys:label,測試鍵盤
+testKeys:title,測試鍵盤輸入
+tester:back:label,返回
+tester:back:title,回到配置頁面
+tester:chatter:detectedAlert,探測到連擊！
+tester:chatter:label,連擊閾值 (ms)
+tester:docs:paragraph,注意：探測到的鍵位值和鍵位碼可能會因為本地設定有所不同。文件
+tester:keycodeStatus:label,鍵碼已探測
+tester:letters:code:label,鍵位程式碼
+tester:letters:key:label,鍵位值
+tester:letters:keycode:label,鍵位碼
+tester:page:label,重置
+tester:reset:label,重置已測試按鍵
+tester:reset:title,開啟打字機音效
+tester:typewritericon:label,開啟打字機音效
+toggleTerminal:label,點選展開
+toggleTerminal:title,開啟終端顯示

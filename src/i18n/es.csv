@@ -35,6 +35,7 @@ flashFile:label,Instalar personalizado
 flashFile:title,Instalar archivo elegido al MCU
 flashFirmware:label,Auto-Instalar
 flashFirmware:title,Automáticamente instalar Firmware compilado al MCU
+githubKeyboardFolder:title,
 help:label,Abrir tutorial
 importJSON:title,Importar archivo JSON de Keymap QMK
 importUrlJSON:title,Importar archivo JSON de Keymap QMK desde URL
@@ -202,5 +203,3 @@ tester:reset:title,Restablecer las teclas detectadas
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

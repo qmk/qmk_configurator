@@ -35,6 +35,7 @@ flashFile:label,Flash Manuel
 flashFile:title,Flash le fichier selectionné
 flashFirmware:label,Flash Automatique
 flashFirmware:title,Flash automatiquement le firmware compilé
+githubKeyboardFolder:title,
 help:label,Invoque le Sorcier
 importJSON:title,Importe un fichier .JSON de disposition des touches
 importUrlJSON:title,Importe une disposition QMK .JSON d'une URL
@@ -202,5 +203,3 @@ tester:reset:title,Réinitialise les touches détectées
 tester:typewritericon:label,
 toggleTerminal:label,
 toggleTerminal:title,
-githubKeyboardFolder:label,
-githubKeyboardFolder:title,

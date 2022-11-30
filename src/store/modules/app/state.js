@@ -77,7 +77,9 @@ const state = {
     { value: 'pt-BR', label: 'Português brasileiro' },
     { value: 'ru', label: 'Русский' },
     { value: 'ja', label: '日本語' },
-    { value: 'zh-CN', label: '简体中文' }
+    { value: 'zh-CN', label: '简体中文' },
+    { value: 'zh-TW', label: '繁體中文(台灣)' },
+    { value: 'zh-HK', label: '繁體中文(香港)' }
   ],
   osKeyboardLayouts,
   snowflakes: false

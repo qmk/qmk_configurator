@@ -10,9 +10,9 @@
       "KC_G",    "KC_H",    "KC_I"
     ],
     [
-      "KC_TRNS", "OUT_AUTO", "QK_BOOT",
-      "BL_STEP", "OUT_USB",  "KC_TRNS",
-      "BL_TOGG", "OUT_BT",   "KC_TRNS"
+      "KC_TRNS", "OU_AUTO", "QK_BOOT",
+      "BL_STEP", "OU_USB",  "KC_TRNS",
+      "BL_TOGG", "OU_BT",   "KC_TRNS"
     ]
   ]
 }
