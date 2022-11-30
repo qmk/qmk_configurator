@@ -20,7 +20,7 @@
            "_______",                         "XXXXXXX",
            "MI_VELU",
       "MI_OCTD",   "MI_OCTU",      "DF(0)",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",
-           "MI_VELD",                   "DF(1)",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "EEP_RST",   "XXXXXXX",   "XXXXXXX"
+           "MI_VELD",                   "DF(1)",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "XXXXXXX",   "EE_CLR",    "XXXXXXX",   "XXXXXXX"
     ]
   ]
 }

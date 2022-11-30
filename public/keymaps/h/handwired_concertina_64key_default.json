@@ -6,7 +6,7 @@
   "layers": [
     [
                             "KC_LSPO", "KC_MINS", "KC_EQL",                                 "KC_VOLD", "KC_VOLU", "KC_RSPC",
-                            "KC_LCPO", "KC_LGUI", "KC_LANG1", "KC_ENT",        "KC_MUTE",    "KC_NO", "MO(3)",   "KC_RCPC",
+                            "KC_LCPO", "KC_LGUI", "KC_LNG1", "KC_ENT",        "KC_MUTE",    "KC_NO",   "MO(3)",   "KC_RCPC",
                                        "KC_LAPO", "KC_SPC",  "RALT(KC_9)",    "RALT(KC_0)", "KC_ESC",  "KC_RAPC",
 
                             "KC_W",    "KC_E",    "KC_R",    "KC_T",          "KC_Y",       "KC_U",    "KC_I",    "KC_O",

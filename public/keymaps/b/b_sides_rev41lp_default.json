@@ -25,7 +25,7 @@
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "BL_DEC",  "BL_TOGG",            "BL_BRTG", "BL_INC",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "RESET",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
                                                   "_______", "_______", "_______", "_______", "_______"
     ]
   ]
