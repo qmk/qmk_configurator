@@ -10,8 +10,8 @@
   ],
   "layers": [
     [
-      "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0",
-      "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0", "MACRO_0",            "MACRO_0", "MACRO_0", "MACRO_0"
+      "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",
+      "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",               "MC_0",    "MC_0",    "MC_0"
     ],
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
