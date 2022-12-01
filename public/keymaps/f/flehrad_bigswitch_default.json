@@ -5,7 +5,7 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "LALT(LGUI(KC_POWER))"
+      "LALT(LGUI(KC_PWR))"
     ]
   ]
 }

@@ -23,8 +23,8 @@
   ],
   "layers": [
     [
-      "MACRO_0", "MACRO_1",
-      "MACRO_2", "MACRO_3",
+      "MC_0",    "MC_1",
+      "MC_2",    "MC_3",
       "KC_VOLU", "KC_VOLD"
     ]
   ]
