@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/sinc/rev1",
   "keymap": "default",
-  "commit": "302ed624ac0910eea80ff4376dc2b8df5fd94b3f",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_80_with_macro",
   "layers": [
     [
