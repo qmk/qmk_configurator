@@ -1,7 +1,7 @@
 {
   "keyboard": "melgeek/mj65/rev3",
   "keymap": "default",
-  "commit": "068e11f7e2f5caf3084453c19cc8cd3f0edafb0d",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
