@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/rs60",
   "keymap": "default",
-  "commit": "854547330704fb1b1f07d547d49728da8b92b2a3",
+  "commit": "18dc851e37a203b32db0261c365dd300488e1c71",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
