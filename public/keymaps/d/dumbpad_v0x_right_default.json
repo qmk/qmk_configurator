@@ -1,7 +1,7 @@
 {
   "keyboard": "dumbpad/v0x_right",
   "keymap": "dumbpad_v0x_right_layout_mine",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -9,7 +9,7 @@
       "KC_4",    "KC_5",    "KC_6",           "KC_ESC",
       "KC_1",    "KC_2",    "KC_3",           "KC_TAB",
       "TT(1)",   "KC_0",    "LSFT_T(KC_DOT)", "KC_ENT",  "KC_BTN1"
-      ],
+    ],
     [
       "_______", "_______", "_______", "QK_BOOT",
       "_______", "_______", "_______", "KC_PPLS",
