@@ -1,7 +1,7 @@
 {
   "keyboard": "keybee/keybee65",
   "keymap": "default",
-  "commit": "02000201629932d87281738b0c4127379d6835ff",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
