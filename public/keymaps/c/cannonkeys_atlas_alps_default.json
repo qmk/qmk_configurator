@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/atlas_alps",
   "keymap": "default",
-  "commit": "46f4422a87bf7e3aa52bd8770b14f8361d198e06",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
