@@ -1,7 +1,7 @@
 {
   "keyboard": "sx60",
   "keymap": "default",
-  "commit": "6a94e25f6d5d8747f2fd4e7acc04de8f0b48a4db",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [
     [
