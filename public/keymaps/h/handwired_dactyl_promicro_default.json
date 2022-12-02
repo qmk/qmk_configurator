@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_promicro",
   "keymap": "default",
-  "commit": "957b8f553caa654a971e3b63cf2c4281b92cf601",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_6x6",
   "layers": [
     [
