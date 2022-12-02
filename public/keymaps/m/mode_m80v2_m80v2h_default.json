@@ -1,7 +1,7 @@
 {
   "keyboard": "mode/m80v2/m80v2h",
   "keymap": "default",
-  "commit": "dea23720e67d95278830a1172dac57a4e502a050",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_m80v2h",
   "layers": [
     [
