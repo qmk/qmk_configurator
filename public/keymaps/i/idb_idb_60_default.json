@@ -1,7 +1,7 @@
 {
   "keyboard": "idb/idb_60",
   "keymap": "default",
-  "commit": "0b89fa3324879e04f6f0a65a4996a456cf5e0456",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_60_ansi_wkl_split_rshift",
   "layers": [
     [
