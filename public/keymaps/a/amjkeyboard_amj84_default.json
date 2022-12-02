@@ -1,7 +1,7 @@
 {
   "keyboard": "amjkeyboard/amj84",
   "keymap": "default",
-  "commit": "1df37114320b816fe318316bce705d772859c610",
+  "commit": "8ec18d147613d3539764b33e92af5c9542dd5f46",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -15,7 +15,7 @@
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_CALC", "KC_TRNS", "KC_INS",  "KC_TRNS", "KC_PSCR", "KC_SCRL", "KC_PAUS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_CALC", "KC_TRNS", "KC_INS",  "KC_TRNS", "KC_PSCR", "KC_SLCK", "KC_PAUS", "KC_TRNS", "KC_TRNS",
       "BL_BRTG", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_HOME", "KC_PGUP", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "BL_STEP", "KC_NO",   "KC_TRNS", "KC_APP",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_END",  "KC_PGDN", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_SLEP", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
