@@ -1,17 +1,17 @@
 {
   "keyboard": "maple_computing/the_ruler",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT",
   "layers": [
     [
-      "MO(2)",   "KC_2",    "LCTL(LSFT(KC_ESC))", "LCTL(LALT(KC_DEL))", "KC_ESC",  "MO(1)"
+      "MO(2)", "KC_2", "C(S(KC_ESC))", "C(A(KC_DEL))", "KC_ESC", "MO(1)"
     ],
     [
-      "RGB_TOG", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "KC_TRNS"
+      "RGB_TOG", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "_______"
     ],
     [
-      "KC_TRNS", "RGB_VAD", "RGB_VAI", "RGB_MOD", "LCTL(LSFT(KC_ESC))", "QK_BOOT"
+      "_______", "RGB_VAD", "RGB_VAI", "RGB_MOD", "C(S(KC_ESC))", "QK_BOOT"
     ]
   ]
 }
