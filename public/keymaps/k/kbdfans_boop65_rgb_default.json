@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/boop65/rgb",
   "keymap": "default",
-  "commit": "07a4e3b1762fb0800c4cb89bf646f6c82c8a95b7",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
