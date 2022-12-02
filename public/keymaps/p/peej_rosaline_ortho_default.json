@@ -1,7 +1,7 @@
 {
   "keyboard": "peej/rosaline/ortho",
   "keymap": "default",
-  "commit": "2dab029bcfb84b1fdd8fd0ef4d41ba41b9b5a109",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_ortho_4x15",
   "layers": [
     [
