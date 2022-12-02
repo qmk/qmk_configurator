@@ -1,7 +1,7 @@
 {
   "keyboard": "jacky_studio/s7_elephant/rev2",
   "keymap": "default",
-  "commit": "73dfc2b36887b0580bf534a520baaad3fae0f613",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_ansi_1u",
   "layers": [
     [
