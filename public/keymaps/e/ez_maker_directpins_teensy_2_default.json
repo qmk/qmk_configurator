@@ -1,7 +1,7 @@
 {
     "keyboard": "ez_maker/directpins/teensy_2",
     "keymap": "default",
-    "commit": "60a36863bca9f52cad6984de4e877f8dcd30a88f",
+    "commit": "8978960a875b61d9e3de6ef0ca60d066e19e4fef",
     "layout": "LAYOUT_all",
     "layers": [
         [
