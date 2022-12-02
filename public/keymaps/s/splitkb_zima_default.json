@@ -5,22 +5,22 @@
     "layout":"LAYOUT_ortho_4x3",
     "layers":[
         [
-            "KC_MUTE", "TG(1)",   "TG(2)",
-            "KC_P7",   "KC_P8",   "KC_P9",
-            "KC_P4",   "KC_P5",   "KC_P6",
-            "KC_P1",   "KC_P2",   "KC_P3"
+          "KC_MUTE", "TG(1)",   "TG(2)",
+          "KC_P7",   "KC_P8",   "KC_P9",
+          "KC_P4",   "KC_P5",   "KC_P6",
+          "KC_P1",   "KC_P2",   "KC_P3"
         ],
         [
-            "QK_BOOT", "KC_TRNS", "KC_NO",
-            "AU_ON",   "AU_OFF",  "KC_NO",
-            "CK_TOGG", "KC_NO",   "CK_UP",
-            "CK_RST",  "KC_NO",   "CK_DOWN"
+          "QK_BOOT", "_______", "XXXXXXX",
+          "AU_ON",   "AU_OFF",  "XXXXXXX",
+          "CK_TOGG", "XXXXXXX", "CK_UP",
+          "CK_RST",  "XXXXXXX", "CK_DOWN"
         ],
         [
-            "RGB_TOG", "RGB_MOD", "_______",
-            "RGB_HUI", "RGB_SAI", "RGB_VAI",
-            "RGB_HUD", "RGB_SAD", "RGB_VAD",
-            "HPT_TOG", "HPT_FBK", "HPT_CONT"
+          "RGB_TOG", "RGB_MOD", "_______",
+          "RGB_HUI", "RGB_SAI", "RGB_VAI",
+          "RGB_HUD", "RGB_SAD", "RGB_VAD",
+          "HF_TOGG", "HF_FDBK", "HF_CONT"
         ]
     ]
 }
