@@ -1,7 +1,7 @@
 {
   "keyboard": "keysofkings/twokey",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -38,7 +38,7 @@
     ],
     [
       "TO(0)",
-      "CK_TOGG", "MU_TOG"
+      "CK_TOGG", "MU_TOGG"
     ],
     [
       "TO(0)",
