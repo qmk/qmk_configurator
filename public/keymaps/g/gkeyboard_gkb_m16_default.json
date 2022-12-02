@@ -1,7 +1,7 @@
 {
   "keyboard": "gkeyboard/gkb_m16",
   "keymap": "default",
-  "commit": "8ed9eb9c7f75b898c867060be46b404725339cea",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
