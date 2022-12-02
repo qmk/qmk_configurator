@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdfans/kbd67/mkiirgb_iso",
   "keymap": "default",
-  "commit": "4b0aa1a2af5934aad40c21ceb9f83cf6b5034d5b",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_iso_blocker",
   "layers": [
     [
