@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/nodu",
   "keymap": "default",
-  "commit": "2b2e8bfdb7091cdc0587f7445df84d2414fa7207",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
