@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt60_h1",
   "keymap": "default",
-  "commit": "ccb15c2d2923903a925d253eec66fd4356ceea85",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_60_tsangan_hhkb",
   "layers": [
     [
