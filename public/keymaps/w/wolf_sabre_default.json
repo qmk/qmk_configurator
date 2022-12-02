@@ -1,7 +1,7 @@
 {
   "keyboard": "wolf/sabre",
   "keymap": "default",
-  "commit": "7fb22706fdb41030bff7fc1bf480d8b002ec86c5",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -17,8 +17,8 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "BL_INC",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",                       "KC_TRNS",            "KC_TRNS", "KC_TRNS",            "KC_TRNS",                          "BL_TOGG", "BL_DEC",  "BL_BRTG"
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "BL_UP",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",                       "KC_TRNS",            "KC_TRNS", "KC_TRNS",            "KC_TRNS",                          "BL_TOGG", "BL_DOWN", "BL_BRTG"
     ]
   ]
 }
