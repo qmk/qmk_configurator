@@ -1,7 +1,7 @@
 {
   "keyboard": "wavtype/foundation",
   "keymap": "default",
-  "commit": "8b438a9165ace0492d6e249f8064f07531ac6d15",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ansi_split_bs",
   "layers": [
     [
