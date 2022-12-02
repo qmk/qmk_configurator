@@ -1,7 +1,7 @@
 {
   "keyboard": "keyprez/rhino",
   "keymap": "default",
-  "commit": "022e2748aff77ba9f22511a83e205fc4a6703bf6",
+  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
   "layout": "LAYOUT_ortho_2x2u",
   "layers": [
     [
