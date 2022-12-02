@@ -1,14 +1,14 @@
 {
   "keyboard": "ckeys/obelus",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT",
-      "TO(4)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "TO(1)",   "TO(2)",   "TO(3)",   "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "QK_BOOT",
+      "TO(4)",   "_______", "_______", "_______",
+      "TO(1)",   "TO(2)",   "TO(3)",   "_______",
+      "_______", "_______", "_______", "_______"
     ],
     [
       "KC_P7",   "KC_P8",   "KC_P9",   "KC_PAST",
@@ -29,16 +29,16 @@
       "KC_LCTL",      "KC_C",    "KC_R",    "KC_SPC"
     ],
     [
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "MU_TOG",  "MU_MOD",  "KC_NO",   "TO(0)"
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "MU_TOG",  "MU_MOD",  "XXXXXXX", "TO(0)"
     ],
     [
-      "KC_NUM",  "KC_TRNS", "KC_TRNS", "TO(0)",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "KC_NLCK", "_______", "_______", "TO(0)",
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______"
     ]
   ]
 }
