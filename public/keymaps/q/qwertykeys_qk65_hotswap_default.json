@@ -1,7 +1,7 @@
 {
   "keyboard": "qwertykeys/qk65/hotswap",
   "keymap": "default",
-  "commit": "d508988916cb47dcdeedd0167a48ab99ca202417",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
