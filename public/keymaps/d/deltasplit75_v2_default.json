@@ -1,7 +1,7 @@
 {
   "keyboard": "deltasplit75/v2",
   "keymap": "default",
-  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_v2",
   "layers": [
     [
@@ -13,12 +13,12 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                       "KC_SPC",  "MO(1)",   "KC_SPC",                        "KC_RALT", "KC_RGUI", "KC_RCTL", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT",
-      "KC_BSLS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_VOLU", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PAUS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_VOLD", "KC_TRNS", "KC_PSCR", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "QK_BOOT",
+      "KC_BSLS", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "KC_VOLU", "KC_UP",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",
+      "_______", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PAUS", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",
+      "_______", "_______", "KC_VOLD", "_______", "KC_PSCR", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______",                       "_______", "_______", "_______",                       "_______", "_______", "_______", "_______", "_______", "_______"
     ]
   ]
 }
