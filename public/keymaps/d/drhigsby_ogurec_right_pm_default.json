@@ -1,7 +1,7 @@
 {
   "keyboard": "drhigsby/ogurec/right_pm",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "984481ff8e17173a0faaa12c524d0b502fb438cb",
   "layout": "LAYOUT_ortho_3x12",
   "layers": [
     [
@@ -16,8 +16,8 @@
     ],
     [
       "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_VOLD", "KC_VOLU", "KC_MSTP", "KC_MPLY", "KC_MPRV", "KC_MNXT", "KC_MUTE", "KC_MRWD", "KC_MFFD", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "KC_VOLD", "KC_VOLU", "KC_MSTP", "KC_MPLY", "KC_MPRV", "KC_MNXT", "KC_MUTE", "KC_MRWD", "KC_MFFD", "_______", "_______", "_______"
     ]
   ]
 }
