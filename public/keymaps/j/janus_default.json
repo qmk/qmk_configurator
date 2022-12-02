@@ -1,7 +1,7 @@
 {
   "keyboard": "janus",
   "keymap": "default",
-  "commit": "3072feb8ed79c861a0066ec6721669dec6f6309f",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_split_3x5_2",
   "layers": [
     [
