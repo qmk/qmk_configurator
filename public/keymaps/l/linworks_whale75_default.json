@@ -1,7 +1,7 @@
 {
   "keyboard": "linworks/whale75",
   "keymap": "default",
-  "commit": "48a8682438d5708636c3260adfb6a75ac89ed05a",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                                   "KC_RALT", "MO(1)",              "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "RGB_TOG",            "RGB_VAD", "RGB_VAI", "BL_DEC",  "BL_INC",  "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "RGB_RMOD","RGB_MOD", "RGB_SPI", "RGB_SPI",            "KC_MPLY",
+      "RGB_TOG",            "RGB_VAD", "RGB_VAI", "BL_DOWN", "BL_UP",   "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "RGB_RMOD","RGB_MOD", "RGB_SPI", "RGB_SPI",            "KC_MPLY",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGUP",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_PGDN",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_END",
