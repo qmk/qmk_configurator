@@ -1,7 +1,7 @@
 {
   "keyboard": "ibm/model_m_4th_gen/overnumpad_1xb",
   "keymap": "default",
-  "commit": "376968ade4e102f7a526252599755af4c16dd525",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_all",
   "layers": [
     [
