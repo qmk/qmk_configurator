@@ -1,7 +1,7 @@
 {
   "keyboard": "newgame40",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "4b2d71de52b561c77da4bdb2275b1c6bb2415f54",
   "layout": "LAYOUT_ortho_4x10",
   "layers": [
     [
@@ -29,22 +29,22 @@
       "KC_LSFT", "KC_LGUI", "LT(4,KC_LNG2)", "KC_LCTL", "KC_SPC",  "KC_BSPC", "KC_ENT",  "LT(5,KC_LNG1)", "KC_LEFT", "KC_RGHT"
     ],
     [
-      "KC_ESC",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_ESC",  "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
       "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",  "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",  "KC_F21",  "KC_F22",
-      "KC_F1",   "KC_F2",   "KC_TRNS", "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_TRNS", "KC_F7",   "KC_F8"
+      "KC_F1",   "KC_F2",   "_______", "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "_______", "KC_F7",   "KC_F8"
     ],
     [
       "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",
-      "KC_EXLM", "KC_DQUO", "KC_HASH", "KC_DLR",  "KC_PERC", "KC_AMPR", "KC_QUOT", "KC_LPRN", "KC_RPRN", "KC_UNDS",
-      "KC_EQL",  "KC_INT3", "KC_LCBR", "KC_RCBR", "KC_ASTR", "KC_TILD", "KC_PIPE", "KC_LT",   "KC_GT",   "KC_QUES",
-      "KC_F1",   "KC_LALT", "KC_TRNS", "KC_LBRC", "KC_RBRC", "KC_SCLN", "KC_COLN", "KC_TRNS", "KC_BSLS", "KC_SLSH"
+      "KC_EXLM", "KC_DQT",  "KC_HASH", "KC_DLR",  "KC_PERC", "KC_AMPR", "KC_QUOT", "KC_LPRN", "KC_RPRN", "KC_UNDS",
+      "KC_EQL",  "KC_INT3", "KC_LCBR", "KC_RCBR", "KC_ASTR", "KC_TILD", "KC_PIPE", "KC_LABK", "KC_RABK", "KC_QUES",
+      "KC_F1",   "KC_LALT", "_______", "KC_LBRC", "KC_RBRC", "KC_SCLN", "KC_COLN", "_______", "KC_BSLS", "KC_SLSH"
     ],
     [
-      "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "RGB_VAD", "RGB_VAI", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "KC_TRNS", "BL_TOGG", "BL_STEP",
-      "TO(0)",   "TO(1)",   "TO(2)",   "TO(3)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "RGB_TOG", "RGB_MOD", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "RGB_VAD", "RGB_VAI", "_______",
+      "_______", "_______", "_______", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "_______", "BL_TOGG", "BL_STEP",
+      "DF(0)",   "DF(1)",   "DF(2)",   "DF(3)",   "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"
     ]
   ]
 }
