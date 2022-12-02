@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/walter",
   "keymap": "default",
-  "commit": "c305edc6800d30e676119cdef19dbe2e3310493a",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [
@@ -27,3 +27,4 @@
     ]
   ]
 }
+
