@@ -1,7 +1,7 @@
 {
   "keyboard": "lazydesigners/the60/rev1",
   "keymap": "default",
-  "commit": "39c8ed32b47baed70c636113b1433381c5b6cfdc",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_split_spc_split_bspc",
   "layers": [
     [
