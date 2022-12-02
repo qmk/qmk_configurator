@@ -1,7 +1,7 @@
 {
   "keyboard": "lucid/alexa",
   "keymap": "default",
-  "commit": "bc51e330c0c183e78e415b6cfbf475990eb1ba86",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [
