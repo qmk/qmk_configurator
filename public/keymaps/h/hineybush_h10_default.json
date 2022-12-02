@@ -1,7 +1,7 @@
 {
   "keyboard": "hineybush/h10",
   "keymap": "default",
-  "commit": "6cfc3cd940370d80fd44554eb9f669950495e1f9",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
