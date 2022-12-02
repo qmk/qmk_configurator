@@ -1,7 +1,7 @@
 {
   "keyboard": "mokey/xox70",
   "keymap": "default",
-  "commit": "548a463fe9e60410e5798b6fd10a9e18ba2f28bb",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_tkl_nofrow_ansi",
   "layers": [
     [
