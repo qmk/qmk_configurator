@@ -1,7 +1,7 @@
 {
   "keyboard": "lucid/phantom_solder",
   "keymap": "default",
-  "commit": "70efc82c1c32c5faa2f10ba61b06c02e3a06e940",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_all",
   "layers": [
     [
