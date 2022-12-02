@@ -1,7 +1,7 @@
 {
   "keyboard": "melgeek/mojo68/rev1",
   "keymap": "default",
-  "commit": "768072e824aa1f95bec1c15ec8072770f92d193f",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_68_ansi",
   "layers": [
     [
