@@ -1,7 +1,7 @@
 {
   "keyboard": "polycarbdiet/s20",
   "keymap": "default",
-  "commit": "3134698ad2316f234e0d3d222cebbcba721d950c",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
@@ -21,8 +21,8 @@
     [
       "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",
       "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD",
-      "BL_TOGG", "BL_ON",   "BL_INC",  "BL_STEP",
-      "KC_TRNS", "BL_OFF",  "BL_DEC",  "BL_BRTG",
+      "BL_TOGG", "BL_ON",   "BL_UP",   "BL_STEP",
+      "KC_TRNS", "BL_OFF",  "BL_DOWN", "BL_BRTG",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [
