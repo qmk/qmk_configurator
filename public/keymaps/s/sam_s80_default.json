@@ -1,7 +1,7 @@
 {
   "keyboard": "sam/s80",
   "keymap": "default",
-  "commit": "bb11e726b843330f3e7e46c805f40e34eb7a3ae3",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -17,7 +17,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "RGB_TOG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_MOD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "BL_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LCTL", "BL_INC",  "BL_STEP", "KC_TRNS", "KC_TRNS", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LCTL", "BL_UP",   "BL_STEP", "KC_TRNS", "KC_TRNS", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS",                          "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
