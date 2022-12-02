@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/n60_s",
   "keymap": "default",
-  "commit": "81fd005af9abb16aed26653a8633631189b4e03f",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
