@@ -1,7 +1,7 @@
 {
   "keyboard": "idobao/montex/v1rgb",
   "keymap": "default",
-  "commit": "8e128452db4a5c93f0214a1f6ea38e213445235c",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_numpad_6x5",
   "layers": [
     [

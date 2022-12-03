@@ -1,7 +1,7 @@
 {
   "keyboard": "spaceholdings/nebula68b/hs",
   "keymap": "default",
-  "commit": "cd673ccebacb2c0550cce32a824c32ce92c8b97f",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_68_ansi_split_bs",
   "layers": [
     [

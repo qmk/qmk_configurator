@@ -1,7 +1,7 @@
 {
   "keyboard": "lm_keyboard/lm60n",
   "keymap": "default",
-  "commit": "35944df7b0a119ed8d72a686c1e75899572aa82b",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

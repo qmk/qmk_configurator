@@ -1,7 +1,7 @@
 {
   "keyboard": "sawnsprojects/vcl65/solder",
   "keymap": "default",
-  "commit": "958600d51844ca267c9c7dac5f5686c54428b19b",
+  "commit": "4b2d71de52b561c77da4bdb2275b1c6bb2415f54",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/symmetry60",
   "keymap": "default",
-  "commit": "b252cce18fd474562510be5fc1e401287d747cd3",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_ortho_5x14",
   "layers": [
     [

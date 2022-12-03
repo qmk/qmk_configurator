@@ -1,7 +1,7 @@
 {
   "keyboard": "unicomp/pc122/overnumpad_1xb",
   "keymap": "default",
-  "commit": "e1e86cb1fb97afe3c2d8331dde4e0f1d61d67e37",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_all",
   "layers": [
     [

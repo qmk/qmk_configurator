@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/wtf60",
   "keymap": "default",
-  "commit": "8feb767994ec8576afea22305661b55d0e805a8f",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_full_wtf",
   "layers": [
     [

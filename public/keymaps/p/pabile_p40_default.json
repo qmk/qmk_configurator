@@ -1,7 +1,7 @@
 {
   "keyboard": "pabile/p40",
   "keymap": "default",
-  "commit": "d15a60d2d318ede79746c09d5beb79ba72037f30",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_ortho_4x10",
   "layers": [
     [

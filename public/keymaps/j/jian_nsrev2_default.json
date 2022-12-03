@@ -2,7 +2,7 @@
   "version" : 1,
   "keyboard" : "jian/nsrev2",
   "keymap": "default",
-  "commit": "157319fbd03e6f7a6618111fd03ab3e53317893e",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "notes" : "This keymap is identical to jian/keymaps/default/keymap.c, except layers with dvorak/colemak/workman are not persistent (their 'on' state won't save after keyboard reboot)",
   "documentation" : "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "layout" : "LAYOUT",

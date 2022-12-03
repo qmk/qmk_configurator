@@ -1,7 +1,7 @@
 {
   "keyboard": "xbows/ranger",
   "keymap": "default",
-  "commit": "6af2d3a32cab19d2d3fec99da79c98b0ad14bde0",
+  "commit": "c347e732be6b50500c1651b3fb8c0753b0c9c40d",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

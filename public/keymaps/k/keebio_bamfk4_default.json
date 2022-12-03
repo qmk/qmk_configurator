@@ -1,0 +1,14 @@
+{
+  "keyboard": "keebio/bamfk4",
+  "keymap": "default",
+  "commit": "a49bdd2659186e6ea0c888e91229260d7c849a2d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",
+      "KC_B",
+      "KC_C",
+      "KC_D"
+    ]
+  ]
+}

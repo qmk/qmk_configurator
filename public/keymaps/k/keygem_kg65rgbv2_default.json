@@ -1,7 +1,7 @@
 {
   "keyboard": "keygem/kg65rgbv2",
   "keymap": "default",
-  "commit": "6f108642eb814e56d191db91cf0d0288914f53d7",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/m40/5x5_macropad",
   "keymap": "default",
-  "commit": "6cdf230a20e34302f54db018c18063395345757f",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_5x5",
   "layers": [
     [

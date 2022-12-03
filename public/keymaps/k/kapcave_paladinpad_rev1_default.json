@@ -1,7 +1,7 @@
 {
   "keyboard": "kapcave/paladinpad/rev1",
   "keymap": "default",
-  "commit": "6779d5b990bf94cba28a74246c2378e5bb5047b4",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [

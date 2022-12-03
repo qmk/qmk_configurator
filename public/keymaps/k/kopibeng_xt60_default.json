@@ -1,7 +1,7 @@
 {
   "keyboard": "kopibeng/xt60",
   "keymap": "default",
-  "commit": "55b3b2b8487ff9008806d41bd77a10fc796c4103",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_all",
   "layers": [
     [

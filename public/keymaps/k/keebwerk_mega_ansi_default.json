@@ -1,7 +1,7 @@
 {
   "keyboard": "keebwerk/mega/ansi",
   "keymap": "default",
-  "commit": "95bbd799a4f86dac37fdf2354e008d2fed7f6660",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

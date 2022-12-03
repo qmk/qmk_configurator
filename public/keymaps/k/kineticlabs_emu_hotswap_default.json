@@ -1,7 +1,7 @@
 {
   "keyboard": "kineticlabs/emu/hotswap",
   "keymap": "default",
-  "commit": "c1ba35363d4f7d76d63173312a0785401c6bff9f",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

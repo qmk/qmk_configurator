@@ -1,7 +1,7 @@
 {
   "keyboard": "kopibeng/xt65",
   "keymap": "default",
-  "commit": "692d0268caa8206076e03b9e5264982614a7cec7",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [

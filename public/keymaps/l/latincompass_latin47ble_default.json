@@ -1,7 +1,7 @@
 {
   "keyboard": "latincompass/latin47ble",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "d810878d5e36e032ec99fb309b66caf3ea57e4ba",
   "layout": "LAYOUT_planck_mit",
   "layers": [
     [

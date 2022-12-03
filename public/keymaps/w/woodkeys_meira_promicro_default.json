@@ -1,8 +1,8 @@
 {
   "keyboard": "woodkeys/meira/promicro",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
-  "layout": "LAYOUT_ortho_4x12",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",

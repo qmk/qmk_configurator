@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/kbo5000/rev1",
   "keymap": "default",
-  "commit": "302ed624ac0910eea80ff4376dc2b8df5fd94b3f",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

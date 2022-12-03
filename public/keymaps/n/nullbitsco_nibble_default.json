@@ -1,7 +1,7 @@
 {
   "keyboard": "nullbitsco/nibble",
   "keymap": "default",
-  "commit": "c75bf9daf46897209338f7dc4b68f2efec074a65",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

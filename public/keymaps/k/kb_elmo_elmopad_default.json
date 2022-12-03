@@ -1,7 +1,7 @@
 {
   "keyboard": "kb_elmo/elmopad",
   "keymap": "default",
-  "commit": "2d8703f6cc61918aaefd3ce04a064a82ab238140",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [

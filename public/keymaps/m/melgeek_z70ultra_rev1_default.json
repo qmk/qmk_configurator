@@ -1,7 +1,7 @@
 {
   "keyboard": "melgeek/z70ultra/rev1",
   "keymap": "default",
-  "commit": "0dc74dd8c49dda9b9729b25d43a168dbc6d3b294",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

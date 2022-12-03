@@ -1,7 +1,7 @@
 {
   "keyboard": "spaceholdings/nebula12",
   "keymap": "default",
-  "commit": "e7931289918221081cbe2a7ea5df27a5d86324db",
+  "commit": "54682f961e5d4eb1ea66aaec36303800842b7fc3",
   "layout": "LAYOUT_ortho_4x3",
   "layers": [
     [
@@ -15,6 +15,18 @@
       "EF_DEC",  "EF_INC",  "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyboard": "checkerboards/phoenix45_ortho",
   "keymap": "default",
-  "commit": "2938c4e0594778ccf8b3a72f7e2cbb357bd67ede",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_2x225u",
   "layers": [
     [

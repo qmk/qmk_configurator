@@ -1,7 +1,7 @@
 {
   "keyboard": "primekb/meridian/ws2812",
   "keymap": "default",
-  "commit": "f079dd90ed88fd29b7e5bbdd3496742f3afeff4e",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_split_bs_rshift",
   "layers": [
     [
