@@ -11,7 +11,7 @@
       "MO(1)",   "KC_P0",   "KC_PDOT", "KC_ENT"
     ],
     [
-      "KC_NLCK", "XXXXXXX", "KC_TRNS", "KC_PSLS",
+      "KC_NUM",  "XXXXXXX", "KC_TRNS", "KC_PSLS",
       "QK_BOOT", "XXXXXXX", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "XXXXXXX", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "XXXXXXX", "KC_TRNS", "KC_TRNS"
