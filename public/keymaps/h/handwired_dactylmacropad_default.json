@@ -22,13 +22,13 @@
   ],
   "layers": [
     [
-      "MACRO_0",        "LCTL(KC_V)", "KC_UP",     "LCTL(KC_C)",
+      "MC_0",           "LCTL(KC_V)", "KC_UP",     "LCTL(KC_C)",
       "LSFT_T(KC_ESC)", "KC_LEFT",    "KC_DOWN",   "KC_RGHT",
       "TO(1)",          "KC_LCTL",    "A(KC_TAB)", "KC_APP",     "KC_BTN3"
     ],
     [
       "LCTL(LSFT(KC_H))", "LCTL(KC_F6)", "KC_TRNS",    "KC_PGUP",
-      "MACRO_1",          "KC_TRNS",     "KC_TRNS",    "KC_TRNS",
+      "MC_1",             "KC_TRNS",     "KC_TRNS",    "KC_TRNS",
       "TO(2)",            "KC_MUTE",     "LGUI(KC_M)", "KC_PGDN", "KC_MPLY"
     ],
     [

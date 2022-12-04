@@ -13,7 +13,7 @@
       "KC_A",    "KC_1",    "MO(1)"
     ],
     [
-      "QK_BOOT", "MACRO_0",   "KC_TRNS"
+      "QK_BOOT", "MC_0",    "KC_TRNS"
     ]
   ]
 }
