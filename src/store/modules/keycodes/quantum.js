@@ -398,37 +398,37 @@ export default [
   },
   {
     name: 'LS / (',
-    code: 'KC_LSPO',
+    code: 'SC_LSPO',
     title: 'Left Shift when held, ( when tapped'
   },
   {
     name: 'RS / )',
-    code: 'KC_RSPC',
+    code: 'SC_RSPC',
     title: 'Right Shift when held, ) when tapped'
   },
   {
     name: 'LC / (',
-    code: 'KC_LCPO',
+    code: 'SC_LCPO',
     title: 'Left Control when held, ( when tapped'
   },
   {
     name: 'RC / )',
-    code: 'KC_RCPC',
+    code: 'SC_RCPC',
     title: 'Right Control when held, ) when tapped'
   },
   {
     name: 'LA / (',
-    code: 'KC_LAPO',
+    code: 'SC_LAPO',
     title: 'Left Alt when held, ( when tapped'
   },
   {
     name: 'RA / )',
-    code: 'KC_RAPC',
+    code: 'SC_RAPC',
     title: 'Right Alt when held, ) when tapped'
   },
   {
     name: 'RS / Enter',
-    code: 'KC_SFTENT',
+    code: 'SC_SENT',
     title: 'Right Shift when held, Enter when tapped'
   }
 ];
