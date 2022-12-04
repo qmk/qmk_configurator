@@ -1,7 +1,7 @@
 {
   "keyboard": "buildakb/potato65hs",
   "keymap": "default",
-  "commit": "cc77710b4a94b5944b9af08423204dcb631391f8",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

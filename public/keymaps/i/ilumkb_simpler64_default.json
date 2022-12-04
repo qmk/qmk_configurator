@@ -1,7 +1,7 @@
 {
   "keyboard": "ilumkb/simpler64",
   "keymap": "default",
-  "commit": "4c8bb05dab67d0048200f3941cb97ed753cc4ae5",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_64_ansi",
   "layers": [
     [

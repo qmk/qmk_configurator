@@ -1,7 +1,7 @@
 {
   "keyboard": "mino/hotswap",
   "keymap": "default",
-  "commit": "5fae1ec9c3aa105848da8fa7aa249918917b9fd6",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_default",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "mschwingen/modelm/led_ffc",
   "keymap": "default",
-  "commit": "42eeb315a5424fc576239b7e57061affc2ffa8ab",
+  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
   "layout": "LAYOUT",
   "layers": [
     [

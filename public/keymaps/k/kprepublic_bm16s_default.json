@@ -1,7 +1,7 @@
 {
   "keyboard": "kprepublic/bm16s",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
@@ -12,7 +12,7 @@
     ],
     [
       "QK_BOOT", "BL_STEP", "KC_TRNS", "KC_VOLU",
-      "BL_TOGG", "BL_DEC",  "BL_INC",  "KC_VOLD",
+      "BL_TOGG", "BL_DOWN", "BL_UP",   "KC_VOLD",
       "RGB_TOG", "RGB_MOD", "RGB_HUI", "KC_MUTE",
       "RGB_SAI", "RGB_SAD", "RGB_HUD", "KC_TRNS"
     ]

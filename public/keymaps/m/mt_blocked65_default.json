@@ -1,7 +1,7 @@
 {
   "keyboard": "mt/blocked65",
   "keymap": "default",
-  "commit": "b835171008eaeaa992a1b8e390af8bce6f5f0b8f",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

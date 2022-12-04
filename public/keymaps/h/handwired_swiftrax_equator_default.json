@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/equator",
   "keymap": "default",
-  "commit": "8b39ae13c783806ab75460ac35621a403e1564b6",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_split_bs_rshift",
   "layers": [
     [

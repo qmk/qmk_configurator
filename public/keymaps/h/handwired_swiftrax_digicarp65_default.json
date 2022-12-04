@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/digicarp65",
   "keymap": "default",
-  "commit": "c49438feec9fb6be368d6377ca05d0c86d310d4f",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

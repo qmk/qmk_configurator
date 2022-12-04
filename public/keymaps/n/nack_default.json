@@ -1,7 +1,7 @@
 {
   "keyboard": "nack",
   "keymap": "default",
-  "commit": "a400681ccf56b41a4badece43f73939329a1fe47",
+  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -18,7 +18,7 @@
     ],
     [
       "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_SAI", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "MU_TOG",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "MU_TOGG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RGB_VAI", "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "MO(1)",   "KC_NO",   "KC_NO",   "TO(0)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RGB_VAD", "KC_NO"
     ]

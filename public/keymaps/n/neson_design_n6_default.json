@@ -1,7 +1,7 @@
 {
   "keyboard": "neson_design/n6",
   "keymap": "default",
-  "commit": "b55154fb0ad40d895ccc11bb09498f026e0c0773",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [

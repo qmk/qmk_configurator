@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/paraluman",
   "keymap": "default",
-  "commit": "d66b5db1d621fc26fcb6afbd55689eae59be4118",
+  "commit": "c6ad38e79f14f641f2b0a2ababe120d3b12a68c2",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

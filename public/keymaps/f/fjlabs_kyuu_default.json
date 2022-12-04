@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/kyuu",
   "keymap": "default",
-  "commit": "dcfa4712fb6a000079b5bea8d7cbfc8db91d7bcb",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_65_ansi_blocker_badge",
   "layers": [
     [

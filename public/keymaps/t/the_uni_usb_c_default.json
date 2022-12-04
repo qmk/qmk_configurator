@@ -1,0 +1,31 @@
+{
+  "keyboard": "the_uni/usb_c",
+  "keymap": "default",
+  "commit": "772f67484f49a48b7b408a4128006aa022b45cf0",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action":"down", "keycodes": ["LSFT"]},
+      "hello world1",
+      {"action": "up", "keycodes": ["LSFT"]}
+    ],
+    [
+      {"action":"tap", "keycodes": ["LCTL", "LALT", "DEL"]}
+    ],
+    [
+      "ding!",
+      {"action":"beep"}
+    ],
+    [
+      {"action":"tap", "keycodes": ["F1"]},
+      {"action":"delay", "duration": 1000},
+      {"action":"tap", "keycodes": ["PGDN"]}
+    ]
+  ],
+  "layers": [
+    ["_______"]
+  ]
+}
+
+
+

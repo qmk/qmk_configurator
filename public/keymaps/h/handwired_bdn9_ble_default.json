@@ -1,13 +1,13 @@
 {
   "keyboard": "handwired/bdn9_ble",
   "keymap": "default",
-  "commit": "6265b783073e943b8f5b2f7118a2ec8df1fd2ebc",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_A",    "KC_B",    "KC_C",
-      "KC_D",    "KC_E",    "KC_F",
-      "KC_G",    "KC_H",    "KC_I"
+      "MEH(KC_1)", "MEH(KC_2)", "MEH(KC_3)",
+      "MEH(KC_4)", "MEH(KC_5)", "MEH(KC_6)",
+      "MEH(KC_7)", "MEH(KC_8)", "LT(1,MEH(KC_9))"
     ],
     [
       "KC_TRNS", "OU_AUTO", "QK_BOOT",

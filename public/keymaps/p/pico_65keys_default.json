@@ -1,7 +1,7 @@
 {
   "keyboard": "pico/65keys",
   "keymap": "default",
-  "commit": "7048b9403472464e3b2c9eea4ffbaf5be9538785",
+  "commit": "4b2d71de52b561c77da4bdb2275b1c6bb2415f54",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "LALT_T(KC_ESC)", "KC_ENT",  "KC_DEL",  "KC_LGUI", "LT(1,KC_LNG2)", "KC_SPC",     "KC_SPC",  "LT(1,KC_LNG1)", "KC_RGUI", "KC_DEL",  "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_TRNS", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",      "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_LPRN", "KC_RPRN", "KC_PIPE", "KC_ASTR", "KC_TILD", "KC_INT3", "KC_BSLS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_LBRC", "KC_RBRC", "KC_DOT",  "KC_SLSH", "KC_GRV",  "KC_MINS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_LCBR", "KC_RCBR", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_CIRC", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LT",   "KC_UNDS", "KC_GT"
+      "_______", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",      "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
+      "_______", "_______", "_______", "_______", "_______", "_______",    "KC_LPRN", "KC_RPRN", "KC_PIPE", "KC_ASTR", "KC_TILD", "KC_INT3", "KC_BSLS",
+      "_______", "_______", "_______", "_______", "_______", "_______",    "KC_LBRC", "KC_RBRC", "KC_DOT",  "KC_SLSH", "KC_GRV",  "KC_MINS", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______",    "KC_LCBR", "KC_RCBR", "_______", "_______", "_______", "KC_CIRC", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "_______", "_______", "KC_LT",   "KC_UNDS", "KC_GT"
     ]
   ]
 }

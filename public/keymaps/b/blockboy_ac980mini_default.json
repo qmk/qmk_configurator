@@ -1,7 +1,7 @@
 {
   "keyboard": "blockboy/ac980mini",
   "keymap": "default",
-  "commit": "410686dc03e242a8e9a1a7043dabc68f8ab0287e",
+  "commit": "c6ad38e79f14f641f2b0a2ababe120d3b12a68c2",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/alter/rev1",
   "keymap": "default",
-  "commit": "138c3e7042a3fb9e94a784c3b8f6b0815e71cf3b",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

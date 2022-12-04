@@ -1,0 +1,14 @@
+{
+  "keyboard": "flehrad/tradestation",
+  "keymap": "default",
+  "commit": "b9a1b61f6ac42bbd73123d86058ec8b7048d5da6",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

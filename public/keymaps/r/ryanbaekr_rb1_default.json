@@ -1,0 +1,11 @@
+{
+  "keyboard": "ryanbaekr/rb1",
+  "keymap": "default",
+  "commit": "d27b852fccf6165730b5a013e49ae69ab3124c56",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F6"
+    ]
+  ]
+}

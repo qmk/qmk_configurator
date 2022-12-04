@@ -1,7 +1,7 @@
 {
   "keyboard": "latincompass/latinpadble",
   "keymap": "default",
-  "commit": "4b5ebb7248bfe8cd860fe952d6ad24c42b74ca69",
+  "commit": "39c22f5cf5011427ece26c510d0b1ab42edf34db",
   "layout": "LAYOUT_pad",
   "layers": [
     [

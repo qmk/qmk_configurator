@@ -1,7 +1,7 @@
 {
   "keyboard": "takashicompany/spreadwriter",
   "keymap": "default",
-  "commit": "82828c3205848ff0e5c1400c2da7018f6c260a0f",
+  "commit": "4b2d71de52b561c77da4bdb2275b1c6bb2415f54",
   "layout": "LAYOUT",
   "macros": [
     [
@@ -14,9 +14,9 @@
   "layers": [
     [
       "KC_ESC",  "LT(2,KC_Q)",   "KC_W",         "KC_E",       "KC_R",    "KC_T",                                                                    "KC_Y",          "KC_U",    "KC_I",       "KC_O",           "KC_P",    "KC_BSPC",
-      "KC_LCTL", "KC_A",         "KC_S",         "LT(2,KC_D)", "KC_F",    "KC_G",                                   "MACRO_0",                       "KC_H",          "KC_J",    "LT(2,KC_K)", "KC_L",           "KC_ENT",  "KC_ENT",
+      "KC_LCTL", "KC_A",         "KC_S",         "LT(2,KC_D)", "KC_F",    "KC_G",                                   "MC_0",                          "KC_H",          "KC_J",    "LT(2,KC_K)", "KC_L",           "KC_ENT",  "KC_ENT",
       "KC_LSFT", "LSFT_T(KC_Z)", "LGUI_T(KC_X)", "KC_C",       "KC_V",    "KC_B",            "MEH(KC_4)",                            "LSA(KC_5)",    "KC_N",          "KC_M",    "KC_COMM",    "LCTL_T(KC_DOT)", "KC_BSPC", "KC_DEL",
-      "KC_LCTL", "KC_LGUI",      "KC_LALT",      "MO(5)",      "MO(4)",   "LALT_T(KC_LNG2)", "LSFT_T(KC_TAB)",      "MACRO_1",       "LT(6,KC_SPC)", "LT(1,KC_LNG1)", "KC_RALT", "KC_LEFT",    "KC_UP",          "KC_DOWN", "KC_RGHT",
+      "KC_LCTL", "KC_LGUI",      "KC_LALT",      "MO(5)",      "MO(4)",   "LALT_T(KC_LNG2)", "LSFT_T(KC_TAB)",      "MC_1",          "LT(6,KC_SPC)", "LT(1,KC_LNG1)", "KC_RALT", "KC_LEFT",    "KC_UP",          "KC_DOWN", "KC_RGHT",
                                                                                                                "KC_WH_U", "KC_WH_D"
     ],
     [

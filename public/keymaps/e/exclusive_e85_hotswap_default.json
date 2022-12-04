@@ -1,7 +1,7 @@
 {
   "keyboard": "exclusive/e85/hotswap",
   "keymap": "default",
-  "commit": "f145696dad27893b11213b314797711541431a9f",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ansi_tsangan",
   "layers": [
     [

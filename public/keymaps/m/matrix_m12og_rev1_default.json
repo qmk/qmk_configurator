@@ -1,7 +1,7 @@
 {
   "keyboard": "matrix/m12og/rev1",
   "keymap": "default",
-  "commit": "0ef145db151f907c33973e3ceab8dc51f7c00b16",
+  "commit": "7407347be1df69928d27ea9b6a4fe094429f2a55",
   "layout": "LAYOUT_all",
   "layers": [
     [

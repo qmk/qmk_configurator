@@ -1,7 +1,7 @@
 {
   "keyboard": "switchplate/switchplate910",
   "keymap": "default",
-  "commit": "dfcefc2d5d05272c63ed8d5d0e7627c2ff5eacec",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_all",
   "layers": [
     [

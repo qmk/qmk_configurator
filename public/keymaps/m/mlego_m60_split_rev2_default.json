@@ -1,7 +1,7 @@
 {
   "keyboard": "mlego/m60_split/rev2",
   "keymap": "default",
-  "commit": "837205b08faeb5ec4b8bb5a3a380b6459cdef834",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

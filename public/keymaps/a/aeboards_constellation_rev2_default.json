@@ -1,7 +1,7 @@
 {
   "keyboard": "aeboards/constellation/rev2",
   "keymap": "default",
-  "commit": "b21faf768e49d54bb17a611938f598cabe76994d",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "ramonimbao/wete/v1",
   "keymap": "default",
-  "commit": "e6e501aaa0f7a30b4c7e17ab4fef59633611ecef",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT_ansi_rhnp",
   "layers": [
     [
@@ -17,8 +17,8 @@
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",                 "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "BL_INC",  "KC_NO",
-      "KC_NO",              "KC_NO",                 "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                         "KC_NO",   "KC_TRNS",            "BL_OFF",  "BL_DEC",  "BL_ON"
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "BL_UP",   "KC_NO",
+      "KC_NO",              "KC_NO",                 "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                         "KC_NO",   "KC_TRNS",            "BL_OFF",  "BL_DOWN", "BL_ON"
     ]
   ]
 }

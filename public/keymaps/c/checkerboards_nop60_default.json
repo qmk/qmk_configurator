@@ -1,7 +1,7 @@
 {
   "keyboard": "checkerboards/nop60",
   "keymap": "default",
-  "commit": "7d2f70f39852fbc8e7954792156cc90921c39f14",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_tsangan_hhkb_split_space",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "melgeek/mach80/rev2",
   "keymap": "default",
-  "commit": "34352890522309e28b1788f72feab01e268eff34",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

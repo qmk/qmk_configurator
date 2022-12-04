@@ -1,7 +1,7 @@
 {
   "keyboard": "atxkb/1894",
   "keymap": "default",
-  "commit": "ca451c5aa0948b112db771252de41cb85066556e",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/pytest/macro",
   "keymap": "default",
-  "commit": "08ce0142bad40f22d05d33fdef8a7c8907154e96",
+  "commit": "4d33f356a62c195f5498ed2fe8dd3ea434d5a689",
   "layout": "LAYOUT_ortho_1x1",
   "macros": [
     [
@@ -11,7 +11,7 @@
   ],
   "layers": [
     [
-      "MACRO_0"
+      "MC_0"
     ]
   ]
 }

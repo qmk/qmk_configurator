@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/mk61rgbansi",
   "keymap": "default",
-  "commit": "235323269c372f40044ad2f73a602c9c60af6195",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

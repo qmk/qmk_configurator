@@ -1,7 +1,7 @@
 {
   "keyboard": "keebmonkey/kbmg68",
   "keymap": "default",
-  "commit": "4d443d921bea20758328668ae821ae5396a6c6e1",
+  "commit": "c6ad38e79f14f641f2b0a2ababe120d3b12a68c2",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

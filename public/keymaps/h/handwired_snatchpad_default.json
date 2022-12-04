@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/snatchpad",
   "keymap": "default",
-  "commit": "18490537a5a2c050ecfa1ee2209229eba6b8b342",
+  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -10,7 +10,7 @@
       "KC_MUTE",            "KC_MPLY"
     ],
     [
-      "KC_LOCK", "KC_UP",   "_______",
+      "QK_LOCK", "KC_UP",   "_______",
       "KC_LEFT", "KC_DOWN", "KC_RGHT",
       "KC_BTN1",            "KC_BTN2"
     ],

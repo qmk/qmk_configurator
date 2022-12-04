@@ -1,13 +1,13 @@
 {
   "keyboard": "bastardkb/charybdis/3x5/v2/elitec",
   "keymap": "default",
-  "commit": "50a12c06b9c3dd4bda1fbe6dac1f692fade2d4d1",
+  "commit": "30b2dbe369b3a61d1d6681b0a689dbcdd41fc221",
   "layout": "LAYOUT_charybdis_3x5",
   "layers": [
     [
-      "KC_Q",    "KC_W",    "KC_E",            "KC_R",           "KC_T",       "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",
-      "KC_A",    "KC_S",    "KC_D",            "KC_F",           "KC_G",       "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN",
-      "KC_Z",    "KC_X",    "KC_C",            "KC_V",           "KC_B",       "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH",
+      "KC_Q",    "KC_W",    "KC_E",            "KC_R",           "KC_T",       "KC_Y",    "KC_U",           "KC_I",    "KC_O",    "KC_P",
+      "KC_A",    "KC_S",    "KC_D",            "KC_F",           "KC_G",       "KC_H",    "KC_J",           "KC_K",    "KC_L",    "KC_SCLN",
+      "KC_Z",    "KC_X",    "KC_C",            "KC_V",           "KC_B",       "KC_N",    "KC_M",           "KC_COMM", "KC_DOT",  "KC_SLSH",
                             "LCTL_T(KC_BSPC)", "LSFT_T(KC_SPC)", "MO(1)",      "MO(2)",   "LGUI_T(KC_ENT)"
     ],
     [

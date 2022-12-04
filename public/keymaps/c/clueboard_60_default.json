@@ -1,7 +1,7 @@
 {
   "keyboard": "clueboard/60",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -12,18 +12,18 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                                   "KC_RALT", "KC_RGUI", "MO(1)",   "KC_RCTL"
     ],
     [
-      "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "MO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "MO(1)",   "KC_TRNS"
+      "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "MO(2)",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "MO(1)",   "_______"
     ],
     [
-      "BL_STEP", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",  "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "MO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "MO(1)",   "KC_TRNS"
+      "BL_STEP", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "QK_BOOT", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "MO(2)",   "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "MO(1)",   "_______"
     ]
   ]
 }

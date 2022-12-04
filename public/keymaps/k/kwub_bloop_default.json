@@ -1,7 +1,7 @@
 {
   "keyboard": "kwub/bloop",
   "keymap": "default",
-  "commit": "6b8168c3786262e563137c48bcfe34c3b86e24e1",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_625_split_bs",
   "layers": [
     [

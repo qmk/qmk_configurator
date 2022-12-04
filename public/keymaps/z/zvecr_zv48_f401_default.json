@@ -1,7 +1,7 @@
 {
   "keyboard": "zvecr/zv48/f401",
   "keymap": "default",
-  "commit": "517d607fa4292a03fb8a880a07d27cb14020ed1d",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

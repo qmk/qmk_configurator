@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/ready100",
   "keymap": "default",
-  "commit": "b15bd128a543453f4545898ca3ad1be1b23a0cf5",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_64_ansi",
   "layers": [
     [

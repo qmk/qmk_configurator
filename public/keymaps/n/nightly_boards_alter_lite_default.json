@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/alter_lite",
   "keymap": "default",
-  "commit": "d66b5db1d621fc26fcb6afbd55689eae59be4118",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT",
   "layers": [
     [

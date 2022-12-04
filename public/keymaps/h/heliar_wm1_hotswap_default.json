@@ -1,7 +1,7 @@
 {
   "keyboard": "heliar/wm1_hotswap",
   "keymap": "default",
-  "commit": "2b318ba01b6e504bfe5f300f8459afc849e104b7",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_LCTL",            "KC_LALT", "KC_LGUI", "KC_SPC",             "LT(1,KC_SPC)", "KC_RALT",            "KC_RCTL",                       "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",        "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_TRNS", "KC_TRNS",
-      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "BL_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",      "KC_TRNS",            "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "_______", "_______",
+      "QK_BOOT", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______", "_______",
+      "_______", "_______", "_______", "BL_TOGG", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______",            "_______", "_______", "_______",            "_______", "_______",            "_______",                       "_______", "_______", "_______"
     ]
   ]
 }

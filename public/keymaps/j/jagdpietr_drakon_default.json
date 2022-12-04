@@ -1,7 +1,7 @@
 {
   "keyboard": "jagdpietr/drakon",
   "keymap": "default",
-  "commit": "fba7d4e32f4292094934fb47943b22a70a28ce57",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

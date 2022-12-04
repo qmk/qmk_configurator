@@ -1,7 +1,7 @@
 {
   "keyboard": "kingly_keys/little_foot",
   "keymap": "default",
-  "commit": "9fe7b406cb43e334d588e69b14c3fa41ae4c4925",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_split_space_base",
   "layers": [
     [

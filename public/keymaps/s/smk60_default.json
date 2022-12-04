@@ -1,7 +1,7 @@
 {
   "keyboard": "smk60",
   "keymap": "default",
-  "commit": "5cf7dbedd2e68ec40b0666f10c47f9601e1ae275",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

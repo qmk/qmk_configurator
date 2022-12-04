@@ -1,7 +1,7 @@
 {
   "keyboard": "portal_66/soldered",
   "keymap": "default",
-  "commit": "afa2da01b4f9a297f318483f6f404396ac4516a7",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "lucid/phantom_hs",
   "keymap": "default",
-  "commit": "e8a65baf4143799318c7f12fe873b9be7ddf18b5",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

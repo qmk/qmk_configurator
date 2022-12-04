@@ -1,7 +1,7 @@
 {
   "keyboard": "spaceman/pancake/rev1/feather",
   "keymap": "default",
-  "commit": "bfa7449041fe5f137f37199804cd4dd9e02d47a8",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

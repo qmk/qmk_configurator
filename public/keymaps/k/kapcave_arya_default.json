@@ -1,7 +1,7 @@
 {
   "keyboard": "kapcave/arya",
   "keymap": "default",
-  "commit": "6779d5b990bf94cba28a74246c2378e5bb5047b4",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

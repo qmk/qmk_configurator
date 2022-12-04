@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/dilly",
   "keymap": "default",
-  "commit": "e6b9980bd45c186f7360df68c24b6e05a80c10dc",
+  "commit": "18dc851e37a203b32db0261c365dd300488e1c71",
   "layout": "LAYOUT_ortho_3x10",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "kprepublic/bm60hsrgb_poker/rev1",
   "keymap": "default",
-  "commit": "53996a78b59a9f1c53ad88e8dbc1ed252d3ed7d0",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

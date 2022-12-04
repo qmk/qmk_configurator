@@ -1,7 +1,7 @@
 {
   "keyboard": "skeletonkbd/skeletonnumpad",
   "keymap": "default",
-  "commit": "2275b35e924998645852ae5b85a982c369ebfd8c",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [

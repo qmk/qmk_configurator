@@ -1,7 +1,7 @@
 {
   "keyboard": "kiwikey/wanderland",
   "keymap": "default",
-  "commit": "dffa0891736ef8aeec54285f6ceb732eb7aaadf7",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [
