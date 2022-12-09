@@ -1,7 +1,7 @@
 {
   "keyboard": "splitkb/aurora/corne/rev1",
   "keymap": "default",
-  "commit": "535dd84691abe2c93e6d286e82ab0006598cfe62",
+  "commit": "405aa7b2ed598abc6e83d98df7bd35374159659c",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
