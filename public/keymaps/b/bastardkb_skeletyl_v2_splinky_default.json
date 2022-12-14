@@ -1,7 +1,7 @@
 {
   "keyboard": "bastardkb/skeletyl/v2/splinky",
   "keymap": "default",
-  "commit": "000000",
+  "commit": "356561c438766df09e8b90a81778b2053e319a6a",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "bastardkb/tbkmini/v2/splinky_2",
   "keymap": "default",
-  "commit": "000000",
+  "commit": "50a12c06b9c3dd4bda1fbe6dac1f692fade2d4d1",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
