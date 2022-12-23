@@ -427,8 +427,14 @@ export default [
     title: 'Right Alt when held, ) when tapped'
   },
   {
-    name: 'RS / Enter',
-    code: 'SC_SENT',
-    title: 'Right Shift when held, Enter when tapped'
+    name: 'rs / enter',
+    code: 'sc_sent',
+    title: 'right shift when held, enter when tapped'
+  },
+  {
+    name: 'Toggle CW',
+    code: 'CW_TOGG',
+    title: 'Toggle Caps Word (Enable Caps Lock for the next word)',
+    width: 1500
   }
 ];
