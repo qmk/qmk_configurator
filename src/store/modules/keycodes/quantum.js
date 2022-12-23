@@ -429,7 +429,7 @@ export default [
   {
     name: 'rs / enter',
     code: 'sc_sent',
-    title: 'right shift when held, enter when tapped'
+    title: 'Right shift when held, enter when tapped'
   },
   {
     name: 'Toggle CW',
