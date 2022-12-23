@@ -427,9 +427,9 @@ export default [
     title: 'Right Alt when held, ) when tapped'
   },
   {
-    name: 'rs / enter',
-    code: 'sc_sent',
-    title: 'Right shift when held, enter when tapped'
+    name: 'RS / Enter',
+    code: 'SC_SENT',
+    title: 'Right Shift when held, Enter when tapped'
   },
   {
     name: 'Toggle CW',
