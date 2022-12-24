@@ -430,5 +430,11 @@ export default [
     name: 'RS / Enter',
     code: 'SC_SENT',
     title: 'Right Shift when held, Enter when tapped'
+  },
+  {
+    name: 'CW Toggle',
+    code: 'CW_TOGG',
+    title: 'Toggle Caps Word (Enable Caps Lock for the next word)',
+    width: 1500
   }
 ];
