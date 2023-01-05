@@ -1,7 +1,7 @@
 {
-  "keyboard": "kbdfans/d45/lite",
+  "keyboard": "kbdfans/d45/v2",
   "keymap": "default",
-  "commit": "15ef0a7e3c178a1c2e1dbee0165ccee2545205ff",
+  "commit": "f1cf00ab70f872822b5a8b67aec64670541a1fb0",
   "layout": "LAYOUT",
   "layers": [
     [
