@@ -1,7 +1,7 @@
 {
   "keyboard": "era/era65",
   "keymap": "default",
-  "commit": "4098ff5574ab8129b83239ed9de6f1820b31b686",
+  "commit": "300a0def4e20507f20b61507ed3dc3c65f3bf6a0",
   "layout": "LAYOUT_65_combo",
   "layers":
   [
