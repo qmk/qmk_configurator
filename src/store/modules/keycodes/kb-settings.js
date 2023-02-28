@@ -184,7 +184,7 @@ export default [
   },
   {
     name: 'BL +',
-    code: 'BL_INC',
+    code: 'BL_UP',
     title: 'Increase the backlight level'
   },
   { width: 0 },
@@ -196,7 +196,7 @@ export default [
   },
   {
     name: 'BL -',
-    code: 'BL_DEC',
+    code: 'BL_DOWN',
     title: 'Decrease the backlight level'
   },
 
