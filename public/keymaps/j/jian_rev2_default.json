@@ -50,8 +50,8 @@
                                                   "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [
-      "KC_NO",   "KC_NO",   "KC_NO",   "BL_INC",  "RGB_VAI", "RGB_HUD",  "RGB_HUI",    "RGB_HUI", "RGB_HUD",  "RGB_VAI", "BL_INC",  "KC_NO",   "KC_NO",   "KC_NO",
-                 "KC_NO",   "KC_NO",   "BL_DEC",  "RGB_VAD", "RGB_SAD",  "RGB_SAI",    "RGB_SAI", "RGB_SAD",  "RGB_VAD", "BL_DEC",  "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "BL_UP",   "RGB_VAI", "RGB_HUD",  "RGB_HUI",    "RGB_HUI", "RGB_HUD",  "RGB_VAI", "BL_UP",   "KC_NO",   "KC_NO",   "KC_NO",
+                 "KC_NO",   "KC_NO",   "BL_DOWN", "RGB_VAD", "RGB_SAD",  "RGB_SAI",    "RGB_SAI", "RGB_SAD",  "RGB_VAD", "BL_DOWN", "KC_NO",   "KC_NO",
                  "TG(7)",   "KC_NO",   "BL_TOGG", "RGB_TOG", "RGB_RMOD", "RGB_MOD",    "RGB_MOD", "RGB_RMOD", "RGB_TOG", "BL_TOGG", "KC_NO",   "TG(7)",
                                                   "KC_NO",   "KC_NO",    "KC_NO",      "KC_NO",   "KC_NO",    "KC_NO"
     ]
