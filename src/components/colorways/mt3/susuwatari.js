@@ -21,7 +21,7 @@ export default {
     'TT(layer)': 'mod-blue',
     'DF(layer)': 'mod-blue',
     'OSL(layer)': 'mod-blue',
-    KC_RSPC: 'mod-green',
-    KC_LSPO: 'mod-green'
+    SC_RSPC: 'mod-green',
+    SC_LSPO: 'mod-green'
   }
 };

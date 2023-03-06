@@ -2,8 +2,8 @@ export default {
   name: 'mt3-3277-accent-red',
   override: {
     BL_STEP: 'mod',
-    KC_RSPC: 'mod',
-    KC_LSPO: 'mod',
+    SC_RSPC: 'mod',
+    SC_LSPO: 'mod',
     KC_UP: 'accent-red',
     KC_DOWN: 'accent-red',
     KC_LEFT: 'accent-red',

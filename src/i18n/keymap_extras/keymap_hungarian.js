@@ -190,12 +190,12 @@ export default {
   KC_PIPE: { name: 'Ű', title: 'HU_UDAC (capital Ű)' },
   KC_DQUO: { name: 'Á', title: 'S(HU_AACU) (capital Á)' },
 
-  KC_LSPO: { name: 'LS / )', title: 'Left Shift when held, ) when tapped' },
-  KC_RSPC: { name: 'RS / Ö', title: 'Right Shift when held, Ö when tapped' },
-  KC_LCPO: { name: 'LC / )', title: 'Left Control when held, ) when tapped' },
-  KC_RCPC: { name: 'RC / Ö', title: 'Right Control when held, Ö when tapped' },
-  KC_LAPO: { name: 'LA / )', title: 'Left Alt when held, ) when tapped' },
-  KC_RAPC: { name: 'RA / Ö', title: 'Right Alt when held, Ö when tapped' },
+  SC_LSPO: { name: 'LS / )', title: 'Left Shift when held, ) when tapped' },
+  SC_RSPC: { name: 'RS / Ö', title: 'Right Shift when held, Ö when tapped' },
+  SC_LCPO: { name: 'LC / )', title: 'Left Control when held, ) when tapped' },
+  SC_RCPC: { name: 'RC / Ö', title: 'Right Control when held, Ö when tapped' },
+  SC_LAPO: { name: 'LA / )', title: 'Left Alt when held, ) when tapped' },
+  SC_RAPC: { name: 'RA / Ö', title: 'Right Alt when held, Ö when tapped' },
 
   QK_GESC: {
     name: '0/§\nEsc',

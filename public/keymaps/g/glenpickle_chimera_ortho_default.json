@@ -7,7 +7,7 @@
     [
       "LT(4,KC_ESC)", "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "LCTL_T(KC_LBRC)",            "LCTL_T(KC_RBRC)", "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_QUOT",
       "KC_TAB",       "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",    "LALT_T(KC_MINS)",            "LALT_T(KC_1)",    "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN", "KC_ENT",
-      "KC_LSPO",      "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "LT(5,KC_EQL)",                    "RGUI_T(KC_8)",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "KC_RSPC",
+      "SC_LSPO",      "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "LT(5,KC_EQL)",                    "RGUI_T(KC_8)",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "SC_RSPC",
                                                        "TG(2)",   "KC_BSPC",                                                            "KC_SPC",  "TG(3)"
     ],
     [

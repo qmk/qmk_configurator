@@ -109,12 +109,12 @@ export default {
   KC_QUES: { name: 'J', title: 'S(NE_J) (capital J)' },
   KC_DQUO: { name: 'Y', title: 'S(NE_Y) (capital Y)' },
 
-  KC_LSPO: { name: 'LS / 9', title: 'Left Shift when held, 9 when tapped' },
-  KC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
-  KC_LCPO: { name: 'LC / 9', title: 'Left Control when held, 9 when tapped' },
-  KC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
-  KC_LAPO: { name: 'LA / 9', title: 'Left Alt when held, 9 when tapped' },
-  KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
+  SC_LSPO: { name: 'LS / 9', title: 'Left Shift when held, 9 when tapped' },
+  SC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
+  SC_LCPO: { name: 'LC / 9', title: 'Left Control when held, 9 when tapped' },
+  SC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
+  SC_LAPO: { name: 'LA / 9', title: 'Left Alt when held, 9 when tapped' },
+  SC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
   QK_GESC: {
     name: '^\nEsc',

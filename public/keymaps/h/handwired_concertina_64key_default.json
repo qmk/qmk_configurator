@@ -5,9 +5,9 @@
   "layout": "LAYOUT_64key",
   "layers": [
     [
-                            "KC_LSPO", "KC_MINS", "KC_EQL",                                 "KC_VOLD", "KC_VOLU", "KC_RSPC",
-                            "KC_LCPO", "KC_LGUI", "KC_LNG1", "KC_ENT",        "KC_MUTE",    "KC_NO",   "MO(3)",   "KC_RCPC",
-                                       "KC_LAPO", "KC_SPC",  "RALT(KC_9)",    "RALT(KC_0)", "KC_ESC",  "KC_RAPC",
+                            "SC_LSPO", "KC_MINS", "KC_EQL",                                 "KC_VOLD", "KC_VOLU", "SC_RSPC",
+                            "SC_LCPO", "KC_LGUI", "KC_LNG1", "KC_ENT",        "KC_MUTE",    "KC_NO",   "MO(3)",   "SC_RCPC",
+                                       "SC_LAPO", "KC_SPC",  "RALT(KC_9)",    "RALT(KC_0)", "KC_ESC",  "SC_RAPC",
 
                             "KC_W",    "KC_E",    "KC_R",    "KC_T",          "KC_Y",       "KC_U",    "KC_I",    "KC_O",
       "KC_TAB",  "KC_Q",    "KC_S",    "KC_D",    "KC_F",    "KC_G",          "KC_H",       "KC_J",    "KC_K",    "KC_L",    "KC_P",    "KC_BSLS",

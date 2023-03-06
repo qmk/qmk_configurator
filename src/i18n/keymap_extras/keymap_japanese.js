@@ -166,12 +166,12 @@ export default {
   KC_RPRN: { name: '0', title: 'S(JP_0)' },
   KC_PIPE: { name: '}', title: 'JP_RCBR' },
 
-  KC_LSPO: { name: 'LS / )', title: 'Left Shift when held, ) when tapped' },
-  KC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
-  KC_LCPO: { name: 'LC / )', title: 'Left Control when held, ) when tapped' },
-  KC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
-  KC_LAPO: { name: 'LA / )', title: 'Left Alt when held, ) when tapped' },
-  KC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
+  SC_LSPO: { name: 'LS / )', title: 'Left Shift when held, ) when tapped' },
+  SC_RSPC: { name: 'RS / 0', title: 'Right Shift when held, 0 when tapped' },
+  SC_LCPO: { name: 'LC / )', title: 'Left Control when held, ) when tapped' },
+  SC_RCPC: { name: 'RC / 0', title: 'Right Control when held, 0 when tapped' },
+  SC_LAPO: { name: 'LA / )', title: 'Left Alt when held, ) when tapped' },
+  SC_RAPC: { name: 'RA / 0', title: 'Right Alt when held, 0 when tapped' },
 
   QK_GESC: {
     name: '半角/全角\nEsc',

@@ -381,12 +381,12 @@ fs.readFile(process.argv.at(-1), 'utf8', function (err, data) {
     console.log(generateMissingANSISOkeys(kcInfo));
     console.log(generateMissingShiftedAliasKcInfo(kcInfo));
     spaceCadetKeycodes = [
-      'KC_LSPO',
-      'KC_RSPC',
-      'KC_LCPO',
-      'KC_RCPC',
-      'KC_LAPO',
-      'KC_RAPC'
+      'SC_LSPO',
+      'SC_RSPC',
+      'SC_LCPO',
+      'SC_RCPC',
+      'SC_LAPO',
+      'SC_RAPC'
     ];
     for (const spaceCadetKc of spaceCadetKeycodes) {
       console.log(generateSpaceCadetKcInfo(spaceCadetKc, kcInfo));
