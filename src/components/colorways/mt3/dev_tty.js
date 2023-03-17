@@ -5,7 +5,7 @@ export default {
     KC_ESC: 'accent',
     QK_GESC: 'accent',
     BL_STEP: 'mod',
-    KC_RSPC: 'mod',
-    KC_LSPO: 'mod'
+    SC_RSPC: 'mod',
+    SC_LSPO: 'mod'
   }
 };

@@ -262,6 +262,13 @@ export const longFormKeycodes = {
   // Grave Escape
   GRAVE_ESC: 'QK_GESC',
   KC_GESC: 'QK_GESC',
+  // Space Cadet
+  KC_LCPO: 'SC_LCPO',
+  KC_RCPC: 'SC_RCPC',
+  KC_LSPO: 'SC_LSPO',
+  KC_RSPC: 'SC_RSPC',
+  KC_LAPO: 'SC_LAPO',
+  KC_RAPC: 'SC_RAPC',
   // Unicode
   UNICODE_MODE_FORWARD: 'UC_NEXT',
   UNICODE_MODE_REVERSE: 'UC_PREV',

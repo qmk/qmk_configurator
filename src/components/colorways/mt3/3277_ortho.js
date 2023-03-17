@@ -7,8 +7,8 @@ export default {
     KC_DEL: 'mod',
     KC_QUOT: 'mod',
     BL_STEP: 'mod',
-    KC_RSPC: 'mod',
+    SC_RSPC: 'mod',
     KC_GRV: 'mod',
-    KC_LSPO: 'mod'
+    SC_LSPO: 'mod'
   }
 };
