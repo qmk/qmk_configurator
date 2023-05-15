@@ -31,7 +31,7 @@ const actions = {
    * load the default keymap for the currently selected keyboard
    */
   async loadDefaultKeymap({ state }) {
-    const keyboardPath = state.keyboard.slice(0, 1);
+    const keyboardPath = state.keyboard.slice(0, 1).toLowerCase();
     // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
     const resp = await axios.get(
