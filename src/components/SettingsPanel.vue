@@ -171,8 +171,7 @@ export default {
         try {
           await this.changeLanguage(value);
         } catch (error) {
-          console.error('Setting a new value for the language failed!');
-          console.errror(error);
+          console.error('Setting a new value for the language failed!', error);
         }
       }
     },
@@ -184,8 +183,7 @@ export default {
         try {
           await this.setLegends(value);
         } catch (error) {
-          console.error('Setting a new value for the legends failed!');
-          console.errror(error);
+          console.error('Setting a new value for the legends failed!', error);
         }
       }
     },
@@ -198,9 +196,9 @@ export default {
           await this.changeOSKeyboardLayout(value);
         } catch (error) {
           console.error(
-            'Setting a new value for the OS keyboard layout failed!'
+            'Setting a new value for the OS keyboard layout failed!',
+            error
           );
-          console.errror(error);
         }
       }
     },
