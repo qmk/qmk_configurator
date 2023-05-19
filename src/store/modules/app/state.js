@@ -81,6 +81,8 @@ const state = {
     { value: 'zh-TW', label: '繁體中文(台灣)' },
     { value: 'zh-HK', label: '繁體中文(香港)' }
   ],
+  legends: 'keymap',
+  legendTypes: ['keymap', 'matrix', 'index', 'size'],
   osKeyboardLayouts,
   snowflakes: false
 };

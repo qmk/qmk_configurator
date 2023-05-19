@@ -31,10 +31,9 @@
       </div>
       <div>
         <select id="setting-panel-legends" v-model="keyLegends">
-          <option value="keymap">Keymap</option>
-          <option value="matrix">Matrix row,col</option>
-          <option value="index">Index</option>
-          <option value="size">Size</option>
+          <option v-for="l in legendTypes" :key="l" :value="l">
+            {{ $t(`settingsPanel.legendType.${l}`) }}
+          </option>
         </select>
       </div>
       <div>
@@ -155,11 +154,13 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState('keymap', ['continuousInput', 'legends']),
+    ...mapState('keymap', ['continuousInput']),
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
       'languages',
+      'legendTypes',
+      'legends',
       'osKeyboardLayouts'
     ]),
     language: {
@@ -213,8 +214,12 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['setLegends', 'toggleContinuousInput']),
-    ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
+    ...mapMutations('keymap', ['toggleContinuousInput']),
+    ...mapMutations('app', [
+      'setLegends',
+      'toggleTutorial',
+      'toggleSnowflakes'
+    ]),
     ...mapActions('app', [
       'toggleDarkMode',
       'changeLanguage',

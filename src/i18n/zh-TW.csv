@@ -113,6 +113,10 @@ settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
 settingsPanel:language:help,更改使用者介面語言
 settingsPanel:language:title,語言
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
 settingsPanel:legends:help,
 settingsPanel:legends:title,
 settingsPanel:off:label,關閉

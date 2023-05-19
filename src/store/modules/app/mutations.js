@@ -30,6 +30,9 @@ const mutations = {
   setKeyboard(state, _keyboard) {
     state.keyboard = _keyboard;
   },
+  setLegends(state, _legends) {
+    state.legends = _legends;
+  },
   setCurrentLanguage(state, _language) {
     Vue.set(state.configuratorSettings, 'language', _language);
   },

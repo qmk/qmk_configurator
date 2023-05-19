@@ -113,6 +113,10 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Change the language of the user interface
 settingsPanel:language:title,Language
+settingsPanel:legendType:keymap,Keymap
+settingsPanel:legendType:matrix,"Matrix (row, col)"
+settingsPanel:legendType:index,Index
+settingsPanel:legendType:size,Size
 settingsPanel:legends:help,Change keycap display
 settingsPanel:legends:title,Legends
 settingsPanel:off:label,Off

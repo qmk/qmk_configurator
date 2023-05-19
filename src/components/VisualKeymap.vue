@@ -35,14 +35,14 @@ export default {
     };
   },
   computed: {
-    ...mapState('keymap', ['config', 'legends', 'layer']),
+    ...mapState('keymap', ['config', 'layer']),
     ...mapGetters('keymap', [
       'getLayer',
       'loadingKeymapPromise',
       'colorway',
       'defaults'
     ]),
-    ...mapState('app', ['layout', 'layouts', 'previewRequested']),
+    ...mapState('app', ['layout', 'layouts', 'legends', 'previewRequested']),
     currentLayer() {
       const layout = this.layouts[this.layout];
       const keymap = this.getLayer(this.layer);

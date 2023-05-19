@@ -14,7 +14,7 @@
     @dragenter="dragenter"
     @dragleave="dragleave"
     ><div>{{ displayName }}<div
-    v-if="legends === 'keymap'"
+    v-if="isShowingKeymapLegends"
     class="key-contents"
     :class="contentClasses"
     @dragenter.prevent="dragenterContents"

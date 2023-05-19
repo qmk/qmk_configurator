@@ -137,14 +137,12 @@ export default {
     displayName() {
       switch (this.legends) {
         case 'size':
-          return this.uh > this.uw
-            ? this.uw === 1
-              ? this.uh
-              : `${this.uw} /\n ${this.uh}`
-            : this.uw;
+          const { uh, uw } = this;
+          return uh > uw ? (uw === 1 ? uh : `${uw} /\n ${uh}`) : uw;
         case 'matrix':
           if (this.matrix) {
-            return `${this.matrix[0]},${this.matrix[1]}`;
+            const [row, col] = this.matrix;
+            return `${row},${col}`;
           }
           return '?';
         case 'index':
@@ -161,7 +159,7 @@ export default {
     },
     icon() {
       if (
-        this.legends === 'keymap' &&
+        this.isShowingKeymapLegends &&
         this.meta &&
         substitute[this.meta.code]
       ) {
@@ -182,6 +180,9 @@ export default {
         this.id === this.getSelectedKey
       );
     },
+    isShowingKeymapLegends() {
+      return this.legends === 'keymap';
+    },
     myclasses() {
       let classes = [];
       if (this.isSelected) {
@@ -196,7 +197,7 @@ export default {
       if (
         this.meta &&
         this.meta.name.length >= 2 &&
-        this.legends === 'keymap'
+        this.isShowingKeymapLegends
       ) {
         classes.push('smaller');
       }

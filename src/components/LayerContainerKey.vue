@@ -15,7 +15,7 @@
     @dragenter="dragenter"
     @dragleave="dragleave"
   ><div>LT {{ meta.layer }}<div
-  v-if="legends === 'keymap'"
+  v-if="isShowingKeymapLegends"
   class="key-contents"
   :class="contentClasses"
   @dragenter.prevent="dragenterContents"

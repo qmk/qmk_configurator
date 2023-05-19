@@ -113,6 +113,10 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Bahasa
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
 settingsPanel:legends:help,
 settingsPanel:legends:title,
 settingsPanel:off:label,Tutup

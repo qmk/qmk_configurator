@@ -14,7 +14,7 @@
     @dragover.prevent="dragover"
     @dragenter.prevent="dragenter"
     ><div :class="`${hasFocus ? 'key-layer-title-focus' : 'key-layer-title'}`">{{ displayName }}<div><input
-    v-if="legends === 'keymap'"
+    v-if="isShowingKeymapLegends"
     class="key-layer-input"
     :class="errorClasses"
     type="number"
