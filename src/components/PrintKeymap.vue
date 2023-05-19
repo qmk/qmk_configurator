@@ -29,8 +29,8 @@ export default {
     };
   },
   computed: {
-    ...mapState('app', ['layout', 'displaySizes']),
-    ...mapState('keymap', ['config', 'displaySizes']),
+    ...mapState('app', ['layout', 'legends']),
+    ...mapState('keymap', ['config', 'legends']),
     ...mapGetters('keymap', [
       'getLayer',
       'loadingKeymapPromise',
@@ -64,7 +64,7 @@ export default {
             layer: this.layer,
             meta: keymap[index],
             colorway: colorway,
-            displaySizes: this.displaySizes
+            legends: this.legends
           },
           coor,
           dims

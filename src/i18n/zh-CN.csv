@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,更改“清除层”功能所使用的默认键�
 settingsPanel:clearLayer:title,清除层默认键码
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
-settingsPanel:displaySizes:help,以按键单位(u)显示键帽尺寸
-settingsPanel:displaySizes:label,显示按键尺寸
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,8 @@ settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面语言
 settingsPanel:language:title,语言
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,关闭
 settingsPanel:on:label,开启
 settingsPanel:osKeyboardLayout:help,

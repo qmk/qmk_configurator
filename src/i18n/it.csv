@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,Cambia il keycode predefinito per
 settingsPanel:clearLayer:title,Azzera Livello Automaticamente
 settingsPanel:darkmode:help,Usa la modalità scura del configuratre QMK
 settingsPanel:darkmode:label,Modalità Scura
-settingsPanel:displaySizes:help,Mostra le dimensioni delle chiavi in Unità Chiave
-settingsPanel:displaySizes:label,Mostra Dimensioni Chiave
-settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
 settingsPanel:fastInput:label,Ingresso rapido
 settingsPanel:fastInput:title,Ctrl + Alt + F
@@ -116,6 +113,8 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Cambia lingua dell'interfaccia utente
 settingsPanel:language:title,Lingua
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Spegnimento
 settingsPanel:on:label,Accensione
 settingsPanel:osKeyboardLayout:help,

@@ -110,10 +110,8 @@ export default {
     uh: Number,
     uw: Number,
     colorway: String,
-    displaySizes: {
-      type: Boolean,
-      default: false
-    },
+    legends: String,
+    matrix: Array,
     printable: {
       type: Boolean,
       default: false
@@ -134,12 +132,20 @@ export default {
       return this.meta ? this.meta.code !== 'KC_NO' : false;
     },
     displayName() {
-      if (this.displaySizes) {
-        return this.uh > this.uw
-          ? this.uw === 1
-            ? this.uh
-            : `${this.uw} /\n ${this.uh}`
-          : this.uw;
+      switch (this.legends) {
+        case 'size':
+          return this.uh > this.uw
+            ? this.uw === 1
+              ? this.uh
+              : `${this.uw} /\n ${this.uh}`
+            : this.uw;
+        case 'matrix':
+          if (this.matrix) {
+            return `${this.matrix[0]},${this.matrix[1]}`;
+          }
+          return '?';
+        case 'index':
+          return this.id;
       }
       if (isUndefined(this.meta)) {
         return;
@@ -151,7 +157,11 @@ export default {
       return undefined;
     },
     icon() {
-      if (!this.displaySizes && this.meta && substitute[this.meta.code]) {
+      if (
+        this.legends === 'keymap' &&
+        this.meta &&
+        substitute[this.meta.code]
+      ) {
         return substitute[this.meta.code];
       }
       return undefined;
@@ -180,7 +190,11 @@ export default {
       if (this.inSwap) {
         classes.push('swapme');
       }
-      if (this.meta && this.meta.name.length >= 2 && !this.displaySizes) {
+      if (
+        this.meta &&
+        this.meta.name.length >= 2 &&
+        this.legends === 'keymap'
+      ) {
         classes.push('smaller');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;

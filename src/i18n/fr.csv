@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Mode Sombre
-settingsPanel:displaySizes:help,Montre la taille des touches (une touche classique = 1 u)
-settingsPanel:displaySizes:label,Taille des touches
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position.
 settingsPanel:fastInput:label,Entrée Rapide
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,8 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Langue
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,Change les légendes des touches pour qu'elles correspondent à la disposition des touches du système.

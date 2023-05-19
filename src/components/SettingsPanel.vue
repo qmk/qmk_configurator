@@ -23,21 +23,19 @@
       </div>
       <div>
         <label
-          class="settings-panel--text"
-          @mouseover="help('displaySizes')"
-          :title="$t('settingsPanel.displaySizes.title')"
-          >{{ $t('settingsPanel.displaySizes.label') }}</label
+          class="settings-panel--legends"
+          @mouseover="help('legends')"
+          :title="$t('settingsPanel.legends.title')"
+          >{{ $t('settingsPanel.legends.title') }}</label
         >
       </div>
       <div>
-        <toggle-button
-          id="setting-toggle-display-size"
-          :value="displaySizes"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleDisplaySizes"
-        />
+        <select id="setting-panel-legends" v-model="keyLegends">
+          <option value="keymap">Keymap</option>
+          <option value="matrix">Matrix row,col</option>
+          <option value="index">Index</option>
+          <option value="size">Size</option>
+        </select>
       </div>
       <div>
         <label
@@ -157,7 +155,7 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState('keymap', ['continuousInput', 'displaySizes']),
+    ...mapState('keymap', ['continuousInput', 'legends']),
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
@@ -173,6 +171,19 @@ export default {
           await this.changeLanguage(value);
         } catch (error) {
           console.error('Setting a new value for the language failed!');
+          console.errror(error);
+        }
+      }
+    },
+    keyLegends: {
+      get() {
+        return this.legends;
+      },
+      async set(value) {
+        try {
+          await this.setLegends(value);
+        } catch (error) {
+          console.error('Setting a new value for the legends failed!');
           console.errror(error);
         }
       }
@@ -202,7 +213,7 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
+    ...mapMutations('keymap', ['setLegends', 'toggleContinuousInput']),
     ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
     ...mapActions('app', [
       'toggleDarkMode',
@@ -225,8 +236,8 @@ export default {
         case 'fastInput':
           this.helpText = this.$t('settingsPanel.fastInput.help');
           break;
-        case 'displaySizes':
-          this.helpText = this.$t('settingsPanel.displaySizes.help');
+        case 'legends':
+          this.helpText = this.$t('settingsPanel.legends.help');
           break;
         case 'toggleTutorial':
           this.helpText = this.$t('settingsPanel.toggleTutorial.help');

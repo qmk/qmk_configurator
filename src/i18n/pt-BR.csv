@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Darkmode
-settingsPanel:displaySizes:help,Mostrar tamanhos de teclas em unidades-chave
-settingsPanel:displaySizes:label,Mostrar tamanho de teclas
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,8 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Linguagem
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,

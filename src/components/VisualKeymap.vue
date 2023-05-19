@@ -35,7 +35,7 @@ export default {
     };
   },
   computed: {
-    ...mapState('keymap', ['config', 'displaySizes', 'layer']),
+    ...mapState('keymap', ['config', 'legends', 'layer']),
     ...mapGetters('keymap', [
       'getLayer',
       'loadingKeymapPromise',
@@ -57,13 +57,15 @@ export default {
         let _pos = Object.assign({ w: 1, h: 1 }, pos);
         const coor = this.calcKeyKeymapPos(_pos.x, _pos.y);
         const dims = this.calcKeyKeymapDims(_pos.w, _pos.h);
+        const matrix = pos.matrix;
         return Object.assign(
           {
             id: index,
             layer: this.layer,
             meta: keymap[index],
             colorway: colorway,
-            displaySizes: this.displaySizes
+            legends: this.legends,
+            matrix
           },
           coor,
           dims
