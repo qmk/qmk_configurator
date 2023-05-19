@@ -110,7 +110,10 @@ export default {
     uh: Number,
     uw: Number,
     colorway: String,
-    legends: String,
+    legends: {
+      type: String,
+      default: 'keymap'
+    },
     matrix: Array,
     printable: {
       type: Boolean,

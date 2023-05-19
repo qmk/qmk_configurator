@@ -29,8 +29,8 @@ export default {
     };
   },
   computed: {
-    ...mapState('app', ['layout', 'legends']),
-    ...mapState('keymap', ['config', 'legends']),
+    ...mapState('app', ['layout']),
+    ...mapState('keymap', ['config']),
     ...mapGetters('keymap', [
       'getLayer',
       'loadingKeymapPromise',
@@ -63,8 +63,7 @@ export default {
             id: index,
             layer: this.layer,
             meta: keymap[index],
-            colorway: colorway,
-            legends: this.legends
+            colorway: colorway
           },
           coor,
           dims
