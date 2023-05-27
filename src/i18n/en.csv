@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,Change the default keycode for clear layer
 settingsPanel:clearLayer:title,Clear Layer Default
 settingsPanel:darkmode:help,Use QMK Configurator's dark theme
 settingsPanel:darkmode:label,Dark Mode
-settingsPanel:displaySizes:help,Show keycap sizes in Key Units
-settingsPanel:displaySizes:label,Show Key Sizes
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Input keys via keyboard without clicking each position.
 settingsPanel:fastInput:label,Fast Input
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,12 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,Change the language of the user interface
 settingsPanel:language:title,Language
+settingsPanel:legendType:keymap,Keymap
+settingsPanel:legendType:matrix,"Matrix (row, col)"
+settingsPanel:legendType:index,Index
+settingsPanel:legendType:size,Size
+settingsPanel:legends:help,Change keycap display
+settingsPanel:legends:title,Legends
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
 settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.

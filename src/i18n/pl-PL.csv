@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Włącz/wyłącz tryb nocny
-settingsPanel:displaySizes:help,Wyświetla rozmiary klawiszy używając jako skali szerokości klawisza alfanumerycznego.
-settingsPanel:displaySizes:label,Pokaż rozmiary klawiszy
-settingsPanel:displaySizes:title,Ctrl + Alt + U
 settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego.
 settingsPanel:fastInput:label,Szybkie wprowadzanie
 settingsPanel:fastInput:title,Ctrl + Alt + F
@@ -116,6 +113,12 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Język
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Wył
 settingsPanel:on:label,Wł
 settingsPanel:osKeyboardLayout:help,

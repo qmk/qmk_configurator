@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Die Seite dunkler machen
-settingsPanel:displaySizes:help,Tastengrößen relativ zur Standardgröße anzeigen
-settingsPanel:displaySizes:label,Zeige Tastengröße
-settingsPanel:displaySizes:title,strg + alt + u
 settingsPanel:fastInput:help,"Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken"
 settingsPanel:fastInput:label,Schnelle Eingabe
 settingsPanel:fastInput:title,strg + alt + f
@@ -116,6 +113,12 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Sprache
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Aus
 settingsPanel:on:label,An
 settingsPanel:osKeyboardLayout:help,Stellen Sie die Tastenbeschriftung auf das Systemlayout.

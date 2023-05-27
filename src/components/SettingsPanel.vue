@@ -23,21 +23,18 @@
       </div>
       <div>
         <label
-          class="settings-panel--text"
-          @mouseover="help('displaySizes')"
-          :title="$t('settingsPanel.displaySizes.title')"
-          >{{ $t('settingsPanel.displaySizes.label') }}</label
+          class="settings-panel--legends"
+          @mouseover="help('legends')"
+          :title="$t('settingsPanel.legends.title')"
+          >{{ $t('settingsPanel.legends.title') }}</label
         >
       </div>
       <div>
-        <toggle-button
-          id="setting-toggle-display-size"
-          :value="displaySizes"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleDisplaySizes"
-        />
+        <select id="setting-panel-legends" v-model="keyLegends">
+          <option v-for="l in legendTypes" :key="l" :value="l">
+            {{ $t(`settingsPanel.legendType.${l}`) }}
+          </option>
+        </select>
       </div>
       <div>
         <label
@@ -157,11 +154,13 @@ export default {
   },
   components: { ToggleButton },
   computed: {
-    ...mapState('keymap', ['continuousInput', 'displaySizes']),
+    ...mapState('keymap', ['continuousInput']),
     ...mapState('app', [
       'tutorialEnabled',
       'configuratorSettings',
       'languages',
+      'legendTypes',
+      'legends',
       'osKeyboardLayouts'
     ]),
     language: {
@@ -172,8 +171,19 @@ export default {
         try {
           await this.changeLanguage(value);
         } catch (error) {
-          console.error('Setting a new value for the language failed!');
-          console.errror(error);
+          console.error('Setting a new value for the language failed!', error);
+        }
+      }
+    },
+    keyLegends: {
+      get() {
+        return this.legends;
+      },
+      async set(value) {
+        try {
+          await this.setLegends(value);
+        } catch (error) {
+          console.error('Setting a new value for the legends failed!', error);
         }
       }
     },
@@ -186,9 +196,9 @@ export default {
           await this.changeOSKeyboardLayout(value);
         } catch (error) {
           console.error(
-            'Setting a new value for the OS keyboard layout failed!'
+            'Setting a new value for the OS keyboard layout failed!',
+            error
           );
-          console.errror(error);
         }
       }
     },
@@ -202,8 +212,12 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('keymap', ['toggleDisplaySizes', 'toggleContinuousInput']),
-    ...mapMutations('app', ['toggleTutorial', 'toggleSnowflakes']),
+    ...mapMutations('keymap', ['toggleContinuousInput']),
+    ...mapMutations('app', [
+      'setLegends',
+      'toggleTutorial',
+      'toggleSnowflakes'
+    ]),
     ...mapActions('app', [
       'toggleDarkMode',
       'changeLanguage',
@@ -225,8 +239,8 @@ export default {
         case 'fastInput':
           this.helpText = this.$t('settingsPanel.fastInput.help');
           break;
-        case 'displaySizes':
-          this.helpText = this.$t('settingsPanel.displaySizes.help');
+        case 'legends':
+          this.helpText = this.$t('settingsPanel.legends.help');
           break;
         case 'toggleTutorial':
           this.helpText = this.$t('settingsPanel.toggleTutorial.help');

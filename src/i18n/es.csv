@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Cambiar Modo oscuro
-settingsPanel:displaySizes:help,Mostrar tamaños de keycaps en Unidades de Tecla
-settingsPanel:displaySizes:label,Mostrar tamaño de teclas
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ingresar teclas por medio del teclado sin hacer click en cada posición.
 settingsPanel:fastInput:label,Entrada rápida
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,12 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Idioma
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,No
 settingsPanel:on:label,Sí
 settingsPanel:osKeyboardLayout:help,

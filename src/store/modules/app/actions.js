@@ -246,9 +246,6 @@ const actions = {
     keypressListener.simple_combo('ctrl alt n', () => {
       store.commit('keymap/nextColorway');
     });
-    keypressListener.simple_combo('ctrl alt u', () => {
-      store.commit('keymap/toggleDisplaySizes');
-    });
     keypressListener.simple_combo('ctrl alt f', () => {
       store.commit('keymap/toggleContinuousInput');
     });

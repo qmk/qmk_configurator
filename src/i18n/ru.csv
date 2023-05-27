@@ -106,9 +106,6 @@ settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Темный режим
-settingsPanel:displaySizes:help,Показывать размеры клавиш в Key Units
-settingsPanel:displaySizes:label,Показывать размеры клавиш
-settingsPanel:displaySizes:title,ctrl + alt + u
 settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
 settingsPanel:fastInput:label,Быстрый ввод
 settingsPanel:fastInput:title,ctrl + alt + f
@@ -116,6 +113,12 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Язык
+settingsPanel:legendType:keymap,
+settingsPanel:legendType:matrix,
+settingsPanel:legendType:index,
+settingsPanel:legendType:size,
+settingsPanel:legends:help,
+settingsPanel:legends:title,
 settingsPanel:off:label,Выкл
 settingsPanel:on:label,Вкл
 settingsPanel:osKeyboardLayout:help,Изменяет легенды клавиш в соответствии с раскладкой клавиатуры операционной системы.

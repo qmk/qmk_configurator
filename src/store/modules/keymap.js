@@ -24,7 +24,6 @@ const state = {
   loadingKeymapPromise: undefined,
   colorways: colorways.list,
   colorwayIndex: random(0, colorways.list.length - 1),
-  displaySizes: false,
   continuousInput: false,
   ignoreMod: false,
   templates: {
@@ -441,9 +440,6 @@ const mutations = {
     } else {
       state.colorwayIndex = index;
     }
-  },
-  toggleDisplaySizes(state) {
-    state.displaySizes = !state.displaySizes;
   },
   toggleContinuousInput(state) {
     state.continuousInput = !state.continuousInput;
