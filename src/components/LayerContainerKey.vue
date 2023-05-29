@@ -14,7 +14,7 @@
     @dragover.prevent="dragover"
     @dragenter="dragenter"
     @dragleave="dragleave"
-  ><div>LT {{ meta.layer }}<div
+  ><div>{{ layerDisplayName }}<div
   v-if="isShowingKeymapLegends"
   class="key-contents"
   :class="contentClasses"
@@ -43,6 +43,12 @@ export default {
       const contents =
         (this.meta.contents && this.meta.contents.code) || 'KC_NO';
       return `LT(${this.meta.layer}, ${contents})`;
+    },
+    layerDisplayName() {
+      if (this.isShowingKeymapLegends) {
+        return `LT ${this.meta.layer}`;
+      }
+      return this.displayName;
     },
     contents() {
       if (this.meta.contents) {
