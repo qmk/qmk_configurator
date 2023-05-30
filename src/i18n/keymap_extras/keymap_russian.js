@@ -164,5 +164,7 @@ export default {
   QK_GESC: {
     name: 'Ё\nEsc',
     title: 'Esc normally, but Ё when Shift or GUI is active'
-  }
+  },
+
+  KC_PDOT: { name: ',', title: '' } // No RU alias exist in QMK
 };
