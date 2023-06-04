@@ -1,7 +1,7 @@
 {
   "keyboard": "draytronics/scarlet",
   "keymap": "default",
-  "commit": "67474f7e3fa51ad25dad7c2772093fc134967538",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
