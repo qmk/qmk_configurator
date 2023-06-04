@@ -1,8 +1,8 @@
 {
   "keyboard": "bastardkb/charybdis/3x6/v2/splinky_2",
   "keymap": "default",
-  "commit": "c347e732be6b50500c1651b3fb8c0753b0c9c40d",
-  "layout": "LAYOUT_charybdis_3x6",
+  "commit": "19ecd697570784bff8803edc2f18a8ee75d3d4ce",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_LGUI", "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",       "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_RGUI",
