@@ -1,7 +1,7 @@
 {
   "keyboard": "mt/ncr80/solder",
   "keymap": "default",
-  "commit": "bb3d694875e4b02d0befee60853d3f5997acabb8",
+  "commit": "043d8e1140e09327b72ed3bd55f369e1faf1a334",
   "layout": "LAYOUT_all",
   "layers": [
     [

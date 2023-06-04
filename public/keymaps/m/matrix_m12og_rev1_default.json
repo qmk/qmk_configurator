@@ -1,8 +1,8 @@
 {
   "keyboard": "matrix/m12og/rev1",
   "keymap": "default",
-  "commit": "7407347be1df69928d27ea9b6a4fe094429f2a55",
-  "layout": "LAYOUT_all",
+  "commit": "3a1fe9281a7590ce45867f37bda59fb15a3bfdc3",
+  "layout": "LAYOUT_tkl_ansi_tsangan",
   "layers": [
     [
       "KC_ESC",             "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",     "KC_PSCR", "KC_SCRL", "KC_PAUS",

@@ -1,7 +1,7 @@
 {
   "keyboard": "mechlovin/zed65/no_backlight/retro66",
   "keymap": "default",
-  "commit": "68f550a3f25b3911ce8bbc77680f4e23e5faf424",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_all",
   "layers": [
     [
