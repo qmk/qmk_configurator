@@ -1,7 +1,7 @@
 {
   "keyboard": "planck/ez/base",
   "keymap": "default",
-  "commit": "${hash}",
+  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
   "layout": "LAYOUT_planck_grid",
   "layers": [
     [
