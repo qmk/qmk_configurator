@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/octopadplus",
   "keymap": "default",
-  "commit": "693303ddbc24e37dba8db5e5914990e598c5df74",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT",
   "layers": [
     [
