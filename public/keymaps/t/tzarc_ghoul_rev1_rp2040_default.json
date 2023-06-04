@@ -1,7 +1,7 @@
 {
   "keyboard": "tzarc/ghoul/rev1/rp2040",
   "keymap": "default",
-  "commit": "002b58f0e4ea64eb5b06e36d988160bbb907cb83",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT",
   "layers": [
     [

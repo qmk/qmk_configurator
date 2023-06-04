@@ -1,7 +1,7 @@
 {
   "keyboard": "tzarc/djinn/rev2",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_all",
   "layers": [
     [

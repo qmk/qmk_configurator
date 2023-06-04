@@ -1,0 +1,11 @@
+{
+  "keyboard": "trainpad",
+  "keymap": "default",
+  "commit": "08a8d35bc36c5c98c391817e4de9d1b3701a04c8",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ENT",  "KC_1",    "KC_2",    "KC_3"
+    ]
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "keyboard": "tkc/california",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
-  "layout": "LAYOUT_all",
+  "commit": "92114252c5e19adb25193c6233831caacfee562f",
+  "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [
     [
       "KC_ESC",             "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",                "KC_PSCR",    "KC_HOME", "KC_END",  "KC_SCRL", "KC_PAUS",
