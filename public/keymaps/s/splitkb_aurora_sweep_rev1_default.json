@@ -1,7 +1,7 @@
 {
     "keyboard": "splitkb/aurora/sweep/rev1",
     "keymap": "default",
-    "commit": "acca2eb9630ec47ed44e493f4abb043e9ee3962d",
+    "commit": "73b376a88151d03d43e0eca8242faa4bad199ac0",
     "version": 1,
     "layout": "LAYOUT",
     "layers": [

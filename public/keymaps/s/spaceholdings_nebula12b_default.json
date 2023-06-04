@@ -1,8 +1,8 @@
 {
   "keyboard": "spaceholdings/nebula12b",
   "keymap": "default",
-  "commit": "1e643ba1d1fddf27113564e5ea9d8751cb9a9c01",
-  "layout": "LAYOUT_all",
+  "commit": "8819793f1be6a4ad4acbd679c8b74b1cd043e7ad",
+  "layout": "LAYOUT_ortho_4x3",
   "layers": [
     [
       "KC_P7",   "KC_P8",   "KC_P9",
