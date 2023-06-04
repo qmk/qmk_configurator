@@ -1,8 +1,8 @@
 {
   "keyboard": "wilba_tech/wt75_c",
   "keymap": "default",
-  "commit": "e47ab6a5752e16bd3b4288153798c12af1bee3d5",
-  "layout": "LAYOUT_all",
+  "commit": "8874c61fe9c8474f086a2602a08d51f860df5d31",
+  "layout": "LAYOUT_ansi_rwkl_split_bs",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_PSCR",
