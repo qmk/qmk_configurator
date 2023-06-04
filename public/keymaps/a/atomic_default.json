@@ -1,7 +1,7 @@
 {
   "keyboard": "atomic",
   "keymap": "default",
-  "commit": "8ca6d835b9c3b81dd1815cc57fdc154766c7dbe5",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "acheron/elongate/beta",
   "keymap": "default",
-  "commit": "bd8e257f842e40f01041706a217be2cf85ae7f92",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -17,10 +17,10 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",                       "KC_SPC",             "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_END",  "KC_TRNS", "KC_TRNS"
     ],
     [
-      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
-      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",              "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
-      "KC_TRNS",              "RGB_TOG",  "RGB_MOD",  "RGB_RMOD", "RGB_M_T",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
-      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",              "KC_TRNS",                          "KC_SPC",               "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS"
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS",            "RGB_TOG", "RGB_MOD", "RGB_RMOD","RGB_M_T", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",                       "KC_SPC",             "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }

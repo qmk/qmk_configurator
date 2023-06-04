@@ -1,8 +1,8 @@
 {
   "keyboard": "ai",
   "keymap": "default",
-  "commit": "7ea54a78376aee85a051a49185aa3555e8da41d2",
-  "layout": "LAYOUT_ai_5x4_1",
+  "commit": "53cc6170ae2687b0c894f05738181a2f16ad0d6c",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",

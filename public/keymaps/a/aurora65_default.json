@@ -1,7 +1,7 @@
 {
   "keyboard": "aurora65",
   "keymap": "default",
-  "commit": "b881778f53217141c3fe0eee5e8c406ccb94cf9b",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

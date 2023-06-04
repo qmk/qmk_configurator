@@ -1,0 +1,11 @@
+{
+  "keyboard": "anavi/knobs3",
+  "keymap": "default",
+  "commit": "61f3f5676a1f4ba31ad9ed7bdcba164178230275",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",        "RGB_TOG",        "RGB_MOD"
+    ]
+  ]
+}
