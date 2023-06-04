@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/periboard_512",
   "keymap": "default",
-  "commit": "a5d7e83985ae07689cc71ab1dd2755a8ac335df3",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT",
   "layers": [
     [

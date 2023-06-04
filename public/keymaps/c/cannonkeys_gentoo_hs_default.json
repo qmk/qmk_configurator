@@ -1,8 +1,8 @@
 {
   "keyboard": "cannonkeys/gentoo_hs",
   "keymap": "default",
-  "commit": "43e33ba232a02f627c4fcc6607edd6f7971e71b8",
-  "layout": "LAYOUT_default",
+  "commit": "a11d8f6e711b7d64924e528723b1e15abe5082ab",
+  "layout": "LAYOUT_65_ansi_rwkl",
   "layers": [
     [
       "QK_GESC", "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_INS",
