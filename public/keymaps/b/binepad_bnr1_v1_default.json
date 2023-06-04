@@ -1,7 +1,7 @@
 {
   "keyboard": "binepad/bnr1/v1",
   "keymap": "default",
-  "commit": "e59475992e984e3384f48205e2f90855bc4661bf",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_ortho_1x1",
   "layers": [
     [

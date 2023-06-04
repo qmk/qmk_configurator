@@ -1,8 +1,8 @@
 {
   "keyboard": "irene",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
-  "layout": "LAYOUT_all",
+  "commit": "7dacff6c89fd0dbf6a35e59ea8354658b1653a00",
+  "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [
       "KC_DEL",  "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_BSPC",

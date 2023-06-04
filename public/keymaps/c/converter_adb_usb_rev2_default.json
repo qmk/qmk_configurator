@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/adb_usb/rev2",
   "keymap": "default",
-  "commit": "03d16db942fe0352cc3b3522a1c778b7e60a4b3a",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_ext_ansi",
   "layers": [
     [

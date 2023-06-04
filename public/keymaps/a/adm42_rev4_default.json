@@ -1,8 +1,8 @@
 {
   "keyboard": "adm42/rev4",
   "keymap": "default",
-  "commit": "8be0496347e7501395a0515b8733534a27312f49",
-  "layout": "LAYOUT_adm42_3x12_6",
+  "commit": "3bf01bb9ed202b14f78105db2aa2a75d01fc4323",
+  "layout": "LAYOUT",
   "layers": [
     [
       "LWIN_T(KC_GRV)", "KC_Q",    "KC_W",    "KC_E",         "KC_R",            "KC_T",         "KC_Y",         "KC_U",           "KC_I",          "KC_O",    "KC_P",    "RWIN_T(KC_EQL)",

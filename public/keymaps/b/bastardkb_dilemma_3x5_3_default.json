@@ -1,7 +1,7 @@
 {
   "keyboard": "bastardkb/dilemma/3x5_3",
   "keymap": "default",
-  "commit": "30b2dbe369b3a61d1d6681b0a689dbcdd41fc221",
+  "commit": "043d8e1140e09327b72ed3bd55f369e1faf1a334",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

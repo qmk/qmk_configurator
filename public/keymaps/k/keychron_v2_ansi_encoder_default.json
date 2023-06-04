@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/v2/ansi_encoder",
   "keymap": "default",
-  "commit": "de64c61d17fbbc49c09f7f4863226783fcbe433c",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_ansi_67",
   "layers": [
     [

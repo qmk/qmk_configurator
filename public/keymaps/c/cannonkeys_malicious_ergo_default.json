@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/malicious_ergo",
   "keymap": "default",
-  "commit": "bc538e37761206885c226d849ec20d1771a5ed43",
+  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
   "layout": "LAYOUT_default",
   "layers": [
     [

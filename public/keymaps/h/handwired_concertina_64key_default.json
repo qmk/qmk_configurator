@@ -1,12 +1,12 @@
 {
   "keyboard": "handwired/concertina/64key",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "1978007faefc0fb3af809ddf0d2ff1274e540570",
   "layout": "LAYOUT_64key",
   "layers": [
     [
                             "SC_LSPO", "KC_MINS", "KC_EQL",                                 "KC_VOLD", "KC_VOLU", "SC_RSPC",
-                            "SC_LCPO", "KC_LGUI", "KC_LNG1", "KC_ENT",        "KC_MUTE",    "KC_NO",   "MO(3)",   "SC_RCPC",
+                            "SC_LCPO", "KC_LGUI", "KC_LNG1", "KC_ENT",        "KC_MUTE",    "KC_MPLY", "MO(3)",   "SC_RCPC",
                                        "SC_LAPO", "KC_SPC",  "RALT(KC_9)",    "RALT(KC_0)", "KC_ESC",  "SC_RAPC",
 
                             "KC_W",    "KC_E",    "KC_R",    "KC_T",          "KC_Y",       "KC_U",    "KC_I",    "KC_O",

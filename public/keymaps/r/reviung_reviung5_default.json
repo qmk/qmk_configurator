@@ -1,8 +1,8 @@
 {
   "keyboard": "reviung/reviung5",
   "keymap": "default",
-  "commit": "34602f4b25f24d3238c8e76fe7d65dc8b69bf9c8",
-  "layout": "LAYOUT_reviung5",
+  "commit": "891780b17f0dcf86624cadc18fb0fbeb2ee418d8",
+  "layout": "LAYOUT",
   "layers": [
     [
       "LT(1,KC_VOLD)", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_VOLU"

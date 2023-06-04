@@ -1,8 +1,8 @@
 {
   "keyboard": "adpenrose/shisaku",
   "keymap": "default",
-  "commit": "d27a6bd629f8ad5a204236c58ed3a8641e75da53",
-  "layout": "LAYOUT_all",
+  "commit": "f8313adffb6d2564465e51c4f365f135119c9d16",
+  "layout": "LAYOUT",
   "layers": [
     [
                  "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",       "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",

@@ -1,8 +1,8 @@
 {
   "keyboard": "melgeek/tegic/rev1",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
-  "layout": "LAYOUT_tegic_ansi",
+  "commit": "f2ad3ba7c3ccff20560010ebe57c76d381771499",
+  "layout": "LAYOUT",
   "layers": [
     [
       "QK_GESC", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_PSCR", "KC_SCRL",

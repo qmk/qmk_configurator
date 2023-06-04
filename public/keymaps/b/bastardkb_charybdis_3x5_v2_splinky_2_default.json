@@ -1,14 +1,14 @@
 {
   "keyboard": "bastardkb/charybdis/3x5/v2/splinky_2",
   "keymap": "default",
-  "commit": "4238d49efe7d1fc461864dd57bbdf22a157e7f59",
-  "layout": "LAYOUT_charybdis_3x5",
+  "commit": "19ecd697570784bff8803edc2f18a8ee75d3d4ce",
+  "layout": "LAYOUT",
   "layers": [
     [
-      "KC_Q",    "KC_W",    "KC_E",            "KC_R",            "KC_T",       "KC_Y",    "KC_U",           "KC_I",    "KC_O",    "KC_P",
-      "KC_A",    "KC_S",    "KC_D",            "KC_F",            "KC_G",       "KC_H",    "KC_J",           "KC_K",    "KC_L",    "KC_SCLN",
-      "KC_Z",    "KC_X",    "KC_C",            "KC_V",            "KC_B",       "KC_N",    "KC_M",           "KC_COMM", "KC_DOT",  "KC_SLSH",
-                            "LCTL_T(KC_BSPC)", "LSFT_T(KC_SPC)",  "MO(1)",      "MO(2)",   "LGUI_T(KC_ENT)"
+      "KC_Q",    "KC_W",    "KC_E",            "KC_R",           "KC_T",       "KC_Y",    "KC_U",           "KC_I",    "KC_O",    "KC_P",
+      "KC_A",    "KC_S",    "KC_D",            "KC_F",           "KC_G",       "KC_H",    "KC_J",           "KC_K",    "KC_L",    "KC_SCLN",
+      "KC_Z",    "KC_X",    "KC_C",            "KC_V",           "KC_B",       "KC_N",    "KC_M",           "KC_COMM", "KC_DOT",  "KC_SLSH",
+                            "LCTL_T(KC_BSPC)", "LSFT_T(KC_SPC)", "MO(1)",      "MO(2)",   "LGUI_T(KC_ENT)"
     ],
     [
       "RGB_TOG", "KC_MNXT", "KC_MPLY", "KC_MPRV", "XXXXXXX",    "KC_LBRC", "KC_7",    "KC_8",    "KC_9",    "KC_RBRC",

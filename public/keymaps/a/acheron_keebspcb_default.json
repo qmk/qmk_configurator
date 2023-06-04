@@ -1,7 +1,7 @@
 {
   "keyboard": "acheron/keebspcb",
   "keymap": "default",
-  "commit": "d68c4d810634f5ffcb29c38d57b16bc72faf45dc",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_60_ansi_tsangan",
   "layers": [
     [

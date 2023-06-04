@@ -1,7 +1,7 @@
 {
   "keyboard": "0xc7/61key",
   "keymap": "default",
-  "commit": "e762db44bae46c631186c807a9c10fd8e4684535",
+  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

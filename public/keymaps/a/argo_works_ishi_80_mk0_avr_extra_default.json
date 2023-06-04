@@ -1,7 +1,7 @@
 {
   "keyboard": "argo_works/ishi/80/mk0_avr_extra",
   "keymap": "default",
-  "commit": "6b50b1be9b98b4af36a485f495a8174c00e7a952",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT",
   "layers": [
     [

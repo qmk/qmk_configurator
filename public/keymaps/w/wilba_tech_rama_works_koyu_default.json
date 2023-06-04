@@ -1,8 +1,8 @@
 {
   "keyboard": "wilba_tech/rama_works_koyu",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
-  "layout": "LAYOUT_all",
+  "commit": "4d9a87c2123d8561400b5cc08a5b3486bc10a6ea",
+  "layout": "LAYOUT_65_ansi_blocker_tsangan_split_bs",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSLS", "KC_DEL",  "KC_HOME",

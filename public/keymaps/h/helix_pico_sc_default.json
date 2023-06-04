@@ -1,7 +1,7 @@
 {
   "keyboard": "helix/pico/sc",
   "keymap": "default",
-  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
+  "commit": "cf935d97ae479e7a1e1f2f2f248b93e52e4cc69e",
   "layout": "LAYOUT",
   "layers": [
     [

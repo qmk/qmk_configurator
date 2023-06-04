@@ -1,7 +1,7 @@
 {
   "keyboard": "clueboard/2x1800/2021",
   "keymap": "default",
-  "commit": "9d0b7ab9b9de09c0ef3305daadd742a4e86b1a17",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_all",
   "layers": [
     [

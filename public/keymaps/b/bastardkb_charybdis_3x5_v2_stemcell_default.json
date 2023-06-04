@@ -1,8 +1,8 @@
 {
   "keyboard": "bastardkb/charybdis/3x5/v2/stemcell",
   "keymap": "default",
-  "commit": "30b2dbe369b3a61d1d6681b0a689dbcdd41fc221",
-  "layout": "LAYOUT_charybdis_3x5",
+  "commit": "19ecd697570784bff8803edc2f18a8ee75d3d4ce",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_Q",    "KC_W",    "KC_E",            "KC_R",           "KC_T",       "KC_Y",    "KC_U",           "KC_I",    "KC_O",    "KC_P",

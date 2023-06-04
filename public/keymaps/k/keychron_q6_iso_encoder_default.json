@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/q6/iso_encoder",
   "keymap": "default",
-  "commit": "6c4e6a86f75e39babc4679813f3bad7bbc1d653e",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_iso_110",
   "layers": [
     [

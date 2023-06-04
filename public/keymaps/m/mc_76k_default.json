@@ -1,8 +1,8 @@
 {
   "keyboard": "mc_76k",
   "keymap": "default",
-  "commit": "7f7b6b08e8afdd09f83b180e4c03b04f9a531035",
-  "layout": "LAYOUT_all",
+  "commit": "747079e73cd85ec47031b0badaf9e77a49f52ca0",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_F13",

@@ -1,7 +1,7 @@
 {
   "keyboard": "jorne/rev1",
   "keymap": "default",
-  "commit": "22be7e79ac6a328ed5a7dc8c4e6f17d749852221",
+  "commit": "2d843088a26ee639287d16fbd9ca4c35e18f7b8b",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -26,7 +26,7 @@
       "QK_BOOT", "XXXXXXX", "AS_UP",   "AS_TOGG", "AS_DOWN", "_______", "_______",    "_______", "_______", "AS_DOWN", "AS_TOGG", "AS_UP",   "XXXXXXX", "QK_BOOT",
                  "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "_______", "_______",    "_______", "_______", "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_TOG",
                  "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "_______", "_______",    "_______", "_______", "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_MOD",
-                                                  "_______", "SH_TG",   "_______",    "_______", "SH_TG",   "_______"
+                                                  "_______", "SH_TOGG", "_______",    "_______", "SH_TOGG", "_______"
     ]
   ],
   "author": "joric"

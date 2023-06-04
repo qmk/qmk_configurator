@@ -1,7 +1,7 @@
 {
   "keyboard": "ergodox_stm32",
   "keymap": "default",
-  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
+  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
   "layout": "LAYOUT_ergodox",
   "layers": [
     [

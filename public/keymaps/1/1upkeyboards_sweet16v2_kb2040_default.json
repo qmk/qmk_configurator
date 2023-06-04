@@ -1,7 +1,7 @@
 {
   "keyboard": "1upkeyboards/sweet16v2/kb2040",
   "keymap": "default",
-  "commit": "6313258f23ae22943396dad7ae56a1904d5697ea",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

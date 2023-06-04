@@ -1,7 +1,7 @@
 {
   "keyboard": "1upkeyboards/pi60_hse",
   "keymap": "default",
-  "commit": "6313258f23ae22943396dad7ae56a1904d5697ea",
+  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

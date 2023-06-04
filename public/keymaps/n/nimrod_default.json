@@ -1,7 +1,7 @@
 {
   "keyboard": "nimrod",
   "keymap": "default",
-  "commit": "5629ba18077ee5dcde72e497ddf46d848817dd5c",
+  "commit": "5faa23d54ca1e3ab83097f2a07922f48800616e6",
   "layout": "LAYOUT_ortho_4x10",
   "layers": [
     [

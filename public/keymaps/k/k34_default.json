@@ -1,7 +1,7 @@
 {
   "keyboard": "k34",
   "keymap": "default",
-  "commit": "f79e1ab7481525cfa2b63e6bc062fb7d8250c8db",
+  "commit": "5faa23d54ca1e3ab83097f2a07922f48800616e6",
   "layout": "LAYOUT",
   "layers": [
     ["KC_Q"        , "KC_W"        , "KC_E"           , "KC_R"          , "KC_T",

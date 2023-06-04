@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/pill60/blackpill_f401",
   "keymap": "default",
-  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT",
   "layers": [
     [

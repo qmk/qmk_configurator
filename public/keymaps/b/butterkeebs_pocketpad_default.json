@@ -1,0 +1,15 @@
+{
+  "keyboard": "butterkeebs/pocketpad",
+  "keymap": "default",
+  "commit": "b5d0c4469067ca81e3a8a60fc349f5ad6d92c363",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PENT",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PDOT",
+      "KC_F",    "KC_KP_0"
+    ]
+  ]
+}

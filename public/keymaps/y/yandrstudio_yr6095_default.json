@@ -1,7 +1,7 @@
 {
   "keyboard": "yandrstudio/yr6095",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "e719f5e2944b13588277eeefe460f6e21091c6fb",
   "layout": "LAYOUT_60_tsangan_split_rshift",
   "layers": [
     [
@@ -16,7 +16,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
       "KC_TRNS",            "RGB_TOG", "RGB_MOD", "RGB_RMOD", "RGB_VAI", "RGB_VAD", "KC_TRNS", "CG_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "GU_TOGG", "KC_TRNS",                                   "KC_TRNS",                                             "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "KC_TRNS", "GUI_TOG", "KC_TRNS",                                   "KC_TRNS",                                             "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
   ]
 }

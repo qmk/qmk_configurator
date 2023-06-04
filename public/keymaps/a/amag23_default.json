@@ -1,8 +1,8 @@
 {
   "keyboard": "amag23",
   "keymap": "default",
-  "commit": "cfefecd95126e81022297b83641db750552547d9",
-  "layout": "LAYOUT_all",
+  "commit": "fa10d5fda2844fd3757f552be6002ad8db381c70",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",

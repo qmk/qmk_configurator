@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/v1/jis_encoder",
   "keymap": "default",
-  "commit": "e0ff1189ceaada381cf8e7cbc1628d25ae120354",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_jis_86",
   "layers": [
     [
