@@ -1,7 +1,7 @@
 {
-  "keyboard": "xelus/xs60",
+  "keyboard": "xelus/xs60/soldered",
   "keymap": "default",
-  "commit": "ae34dde677297db052316acd5088cf716848421d",
+  "commit": "0b1d5497fccc3d175eb4558ec83ede2e2fcfcf63",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [
