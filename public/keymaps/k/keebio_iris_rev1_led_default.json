@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/iris/rev1_led",
   "keymap": "default",
-  "commit": "fab6c8a0284eb84de0ab5552c5d0fb412043dd45",
+  "commit": "9f492f6dfab2d4f622530dc77bb6a1247b2783a1",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -1,8 +1,8 @@
 {
   "keyboard": "kbdfans/bounce/75/hotswap",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
-  "layout": "LAYOUT_all",
+  "commit": "dcd934ba0077df995a7a64f22d58f539dfd9a5d2",
+  "layout": "LAYOUT_ansi_rwkl",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_PSCR", "KC_HOME",

@@ -1,7 +1,7 @@
 {
   "keyboard": "kakunpc/thedogkeyboard",
   "keymap": "default",
-  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
+  "commit": "5c464df600f0ed8a5f67a275250f745a611c7c25",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,8 +1,8 @@
 {
   "keyboard": "kepler_33/proto",
   "keymap": "default",
-  "commit": "8ea8a4edcb2e33df93bdcfae08b4aeef05d995c6",
-  "layout": "LAYOUT_proto",
+  "commit": "53cc6170ae2687b0c894f05738181a2f16ad0d6c",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_LBRC", "KC_RBRC", "KC_DEL",

@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/v5/iso_encoder",
   "keymap": "default",
-  "commit": "4a0027d4933302e0c6ff89d37da83889f466b1b9",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
   "layout": "LAYOUT_iso_99",
   "layers": [
     [

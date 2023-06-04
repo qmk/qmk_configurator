@@ -1,8 +1,8 @@
 {
   "keyboard": "keychron/s1/ansi/white",
   "keymap": "default",
-  "commit": "8560280afe1d559aba58ab1a2e6f1f8fda9e4e46",
-  "layout": "LAYOUT_ansi_84",
+  "commit": "043d8e1140e09327b72ed3bd55f369e1faf1a334",
+  "layout": "LAYOUT_75_ansi",
   "layers": [
     [
       "KC_ESC",  "KC_BRID", "KC_BRIU", "KC_NO",   "KC_NO",   "BL_DOWN", "BL_UP",   "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MUTE", "KC_VOLD", "KC_VOLU", "KC_NO",   "KC_DEL",  "BL_STEP",
