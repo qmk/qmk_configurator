@@ -1,8 +1,8 @@
 {
   "keyboard": "handwired/swiftrax/koalafications",
   "keymap": "default",
-  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
-  "layout": "LAYOUT_all",
+  "commit": "9d4edcdfeb0350db2a20c7389803a8a53627fe4e",
+  "layout": "LAYOUT_ansi_split_bs",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
