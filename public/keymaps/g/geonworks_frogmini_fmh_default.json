@@ -1,7 +1,7 @@
 {
   "keyboard": "geonworks/frogmini/fmh",
   "keymap": "default",
-  "commit": "ce90be09610861e8a74fd5651efab706cb5ce06d",
+  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
   "layout": "LAYOUT_60_tsangan_hhkb",
   "layers": [
     [

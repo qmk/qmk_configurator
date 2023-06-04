@@ -1,7 +1,7 @@
 {
   "keyboard": "gboards/gergoplex",
   "keymap": "default",
-  "commit": "8d32ddd8e948136a992ab3c10d13c7dbf9e1e119",
+  "commit": "efe520645ec8b67d306eb63f54b0a52380269596",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

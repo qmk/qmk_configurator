@@ -1,8 +1,8 @@
 {
   "keyboard": "gboards/gergo",
   "keymap": "default",
-  "commit": "17c0ca6fa4f7b6f65b4442c2f5bc32fee914b376",
-  "layout": "LAYOUT_gergo",
+  "commit": "f2ad3ba7c3ccff20560010ebe57c76d381771499",
+  "layout": "LAYOUT",
   "layers": [
     [
       "LT(2,KC_ESC)",    "KC_Q",    "KC_W",    "KC_E",    "KC_R",           "KC_T",                                                                              "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_PIPE",
