@@ -1,8 +1,8 @@
 {
   "keyboard": "lefty/rev1",
   "keymap": "default",
-  "commit": "70e396e8829dcdae363481af0acbd9f26a5982b1",
-  "layout": "LAYOUT_all",
+  "commit": "a1e4b34aac5f79bb2bf2539abffc1825223440de",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_UP",   "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",

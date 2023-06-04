@@ -1,8 +1,8 @@
 {
   "keyboard": "latincompass/latinpadble",
   "keymap": "default",
-  "commit": "39c22f5cf5011427ece26c510d0b1ab42edf34db",
-  "layout": "LAYOUT_pad",
+  "commit": "13a989dbbfc56f5bc72eceb9f42db8929d1c03a5",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_PGUP",
