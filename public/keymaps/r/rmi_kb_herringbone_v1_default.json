@@ -1,7 +1,7 @@
 {
-  "keyboard": "ramonimbao/herringbone/v1",
+  "keyboard": "rmi_kb/herringbone/v1",
   "keymap": "default",
-  "commit": "8657f54f9eee97c1905b8fa347497a518f147455",
+  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

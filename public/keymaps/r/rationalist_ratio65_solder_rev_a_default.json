@@ -1,7 +1,7 @@
 {
   "keyboard": "rationalist/ratio65_solder/rev_a",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "acae650b2fa304516cb1818d2e0acfa4f0549fab",
   "layout": "LAYOUT_all",
   "layers": [
     [

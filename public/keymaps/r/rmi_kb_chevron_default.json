@@ -1,7 +1,7 @@
 {
-  "keyboard": "ramonimbao/chevron",
+  "keyboard": "rmi_kb/chevron",
   "keymap": "default",
-  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

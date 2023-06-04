@@ -1,8 +1,8 @@
 {
   "keyboard": "rart/rart75m",
   "keymap": "default",
-  "commit": "0b90877b4b72bae2fa99e2b1311cd5e74f5e5d4d",
-  "layout": "LAYOUT_all",
+  "commit": "1440011a91bd33fb8d2603a38ffdcd47f4b32d29",
+  "layout": "LAYOUT",
   "layers": [
     [
                  "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",

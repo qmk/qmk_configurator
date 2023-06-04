@@ -1,7 +1,7 @@
 {
-  "keyboard": "ramonimbao/mona/v32a",
+  "keyboard": "rmi_kb/mona/v1",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

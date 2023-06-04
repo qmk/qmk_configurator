@@ -1,7 +1,7 @@
 {
-  "keyboard": "ramonimbao/squishyfrl",
+  "keyboard": "rmi_kb/squishyfrl",
   "keymap": "default",
-  "commit": "02fcb1069ac034d593e02484604ddc0c2ebc2dc2",
+  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

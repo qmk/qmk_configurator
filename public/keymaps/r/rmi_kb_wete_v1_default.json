@@ -1,7 +1,7 @@
 {
-  "keyboard": "ramonimbao/wete/v1",
+  "keyboard": "rmi_kb/wete/v1",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
+  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
   "layout": "LAYOUT_ansi_rhnp",
   "layers": [
     [
