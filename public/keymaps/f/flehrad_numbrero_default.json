@@ -1,8 +1,8 @@
 {
   "keyboard": "flehrad/numbrero",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
-  "layout": "LAYOUT_numbrero_numpad",
+  "commit": "53cc6170ae2687b0c894f05738181a2f16ad0d6c",
+  "layout": "LAYOUT_numpad",
   "layers": [
     [
       "KC_TRNS", "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
