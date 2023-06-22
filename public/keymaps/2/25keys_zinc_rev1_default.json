@@ -35,7 +35,7 @@
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MPLY"
     ],
     [
-      "_______",  "QK_BOOT", "______",  "_______",      "_______",      "_______",      "_______",      "TO(0)",        "TO(1)",        "TO(2)",   "_______", "KC_INS",
+      "_______",  "QK_BOOT", "_______", "_______",      "_______",      "_______",      "_______",      "TO(0)",        "TO(1)",        "TO(2)",   "_______", "KC_INS",
       "_______",  "RGB_TOG", "RGB_HUI", "RGB_SAI",      "RGB_VAI",      "AG_NORM",      "AG_SWAP",      "KC_MINS",      "KC_EQL",       "KC_PSCR", "KC_SCRL", "KC_PAUS",
       "RGB_RMOD", "RGB_MOD", "RGB_HUD", "RGB_SAD",      "RGB_VAD",      "_______",      "_______",      "_______",      "_______",      "_______", "KC_PGUP", "_______",
       "_______",  "_______", "_______", "LALT(KC_GRV)", "LALT(KC_GRV)", "LALT(KC_GRV)", "LALT(KC_GRV)", "LALT(KC_GRV)", "LALT(KC_GRV)", "KC_HOME", "KC_PGDN", "KC_END"
