@@ -1,8 +1,8 @@
 {
   "keyboard": "quarkeys/z40",
   "keymap": "default",
-  "commit": "beb9fcb8bcf156337601499d0b0de5f246878808",
-  "layout": "LAYOUT",
+  "commit": "33f76d79d41115f7d2a77fff355f5d85d3c4155b",
+  "layout": "LAYOUT_planck_mit",
   "layers": [
     [
       "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",
@@ -19,7 +19,7 @@
     [
       "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
       "_______", "KC_AMPR", "KC_PIPE", "KC_LPRN", "KC_RPRN", "KC_PLUS", "KC_MINS", "KC_LCBR", "KC_RCBR", "KC_LBRC", "KC_RBRC", "_______",
-      "_______", "KC_EXLM", "KC_AT",   "KC_HASH", "KC_CIRC", "KC_ASTR", "KC_SLSH", "KC_TILD", "KC_LT",   "KC_GT",   "KC_QUES", "_______",
+      "_______", "KC_EXLM", "KC_AT",   "KC_HASH", "KC_CIRC", "KC_ASTR", "KC_SLSH", "KC_TILD", "KC_LABK", "KC_RABK", "KC_QUES", "_______",
       "_______", "_______", "_______", "_______", "_______",      "_______",       "_______", "_______", "_______", "_______", "_______"
     ]
   ]
