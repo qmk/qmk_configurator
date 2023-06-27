@@ -1,8 +1,8 @@
 {
   "keyboard": "viktus/osav2_numpad",
   "keymap": "default",
-  "commit": "26e0bfd494b4de0505cf4c5c0bcf811aae19adbb",
-  "layout": "LAYOUT_all_split",
+  "commit": "c01a3cfacaf6ce39b23ec81270549734b6ca1c71",
+  "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
       "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
