@@ -78,7 +78,7 @@ const _getKeySizeClass = (unith, unitw) => {
   if (unith === 2) {
     if (unitw === 1.25) {
       return 'kiso';
-    } else if (unitw === 2.25) {
+    } else if (unitw === 1.5) {
       return 'kbae';
     }
   }
@@ -445,7 +445,6 @@ export default {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
   height: calc(1.1 * var(--default-key-height));
   padding: 0px;
-  margin-left: calc(var(--default-key-x-spacing) * 0.75);
   border-radius: 6px 6px 0px 0px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
