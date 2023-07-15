@@ -2,8 +2,23 @@ const lookup = {
   '2_milk': {
     target: 'spaceman/2_milk'
   },
+  '6ball': {
+    target: 'maple_computing/6ball'
+  },
+  '7skb/rev1': {
+    target: 'salicylic_acid3/7skb/rev1'
+  },
+  '7splus': {
+    target: 'salicylic_acid3/7splus'
+  },
   absinthe: {
     target: 'keyhive/absinthe'
+  },
+  acr60: {
+    target: 'mechkeys/acr60'
+  },
+  adalyn: {
+    target: 'tominabox1/adalyn'
   },
   'aeboards/ext65': {
     target: 'aeboards/ext65/rev1'
@@ -11,11 +26,26 @@ const lookup = {
   'ai03/equinox': {
     target: 'ai03/equinox/rev1'
   },
+  ajisai74: {
+    target: 'salicylic_acid3/ajisai74'
+  },
   aleth42: {
-    target: 'aleth42/rev1'
+    target: '25keys/aleth42'
   },
   alice: {
     target: 'tgr/alice'
+  },
+  alicia_cook: {
+    target: 'ibnuda/alicia_cook'
+  },
+  allison: {
+    target: 'prototypist/allison'
+  },
+  allison_numpad: {
+    target: 'prototypist/allison_numpad'
+  },
+  alu84: {
+    target: 'mechkeys/alu84'
   },
   amj40: {
     target: 'amjkeyboard/amj40'
@@ -32,11 +62,26 @@ const lookup = {
   angel17: {
     target: 'angel17/alpha'
   },
+  'angel17/alpha': {
+    target: 'kakunpc/angel17/alpha'
+  },
+  'angel17/rev1': {
+    target: 'kakunpc/angel17/rev1'
+  },
   angel64: {
     target: 'angel64/alpha'
   },
+  'angel64/alpha': {
+    target: 'kakunpc/angel64/alpha'
+  },
+  'angel64/rev1': {
+    target: 'kakunpc/angel64/rev1'
+  },
   aplx6: {
     target: 'aplyard/aplx6/rev1'
+  },
+  arch_36: {
+    target: 'obosob/arch_36'
   },
   at101_bh: {
     target: 'viktus/at101_bh'
@@ -50,14 +95,50 @@ const lookup = {
   'atom47/rev3': {
     target: 'maartenwut/atom47/rev3'
   },
+  bakeneko60: {
+    target: 'kkatano/bakeneko60'
+  },
   bakeneko65: {
     target: 'bakeneko65/rev2'
+  },
+  'bakeneko65/rev2': {
+    target: 'kkatano/bakeneko65/rev2'
+  },
+  'bakeneko65/rev3': {
+    target: 'kkatano/bakeneko65/rev3'
+  },
+  bakeneko80: {
+    target: 'kkatano/bakeneko80'
+  },
+  barleycorn: {
+    target: 'yiancardesigns/barleycorn'
+  },
+  'bat43/rev1': {
+    target: 'dailycraft/bat43/rev1'
+  },
+  'bat43/rev2': {
+    target: 'dailycraft/bat43/rev2'
   },
   bear_65: {
     target: 'jacky_studio/bear_65'
   },
   bear_face: {
     target: 'bear_face/v1'
+  },
+  'bigseries/1key': {
+    target: 'woodkeys/bigseries/1key'
+  },
+  'bigseries/2key': {
+    target: 'woodkeys/bigseries/2key'
+  },
+  'bigseries/3key': {
+    target: 'woodkeys/bigseries/3key'
+  },
+  'bigseries/4key': {
+    target: 'woodkeys/bigseries/4key'
+  },
+  bkf: {
+    target: 'drhigsby/bkf'
   },
   bm16a: {
     target: 'kprepublic/bm16a'
@@ -89,8 +170,17 @@ const lookup = {
   'bpiphany/pegasushoof': {
     target: 'bpiphany/pegasushoof/2013'
   },
-  chavdai40: {
-    target: 'chavdai40/rev1'
+  'business_card/alpha': {
+    target: 'kakunpc/business_card/alpha'
+  },
+  'business_card/beta': {
+    target: 'kakunpc/business_card/beta'
+  },
+  butterstick: {
+    target: 'gboards/butterstick'
+  },
+  c39: {
+    target: 'maple_computing/c39'
   },
   'candybar/lefty': {
     target: 'tkc/candybar/lefty'
@@ -101,23 +191,83 @@ const lookup = {
   canoe: {
     target: 'percent/canoe'
   },
+  cassette42: {
+    target: '25keys/cassette42'
+  },
+  chavdai40: {
+    target: 'chavdai40/rev1'
+  },
+  chidori: {
+    target: 'kagizaraya/chidori'
+  },
+  chili: {
+    target: 'ydkb/chili'
+  },
+  chimera_ergo: {
+    target: 'glenpickle/chimera_ergo'
+  },
+  chimera_ls: {
+    target: 'glenpickle/chimera_ls'
+  },
+  chimera_ortho: {
+    target: 'glenpickle/chimera_ortho'
+  },
+  chimera_ortho_plus: {
+    target: 'glenpickle/chimera_ortho_plus'
+  },
+  choc_taro: {
+    target: 'kakunpc/choc_taro'
+  },
+  choco60: {
+    target: 'recompile_keys/choco60'
+  },
+  christmas_tree: {
+    target: 'maple_computing/christmas_tree'
+  },
+  'claw44/rev1': {
+    target: 'dailycraft/claw44/rev1'
+  },
   'clawsome/gamebuddy': {
     target: 'clawsome/gamebuddy/v1_0'
   },
   'cmm_studio/saka68': {
     target: 'cmm_studio/saka68/solder'
   },
+  cocoa40: {
+    target: 'recompile_keys/cocoa40'
+  },
+  comet46: {
+    target: 'satt/comet46'
+  },
   cospad: {
     target: 'kprepublic/cospad'
-  },
-  'crkbd/rev1/legacy': {
-    target: 'crkbd/rev1'
   },
   'crkbd/rev1/common': {
     target: 'crkbd/rev1'
   },
+  'crkbd/rev1/legacy': {
+    target: 'crkbd/rev1'
+  },
+  cu24: {
+    target: 'capsunlocked/cu24'
+  },
+  cu75: {
+    target: 'capsunlocked/cu75'
+  },
+  cu80: {
+    target: 'capsunlocked/cu80/v1'
+  },
   daisy: {
     target: 'ktec/daisy'
+  },
+  delilah: {
+    target: 'rainkeebs/delilah'
+  },
+  diverge3: {
+    target: 'unikeyboard/diverge3'
+  },
+  divergetm2: {
+    target: 'unikeyboard/divergetm2'
   },
   'doro67/multi': {
     layouts: {
@@ -134,8 +284,14 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
+  dozen0: {
+    target: 'yynmt/dozen0'
+  },
   drakon: {
     target: 'jagdpietr/drakon'
+  },
+  dubba175: {
+    target: 'drhigsby/dubba175'
   },
   dumbpad: {
     target: 'dumbpad/v0x'
@@ -161,8 +317,29 @@ const lookup = {
   eek: {
     target: 'eek/silk_down'
   },
+  eggman: {
+    target: 'qpockets/eggman'
+  },
+  ergo42: {
+    target: 'biacco42/ergo42'
+  },
+  ergoarrows: {
+    target: 'salicylic_acid3/ergoarrows'
+  },
+  'ergodash/mini': {
+    target: 'omkbd/ergodash/mini'
+  },
+  'ergodash/rev1': {
+    target: 'omkbd/ergodash/rev1'
+  },
   ergodone: {
     target: 'ktec/ergodone'
+  },
+  ergodox_ez: {
+    target: 'ergodox_ez/base'
+  },
+  ergodox_infinity: {
+    target: 'input_club/ergodox_infinity'
   },
   ergoinu: {
     target: 'dm9records/ergoinu'
@@ -170,14 +347,44 @@ const lookup = {
   ergosaurus: {
     target: 'keyhive/ergosaurus'
   },
+  ergotaco: {
+    target: 'gboards/ergotaco'
+  },
+  espectro: {
+    target: 'mechkeys/espectro'
+  },
   'exclusive/e85': {
     target: 'exclusive/e85/hotswap'
+  },
+  felix: {
+    target: 'unikeyboard/felix'
+  },
+  four_banger: {
+    target: 'bpiphany/four_banger'
+  },
+  freyr: {
+    target: 'hnahkb/freyr'
   },
   function96: {
     target: 'function96/v1'
   },
+  geminate60: {
+    target: 'weirdo/geminate60'
+  },
+  georgi: {
+    target: 'gboards/georgi'
+  },
+  gergo: {
+    target: 'gboards/gergo'
+  },
+  getta25: {
+    target: 'salicylic_acid3/getta25'
+  },
   gh60: {
     target: 'gh60/revc'
+  },
+  gingham: {
+    target: 'yiancardesigns/gingham'
   },
   'gmmk/pro': {
     target: 'gmmk/pro/ansi'
@@ -188,6 +395,12 @@ const lookup = {
   'gmmk/pro/iso': {
     target: 'gmmk/pro/rev1/iso'
   },
+  gurindam: {
+    target: 'ibnuda/gurindam'
+  },
+  halberd: {
+    target: 'kagizaraya/halberd'
+  },
   'handwired/ferris': {
     target: 'ferris/0_1'
   },
@@ -196,6 +409,9 @@ const lookup = {
   },
   'handwired/pill60': {
     target: 'handwired/pill60/bluepill'
+  },
+  'hecomi/alpha': {
+    target: 'takashiski/hecomi/alpha'
   },
   'helix/pico/sc/back': {
     target: 'helix/pico/sc'
@@ -236,17 +452,41 @@ const lookup = {
   'helix/rev2/under/oled': {
     target: 'helix/rev2/under'
   },
+  hid_liber: {
+    target: 'bpiphany/hid_liber'
+  },
   honeycomb: {
     target: 'keyhive/honeycomb'
   },
+  'id67/default_rgb': {
+    target: 'idobao/id67/default_rgb'
+  },
+  'id67/rgb': {
+    target: 'idobao/id67/rgb'
+  },
   id80: {
-    target: 'id80/ansi'
+    target: 'idobao/id80/v1'
+  },
+  id87: {
+    target: 'idobao/id87/v1'
   },
   idb_60: {
     target: 'idb/idb_60',
     layouts: {
       LAYOUT: 'LAYOUT_all'
     }
+  },
+  idobo: {
+    target: 'idobao/id75/v1'
+  },
+  infinity60: {
+    target: 'input_club/infinity60'
+  },
+  'ivy/rev1': {
+    target: 'maple_computing/ivy/rev1'
+  },
+  jisplit89: {
+    target: 'salicylic_acid3/jisplit89'
   },
   jj40: {
     target: 'kprepublic/jj40'
@@ -257,11 +497,26 @@ const lookup = {
   jj50: {
     target: 'kprepublic/jj50'
   },
+  jnao: {
+    target: 'maple_computing/jnao'
+  },
   jones: {
     target: 'jones/v03_1'
   },
+  just60: {
+    target: 'ydkb/just60'
+  },
+  k_type: {
+    target: 'input_club/k_type'
+  },
+  kagamidget: {
+    target: 'yynmt/kagamidget'
+  },
   katana60: {
     target: 'rominronin/katana60/rev1'
+  },
+  'kbdfans/kbd67/mkiirgb': {
+    target: 'kbdfans/kbd67/mkiirgb/v1'
   },
   'kbdfans/kbd67mkiirgb': {
     target: 'kbdfans/kbd67/mkiirgb',
@@ -269,11 +524,11 @@ const lookup = {
       LAYOUT: 'LAYOUT_65_ansi_blocker'
     }
   },
-  'kbdfans/kbd67/mkiirgb': {
-    target: 'kbdfans/kbd67/mkiirgb/v1'
-  },
   'keebio/dsp40': {
     target: 'keebio/dsp40/rev1'
+  },
+  'kelowna/rgb64': {
+    target: 'weirdo/kelowna/rgb64'
   },
   'keycapsss/kimiko': {
     target: 'keycapsss/kimiko/rev1'
@@ -290,8 +545,14 @@ const lookup = {
   'kprepublic/bm60rgb_iso': {
     target: 'kprepublic/bm60hsrgb_iso/rev1'
   },
+  'kprepublic/bm65hsrgb_iso': {
+    target: 'kprepublic/bm65hsrgb_iso/rev1'
+  },
   'kprepublic/bm65iso': {
     target: 'kprepublic/bm65hsrgb_iso'
+  },
+  'kprepublic/bm68hsrgb': {
+    target: 'kprepublic/bm68hsrgb/rev1'
   },
   'kprepublic/bm68rgb': {
     target: 'kprepublic/bm68hsrgb'
@@ -305,14 +566,59 @@ const lookup = {
   'kyria/rev1': {
     target: 'splitkb/kyria/rev1'
   },
+  latin17rgb: {
+    target: 'latincompass/latin17rgb'
+  },
+  latin47ble: {
+    target: 'latincompass/latin47ble'
+  },
+  latin60rgb: {
+    target: 'latincompass/latin60rgb'
+  },
+  latin64ble: {
+    target: 'latincompass/latin64ble'
+  },
+  latin6rgb: {
+    target: 'latincompass/latin6rgb'
+  },
+  latinpad: {
+    target: 'latincompass/latinpad'
+  },
+  latinpadble: {
+    target: 'latincompass/latinpadble'
+  },
   lattice60: {
     target: 'keyhive/lattice60'
+  },
+  'launchpad/rev1': {
+    target: 'maple_computing/launchpad/rev1'
+  },
+  lck75: {
+    target: 'lyso1/lck75'
+  },
+  le_chiffre: {
+    target: 'tominabox1/le_chiffre'
+  },
+  lefishe: {
+    target: 'lyso1/lefishe'
+  },
+  'lets_split_eh/eh': {
+    target: 'maple_computing/lets_split_eh/eh'
   },
   'lfkeyboards/lfk78': {
     target: 'lfkeyboards/lfk78/revj'
   },
   'lfkeyboards/smk65': {
     target: 'lfkeyboards/smk65/revb'
+  },
+  ls_60: {
+    target: 'weirdo/ls_60'
+  },
+  m0lly: {
+    target: 'tkc/m0lly'
+  },
+  m3n3van: {
+    target: 'matthewdias/m3n3van'
   },
   'maartenwut/atom47/rev2': {
     target: 'evyd13/atom47/rev2'
@@ -377,9 +683,6 @@ const lookup = {
   'maartenwut/wonderland': {
     target: 'evyd13/wonderland'
   },
-  'mechlovin/hannah910': {
-    target: 'mechlovin/hannah910/rev1'
-  },
   'mechlovin/adelais/rgb_led': {
     target: 'mechlovin/adelais/rgb_led/rev1'
   },
@@ -392,23 +695,53 @@ const lookup = {
   'mechlovin/hannah60rgb': {
     target: 'mechlovin/hannah60rgb/rev1'
   },
+  'mechlovin/hannah65': {
+    target: 'mechlovin/hannah65/rev1'
+  },
   'mechlovin/hannah65/mechlovin9': {
     target: 'mechlovin/mechlovin9'
+  },
+  'mechlovin/hannah910': {
+    target: 'mechlovin/hannah910/rev1'
+  },
+  'mechmini/v1': {
+    target: 'mechkeys/mechmini/v1'
+  },
+  'mechmini/v2': {
+    target: 'mechkeys/mechmini/v2'
+  },
+  meira: {
+    target: 'woodkeys/meira'
+  },
+  meishi: {
+    target: 'biacco42/meishi'
+  },
+  meishi2: {
+    target: 'biacco42/meishi2'
   },
   'melgeek/z70ultra': {
     target: 'melgeek/z70ultra/rev1'
   },
-  'mechlovin/hannah65': {
-    target: 'mechlovin/hannah65/rev1'
-  },
   melody96: {
     target: 'ymdk/melody96'
+  },
+  'minidox/rev1': {
+    target: 'maple_computing/minidox/rev1'
+  },
+  minim: {
+    target: 'matthewdias/minim'
+  },
+  mio: {
+    target: 'recompile_keys/mio'
   },
   model01: {
     target: 'keyboardio/model01'
   },
-  m0lly: {
-    target: 'tkc/m0lly'
+  model_v: {
+    target: 'matthewdias/model_v'
+  },
+  montex: {
+    target: 'idobao/montex/v1'
   },
   'montsinger/rebound': {
     target: 'montsinger/rebound/rev1'
@@ -424,6 +757,30 @@ const lookup = {
   },
   mt980: {
     target: 'mt/mt980'
+  },
+  nafuda: {
+    target: 'salicylic_acid3/nafuda'
+  },
+  'naiping/np64': {
+    target: 'weirdo/naiping/np64'
+  },
+  'naiping/nphhkb': {
+    target: 'weirdo/naiping/nphhkb'
+  },
+  'naiping/npminila': {
+    target: 'weirdo/naiping/npminila'
+  },
+  naked48: {
+    target: 'salicylic_acid3/naked48'
+  },
+  naked60: {
+    target: 'salicylic_acid3/naked60'
+  },
+  naked64: {
+    target: 'salicylic_acid3/naked64'
+  },
+  namecard2x4: {
+    target: 'takashiski/namecard2x4'
   },
   'navi10/rev0': {
     target: 'keyhive/navi10/rev0'
@@ -458,8 +815,38 @@ const lookup = {
   'nckiibs/waaffle/rev3/pro_micro': {
     target: 'delikeeb/waaffle/rev3/pro_micro'
   },
+  nebula12: {
+    target: 'spaceholdings/nebula12'
+  },
+  nebula68: {
+    target: 'spaceholdings/nebula68'
+  },
+  nebula68b: {
+    target: 'spaceholdings/nebula68b'
+  },
+  niu_mini: {
+    target: 'kbdfans/niu_mini'
+  },
+  nk1: {
+    target: 'novelkeys/nk1'
+  },
+  nk65: {
+    target: 'novelkeys/nk65'
+  },
+  nk87: {
+    target: 'novelkeys/nk87'
+  },
+  nknl7en: {
+    target: 'salicylic_acid3/nknl7en'
+  },
+  nknl7jp: {
+    target: 'salicylic_acid3/nknl7jp'
+  },
   nomu30: {
-    target: 'nomu30/rev1'
+    target: 'recompile_keys/nomu30'
+  },
+  novelpad: {
+    target: 'novelkeys/novelpad'
   },
   'noxary/268_2': {
     layouts: {
@@ -468,6 +855,9 @@ const lookup = {
   },
   oddball: {
     target: 'oddball/v1'
+  },
+  ogurec: {
+    target: 'drhigsby/ogurec'
   },
   omnikey_bh: {
     target: 'viktus/omnikey_bh'
@@ -478,8 +868,20 @@ const lookup = {
   opus: {
     target: 'keyhive/opus'
   },
+  'otaku_split/rev0': {
+    target: 'takashiski/otaku_split/rev0'
+  },
+  'otaku_split/rev1': {
+    target: 'takashiski/otaku_split/rev1'
+  },
+  owl8: {
+    target: 'dailycraft/owl8'
+  },
   'pabile/p20': {
     target: 'pabile/p20/ver1'
+  },
+  packrat: {
+    target: 'drhigsby/packrat'
   },
   'pancake/feather': {
     target: 'spaceman/pancake/feather'
@@ -495,11 +897,23 @@ const lookup = {
       LAYOUT_iso: 'LAYOUT_65_iso_blocker'
     }
   },
+  pistachio: {
+    target: 'rate/pistachio'
+  },
+  pistachio_mp: {
+    target: 'rate/pistachio_mp'
+  },
+  pistachio_pro: {
+    target: 'rate/pistachio_pro'
+  },
   plaid: {
     target: 'dm9records/plaid'
   },
   plain60: {
     target: 'maartenwut/plain60'
+  },
+  plexus75: {
+    target: 'checkerboards/plexus75'
   },
   'ploopyco/trackball': {
     target: 'ploopyco/trackball/rev1_005'
@@ -531,14 +945,23 @@ const lookup = {
   'projectkb/alice': {
     target: 'projectkb/alice/rev1'
   },
+  pursuit40: {
+    target: 'checkerboards/pursuit40'
+  },
+  qaz: {
+    target: 'tominabox1/qaz'
+  },
+  quark: {
+    target: 'checkerboards/quark'
+  },
+  rabbit_capture_plan: {
+    target: 'kakunpc/rabbit_capture_plan'
+  },
+  rainkeeb: {
+    target: 'rainkeebs/rainkeeb'
+  },
   'rama/koyu': {
     target: 'wilba_tech/rama_works_koyu'
-  },
-  'rama/m6_a': {
-    target: 'wilba_tech/rama_works_m6_a'
-  },
-  'rama/m6_b': {
-    target: 'wilba_tech/rama_works_m6_b'
   },
   'rama/m10_b': {
     target: 'wilba_tech/rama_works_m10_b'
@@ -546,11 +969,38 @@ const lookup = {
   'rama/m60_a': {
     target: 'wilba_tech/rama_works_m60_a'
   },
+  'rama/m6_a': {
+    target: 'wilba_tech/rama_works_m6_a'
+  },
+  'rama/m6_b': {
+    target: 'wilba_tech/rama_works_m6_b'
+  },
   'rama/u80_a': {
     target: 'wilba_tech/rama_works_u80_a'
   },
   'ramonimbao/herringbone': {
     target: 'ramonimbao/herringbone/v1'
+  },
+  reviung33: {
+    target: 'reviung/reviung33'
+  },
+  reviung34: {
+    target: 'reviung/reviung34'
+  },
+  reviung39: {
+    target: 'reviung/reviung39'
+  },
+  reviung41: {
+    target: 'reviung/reviung41'
+  },
+  reviung5: {
+    target: 'reviung/reviung5'
+  },
+  reviung53: {
+    target: 'reviung/reviung53'
+  },
+  reviung61: {
+    target: 'reviung/reviung61'
   },
   'rgbkb/pan': {
     target: 'rgbkb/pan/rev1/32a'
@@ -564,6 +1014,36 @@ const lookup = {
   ropro: {
     target: 'kingly_keys/ropro'
   },
+  'runner3680/3x6': {
+    target: 'omkbd/runner3680/3x6'
+  },
+  'runner3680/3x7': {
+    target: 'omkbd/runner3680/3x7'
+  },
+  'runner3680/3x8': {
+    target: 'omkbd/runner3680/3x8'
+  },
+  'runner3680/4x6': {
+    target: 'omkbd/runner3680/4x6'
+  },
+  'runner3680/4x7': {
+    target: 'omkbd/runner3680/4x7'
+  },
+  'runner3680/4x8': {
+    target: 'omkbd/runner3680/4x8'
+  },
+  'runner3680/5x6': {
+    target: 'omkbd/runner3680/5x6'
+  },
+  'runner3680/5x6_5x8': {
+    target: 'omkbd/runner3680/5x6_5x8'
+  },
+  'runner3680/5x7': {
+    target: 'omkbd/runner3680/5x7'
+  },
+  'runner3680/5x8': {
+    target: 'omkbd/runner3680/5x8'
+  },
   's7_elephant/rev1': {
     target: 'jacky_studio/s7_elephant/rev1'
   },
@@ -572,6 +1052,18 @@ const lookup = {
   },
   satan: {
     target: 'gh60/satan'
+  },
+  scarletbandana: {
+    target: 'woodkeys/scarletbandana'
+  },
+  scythe: {
+    target: 'kagizaraya/scythe'
+  },
+  seigaiha: {
+    target: 'yiancardesigns/seigaiha'
+  },
+  setta21: {
+    target: 'salicylic_acid3/setta21'
   },
   skog: {
     target: 'percent/skog'
@@ -585,11 +1077,35 @@ const lookup = {
   southpole: {
     target: 'keyhive/southpole'
   },
+  'space_space/rev1': {
+    target: 'qpockets/space_space/rev1'
+  },
+  'space_space/rev2': {
+    target: 'qpockets/space_space/rev2'
+  },
   speedo: {
     target: 'cozykeys/speedo/v2'
   },
+  'spiderisland/winry25tc': {
+    target: 'winry/winry25tc'
+  },
+  splitreus62: {
+    target: 'nacly/splitreus62'
+  },
+  'squiggle/rev1': {
+    target: 'ibnuda/squiggle/rev1'
+  },
+  standaside: {
+    target: 'edi/standaside'
+  },
   staryu: {
     target: 'ktec/staryu'
+  },
+  steal_this_keyboard: {
+    target: 'obosob/steal_this_keyboard'
+  },
+  stella: {
+    target: 'hnahkb/stella'
   },
   stoutgat: {
     target: 'tkw/stoutgat/v1'
@@ -597,11 +1113,29 @@ const lookup = {
   suihankey: {
     target: 'suihankey/split/alpha'
   },
+  'suihankey/alpha': {
+    target: 'kakunpc/suihankey/alpha'
+  },
+  'suihankey/rev1': {
+    target: 'kakunpc/suihankey/rev1'
+  },
+  'suihankey/split': {
+    target: 'kakunpc/suihankey/split'
+  },
   ta65: {
     target: 'maartenwut/ta65'
   },
   tartan: {
     target: 'dm9records/tartan'
+  },
+  the_ruler: {
+    target: 'maple_computing/the_ruler'
+  },
+  thedogkeyboard: {
+    target: 'kakunpc/thedogkeyboard'
+  },
+  tiger910: {
+    target: 'weirdo/tiger910'
   },
   tkc1800: {
     target: 'tkc/tkc1800'
@@ -612,8 +1146,29 @@ const lookup = {
   tokyo60: {
     target: 'tokyokeyboard/tokyo60'
   },
+  treadstone32: {
+    target: 'marksard/treadstone32'
+  },
+  'treadstone48/rev1': {
+    target: 'marksard/treadstone48/rev1'
+  },
+  'treadstone48/rev2': {
+    target: 'marksard/treadstone48/rev2'
+  },
+  txuu: {
+    target: 'matthewdias/txuu'
+  },
+  ua62: {
+    target: 'nacly/ua62'
+  },
   underscore33: {
     target: 'underscore33/rev1'
+  },
+  'underscore33/rev1': {
+    target: 'tominabox1/underscore33/rev1'
+  },
+  'underscore33/rev2': {
+    target: 'tominabox1/underscore33/rev2'
   },
   uno: {
     target: 'keyhive/uno'
@@ -626,6 +1181,15 @@ const lookup = {
     layouts: {
       LAYOUT_67_ansi: 'LAYOUT_65_ansi_blocker'
     }
+  },
+  vn66: {
+    target: 'hnahkb/vn66'
+  },
+  wallaby: {
+    target: 'kkatano/wallaby'
+  },
+  wanten: {
+    target: 'qpockets/wanten'
   },
   wasdat: {
     target: 'maartenwut/wasdat'
@@ -641,6 +1205,18 @@ const lookup = {
   },
   'wheatfield/split75': {
     target: 'mt/split75'
+  },
+  whitefox: {
+    target: 'input_club/whitefox'
+  },
+  'wings42/rev1': {
+    target: 'dailycraft/wings42/rev1'
+  },
+  'wings42/rev1_extkeys': {
+    target: 'dailycraft/wings42/rev1_extkeys'
+  },
+  'wings42/rev2': {
+    target: 'dailycraft/wings42/rev2'
   },
   xd002: {
     target: 'xiudi/xd002'
@@ -678,606 +1254,6 @@ const lookup = {
   'xelus/valor': {
     target: 'xelus/valor/rev1'
   },
-  yd60mq: {
-    target: 'yd60mq/12led'
-  },
-  ymd75: {
-    target: 'ymd75/rev1'
-  },
-  z150_bh: {
-    target: 'viktus/z150_bh'
-  },
-  z150_blackheart: {
-    target: 'z150_bh'
-  },
-  zeal60: {
-    target: 'wilba_tech/zeal60'
-  },
-  zeal65: {
-    target: 'wilba_tech/zeal65'
-  },
-  '6ball': {
-    target: 'maple_computing/6ball'
-  },
-  '7skb/rev1': {
-    target: 'salicylic_acid3/7skb/rev1'
-  },
-  '7splus': {
-    target: 'salicylic_acid3/7splus'
-  },
-  acr60: {
-    target: 'mechkeys/acr60'
-  },
-  adalyn: {
-    target: 'tominabox1/adalyn'
-  },
-  ajisai74: {
-    target: 'salicylic_acid3/ajisai74'
-  },
-  aleth42: {
-    target: '25keys/aleth42'
-  },
-  alicia_cook: {
-    target: 'ibnuda/alicia_cook'
-  },
-  allison: {
-    target: 'prototypist/allison'
-  },
-  allison_numpad: {
-    target: 'prototypist/allison_numpad'
-  },
-  alu84: {
-    target: 'mechkeys/alu84'
-  },
-  'angel17/alpha': {
-    target: 'kakunpc/angel17/alpha'
-  },
-  'angel17/rev1': {
-    target: 'kakunpc/angel17/rev1'
-  },
-  'angel64/alpha': {
-    target: 'kakunpc/angel64/alpha'
-  },
-  'angel64/rev1': {
-    target: 'kakunpc/angel64/rev1'
-  },
-  arch_36: {
-    target: 'obosob/arch_36'
-  },
-  bakeneko60: {
-    target: 'kkatano/bakeneko60'
-  },
-  'bakeneko65/rev2': {
-    target: 'kkatano/bakeneko65/rev2'
-  },
-  'bakeneko65/rev3': {
-    target: 'kkatano/bakeneko65/rev3'
-  },
-  bakeneko80: {
-    target: 'kkatano/bakeneko80'
-  },
-  barleycorn: {
-    target: 'yiancardesigns/barleycorn'
-  },
-  'bat43/rev1': {
-    target: 'dailycraft/bat43/rev1'
-  },
-  'bat43/rev2': {
-    target: 'dailycraft/bat43/rev2'
-  },
-  'bigseries/1key': {
-    target: 'woodkeys/bigseries/1key'
-  },
-  'bigseries/2key': {
-    target: 'woodkeys/bigseries/2key'
-  },
-  'bigseries/3key': {
-    target: 'woodkeys/bigseries/3key'
-  },
-  'bigseries/4key': {
-    target: 'woodkeys/bigseries/4key'
-  },
-  bkf: {
-    target: 'drhigsby/bkf'
-  },
-  'business_card/alpha': {
-    target: 'kakunpc/business_card/alpha'
-  },
-  'business_card/beta': {
-    target: 'kakunpc/business_card/beta'
-  },
-  butterstick: {
-    target: 'gboards/butterstick'
-  },
-  c39: {
-    target: 'maple_computing/c39'
-  },
-  cassette42: {
-    target: '25keys/cassette42'
-  },
-  chidori: {
-    target: 'kagizaraya/chidori'
-  },
-  chili: {
-    target: 'ydkb/chili'
-  },
-  chimera_ergo: {
-    target: 'glenpickle/chimera_ergo'
-  },
-  chimera_ls: {
-    target: 'glenpickle/chimera_ls'
-  },
-  chimera_ortho: {
-    target: 'glenpickle/chimera_ortho'
-  },
-  chimera_ortho_plus: {
-    target: 'glenpickle/chimera_ortho_plus'
-  },
-  choc_taro: {
-    target: 'kakunpc/choc_taro'
-  },
-  choco60: {
-    target: 'recompile_keys/choco60'
-  },
-  christmas_tree: {
-    target: 'maple_computing/christmas_tree'
-  },
-  'claw44/rev1': {
-    target: 'dailycraft/claw44/rev1'
-  },
-  cocoa40: {
-    target: 'recompile_keys/cocoa40'
-  },
-  comet46: {
-    target: 'satt/comet46'
-  },
-  cu24: {
-    target: 'capsunlocked/cu24'
-  },
-  cu75: {
-    target: 'capsunlocked/cu75'
-  },
-  cu80: {
-    target: 'capsunlocked/cu80/v1'
-  },
-  delilah: {
-    target: 'rainkeebs/delilah'
-  },
-  diverge3: {
-    target: 'unikeyboard/diverge3'
-  },
-  divergetm2: {
-    target: 'unikeyboard/divergetm2'
-  },
-  dozen0: {
-    target: 'yynmt/dozen0'
-  },
-  dubba175: {
-    target: 'drhigsby/dubba175'
-  },
-  eggman: {
-    target: 'qpockets/eggman'
-  },
-  ergo42: {
-    target: 'biacco42/ergo42'
-  },
-  ergoarrows: {
-    target: 'salicylic_acid3/ergoarrows'
-  },
-  'ergodash/mini': {
-    target: 'omkbd/ergodash/mini'
-  },
-  'ergodash/rev1': {
-    target: 'omkbd/ergodash/rev1'
-  },
-  ergodox_infinity: {
-    target: 'input_club/ergodox_infinity'
-  },
-  ergotaco: {
-    target: 'gboards/ergotaco'
-  },
-  espectro: {
-    target: 'mechkeys/espectro'
-  },
-  felix: {
-    target: 'unikeyboard/felix'
-  },
-  four_banger: {
-    target: 'bpiphany/four_banger'
-  },
-  freyr: {
-    target: 'hnahkb/freyr'
-  },
-  geminate60: {
-    target: 'weirdo/geminate60'
-  },
-  georgi: {
-    target: 'gboards/georgi'
-  },
-  gergo: {
-    target: 'gboards/gergo'
-  },
-  getta25: {
-    target: 'salicylic_acid3/getta25'
-  },
-  gingham: {
-    target: 'yiancardesigns/gingham'
-  },
-  gurindam: {
-    target: 'ibnuda/gurindam'
-  },
-  halberd: {
-    target: 'kagizaraya/halberd'
-  },
-  'hecomi/alpha': {
-    target: 'takashiski/hecomi/alpha'
-  },
-  hid_liber: {
-    target: 'bpiphany/hid_liber'
-  },
-  'id67/default_rgb': {
-    target: 'idobao/id67/default_rgb'
-  },
-  'id67/rgb': {
-    target: 'idobao/id67/rgb'
-  },
-  id80: {
-    target: 'idobao/id80/v1'
-  },
-  id87: {
-    target: 'idobao/id87/v1'
-  },
-  idobo: {
-    target: 'idobao/id75/v1'
-  },
-  infinity60: {
-    target: 'input_club/infinity60'
-  },
-  'ivy/rev1': {
-    target: 'maple_computing/ivy/rev1'
-  },
-  jisplit89: {
-    target: 'salicylic_acid3/jisplit89'
-  },
-  jnao: {
-    target: 'maple_computing/jnao'
-  },
-  just60: {
-    target: 'ydkb/just60'
-  },
-  k_type: {
-    target: 'input_club/k_type'
-  },
-  kagamidget: {
-    target: 'yynmt/kagamidget'
-  },
-  'kelowna/rgb64': {
-    target: 'weirdo/kelowna/rgb64'
-  },
-  'kprepublic/bm65hsrgb_iso': {
-    target: 'kprepublic/bm65hsrgb_iso/rev1'
-  },
-  'kprepublic/bm68hsrgb': {
-    target: 'kprepublic/bm68hsrgb/rev1'
-  },
-  latin17rgb: {
-    target: 'latincompass/latin17rgb'
-  },
-  latin47ble: {
-    target: 'latincompass/latin47ble'
-  },
-  latin60rgb: {
-    target: 'latincompass/latin60rgb'
-  },
-  latin64ble: {
-    target: 'latincompass/latin64ble'
-  },
-  latin6rgb: {
-    target: 'latincompass/latin6rgb'
-  },
-  latinpad: {
-    target: 'latincompass/latinpad'
-  },
-  latinpadble: {
-    target: 'latincompass/latinpadble'
-  },
-  'launchpad/rev1': {
-    target: 'maple_computing/launchpad/rev1'
-  },
-  lck75: {
-    target: 'lyso1/lck75'
-  },
-  le_chiffre: {
-    target: 'tominabox1/le_chiffre'
-  },
-  lefishe: {
-    target: 'lyso1/lefishe'
-  },
-  'lets_split_eh/eh': {
-    target: 'maple_computing/lets_split_eh/eh'
-  },
-  ls_60: {
-    target: 'weirdo/ls_60'
-  },
-  m3n3van: {
-    target: 'matthewdias/m3n3van'
-  },
-  'mechmini/v1': {
-    target: 'mechkeys/mechmini/v1'
-  },
-  'mechmini/v2': {
-    target: 'mechkeys/mechmini/v2'
-  },
-  meira: {
-    target: 'woodkeys/meira'
-  },
-  meishi: {
-    target: 'biacco42/meishi'
-  },
-  meishi2: {
-    target: 'biacco42/meishi2'
-  },
-  'minidox/rev1': {
-    target: 'maple_computing/minidox/rev1'
-  },
-  minim: {
-    target: 'matthewdias/minim'
-  },
-  mio: {
-    target: 'recompile_keys/mio'
-  },
-  model_v: {
-    target: 'matthewdias/model_v'
-  },
-  montex: {
-    target: 'idobao/montex/v1'
-  },
-  nafuda: {
-    target: 'salicylic_acid3/nafuda'
-  },
-  'naiping/np64': {
-    target: 'weirdo/naiping/np64'
-  },
-  'naiping/nphhkb': {
-    target: 'weirdo/naiping/nphhkb'
-  },
-  'naiping/npminila': {
-    target: 'weirdo/naiping/npminila'
-  },
-  naked48: {
-    target: 'salicylic_acid3/naked48'
-  },
-  naked60: {
-    target: 'salicylic_acid3/naked60'
-  },
-  naked64: {
-    target: 'salicylic_acid3/naked64'
-  },
-  namecard2x4: {
-    target: 'takashiski/namecard2x4'
-  },
-  nebula12: {
-    target: 'spaceholdings/nebula12'
-  },
-  nebula68: {
-    target: 'spaceholdings/nebula68'
-  },
-  nebula68b: {
-    target: 'spaceholdings/nebula68b'
-  },
-  niu_mini: {
-    target: 'kbdfans/niu_mini'
-  },
-  nk1: {
-    target: 'novelkeys/nk1'
-  },
-  nk65: {
-    target: 'novelkeys/nk65'
-  },
-  nk87: {
-    target: 'novelkeys/nk87'
-  },
-  nknl7en: {
-    target: 'salicylic_acid3/nknl7en'
-  },
-  nknl7jp: {
-    target: 'salicylic_acid3/nknl7jp'
-  },
-  nomu30: {
-    target: 'recompile_keys/nomu30'
-  },
-  novelpad: {
-    target: 'novelkeys/novelpad'
-  },
-  ogurec: {
-    target: 'drhigsby/ogurec'
-  },
-  'otaku_split/rev0': {
-    target: 'takashiski/otaku_split/rev0'
-  },
-  'otaku_split/rev1': {
-    target: 'takashiski/otaku_split/rev1'
-  },
-  owl8: {
-    target: 'dailycraft/owl8'
-  },
-  packrat: {
-    target: 'drhigsby/packrat'
-  },
-  pistachio: {
-    target: 'rate/pistachio'
-  },
-  pistachio_mp: {
-    target: 'rate/pistachio_mp'
-  },
-  pistachio_pro: {
-    target: 'rate/pistachio_pro'
-  },
-  plexus75: {
-    target: 'checkerboards/plexus75'
-  },
-  pursuit40: {
-    target: 'checkerboards/pursuit40'
-  },
-  qaz: {
-    target: 'tominabox1/qaz'
-  },
-  quark: {
-    target: 'checkerboards/quark'
-  },
-  rabbit_capture_plan: {
-    target: 'kakunpc/rabbit_capture_plan'
-  },
-  rainkeeb: {
-    target: 'rainkeebs/rainkeeb'
-  },
-  reviung33: {
-    target: 'reviung/reviung33'
-  },
-  reviung34: {
-    target: 'reviung/reviung34'
-  },
-  reviung39: {
-    target: 'reviung/reviung39'
-  },
-  reviung41: {
-    target: 'reviung/reviung41'
-  },
-  reviung5: {
-    target: 'reviung/reviung5'
-  },
-  reviung53: {
-    target: 'reviung/reviung53'
-  },
-  reviung61: {
-    target: 'reviung/reviung61'
-  },
-  'runner3680/3x6': {
-    target: 'omkbd/runner3680/3x6'
-  },
-  'runner3680/3x7': {
-    target: 'omkbd/runner3680/3x7'
-  },
-  'runner3680/3x8': {
-    target: 'omkbd/runner3680/3x8'
-  },
-  'runner3680/4x6': {
-    target: 'omkbd/runner3680/4x6'
-  },
-  'runner3680/4x7': {
-    target: 'omkbd/runner3680/4x7'
-  },
-  'runner3680/4x8': {
-    target: 'omkbd/runner3680/4x8'
-  },
-  'runner3680/5x6': {
-    target: 'omkbd/runner3680/5x6'
-  },
-  'runner3680/5x6_5x8': {
-    target: 'omkbd/runner3680/5x6_5x8'
-  },
-  'runner3680/5x7': {
-    target: 'omkbd/runner3680/5x7'
-  },
-  'runner3680/5x8': {
-    target: 'omkbd/runner3680/5x8'
-  },
-  scarletbandana: {
-    target: 'woodkeys/scarletbandana'
-  },
-  scythe: {
-    target: 'kagizaraya/scythe'
-  },
-  seigaiha: {
-    target: 'yiancardesigns/seigaiha'
-  },
-  setta21: {
-    target: 'salicylic_acid3/setta21'
-  },
-  'space_space/rev1': {
-    target: 'qpockets/space_space/rev1'
-  },
-  'space_space/rev2': {
-    target: 'qpockets/space_space/rev2'
-  },
-  'spiderisland/winry25tc': {
-    target: 'winry/winry25tc'
-  },
-  splitreus62: {
-    target: 'nacly/splitreus62'
-  },
-  'squiggle/rev1': {
-    target: 'ibnuda/squiggle/rev1'
-  },
-  standaside: {
-    target: 'edi/standaside'
-  },
-  steal_this_keyboard: {
-    target: 'obosob/steal_this_keyboard'
-  },
-  stella: {
-    target: 'hnahkb/stella'
-  },
-  'suihankey/alpha': {
-    target: 'kakunpc/suihankey/alpha'
-  },
-  'suihankey/rev1': {
-    target: 'kakunpc/suihankey/rev1'
-  },
-  'suihankey/split': {
-    target: 'kakunpc/suihankey/split'
-  },
-  the_ruler: {
-    target: 'maple_computing/the_ruler'
-  },
-  thedogkeyboard: {
-    target: 'kakunpc/thedogkeyboard'
-  },
-  tiger910: {
-    target: 'weirdo/tiger910'
-  },
-  treadstone32: {
-    target: 'marksard/treadstone32'
-  },
-  'treadstone48/rev1': {
-    target: 'marksard/treadstone48/rev1'
-  },
-  'treadstone48/rev2': {
-    target: 'marksard/treadstone48/rev2'
-  },
-  txuu: {
-    target: 'matthewdias/txuu'
-  },
-  ua62: {
-    target: 'nacly/ua62'
-  },
-  'underscore33/rev1': {
-    target: 'tominabox1/underscore33/rev1'
-  },
-  'underscore33/rev2': {
-    target: 'tominabox1/underscore33/rev2'
-  },
-  vn66: {
-    target: 'hnahkb/vn66'
-  },
-  wallaby: {
-    target: 'kkatano/wallaby'
-  },
-  wanten: {
-    target: 'qpockets/wanten'
-  },
-  whitefox: {
-    target: 'input_club/whitefox'
-  },
-  'wings42/rev1': {
-    target: 'dailycraft/wings42/rev1'
-  },
-  'wings42/rev1_extkeys': {
-    target: 'dailycraft/wings42/rev1_extkeys'
-  },
-  'wings42/rev2': {
-    target: 'dailycraft/wings42/rev2'
-  },
   yasui: {
     target: 'rainkeebs/yasui'
   },
@@ -1299,6 +1275,18 @@ const lookup = {
   yurei: {
     target: 'kkatano/yurei'
   },
+  z150_bh: {
+    target: 'viktus/z150_bh'
+  },
+  z150_blackheart: {
+    target: 'z150_bh'
+  },
+  zeal60: {
+    target: 'wilba_tech/zeal60'
+  },
+  zeal65: {
+    target: 'wilba_tech/zeal65'
+  },
   zinc: {
     target: '25keys/zinc'
   },
@@ -1307,9 +1295,6 @@ const lookup = {
   },
   'zinc/reva': {
     target: '25keys/zinc/reva'
-  },
-  ergodox_ez: {
-    target: 'ergodox_ez/base'
   }
 };
 
