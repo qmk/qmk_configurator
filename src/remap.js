@@ -981,6 +981,9 @@ const lookup = {
   'ramonimbao/herringbone': {
     target: 'ramonimbao/herringbone/v1'
   },
+  'redox/rev1': {
+    target: 'redox/rev1/base'
+  },
   reviung33: {
     target: 'reviung/reviung33'
   },
