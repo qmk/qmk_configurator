@@ -83,6 +83,18 @@ export default [
     title: 'Resets EEPROM state',
     width: 1500
   },
+  {
+    name: 'Repeat',
+    code: 'QK_REP',
+    title: 'Repeat last key pressed',
+    width: 1500
+  },
+  {
+    name: 'Alt Repeat',
+    code: 'QK_AREP',
+    title: 'Perform alternate of last key pressed',
+    width: 1500
+  },
   { width: 1000 },
   {
     name: 'Any',

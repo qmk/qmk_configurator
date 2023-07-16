@@ -245,6 +245,8 @@ export const longFormKeycodes = {
   DEBUG: 'DB_TOGG',
   EEPROM_RESET: 'EE_CLR',
   EEP_RST: 'EE_CLR',
+  QK_REPEAT_KEY: 'QK_REP',
+  QK_ALT_REPEAT_KEY: 'QK_AREP',
   // Audio Keys
   CLICKY_TOGGLE: 'CK_TOGG',
   CLICKY_UP: 'CK_UP',
