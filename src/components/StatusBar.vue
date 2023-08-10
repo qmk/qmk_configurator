@@ -13,6 +13,9 @@
         <span class="version-num">v{{ version }}</span>
       </div>
     </div>
+    <div class="standing-notice">
+      Compile jobs are currently disabled due to a hardware failure.
+    </div>
     <div class="bes-title">
       <div class="bes-status">
         <div class="bes-status-left" :class="currentStatusClass">
