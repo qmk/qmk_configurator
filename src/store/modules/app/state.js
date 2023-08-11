@@ -47,7 +47,7 @@ const state = {
   layout: '',
   layouts: {},
   keymapName: '',
-  compileDisabled: true,
+  compileDisabled: false,
   isPreview: false,
   previewRequested: false,
   jobID: '',
