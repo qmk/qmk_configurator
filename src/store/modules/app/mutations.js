@@ -5,7 +5,7 @@ import { PREVIEW_LABEL } from '@/store/modules/constants';
 
 const mutations = {
   enableCompile(state) {
-    state.compileDisabled = true;
+    state.compileDisabled = false;
   },
   disableCompile(state) {
     state.compileDisabled = true;
