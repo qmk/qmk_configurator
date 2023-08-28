@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/gherkin",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
+  "commit": "9ab16e62f75dc6228549ec0aba00ec0704bbc779",
   "layout": "LAYOUT_ortho_3x10",
   "layers": [
     [

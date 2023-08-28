@@ -1,8 +1,8 @@
 {
   "keyboard": "holyswitch/lightweight65",
   "keymap": "default",
-  "commit": "b110a09886b9d27fea33de2a488e2b74d9baa27e",
-  "layout": "LAYOUT",
+  "commit": "5d0d39b5223b0eb16ae90349ad3904b8857c6696",
+  "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_HOME",

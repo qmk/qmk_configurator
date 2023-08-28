@@ -1,31 +1,23 @@
 {
   "keyboard": "keebio/bamfk1",
   "keymap": "default",
-  "commit": "a12d58c6c965254bdf40ae0f02a6644e183eb17c",
+  "commit": "583c68893155e37dfd0b35a58dc1044cb714a418",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_A",
-      "MO(1)",   "KC_MUTE",
-      "KC_DOWN", "KC_UP",
-      "KC_VOLD", "KC_VOLU"
+      "RGB_MOD",
+      "TL_LOWR", "KC_MUTE"
     ],
     [
       "KC_B",
-      "_______", "KC_C",
-      "KC_PGDN", "KC_PGUP",
-      "KC_VOLU", "KC_VOLD"
+      "_______", "KC_C"
     ],
     [
       "_______",
-      "_______", "_______",
-      "_______", "_______",
       "_______", "_______"
     ],
     [
       "_______",
-      "_______", "_______",
-      "_______", "_______",
       "_______", "_______"
     ]
   ]
