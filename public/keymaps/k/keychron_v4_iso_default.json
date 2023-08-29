@@ -1,8 +1,8 @@
 {
   "keyboard": "keychron/v4/iso",
   "keymap": "default",
-  "commit": "0ab4f536917530835bbd4d6d260029868a3374e8",
-  "layout": "LAYOUT_iso_62",
+  "commit": "5252f7f6978603323b3d8289d1ae242caf1ed4da",
+  "layout": "LAYOUT_60_iso",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC",

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/bumblebee",
   "keymap": "default",
-  "commit": "fc8346e0b3d601aadf37fd7a1e708910cee22f75",
+  "commit": "0b802defd4ad81f38bdd3ae0192e2a834f7d99be",
   "layout": "LAYOUT_all",
   "layers": [
     [

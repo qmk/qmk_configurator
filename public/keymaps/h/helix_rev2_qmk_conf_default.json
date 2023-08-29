@@ -1,7 +1,7 @@
 {
   "keyboard": "helix/rev2/qmk_conf",
   "keymap": "default",
-  "commit": "d579d82cacd9c69634790d9a9de5edeeaa19226f",
+  "commit": "6018b56c5595b97e45837d1ee9c96d9c3d795c43",
   "layout": "LAYOUT",
   "layers": [
     [

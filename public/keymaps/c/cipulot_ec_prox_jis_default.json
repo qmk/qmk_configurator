@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/ec_prox/jis",
   "keymap": "default",
-  "commit": "15cb7ded76794a94fa7be3c2b8d3bad1607582aa",
+  "commit": "45dc1ccffedd92c543997cc153efbaf058a46616",
   "layout": "LAYOUT_jp",
   "layers": [
     [

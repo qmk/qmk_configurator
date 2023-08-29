@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/wulkan",
   "keymap": "default",
-  "commit": "d0ebafaea6847926e6391a6920821bcb17b3c39c",
+  "commit": "a4ed6ad0f5ccbbf1b497dc03ba64820bdaaa8957",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

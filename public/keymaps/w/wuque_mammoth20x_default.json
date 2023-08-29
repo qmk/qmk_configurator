@@ -1,11 +1,11 @@
 {
   "keyboard": "wuque/mammoth20x",
   "keymap": "default",
-  "commit": "66857b919beccfc9d3395ffe1f88cb39e044aca3",
+  "commit": "c4a67d3f3302f3096bb6b15921c9587643164ba9",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_ESC",  "KC_PAUS", "KC_DEL",  "KC_VOLU", "KC_MUTE", "KC_VOLD",
+      "KC_ESC",  "KC_PAUS", "KC_DEL",  "KC_MUTE",
       "KC_LNUM", "KC_PSLS", "KC_PAST", "KC_PMNS",
       "KC_P7",   "KC_P8",   "KC_P9",
       "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
@@ -13,7 +13,7 @@
       "KC_P0",              "KC_PDOT", "KC_PENT"
     ],
     [
-      "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______",
       "_______", "_______", "_______", "_______",
       "_______", "_______", "_______",
       "_______", "_______", "_______", "_______",

@@ -1,0 +1,13 @@
+{
+  "keyboard": "chouchou",
+  "keymap": "default",
+  "commit": "dbd847d4d3835ec4ab1067b535231284c5cece2d",
+  "layout": "LAYOUT_split_2x4_2",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",       "KC_N",    "KC_M",    "KC_L",    "KC_K",
+      "KC_E",    "KC_F",    "KC_G",    "KC_H",       "KC_R",    "KC_Q",    "KC_P",    "KC_O",
+                            "KC_I",    "KC_J",       "KC_T",    "KC_S"
+    ]
+  ]
+}
