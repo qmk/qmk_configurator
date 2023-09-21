@@ -1,0 +1,13 @@
+{
+    "keyboard": "handwired/scottokeebs/scottomacrodeck",
+    "keymap": "default",
+    "commit": "e55220dbe0a8ff760e6d295a7d48ccad1ffd50eb",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "KC_1", "KC_2", "KC_3",
+            "KC_Q", "KC_W", "KC_E", "KC_R",
+            "KC_A", "KC_S", "KC_D", "KC_F"
+        ]
+    ]
+}
