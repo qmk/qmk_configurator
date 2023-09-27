@@ -1,0 +1,12 @@
+{
+  "keyboard": "binepad/pixie",
+  "keymap": "default",
+  "commit": "ec09c03b64b612bbc65d4ad155e9f513bf5a7008",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MPLY",
+      "KC_MPRV", "KC_MNXT"
+    ]
+  ]
+}
