@@ -1,0 +1,12 @@
+{
+  "keyboard": "wolf/m6_c",
+  "keymap": "default",
+  "commit": "47e72a95efb2fc84eb4ab630d54ec27e4c170ab4",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6"
+    ]
+  ]
+}

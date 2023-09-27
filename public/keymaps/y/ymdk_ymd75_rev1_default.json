@@ -1,8 +1,8 @@
 {
   "keyboard": "ymdk/ymd75/rev1",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
-  "layout": "LAYOUT",
+  "commit": "e3cbd8a9650a9e85be5c2d90ed21686863382376",
+  "layout": "LAYOUT_75_ansi",
   "macros": [
     [
       {"action":"down", "keycodes": ["LALT"]},

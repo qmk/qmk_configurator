@@ -1,0 +1,13 @@
+{
+  "keyboard": "1upkeyboards/1upslider8",
+  "keymap": "default",
+  "commit": "29d1a2cc510f29f9a703038490856a881a9156e9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                       "RGB_TOG",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ]
+  ]
+}
