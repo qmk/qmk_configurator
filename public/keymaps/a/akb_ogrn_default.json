@@ -1,7 +1,7 @@
 {
   "keyboard": "akb/ogrn",
   "keymap": "default",
-  "commit": "aee48b8aabc8f9d0b7d11f0fa77879e40337d224",
+  "commit": "05dfe9f9c5ee370d85ce25f1adc0d7e2dd94fa96",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
