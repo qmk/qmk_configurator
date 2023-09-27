@@ -1,0 +1,13 @@
+{
+  "keyboard": "momokai/aurora",
+  "keymap": "default",
+  "commit": "fffea620050dc44e1003658cc8f2f6ec5126e22f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_MUTE",
+      "KC_Z",    "KC_X",    "KC_C",
+      "KC_GRV",  "KC_ESC",  "KC_F2"
+    ]
+  ]
+}
