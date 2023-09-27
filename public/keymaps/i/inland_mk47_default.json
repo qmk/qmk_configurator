@@ -1,8 +1,8 @@
 {
   "keyboard": "inland/mk47",
   "keymap": "default",
-  "commit": "8d0e9e00c1399cfb0cd60c301602ba328134ca5f",
-  "layout": "LAYOUT",
+  "commit": "33d7fa1180d232dcdb024c68a8f4629dced32afb",
+  "layout": "LAYOUT_planck_mit",
   "layers": [
     [
       "KC_ESC",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",
