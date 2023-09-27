@@ -1,8 +1,8 @@
 {
   "keyboard": "wolf/silhouette",
   "keymap": "default",
-  "commit": "abe4e3471da376c757c9bb9161e1464689270b61",
-  "layout": "LAYOUT",
+  "commit": "6ba53f661a343ae2513985c60706bcbc70c25b99",
+  "layout": "LAYOUT_all",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC", "KC_DEL",    "KC_INS",  "KC_HOME", "KC_PGUP",
