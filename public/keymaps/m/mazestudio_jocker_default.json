@@ -1,8 +1,8 @@
 {
   "keyboard": "mazestudio/jocker",
   "keymap": "default",
-  "commit": "4e72ac169a197eb851734a96c9b480ddbaecdad9",
-  "layout": "LAYOUT",
+  "commit": "cfe52b6e6e9815cc31e3b53c049116037538ffa8",
+  "layout": "LAYOUT_ansi_split_bs",
   "layers": [
     [
       "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_F13",                "KC_SCRL",    "KC_PAUS", "KC_INS",  "KC_HOME", "KC_PSCR",
