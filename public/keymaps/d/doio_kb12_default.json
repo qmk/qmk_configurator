@@ -1,0 +1,26 @@
+{
+  "keyboard": "doio/kb12",
+  "keymap": "default",
+  "commit": "5626a9282cfe28cd267c5351e68e15914a5578bb",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",    "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",      "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",      "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12"
+    ],
+    [
+      "TO(2)",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(3)",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(4)",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(5)",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(0)",    "RGB_TOG", "RGB_MOD", "RGB_SPI", "RGB_SPD",    "RGB_SAI", "RGB_SAD", "RGB_HUI", "RGB_HUD",    "RGB_VAI", "RGB_VAD", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
