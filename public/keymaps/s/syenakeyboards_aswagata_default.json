@@ -1,0 +1,12 @@
+{
+  "keyboard": "syenakeyboards/aswagata",
+  "keymap": "default",
+  "commit": "bc5d407bf723057df8b450947239fb44923de505",
+  "layout": "LAYOUT_ortho_2x2",
+  "layers": [
+    [
+      "KC_COPY", "KC_PSTE",
+      "KC_SLCT", "KC_CUT"
+    ]
+  ]
+}
