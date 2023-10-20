@@ -142,10 +142,6 @@ const actions = {
     this.commit('keycodes/updateKeycodeNames');
     this.commit('keymap/updateKeycodeNames');
     this.commit(
-      'keycodes/changeActive',
-      state.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI'
-    );
-    this.commit(
       'tester/setLayout',
       state.configuratorSettings.iso ? 'ISO' : 'ANSI'
     );
@@ -164,17 +160,6 @@ const actions = {
       document.getElementsByTagName('html')[0].dataset.theme = '';
     }
     commit('setDarkmode', darkStatus);
-    await dispatch('saveConfiguratorSettings');
-  },
-  async toggleIso({ commit, state, dispatch }, init) {
-    let iso = state.configuratorSettings.iso;
-    if (!init) {
-      iso = !iso;
-    }
-    commit('setIso', iso);
-    this.commit('keymap/updateKeycodeNames');
-    this.commit('tester/setLayout', iso ? 'ISO' : 'ANSI');
-    await this.dispatch('tester/init');
     await dispatch('saveConfiguratorSettings');
   },
   async toggleClearLayerDefault({ commit, state, dispatch }) {
@@ -196,7 +181,6 @@ const actions = {
     await dispatch('fetchKeyboards');
     await dispatch('loadFavoriteKeyboard');
     await dispatch('toggleDarkMode', true);
-    await dispatch('toggleIso', true);
     await dispatch('loadLanguage');
     console.log('loadApplicationState End');
     commit('setAppInitialized', true);

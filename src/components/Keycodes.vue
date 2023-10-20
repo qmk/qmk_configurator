@@ -81,9 +81,6 @@ export default {
     ...mapGetters('keycodes', ['keycodes']),
     ...mapState('app', ['configuratorSettings']),
     ...mapState('keycodes', ['searchFilter', 'searchCounters', 'active']),
-    defaultTab() {
-      return this.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI';
-    },
     activeTab() {
       return this.keycodesByGroup[this.active];
     },

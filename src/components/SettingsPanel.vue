@@ -222,17 +222,13 @@ export default {
       'toggleDarkMode',
       'changeLanguage',
       'changeOSKeyboardLayout',
-      'toggleClearLayerDefault',
-      'toggleIso'
+      'toggleClearLayerDefault'
     ]),
     darkMode() {
       this.toggleDarkMode();
     },
     clearLayerDefault() {
       this.toggleClearLayerDefault();
-    },
-    iso() {
-      this.toggleIso();
     },
     help(key) {
       switch (key) {
@@ -253,9 +249,6 @@ export default {
           break;
         case 'osKeyboardLayout':
           this.helpText = this.$t('settingsPanel.osKeyboardLayout.help');
-          break;
-        case 'iso':
-          this.helpText = this.$t('settingsPanel.iso.help');
           break;
         case 'clearLayer':
           this.helpText = this.$t('settingsPanel.clearLayer.help');
