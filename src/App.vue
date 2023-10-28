@@ -6,7 +6,7 @@
         <p class="random-potato">{{ potatoFact }}</p>
       </header>
       <router-view />
-      <spinner :isVisible="showSpinner" :status="spinnerMsg" />
+      <spinner :is-visible="showSpinner" :status="spinnerMsg" />
       <InfoBar :msg="message" />
     </div>
     <slideout-panel></slideout-panel>
@@ -18,8 +18,8 @@
     <div
       class="help"
       :class="helpClasses"
-      @click="toggleTutorial"
       :title="$t('help.label')"
+      @click="toggleTutorial"
       @mouseenter="
         setMessage($t('help.label'));
         hover = true;
@@ -36,9 +36,9 @@
         size="3x"
       />
       <img
+        v-show="snowflakes && !tutorialEnabled"
         class="santa-hat"
         src="../assets/Santa_hat.svg"
-        v-show="snowflakes && !tutorialEnabled"
         alt="Santa Hat by Theresa Knott [Public domain], via Wikimedia Commons"
       />
       <font-awesome-icon
@@ -48,9 +48,9 @@
         size="3x"
       />
       <img
+        v-show="snowflakes && tutorialEnabled"
         class="jinglebell"
         src="../assets/jinglebell.svg"
-        v-show="snowflakes && tutorialEnabled"
         alt="Jingle Bell SVG Icon made from Icon Fonts is licensed by CC BY 3.0"
       />
     </div>
@@ -97,6 +97,26 @@ export default {
       hover: false
     };
   },
+  computed: {
+    ...mapGetters('keymap', ['isDirty']),
+    ...mapState([
+      'showSpinner',
+      'spinnerMsg',
+      'message',
+      'tutorialEnabled',
+      'snowflakes'
+    ]),
+    showInfoBar() {
+      return this.message !== '';
+    },
+    helpClasses() {
+      var classes = [];
+      if (this.hover) {
+        classes.push('faa-tada', 'animated-hover');
+      }
+      return classes.join(' ');
+    }
+  },
   async beforeMount() {
     await this.appLoad();
     this.randomPotatoFact();
@@ -121,26 +141,6 @@ export default {
     }
     // remove event listener
     window.removeEventListener('beforeunload', this.showConfirmationPrompt);
-  },
-  computed: {
-    ...mapGetters('keymap', ['isDirty']),
-    ...mapState([
-      'showSpinner',
-      'spinnerMsg',
-      'message',
-      'tutorialEnabled',
-      'snowflakes'
-    ]),
-    showInfoBar() {
-      return this.message !== '';
-    },
-    helpClasses() {
-      var classes = [];
-      if (this.hover) {
-        classes.push('faa-tada', 'animated-hover');
-      }
-      return classes.join(' ');
-    }
   },
   methods: {
     ...mapMutations([
@@ -234,6 +234,15 @@ export default {
 .jinglebell {
   width: 50px;
   transform: rotate(-9deg);
+}
+
+.qmk-logo {
+  grid-column: qmk-logo;
+  background-image: url('/qmk_icon_36.png');
+  width: 36px;
+  height: 36px;
+  transform: scale(0.777777);
+  margin-top: 2px;
 }
 
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */
