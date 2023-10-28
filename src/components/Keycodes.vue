@@ -21,12 +21,12 @@
     <div id="keycodes">
       <div class="tabs">
         <span
-          class="tab"
-          :class="classes(index)"
           v-for="(key, index) in keycodesByGroup"
           :key="index"
-          @click="changeActive(index)"
           :title="$t('keycodesTab.' + index + '.label')"
+          class="tab"
+          :class="classes(index)"
+          @click="changeActive(index)"
           >{{ $t('keycodesTab.' + index + '.label')
           }}<span v-if="searchFilter !== ''"
             >({{ searchCounters[index] }})</span
@@ -34,19 +34,19 @@
         >
         <span class="end-tab"
           ><font-awesome-icon class="keycode-search-icon" icon="search" /><input
-            @focus="stopListening"
-            @blur="startListening"
+            v-model="searchFilter_"
             type="text"
             :placeholder="$t('searchKeycodes')"
-            v-model="searchFilter_"
             autocomplete="off"
             spellcheck="false"
+            @focus="stopListening"
+            @blur="startListening"
         /></span>
       </div>
       <div class="tab-area">
         <template v-for="(key, index) in activeTab">
           <component
-            v-bind:is="getComponent(key.code)"
+            :is="getComponent(key.code)"
             v-bind="key"
             :key="index"
             :class="filterClass(key)"
@@ -66,16 +66,13 @@ import Space from '@/components/Space.vue';
 import store from '@/store';
 
 export default {
-  name: 'keycodes',
+  name: 'KeycodesComponent',
   components: { Keycode, Space },
   props: {},
   data() {
     return {
       clearTimeout: undefined
     };
-  },
-  mounted() {
-    this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
   },
   computed: {
     ...mapGetters('keycodes', ['keycodes']),
@@ -105,6 +102,9 @@ export default {
         this.debouncedSetSearchFilter(newVal);
       }
     }
+  },
+  mounted() {
+    this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),

@@ -1,13 +1,13 @@
 <template functional>
   <transition name="fade" appear>
-    <div class="veil-container" v-show="props.isVisible">
+    <div v-show="props.isVisible" class="veil-container">
       <slot name="contents">Something to Unveil</slot>
     </div>
   </transition>
 </template>
 <script>
 export default {
-  name: 'Veil',
+  name: 'VeilComponent',
   props: {
     isVisible: {
       type: Boolean,

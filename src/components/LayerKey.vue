@@ -1,8 +1,8 @@
 <template>
   <!-- prettier-ignore -->
   <div
-    draggable
     :id="myid"
+    draggable
     class="key key-layer"
     :class="myclasses"
     :style="mystyles"

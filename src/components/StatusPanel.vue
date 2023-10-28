@@ -2,23 +2,23 @@
   <div id="status">
     <textarea
       id="terminal"
-      v-model="message"
       ref="terminal"
+      v-model="message"
       readonly
       :class="terminalClasses"
     />
     <label
-      for="toggle-terminal"
       id="toggle-terminal-label"
+      for="toggle-terminal"
       :class="terminalClasses"
       @click="toggleTerminal"
       >{{ $t('toggleTerminal.label') }}</label
     >
     <font-awesome-icon
+      id="toggle-terminal"
       icon="chevron-up"
       size="lg"
       fixed-width
-      id="toggle-terminal"
       :title="$t('toggleTerminal.title')"
       :class="terminalClasses"
       @click="toggleTerminal"
@@ -28,7 +28,23 @@
 <script>
 import { mapGetters, mapMutations, mapState } from 'vuex';
 export default {
-  name: 'status-panel',
+  name: 'StatusPanel',
+  data: () => {
+    return {
+      isTerminalOpen: true
+    };
+  },
+  computed: {
+    ...mapGetters('status', ['message', 'scrollToLatest']),
+    ...mapState('app', ['compileDisabled']),
+    terminalClasses() {
+      const classes = [];
+      if (!this.isTerminalOpen) {
+        classes.push('collapsed');
+      }
+      return classes.join(' ');
+    }
+  },
   watch: {
     message(newV, oldV) {
       if (this.scrollToLatest && newV !== oldV) {
@@ -58,22 +74,6 @@ export default {
     toggleTerminal() {
       this.isTerminalOpen = !this.isTerminalOpen;
     }
-  },
-  computed: {
-    ...mapGetters('status', ['message', 'scrollToLatest']),
-    ...mapState('app', ['compileDisabled']),
-    terminalClasses() {
-      const classes = [];
-      if (!this.isTerminalOpen) {
-        classes.push('collapsed');
-      }
-      return classes.join(' ');
-    }
-  },
-  data: () => {
-    return {
-      isTerminalOpen: true
-    };
   }
 };
 </script>

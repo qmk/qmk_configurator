@@ -6,16 +6,16 @@
     <div class="layers">
       <!-- prettier-ignore -->
       <div
-        class="layer"
-        :class="layer.clazz"
         v-for="layer in layers"
         :key="layer.id"
+        class="layer"
+        :class="layer.clazz"
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
     <button
-      class="clear-button"
       v-tooltip="$t('layer.title')"
+      class="clear-button"
       @click="clearLayer"
     >
       <font-awesome-icon icon="trash" size="lg" fixed-width />
@@ -27,7 +27,7 @@ import rangeRight from 'lodash/rangeRight';
 import isUndefined from 'lodash/isUndefined';
 import { mapState, mapGetters, mapMutations } from 'vuex';
 export default {
-  name: 'layer-control',
+  name: 'LayerControl',
   computed: {
     ...mapState('keymap', ['layer']),
     ...mapState('app', ['configuratorSettings']),

@@ -11,11 +11,14 @@
 <script>
 import BaseKey from './BaseKey.vue';
 export default {
-  name: 'tester-key',
-  props: {
-    layer: Number
-  },
+  name: 'TesterKey',
   extends: BaseKey,
+  props: {
+    layer: {
+      type: Number,
+      default: 0
+    }
+  },
   computed: {
     myid() {
       return `key-${this.layer}-${this.id}`;

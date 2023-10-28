@@ -7,8 +7,8 @@
     </div>
     <div class="hint hint-right">
       <a
-        href="https://github.com/qmk/qmk_toolbox/releases"
         v-tooltip="$t('downloadToolbox.label')"
+        href="https://github.com/qmk/qmk_toolbox/releases"
         target="_blank"
         rel="noopener"
         >{{ $t('downloadToolbox.label') }}</a
@@ -20,7 +20,7 @@
       </div>
       <div class="right-side">
         <div class="keymap--area">
-          <label class="keymap--label" v-tooltip="$t('ColorwayTip.title')">
+          <label v-tooltip="$t('ColorwayTip.title')" class="keymap--label">
             {{ $t('keymap.label') }}:
             <font-awesome-icon
               v-if="continuousInput"
@@ -31,17 +31,17 @@
           &nbsp;
           <!-- maintain spacing for paragraph -->
           <select
-            class="keymap--keyset"
             id="colorway-select"
             v-model="curIndex"
+            class="keymap--keyset"
             @focus="focus"
             @blur="blur"
           >
             <option
-              class="option"
               v-for="(name, index) in displayColorways"
               :key="index"
               :value="index"
+              class="option"
             >
               {{ name }}
             </option>
@@ -49,10 +49,10 @@
           <a
             id="favorite-colorway"
             v-tooltip="$t('favoriteColor')"
-            @click="favColor"
             :class="{
               active: isFavoriteColor
             }"
+            @click="favColor"
           >
             <font-awesome-icon icon="star" size="lg" fixed-width />
           </a>
@@ -77,8 +77,7 @@ import VisualKeymap from '@/components/VisualKeymap.vue';
 import LayerControl from '@/components/LayerControl.vue';
 
 export default {
-  name: 'Main',
-  props: {},
+  name: 'MainComponent',
   components: {
     ControllerTop,
     StatusPanel,
@@ -86,6 +85,7 @@ export default {
     VisualKeymap,
     LayerControl
   },
+  props: {},
   computed: {
     ...mapState('app', ['appInitialized', 'configuratorSettings']),
     ...mapGetters('app', ['keyCount']),
@@ -132,6 +132,20 @@ export default {
       );
     }
   },
+  async mounted() {
+    await this.initKeypressListener();
+    // Loading favorite color
+    if (this.configuratorSettings.favoriteColor) {
+      const favoriteColor =
+        this.configuratorSettings.favoriteColor.toLowerCase();
+      this.curIndex = this.displayColorways.findIndex(
+        (color) => color.toLowerCase() === favoriteColor
+      );
+    }
+  },
+  beforeDestroy() {
+    this.resetListener();
+  },
   methods: {
     ...mapActions('app', ['setFavoriteColor', 'initKeypressListener']),
     ...mapMutations('keymap', ['nextColorway']),
@@ -153,20 +167,6 @@ export default {
     blur() {
       this.startListening();
     }
-  },
-  async mounted() {
-    await this.initKeypressListener();
-    // Loading favorite color
-    if (this.configuratorSettings.favoriteColor) {
-      const favoriteColor =
-        this.configuratorSettings.favoriteColor.toLowerCase();
-      this.curIndex = this.displayColorways.findIndex(
-        (color) => color.toLowerCase() === favoriteColor
-      );
-    }
-  },
-  beforeDestroy() {
-    this.resetListener();
   }
 };
 </script>

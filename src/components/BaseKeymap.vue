@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'base-keymap',
+  name: 'BaseKeymap',
   computed: {
     styles() {
       let keySize = 0.85;
