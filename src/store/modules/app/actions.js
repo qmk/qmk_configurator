@@ -166,17 +166,6 @@ const actions = {
     commit('setDarkmode', darkStatus);
     await dispatch('saveConfiguratorSettings');
   },
-  async toggleIso({ commit, state, dispatch }, init) {
-    let iso = state.configuratorSettings.iso;
-    if (!init) {
-      iso = !iso;
-    }
-    commit('setIso', iso);
-    this.commit('keymap/updateKeycodeNames');
-    this.commit('tester/setLayout', iso ? 'ISO' : 'ANSI');
-    await this.dispatch('tester/init');
-    await dispatch('saveConfiguratorSettings');
-  },
   async toggleClearLayerDefault({ commit, state, dispatch }) {
     let status = state.configuratorSettings.clearLayerDefault;
     status = !status;
@@ -196,7 +185,6 @@ const actions = {
     await dispatch('fetchKeyboards');
     await dispatch('loadFavoriteKeyboard');
     await dispatch('toggleDarkMode', true);
-    await dispatch('toggleIso', true);
     await dispatch('loadLanguage');
     console.log('loadApplicationState End');
     commit('setAppInitialized', true);
