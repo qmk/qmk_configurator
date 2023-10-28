@@ -142,6 +142,10 @@ const actions = {
     this.commit('keycodes/updateKeycodeNames');
     this.commit('keymap/updateKeycodeNames');
     this.commit(
+      'keycodes/changeActive',
+      state.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI'
+    );
+    this.commit(
       'tester/setLayout',
       state.configuratorSettings.iso ? 'ISO' : 'ANSI'
     );
