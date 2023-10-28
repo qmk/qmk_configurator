@@ -15,14 +15,14 @@
     @dragenter.prevent="dragenter"
   ><div :class="`${hasFocus ? 'key-layer-title-focus' : 'key-layer-title'}`">{{ displayName }}<div><input
   v-if="isShowingKeymapLegends"
+  ref="input"
+  v-model="value" 
+  :style="`width:calc(${this.charLength}ch + 6px);`"
   class="key-layer-input"
+  spellcheck="false"
   @focus.prevent.stop="focus"
   @blur.prevent.stop="blur"
-  @click.prevent.stop="clickignore"
-  ref="input"
-  spellcheck="false"
-  :style="`width:calc(${this.charLength}ch + 6px);`"
-  v-model="value" /></div></div><div
+  @click.prevent.stop="clickignore" /></div></div><div
         v-if="visible"
         class="remove"
         @click.stop="remove"
@@ -32,7 +32,7 @@
 import { mapMutations } from 'vuex';
 import BaseKey from './BaseKey.vue';
 export default {
-  name: 'any-key',
+  name: 'AnyKey',
   extends: BaseKey,
   data() {
     return {

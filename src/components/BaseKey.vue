@@ -1,8 +1,8 @@
 <template>
   <!-- prettier-ignore -->
   <div
-    draggable
     :id="myid"
+    draggable
     class="key"
     :class="myclasses"
     :style="mystyles"
@@ -99,26 +99,63 @@ const getKeySizeClass = (unitheight, unitwidth) => {
 };
 
 export default {
-  name: 'base-key',
+  name: 'BaseKey',
   props: {
-    id: Number,
-    meta: Object,
-    w: Number,
-    h: Number,
-    y: Number,
-    x: Number,
-    uh: Number,
-    uw: Number,
-    colorway: String,
+    id: {
+      type: Number,
+      default: 0
+    },
+    meta: {
+      type: Object,
+      default: () => {}
+    },
+    w: {
+      type: Number,
+      default: 0
+    },
+    h: {
+      type: Number,
+      default: 0
+    },
+    y: {
+      type: Number,
+      default: 0
+    },
+    x: {
+      type: Number,
+      default: 0
+    },
+    uh: {
+      type: Number,
+      default: 0
+    },
+    uw: {
+      type: Number,
+      default: 0
+    },
+    colorway: {
+      type: String,
+      default: ''
+    },
     legends: {
       type: String,
       default: 'keymap'
     },
-    matrix: Array,
+    matrix: {
+      type: Array,
+      default: () => []
+    },
     printable: {
       type: Boolean,
       default: false
     }
+  },
+  data() {
+    return {
+      inHover: false,
+      inSwap: false,
+      platform: undefined
+    };
   },
   computed: {
     ...mapState('keymap', ['config']),
@@ -324,13 +361,6 @@ export default {
       }
       this.setSelectedContent(id);
     }
-  },
-  data() {
-    return {
-      inHover: false,
-      inSwap: false,
-      platform: undefined
-    };
   }
 };
 </script>
