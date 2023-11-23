@@ -42,6 +42,7 @@ import slovak from './keymap_slovak';
 import slovenian from './keymap_slovenian';
 import spanish from './keymap_spanish';
 import spanish_dvorak from './keymap_spanish_dvorak';
+import spanish_latam from './keymap_spanish_latam';
 import swedish from './keymap_swedish';
 import swedish_mac_ansi from './keymap_swedish_mac_ansi';
 import swedish_mac_iso from './keymap_swedish_mac_iso';
@@ -467,17 +468,21 @@ export default {
     prefix: 'ES',
     sendstring: 'spanish',
     isANSI: false,
+    locales: ['ca-ES', 'es', 'es-ES', 'eu-ES', 'gl-ES'],
+    keycodeLUT: spanish
+  },
+  keymap_spanish_latam: {
+    prefix: 'LA',
+    sendstring: 'spanish_latam',
+    isANSI: false,
     locales: [
-      'ca-ES',
-      'es',
+      'es-CO',
       'es-AR',
       'es-BO',
       'es-CL',
-      'es-CO',
       'es-CR',
       'es-DO',
       'es-EC',
-      'es-ES',
       'es-GT',
       'es-HN',
       'es-MX',
@@ -488,11 +493,9 @@ export default {
       'es-PY',
       'es-SV',
       'es-UY',
-      'es-VE',
-      'eu-ES',
-      'gl-ES'
+      'es-VE'
     ],
-    keycodeLUT: spanish
+    keycodeLUT: spanish_latam
   },
   keymap_swedish: {
     prefix: 'SE',

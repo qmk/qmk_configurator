@@ -113,9 +113,9 @@ settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
 settingsPanel:language:title,Sprache
+settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,
 settingsPanel:legendType:matrix,
-settingsPanel:legendType:index,
 settingsPanel:legendType:size,
 settingsPanel:legends:help,
 settingsPanel:legends:title,
@@ -166,6 +166,7 @@ settingsPanel:osKeyboardLayout:label:keymap_slovak,Slowakisch (Slowakei)
 settingsPanel:osKeyboardLayout:label:keymap_slovenian,Slowenisch (Slowenien)
 settingsPanel:osKeyboardLayout:label:keymap_spanish,Katalanisch (Spanien)
 settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,Spanisch (Dvorak)
+settingsPanel:osKeyboardLayout:label:keymap_spanish_latam,
 settingsPanel:osKeyboardLayout:label:keymap_swedish,Schwedisch (Schweden)
 settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,Schwedisch (Mac ANSI)
 settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_iso,Schwedisch (Mac ISO)

@@ -17,6 +17,7 @@ node_modules
 
 .DS_Store
 node_modules
+.yarn
 /dist
 
 /tests/e2e/reports/
