@@ -43,7 +43,7 @@ export default [
   'keymap_slovenian',
   'keymap_spanish_dvorak',
   'keymap_spanish',
-  'keymap_spanish_latam',
+  'keymap_spanish_latin_america',
   'keymap_swedish',
   'keymap_swedish_mac_ansi',
   'keymap_swedish_mac_iso',

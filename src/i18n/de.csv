@@ -166,7 +166,7 @@ settingsPanel:osKeyboardLayout:label:keymap_slovak,Slowakisch (Slowakei)
 settingsPanel:osKeyboardLayout:label:keymap_slovenian,Slowenisch (Slowenien)
 settingsPanel:osKeyboardLayout:label:keymap_spanish,Katalanisch (Spanien)
 settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,Spanisch (Dvorak)
-settingsPanel:osKeyboardLayout:label:keymap_spanish_latam,
+settingsPanel:osKeyboardLayout:label:keymap_spanish_latin_america,Spanisch (Lateinamerika)
 settingsPanel:osKeyboardLayout:label:keymap_swedish,Schwedisch (Schweden)
 settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,Schwedisch (Mac ANSI)
 settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_iso,Schwedisch (Mac ISO)
