@@ -1,7 +1,7 @@
 {
-  "keyboard": "keychron/q4/ansi_v2",
+  "keyboard": "keychron/q4/ansi/v2",
   "keymap": "default",
-  "commit": "fa56e51894cf42cf0bc5bc4bce1b6f0d85c9dc34",
+  "commit": "a7406a429eb726731fe2a69e284282994dc9cd0c",
   "layout": "LAYOUT_ansi_61",
   "layers": [
     [
