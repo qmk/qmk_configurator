@@ -1,0 +1,3 @@
+{
+  "./src/**/*.{js,vue,scss,css}": "prettier --write"
+}

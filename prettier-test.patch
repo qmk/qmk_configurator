@@ -1,0 +1,206 @@
+diff --git a/src/components/BrowserWarn.vue b/src/components/BrowserWarn.vue
+index 7b1cabc2..9dc2afae 100644
+--- a/src/components/BrowserWarn.vue
++++ b/src/components/BrowserWarn.vue
+@@ -4,17 +4,9 @@
+     {{ $t('errors.unsupportedBrowser') }}
+     <a
+       href="https://www.google.com/intl/en_us/chrome/"
+-      target="_blank"
+-      rel="noopener"
+-      >Google Chrome</a
+-    >
++      target="_blank" rel="noopener">Google Chrome</a>
+     /
+-    <a
+-      href="https://www.mozilla.org/en-US/firefox/new/"
+-      target="_blank"
+-      rel="noopener"
+-      >Mozilla Firefox</a
+-    >
++    <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank" rel="noopener">Mozilla Firefox</a>
+   </div>
+ </template>
+ 
+@@ -46,19 +38,12 @@ export default {
+ 
+ <style>
+ #browser-warn {
+-  padding: 0 5px;
+-  z-index: 3001;
+-  position: fixed;
++  padding: 0 5px; z-index: 3001; position: fixed;
+   top: 20px;
+-  left: 0;
+-  background: #d00;
+-  color: #e0e0e0;
++  left: 0; background: #d00; color: #e0e0e0;
+   width: 100%;
+ }
+-#browser-warn a {
+-  color: #e0e0e0;
+-  font-weight: bold;
+-}
++#browser-warn a { color: #e0e0e0; font-weight: bold; }
+ a.dismiss {
+   cursor: pointer;
+ }
+diff --git a/src/components/ControllerBottom.vue b/src/components/ControllerBottom.vue
+index 40dbe530..20767ca6 100644
+--- a/src/components/ControllerBottom.vue
++++ b/src/components/ControllerBottom.vue
+@@ -25,7 +25,7 @@
+         v-tooltip.bottom="$t('downloadJSON.title')"
+         @click="exportJSON"
+       >
+-        <font-awesome-icon icon="download" size="lg" fixed-width />
++  <font-awesome-icon icon="download" size="lg" fixed-width />
+       </button>
+       <span class="label-button">{{ $t('downloadJSON.label') }}</span>
+       <button
+@@ -352,8 +352,12 @@ export default {
+         return;
+       }
+ 
++
+       /* TODO Add check for keyboard name and layout */
+ 
++
++
++
+       if (!isUndefined(data.author)) {
+         const { author, notes } = data;
+         this.setAuthor(author);
+diff --git a/src/components/PrintKey.vue b/src/components/PrintKey.vue
+index 8e4430e5..309e4ba8 100644
+--- a/src/components/PrintKey.vue
++++ b/src/components/PrintKey.vue
+@@ -26,15 +26,15 @@ export default {
+       if (this.meta.type === 'layer') {
+         return this.meta.code.replace('layer', this.meta.layer);
+       }
+-      if (this.meta.type === 'text') {
++      if (this.meta.type === "text") {
+         return this.formatName(this.breakLines(this.meta.text));
+       }
+-      if (this.meta.type === 'layer-container') {
++      if (this.meta.type === "layer-container") {
+         return `${this.meta.name.toUpperCase()},\n${this.formatName(
+           this.meta.contents.code
+         )}`;
+       }
+-      if (this.meta.type === 'container') {
++      if (this.meta.type === "container") {
+         return `${this.meta.name.toUpperCase()}\n(${this.formatName(
+           this.meta.contents.code
+         )})`;
+@@ -61,10 +61,7 @@ export default {
+ }
+ 
+ .print-keymap:after {
+-  content: ' ';
+-  display: block;
+-  height: 0;
+-  clear: both;
++  content: ' '; display: block; height: 0; clear: both;
+ }
+ 
+ .print-keymap > .keycode-select {
+diff --git a/src/components/StatusBar.vue b/src/components/StatusBar.vue
+index ef27b93f..a8c41e23 100644
+--- a/src/components/StatusBar.vue
++++ b/src/components/StatusBar.vue
+@@ -2,9 +2,7 @@
+   <div class="backend-status">
+     <div class="qmk-branding">
+       <a
+-        target="_blank"
+-        rel="noopener"
+-        href="https://github.com/qmk/qmk_configurator"
++        target="_blank"   rel="noopener"    href="https://github.com/qmk/qmk_configurator"
+         ><div title="See the QMK Configurator Repo" class="qmk-logo"></div
+       ></a>
+       <div class="qmk-app-name">QMK Configurator</div>
+@@ -38,20 +36,20 @@
+         fixed-width
+       />
+       <font-awesome-icon icon="cog" size="lg" />
+-      <font-awesome-icon
+-        v-if="settingsPanelVisible"
+-        icon="chevron-right"
+-        fixed-width
+-      />
++      <font-awesome-icon        v-if="settingsPanelVisible"
++        icon="chevron-right"        fixed-width      />
+       {{ $t('settings') }}
+     </div>
+   </div>
+ </template>
+ <script>
+-import axios from 'axios';
+-import escape from 'lodash/escape';
++import axios from "axios";
++import escape from "lodash/escape";
+ import { backend_status_url } from '@/store/modules/constants';
+-import { mapState, mapMutations } from 'vuex';
++import {
++  mapState,
++  mapMutations
++  } from 'vuex';
+ /**
+  * checkStatus - check status component to poll API for errors and status
+  * @return {object} Vue app component
+@@ -62,7 +60,9 @@ const warningWaterMark = 10;
+ export default {
+   name: 'status-bar',
+   computed: {
+-    ...mapState('app', ['settingsPanelVisible']),
++    ...mapState("app",
++
++    ['settingsPanelVisible']),
+     currentStatusClass() {
+       switch (this.status) {
+         case 'running':
+@@ -127,7 +127,7 @@ export default {
+       version: '0.1',
+       jobCount: 0,
+       hasError: false,
+-      jobs: 'Initializing'
++      jobs: 'Initializing',
+     };
+   },
+   mounted() {
+@@ -137,9 +137,7 @@ export default {
+ </script>
+ <style>
+ .bes-high-job-count {
+-  color: red;
+-}
+-.bes-odd-job-count {
+-  color: yellow;
++  color: red; }
++.bes-odd-job-count {  color: yellow;
+ }
+ </style>
+diff --git a/src/store/index.js b/src/store/index.js
+index 7d6df9dc..b5800925 100644
+--- a/src/store/index.js
++++ b/src/store/index.js
+@@ -1,10 +1,10 @@
+-import Vue from 'vue';
+-import Vuex from 'vuex';
+-import app from './modules/app';
+-import status from './modules/status';
+-import keymap from './modules/keymap';
+-import keycodes from './modules/keycodes';
+-import tester from './modules/tester';
++import Vue from "vue";
++import Vuex from "vuex";
++import app from "./modules/app";
++import status from "./modules/status";
++import keymap from "./modules/keymap";
++import keycodes from "./modules/keycodes";
++import tester from "./modules/tester";
+ 
+ Vue.use(Vuex);
+ 
