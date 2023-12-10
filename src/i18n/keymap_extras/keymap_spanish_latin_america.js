@@ -29,7 +29,7 @@ export default {
    * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
    */
   // Row 1
-  KC_GRV: { name: '°  \n| ¬', title: 'ES_PIPE' },
+  KC_GRV: { name: '°\n|', title: 'ES_PIPE' },
   KC_1: { name: '!\n1', title: 'ES_1' },
   KC_2: { name: '"\n2', title: 'ES_2' },
   KC_3: { name: '·\n3', title: 'ES_3' },
@@ -40,12 +40,12 @@ export default {
   KC_8: { name: '(\n8', title: 'ES_8' },
   KC_9: { name: ')\n9', title: 'ES_9' },
   KC_0: { name: '=\n0', title: 'ES_0' },
-  KC_MINS: { name: "?  \n' \\", title: 'ES_QUOT' },
+  KC_MINS: { name: "?\n'", title: 'ES_QUOT' },
   KC_EQL: { name: '¡\n¿', title: 'ES_IQUE' },
   // Row 2
-  KC_Q: { name: 'Q  \n  @', title: 'ES_Q' },
+  KC_Q: { name: 'Q', title: 'ES_Q' },
   KC_W: { name: 'W', title: 'ES_W' },
-  KC_E: { name: 'E  \n  €', title: 'ES_E' },
+  KC_E: { name: 'E', title: 'ES_E' },
   KC_R: { name: 'R', title: 'ES_R' },
   KC_T: { name: 'T', title: 'ES_T' },
   KC_Y: { name: 'Y', title: 'ES_Y' },
@@ -54,7 +54,7 @@ export default {
   KC_O: { name: 'O', title: 'ES_O' },
   KC_P: { name: 'P', title: 'ES_P' },
   KC_LBRC: { name: '¨\n´', title: 'ES_ACUT' },
-  KC_RBRC: { name: '*  \n+ ~', title: 'ES_PLUS' },
+  KC_RBRC: { name: '*\n+', title: 'ES_PLUS' },
   // Row 3
   KC_A: { name: 'A', title: 'ES_A' },
   KC_S: { name: 'S', title: 'ES_S' },
@@ -66,8 +66,8 @@ export default {
   KC_K: { name: 'K', title: 'ES_K' },
   KC_L: { name: 'L', title: 'ES_L' },
   KC_SCLN: { name: 'Ñ', title: 'ES_NTIL' },
-  KC_QUOT: { name: '[  \n{ ^', title: 'ES_LCBR' },
-  KC_NUHS: { name: ']  \n} `', title: 'ES_RCBR' },
+  KC_QUOT: { name: '[\n{', title: 'ES_LCBR' },
+  KC_NUHS: { name: ']\n}', title: 'ES_RCBR' },
   // Row 4
   KC_NUBS: { name: '>\n<', title: 'ES_LABK' },
   KC_Z: { name: 'Z', title: 'ES_Z' },
