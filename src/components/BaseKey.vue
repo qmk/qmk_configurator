@@ -355,9 +355,7 @@ export default {
 }
 .key {
   border-radius: 6px;
-  font-family: 'Montserrat Mono', Monaco, Bitstream Vera Sans Mono,
-    Lucida Console, Terminal, Consolas, Liberation Mono, DejaVu Sans Mono,
-    Courier New, monospace;
+  font-family: 'Montserrat', sans-serif;
   font-size: var(--default-key-font-size);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
