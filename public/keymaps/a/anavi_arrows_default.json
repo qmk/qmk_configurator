@@ -1,0 +1,13 @@
+{
+  "keyboard": "anavi/arrows",
+  "keymap": "default",
+  "commit": "6fb9de6cbbb29a674638f603b7c03b47b4c52130",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                            "KC_MUTE",
+                 "KC_UP",
+      "KC_RGHT", "KC_DOWN", "KC_LEFT"
+    ]
+  ]
+}

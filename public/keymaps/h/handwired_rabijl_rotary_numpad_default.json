@@ -1,0 +1,24 @@
+{
+  "keyboard": "handwired/rabijl/rotary_numpad",
+  "keymap": "default",
+  "commit": "4e7e824a73c81187cca5cc56cb0b3b51a09b75c4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPLY",    "KC_ESC",  "KC_TAB",  "MO(1)",   "KC_BSPC",
+                    "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+                    "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_ESC",     "KC_P4",   "KC_P5",   "KC_P6",
+                    "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_ENT",     "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "_______",    "QK_BOOT", "_______", "_______", "_______",
+                    "_______", "_______", "_______", "_______",
+                    "KC_HOME", "KC_UP",   "KC_PGUP", "_______",
+      "_______",    "KC_LEFT", "KC_NO",   "KC_RGHT",
+                    "KC_END",  "KC_DOWN", "KC_PGDN", "_______",
+      "_______",    "KC_INS",             "KC_DEL"
+    ]
+  ]
+}

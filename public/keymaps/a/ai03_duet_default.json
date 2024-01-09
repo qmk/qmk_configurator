@@ -1,0 +1,16 @@
+{
+  "keyboard": "ai03/duet",
+  "keymap": "default",
+  "commit": "ebac02a7b2c9221387364b3116bcf912c191e333",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",
+      "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0",    "KC_0"
+    ]
+  ]
+}
