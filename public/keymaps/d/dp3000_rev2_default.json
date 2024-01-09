@@ -1,0 +1,57 @@
+{
+  "keyboard": "dp3000/rev2",
+  "keymap": "default",
+  "commit": "80d679fac3406d9c3d6f3b10e133161c3f938697",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",
+      "MO(1)",
+      "KC_1",
+      "KC_2",
+      "KC_3",
+      "KC_4",
+      "KC_5",
+      "KC_6",
+      "KC_7",
+      "KC_8"
+    ],
+    [
+      "QK_BOOT",
+      "KC_NO",
+      "KC_1",
+      "KC_2",
+      "KC_3",
+      "KC_4",
+      "TO(0)",
+      "TO(2)",
+      "TO(3)",
+      "RGB_TOG"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ],
+    [
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO",
+      "KC_NO"
+    ]
+  ]
+
+}

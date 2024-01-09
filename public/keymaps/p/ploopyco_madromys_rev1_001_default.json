@@ -1,0 +1,11 @@
+{
+  "keyboard": "ploopyco/madromys/rev1_001",
+  "keymap": "default",
+  "commit": "38d6e9a75a4cff4ae5bd32209fc0cecb83c6f23b",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_BTN4", "KC_BTN5", "DRAG_SCROLL", "KC_BTN2", "KC_BTN1", "KC_BTN3"
+    ]
+  ]
+}

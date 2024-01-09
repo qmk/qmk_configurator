@@ -1,0 +1,28 @@
+{
+  "keyboard": "mechwild/bbs",
+  "keymap": "default",
+  "commit": "786ebf87608dd4d7232cd0e66638382a55ceafa4",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action": "down", "keycodes": ["LSFT"]},
+      "hello world1",
+      {"action": "up", "keycodes": ["LSFT"]}
+    ],
+    [
+      {"action": "tap", "keycodes": ["LCTL", "LALT", "DEL"]}
+    ],
+    [
+      "ding!",
+      {"action": "beep"}
+    ],
+    [
+      {"action": "tap", "keycodes": ["F1"]},
+      {"action": "delay", "duration": 1000},
+      {"action": "tap", "keycodes": ["PGDN"]}
+    ]
+  ],
+  "layers": [
+    ["_______"]
+  ]
+}

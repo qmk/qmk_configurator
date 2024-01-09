@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/atreus50",
   "keymap": "default",
-  "commit": "cf935d97ae479e7a1e1f2f2f248b93e52e4cc69e",
+  "commit": "3ef06aa732ce8063e11b2f983592529883f7ecbc",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -48,4 +48,3 @@
     ]
   ]
 }
-
