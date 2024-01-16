@@ -3,26 +3,16 @@
   "keymap": "default",
   "commit": "786ebf87608dd4d7232cd0e66638382a55ceafa4",
   "layout": "LAYOUT",
-  "macros": [
-    [
-      {"action": "down", "keycodes": ["LSFT"]},
-      "hello world1",
-      {"action": "up", "keycodes": ["LSFT"]}
-    ],
-    [
-      {"action": "tap", "keycodes": ["LCTL", "LALT", "DEL"]}
-    ],
-    [
-      "ding!",
-      {"action": "beep"}
-    ],
-    [
-      {"action": "tap", "keycodes": ["F1"]},
-      {"action": "delay", "duration": 1000},
-      {"action": "tap", "keycodes": ["PGDN"]}
-    ]
-  ],
   "layers": [
-    ["_______"]
+    [
+      "STN_RES1", "STN_S1",  "STN_TL",  "STN_PL",  "STN_HL",  "STN_ST1",    "STN_ST3", "STN_FR",  "STN_PR",  "STN_LR",  "STN_TR",  "STN_DR",
+      "STN_RES2", "STN_S2",  "STN_KL",  "STN_WL",  "STN_RL",  "STN_ST2",    "STN_ST4", "STN_RR",  "STN_BR",  "STN_GR",  "STN_SR",  "STN_ZR",
+                                        "STN_A",   "STN_O",   "STN_N1",     "STN_N2",  "STN_E",   "STN_U"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                                       "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
   ]
 }
