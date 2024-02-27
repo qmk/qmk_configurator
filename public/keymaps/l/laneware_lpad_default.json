@@ -1,0 +1,13 @@
+{
+  "keyboard": "laneware/lpad",
+  "keymap": "default",
+  "commit": "da52450152f9f16aa1144bc616f0e84681d009cf",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPLY", "KC_MUTE",
+      "KC_MNXT",
+      "KC_MPRV", "KC_LEFT", "KC_RGHT"
+    ]
+  ]
+}
