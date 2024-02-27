@@ -1,0 +1,12 @@
+{
+  "keyboard": "handwired/wwa/mercury",
+  "keymap": "default",
+  "commit": "c4414af9f3dbf1bae6bdf9bd29da070bb9dc8f47",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",
+      "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20"
+    ]
+  ]
+}
