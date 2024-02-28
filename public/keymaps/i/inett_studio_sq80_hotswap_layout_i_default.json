@@ -1,7 +1,7 @@
 {
   "keyboard": "inett_studio/sq80/hotswap_layout_i",
   "keymap": "default",
-  "commit": "958ddea52e915b9b12d5bfac5c84bf5b0eb75184",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

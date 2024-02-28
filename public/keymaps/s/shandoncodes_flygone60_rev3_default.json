@@ -1,7 +1,7 @@
 {
   "keyboard": "shandoncodes/flygone60/rev3",
   "keymap": "default",
-  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
   "layout": "LAYOUT_60_ansi_arrow",
   "macros": [
     [

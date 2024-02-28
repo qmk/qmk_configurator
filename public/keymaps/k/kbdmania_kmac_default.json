@@ -1,7 +1,7 @@
 {
   "keyboard": "kbdmania/kmac",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

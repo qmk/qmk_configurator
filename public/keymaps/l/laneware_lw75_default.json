@@ -1,7 +1,7 @@
 {
   "keyboard": "laneware/lw75",
   "keymap": "default",
-  "commit": "aa3b64db2bd8776f0b452bc3106c6ee663b3cce4",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
