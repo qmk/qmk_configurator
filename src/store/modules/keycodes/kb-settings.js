@@ -76,6 +76,76 @@ export default [
     width: 1500
   },
   {
+    name: 'Swap Caps/Esc',
+    code: 'EC_SWAP',
+    title: 'Swap Caps Lock and Escape',
+    width: 1500
+  },
+  {
+    name: 'Split Master is Left Hand',
+    code: 'EH_LEFT',
+    title: 'Set the master half of a split keyboard as the left hand (for EE_HANDS)',
+    width: 2000
+  },
+  {
+    name: 'Split Master is Right Hand',
+    code: 'EH_RGHT',
+    title: 'Set the master half of a split keyboard as the right hand (for EE_HANDS)',
+    width: 2000
+  },
+  {
+    width: 0
+  },
+  {
+    name: 'Toggle LCtl/Caps',
+    code: 'CL_TOGG',
+    title: 'Toggle Caps Lock and Left Control swap',
+    width: 1500
+  },
+  {
+    width: 3000
+  },
+  {
+    width: 3000
+  },
+  {
+    width: 1500
+  },
+  {
+    name: 'Toggle GUI',
+    code: 'GUI_TOG',
+    title: 'Toggles the status of the GUI keys',
+    width: 1500
+  },
+  {
+    width: 3000
+  },
+  {
+    name: 'Toggle NKRO',
+    code: 'NK_TOGG',
+    title: 'Toggle N-Key Rollover (NKRO)',
+    width: 1500
+  },
+  {
+    name: 'Rev Alt/GUI',
+    code: 'AG_TOGG',
+    title: 'Toggle Alt and GUI swap on both sides',
+    width: 1500
+  },
+  {
+    name: 'Unswap Ctl/GUI',
+    code: 'CG_TOGG',
+    title: 'Toggle Control and GUI swap on both sides',
+    width: 1500
+  },
+  {
+    name: 'Toggle Caps/Esc',
+    code: 'EC_TOGG',
+    title: 'Toggle Caps Lock and Escape swap',
+    width: 1500
+  },
+
+  {
     width: 0
   },
   {
@@ -151,9 +221,9 @@ export default [
     width: 1500
   },
   {
-    name: 'Toggle NKRO',
-    code: 'NK_TOGG',
-    title: 'Turn NKRO on or off',
+    name: 'Unswap Caps/Esc',
+    code: 'EC_NORM',
+    title: 'Unswap Caps Lock and Escape',
     width: 1500
   },
 
