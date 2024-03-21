@@ -1,21 +1,21 @@
 <template>
   <div>
     <button
-      class="fixed-size"
       id="fwFile"
-      @click="autoFlashFirmware"
+      class="fixed-size"
       :title="$t('flashFirmware.title')"
       :disabled="disableDownloadBinary"
+      @click="autoFlashFirmware"
     >
       <font-awesome-icon icon="download" size="lg" fixed-width />
       {{ $t('flashFirmware.label') }}
     </button>
     <button
-      class="fixed-size"
       id="fwFile"
-      @click="flashFirmware"
+      class="fixed-size"
       :title="$t('flashFile.title')"
       :disabled="disableFlashFile"
+      @click="flashFirmware"
     >
       <font-awesome-icon icon="download" size="lg" fixed-width />
       {{ $t('flashFile.label') }}

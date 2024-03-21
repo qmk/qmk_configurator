@@ -1,6 +1,6 @@
 <template>
-  <div id="browser-warn" v-show="isNotSupported && !isDimissed">
-    <a class="dismiss" title="dismiss" v-on:click="dismiss">X</a>
+  <div v-show="isNotSupported && !isDimissed" id="browser-warn">
+    <a class="dismiss" title="dismiss" @click="dismiss">X</a>
     {{ $t('errors.unsupportedBrowser') }}
     <a
       href="https://www.google.com/intl/en_us/chrome/"
@@ -20,14 +20,9 @@
 
 <script>
 export default {
-  name: 'browser-warn-bar',
+  name: 'BrowserWarnBar',
   data() {
     return { isDimissed: false };
-  },
-  methods: {
-    dismiss() {
-      this.isDimissed = true;
-    }
   },
   computed: {
     isNotSupported() {
@@ -39,6 +34,11 @@ export default {
         usrAgent.indexOf('opr') === -1;
       const isFirefox = usrAgent.indexOf('firefox') !== -1;
       return !(isChrome || isFirefox);
+    }
+  },
+  methods: {
+    dismiss() {
+      this.isDimissed = true;
     }
   }
 };

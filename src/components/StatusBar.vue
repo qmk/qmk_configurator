@@ -60,7 +60,16 @@ import { mapState, mapMutations } from 'vuex';
 const highWaterMark = 20;
 const warningWaterMark = 10;
 export default {
-  name: 'status-bar',
+  name: 'StatusBar',
+  data: () => {
+    return {
+      status: '',
+      version: '0.1',
+      jobCount: 0,
+      hasError: false,
+      jobs: 'Initializing'
+    };
+  },
   computed: {
     ...mapState('app', ['settingsPanelVisible']),
     currentStatusClass() {
@@ -85,6 +94,9 @@ export default {
     discordLink() {
       return 'https://discord.gg/Uq7gcHh';
     }
+  },
+  mounted() {
+    setTimeout(this.fetchData, 1000);
   },
   methods: {
     ...mapMutations('app', ['setSettingsPanel']),
@@ -120,18 +132,6 @@ export default {
     clickSettings() {
       this.setSettingsPanel(!this.settingsPanelVisible);
     }
-  },
-  data: () => {
-    return {
-      status: '',
-      version: '0.1',
-      jobCount: 0,
-      hasError: false,
-      jobs: 'Initializing'
-    };
-  },
-  mounted() {
-    setTimeout(this.fetchData, 1000);
   }
 };
 </script>
