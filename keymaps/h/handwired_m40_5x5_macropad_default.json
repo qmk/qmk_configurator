@@ -1,0 +1,15 @@
+{
+  "keyboard": "handwired/m40/5x5_macropad",
+  "keymap": "default",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "layout": "LAYOUT_ortho_5x5",
+  "layers": [
+    [
+      "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "QK_BOOT",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5"
+    ]
+  ]
+}

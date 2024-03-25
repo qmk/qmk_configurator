@@ -1,0 +1,18 @@
+{
+  "keyboard": "westm/westm9/rev2",
+  "keymap": "default",
+  "commit": "48721b20fc5524d4a388e7fc5d5d0ba16ad6902b",
+  "layout": "LAYOUT_macropad",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_VOLD", "KC_VOLU", "KC_MUTE",
+      "KC_NO",   "KC_NO",   "MO(1)"
+    ],
+    [
+      "RGB_TOG", "RGB_RMOD", "RGB_SAI",
+      "RGB_VAD", "RGB_VAI",  "RGB_SAD",
+      "RGB_HUD", "RGB_HUI",  "KC_NO"
+    ]
+  ]
+}

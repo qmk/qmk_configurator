@@ -1,0 +1,20 @@
+{
+  "keyboard": "boardsource/beiwagon",
+  "keymap": "default",
+  "commit": "b99ccd4f064e15c7ea94184986e396603bfa1dc2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_7",    "KC_8",    "KC_9",
+      "KC_4",    "KC_5",    "KC_6",
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_0",    "KC_PENT", "MO(1)"
+    ],
+    [
+      "KC_7",    "KC_8",    "RGB_TOG",
+      "KC_4",    "KC_5",    "RGB_MOD",
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_0",    "KC_PENT", "_______"
+    ]
+  ]
+}

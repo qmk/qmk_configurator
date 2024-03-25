@@ -1,0 +1,28 @@
+{
+  "keyboard": "gkeyboard/gpad8_2r",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",                       "RGB_TOG",
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_E",    "KC_F",    "KC_G",    "KC_H"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

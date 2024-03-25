@@ -1,0 +1,28 @@
+{
+  "keyboard": "dailycraft/owl8",
+  "keymap": "default",
+  "commit": "c4a67d3f3302f3096bb6b15921c9587643164ba9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",  "KC_NO",
+      "MO(1)",   "KC_BSPC", "KC_SPC", "KC_ENT",
+      "KC_LEFT", "KC_DOWN", "KC_UP",  "KC_RGHT"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",  "KC_NO",
+      "KC_1",    "KC_2",    "KC_3",   "KC_4",
+      "KC_5",    "KC_6",    "KC_7",   "KC_8"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",  "KC_NO",
+      "KC_1",    "KC_2",    "KC_3",   "KC_4",
+      "KC_5",    "KC_6",    "KC_7",   "KC_8"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",  "KC_NO",
+      "KC_1",    "KC_2",    "KC_3",   "KC_4",
+      "KC_5",    "KC_6",    "KC_7",   "KC_8"
+    ]
+  ]
+}

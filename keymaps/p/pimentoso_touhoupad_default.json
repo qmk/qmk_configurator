@@ -1,0 +1,22 @@
+{
+  "keyboard": "pimentoso/touhoupad",
+  "keymap": "default",
+  "commit": "0c6155ec42dd7ae00d2229962fe9dfc8adab7a4d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                                        "LT(1,KC_ESC)", "KC_ENT",
+      "KC_LSFT", "KC_Z",    "KC_C",
+                                                                        "KC_UP",
+                                                             "KC_LEFT", "KC_DOWN", "KC_RGHT",
+                                       "KC_X"
+    ],
+    [
+                                                             "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",
+                                                                        "RGB_VAI",
+                                                             "RGB_TOG", "RGB_VAD", "RGB_MOD",
+                                       "KC_NO"
+    ]
+  ]
+}

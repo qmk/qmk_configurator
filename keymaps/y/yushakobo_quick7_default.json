@@ -1,0 +1,18 @@
+{
+  "keyboard": "yushakobo/quick7",
+  "keymap": "default",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",      "MO(1)",   "RGB_MOD",
+      "LSFT(KC_TAB)", "KC_UP",   "KC_TAB",
+      "KC_LEFT",      "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "QK_BOOT", "KC_TRNS", "RGB_TOG",
+      "KC_HOME", "KC_VOLU", "KC_END",
+      "KC_MPRV", "KC_VOLD", "KC_MNXT"
+    ]
+  ]
+}

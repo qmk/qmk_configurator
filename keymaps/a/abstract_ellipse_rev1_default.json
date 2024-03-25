@@ -1,0 +1,12 @@
+{
+  "keyboard": "abstract/ellipse/rev1",
+  "keymap": "default",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "RGB_TOG", "KC_C",
+      "KC_X",    "KC_Y",    "KC_Z"
+    ]
+  ]
+}

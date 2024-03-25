@@ -1,0 +1,17 @@
+{
+  "keyboard": "sendyyeah/pix",
+  "keymap": "default",
+  "commit": "787f15b58f099949cbcc3ef4bfea255c6185d708",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MPLY", "KC_MPRV", "KC_MNXT", "TO(1)"
+    ],
+    [
+      "KC_TRNS", "KC_MSTP", "KC_MRWD", "KC_MFFD", "TO(2)"
+    ],
+    [
+      "KC_LSFT", "RGB_MOD", "RGB_HUI", "RGB_SAI", "TO(0)"
+    ]
+  ]
+}

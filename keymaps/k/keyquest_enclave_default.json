@@ -1,0 +1,28 @@
+{
+  "keyboard": "keyquest/enclave",
+  "keymap": "default",
+  "commit": "357eeafd394c737917309e779890e59dd3a77ac5",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_MPRV",    "KC_MPLY",    "KC_MNXT",
+      "LCTL(KC_C)", "LCTL(KC_V)", "LGUI(KC_V)",
+      "KC_VOLU",    "KC_VOLD",    "MO(1)"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "_______",
+      "_______", "MO(2)",   "_______"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "_______",
+      "MO(3)",   "_______", "_______"
+    ],
+    [
+      "RGB_TOG", "RGB_M_P",  "RGB_M_B",
+      "RGB_M_R", "RGB_M_SW", "RGB_M_G",
+      "_______", "_______",  "_______"
+    ]
+  ]
+}

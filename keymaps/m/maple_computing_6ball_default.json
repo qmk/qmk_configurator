@@ -1,0 +1,16 @@
+{
+  "keyboard": "maple_computing/6ball",
+  "keymap": "default",
+  "commit": "a1b39e6db231923935055846384eb2e78e538268",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F",    "LT(1,KC_ESC)", "KC_LCTL",
+      "KC_R",    "KC_D",         "KC_M"
+    ],
+    [
+      "KC_F",    "KC_TRNS", "RGB_HUI",
+      "RGB_TOG", "RGB_MOD", "RGB_HUD"
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "keyboard": "geekboards/tester",
+  "keymap": "default",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "RGB_MOD", "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6",    "MO(1)"
+    ],
+    [
+      "KC_ESC",  "KC_F1",   "KC_F2",   "KC_F3",
+      "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7"
+    ]
+  ]
+}
