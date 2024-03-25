@@ -130,7 +130,7 @@ export default {
   'S(KC_QUOT)': { name: '[', title: 'ES_LBRC' },
   KC_DQUO: { name: '[', title: 'ES_LBRC' },
   // Row 4
-  'S(KC_NUHS)': { name: ']', title: 'ES_RBCR' },
+  'S(KC_NUHS)': { name: ']', title: 'ES_RBRC' },
   'S(KC_NUBS)': { name: '>', title: 'ES_RABK' },
   'S(KC_COMM)': { name: ';', title: 'ES_SCLN' },
   KC_LT: { name: ';', title: 'ES_SCLN' },
