@@ -1,0 +1,20 @@
+{
+  "keyboard": "handwired/petruziamini",
+  "keymap": "default",
+  "commit": "6788a5eb27b1db5d25ef6388bb8b698899de2f9e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",    "KC_G",    "KC_H",    "KC_I",       "KC_J",
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",    "KC_G",    "KC_H",    "KC_I",       "KC_J",
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_E",    "KC_F",    "KC_G",    "KC_H",    "KC_I",       "KC_J",
+      "KC_A",    "KC_B",               "KC_C",                          "KC_D",               "LT(1,KC_E)", "KC_F"
+    ],
+    [
+      "KC_NO",   "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",              "KC_NO",                         "KC_NO",              "KC_NO",   "KC_NO"
+    ]
+  ]
+}

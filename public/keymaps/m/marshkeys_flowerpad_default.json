@@ -1,0 +1,13 @@
+{
+  "keyboard": "marshkeys/flowerpad",
+  "keymap": "default",
+  "commit": "8a429fce3364de398ef35d425ea467414e3c80d8",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_MUTE",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",
+           "KC_VOLD", "KC_VOLU"
+    ]
+  ]
+}
