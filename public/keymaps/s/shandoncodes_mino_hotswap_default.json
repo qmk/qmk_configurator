@@ -1,7 +1,7 @@
 {
   "keyboard": "shandoncodes/mino/hotswap",
   "keymap": "default",
-  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
+  "commit": "b37d23bfa5f4c46abd08c8eea5625a7f95ca6341",
   "layout": "LAYOUT_default",
   "layers": [
     [

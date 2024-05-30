@@ -1,7 +1,7 @@
 {
   "keyboard": "ymdk/melody96/soldered",
   "keymap": "default",
-  "commit": "a7afa58fb633e38cd39f8610d89182c04855a074",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_all",
   "layers": [
     [

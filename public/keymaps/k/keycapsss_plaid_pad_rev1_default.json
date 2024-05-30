@@ -1,7 +1,7 @@
 {
   "keyboard": "keycapsss/plaid_pad/rev1",
   "keymap": "default",
-  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

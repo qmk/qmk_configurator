@@ -1,7 +1,7 @@
 {
   "keyboard": "thevankeyboards/roadkit",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "ad8d934d3cb325d5ad2ed98167a8aa869ccc5e9e",
   "layout": "LAYOUT_numpad_4x4",
   "layers": [
     [

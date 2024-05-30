@@ -1,7 +1,7 @@
 {
   "keyboard": "projectcain/vault35/atmega32u4",
   "keymap": "default",
-  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
+  "commit": "81d601b72548de1b3eab70b6124252ac540cac41",
   "layout": "LAYOUT_split_4space",
   "layers": [
     [

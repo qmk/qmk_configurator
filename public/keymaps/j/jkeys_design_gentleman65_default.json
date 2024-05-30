@@ -1,7 +1,7 @@
 {
   "keyboard": "jkeys_design/gentleman65",
   "keymap": "default",
-  "commit": "29759031ae48ee24c77f23479108726a31addc74",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_65_ansi_rwkl_split_bs",
   "layers": [
     [

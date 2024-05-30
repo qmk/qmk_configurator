@@ -1,7 +1,7 @@
 {
   "keyboard": "evyd13/nt650",
   "keymap": "default",
-  "commit": "09b0d3e0ed3a9ad897558421d13f59f40831c44c",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT_ansi_split_space",
   "layers": [
     [

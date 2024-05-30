@@ -1,7 +1,7 @@
 {
   "keyboard": "ning/tiny_board/tb16_rgb",
   "keymap": "default",
-  "commit": "ac7524213236dd09a99da2d97004dec1c288596c",
+  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

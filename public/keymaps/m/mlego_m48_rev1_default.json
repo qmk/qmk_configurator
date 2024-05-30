@@ -1,7 +1,7 @@
 {
   "keyboard": "mlego/m48/rev1",
   "keymap": "default",
-  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
+  "commit": "e64815511303584787b623c12ac8bab7dccb0034",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "kiwikey/kawii9",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [

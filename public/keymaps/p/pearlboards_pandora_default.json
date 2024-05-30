@@ -1,7 +1,7 @@
 {
   "keyboard": "pearlboards/pandora",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/mechboards_micropad",
   "keymap": "default",
-  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT",
   "macros": [
     [

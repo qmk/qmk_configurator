@@ -1,14 +1,14 @@
 {
   "keyboard": "doio/kb16/rev1",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "98f0c5ee249fdbc80755b7a086dc066cda16018e",
   "layout": "LAYOUT",
   "layers": [
     [
       "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_MPLY",
       "KC_5",    "KC_6",    "KC_7",    "KC_8",    "TO(1)",
       "KC_9",    "KC_0",    "KC_UP",   "KC_ENT",  "KC_MUTE",
-      "MO(4)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
+      "MO(3)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
       "_______", "_______", "_______", "_______", "_______",

@@ -1,8 +1,8 @@
 {
   "keyboard": "alfredslab/swift65/solder",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
-  "layout": "LAYOUT_625u_space_split_bs",
+  "commit": "7e39635c0a76bc852169a765b2c21b52615de152",
+  "layout": "LAYOUT_ansi_blocker_split_bs",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_GRV",  "KC_BSPC", "KC_HOME",

@@ -1,7 +1,7 @@
 {
   "keyboard": "quokka",
   "keymap": "default",
-  "commit": "22c576b40b528fbea432321f9ec279b3fd5871af",
+  "commit": "a62fefe84b1a40d48d05296796adae2983b25535",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

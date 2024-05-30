@@ -1,7 +1,7 @@
 {
   "keyboard": "durgod/dgk6x/hades_iso",
   "keymap": "default",
-  "commit": "c57902d4431105ba0744e6dc8b9d9ca9aaf3f23b",
+  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
   "layout": "LAYOUT_65_iso",
   "layers": [
     [
@@ -16,7 +16,7 @@
       "KC_TRNS", "KC_TRNS", "KC_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PSCR", "KC_SCRL", "KC_PAUS",            "KC_TRNS",
       "KC_TRNS", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_INS",  "KC_END",  "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "GUI_TOG", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "MO(3)",   "KC_TRNS", "KC_APP",  "KC_TRNS", "KC_TRNS"
+      "KC_TRNS", "GU_TOGG", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "MO(3)",   "KC_TRNS", "KC_APP",  "KC_TRNS", "KC_TRNS"
     ],
     [
       "KC_TRNS", "KC_MPLY", "KC_MSTP", "KC_MPRV", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_RMOD", "KC_TRNS",

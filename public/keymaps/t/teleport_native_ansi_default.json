@@ -1,7 +1,7 @@
 {
   "keyboard": "teleport/native/ansi",
   "keymap": "default",
-  "commit": "346b06d391dbc760d753a5cffcbbcb58ecc9ce95",
+  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [

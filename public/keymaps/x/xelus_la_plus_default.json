@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/la_plus",
   "keymap": "default",
-  "commit": "ec145f2238238dd7a0d40f65d838374a751bc79c",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_65_ansi_rwkl_split_bs",
   "layers": [
     [

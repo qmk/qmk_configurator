@@ -1,7 +1,7 @@
 {
   "keyboard": "flashquark/horizon_z",
   "keymap": "default",
-  "commit": "40c3b715697e418f5014b77bb10ff97c8bd5040f",
+  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

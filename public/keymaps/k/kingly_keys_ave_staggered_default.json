@@ -1,7 +1,7 @@
 {
   "keyboard": "kingly_keys/ave/staggered",
   "keymap": "default",
-  "commit": "41bd4e35a09cc50f45112074d2b776254a3a17f8",
+  "commit": "319ac3b27bbccc4906ba0316d9cc9226af763729",
   "layout": "LAYOUT_staggered",
   "layers": [
     [
