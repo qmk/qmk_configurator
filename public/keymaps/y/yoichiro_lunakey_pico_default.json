@@ -1,7 +1,7 @@
 {
   "keyboard": "yoichiro/lunakey_pico",
   "keymap": "default",
-  "commit": "27671d8a43bbca7b65defb94ab95102ac0334f44",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_split_3x6_4",
   "layers": [
     [

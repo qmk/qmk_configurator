@@ -1,7 +1,7 @@
 {
   "keyboard": "edi/hardlight/mk1",
   "keymap": "default",
-  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_ortho_4x16",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "delikeeb/waaffle/rev3/pro_micro",
   "keymap": "default",
-  "commit": "18dc851e37a203b32db0261c365dd300488e1c71",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_ortho_5x16",
   "layers": [
     [

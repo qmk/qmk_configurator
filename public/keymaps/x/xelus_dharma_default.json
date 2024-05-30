@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/dharma",
   "keymap": "default",
-  "commit": "a5917ac9303139f39b41d07dd1ce8dfdf3225586",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_ansi_rwkl_split_bs",
   "layers": [
     [

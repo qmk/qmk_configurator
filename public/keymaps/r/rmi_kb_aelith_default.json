@@ -1,7 +1,7 @@
 {
   "keyboard": "rmi_kb/aelith",
   "keymap": "default",
-  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

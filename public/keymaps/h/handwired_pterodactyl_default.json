@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/pterodactyl",
   "keymap": "default",
-  "commit": "ebd402788346aa6e88bde1486b2a835684d40d39",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_pterodactyl",
   "layers": [
     [

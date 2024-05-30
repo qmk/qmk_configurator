@@ -1,7 +1,7 @@
 {
   "keyboard": "viendi8l",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -23,7 +23,7 @@
       "KC_MINS", "KC_F7",   "KC_F8",   "KC_F9",      "KC_TAB",  "XXXXXXX", "KC_PGUP", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_INS",  "XXXXXXX", "KC_PSCR", "XXXXXXX", "XXXXXXX", "KC_DEL",
       "KC_EQL",  "KC_F4",   "KC_F5",   "KC_F6",      "_______", "KC_HOME", "KC_PGDN", "KC_END",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "KC_F1",   "KC_F2",   "KC_F3",      "XXXXXXX", "XXXXXXX", "KC_LPRN", "KC_RPRN", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_MUTE", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
-      "XXXXXXX", "KC_CALC", "KC_CALC", "KC_DEL",     "XXXXXXX", "GUI_TOG", "KC_SLEP",                                  "XXXXXXX",                       "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX"
+      "XXXXXXX", "KC_CALC", "KC_CALC", "KC_DEL",     "XXXXXXX", "GU_TOGG", "KC_SLEP",                                  "XXXXXXX",                       "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]
 }

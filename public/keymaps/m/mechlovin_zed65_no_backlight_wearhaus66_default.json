@@ -1,7 +1,7 @@
 {
   "keyboard": "mechlovin/zed65/no_backlight/wearhaus66",
   "keymap": "default",
-  "commit": "68f550a3f25b3911ce8bbc77680f4e23e5faf424",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,13 +1,13 @@
 {
   "keyboard": "yushakobo/quick7",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_MUTE",      "MO(1)",   "RGB_MOD",
-      "LSFT(KC_TAB)", "KC_UP",   "KC_TAB",
-      "KC_LEFT",      "KC_DOWN", "KC_RGHT"
+      "KC_MUTE",   "MO(1)",   "RGB_MOD",
+      "S(KC_TAB)", "KC_UP",   "KC_TAB",
+      "KC_LEFT",   "KC_DOWN", "KC_RGHT"
     ],
     [
       "QK_BOOT", "KC_TRNS", "RGB_TOG",

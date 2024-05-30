@@ -1,7 +1,7 @@
 {
   "keyboard": "ibm/model_m_122/m122_3270/blackpill",
   "keymap": "default",
-  "commit": "f98f8eedf0dc6fe939162210ad44d5af8a0dfa08",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT",
   "layers": [
     [

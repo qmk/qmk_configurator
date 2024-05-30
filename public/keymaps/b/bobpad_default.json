@@ -1,7 +1,7 @@
 {
   "keyboard": "bobpad",
   "keymap": "default",
-  "commit": "c6f1b594a2085e67219bd5f0f7ba7898429d331c",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [

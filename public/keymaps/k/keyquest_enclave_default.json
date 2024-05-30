@@ -1,7 +1,7 @@
 {
   "keyboard": "keyquest/enclave",
   "keymap": "default",
-  "commit": "357eeafd394c737917309e779890e59dd3a77ac5",
+  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "ztboards/after",
   "keymap": "default",
-  "commit": "7345f201f6373f1b268b0790b57da27a0bc13b41",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_65_ansi_wkl_split_bs",
   "layers": [
     [

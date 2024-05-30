@@ -1,7 +1,7 @@
 {
   "keyboard": "planck/thk",
   "keymap": "thk",
-  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT_planck_grid",
   "macros": [
     [

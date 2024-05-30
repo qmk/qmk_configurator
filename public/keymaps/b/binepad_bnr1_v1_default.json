@@ -5,10 +5,10 @@
   "layout": "LAYOUT_ortho_1x1",
   "layers": [
     [
-      "LT(1,KC_MUTE)"
+       "LT(1,KC_MUTE)"
     ],
     [
-      "_______"
+       "_______"
     ]
   ]
 }

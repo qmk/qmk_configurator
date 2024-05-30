@@ -1,7 +1,7 @@
 {
   "keyboard": "beekeeb/piantor_pro",
   "keymap": "default",
-  "commit": "5b25a8aa32e79b12644be05359d2f6c1d599e40d",
+  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [
@@ -24,8 +24,8 @@
     ],
     [
       "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
                                                   "KC_LGUI", "_______", "KC_SPC",     "KC_ENT",  "_______", "KC_RALT"
     ]
   ]

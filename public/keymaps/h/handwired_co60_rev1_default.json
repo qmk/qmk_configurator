@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/co60/rev1",
   "keymap": "default",
-  "commit": "219afaba42e6b4384f578977eadbb71a03383ecc",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

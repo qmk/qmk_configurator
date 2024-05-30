@@ -1,7 +1,7 @@
 {
   "keyboard": "darkproject/kd83a_bfg_edition",
   "keymap": "default",
-  "commit": "98013e25c6996b6c81a79716d57e8e5f8a364bdb",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -25,15 +25,15 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_HUI",
       "KC_TRNS", "KC_TRNS", "TO(0)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "KC_TRNS",
-      "KC_TRNS", "GUI_TOG", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_SPD", "RGB_VAD", "RGB_SPI"
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TO(1)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "KC_TRNS",
+      "KC_TRNS", "GU_TOGG", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_SPD", "RGB_VAD", "RGB_SPI"
     ],
     [
       "QK_BOOT", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_TRNS", "KC_TRNS", "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_TRNS", "RGB_MOD",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_HUI",
       "KC_TRNS", "KC_TRNS", "TO(0)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TO(1)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_SPD", "RGB_VAD", "RGB_SPI"
     ]
   ]

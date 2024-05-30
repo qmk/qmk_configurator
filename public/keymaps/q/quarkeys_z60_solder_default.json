@@ -1,7 +1,7 @@
 {
   "keyboard": "quarkeys/z60/solder",
   "keymap": "default",
-  "commit": "9a4c7a48ba32ea1421a4f74d5c1f55576357f6ee",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
   "layout": "LAYOUT_all",
   "layers": [
     [
