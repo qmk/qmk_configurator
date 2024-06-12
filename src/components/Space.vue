@@ -2,7 +2,7 @@
   <!-- prettier-ignore -->
   <div class="space" :class="computedClass" :title="label" @mouseenter="$emit('mouseenter')">
     {{ label }}&nbsp;
-    <span :class="iconClass" v-if="icon">
+    <span v-if="icon" :class="iconClass">
       <font-awesome-icon :icon="icon" fixed-width />
     </span>
   </div>
@@ -10,10 +10,16 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 export default {
-  name: 'space',
+  name: 'SpaceComponent',
   props: {
-    label: String,
-    width: null,
+    label: {
+      type: String,
+      default: ''
+    },
+    width: {
+      type: String,
+      default: undefined
+    },
     icon: {
       type: String,
       default: ''
@@ -23,6 +29,9 @@ export default {
       default: ''
     }
   },
+  data() {
+    return {};
+  },
   computed: {
     computedClass() {
       let classes = [];
@@ -31,9 +40,6 @@ export default {
       }
       return classes;
     }
-  },
-  data() {
-    return {};
   }
 };
 </script>
