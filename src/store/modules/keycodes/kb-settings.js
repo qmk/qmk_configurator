@@ -17,31 +17,31 @@ export default [
   },
   {
     name: 'Swap LCtl/LGUI',
-    code: 'LCG_SWP',
+    code: 'CG_LSWP',
     title: 'Swap Left Control and GUI',
     width: 1500
   },
   {
     name: 'Swap RCtl/RGUI',
-    code: 'RCG_SWP',
+    code: 'CG_RSWP',
     title: 'Swap Right Control and GUI',
     width: 1500
   },
   {
     name: 'Swap LAlt/LGUI',
-    code: 'LAG_SWP',
+    code: 'AG_LSWP',
     title: 'Swap Left Alt and Left GUI',
     width: 1500
   },
   {
     name: 'Swap RAlt/RGUI',
-    code: 'RAG_SWP',
+    code: 'AG_RSWP',
     title: 'Swap Right Alt and Right GUI',
     width: 1500
   },
   {
     name: 'Disable GUI',
-    code: 'GUI_OFF',
+    code: 'GU_OFF',
     title: 'Disable the GUI keys (useful when gaming)',
     width: 1500
   },
@@ -92,31 +92,31 @@ export default [
   },
   {
     name: 'Unswap LCtl/LGUI',
-    code: 'LCG_NRM',
+    code: 'CG_LNRM',
     title: 'Unswap Left Control and GUI',
     width: 1500
   },
   {
     name: 'Unswap RCtl/RGUI',
-    code: 'RCG_NRM',
+    code: 'CG_RNRM',
     title: 'Unswap Right Control and GUI',
     width: 1500
   },
   {
     name: 'Rev LAlt/LGUI',
-    code: 'LAG_NRM',
+    code: 'AG_LNRM',
     title: 'Unswap Left Alt and Left GUI',
     width: 1500
   },
   {
     name: 'Rev RAlt/RGUI',
-    code: 'RAG_NRM',
+    code: 'AG_RNRM',
     title: 'Unswap Right Alt and Right GUI',
     width: 1500
   },
   {
     name: 'Enable GUI',
-    code: 'GUI_ON',
+    code: 'GU_ON',
     title: 'Enable the GUI keys',
     width: 1500
   },
