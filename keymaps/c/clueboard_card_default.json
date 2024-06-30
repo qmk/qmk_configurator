@@ -1,0 +1,15 @@
+{
+    "keyboard": "clueboard/card",
+    "keymap": "default",
+    "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+            "RGB_TOG", "RGB_SAI", "RGB_VAI",
+                "RGB_HUD", "RGB_HUI",
+            "RGB_MOD", "RGB_SAD", "RGB_VAD",
+                "BL_STEP",
+            "KC_NO",   "KC_NO",   "KC_NO"
+        ]
+    ]
+}

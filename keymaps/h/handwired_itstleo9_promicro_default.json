@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/itstleo9/promicro",
+  "keymap": "default",
+  "commit": "fbe44c062196fc757d2137d4d05405f401d0e7b5",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I"
+    ]
+  ]
+}

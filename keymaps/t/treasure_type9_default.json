@@ -1,0 +1,13 @@
+{
+  "keyboard": "treasure/type9",
+  "keymap": "default",
+  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",    "KC_1",    "KC_2",
+      "KC_3",    "KC_4",    "KC_5",
+      "KC_6",    "KC_7",    "KC_8"
+    ]
+  ]
+}

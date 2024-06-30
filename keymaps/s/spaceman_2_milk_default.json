@@ -1,0 +1,12 @@
+{
+  "keyboard": "spaceman/2_milk",
+  "keymap": "default",
+  "commit": "fced377ac007d27f2650ccffbe0b18abcdcfe23d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",
+      "KC_X"
+    ]
+  ]
+}

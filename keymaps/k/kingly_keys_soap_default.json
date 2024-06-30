@@ -1,0 +1,16 @@
+{
+  "keyboard": "kingly_keys/soap",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_DEL",  "KC_UP",   "KC_ENT",       "RGB_MOD",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT",      "MO(1)"
+    ],
+    [
+      "RGB_HUI", "RGB_VAI", "RGB_SAI",      "KC_TRNS",
+      "RGB_HUD", "RGB_VAD", "RGB_SAD",      "KC_TRNS"
+    ]
+  ]
+}

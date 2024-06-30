@@ -1,0 +1,40 @@
+{
+  "keyboard": "handwired/dactylmacropad",
+  "keymap": "default",
+  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action":"down", "keycodes": ["LALT"]},
+      "nvt",
+      {"action": "up", "keycodes": ["LALT"]}
+    ],
+    [
+      {"action":"tap", "keycodes": ["LGUI"]},
+      {"action":"delay", "duration": 500},
+      "snip",
+      {"action":"delay", "duration": 500},
+      {"action":"tap", "keycodes": ["ENT"]},
+      {"action":"down", "keycodes": ["LALT"]},
+      "n",
+      {"action": "up", "keycodes": ["LALT"]}
+    ]
+  ],
+  "layers": [
+    [
+      "MC_0",           "LCTL(KC_V)", "KC_UP",     "LCTL(KC_C)",
+      "LSFT_T(KC_ESC)", "KC_LEFT",    "KC_DOWN",   "KC_RGHT",
+      "TO(1)",          "KC_LCTL",    "A(KC_TAB)", "KC_APP",     "KC_BTN3"
+    ],
+    [
+      "LCTL(LSFT(KC_H))", "LCTL(KC_F6)", "KC_TRNS",    "KC_PGUP",
+      "MC_1",             "KC_TRNS",     "KC_TRNS",    "KC_TRNS",
+      "TO(2)",            "KC_MUTE",     "LGUI(KC_M)", "KC_PGDN", "KC_MPLY"
+    ],
+    [
+      "LSFT(LGUI(KC_L))",       "LGUI(KC_V)",       "KC_TRNS",           "LGUI(KC_C)",
+      "LGUI(LCTL(LSFT(KC_4)))", "KC_TRNS",          "KC_TRNS",           "KC_TRNS",
+      "TO(0)",                  "LSFT(LGUI(KC_O))", "LCTL(LALT(KC_F3))", "LCTL(LSFT(KC_1))", "KC_TRNS"
+    ]
+  ]
+}

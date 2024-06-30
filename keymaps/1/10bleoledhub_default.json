@@ -1,0 +1,20 @@
+{
+  "keyboard": "10bleoledhub",
+  "keymap": "default",
+  "commit": "c6f1b594a2085e67219bd5f0f7ba7898429d331c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_PGUP",
+      "KC_P7",   "KC_P8",   "MO(1)",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ],
+    [
+      "KC_NUM",
+      "RGB_TOG", "RGB_MOD", "RGB_M_K",
+      "RGB_SAI", "RGB_SAD", "RGB_HUI",
+      "RGB_VAI", "RGB_VAD", "RGB_SPI"
+    ]
+  ]
+}

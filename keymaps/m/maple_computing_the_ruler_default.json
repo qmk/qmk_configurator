@@ -1,0 +1,17 @@
+{
+  "keyboard": "maple_computing/the_ruler",
+  "keymap": "default",
+  "commit": "ad8d934d3cb325d5ad2ed98167a8aa869ccc5e9e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(2)", "KC_2", "C(S(KC_ESC))", "C(A(KC_DEL))", "KC_ESC", "MO(1)"
+    ],
+    [
+      "RGB_TOG", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "_______"
+    ],
+    [
+      "_______", "RGB_VAD", "RGB_VAI", "RGB_MOD", "C(S(KC_ESC))", "QK_BOOT"
+    ]
+  ]
+}

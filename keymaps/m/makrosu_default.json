@@ -1,0 +1,24 @@
+{
+  "keyboard": "makrosu",
+  "keymap": "default",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_F1",   "KC_F2",
+      "MO(3)",   "KC_Z",    "KC_X"
+    ],
+    [
+      "LALT(KC_TAB)", "LGUI(KC_TAB)", "LCTL(KC_S)",
+      "MO(3)",        "LCTL(KC_C)",   "LCTL(KC_V)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "DF(0)",   "DF(1)",   "DF(2)",
+      "_______", "_______", "_______"
+    ]
+  ]
+}

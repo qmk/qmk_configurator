@@ -1,0 +1,24 @@
+{
+  "keyboard": "keebio/bamfk1",
+  "keymap": "default",
+  "commit": "583c68893155e37dfd0b35a58dc1044cb714a418",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "RGB_MOD",
+      "TL_LOWR", "KC_MUTE"
+    ],
+    [
+      "KC_B",
+      "_______", "KC_C"
+    ],
+    [
+      "_______",
+      "_______", "_______"
+    ],
+    [
+      "_______",
+      "_______", "_______"
+    ]
+  ]
+}

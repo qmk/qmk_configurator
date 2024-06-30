@@ -1,0 +1,20 @@
+{
+  "keyboard": "binepad/bnk9",
+  "keymap": "default",
+  "commit": "d8cda43d14d76d59a04c6ea1ed290395b9ca0968",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P7",   "KC_P8",   "LT(1,KC_P9)"
+    ],
+    [
+      "RGB_TOG",
+      "RGB_HUI",  "RGB_SAI", "RGB_SPI",
+      "RGB_HUD",  "RGB_SAD", "RGB_SPD",
+      "RGB_RMOD", "RGB_MOD", "_______"
+    ]
+  ]
+}

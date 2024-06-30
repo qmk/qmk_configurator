@@ -1,0 +1,16 @@
+{
+  "keyboard": "laneware/macro1",
+  "keymap": "default",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
+  "layout": "LAYOUT_numpad",
+  "layers": [
+    [
+      "KC_MUTE",            "KC_MPLY", "KC_BSPC",
+      "KC_CALC", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ]
+  ]
+}
