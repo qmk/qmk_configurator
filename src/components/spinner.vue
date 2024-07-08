@@ -1,5 +1,5 @@
 <template functional>
-  <VeilComponent :isVisible="props.isVisible">
+  <VeilComponent :is-visible="props.isVisible">
     <template #contents>
       <div class="spinner">
         <h1 class="status">{{ props.status }}</h1>
@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  name: 'spinner',
+  name: 'SpinnerComponent',
   props: {
     isVisible: {
       type: Boolean,

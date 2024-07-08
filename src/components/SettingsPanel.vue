@@ -6,8 +6,8 @@
       <div>
         <label
           :title="$t('settingsPanel.fastInput.title')"
-          @mouseover="help('fastInput')"
           class="settings-panel--text"
+          @mouseover="help('fastInput')"
           >{{ $t('settingsPanel.fastInput.label') }}</label
         >
       </div>
@@ -24,8 +24,8 @@
       <div>
         <label
           class="settings-panel--legends"
-          @mouseover="help('legends')"
           :title="$t('settingsPanel.legends.title')"
+          @mouseover="help('legends')"
           >{{ $t('settingsPanel.legends.title') }}</label
         >
       </div>
@@ -39,8 +39,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('toggleTutorial')"
           :title="$t('settingsPanel.toggleTutorial.label')"
+          @mouseover="help('toggleTutorial')"
           >{{ $t('settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
@@ -58,8 +58,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('darkmode')"
           :title="$t('settingsPanel.darkmode.label')"
+          @mouseover="help('darkmode')"
           >{{ $t('settingsPanel.darkmode.label') }}</label
         >
       </div>
@@ -76,8 +76,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('language')"
           :title="$t('settingsPanel.language.title')"
+          @mouseover="help('language')"
           >{{ $t('settingsPanel.language.title') }}</label
         >
       </div>
@@ -91,8 +91,8 @@
       <div>
         <label
           class="settings-panel--text"
-          @mouseover="help('osKeyboardLayout')"
           :title="$t('settingsPanel.osKeyboardLayout.title')"
+          @mouseover="help('osKeyboardLayout')"
           >{{ $t('settingsPanel.osKeyboardLayout.title') }}</label
         >
       </div>
@@ -113,8 +113,8 @@
       <div>
         <label
           class="settings-panel--clear-keymap"
-          @mouseover="help('clearLayer')"
           :title="$t('settingsPanel.clearLayer.title')"
+          @mouseover="help('clearLayer')"
           >{{ $t('settingsPanel.clearLayer.title') }}</label
         >
         <div>
@@ -136,7 +136,8 @@
 import { mapMutations, mapState, mapActions } from 'vuex';
 import { ToggleButton } from 'vue-js-toggle-button';
 export default {
-  name: 'settings-panel',
+  name: 'SettingsPanel',
+  components: { ToggleButton },
   data() {
     return {
       labels: {
@@ -152,7 +153,6 @@ export default {
       defaultWidth: 75
     };
   },
-  components: { ToggleButton },
   computed: {
     ...mapState('keymap', ['continuousInput']),
     ...mapState('app', [

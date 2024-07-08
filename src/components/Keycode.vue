@@ -25,16 +25,47 @@ import isUndefined from 'lodash/isUndefined';
 
 const debug = false;
 export default {
-  name: 'keycode',
+  name: 'KeycodeComponent',
   props: {
-    type: String,
-    code: String,
-    title: String,
-    width: null,
-    name: String,
-    classes: String,
-    styles: Object,
-    layer: Number
+    type: {
+      type: String,
+      default: undefined
+    },
+    code: {
+      type: String,
+      default: ''
+    },
+    title: {
+      type: String,
+      default: ''
+    },
+    width: {
+      type: String,
+      default: undefined
+    },
+    name: {
+      type: String,
+      default: ''
+    },
+    classes: {
+      type: String,
+      default: undefined
+    },
+    styles: {
+      type: Object,
+      default: () => {}
+    },
+    layer: {
+      type: Number,
+      default: 0
+    }
+  },
+  data() {
+    return {
+      dragging: false,
+      crt: undefined,
+      hidden: undefined
+    };
   },
   computed: {
     computedStyles() {
@@ -66,12 +97,8 @@ export default {
       return this.title ? `${this.code}\n${this.title}` : this.code;
     }
   },
-  data() {
-    return {
-      dragging: false,
-      crt: undefined,
-      hidden: undefined
-    };
+  mounted() {
+    this.hidden = document.getElementsByClassName('qmk-hidden-drag-n-drop')[0];
   },
   methods: {
     dragend() {
@@ -102,9 +129,6 @@ export default {
         layer: this.layer
       });
     }
-  },
-  mounted() {
-    this.hidden = document.getElementsByClassName('qmk-hidden-drag-n-drop')[0];
   }
 };
 </script>

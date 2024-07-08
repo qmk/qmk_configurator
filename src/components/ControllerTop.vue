@@ -29,10 +29,10 @@
         ></v-select>
         <a
           id="open-on-github"
+          v-tooltip.bottom="$t('githubKeyboardFolder.title')"
           rel="noopener"
           target="_blank"
           :href="githubKeyboardFolderURL"
-          v-tooltip.bottom="$t('githubKeyboardFolder.title')"
         >
           <font-awesome-icon icon="fa-brands fa-github" size="lg" fixed-width />
         </a>
