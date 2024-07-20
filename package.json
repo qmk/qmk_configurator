@@ -16,7 +16,8 @@
     "test:cypress": "cypress run",
     "test:cypress:open": "cypress open",
     "test:cypress:ci": "start-server-and-test dev http-get://localhost:5173 test:cypress",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "concurrently": "concurrently --prefix \"precommit\" \"yarn:lint\" \"yarn:json:check\" \"yarn:i18n:chk\""
   },
   "dependencies": {
     "@fontsource/montserrat": "^4.5.1",
@@ -52,6 +53,7 @@
     "@vue/test-utils": "^1.0.0-beta.20",
     "ajv": "^8.6.2",
     "babel-core": "7.0.0-bridge.0",
+    "concurrently": "^7.4.0",
     "csv-parse": "^4.8.2",
     "csv-stringify": "^5.3.4",
     "cypress": "9.2.1",
@@ -81,7 +83,6 @@
     "axios": "^0.21",
     "lodash": "^4.17.21",
     "minimist": "^1.2.3",
-    "yargs-parser": "^18.1.2",
     "trim-newlines": "^4.0.1"
   }
 }
