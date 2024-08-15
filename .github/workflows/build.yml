@@ -33,7 +33,7 @@ jobs:
           yarn run json:check
           yarn run lint
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v6
         with:
           cache-key: node-on-${{ runner.os }}-hash-${{ hashFiles('yarn.lock') }}
           start: yarn dev
