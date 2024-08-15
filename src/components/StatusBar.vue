@@ -82,7 +82,7 @@ export default {
       return 'bes-high-job-count';
     },
     discordLink() {
-      return 'https://discord.gg/Uq7gcHh';
+      return 'https://discord.gg/qmk';
     }
   },
   methods: {

@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/qmk/qmk_configurator/workflows/Website%20build/badge.svg)](https://github.com/qmk/qmk_configurator/actions)
 [![Known Vulnerabilities](https://snyk.io/test/github/qmk/qmk_configurator/badge.svg)](https://snyk.io/test/github/qmk/qmk_configurator)
-[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/Uq7gcHh)
+[![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
 [![GitHub contributors](https://img.shields.io/github/contributors/qmk/qmk_configurator.svg)](https://github.com/qmk/qmk_configurator/pulse/monthly)
 [![GitHub forks](https://img.shields.io/github/forks/qmk/qmk_configurator.svg?style=social&label=Fork)](https://github.com/qmk/qmk_configurator/)
 
