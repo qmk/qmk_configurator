@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - id: nodeversion
         run: echo ::set-output name=NODE::$(cat .nvmrc)
       - name: restore Cache
@@ -21,7 +21,7 @@ jobs:
             /home/runner/.cache/Cypress
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Use Node.js ${{steps.nodeversion.outputs.NODE}}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ steps.nodeversion.outputs.NODE }}
       - name: install
@@ -50,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: ./dist
-          GIT_CONFIG_NAME : QMK Bot
+          GIT_CONFIG_NAME: QMK Bot
           GIT_CONFIG_EMAIL: hello@qmk.fm
           SINGLE_COMMIT: true
