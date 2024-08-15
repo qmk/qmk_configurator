@@ -12,6 +12,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'http://localhost:5173/',
     specPattern: 'tests/integration/**/*.spec.js',
+    supportFile: false,
   },
   component: {
     setupNodeEvents(on, config) {},
