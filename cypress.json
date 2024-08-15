@@ -1,9 +1,0 @@
-{
-  "baseUrl": "http://localhost:5173/",
-  "integrationFolder": "tests/integration",
-  "componentFolder": "src",
-  "fixturesFolder": "tests/fixtures",
-  "testFiles": "**/*.spec.js",
-  "chromeWebSecurity": false,
-  "video": false
-}
