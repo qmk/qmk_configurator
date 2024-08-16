@@ -51,7 +51,6 @@ export default {
         return [];
       }
       // Calculate Max with given layout
-      // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
       const colorway = this.colorway;
       let curLayer = layout.map((pos, index) => {
@@ -69,7 +68,6 @@ export default {
           dims
         );
       });
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
       return curLayer;
     },

@@ -7,7 +7,7 @@
 </template>
 <script>
 export default {
-  name: 'Veil',
+  name: 'veil-component',
   props: {
     isVisible: {
       type: Boolean,

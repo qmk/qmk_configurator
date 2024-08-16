@@ -77,7 +77,7 @@ import VisualKeymap from '@/components/VisualKeymap.vue';
 import LayerControl from '@/components/LayerControl.vue';
 
 export default {
-  name: 'Main',
+  name: 'MainComponent',
   props: {},
   components: {
     ControllerTop,

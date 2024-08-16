@@ -16,7 +16,7 @@
 </template>
 <script>
 export default {
-  name: 'spinner',
+  name: 'spinner-component',
   props: {
     isVisible: {
       type: Boolean,

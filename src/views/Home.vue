@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main">
-      <Main />
+      <MainComponent />
     </div>
     <div>
       <keycodes />
@@ -11,13 +11,13 @@
 
 <script>
 // @ is an alias to /src
-import Main from '@/components/Main.vue';
+import MainComponent from '@/components/Main.vue';
 import Keycodes from '@/components/Keycodes.vue';
 
 export default {
-  name: 'configurator',
+  name: 'configurator-component',
   components: {
-    Main,
+    MainComponent,
     Keycodes
   },
   methods: {}

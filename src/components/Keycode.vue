@@ -25,7 +25,7 @@ import isUndefined from 'lodash/isUndefined';
 
 const debug = false;
 export default {
-  name: 'keycode',
+  name: 'keycode-component',
   props: {
     type: String,
     code: String,

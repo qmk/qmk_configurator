@@ -118,7 +118,6 @@ const getters = {
                   keycode = compiler ? key.text : `ANY(${key.text})`;
                 }
               } else {
-                // eslint-disable-next-line
                 console.error(`ERROR: unexpected keycode ${key}`, k, i, _layer);
               }
               newLayer.push(keycode);

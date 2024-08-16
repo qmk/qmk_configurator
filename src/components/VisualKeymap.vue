@@ -50,7 +50,6 @@ export default {
         return [];
       }
       // Calculate Max with given layout
-      // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
       const colorway = this.colorway;
       let curLayer = layout.map((pos, index) => {
@@ -71,7 +70,6 @@ export default {
           dims
         );
       });
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
       if (this.loadingKeymapPromise) {
         // signal to observers of keymap loading that UI component has finished calculations
@@ -85,7 +83,6 @@ export default {
   },
   watch: {
     layout(newLayout, oldLayout) {
-      // eslint-disable-next-line no-console
       this.profile && console.time('layout');
       if (
         !isUndefined(newLayout) &&
@@ -100,7 +97,6 @@ export default {
       ) {
         this.recalcEverything(oldLayout);
       }
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout');
     }
   },
@@ -149,11 +145,9 @@ export default {
       this.height = max.y;
     },
     recalcEverything(newLayout) {
-      // eslint-disable-next-line no-console
       this.profile && console.time('layout::reset');
       this.resetConfig();
       this.changeLayer(0);
-      // eslint-disable-next-line no-console
       this.profile && console.time('layout::initkeymap');
       if (this.getLayer(0).length === 0) {
         this.initKeymap({
@@ -161,12 +155,9 @@ export default {
           layout: this.layouts[newLayout]
         });
       }
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::initkeymap');
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::reset');
 
-      // eslint-disable-next-line no-console
       this.profile && console.time('layout::scale');
       const layout = this.layouts[newLayout];
       if (isUndefined(layout)) {
@@ -196,7 +187,6 @@ export default {
         max.y *= this.config.SCALE;
       }
       this.setSize(max);
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('layout::scale');
     }
   }

@@ -159,7 +159,6 @@ export default {
       }
 
       // Calculate Max with given layout
-      // eslint-disable-next-line no-console
       this.profile && console.time('currentLayer');
       const curLayer = this.activeLayoutMeta.map((pos, index) => {
         const _pos = Object.assign({ w: 1, h: 1 }, pos);
@@ -175,7 +174,6 @@ export default {
           dims
         );
       });
-      // eslint-disable-next-line no-console
       this.profile && console.timeEnd('currentLayer');
       return curLayer;
     },
