@@ -26,8 +26,11 @@ html {
     blockquote {
       border-color: #e5e5e5;
     }
-    background-color: $qmk-white;
-    color: #333;
+    // @see https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+    & {
+      background-color: $qmk-white;
+      color: #333;
+    }
     #app {
       color: #2c3e50;
     }

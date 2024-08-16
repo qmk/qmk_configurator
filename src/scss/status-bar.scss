@@ -65,7 +65,10 @@
     margin-right: 0px;
     border-radius: 100%;
   }
-  width: 1rem;
+  // @see https://sass-lang.com/documentation/breaking-changes/mixed-decls/
+  & {
+    width: 1rem;
+  }
 }
 
 .bes-status-center {
