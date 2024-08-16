@@ -1,7 +1,8 @@
+const js = require('@eslint/js');
 const cypress = require('eslint-plugin-cypress');
 const eslintPluginVue = require('eslint-plugin-vue');
-const cypressConfig = require('./cypress.config');
 module.exports = [
+  js.configs.recommended,
   ...eslintPluginVue.configs['flat/vue2-essential'],
   {
     plugins: {

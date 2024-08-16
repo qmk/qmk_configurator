@@ -1,8 +1,4 @@
-import {
-  localStorageSet,
-  localStorageLoad,
-  CONSTS
-} from '@/store/localStorage';
+import { localStorageLoad, CONSTS } from '@/store/localStorage';
 import osKeyboardLayouts from '@/os_keyboard_layouts';
 
 function getDefaultConfiguratorSettings() {
