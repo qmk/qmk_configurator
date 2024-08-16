@@ -5,17 +5,20 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   video: false,
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config);
+    devServer: {
+      framework: 'vue',
+      bundler: 'vite'
     },
     baseUrl: 'http://localhost:5173/',
     specPattern: 'tests/integration/**/*.spec.js',
     supportFile: false
   },
   component: {
-    setupNodeEvents(on, config) {},
-    specPattern: 'src/**/*.spec.js'
+    devServer: {
+      framework: 'vue',
+      bundler: 'vite'
+    },
+    specPattern: 'src/**/*.spec.js',
+    supportFile: false
   }
 });

@@ -15,7 +15,8 @@
     "json:check": "node scripts/json/ajv.js public/keymaps",
     "test:cypress": "cypress run",
     "test:cypress:open": "cypress open",
-    "test:cypress:ci": "start-server-and-test dev http-get://localhost:5173 test:cypress",
+    "test:cypress:open:interactive": "start-server-and-test dev http://localhost:5173 test:cypress:open",
+    "test:cypress:ci": "start-server-and-test dev http://localhost:5173 test:cypress",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -41,8 +42,6 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "@cypress/vite-dev-server": "3",
-    "@cypress/vue": "3",
     "@mixer/parallel-prettier": "^2.0.2",
     "@types/lodash": "^4.14.178",
     "@vitejs/plugin-vue": "4",
@@ -67,7 +66,7 @@
     "sass": "^1.54.5",
     "serialize-javascript": "^3.1.0",
     "simplecc-wasm": "^0.1.4",
-    "start-server-and-test": "^1.10.0",
+    "start-server-and-test": "1",
     "tar": "^6.2.1",
     "vite": "4",
     "vite-plugin-vue2": "^1.9.2",
