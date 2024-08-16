@@ -99,7 +99,7 @@ const getters = {
 
 function countMatches(filter, collection) {
   filter = filter.toUpperCase();
-  return collection.reduce((acc, { group, width, code, name, title }) => {
+  return collection.reduce((acc, { code, name, title }) => {
     if (!isUndefined(code)) {
       if (
         code.includes(filter) ||

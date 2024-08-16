@@ -13,7 +13,7 @@ jobs:
     if: github.repository == 'qmk/qmk_configurator'
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - id: nodeversion
         run: echo ::set-output name=NODE::$(cat .nvmrc)
@@ -43,7 +43,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: yarn dev
-          wait-on: "http://localhost:5173"
+          wait-on: 'http://localhost:5173'
 
       - name: build
         run: |
@@ -60,4 +60,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.SPACES_ACCESS_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.SPACES_SECRET_KEY }}
           AWS_S3_ENDPOINT: https://nyc3.digitaloceanspaces.com
-          SOURCE_DIR: "dist"
+          SOURCE_DIR: 'dist'

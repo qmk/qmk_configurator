@@ -49,7 +49,6 @@
 </template>
 <script>
 import axios from 'axios';
-import escape from 'lodash/escape';
 import { backend_status_url } from '@/store/modules/constants';
 import { mapState, mapMutations } from 'vuex';
 /**

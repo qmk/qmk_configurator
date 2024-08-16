@@ -10,7 +10,7 @@
 <script>
 import isUndefined from 'lodash/isUndefined';
 export default {
-  name: 'space',
+  name: 'space-component',
   props: {
     label: String,
     width: null,

@@ -1,4 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
+/* global require, process */
 const fs = require('fs');
 
 // Taken from https://invisible-characters.com/
@@ -122,7 +123,7 @@ function computeIntl2US(lines) {
   for (const aliasDefinition of lines.filter((line) =>
     kcAliasDefRegExp.test(line)
   )) {
-    const [fullMatch, intlAlias, macroExpansion] =
+    const [/*fullMatch, */ intlAlias, macroExpansion] =
       kcAliasDefRegExp.exec(aliasDefinition);
     const usAlias = translateToUS(macroExpansion, intl2us);
     intl2us.set(intlAlias, usAlias);
@@ -237,7 +238,7 @@ function convertLine(line, kcInfo, intl2us) {
 
   const copyrightRegExp = /(^.*)Copyright .*$/;
   if (copyrightRegExp.test(line)) {
-    let [fullMatch, beforeCopyrightWord] = copyrightRegExp.exec(line);
+    let [/*fullMatch,*/ beforeCopyrightWord] = copyrightRegExp.exec(line);
     return (
       beforeCopyrightWord +
       'Copyright ' +
@@ -252,8 +253,7 @@ function convertLine(line, kcInfo, intl2us) {
   }
 
   if (kcAliasDefRegExp.test(line)) {
-    let keycodeObjectLine = '';
-    let [fullMatch, intlAlias, macroExpansion, comment] =
+    let [fullMatch, /*intlAlias, */ macroExpansion /*, comment*/] =
       kcAliasDefRegExp.exec(line);
     const usMacroExpansion = translateToUS(macroExpansion, intl2us);
     let kcInfoLine = stringify(usMacroExpansion, kcInfo.get(usMacroExpansion));
@@ -280,8 +280,8 @@ function generateMissingANSISOkeys(kcInfo) {
   );
   let missingKcInfoLines = [];
   for (const missingKc of missingKcs) {
-    baseKcInfo = kcInfo.get(fallbackKc);
-    shiftedKcInfo = kcInfo.get(`S(${fallbackKc})`) || baseKcInfo;
+    const baseKcInfo = kcInfo.get(fallbackKc);
+    const shiftedKcInfo = kcInfo.get(`S(${fallbackKc})`) || baseKcInfo;
     if (baseKcInfo === undefined || shiftedKcInfo === undefined) {
       throw new Error(
         'The input file is missing a mapping to both KC_BSLS and KC_NUHS. At least one of them must be mapped to a locale alias!'
@@ -333,7 +333,7 @@ function generateMissingShiftedAliasKcInfo(kcInfo) {
 
 function generateSpaceCadetKcInfo(kc, kcInfo) {
   const spaceCadetKeycodeRegExp = /([LR])([GASC])P([OC])/;
-  let [fullMatch, handedness, modifier, variant] =
+  let [/*fullMatch, */ handedness, modifier, variant] =
     spaceCadetKeycodeRegExp.exec(kc);
   const table = new Map([
     ['L', 'Left'],
@@ -380,7 +380,7 @@ fs.readFile(process.argv.at(-1), 'utf8', function (err, data) {
     console.log('/* Other keys */');
     console.log(generateMissingANSISOkeys(kcInfo));
     console.log(generateMissingShiftedAliasKcInfo(kcInfo));
-    spaceCadetKeycodes = [
+    const spaceCadetKeycodes = [
       'SC_LSPO',
       'SC_RSPC',
       'SC_LCPO',

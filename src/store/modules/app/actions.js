@@ -32,7 +32,6 @@ const actions = {
    */
   async loadDefaultKeymap({ state }) {
     const keyboardPath = state.keyboard.slice(0, 1).toLowerCase();
-    // eslint-disable-next-line
     const keyboardName = state.keyboard.replace(/\//g, '_');
     const resp = await axios.get(
       `keymaps/${keyboardPath}/${keyboardName}_default.json`
@@ -71,7 +70,6 @@ const actions = {
     commit('setLayout', undefined);
     await dispatch('loadLayouts');
     let nextLayout = getPreferredLayout(state.layouts);
-    // eslint-disable-next-line
     console.info(getPreferredLayout(state.layouts));
     if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
       nextLayout = oldLayout;

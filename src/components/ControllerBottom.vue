@@ -226,6 +226,7 @@ export default {
         await this.loadJsonData(data);
       } catch (err) {
         alert('Seems like there is an issue trying to get the file');
+        console.error(err);
       }
       this.closeVeil();
     },
@@ -386,10 +387,9 @@ export default {
             throw err;
           });
 
-        var store = this.$store;
-        let promise = await new Promise((resolve) =>
-          this.setLoadingKeymapPromise(resolve)
-        );
+        // wait for keymap to load
+        await new Promise((resolve) => this.setLoadingKeymapPromise(resolve));
+
         const stats = await this.load_converted_keymap(data.layers);
         let msg = this.$t('statsTemplate', stats);
         if (stats.warnings.length > 0 || stats.errors.length > 0) {

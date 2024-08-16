@@ -381,7 +381,7 @@ export default {
           if (isNavigationFailure(failure, NavigationFailureType.cancelled)) {
             return;
           }
-          throw err;
+          throw failure;
         });
       this.$store.dispatch('status/viewReadme', this.keyboard);
     },
@@ -402,7 +402,7 @@ export default {
           if (isNavigationFailure(failure, NavigationFailureType.cancelled)) {
             return;
           }
-          throw err;
+          throw failure;
         });
     },
     compile() {

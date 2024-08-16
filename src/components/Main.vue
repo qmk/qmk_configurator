@@ -77,7 +77,7 @@ import VisualKeymap from '@/components/VisualKeymap.vue';
 import LayerControl from '@/components/LayerControl.vue';
 
 export default {
-  name: 'Main',
+  name: 'MainComponent',
   props: {},
   components: {
     ControllerTop,
@@ -117,7 +117,7 @@ export default {
           .replace(/Dcs/, 'DCS')
           .replace(/Dev Tty/, '/dev/tty')
           .replace(/ ?Plus/g, '+')
-          .replace(/ ?Dot ?/g, '\.')
+          .replace(/ ?Dot ?/g, '.')
           .replace(/Ascii/, 'ASCII');
       });
     },

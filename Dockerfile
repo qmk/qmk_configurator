@@ -1,7 +1,7 @@
 # This file uses a multi-stage build strategy. The build stage sets up the nvm environment and builds configurator, while the second stage copies this into a clean container without any build tools.
 
 ## First Stage- Build
-FROM node:14 as build
+FROM node:20 as build
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 

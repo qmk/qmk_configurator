@@ -66,7 +66,7 @@ import Space from '@/components/Space.vue';
 import store from '@/store';
 
 export default {
-  name: 'keycodes',
+  name: 'keycodes-component',
   components: { Keycode, Space },
   props: {},
   data() {

@@ -136,9 +136,10 @@ export default {
     },
     displayName() {
       switch (this.legends) {
-        case 'size':
+        case 'size': {
           const { uh, uw } = this;
           return uh > uw ? (uw === 1 ? uh : `${uw} /\n ${uh}`) : uw;
+        }
         case 'matrix':
           if (this.matrix) {
             const [row, col] = this.matrix;

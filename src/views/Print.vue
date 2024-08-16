@@ -74,7 +74,7 @@ import Vue from 'vue';
 import PrintKeymap from '@/components/PrintKeymap.vue';
 import { mapState, mapGetters } from 'vuex';
 export default {
-  name: 'printerator',
+  name: 'printerator-component',
   computed: {
     ...mapState('app', ['keyboard', 'layout', 'layouts', 'author', 'notes']),
     ...mapGetters('keymap', ['activeLayers']),
