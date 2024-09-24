@@ -1,8 +1,8 @@
 {
   "keyboard": "h0oni/hotduck",
   "keymap": "default",
-  "commit": "5629ba18077ee5dcde72e497ddf46d848817dd5c",
-  "layout": "LAYOUT_all",
+  "commit": "5624804c6822b68d091e77642e07dc3640bf4ca6",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",    "KC_6",    "KC_7",    "KC_8",    "KC_9",    "KC_0",    "KC_MINS", "KC_EQL",  "KC_BSPC",    "MO(1)",   "KC_HOME", "KC_PGUP",

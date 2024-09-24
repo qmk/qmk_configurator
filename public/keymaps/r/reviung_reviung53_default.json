@@ -1,7 +1,7 @@
 {
   "keyboard": "reviung/reviung53",
   "keymap": "default",
-  "commit": "891780b17f0dcf86624cadc18fb0fbeb2ee418d8",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -27,8 +27,8 @@
     ],
     [
                             "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "QK_BOOT",
-      "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_MOD", "XXXXXXX", "RGB_TOG", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_RMOD","XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "UG_VALU", "UG_SATU", "UG_HUEU", "UG_NEXT", "XXXXXXX", "UG_TOGG", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "UG_VALD", "UG_SATD", "UG_HUED", "UG_PREV", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX",            "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "_______", "_______",                       "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]

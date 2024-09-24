@@ -1,7 +1,7 @@
 {
   "keyboard": "db/db63",
   "keymap": "default",
-  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -19,11 +19,11 @@
       "KC_LCTL", "KC_LALT", "KC_LGUI",                                  "KC_SPC",                        "_______", "MO(1)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "QK_GESC", "RGB_M_P", "RGB_M_B", "RGB_M_R", "RGB_M_SW","RGB_M_SN","RGB_M_K", "RGB_M_X", "RGB_M_G", "RGB_M_T", "RGB_TOG", "RGB_VAD", "RGB_VAI", "KC_BSPC",
-      "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_LBRC", "KC_RBRC", "KC_BSLS",
-      "XXXXXXX", "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",    "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN", "KC_QUOT",            "_______",
-      "KC_LSFT",            "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_RSFT", "KC_UP",   "MO(2)",
-      "KC_LCTL", "KC_LALT", "KC_LGUI",                                  "KC_SPC",                        "_______", "XXXXXXX", "KC_LEFT", "KC_DOWN", "KC_RGHT"
+      "QK_GESC", "RGB_M_P", "RGB_M_B", "RGB_M_R", "RGB_M_SW", "RGB_M_SN", "RGB_M_K", "RGB_M_X", "RGB_M_G", "RGB_M_T", "UG_TOGG", "UG_VALD", "UG_VALU", "KC_BSPC",
+      "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",     "KC_T",     "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_LBRC", "KC_RBRC", "KC_BSLS",
+      "XXXXXXX", "KC_A",    "KC_S",    "KC_D",    "KC_F",     "KC_G",     "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN", "KC_QUOT",            "_______",
+      "KC_LSFT",            "KC_Z",    "KC_X",    "KC_C",     "KC_V",     "KC_B",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_RSFT", "KC_UP",   "MO(2)",
+      "KC_LCTL", "KC_LALT", "KC_LGUI",                                    "KC_SPC",                        "_______", "XXXXXXX", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "BL_STEP", "BL_BRTG", "BL_TOGG", "BL_DOWN", "BL_UP",   "_______",

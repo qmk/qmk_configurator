@@ -1,7 +1,7 @@
 {
   "keyboard": "takashicompany/baumkuchen",
   "keymap": "default",
-  "commit": "e423d5e3d4059b3c16358fc5b6b2fe673f204f54",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,8 +11,8 @@
                                        "KC_NO",      "KC_NO"
     ],
     [
-      "RGB_TOG", "RGB_MOD", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "RGB_HUI", "RGB_SAI", "RGB_VAI",
+      "UG_TOGG", "UG_NEXT", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "UG_HUEU", "UG_SATU", "UG_VALU",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
                                        "KC_TRNS", "KC_TRNS"
     ]

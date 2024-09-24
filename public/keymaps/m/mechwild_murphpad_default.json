@@ -1,7 +1,7 @@
 {
   "keyboard": "mechwild/murphpad",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -16,10 +16,10 @@
     [
                  "_______", "_______", "_______", "_______",
                  "_______", "_______", "_______", "_______",
-                 "RGB_HUD", "RGB_SPI", "RGB_HUI", "_______",
-      "_______", "RGB_RMOD","RGB_TOG", "RGB_MOD", "_______",
-      "_______", "RGB_VAD", "RGB_SPD", "RGB_VAI", "_______",
-      "_______", "RGB_SAD", "_______", "RGB_SAI", "_______",
+                 "UG_HUED", "UG_SPDU", "UG_HUEU", "_______",
+      "_______", "UG_PREV", "UG_TOGG", "UG_NEXT", "_______",
+      "_______", "UG_VALD", "UG_SPDD", "UG_VALU", "_______",
+      "_______", "UG_SATD", "_______", "UG_SATU", "_______",
                  "_______", "_______", "_______"
     ],
     [

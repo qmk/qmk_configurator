@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/ec_23u",
   "keymap": "default",
-  "commit": "ed791972e1bf812c432655de31e3cf92f3bcf397",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_P0",  "KC_P0",   "KC_PDOT", "KC_PENT"
     ],
     [
-      "RGB_TOG", "RGB_VAD", "RGB_VAI", "_______",
+      "UG_TOGG", "UG_VALD", "UG_VALU", "_______",
       "_______", "_______", "_______", "NK_TOGG",
       "_______", "_______", "_______", "_______",
       "_______", "_______", "_______", "_______",

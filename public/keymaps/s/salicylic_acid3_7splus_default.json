@@ -1,7 +1,7 @@
 {
   "keyboard": "salicylic_acid3/7splus",
   "keymap": "default",
-  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -16,8 +16,8 @@
       "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "MO(1)",        "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "RGB_TOG", "RGB_MOD", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX",
-      "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "RGB_VAD", "RGB_VAI", "RGB_HUD", "RGB_HUI", "RGB_SAD",            "RGB_SAI", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "UG_TOGG", "UG_NEXT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX",
+      "XXXXXXX",      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "UG_VALD", "UG_VALU", "UG_HUED", "UG_HUEU", "UG_SATD",            "UG_SATU", "XXXXXXX", "XXXXXXX",
       "XXXXXXX",      "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX",            "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]

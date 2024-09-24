@@ -1,7 +1,7 @@
 {
   "keyboard": "minimon/index_tab",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_6x13",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_ESC",  "KC_GRV",  "KC_LGUI", "KC_LALT", "KC_SPC",  "KC_SPC",  "KC_SPC",  "KC_SPC",  "TG(1)",   "KC_BSLS", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_RMOD","RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "RGB_SPI", "RGB_SPD", "KC_TRNS",
+      "KC_TRNS", "UG_TOGG", "UG_NEXT", "UG_PREV", "UG_HUEU", "UG_HUED", "UG_SATU", "UG_SATD", "UG_VALU", "UG_VALD", "UG_SPDU", "UG_SPDD", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPRV", "KC_MNXT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PCMM",

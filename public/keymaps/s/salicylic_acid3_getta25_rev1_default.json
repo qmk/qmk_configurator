@@ -1,7 +1,7 @@
 {
   "keyboard": "salicylic_acid3/getta25/rev1",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,20 +13,20 @@
       "LT(1,KC_P0)",             "KC_PDOT", "KC_PENT", "KC_BSPC"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_NO",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_NO",   "KC_UP",   "KC_NO",              "KC_TRNS",
-      "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_TRNS", "KC_TRNS",
-      "KC_NO",   "KC_DOWN", "KC_NO",              "KC_TRNS",
-      "MO(1)",              "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______",
+      "XXXXXXX", "_______", "_______", "_______",
+      "XXXXXXX", "KC_UP",   "XXXXXXX",            "_______",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "_______", "_______",
+      "XXXXXXX", "KC_DOWN", "XXXXXXX",            "_______",
+      "MO(1)",              "_______", "_______", "_______"
     ],
     [
-      "MO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_TRNS",
-      "RGB_SAD", "RGB_SAI", "KC_NO",              "KC_TRNS",
-      "RGB_HUD", "RGB_HUI", "KC_NO",   "RGB_TOG", "KC_TRNS",
-      "RGB_VAD", "RGB_VAI", "KC_NO",              "KC_TRNS",
-      "KC_TRNS",            "KC_TRNS", "RGB_MOD", "KC_TRNS"
+      "MO(2)",   "_______", "_______", "_______",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
+      "UG_SATD", "UG_SATU", "XXXXXXX",            "_______",
+      "UG_HUED", "UG_HUEU", "XXXXXXX", "UG_TOGG", "_______",
+      "UG_VALD", "UG_VALU", "XXXXXXX",            "_______",
+      "_______",            "_______", "UG_NEXT", "_______"
     ]
   ]
 }

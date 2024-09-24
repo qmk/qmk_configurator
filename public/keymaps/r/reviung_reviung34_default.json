@@ -1,8 +1,8 @@
 {
   "keyboard": "reviung/reviung34",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
-  "layout": "LAYOUT_reviung34",
+  "commit": "d5e0562a7043bf372c3f349420dd765ee3a9653d",
+  "layout": "LAYOUT_2x1u_left",
   "layers": [
     [
       "LCTL_T(KC_Q)", "KC_W",         "KC_E",    "KC_R",    "KC_T",       "KC_Y",         "KC_U",    "KC_I",            "KC_O",           "KC_P",

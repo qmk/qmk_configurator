@@ -1,7 +1,7 @@
 {
   "keyboard": "longnald/corin",
   "keymap": "default",
-  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_64_ansi",
   "layers": [
     [
@@ -19,7 +19,7 @@
       "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                                    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
     ],
     [
-      "KC_NO",   "RGB_TOG", "RGB_M_P", "RGB_M_B", "RGB_M_G", "RGB_M_SW", "RGB_M_SN", "KC_NO",   "KC_NO",   "RGB_HUD", "RGB_HUI", "RGB_VAD", "RGB_VAI", "KC_NO",
+      "KC_NO",   "UG_TOGG", "RGB_M_P", "RGB_M_B", "RGB_M_G", "RGB_M_SW", "RGB_M_SN", "KC_NO",   "KC_NO",   "UG_HUED", "UG_HUEU", "UG_VALD", "UG_VALU", "KC_NO",
       "KC_NO",   "KC_NO",   "AG_LNRM", "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",
       "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",    "KC_NO",   "AG_LSWP", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",

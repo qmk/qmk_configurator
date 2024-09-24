@@ -1,7 +1,7 @@
 {
   "keyboard": "keysofkings/twokey",
   "keymap": "default",
-  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -14,15 +14,15 @@
     ],
     [
       "TO(0)",
-      "RGB_TOG", "RGB_MOD"
+      "UG_TOGG", "UG_NEXT"
     ],
     [
       "TO(0)",
-      "RGB_VAI", "RGB_VAD"
+      "UG_VALU", "UG_VALD"
     ],
     [
       "TO(0)",
-      "RGB_HUI", "RGB_HUD"
+      "UG_HUEU", "UG_HUED"
     ],
     [
       "TO(5)",
@@ -30,7 +30,7 @@
     ],
     [
       "TO(0)",
-      "RGB_SAI", "RGB_SAD"
+      "UG_SATU", "UG_SATD"
     ],
     [
       "TO(8)",

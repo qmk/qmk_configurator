@@ -1,7 +1,7 @@
 {
   "keyboard": "yushakobo/navpad/10_helix_r",
   "keymap": "default",
-  "commit": "5bd68e3695a82ff504c358c33445b4530c2a327f",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -21,12 +21,12 @@
       "KC_BTN1", "KC_ENT",    "S(KC_SPC)", "LT(2,KC_SPC)", "KC_SPC",  "KC_COMM", "KC_TRNS",   "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT"
     ],
     [
-      "RGB_TOG", "RGB_MOD", "RGB_RMOD", "KC_NO",
-      "RGB_HUI", "RGB_SAI", "RGB_VAI",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "RGB_HUD", "RGB_SAD", "RGB_VAD",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_BSPC", "KC_DEL",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-                                        "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_RBRC", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END",  "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+      "UG_TOGG", "UG_NEXT", "UG_PREV", "KC_NO",
+      "UG_HUEU", "UG_SATU", "UG_VALU", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "UG_HUED", "UG_SATD", "UG_VALD", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_BSPC", "KC_DEL",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                                       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_RBRC", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END",  "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
     ],
     [
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",

@@ -1,7 +1,7 @@
 {
   "keyboard": "kprepublic/cospad",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
@@ -13,12 +13,12 @@
       "KC_P0",              "KC_PDOT", "KC_PENT"
     ],
     [
-      "RGB_TOG", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "RGB_MOD", "RGB_M_P", "BL_TOGG", "KC_TRNS",
-      "RGB_HUD", "RGB_HUI", "BL_ON",
-      "RGB_SAD", "RGB_SAI", "BL_OFF",  "KC_TRNS",
-      "RGB_VAD", "RGB_VAI", "BL_STEP",
-      "KC_TRNS",            "QK_BOOT", "KC_TRNS"
+      "UG_TOGG", "_______", "_______", "_______",
+      "UG_NEXT", "RGB_M_P", "BL_TOGG", "_______",
+      "UG_HUED", "UG_HUEU", "BL_ON",
+      "UG_SATD", "UG_SATU", "BL_OFF",  "_______",
+      "UG_VALD", "UG_VALU", "BL_STEP",
+      "_______",            "QK_BOOT", "_______"
     ]
   ]
 }

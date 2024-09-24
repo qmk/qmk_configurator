@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/uthol/rev1",
   "keymap": "default",
-  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -33,11 +33,11 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_SPC",        "KC_TRNS", "KC_MPRV", "KC_VOLD", "KC_VOLU", "KC_MNXT"
     ],
     [
-      "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "QK_BOOT",
-      "RGB_TOG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_SLEP", "KC_PWR",
-      "KC_NO",   "KC_SCRL", "KC_NO",   "KC_NO",   "KC_PSCR", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "RGB_HUD", "RGB_HUI", "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NUM",  "KC_CAPS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "RGB_SAI", "RGB_SAI", "RGB_M_P",
-      "KC_NO",   "KC_TRNS", "KC_NO",   "KC_NO",   "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "RGB_RMOD", "RGB_VAD", "RGB_VAI", "RGB_MOD"
+      "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
+      "UG_TOGG", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_SLEP", "KC_PWR",
+      "KC_NO",   "KC_SCRL", "KC_NO",   "KC_NO",   "KC_PSCR", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "UG_HUED", "UG_HUEU", "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NUM",  "KC_CAPS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "UG_SATD", "UG_SATU", "RGB_M_P",
+      "KC_NO",   "KC_TRNS", "KC_NO",   "KC_NO",   "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "UG_PREV", "UG_VALD", "UG_VALU", "UG_NEXT"
     ]
   ]
 }

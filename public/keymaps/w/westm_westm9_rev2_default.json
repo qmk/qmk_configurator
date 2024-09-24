@@ -1,7 +1,7 @@
 {
   "keyboard": "westm/westm9/rev2",
   "keymap": "default",
-  "commit": "48721b20fc5524d4a388e7fc5d5d0ba16ad6902b",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_macropad",
   "layers": [
     [
@@ -10,9 +10,9 @@
       "KC_NO",   "KC_NO",   "MO(1)"
     ],
     [
-      "RGB_TOG", "RGB_RMOD", "RGB_SAI",
-      "RGB_VAD", "RGB_VAI",  "RGB_SAD",
-      "RGB_HUD", "RGB_HUI",  "KC_NO"
+      "UG_TOGG", "UG_PREV", "UG_SATU",
+      "UG_VALD", "UG_VALU", "UG_SATD",
+      "UG_HUED", "UG_HUEU", "KC_NO"
     ]
   ]
 }

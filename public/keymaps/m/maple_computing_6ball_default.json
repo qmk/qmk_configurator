@@ -1,7 +1,7 @@
 {
   "keyboard": "maple_computing/6ball",
   "keymap": "default",
-  "commit": "a1b39e6db231923935055846384eb2e78e538268",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -9,8 +9,8 @@
       "KC_R",    "KC_D",         "KC_M"
     ],
     [
-      "KC_F",    "KC_TRNS", "RGB_HUI",
-      "RGB_TOG", "RGB_MOD", "RGB_HUD"
+      "KC_F",    "KC_TRNS", "UG_HUEU",
+      "UG_TOGG", "UG_NEXT", "UG_HUED"
     ]
   ]
 }

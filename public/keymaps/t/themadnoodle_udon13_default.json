@@ -1,7 +1,7 @@
 {
   "keyboard": "themadnoodle/udon13",
   "keymap": "default",
-  "commit": "114a43e1eabd6d3048843d3c9ccca6ca87971133",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,10 +11,10 @@
       "KC_COPY", "KC_CUT",  "KC_PSTE", "TO(3)"
     ],
     [
-      "RGB_TOG",
-      "RGB_SAD",  "RGB_SAI",  "RGB_HUD", "RGB_HUI",
-      "RGB_MOD",  "RGB_RMOD", "RGB_M_P", "RGB_M_B",
-      "RGB_M_SW", "RGB_SPD",  "RGB_SPI", "TO(0)"
+      "UG_TOGG",
+      "UG_SATD",  "UG_SATU", "UG_HUED", "UG_HUEU",
+      "UG_NEXT",  "UG_PREV", "RGB_M_P", "RGB_M_B",
+      "RGB_M_SW", "UG_SPDD", "UG_SPDU", "TO(0)"
     ],
     [
       "KC_NO",

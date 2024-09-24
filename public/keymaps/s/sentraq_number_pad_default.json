@@ -1,7 +1,7 @@
 {
   "keyboard": "sentraq/number_pad",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
@@ -12,10 +12,10 @@
       "KC_P0",              "KC_PDOT", "KC_PENT"
     ],
     [
-      "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_RMOD",
-      "KC_NO",   "RGB_HUD", "RGB_HUI",
-      "KC_NO",   "RGB_SAD", "RGB_SAI", "KC_NO",
-      "KC_NO",   "RGB_VAD", "RGB_VAI",
+      "KC_TRNS", "UG_TOGG", "UG_NEXT", "UG_PREV",
+      "KC_NO",   "UG_HUED", "UG_HUEU",
+      "KC_NO",   "UG_SATD", "UG_SATU", "KC_NO",
+      "KC_NO",   "UG_VALD", "UG_VALU",
       "KC_NO",              "KC_NO",   "KC_NUM"
     ]
   ]

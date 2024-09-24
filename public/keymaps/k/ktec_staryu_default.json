@@ -1,7 +1,7 @@
 {
   "keyboard": "ktec/staryu",
   "keymap": "default",
-  "commit": "7407347be1df69928d27ea9b6a4fe094429f2a55",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -22,7 +22,7 @@
     ],
     [
                  "KC_NO",   "TO(0)",
-      "RGB_TOG", "BL_TOGG", "BL_STEP"
+      "UG_TOGG", "BL_TOGG", "BL_STEP"
     ]
   ]
 }

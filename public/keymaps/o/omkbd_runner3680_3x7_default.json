@@ -1,7 +1,7 @@
 {
   "keyboard": "omkbd/runner3680/3x7",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -10,9 +10,9 @@
       "KC_F8",   "KC_LSFT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "KC_BSLS", "KC_UP"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "QK_BOOT", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "UG_TOGG", "UG_HUEU", "UG_SATU", "UG_VALU", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "UG_NEXT", "UG_HUED", "UG_SATD", "UG_VALD", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"
     ]
   ]
 }

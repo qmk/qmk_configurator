@@ -1,7 +1,7 @@
 {
   "keyboard": "shandoncodes/riot_pad",
   "keymap": "default",
-  "commit": "b37d23bfa5f4c46abd08c8eea5625a7f95ca6341",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [
@@ -9,8 +9,8 @@
       "KC_D",    "KC_E",    "MO(1)"
     ],
     [
-      "RGB_MOD",    "RGB_RMOD",    "RGB_TOG",
-      "RGB_VAI",    "RGB_VAD",    "KC_TRNS"
+      "UG_NEXT", "UG_PREV", "UG_TOGG",
+      "UG_VALU", "UG_VALD", "KC_TRNS"
     ]
   ]
 }

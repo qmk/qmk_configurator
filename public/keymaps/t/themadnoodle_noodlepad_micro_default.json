@@ -1,7 +1,7 @@
 {
   "keyboard": "themadnoodle/noodlepad_micro",
   "keymap": "default",
-  "commit": "83b84187ea19c92d31909443c85a89fe8a605f91",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -10,8 +10,8 @@
       "LT(2,KC_CALC)", "KC_MAIL", "LT(1,KC_MYCM)"
     ],
     [
-      "RGB_MOD",            "RGB_RMOD",
-      "RGB_VAD", "RGB_TOG", "RGB_VAI",
+      "UG_NEXT",            "UG_PREV",
+      "UG_VALD", "UG_TOGG", "UG_VALU",
       "RGB_M_P", "RGB_M_B", "KC_TRNS"
     ],
     [

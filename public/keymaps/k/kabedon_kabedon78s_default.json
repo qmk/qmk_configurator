@@ -1,7 +1,7 @@
 {
   "keyboard": "kabedon/kabedon78s",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_TRNS",    "KC_LCTL", "KC_LGUI", "KC_LALT", "MO(1)",              "KC_SPC",  "KC_SPC",                        "KC_RALT", "KC_RCTL", "KC_LEFT", "KC_DOWN", "KC_RGHT",    "KC_P0",              "KC_PDOT"
     ],
     [
-                    "RGB_TOG",            "RGB_MOD", "RGB_SAD", "RGB_SAI", "RGB_HUI", "RGB_HUD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                    "UG_TOGG",            "UG_NEXT", "UG_SATD", "UG_SATU", "UG_HUEU", "UG_HUED", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",

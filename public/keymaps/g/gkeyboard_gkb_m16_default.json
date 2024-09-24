@@ -1,7 +1,7 @@
 {
   "keyboard": "gkeyboard/gkb_m16",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
@@ -17,10 +17,10 @@
       "_______", "KC_P0",   "KC_P0",   "KC_DOT"
     ],
     [
-      "RGB_MOD", "RGB_HUI", "RGB_SAI", "RGB_VAI",
-      "RGB_RMOD","RGB_HUD", "RGB_SAD", "RGB_VAD",
+      "UG_NEXT", "UG_HUEU", "UG_SATU", "UG_VALU",
+      "UG_PREV", "UG_HUED", "UG_SATD", "UG_VALD",
       "_______", "_______", "_______", "QK_BOOT",
-      "RGB_TOG", "_______", "XXXXXXX", "XXXXXXX"
+      "UG_TOGG", "_______", "XXXXXXX", "XXXXXXX"
     ]
   ]
 }

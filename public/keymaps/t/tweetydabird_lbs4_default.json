@@ -1,7 +1,7 @@
 {
   "keyboard": "tweetydabird/lbs4",
   "keymap": "default",
-  "commit": "2b33d2c098e3bda50fde67fb49f856e2bb3ab1b5",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,8 +11,8 @@
     ],
     [
            "KC_MPLY",
-      "TO(0)",   "RGB_VAI",
-      "RGB_TOG", "RGB_VAD"
+      "TO(0)",   "UG_VALU",
+      "UG_TOGG", "UG_VALD"
     ]
   ]
 }

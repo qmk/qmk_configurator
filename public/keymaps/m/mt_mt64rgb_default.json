@@ -1,7 +1,7 @@
 {
   "keyboard": "mt/mt64rgb",
   "keymap": "default",
-  "commit": "64b1ed45507a15d5594b1f90b936c2096918f5a4",
+  "commit": "9be6d76c61f5b760e7ceaf03fe80da3f07a29d8a",
   "layout": "LAYOUT_64_ansi",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "doodboard/duckboard",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -19,9 +19,9 @@
       "TG(2)",   "KC_TRNS", "KC_INS",  "KC_DEL",  "KC_TRNS"
     ],
     [
-                 "KC_TRNS", "RGB_TOG", "RGB_MOD", "KC_TRNS",
-                 "RGB_HUI", "RGB_SAI", "RGB_VAI",
-                 "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS",
+                 "KC_TRNS", "UG_TOGG", "UG_NEXT", "KC_TRNS",
+                 "UG_HUEU", "UG_SATU", "UG_VALU",
+                 "UG_HUED", "UG_SATD", "UG_VALD", "KC_TRNS",
                  "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "TG(2)",   "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]
