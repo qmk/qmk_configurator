@@ -1,7 +1,7 @@
 {
   "keyboard": "lazydesigners/dimple/staggered/rev2",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -26,7 +26,7 @@
       "EE_CLR",  "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "RGB_VAD", "RGB_TOG", "RGB_VAI",            "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO"
+      "UG_VALD", "UG_TOGG", "UG_VALU",            "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO"
     ]
   ]
 }

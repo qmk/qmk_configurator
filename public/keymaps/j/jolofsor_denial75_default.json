@@ -1,7 +1,7 @@
 {
   "keyboard": "jolofsor/denial75",
   "keymap": "default",
-  "commit": "a40cccced29990eef5dac798d522c87807aa5e3a",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [
@@ -16,9 +16,9 @@
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_MUTE", "KC_VOLD", "KC_VOLU",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_BRIU",
       "KC_NO",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_BRID",
-      "KC_NO",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",              "RGB_VAI",
-      "KC_NO",              "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "RGB_VAD",
-      "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                                    "KC_NO",   "KC_TRNS", "RGB_TOG", "KC_NO",   "KC_NO",   "KC_NO"
+      "KC_NO",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",              "UG_VALU",
+      "KC_NO",              "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "UG_VALD",
+      "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                                    "KC_NO",   "KC_TRNS", "UG_TOGG", "KC_NO",   "KC_NO",   "KC_NO"
     ]
   ]
 }

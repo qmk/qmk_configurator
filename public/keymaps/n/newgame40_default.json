@@ -1,7 +1,7 @@
 {
   "keyboard": "newgame40",
   "keymap": "default",
-  "commit": "4b2d71de52b561c77da4bdb2275b1c6bb2415f54",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_4x10",
   "layers": [
     [
@@ -41,7 +41,7 @@
       "KC_F1",   "KC_LALT", "_______", "KC_LBRC", "KC_RBRC", "KC_SCLN", "KC_COLN", "_______", "KC_BSLS", "KC_SLSH"
     ],
     [
-      "_______", "RGB_TOG", "RGB_MOD", "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "RGB_VAD", "RGB_VAI", "_______",
+      "_______", "UG_TOGG", "UG_NEXT", "UG_HUED", "UG_HUEU", "UG_SATD", "UG_SATU", "UG_VALD", "UG_VALU", "_______",
       "_______", "_______", "_______", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "_______", "BL_TOGG", "BL_STEP",
       "DF(0)",   "DF(1)",   "DF(2)",   "DF(3)",   "_______", "_______", "_______", "_______", "_______", "_______",
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"

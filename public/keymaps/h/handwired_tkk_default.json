@@ -1,8 +1,8 @@
 {
   "keyboard": "handwired/tkk",
   "keymap": "default",
-  "commit": "83776b44b3ee7ff95cef9481dee023d98528e5e6",
-  "layout": "LAYOUT_all",
+  "commit": "15af5d7d0da08f05c5a6998f693c3d383b358451",
+  "layout": "LAYOUT",
   "layers": [
     [
       "LT(8,KC_A)", "LT(7,KC_O)", "LT(6,KC_E)", "LT(5,KC_U)", "LT(10,KC_BSPC)", "LT(9,KC_SPC)", "LT(1,KC_H)", "LT(2,KC_T)", "LT(3,KC_N)", "LT(4,KC_S)"

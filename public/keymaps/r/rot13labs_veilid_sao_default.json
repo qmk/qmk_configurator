@@ -1,0 +1,28 @@
+{
+  "keyboard": "rot13labs/veilid_sao",
+  "keymap": "default",
+  "commit": "7b5d7907df3b2e5871aa627cd02359879f04b42d",
+  "layout": "LAYOUT_ortho_1x1",
+  "macros": [
+    [
+      {"action": "down", "keycodes": ["LGUI"]},
+      {"action": "tap", "keycodes": ["SPC"]},
+      {"action": "up", "keycodes": ["LGUI"]},
+      {"action": "delay", "duration": 1000},
+      {"action": "tap", "keycodes": ["LGUI"]},
+      {"action": "delay", "duration": 1000},
+      "terminal",
+      {"action": "delay", "duration": 1000},
+      {"action": "tap", "keycodes": ["ENT"]},
+      {"action": "delay", "duration": 1000},
+      "open https://veilid.com\n",
+      {"action": "delay", "duration": 1000},
+      "start https://veilid.com\n"
+    ]
+  ],
+  "layers": [
+    [
+      "MC_0"
+    ]
+  ]
+}

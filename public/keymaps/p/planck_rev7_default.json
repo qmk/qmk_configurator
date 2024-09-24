@@ -1,7 +1,7 @@
 {
   "keyboard": "planck/rev7",
   "keymap": "default",
-  "commit": "42cd55e08d5ba1b7b5bbbedaee1737c9febdcd64",
+  "commit": "54f907bfe91f9cf452f7cee18f2534187763c2bc",
   "layout": "LAYOUT_planck_grid",
   "layers": [
     [
@@ -41,7 +41,7 @@
       "TO(0)",   "XXXXXXX", "XXXXXXX", "KC_C",    "KC_V",    "XXXXXXX", "XXXXXXX", "KC_N",    "KC_M",    "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ],
     [
-      "_______", "QK_BOOT", "DB_TOGG", "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_DEL",
+      "_______", "QK_BOOT", "DB_TOGG", "UG_TOGG", "UG_NEXT", "UG_HUEU", "UG_HUED", "UG_SATU", "UG_SATD", "UG_VALU", "UG_VALD", "KC_DEL",
       "_______", "EE_CLR",  "MU_NEXT", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "DF(0)",   "DF(1)",   "DF(2)",   "DF(5)",   "_______",
       "_______", "AU_PREV", "AU_NEXT", "MU_ON",   "MU_OFF",  "MI_ON",   "MI_OFF",  "_______", "_______", "_______", "_______", "_______",
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"

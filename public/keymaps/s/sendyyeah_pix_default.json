@@ -1,7 +1,7 @@
 {
   "keyboard": "sendyyeah/pix",
   "keymap": "default",
-  "commit": "787f15b58f099949cbcc3ef4bfea255c6185d708",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,7 +11,7 @@
       "KC_TRNS", "KC_MSTP", "KC_MRWD", "KC_MFFD", "TO(2)"
     ],
     [
-      "KC_LSFT", "RGB_MOD", "RGB_HUI", "RGB_SAI", "TO(0)"
+      "KC_LSFT", "UG_NEXT", "UG_HUEU", "UG_SATU", "TO(0)"
     ]
   ]
 }

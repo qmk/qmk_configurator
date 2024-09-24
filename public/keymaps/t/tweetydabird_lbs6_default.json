@@ -1,12 +1,12 @@
 {
   "keyboard": "tweetydabird/lbs6",
   "keymap": "default",
-  "commit": "dab9edeabb1ccbaa0d71d10b5b349c6862dea771",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
                  "KC_MPLY",
-      "RGB_MOD", "RGB_VAI", "RGB_TOG",
+      "UG_NEXT", "UG_VALU", "UG_TOGG",
       "KC_MPRV", "KC_MPLY", "KC_MNXT"
     ]
   ]

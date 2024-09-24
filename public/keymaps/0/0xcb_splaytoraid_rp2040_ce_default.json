@@ -1,7 +1,7 @@
 {
   "keyboard": "0xcb/splaytoraid/rp2040_ce",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_40",
   "layers": [
     [

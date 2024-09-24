@@ -1,7 +1,7 @@
 {
   "keyboard": "sentraq/s65_plus",
   "keymap": "default",
-  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_F9",   "KC_F10",  "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                        "KC_RALT", "MO(1)",   "KC_RCTL", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "BL_TOGG", "BL_STEP",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLU", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPRV", "KC_VOLD", "KC_MNXT"
+      "_______", "_______", "QK_BOOT", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "BL_TOGG", "BL_STEP",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______", "_______",
+      "_______", "_______", "_______",            "UG_TOGG", "UG_NEXT", "UG_HUEU", "UG_HUED", "UG_SATU", "UG_SATD", "UG_VALU", "UG_VALD", "_______", "_______", "_______", "KC_VOLU", "_______",
+      "_______", "_______", "_______", "_______", "_______",                                  "_______",                       "_______", "_______", "_______", "KC_MPRV", "KC_VOLD", "KC_MNXT"
     ]
   ]
 }

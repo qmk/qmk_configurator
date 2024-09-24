@@ -1,7 +1,7 @@
 {
   "keyboard": "mechwild/sugarglider/f401",
   "keymap": "default",
-  "commit": "786ebf87608dd4d7232cd0e66638382a55ceafa4",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,9 +23,9 @@
                             "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [
-      "KC_TRNS", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",                            "KC_TRNS",    "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",   "KC_TRNS",
-      "KC_TRNS", "KC_F11",  "KC_F12",  "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAD", "RGB_RMOD", "RGB_TOG",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT",                          "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_VAI", "RGB_MOD",  "KC_TRNS",
+      "KC_TRNS", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",                            "KC_TRNS",    "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_TRNS",
+      "KC_TRNS", "KC_F11",  "KC_F12",  "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "UG_VALD", "UG_PREV", "UG_TOGG",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT",                          "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "UG_VALU", "UG_NEXT", "KC_TRNS",
                             "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ],
     [

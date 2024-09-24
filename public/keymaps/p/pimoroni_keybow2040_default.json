@@ -1,0 +1,22 @@
+{
+  "keyboard": "pimoroni/keybow2040",
+  "keymap": "default",
+  "commit": "fe50774cb488f981dfd41c7a5bc5f34dfcd9cb9d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",
+      "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",
+      "KC_HOME", "KC_UP",   "KC_END",  "KC_PGUP",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PGDN",
+      "TO(1)"
+    ],
+    [
+      "_______", "_______", "_______",  "_______",
+      "_______", "_______", "_______",  "_______",
+      "RGB_SAD", "RGB_SAI", "RGB_HUD",  "RGB_HUI",
+      "_______", "RGB_TOG", "RGB_RMOD", "RGB_MOD",
+      "TO(0)"
+    ]
+  ]
+}

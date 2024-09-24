@@ -1,8 +1,8 @@
 {
     "keyboard": "ez_maker/directpins/promicro",
     "keymap": "default",
-    "commit": "60a36863bca9f52cad6984de4e877f8dcd30a88f",
-    "layout": "LAYOUT_all",
+    "commit": "2bde8ce2068240531baf79c23b83878bb19ed0a0",
+    "layout": "LAYOUT",
     "layers": [
         [
             "KC_0",

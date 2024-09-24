@@ -1,8 +1,8 @@
 {
   "keyboard": "jels/boaty",
   "keymap": "default",
-  "commit": "04897393518d97a42f571f0d19b690affd54ee55",
-  "layout": "LAYOUT_all",
+  "commit": "cc0b2f981446620f73b7531f9205a14134fedbae",
+  "layout": "LAYOUT",
   "layers": [
     [
                                                                         "KC_NUM",

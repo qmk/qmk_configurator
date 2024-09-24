@@ -1,7 +1,7 @@
 {
   "keyboard": "takashiski/namecard2x4/rev2",
   "keymap": "default",
-  "commit": "bd35fa7de1323d572d530cfa4dbe9cf68cf1480b",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -9,8 +9,8 @@
       "KC_5",    "KC_6",    "KC_7",    "LT(2,KC_8)"
     ],
     [
-      "RGB_VAD", "RGB_VAI", "RGB_HUI",  "RGB_HUD",
-      "KC_TRNS", "RGB_MOD", "RGB_RMOD", "KC_TRNS"
+      "UG_VALD", "UG_VALU", "UG_HUEU",  "UG_HUED",
+      "KC_TRNS", "UG_NEXT", "UG_PREV",  "KC_TRNS"
     ],
     [
       "KC_MYCM", "KC_MAIL", "KC_VOLU", "KC_MUTE",

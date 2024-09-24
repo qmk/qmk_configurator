@@ -1,7 +1,7 @@
 {
   "keyboard": "rart/rartpad",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "MO(1)",   "KC_P0",   "KC_PDOT", "KC_PENT"
     ],
     [
-      "KC_TRNS", "RGB_HUI", "RGB_HUD", "KC_TRNS",
-      "RGB_SAI", "RGB_SAD", "KC_MNXT", "KC_MPRV",
-      "RGB_VAI", "RGB_VAD", "KC_MSTP", "KC_MPLY",
-      "KC_COPY", "KC_PSTE", "KC_MYCM", "KC_CALC",
-      "KC_TRNS", "RGB_TOG", "QK_BOOT", "KC_TRNS"
+      "KC_TRNS", "UG_HUEU", "UG_HUED",  "KC_TRNS",
+      "UG_SATU", "UG_SATD", "KC_MNXT",  "KC_MPRV",
+      "UG_VALU", "UG_VALD", "KC_MSTP",  "KC_MPLY",
+      "KC_COPY", "KC_PSTE", "KC_MYCM",  "KC_CALC",
+      "KC_TRNS", "UG_TOGG", "QK_BOOT",  "KC_TRNS"
     ]
   ]
 }

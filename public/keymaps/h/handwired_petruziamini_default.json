@@ -1,14 +1,14 @@
 {
   "keyboard": "handwired/petruziamini",
   "keymap": "default",
-  "commit": "387a1aef8d55530a913440696a0e016efd3204b0",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_Q",    "KC_W",          "KC_E",         "KC_R",         "KC_T",         "KC_Y",    "KC_U",         "KC_I",            "KC_O",           "KC_P",
-      "KC_A",    "KC_S",          "LT(1,KC_D)",   "LSFT_T(KC_F)", "KC_G",         "KC_H",    "LSFT_T(KC_J)", "LT(2,KC_K)",      "KC_L",           "KC_SCLN",
-      "KC_Z",    "LCTL_T(KC_X)",  "LALT_T(KC_C)", "KC_V",         "KC_B",         "KC_N",    "KC_M",         "LALT_T(KC_COMM)", "LCTL_T(KC_DOT)", "KC_SLSH",
-      "TG(7)",   "LT(3,KC_QUOT)",                 "KC_BSPC",                                 "LT(5,KC_SPC)",                    "LT(4,KC_GRV)",   "TG(6)"
+      "KC_Q",    "KC_W",          "KC_E",         "KC_R",         "KC_T",    "KC_Y",    "KC_U",         "KC_I",            "KC_O",            "KC_P",
+      "KC_A",    "KC_S",          "LT(1,KC_D)",   "LSFT_T(KC_F)", "KC_G",    "KC_H",    "LSFT_T(KC_J)", "LT(2,KC_K)",      "KC_L",            "KC_SCLN",
+      "KC_Z",    "LCTL_T(KC_X)",  "LALT_T(KC_C)", "KC_V",         "KC_B",    "KC_N",    "KC_M",         "LALT_T(KC_COMM)", "LCTL_T(KC_DOT)",  "KC_SLSH",
+      "TG(7)",   "LT(3,KC_QUOT)",                 "KC_BSPC",                            "LT(5,KC_SPC)",                    "LT(4,KC_GRV)",    "TG(6)"
     ],
     [
       "KC_ESC",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_SLSH", "KC_ASTR", "KC_7",    "KC_8",    "KC_9",
@@ -47,9 +47,9 @@
       "KC_NO",   "KC_NO",              "KC_SPC",                        "KC_F3",              "KC_F2",   "TG(6)"
     ],
     [
-      "RGB_M_P",  "RGB_M_B",  "RGB_M_R", "RGB_M_TW", "KC_NO",   "KC_NO",   "RGB_VAI", "RGB_SAI", "RGB_HUI", "RGB_TOG",
-      "RGB_M_SW", "RGB_M_SN", "RGB_M_K", "KC_NO",    "KC_NO",   "KC_NO",   "RGB_VAD", "RGB_SAD", "RGB_HUD", "RGB_MOD",
-      "RGB_M_X",  "RGB_M_G",  "RGB_M_T", "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RGB_RMOD",
+      "RGB_M_P",  "RGB_M_B",  "RGB_M_R", "RGB_M_TW", "KC_NO",   "KC_NO",   "UG_VALU", "UG_SATU", "UG_HUEU", "UG_TOGG",
+      "RGB_M_SW", "RGB_M_SN", "RGB_M_K", "KC_NO",    "KC_NO",   "KC_NO",   "UG_VALD", "UG_SATD", "UG_HUED", "UG_NEXT",
+      "RGB_M_X",  "RGB_M_G",  "RGB_M_T", "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "UG_PREV",
       "TG(7)",    "KC_NO",               "KC_NO",                          "KC_NO",              "KC_NO",   "KC_NO"
     ]
   ]

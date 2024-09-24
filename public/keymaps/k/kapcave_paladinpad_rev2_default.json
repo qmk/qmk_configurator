@@ -1,7 +1,7 @@
 {
   "keyboard": "kapcave/paladinpad/rev2",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
@@ -12,9 +12,9 @@
                  "KC_P0",   "KC_PDOT", "KC_PENT"
     ],
     [
-      "KC_TRNS", "RGB_TOG", "RGB_MOD", "KC_TRNS",
-      "RGB_HUI", "RGB_SAI", "RGB_VAI",
-      "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS",
+      "KC_TRNS", "UG_TOGG", "UG_NEXT", "KC_TRNS",
+      "UG_HUEU", "UG_SATU", "UG_VALU",
+      "UG_HUED", "UG_SATD", "UG_VALD", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
                  "KC_TRNS", "QK_BOOT", "KC_NUM"
     ]

@@ -1,0 +1,15 @@
+{
+  "keyboard": "falsonix/fx19",
+  "keymap": "default",
+  "commit": "d28a50e1766abf34c49e277c7d25dd6aea57050f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LNUM", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_RGUI", "KC_P0",   "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}

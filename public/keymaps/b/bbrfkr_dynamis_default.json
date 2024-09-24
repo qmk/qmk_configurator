@@ -1,7 +1,7 @@
 {
   "keyboard": "bbrfkr/dynamis",
   "keymap": "default",
-  "commit": "679cbb8426e9bfa78b045ce1edbb8bec9e04c597",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ansi",
   "layers": [
     [
@@ -27,7 +27,7 @@
     ],
     [
       "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "RGB_TOG", "RGB_MOD", "RGB_RMOD", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "UG_TOGG", "UG_NEXT", "UG_PREV",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",                          "KC_NO",   "KC_NO",   "KC_NO",                         "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO",   "KC_NO",   "KC_NO"

@@ -1,8 +1,8 @@
 {
   "keyboard": "handwired/swiftrax/bumblebee",
   "keymap": "default",
-  "commit": "0b802defd4ad81f38bdd3ae0192e2a834f7d99be",
-  "layout": "LAYOUT_all",
+  "commit": "38f07e1fd27b40c3a66707b2e1478832a4f927cb",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_ESC",  "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_LBRC", "KC_RBRC", "KC_BSPC", "KC_DEL",

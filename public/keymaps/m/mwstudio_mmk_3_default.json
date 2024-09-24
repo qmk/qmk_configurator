@@ -1,20 +1,20 @@
 {
   "keyboard": "mwstudio/mmk_3",
   "keymap": "default",
-  "commit": "c4a2bea0e6aac51b8c0806f31614383e267eb1d7",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
       "LT(3,KC_LCTL)", "LT(1,KC_C)", "LT(2,KC_V)"
     ],
     [
-      "RGB_VAD", "KC_TRNS", "RGB_VAI"
+      "UG_VALD", "KC_TRNS", "UG_VALU"
     ],
     [
-      "RGB_SAD", "RGB_SAI", "KC_TRNS"
+      "UG_SATD", "UG_SATU", "KC_TRNS"
     ],
     [
-      "KC_TRNS", "RGB_HUD", "RGB_HUI"
+      "KC_TRNS", "UG_HUED", "UG_HUEU"
     ]
   ]
 }

@@ -1,8 +1,8 @@
 {
   "keyboard": "dc01/arrow",
   "keymap": "default",
-  "commit": "3fed8bced718e24e414c0d5736554d7988235b20",
-  "layout": "LAYOUT_all",
+  "commit": "62c1787d72088123744fb0d938990b796cd8ab01",
+  "layout": "LAYOUT",
   "layers": [
     [
       "KC_INS",  "KC_HOME", "KC_PGUP",

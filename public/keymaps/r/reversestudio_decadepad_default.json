@@ -1,11 +1,11 @@
 {
   "keyboard": "reversestudio/decadepad",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [
-      "RGB_TOG", "RGB_MOD", "RGB_VAI", "RGB_M_R",
+      "UG_TOGG", "UG_NEXT", "UG_VALU", "RGB_M_R",
       "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
       "KC_P7",   "KC_P8",   "KC_P9",
       "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",

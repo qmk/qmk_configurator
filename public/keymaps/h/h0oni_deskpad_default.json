@@ -1,8 +1,8 @@
 {
   "keyboard": "h0oni/deskpad",
   "keymap": "default",
-  "commit": "1978007faefc0fb3af809ddf0d2ff1274e540570",
-  "layout": "LAYOUT_all",
+  "commit": "5624804c6822b68d091e77642e07dc3640bf4ca6",
+  "layout": "LAYOUT",
   "macros": [
     [
       {"action": "tap", "keycodes": ["LCTL", "L"]},

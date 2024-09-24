@@ -1,8 +1,8 @@
 {
   "keyboard": "handwired/concertina/64key",
   "keymap": "default",
-  "commit": "1978007faefc0fb3af809ddf0d2ff1274e540570",
-  "layout": "LAYOUT_64key",
+  "commit": "d5e0562a7043bf372c3f349420dd765ee3a9653d",
+  "layout": "LAYOUT",
   "layers": [
     [
                             "SC_LSPO", "KC_MINS", "KC_EQL",                                 "KC_VOLD", "KC_VOLU", "SC_RSPC",

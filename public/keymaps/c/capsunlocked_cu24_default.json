@@ -1,7 +1,7 @@
 {
   "keyboard": "capsunlocked/cu24",
   "keymap": "default",
-  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_grid",
   "layers": [
     [
@@ -13,12 +13,12 @@
       "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
     ],
     [
-      "RGB_TOG", "RGB_MOD", "BL_STEP", "BL_BRTG",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_TRNS",
-      "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS"
+      "UG_TOGG", "UG_NEXT", "BL_STEP", "BL_BRTG",
+      "_______", "_______", "_______", "_______",
+      "UG_HUEU", "UG_SATU", "UG_VALU", "_______",
+      "UG_HUED", "UG_SATD", "UG_VALD", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "QK_BOOT", "_______"
     ]
   ]
 }

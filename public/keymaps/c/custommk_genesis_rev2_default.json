@@ -1,7 +1,7 @@
 {
   "keyboard": "custommk/genesis/rev2",
   "keymap": "default",
-  "commit": "541e749aa894c526217b68314df1621f812411b6",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_P0",   "KC_SPC",  "KC_PDOT", "KC_ENT"
     ],
     [
-      "KC_TRNS", "KC_VOLU", "RGB_TOG", "RGB_MOD",
+      "KC_TRNS", "KC_VOLU", "UG_TOGG", "UG_NEXT",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "RGB_VAI", "RGB_VAD", "RGB_SPI", "RGB_SPD",
+      "UG_VALU", "UG_VALD", "UG_SPDU", "UG_SPDD",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "RGB_HUI", "KC_TRNS", "KC_TRNS", "RGB_HUD"
+      "UG_HUEU", "KC_TRNS", "KC_TRNS", "UG_HUED"
     ]
   ]
 }

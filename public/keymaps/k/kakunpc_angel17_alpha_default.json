@@ -1,7 +1,7 @@
 {
   "keyboard": "kakunpc/angel17/alpha",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_numpad_5x4",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_P0",                   "KC_PDOT", "KC_PENT"
     ],
     [
-      "_______", "KC_NO",   "KC_NO",   "RGB_RMOD",
+      "KC_TRNS", "KC_NO",   "KC_NO",   "UG_PREV",
       "KC_NO",   "KC_NO",   "KC_NO",
-      "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_MOD",
-      "RGB_HUD", "RGB_SAD", "RGB_VAD",
-      "RGB_TOG",            "KC_NO",   "KC_NO"
+      "UG_HUEU", "UG_SATU", "UG_VALU", "UG_NEXT",
+      "UG_HUED", "UG_SATD", "UG_VALD",
+      "UG_TOGG",            "KC_NO",   "KC_NO"
     ]
   ]
 }

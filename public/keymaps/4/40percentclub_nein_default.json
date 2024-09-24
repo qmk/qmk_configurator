@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/nein",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [
@@ -11,7 +11,7 @@
     ],
     [
       "QK_BOOT", "_______", "KC_STOP",
-      "_______", "_______", "RGB_MOD",
+      "_______", "_______", "_______",
       "KC_MPRV", "_______", "KC_MNXT"
     ]
   ]

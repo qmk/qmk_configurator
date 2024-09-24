@@ -1,7 +1,7 @@
 {
   "keyboard": "amag23",
   "keymap": "default",
-  "commit": "fa10d5fda2844fd3757f552be6002ad8db381c70",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,7 +11,7 @@
       "KC_Z",    "KC_X",    "KC_C",    "KC_B",               "KC_SPC"
     ],
     [
-      "KC_NO",   "KC_NO",   "KC_NO",   "RGB_MOD", "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "UG_NEXT", "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",              "KC_NO"

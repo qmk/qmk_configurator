@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/chiron",
   "keymap": "default",
-  "commit": "c347e732be6b50500c1651b3fb8c0753b0c9c40d",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -35,8 +35,8 @@
     [
       "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "EE_CLR",  "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_MOD", "RGB_TOG", "_______",    "_______", "XXXXXXX", "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "_______", "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_RMOD","XXXXXXX", "_______",    "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
+      "XXXXXXX", "UG_HUEU", "UG_SATU", "UG_VALU", "UG_NEXT", "UG_TOGG", "_______",    "_______", "XXXXXXX", "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "_______", "UG_HUED", "UG_SATD", "UG_VALD", "UG_PREV", "XXXXXXX", "_______",    "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
       "XXXXXXX", "XXXXXXX", "XXXXXXX",            "_______", "_______", "_______",    "_______", "_______", "_______",            "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]
