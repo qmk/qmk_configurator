@@ -13,7 +13,7 @@
     ],
     [
       "UG_PREV",                       "KC_MUTE",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_EXAM",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
       "QK_BOOT", "UG_TOGG", "UG_SPDU", "UG_SPDD",
       "KC_NO",   "_______", "KC_NO",   "KC_NO"
