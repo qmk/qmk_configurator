@@ -1,0 +1,14 @@
+{
+  "keyboard": "zigotica/z12",
+  "keymap": "default",
+  "commit": "0b410ffd776d6948861a5ae0f5fed75a63746344",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+           "KC_Q",    "KC_W",
+      "KC_E",    "KC_R",    "KC_T",    "KC_Y",
+      "KC_U",    "KC_I",    "KC_O",
+      "KC_P",    "KC_K",    "KC_A"
+    ]
+  ]
+}

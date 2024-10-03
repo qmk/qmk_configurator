@@ -1,0 +1,17 @@
+{
+  "keyboard": "maple_computing/the_ruler",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(2)",   "KC_2",    "C(S(KC_ESC))", "C(A(KC_DEL))", "KC_ESC",  "MO(1)"
+    ],
+    [
+      "UG_TOGG", "UG_HUED", "UG_HUEU", "UG_SATD", "UG_SATU", "_______"
+    ],
+    [
+      "_______", "UG_VALD", "UG_VALU", "UG_NEXT", "C(S(KC_ESC))", "QK_BOOT"
+    ]
+  ]
+}

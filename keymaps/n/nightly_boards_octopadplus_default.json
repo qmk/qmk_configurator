@@ -1,0 +1,28 @@
+{
+  "keyboard": "nightly_boards/octopadplus",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",                       "KC_MYCM",
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+      "KC_A",    "KC_S",    "KC_D",    "KC_F"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

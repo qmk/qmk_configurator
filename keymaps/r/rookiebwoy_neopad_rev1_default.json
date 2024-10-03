@@ -1,0 +1,24 @@
+{
+  "keyboard": "rookiebwoy/neopad/rev1",
+  "keymap": "default",
+  "commit": "e5a92fa80f26243167a703fdd778fde3c9097adc",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",   "KC_MSTP", "KC_MUTE",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ],
+    [
+      "TO(2)",      "G(KC_UP)",   "G(KC_D)",
+      "G(KC_LEFT)", "G(KC_DOWN)", "G(KC_RGHT)"
+    ],
+    [
+      "TO(3)",   "KC_ESC",  "C(S(KC_ESC))",
+      "C(KC_X)", "C(KC_C)", "C(KC_V)"
+    ],
+    [
+      "TO(0)",   "S(KC_R)", "KC_DEL",
+      "KC_LCTL", "KC_SPC",  "KC_P"
+    ]
+  ]
+}

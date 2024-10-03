@@ -1,0 +1,26 @@
+{
+  "keyboard": "doio/kb3x",
+  "keymap": "default",
+  "commit": "eac380926655d59db7471a9085a96b10b7671ce2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",   "RGB_MOD", "RGB_TOG",                                              "RGB_HUI", "RGB_VAD", "RGB_VAI",
+                 "KC_MPLY",                             "KC_UP",                               "KC_UP",
+      "KC_MNXT", "KC_TRNS", "KC_MPRV",    "A(KC_LEFT)", "KC_TRNS", "A(KC_RGHT)",    "KC_RGHT", "KC_TRNS", "KC_LEFT",
+                 "KC_MPLY",                             "KC_DOWN",                             "KC_DOWN"
+    ],
+    [
+      "TO(2)",      "KC_TRNS", "KC_TRNS",                                              "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                    "KC_WH_U",                             "S(KC_RBRC)",                          "C(KC_L)",
+      "C(KC_WH_D)", "KC_TRNS", "C(KC_WH_U)",    "KC_DOT",  "KC_TRNS",    "KC_COMM",    "C(KC_B)", "KC_TRNS", "C(KC_U)",
+                    "KC_WH_D",                             "S(KC_LBRC)",                          "C(KC_M)"
+    ],
+    [
+      "TO(0)",   "KC_TRNS", "KC_TRNS",                                        "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_B",                             "KC_UP",                            "S(KC_I)",
+      "KC_P",    "KC_TRNS", "KC_H",       "KC_RGHT", "KC_TRNS", "KC_LEFT",    "KC_O",    "KC_TRNS", "KC_I",
+                 "KC_Y",                             "KC_DOWN",                          "S(KC_O)"
+    ]
+  ]
+}

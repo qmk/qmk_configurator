@@ -1,0 +1,11 @@
+{
+  "keyboard": "1k",
+  "keymap": "default",
+  "commit": "f7cf40fa77164d7be9358ce83f7f5939d71b38bc",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "RGB_HUI"
+    ]
+  ]
+}

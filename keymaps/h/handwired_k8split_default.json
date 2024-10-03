@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/k8split",
+  "keymap": "default",
+  "commit": "53224e03d62a4d0bd7c9f7e63fd6222ec649a4fa",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",    "KC_5",    "KC_0",    "KC_5",    "KC_0",    "KC_5",    "KC_0",    "KC_5",
+      "KC_1",    "KC_4",    "KC_1",    "KC_4",    "KC_1",    "KC_4",    "KC_1",    "KC_4",
+      "KC_2",    "KC_3",    "KC_2",    "KC_3",    "KC_2",    "KC_3",    "KC_2",    "KC_3",
+      "KC_3",    "KC_2",    "KC_3",    "KC_2",    "KC_3",    "KC_2",    "KC_3",    "KC_2",
+      "KC_4",    "KC_1",    "KC_4",    "KC_1",    "KC_4",    "KC_1",    "KC_4",    "KC_1",
+      "KC_5",    "KC_0",    "KC_5",    "KC_0",    "KC_5",    "KC_0",    "KC_5",    "KC_0"
+    ]
+  ]
+}

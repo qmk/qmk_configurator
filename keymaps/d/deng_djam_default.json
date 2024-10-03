@@ -1,0 +1,18 @@
+{
+  "keyboard": "deng/djam",
+  "keymap": "default",
+  "commit": "255e138ee18e65e63000b64f019096ed4dbe3b5f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_S",    "KC_D",    "KC_F",                                           "KC_J",    "KC_K",    "KC_L",
+      "KC_A",    "KC_Z",    "KC_X",    "KC_C",                                           "KC_N",    "KC_M",    "KC_COMM", "KC_SCLN",
+      "KC_LEFT", "KC_RGHT",                       "KC_LSFT", "LT(1,KC_SPC)",  "KC_RSFT",                       "KC_UP",   "KC_DOWN"
+    ],
+    [
+                 "RGB_HUI", "RGB_SAI", "RGB_VAI",                                  "RGB_SPI", "_______", "RGB_RMOD",
+      "_______", "RGB_HUD", "RGB_SAD", "RGB_VAD",                                  "RGB_SPD", "_______", "RGB_MOD",  "RGB_TOG",
+      "_______", "_______",                       "BL_TOGG", "_______", "BL_STEP",                       "_______",  "_______"
+    ]
+  ]
+}

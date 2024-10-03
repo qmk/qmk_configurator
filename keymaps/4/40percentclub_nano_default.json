@@ -1,0 +1,16 @@
+{
+  "keyboard": "40percentclub/nano",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_VOLU", "KC_MPLY", "KC_MPRV", "KC_PGUP",
+      "KC_VOLD", "KC_MUTE", "KC_MNXT", "KC_PGDN"
+    ],
+    [
+      "KC_F",    "_______", "UG_HUEU", "_______",
+      "UG_TOGG", "UG_NEXT", "UG_HUED", "_______"
+    ]
+  ]
+}

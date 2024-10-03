@@ -1,0 +1,9 @@
+{
+  "keyboard": "s_ol/0xc_pad",
+  "keymap": "default",
+  "commit": "8cc86490aac59a93ece62229cc93097a17420fa5",
+  "layout": "LAYOUT",
+  "layers": [
+    [ "RGB_RMOD", "RGB_MOD", "KC_CUT" , "KC_COPY", "KC_PSTE", "KC_PGUP", "KC_PGDN", "KC_VOLU", "KC_VOLD", "KC_1" , "KC_2" , "KC_3" ]
+  ]
+}

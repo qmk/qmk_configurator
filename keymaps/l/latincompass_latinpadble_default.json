@@ -1,0 +1,22 @@
+{
+  "keyboard": "latincompass/latinpadble",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_PGUP",
+      "KC_P7",   "KC_P8",   "KC_P9",   "MO(1)",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PMNS",
+      "KC_P0",   "KC_PDOT", "KC_DEL",  "KC_PENT"
+    ],
+    [
+      "KC_NUM",
+      "UG_TOGG", "UG_NEXT", "RGB_M_K", "RGB_M_X",
+      "UG_SATU", "UG_SATD", "UG_HUEU", "UG_HUED",
+      "UG_VALU", "UG_VALD", "UG_SPDU", "UG_SPDD",
+      "UG_SPDU", "UG_SPDD", "UG_TOGG", "KC_TRNS"
+    ]
+  ]
+}

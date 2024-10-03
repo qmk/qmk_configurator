@@ -1,0 +1,18 @@
+{
+  "keyboard": "laser_ninja/pumpkinpad",
+  "keymap": "default",
+  "commit": "4e369d405af6bba1adce6337b2e1b1ea1788566c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F1",   "KC_F2",   "KC_F3",
+      "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",
+      "KC_F8",   "MO(1)",   "KC_F10"
+    ],
+    [
+      "RGB_TOG", "RGB_MOD", "RGB_RMOD",
+      "RGB_HUI", "RGB_HUD", "RGB_SAI",  "RGB_SAD",
+      "RGB_VAI", "RGB_VAD", "_______"
+    ]
+  ]
+}

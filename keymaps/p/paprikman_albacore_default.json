@@ -1,0 +1,16 @@
+{
+  "keyboard": "paprikman/albacore",
+  "keymap": "default",
+  "commit": "3cd77c53e2bb76496a43a60ef78dce3e47fde5ee",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_VOLD", "KC_MUTE", "KC_VOLU",
+      "MO(1)",   "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ],
+    [
+                 "RGB_TOG", "RGB_MOD", "RGB_VAI",
+      "_______", "RGB_SPI", "RGB_SPD", "RGB_VAD"
+    ]
+  ]
+}
