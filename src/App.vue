@@ -199,7 +199,8 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/scss/style.scss';
+@use '@/scss/style.scss';
+
 #app {
   display: grid;
   grid-template: 1fr / minmax(1000px, 1300px);
@@ -208,6 +209,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
 .embedded-tutorial {
   position: fixed;
   bottom: 20px;
@@ -250,19 +252,23 @@ export default {
   0% {
     transform: scale(1);
   }
+
   10%,
   20% {
     transform: scale(0.9) rotate(-8deg);
   }
+
   30%,
   50%,
   70% {
     transform: scale(1.3) rotate(8deg);
   }
+
   40%,
   60% {
     transform: scale(1.3) rotate(-8deg);
   }
+
   80%,
   100% {
     transform: scale(1) rotate(0);
@@ -274,19 +280,23 @@ export default {
 .faa-parent.animated-hover:hover > .faa-tada {
   animation: tada 2s linear infinite;
 }
+
 .faa-tada.animated.faa-fast,
 .faa-tada.animated-hover.faa-fast:hover,
 .faa-parent.animated-hover:hover > .faa-tada.faa-fast {
   animation: tada 1s linear infinite;
 }
+
 .faa-tada.animated.faa-slow,
 .faa-tada.animated-hover.faa-slow:hover,
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }
+
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }
+
 .faa-parent.animated-hover:hover > .faa-tada.faa-slow {
   animation: tada 3s linear infinite;
 }

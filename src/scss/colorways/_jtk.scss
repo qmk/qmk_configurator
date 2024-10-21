@@ -1,3 +1,4 @@
+@use 'sass:color';
 // JTKeycaps
 
 .jtk-suited-assassin-key,
@@ -8,9 +9,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#312c2b, 4%);
-    color: lighten(#a79373, 10%);
-    border-color: mix(#312c2b, #a79373);
+    background: color.adjust(#312c2b, $lightness: -4%);
+    color: color.adjust(#a79373, $lightness: 10%);
+    border-color: color.mix(#312c2b, #a79373);
   }
 }
 

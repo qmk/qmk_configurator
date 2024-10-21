@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use '../gmk-abs';
+@use '../sp-abs';
+@use '../pantone';
 // GMK Keysets
 
 .gmk-8008-key {
@@ -7,9 +11,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#8d98a7, 8%);
-    color: darken(#313943, 9%);
-    border-color: mix(#8d98a7, #313943);
+    background: color.adjust(#8d98a7, $lightness: 8%);
+    color: color.adjust(#313943, $lightness: -9%);
+    border-color: color.mix(#8d98a7, #313943);
   }
 }
 
@@ -20,9 +24,12 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#313943, 4%);
-    color: lighten(#fe5487, 15%);
-    border-color: mix(darken(#313943, 4%), lighten(#fe5487, 15%));
+    background: color.adjust(#313943, $lightness: -4%);
+    color: color.adjust(#fe5487, $lightness: 15%);
+    border-color: color.mix(
+      color.adjust(#313943, $lightness: -4%),
+      color.adjust(#fe5487, $lightness: 15%)
+    );
   }
 }
 
@@ -32,39 +39,45 @@
 }
 
 .gmk-9009-key {
-  background: $color-gmk-abs-L9;
-  color: $color-gmk-abs-CR;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: gmk-abs.$color-gmk-abs-CR;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-L9, 4%);
-    color: $color-gmk-abs-CR;
-    border-color: mix(lighten($color-gmk-abs-L9, 4%), $color-gmk-abs-CR);
+    background: color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 4%);
+    color: gmk-abs.$color-gmk-abs-CR;
+    border-color: color.mix(
+      color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 4%),
+      gmk-abs.$color-gmk-abs-CR
+    );
   }
 }
 
 .gmk-9009-mod {
-  background: $color-gmk-abs-U9;
-  color: $color-gmk-abs-CR;
+  background: gmk-abs.$color-gmk-abs-U9;
+  color: gmk-abs.$color-gmk-abs-CR;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-U9, 4%);
-    color: $color-gmk-abs-CR;
-    border-color: mix(lighten($color-gmk-abs-U9, 4%), $color-gmk-abs-CR);
+    background: color.adjust(gmk-abs.$color-gmk-abs-U9, $lightness: 4%);
+    color: gmk-abs.$color-gmk-abs-CR;
+    border-color: color.mix(
+      color.adjust(gmk-abs.$color-gmk-abs-U9, $lightness: 4%),
+      gmk-abs.$color-gmk-abs-CR
+    );
   }
 }
 
 .gmk-9009-esc {
-  background: $color-gmk-abs-3C;
-  color: $color-gmk-abs-CR;
+  background: gmk-abs.$color-gmk-abs-3C;
+  color: gmk-abs.$color-gmk-abs-CR;
 }
 
 .gmk-9009-enter {
-  background: $color-gmk-abs-3B;
-  color: $color-gmk-abs-CR;
+  background: gmk-abs.$color-gmk-abs-3B;
+  color: gmk-abs.$color-gmk-abs-CR;
 }
 
 .gmk-alter-key {
@@ -74,9 +87,12 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#2b2c42, 4%);
-    color: lighten(#bb1e10, 22%);
-    border-color: mix(darken(#2b2c42, 4%), lighten(#bb1e10, 22%));
+    background: color.adjust(#2b2c42, $lightness: -4%);
+    color: color.adjust(#bb1e10, $lightness: 22%);
+    border-color: color.mix(
+      color.adjust(#2b2c42, $lightness: -4%),
+      color.adjust(#bb1e10, $lightness: 22%)
+    );
   }
 }
 .gmk-alter-mod {
@@ -86,22 +102,25 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#312f36, 4%);
-    color: lighten(#bb1e10, 23%);
-    border-color: mix(darken(#312f36, 4%), lighten(#bb1e10, 23%));
+    background: color.adjust(#312f36, $lightness: -4%);
+    color: color.adjust(#bb1e10, $lightness: 23%);
+    border-color: color.mix(
+      color.adjust(#312f36, $lightness: -4%),
+      color.adjust(#bb1e10, $lightness: 23%)
+    );
   }
 }
 
 .gmk-analog-dreams-key {
-  background: $color-gmk-abs-L9;
+  background: gmk-abs.$color-gmk-abs-L9;
   color: #ac4fc6;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-L9, 8%);
-    color: darken(#ac4fc6, 8%);
-    border-color: mix($color-gmk-abs-L9, #ac4fc6);
+    background: color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 8%);
+    color: color.adjust(#ac4fc6, $lightness: -8%);
+    border-color: color.mix(gmk-abs.$color-gmk-abs-L9, #ac4fc6);
   }
 }
 
@@ -112,9 +131,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#9de7d7, 8%);
-    color: darken(#ac4fc6, 8%);
-    border-color: mix(#9de7d7, #ac4fc6);
+    background: color.adjust(#9de7d7, $lightness: 8%);
+    color: color.adjust(#ac4fc6, $lightness: -8%);
+    border-color: color.mix(#9de7d7, #ac4fc6);
   }
 }
 
@@ -130,15 +149,18 @@
 
 .gmk-ascii-key,
 .gmk-ascii-mod {
-  background: $color-gmk-abs-2B;
-  color: $color-gmk-abs-2M;
+  background: gmk-abs.$color-gmk-abs-2B;
+  color: gmk-abs.$color-gmk-abs-2M;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-2B, 6%);
-    color: lighten($color-gmk-abs-2M, 10%);
-    border-color: mix($color-gmk-abs-2B, $color-gmk-abs-2M);
+    background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -6%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-2M, $lightness: 10%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-2B,
+      gmk-abs.$color-gmk-abs-2M
+    );
   }
 }
 
@@ -150,8 +172,8 @@
   .key-contents:empty,
   .key-contents::before {
     background: #fff3ef;
-    color: darken(#3e728f, 9%);
-    border-color: mix(#fff3ef, darken(#3e728f, 9%));
+    color: color.adjust(#3e728f, $lightness: -9%);
+    border-color: color.mix(#fff3ef, color.adjust(#3e728f, $lightness: -9%));
   }
 }
 .gmk-bento-mod {
@@ -161,9 +183,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#3e728f, 4%);
-    color: lighten(#fb7279, 20%);
-    border-color: mix(#3e728f, lighten(#fb7279, 20%));
+    background: color.adjust(#3e728f, $lightness: -4%);
+    color: color.adjust(#fb7279, $lightness: 20%);
+    border-color: color.mix(#3e728f, color.adjust(#fb7279, $lightness: 20%));
   }
 }
 .gmk-bento-accent {
@@ -173,55 +195,58 @@
 
 .gmk-bingsu-key {
   background: #946777;
-  color: $color-gmk-abs-CP;
+  color: gmk-abs.$color-gmk-abs-CP;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#946777, 4%);
-    color: lighten($color-gmk-abs-CP, 7%);
-    border-color: mix(#946777, lighten($color-gmk-abs-CP, 7%));
+    background: color.adjust(#946777, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 7%);
+    border-color: color.mix(
+      #946777,
+      color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 7%)
+    );
   }
 }
 .gmk-bingsu-mod {
   background: #533d45;
-  color: $color-gmk-abs-CP;
+  color: gmk-abs.$color-gmk-abs-CP;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#533d45, 4%);
-    color: $color-gmk-abs-CP;
-    border-color: mix(#533d45, $color-gmk-abs-CP);
+    background: color.adjust(#533d45, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-CP;
+    border-color: color.mix(#533d45, gmk-abs.$color-gmk-abs-CP);
   }
 }
 .gmk-bingsu-accent {
-  background: $color-gmk-abs-CP;
+  background: gmk-abs.$color-gmk-abs-CP;
   color: #533d45;
 }
 
 .gmk-cafe-key {
-  background: $color-gmk-abs-L9;
+  background: gmk-abs.$color-gmk-abs-L9;
   color: #3d3635;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-L9, 4%);
+    background: color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 4%);
     color: #3d3635;
-    border-color: mix($color-gmk-abs-L9, #3d3635);
+    border-color: color.mix(gmk-abs.$color-gmk-abs-L9, #3d3635);
   }
 }
 .gmk-cafe-mod {
   background: #3d3635;
-  color: $color-gmk-abs-L9;
+  color: gmk-abs.$color-gmk-abs-L9;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#3d3635, 4%);
-    color: $color-gmk-abs-L9;
-    border-color: mix(#3d3635, $color-gmk-abs-L9);
+    background: color.adjust(#3d3635, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-L9;
+    border-color: color.mix(#3d3635, gmk-abs.$color-gmk-abs-L9);
   }
 }
 .gmk-cafe-accent {
@@ -236,9 +261,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#2e3b51, 4%);
-    color: lighten(#22aabc, 6%);
-    border-color: mix(#2e3b51, lighten(#22aabc, 6%));
+    background: color.adjust(#2e3b51, $lightness: -4%);
+    color: color.adjust(#22aabc, $lightness: 6%);
+    border-color: color.mix(#2e3b51, color.adjust(#22aabc, $lightness: 6%));
   }
 }
 .gmk-calm-depths-mod {
@@ -248,39 +273,39 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#4a4f58, 4%);
-    color: lighten(#22aabc, 7%);
-    border-color: mix(#4a4f58, lighten(#22aabc, 7%));
+    background: color.adjust(#4a4f58, $lightness: -4%);
+    color: color.adjust(#22aabc, $lightness: 7%);
+    border-color: color.mix(#4a4f58, color.adjust(#22aabc, $lightness: 7%));
   }
 }
 
 .gmk-camping-key {
-  background: $color-sp-abs-WCK;
-  color: $color-sp-abs-VF;
+  background: sp-abs.$color-sp-abs-WCK;
+  color: sp-abs.$color-sp-abs-VF;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-sp-abs-WCK, 4%);
-    color: darken($color-sp-abs-VF, 6%);
-    border-color: mix($color-sp-abs-WCK, $color-sp-abs-VF);
+    background: color.adjust(sp-abs.$color-sp-abs-WCK, $lightness: 4%);
+    color: color.adjust(sp-abs.$color-sp-abs-VF, $lightness: -6%);
+    border-color: color.mix(sp-abs.$color-sp-abs-WCK, sp-abs.$color-sp-abs-VF);
   }
 }
 .gmk-camping-mod {
-  background: $color-sp-abs-VF;
-  color: $color-sp-abs-WCK;
+  background: sp-abs.$color-sp-abs-VF;
+  color: sp-abs.$color-sp-abs-WCK;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-sp-abs-VF, 4%);
-    color: lighten($color-sp-abs-WCK, 4%);
-    border-color: mix($color-sp-abs-VF, $color-sp-abs-WCK);
+    background: color.adjust(sp-abs.$color-sp-abs-VF, $lightness: -4%);
+    color: color.adjust(sp-abs.$color-sp-abs-WCK, $lightness: 4%);
+    border-color: color.mix(sp-abs.$color-sp-abs-VF, sp-abs.$color-sp-abs-WCK);
   }
 }
 .gmk-camping-accent {
-  background: $color-sp-abs-RBC;
-  color: $color-sp-abs-WCK;
+  background: sp-abs.$color-sp-abs-RBC;
+  color: sp-abs.$color-sp-abs-WCK;
 }
 
 .gmk-deku-key {
@@ -290,9 +315,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#298286, 4%);
-    color: lighten(#e5e1de, 4%);
-    border-color: mix(#298286, lighten(#e5e1de, 4%));
+    background: color.adjust(#298286, $lightness: -4%);
+    color: color.adjust(#e5e1de, $lightness: 4%);
+    border-color: color.mix(#298286, color.adjust(#e5e1de, $lightness: 4%));
   }
 }
 .gmk-deku-mod {
@@ -302,9 +327,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#e5e1de, 4%);
-    color: darken(#298286, 4%);
-    border-color: mix(#e5e1de, darken(#298286, 4%));
+    background: color.adjust(#e5e1de, $lightness: 4%);
+    color: color.adjust(#298286, $lightness: -4%);
+    border-color: color.mix(#e5e1de, color.adjust(#298286, $lightness: -4%));
   }
 }
 .gmk-deku-accent {
@@ -313,27 +338,33 @@
 }
 
 .gmk-dolch-key {
-  background: $color-gmk-abs-CC;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-CC;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-CC, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-CC, $color-gmk-abs-WS1);
+    background: color.adjust(gmk-abs.$color-gmk-abs-CC, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-CC,
+      gmk-abs.$color-gmk-abs-WS1
+    );
   }
 }
 .gmk-dolch-mod {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-N9;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-N9, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-WS1);
+    background: color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-N9,
+      gmk-abs.$color-gmk-abs-WS1
+    );
   }
 }
 .gmk-dolch-kb {
@@ -346,9 +377,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#44475a, 4%);
+    background: color.adjust(#44475a, $lightness: -4%);
     color: #f8f8f2;
-    border-color: mix(#44475a, #f8f8f2);
+    border-color: color.mix(#44475a, #f8f8f2);
   }
 }
 .gmk-dracula-mod {
@@ -358,9 +389,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#282a36, 4%);
+    background: color.adjust(#282a36, $lightness: -4%);
     color: #f8f8f2;
-    border-color: mix(#282a36, #f8f8f2);
+    border-color: color.mix(#282a36, #f8f8f2);
   }
 }
 .gmk-dracula-mod2 {
@@ -386,9 +417,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#282a36, 4%);
+    background: color.adjust(#282a36, $lightness: -4%);
     color: #50fa7b;
-    border-color: mix(#282a36, #50fa7b);
+    border-color: color.mix(#282a36, #50fa7b);
   }
 }
 .gmk-dracula-accent {
@@ -429,48 +460,57 @@
 
 .gmk-dualshot-key,
 .gmk-dualshot-mod {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: darken($color-gmk-abs-N9, 12%);
+  background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -5%);
+  color: color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -12%);
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: $color-gmk-abs-2B;
-    color: darken($color-gmk-abs-N9, 18%);
-    border-color: mix($color-gmk-abs-2B, darken($color-gmk-abs-N9, 12%));
+    background: gmk-abs.$color-gmk-abs-2B;
+    color: color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -18%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-2B,
+      color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -12%)
+    );
   }
 }
 .gmk-dualshot-mod2 {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
+  background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -5%);
+  color: color.adjust(
+    color.adjust(gmk-abs.$color-gmk-abs-RO2, $lightness: 13%),
+    $saturation: 12%
+  );
 }
 .gmk-dualshot-mod3 {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: lighten($color-gmk-abs-N6, 5%);
+  background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -5%);
+  color: color.adjust(gmk-abs.$color-gmk-abs-N6, $lightness: 5%);
 }
 .gmk-dualshot-mod4 {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: lighten($color-gmk-abs-TU2, 9%);
+  background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -5%);
+  color: color.adjust(gmk-abs.$color-gmk-abs-TU2, $lightness: 9%);
 }
 .gmk-dualshot-mod5 {
-  background: darken($color-gmk-abs-2B, 5%);
-  color: lighten($color-gmk-abs-N5, 29%);
+  background: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -5%);
+  color: color.adjust(gmk-abs.$color-gmk-abs-N5, $lightness: 29%);
 }
 .gmk-dualshot-accent {
-  background: saturate(lighten($color-gmk-abs-RO2, 13%), 12%);
-  color: $color-gmk-abs-N9;
+  background: color.adjust(
+    color.adjust(gmk-abs.$color-gmk-abs-RO2, $lightness: 13%),
+    $saturation: 12%
+  );
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 .gmk-dualshot-accent2 {
-  background: lighten($color-gmk-abs-N6, 5%);
-  color: $color-gmk-abs-N9;
+  background: color.adjust(gmk-abs.$color-gmk-abs-N6, $lightness: 5%);
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 .gmk-dualshot-accent3 {
-  background: lighten($color-gmk-abs-TU2, 9%);
-  color: $color-gmk-abs-N9;
+  background: color.adjust(gmk-abs.$color-gmk-abs-TU2, $lightness: 9%);
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 .gmk-dualshot-accent4 {
-  background: lighten($color-gmk-abs-N5, 29%);
-  color: $color-gmk-abs-N9;
+  background: color.adjust(gmk-abs.$color-gmk-abs-N5, $lightness: 29%);
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 .gmk-dualshot-kb {
   // placeholder
@@ -478,44 +518,50 @@
 
 .gmk-fro-dot-yo-key,
 .gmk-fro-dot-yo-mod {
-  background: $color-gmk-abs-L9;
-  color: $color-gmk-abs-2B;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: gmk-abs.$color-gmk-abs-2B;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-L9, 4%);
-    color: darken($color-gmk-abs-2B, 8%);
-    border-color: mix($color-gmk-abs-L9, darken($color-gmk-abs-N9, 7%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-2B, $lightness: -8%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-L9,
+      color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -7%)
+    );
   }
 }
 .gmk-fro-dot-yo-rdp {
-  background: $color-gmk-abs-L9;
-  color: $color-pantone-2345C;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: pantone.$color-pantone-2345C;
 }
 .gmk-fro-dot-yo-grn {
-  background: $color-gmk-abs-L9;
-  color: $color-pantone-3395C;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: pantone.$color-pantone-3395C;
 }
 .gmk-fro-dot-yo-blu {
-  background: $color-gmk-abs-L9;
-  color: $color-pantone-312C;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: pantone.$color-pantone-312C;
 }
 .gmk-fro-dot-yo-ppl {
-  background: $color-gmk-abs-L9;
-  color: $color-pantone-2088C;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: pantone.$color-pantone-2088C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-L9, 4%);
-    color: darken($color-pantone-2088C, 6%);
-    border-color: mix($color-gmk-abs-L9, darken($color-pantone-2088C, 6%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-L9, $lightness: 4%);
+    color: color.adjust(pantone.$color-pantone-2088C, $lightness: -6%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-L9,
+      color.adjust(pantone.$color-pantone-2088C, $lightness: -6%)
+    );
   }
 }
 .gmk-fro-dot-yo-ylw {
-  background: $color-gmk-abs-L9;
-  color: $color-gmk-abs-N6;
+  background: gmk-abs.$color-gmk-abs-L9;
+  color: gmk-abs.$color-gmk-abs-N6;
 }
 .gmk-fro-dot-yo-kb {
   // placeholder
@@ -528,9 +574,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#c7e6f5, 5%);
-    color: darken(#f54730, 26%);
-    border-color: mix(#c7e6f5, darken(#f54730, 26%));
+    background: color.adjust(#c7e6f5, $lightness: 5%);
+    color: color.adjust(#f54730, $lightness: -26%);
+    border-color: color.mix(#c7e6f5, color.adjust(#f54730, $lightness: -26%));
   }
 }
 .gmk-grand-prix-mod {
@@ -540,9 +586,12 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(rgb(54, 71, 92), 14%);
-    color: lighten(rgb(192, 208, 54), 14%);
-    border-color: mix(rgb(54, 71, 92), lighten(rgb(192, 208, 54), 14%));
+    background: color.adjust(rgb(54, 71, 92), $lightness: -14%);
+    color: color.adjust(rgb(192, 208, 54), $lightness: 14%);
+    border-color: color.mix(
+      rgb(54, 71, 92),
+      color.adjust(rgb(192, 208, 54), $lightness: 14%)
+    );
   }
 }
 .gmk-grand-prix-accent {
@@ -551,149 +600,164 @@
 }
 
 .gmk-hammerhead-dark-key {
-  background: $color-pantone-533C;
-  color: $color-pantone-3258C;
+  background: pantone.$color-pantone-533C;
+  color: pantone.$color-pantone-3258C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-533C, 4%);
-    color: $color-pantone-3258C;
-    border-color: mix($color-pantone-533C, $color-pantone-3258C);
+    background: color.adjust(pantone.$color-pantone-533C, $lightness: -4%);
+    color: pantone.$color-pantone-3258C;
+    border-color: color.mix(
+      pantone.$color-pantone-533C,
+      pantone.$color-pantone-3258C
+    );
   }
 }
 .gmk-hammerhead-dark-mod {
-  background: $color-pantone-2378C;
-  color: $color-pantone-3258C;
+  background: pantone.$color-pantone-2378C;
+  color: pantone.$color-pantone-3258C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-2378C, 4%);
-    color: lighten($color-pantone-3258C, 22.1%);
-    border-color: mix(
-      $color-pantone-2378C,
-      lighten($color-pantone-3258C, 22.1%)
+    background: color.adjust(pantone.$color-pantone-2378C, $lightness: -4%);
+    color: color.adjust(pantone.$color-pantone-3258C, $lightness: 22.1%);
+    border-color: color.mix(
+      pantone.$color-pantone-2378C,
+      color.adjust(pantone.$color-pantone-3258C, $lightness: 22.1%)
     );
   }
 }
 .gmk-hammerhead-dark-accent {
-  background: $color-pantone-3258C;
-  color: $color-pantone-2378C;
+  background: pantone.$color-pantone-3258C;
+  color: pantone.$color-pantone-2378C;
 }
 
 .gmk-hammerhead-light-key {
-  background: $color-pantone-536C;
-  color: $color-pantone-2378C;
+  background: pantone.$color-pantone-536C;
+  color: pantone.$color-pantone-2378C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-pantone-536C, 4%);
-    color: darken($color-pantone-2378C, 11%);
-    border-color: mix($color-pantone-536C, darken($color-pantone-2378C, 11%));
+    background: color.adjust(pantone.$color-pantone-536C, $lightness: 4%);
+    color: color.adjust(pantone.$color-pantone-2378C, $lightness: -11%);
+    border-color: color.mix(
+      pantone.$color-pantone-536C,
+      color.adjust(pantone.$color-pantone-2378C, $lightness: -11%)
+    );
   }
 }
 .gmk-hammerhead-light-mod {
-  background: $color-pantone-2378C;
-  color: $color-pantone-3258C;
+  background: pantone.$color-pantone-2378C;
+  color: pantone.$color-pantone-3258C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-2378C, 4%);
-    color: lighten($color-pantone-3258C, 22.1%);
-    border-color: mix(
-      $color-pantone-2378C,
-      lighten($color-pantone-3258C, 22.1%)
+    background: color.adjust(pantone.$color-pantone-2378C, $lightness: -4%);
+    color: color.adjust(pantone.$color-pantone-3258C, $lightness: 22.1%);
+    border-color: color.mix(
+      pantone.$color-pantone-2378C,
+      color.adjust(pantone.$color-pantone-3258C, $lightness: 22.1%)
     );
   }
 }
 .gmk-hammerhead-light-accent {
-  background: $color-pantone-3258C;
-  color: $color-pantone-2378C;
+  background: pantone.$color-pantone-3258C;
+  color: pantone.$color-pantone-2378C;
 }
 
 .gmk-handarbeit-plus-key,
 .gmk-handarbeit-plus-mod {
-  background: $color-gmk-abs-P3;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-P3;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-P3, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-P3, $color-gmk-abs-WS1);
+    background: color.adjust(gmk-abs.$color-gmk-abs-P3, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-P3,
+      gmk-abs.$color-gmk-abs-WS1
+    );
   }
 }
 .gmk-handarbeit-plus-accent {
-  background: $color-gmk-abs-V4;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-V4;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent2 {
-  background: $color-gmk-abs-3C;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-3C;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent3 {
-  background: $color-gmk-abs-N6;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-N6;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent4 {
-  background: $color-gmk-abs-N7;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-N7;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent5 {
-  background: $color-gmk-abs-AE;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-AE;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent6 {
-  background: $color-gmk-abs-DY;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-DY;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent7 {
-  background: $color-gmk-abs-V2;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-V2;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent8 {
-  background: $color-gmk-abs-3A;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-3A;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-accent9 {
-  background: $color-gmk-abs-TU1;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-TU1;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-handarbeit-plus-kb {
   // placeholder
 }
 
 .gmk-hazakura-key {
-  background: $color-gmk-abs-WS1;
-  color: darken($color-pantone-2346C, 10%);
+  background: gmk-abs.$color-gmk-abs-WS1;
+  color: color.adjust(pantone.$color-pantone-2346C, $lightness: -10%);
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-WS1, 4%);
-    color: darken($color-pantone-2346C, 33%);
-    border-color: mix($color-gmk-abs-WS1, darken($color-pantone-2346C, 4%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-WS1, $lightness: 4%);
+    color: color.adjust(pantone.$color-pantone-2346C, $lightness: -33%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-WS1,
+      color.adjust(pantone.$color-pantone-2346C, $lightness: -4%)
+    );
   }
 }
 .gmk-hazakura-mod {
-  background: $color-pantone-182C;
-  color: darken($color-pantone-2346C, 10%);
+  background: pantone.$color-pantone-182C;
+  color: color.adjust(pantone.$color-pantone-2346C, $lightness: -10%);
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-pantone-182C, 4%);
-    color: darken($color-pantone-2346C, 30%);
-    border-color: mix($color-pantone-182C, darken($color-pantone-2346C, 30%));
+    background: color.adjust(pantone.$color-pantone-182C, $lightness: 4%);
+    color: color.adjust(pantone.$color-pantone-2346C, $lightness: -30%);
+    border-color: color.mix(
+      pantone.$color-pantone-182C,
+      color.adjust(pantone.$color-pantone-2346C, $lightness: -30%)
+    );
   }
 }
 .gmk-hazakura-accent {
-  background: $color-pantone-2346C;
-  color: lighten($color-pantone-182C, 10%);
+  background: pantone.$color-pantone-2346C;
+  color: color.adjust(pantone.$color-pantone-182C, $lightness: 10%);
 }
 
 .gmk-jamon-key {
@@ -703,9 +767,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#84172c, 4%);
+    background: color.adjust(#84172c, $lightness: -4%);
     color: #ece4d0;
-    border-color: mix(#84172c, #ece4d0);
+    border-color: color.mix(#84172c, #ece4d0);
   }
 }
 .gmk-jamon-mod {
@@ -715,84 +779,96 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#ac2c32, 4%);
-    color: lighten(#ece4d0, 9%);
-    border-color: mix(#ac2c32, lighten(#ece4d0, 9%));
+    background: color.adjust(#ac2c32, $lightness: -4%);
+    color: color.adjust(#ece4d0, $lightness: 9%);
+    border-color: color.mix(#ac2c32, color.adjust(#ece4d0, $lightness: 9%));
   }
 }
 .gmk-jamon-accent {
   background: #ece4d0;
   color: #313337;
   input {
-    background: lighten(#ece4d0, 40%);
+    background: color.adjust(#ece4d0, $lightness: 40%);
   }
 }
 .gmk-jamon-kb {
   // placeholder
-  background: $color-pantone-533C;
+  background: pantone.$color-pantone-533C;
 }
 
 .gmk-merlin-key {
-  background: $color-gmk-abs-CP;
-  color: $color-gmk-abs-TU1;
+  background: gmk-abs.$color-gmk-abs-CP;
+  color: gmk-abs.$color-gmk-abs-TU1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-CP, 4%);
-    color: darken($color-gmk-abs-TU1, 5%);
-    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-TU1, 5%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-TU1, $lightness: -5%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-CP,
+      color.adjust(gmk-abs.$color-gmk-abs-TU1, $lightness: -5%)
+    );
   }
 }
 .gmk-merlin-mod {
-  background: $color-gmk-abs-TU1;
-  color: $color-gmk-abs-N6;
+  background: gmk-abs.$color-gmk-abs-TU1;
+  color: gmk-abs.$color-gmk-abs-N6;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-TU1, 4%);
-    color: lighten($color-gmk-abs-N6, 24%);
-    border-color: mix($color-gmk-abs-TU1, $color-gmk-abs-N6);
+    background: color.adjust(gmk-abs.$color-gmk-abs-TU1, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-N6, $lightness: 24%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-TU1,
+      gmk-abs.$color-gmk-abs-N6
+    );
   }
 }
 .gmk-merlin-accent {
-  background: $color-gmk-abs-N6;
-  color: $color-gmk-abs-TU1;
+  background: gmk-abs.$color-gmk-abs-N6;
+  color: gmk-abs.$color-gmk-abs-TU1;
   input {
-    background: lighten($color-gmk-abs-N6, 40%);
+    background: color.adjust(gmk-abs.$color-gmk-abs-N6, $lightness: 40%);
   }
 }
 .gmk-merlin-kb {
 }
 
 .gmk-metaverse-key {
-  background: $color-gmk-abs-WS1;
-  color: $color-gmk-abs-CR;
+  background: gmk-abs.$color-gmk-abs-WS1;
+  color: gmk-abs.$color-gmk-abs-CR;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-WS1, 4%);
-    color: $color-gmk-abs-CR;
-    border-color: mix($color-gmk-abs-WS1, $color-gmk-abs-CR);
+    background: color.adjust(gmk-abs.$color-gmk-abs-WS1, $lightness: 4%);
+    color: gmk-abs.$color-gmk-abs-CR;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-WS1,
+      gmk-abs.$color-gmk-abs-CR
+    );
   }
 }
 .gmk-metaverse-mod {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-CR;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-CR, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
+    background: color.adjust(gmk-abs.$color-gmk-abs-CR, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-CR,
+      gmk-abs.$color-gmk-abs-WS1
+    );
   }
 }
 .gmk-metaverse-accent {
-  background: $color-gmk-abs-RO2;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-RO2;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 .gmk-metaverse-kb {
   // placeholder
@@ -800,43 +876,49 @@
 
 .gmk-metropolis-base-key,
 .gmk-metropolis-base-mod {
-  background: $color-pantone-5395C;
-  color: $color-pantone-333C;
+  background: pantone.$color-pantone-5395C;
+  color: pantone.$color-pantone-333C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-5395C, 4%);
-    color: $color-pantone-333C;
-    border-color: mix($color-pantone-5395C, $color-pantone-333C);
+    background: color.adjust(pantone.$color-pantone-5395C, $lightness: -4%);
+    color: pantone.$color-pantone-333C;
+    border-color: color.mix(
+      pantone.$color-pantone-5395C,
+      pantone.$color-pantone-333C
+    );
   }
 }
 .gmk-metropolis-base-mod2 {
-  background: $color-pantone-5395C;
-  color: $color-pantone-142C;
+  background: pantone.$color-pantone-5395C;
+  color: pantone.$color-pantone-142C;
 }
 .gmk-metropolis-base-mod3 {
-  background: $color-pantone-5395C;
-  color: $color-pantone-179C;
+  background: pantone.$color-pantone-5395C;
+  color: pantone.$color-pantone-179C;
 }
 .gmk-metropolis-base-accent {
-  background: $color-pantone-142C;
-  color: $color-pantone-5395C;
+  background: pantone.$color-pantone-142C;
+  color: pantone.$color-pantone-5395C;
 }
 .gmk-metropolis-base-accent2 {
-  background: $color-pantone-333C;
-  color: $color-pantone-5395C;
+  background: pantone.$color-pantone-333C;
+  color: pantone.$color-pantone-5395C;
 }
 .gmk-metropolis-base-accent3 {
-  background: $color-pantone-179C;
-  color: $color-pantone-5395C;
+  background: pantone.$color-pantone-179C;
+  color: pantone.$color-pantone-5395C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-pantone-179C, 4%);
-    color: $color-pantone-5395C;
-    border-color: mix($color-pantone-179C, $color-pantone-5395C);
+    background: color.adjust(pantone.$color-pantone-179C, $lightness: 4%);
+    color: pantone.$color-pantone-5395C;
+    border-color: color.mix(
+      pantone.$color-pantone-179C,
+      pantone.$color-pantone-5395C
+    );
   }
 }
 .gmk-metropolis-base-kb {
@@ -845,20 +927,23 @@
 
 .gmk-metropolis-midnight-key,
 .gmk-metropolis-midnight-mod {
-  background: $color-pantone-5395C;
-  color: $color-pantone-333C;
+  background: pantone.$color-pantone-5395C;
+  color: pantone.$color-pantone-333C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-5395C, 4%);
-    color: $color-pantone-333C;
-    border-color: mix($color-pantone-5395C, $color-pantone-333C);
+    background: color.adjust(pantone.$color-pantone-5395C, $lightness: -4%);
+    color: pantone.$color-pantone-333C;
+    border-color: color.mix(
+      pantone.$color-pantone-5395C,
+      pantone.$color-pantone-333C
+    );
   }
 }
 .gmk-metropolis-midnight-accent {
-  background: $color-pantone-333C;
-  color: $color-pantone-5395C;
+  background: pantone.$color-pantone-333C;
+  color: pantone.$color-pantone-5395C;
 }
 .gmk-metropolis-midnight-kb {
   // placeholder
@@ -871,9 +956,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#c2d9e4, 4%);
-    color: darken(#444f58, 4%);
-    border-color: mix(#c2d9e4, #444f58);
+    background: color.adjust(#c2d9e4, $lightness: 4%);
+    color: color.adjust(#444f58, $lightness: -4%);
+    border-color: color.mix(#c2d9e4, #444f58);
   }
 }
 .gmk-mizu-mod {
@@ -883,9 +968,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#444f58, 4%);
+    background: color.adjust(#444f58, $lightness: -4%);
     color: #f7eee3;
-    border-color: mix(#444f58, #f7eee3);
+    border-color: color.mix(#444f58, #f7eee3);
   }
 }
 .gmk-mizu-accent {
@@ -894,103 +979,118 @@
 }
 
 .gmk-nautilus-key {
-  background: $color-pantone-534C;
-  color: $color-gmk-abs-TU2;
+  background: pantone.$color-pantone-534C;
+  color: gmk-abs.$color-gmk-abs-TU2;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-534C, 4%);
-    color: lighten($color-gmk-abs-TU2, 9%);
-    border-color: mix($color-pantone-534C, lighten($color-gmk-abs-TU2, 5%));
+    background: color.adjust(pantone.$color-pantone-534C, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-TU2, $lightness: 9%);
+    border-color: color.mix(
+      pantone.$color-pantone-534C,
+      color.adjust(gmk-abs.$color-gmk-abs-TU2, $lightness: 5%)
+    );
   }
 }
 .gmk-nautilus-mod {
-  background: $color-pantone-533C;
-  color: $color-gmk-abs-N6;
+  background: pantone.$color-pantone-533C;
+  color: gmk-abs.$color-gmk-abs-N6;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-533C, 4%);
-    color: $color-gmk-abs-N6;
-    border-color: mix($color-pantone-533C, $color-gmk-abs-N6);
+    background: color.adjust(pantone.$color-pantone-533C, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-N6;
+    border-color: color.mix(
+      pantone.$color-pantone-533C,
+      gmk-abs.$color-gmk-abs-N6
+    );
   }
 }
 .gmk-nautilus-accent {
-  background: $color-gmk-abs-N6;
-  color: $color-pantone-533C;
+  background: gmk-abs.$color-gmk-abs-N6;
+  color: pantone.$color-pantone-533C;
   input {
-    background: lighten($color-gmk-abs-N6, 40%);
+    background: color.adjust(gmk-abs.$color-gmk-abs-N6, $lightness: 40%);
   }
 }
 .gmk-nautilus-kb {
   // placeholder
-  background: $color-pantone-533C;
+  background: pantone.$color-pantone-533C;
 }
 
 .gmk-nines-key,
 .gmk-nines-mod {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-U9;
+  background: gmk-abs.$color-gmk-abs-N9;
+  color: gmk-abs.$color-gmk-abs-U9;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-N9, 4%);
-    color: lighten($color-gmk-abs-U9, 10%);
-    border-color: mix($color-gmk-abs-N9, $color-gmk-abs-U9);
+    background: color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-U9, $lightness: 10%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-N9,
+      gmk-abs.$color-gmk-abs-U9
+    );
   }
 }
 .gmk-nines-accent {
-  background: $color-gmk-abs-U9;
-  color: $color-gmk-abs-N9;
+  background: gmk-abs.$color-gmk-abs-U9;
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 .gmk-nines-kb {
   // placeholder
 }
 
 .gmk-olivetti-key {
-  background: $color-gmk-abs-CP;
-  color: $color-gmk-abs-V4;
+  background: gmk-abs.$color-gmk-abs-CP;
+  color: gmk-abs.$color-gmk-abs-V4;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-CP, 4%);
-    color: darken($color-gmk-abs-V4, 5%);
-    border-color: mix($color-gmk-abs-CP, darken($color-gmk-abs-V4, 5%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-V4, $lightness: -5%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-CP,
+      color.adjust(gmk-abs.$color-gmk-abs-V4, $lightness: -5%)
+    );
   }
 }
 .gmk-olivetti-mod {
-  background: $color-gmk-abs-U9;
-  color: $color-gmk-abs-V4;
+  background: gmk-abs.$color-gmk-abs-U9;
+  color: gmk-abs.$color-gmk-abs-V4;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-U9, 4%);
-    color: darken($color-gmk-abs-V4, 18%);
-    border-color: mix($color-gmk-abs-U9, darken($color-gmk-abs-V4, 18%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-U9, $lightness: 4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-V4, $lightness: -18%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-U9,
+      color.adjust(gmk-abs.$color-gmk-abs-V4, $lightness: -18%)
+    );
   }
 }
 .gmk-olivetti-accent {
-  background: $color-gmk-abs-V4;
-  color: $color-gmk-abs-CP;
+  background: gmk-abs.$color-gmk-abs-V4;
+  color: gmk-abs.$color-gmk-abs-CP;
 }
 .gmk-olivetti-kb {
 }
 
 .gmk-olivia-key {
-  background: $color-gmk-abs-CP;
+  background: gmk-abs.$color-gmk-abs-CP;
   color: #363434;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-CP, 4%);
+    background: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%);
     color: #363434;
-    border-color: mix($color-gmk-abs-CP, #363434);
+    border-color: color.mix(gmk-abs.$color-gmk-abs-CP, #363434);
   }
 }
 .gmk-olivia-mod {
@@ -1000,9 +1100,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#363434, 4%);
+    background: color.adjust(#363434, $lightness: -4%);
     color: #e8c4b8;
-    border-color: mix(#363434, #e8c4b8);
+    border-color: color.mix(#363434, #e8c4b8);
   }
 }
 .gmk-olivia-accent {
@@ -1020,9 +1120,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#2b2b2b, 4%);
+    background: color.adjust(#2b2b2b, $lightness: -4%);
     color: #f1beb0;
-    border-color: mix(#2b2b2b, #f1beb0);
+    border-color: color.mix(#2b2b2b, #f1beb0);
   }
 }
 .gmk-olivia-plus-plus-dark-accent {
@@ -1035,20 +1135,23 @@
 
 .gmk-phosphorous-key,
 .gmk-phosphorous-mod {
-  background: $color-pantone-11C;
-  color: $color-pantone-311C;
+  background: pantone.$color-pantone-11C;
+  color: pantone.$color-pantone-311C;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-pantone-11C, 4%);
-    color: lighten($color-pantone-311C, 4%);
-    border-color: mix($color-pantone-11C, $color-pantone-311C);
+    background: color.adjust(pantone.$color-pantone-11C, $lightness: -4%);
+    color: color.adjust(pantone.$color-pantone-311C, $lightness: 4%);
+    border-color: color.mix(
+      pantone.$color-pantone-11C,
+      pantone.$color-pantone-311C
+    );
   }
 }
 .gmk-phosphorous-accent {
-  background: $color-pantone-311C;
-  color: $color-pantone-11C;
+  background: pantone.$color-pantone-311C;
+  color: pantone.$color-pantone-11C;
 }
 .gmk-phosphorous-kb {
   // placeholder
@@ -1061,9 +1164,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#ded0af, 4%);
-    color: darken(#736b7c, 4%);
-    border-color: mix(#ded0af, darken(#736b7c, 4%));
+    background: color.adjust(#ded0af, $lightness: 4%);
+    color: color.adjust(#736b7c, $lightness: -4%);
+    border-color: color.mix(#ded0af, color.adjust(#736b7c, $lightness: -4%));
   }
 }
 .gmk-plum-mod {
@@ -1073,9 +1176,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#736b7c, 4%);
-    color: lighten(#ded0af, 8%);
-    border-color: mix(#736b7c, lighten(#ded0af, 8%));
+    background: color.adjust(#736b7c, $lightness: -4%);
+    color: color.adjust(#ded0af, $lightness: 8%);
+    border-color: color.mix(#736b7c, color.adjust(#ded0af, $lightness: 8%));
   }
 }
 .gmk-plum-accent {
@@ -1090,9 +1193,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#ece4d0, 4%);
+    background: color.adjust(#ece4d0, $lightness: 4%);
     color: #333732;
-    border-color: mix(#ece4d0, #333732);
+    border-color: color.mix(#ece4d0, #333732);
   }
 }
 .gmk-serika-mod {
@@ -1102,9 +1205,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#ffcd00, 4%);
+    background: color.adjust(#ffcd00, $lightness: 4%);
     color: #333732;
-    border-color: mix(#ffcd00, #333732);
+    border-color: color.mix(#ffcd00, #333732);
   }
 }
 .gmk-serika-accent {
@@ -1115,28 +1218,34 @@
 }
 
 .gmk-space-cadet-key {
-  background: $color-sp-abs-GD;
-  color: $color-gmk-abs-CP;
+  background: sp-abs.$color-sp-abs-GD;
+  color: gmk-abs.$color-gmk-abs-CP;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-sp-abs-GD, 4%);
-    color: lighten($color-gmk-abs-CP, 4%);
-    border-color: mix($color-sp-abs-GD, lighten($color-gmk-abs-CP, 4%));
+    background: color.adjust(sp-abs.$color-sp-abs-GD, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%);
+    border-color: color.mix(
+      sp-abs.$color-sp-abs-GD,
+      color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%)
+    );
   }
 }
 
 .gmk-space-cadet-mod {
-  background: $color-sp-abs-BFP;
-  color: $color-gmk-abs-CP;
+  background: sp-abs.$color-sp-abs-BFP;
+  color: gmk-abs.$color-gmk-abs-CP;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-sp-abs-BFP, 4%);
-    color: lighten($color-gmk-abs-CP, 4%);
-    border-color: mix($color-sp-abs-BFP, lighten($color-gmk-abs-CP, 4%));
+    background: color.adjust(sp-abs.$color-sp-abs-BFP, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%);
+    border-color: color.mix(
+      sp-abs.$color-sp-abs-BFP,
+      color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 4%)
+    );
   }
 }
 .gmk-space-cadet-kb {
@@ -1145,48 +1254,54 @@
 .gmk-striker-key,
 .gmk-striker-mod {
   background: #004d7c;
-  color: $color-gmk-abs-WS1;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#004d7c, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix(#004d7c, $color-gmk-abs-WS1);
+    background: color.adjust(#004d7c, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(#004d7c, gmk-abs.$color-gmk-abs-WS1);
   }
 }
 .gmk-striker-accent {
   background: #002e51;
-  color: $color-gmk-abs-WS1;
+  color: gmk-abs.$color-gmk-abs-WS1;
 }
 
 .gmk-ta-royal-alpha-key {
-  background: $color-gmk-abs-3K;
-  color: $color-gmk-abs-N7;
+  background: gmk-abs.$color-gmk-abs-3K;
+  color: gmk-abs.$color-gmk-abs-N7;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten($color-gmk-abs-3K, 4%);
-    color: darken($color-gmk-abs-N7, 10%);
-    border-color: mix($color-gmk-abs-3K, darken($color-gmk-abs-N7, 10%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-3K, $lightness: 4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-N7, $lightness: -10%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-3K,
+      color.adjust(gmk-abs.$color-gmk-abs-N7, $lightness: -10%)
+    );
   }
 }
 .gmk-ta-royal-alpha-mod {
-  background: $color-gmk-abs-AE;
-  color: $color-gmk-abs-CP;
+  background: gmk-abs.$color-gmk-abs-AE;
+  color: gmk-abs.$color-gmk-abs-CP;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-AE, 4%);
-    color: lighten($color-gmk-abs-CP, 14%);
-    border-color: mix($color-gmk-abs-AE, lighten($color-gmk-abs-CP, 14%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-AE, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 14%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-AE,
+      color.adjust(gmk-abs.$color-gmk-abs-CP, $lightness: 14%)
+    );
   }
 }
 .gmk-ta-royal-alpha-accent {
-  background: $color-gmk-abs-N7;
-  color: $color-gmk-abs-CP;
+  background: gmk-abs.$color-gmk-abs-N7;
+  color: gmk-abs.$color-gmk-abs-CP;
 }
 .gmk-ta-royal-alpha-kb {
   // placeholder
@@ -1194,29 +1309,32 @@
 
 .gmk-terminal-key,
 .gmk-terminal-mod {
-  background: $color-gmk-abs-N9;
-  color: $color-gmk-abs-AE;
+  background: gmk-abs.$color-gmk-abs-N9;
+  color: gmk-abs.$color-gmk-abs-AE;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-N9, 4%);
-    color: lighten($color-gmk-abs-AE, 20%);
-    border-color: mix($color-gmk-abs-N9, lighten($color-gmk-abs-AE, 20%));
+    background: color.adjust(gmk-abs.$color-gmk-abs-N9, $lightness: -4%);
+    color: color.adjust(gmk-abs.$color-gmk-abs-AE, $lightness: 20%);
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-N9,
+      color.adjust(gmk-abs.$color-gmk-abs-AE, $lightness: 20%)
+    );
   }
 }
 .gmk-terminal-accent {
-  background: $color-gmk-abs-AE;
-  color: $color-gmk-abs-N9;
+  background: gmk-abs.$color-gmk-abs-AE;
+  color: gmk-abs.$color-gmk-abs-N9;
 }
 
 .gmk-vaporwave-key {
-  $color-vaporwave-lighter-pink: scale-color(
+  $color-vaporwave-lighter-pink: color.scale(
     #ff3eb5,
     $lightness: 60%,
     $saturation: -20%
   );
-  $color-vaporwave-lighter-lilac: scale-color(#9595d2, $lightness: 5%);
+  $color-vaporwave-lighter-lilac: color.scale(#9595d2, $lightness: 5%);
   background-color: $color-vaporwave-lighter-lilac;
   color: $color-vaporwave-lighter-pink;
   font-weight: bold;
@@ -1224,9 +1342,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-vaporwave-lighter-lilac, 4%);
-    color: lighten($color-vaporwave-lighter-pink, 8%);
-    border-color: mix(
+    background: color.adjust($color-vaporwave-lighter-lilac, $lightness: -4%);
+    color: color.adjust($color-vaporwave-lighter-pink, $lightness: 8%);
+    border-color: color.mix(
       $color-vaporwave-lighter-lilac,
       $color-vaporwave-lighter-pink
     );
@@ -1240,9 +1358,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#6244bb, 4%);
-    color: lighten(#00bce3, 12%);
-    border-color: mix(#6244bb, #00bce3);
+    background: color.adjust(#6244bb, $lightness: -4%);
+    color: color.adjust(#00bce3, $lightness: 12%);
+    border-color: color.mix(#6244bb, #00bce3);
   }
 }
 
@@ -1253,15 +1371,18 @@
 
 .gmk-wob-key,
 .gmk-wob-mod {
-  background: $color-gmk-abs-CR;
-  color: $color-gmk-abs-WS1;
+  background: gmk-abs.$color-gmk-abs-CR;
+  color: gmk-abs.$color-gmk-abs-WS1;
   input,
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken($color-gmk-abs-CR, 4%);
-    color: $color-gmk-abs-WS1;
-    border-color: mix($color-gmk-abs-CR, $color-gmk-abs-WS1);
+    background: color.adjust(gmk-abs.$color-gmk-abs-CR, $lightness: -4%);
+    color: gmk-abs.$color-gmk-abs-WS1;
+    border-color: color.mix(
+      gmk-abs.$color-gmk-abs-CR,
+      gmk-abs.$color-gmk-abs-WS1
+    );
   }
 }
 .gmk-wob-kb {
@@ -1274,9 +1395,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: lighten(#c7e6f5, 4%);
-    color: darken(#f54730, 26%);
-    border-color: mix(#c7e6f5, #f54730);
+    background: color.adjust(#c7e6f5, $lightness: 4%);
+    color: color.adjust(#f54730, $lightness: -26%);
+    border-color: color.mix(#c7e6f5, #f54730);
   }
 }
 .gmk-yuri-mod {
@@ -1286,9 +1407,9 @@
   .key-contents,
   .key-contents:empty,
   .key-contents::before {
-    background: darken(#2d394c, 4%);
-    color: lighten(#f54730, 22%);
-    border-color: mix(#2d394c, #f54730);
+    background: color.adjust(#2d394c, $lightness: -4%);
+    color: color.adjust(#f54730, $lightness: 22%);
+    border-color: color.mix(#2d394c, #f54730);
   }
 }
 .gmk-yuri-accent {
