@@ -121,6 +121,7 @@
 <script>
 import Vue from 'vue';
 import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
+import * as pinia from 'pinia';
 import first from 'lodash/first';
 import isUndefined from 'lodash/isUndefined';
 import { clearKeymapTemplate } from '@/common.js';
@@ -134,6 +135,8 @@ import VueRouter from 'vue-router';
 const { isNavigationFailure, NavigationFailureType } = VueRouter;
 
 import remap from '@/remap';
+
+import { useStatusStore } from '../store/status';
 
 const encoding = 'data:application/json;charset=utf-8,';
 
@@ -211,15 +214,18 @@ export default {
     ]),
     ...mapMutations('keymap', ['setLoadingKeymapPromise', 'setDirty', 'clear']),
     ...mapMutations('keymap', { clearKeymap: 'clear' }),
-    ...mapMutations('status', ['deferredMessage', 'append']),
-    ...mapMutations('status', { clearStatus: 'clear' }),
     ...mapActions('app', [
       'changeKeyboard',
       'loadKeymapFromUrl',
       'loadLayouts'
     ]),
-    ...mapActions('status', ['viewReadme']),
     ...mapActions('keymap', ['load_converted_keymap']),
+    ...pinia.mapActions(useStatusStore, [
+      'viewReadme',
+      'deferredMessage',
+      'append',
+      'clearStatus'
+    ]),
     async importUrlkeymap() {
       try {
         const data = await this.loadKeymapFromUrl(this.urlImport);

@@ -26,13 +26,16 @@
   </div>
 </template>
 <script>
-import { mapGetters, mapMutations, mapState } from 'vuex';
+import { mapState } from 'vuex';
+import * as pinia from 'pinia';
+import { useStatusStore } from '../store/status';
+
 export default {
   name: 'status-panel',
   watch: {
     message(newV, oldV) {
       if (this.scrollToLatest && newV !== oldV) {
-        this.scrollToEnd();
+        this.scrollViewportToEnd();
         this.doneScroll();
       }
     },
@@ -43,8 +46,8 @@ export default {
     }
   },
   methods: {
-    ...mapMutations('status', ['doneScroll']),
-    scrollToEnd() {
+    ...pinia.mapActions(useStatusStore, ['doneScroll']),
+    scrollViewportToEnd() {
       let terminal = this.$refs.terminal;
       this.$nextTick(() => {
         terminal.scrollTop = terminal.scrollHeight;
@@ -60,7 +63,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters('status', ['message', 'scrollToLatest']),
+    ...pinia.mapState(useStatusStore, ['message', 'scrollToLatest']),
     ...mapState('app', ['compileDisabled']),
     terminalClasses() {
       const classes = [];

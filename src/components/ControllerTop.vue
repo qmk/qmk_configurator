@@ -92,6 +92,7 @@
 <script>
 import Vue from 'vue';
 import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import * as pinia from 'pinia';
 
 import first from 'lodash/first';
 import random from 'lodash/random';
@@ -106,6 +107,8 @@ import { clearKeymapTemplate } from '@/common';
 
 import VueRouter from 'vue-router';
 const { isNavigationFailure, NavigationFailureType } = VueRouter;
+
+import { useStatusStore } from '../store/status';
 
 export default {
   name: 'ControllerTop',
@@ -241,6 +244,12 @@ export default {
       'setFavoriteKeyboard'
     ]),
     ...mapActions('keymap', ['initTemplates', 'load_converted_keymap']),
+    ...pinia.mapActions(useStatusStore, [
+      'append',
+      'deferredMessage',
+      'clearStatus',
+      'viewReadme'
+    ]),
     /**
      * loadDefault keymap. Attempts to load the keymap data from
      * a predefined known file path.
@@ -282,8 +291,8 @@ export default {
               // This is a dirty hack so that the status message appears both after pressing load default
               // and switching keyboards. This entire flow needs redesigning as it was written
               // when I had a poor understanding of vue observability.
-              store.commit('status/append', msg);
-              store.commit('status/deferredMessage', msg);
+              this.append(msg);
+              this.deferredMessage(msg);
             }
           });
           return promise;
@@ -369,7 +378,7 @@ export default {
       }
     },
     postUpdateKeyboard() {
-      this.$store.commit('status/clear');
+      this.clearStatus();
       this.$router
         .replace({
           path: `/${this.keyboard}/${this.layout}`
@@ -383,7 +392,7 @@ export default {
           }
           throw failure;
         });
-      this.$store.dispatch('status/viewReadme', this.keyboard);
+      this.viewReadme(this.keyboard);
     },
     /**
      * updateLayout - switch the layout for this keyboard
