@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import axios from 'axios';
 import { backend_readme_url_template } from './modules/constants';
 import { escape } from 'lodash';
 
@@ -49,15 +48,16 @@ export const useStatusStore = defineStore('status', {
      * @returns Promise<Axios>
      */
     async viewReadme(keyboard) {
-      return axios
-        .get(backend_readme_url_template({ keyboard: keyboard }))
-        .then((result) => {
-          if (result.status === 200) {
-            this.message = `${escape(result.data)}${this.deferredMessage}`;
+      return fetch(backend_readme_url_template({ keyboard: keyboard })).then(
+        async (response) => {
+          if (response.ok) {
+            const description = await response.text();
+            this.message = `${escape(description)}${this.deferredMessage}`;
             this.deferredMessage = '';
             this.scrollToEnd();
           }
-        });
+        }
+      );
     }
   }
 });
