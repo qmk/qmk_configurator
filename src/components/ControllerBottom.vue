@@ -222,7 +222,7 @@ export default {
     ...mapActions('keymap', ['load_converted_keymap']),
     ...pinia.mapActions(useStatusStore, [
       'viewReadme',
-      'deferredMessage',
+      'setDeferredMessage',
       'append',
       'clearStatus'
     ]),
@@ -402,7 +402,7 @@ export default {
           msg = `${msg}\n${stats.warnings.join('\n')}`;
           msg = `${msg}\n${stats.errors.join('\n')}`;
         }
-        this.deferredMessage(msg);
+        this.setDeferredMessage(msg);
         this.viewReadme(this.keyboard).then(() => {
           let keymapName = data.keymap;
           if (keymapName.endsWith('.json')) {

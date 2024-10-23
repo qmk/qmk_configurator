@@ -68,8 +68,9 @@ if (
   isObject(navigator) &&
   isString(navigator.userAgent) &&
   navigator.userAgent.includes('Electron')
-)
+) {
   electron.init(); // initializes code specific for the electron app
+}
 
 Vue.component('VeilComponent', Veil);
 Vue.component('VSelect', vSelect);

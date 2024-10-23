@@ -38,7 +38,7 @@ export const useStatusStore = defineStore('status', {
      * Add a deferred message to be appended to end of message buffer at render time.
      * @param {string} dmsg - a deferred message
      */
-    deferredMessage(dmsg) {
+    setDeferredMessage(dmsg) {
       this.deferredMessage = dmsg;
     },
     /**

@@ -246,7 +246,7 @@ export default {
     ...mapActions('keymap', ['initTemplates', 'load_converted_keymap']),
     ...pinia.mapActions(useStatusStore, [
       'append',
-      'deferredMessage',
+      'setDeferredMessage',
       'clearStatus',
       'viewReadme'
     ]),
@@ -292,7 +292,7 @@ export default {
               // and switching keyboards. This entire flow needs redesigning as it was written
               // when I had a poor understanding of vue observability.
               this.append(msg);
-              this.deferredMessage(msg);
+              this.setDeferredMessage(msg);
             }
           });
           return promise;
