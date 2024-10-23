@@ -1,26 +1,10 @@
 <template>
   <!-- prettier-ignore -->
-  <div
-    draggable
-    :id="myid"
-    class="key"
-    :class="myclasses"
-    :style="mystyles"
-    :title="myTitle"
-    @click="clicked"
-    @dragstart="dragstart"
-    @dragend="dragend"
-    @drop.stop="dropped"
-    @dragleave.prevent="dragleave"
-    @dragover.prevent="dragover"
-    @dragenter.prevent="dragenter"
-    >{{ displayName }}<font-awesome-icon v-if="icon" size="2x" :icon="icon" /><template
-      v-if="visible">
-        <div
-          v-if="visible"
-          class="remove"
-          @click.stop="remove"
-        >x</div>
+  <div draggable :id="myid" class="key" :class="myclasses" :style="mystyles" :title="myTitle" @click="clicked"
+    @dragstart="dragstart" @dragend="dragend" @drop.stop="dropped" @dragleave.prevent="dragleave"
+    @dragover.prevent="dragover" @dragenter.prevent="dragenter">{{ displayName }}<font-awesome-icon v-if="icon"
+      size="2x" :icon="icon" /><template v-if="visible">
+      <div v-if="visible" class="remove" @click.stop="remove">x</div>
     </template></div>
 </template>
 <script>
@@ -336,24 +320,20 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '../scss/gmk-abs';
-@import '../scss/sp-abs';
-@import '../scss/sp-pbt';
-@import '../scss/mt3-pbt';
-@import '../scss/mt3-abs';
-@import '../scss/pantone';
-@import '../scss/qmk_colors';
-@import '../scss/colorways';
+@use '../scss/colorways';
 
 .key.overme {
   border-radius: 4px;
 }
+
 .key.swapme {
   transform: scale(0.8);
 }
+
 .key.smaller {
   font-size: var(--default-smaller-key-font-size);
 }
+
 .key {
   border-radius: 6px;
   font-family: 'Montserrat', sans-serif;
@@ -374,51 +354,67 @@ export default {
       (var(--default-key-y-spacing) - var(--default-key-height))
   );
 }
+
 .k125u {
   --unit-width: 1.25;
 }
+
 .k15u {
   --unit-width: 1.5;
 }
+
 .k175u {
   --unit-width: 1.75;
 }
+
 .k2u {
   --unit-width: 2;
 }
+
 .k225u {
   --unit-width: 2.25;
 }
+
 .k275u {
   --unit-width: 2.75;
 }
+
 .k3u {
   --unit-width: 3;
 }
+
 .k4u {
   --unit-width: 4;
 }
+
 .k6u {
   --unit-width: 6;
 }
+
 .k625u {
   --unit-width: 6.25;
 }
+
 .k7u {
   --unit-width: 7;
 }
+
 .k125uh {
   --unit-height: 1.25;
 }
+
 .k15uh {
   --unit-height: 1.5;
 }
+
 .k175uh {
   --unit-height: 1.75;
 }
+
 .k2uh {
   --unit-height: 2;
 }
+
 .kiso {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
   height: var(--default-key-height);
@@ -428,6 +424,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
 }
+
 .kiso::after {
   background: inherit;
   position: absolute;
@@ -442,6 +439,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 2px 0px 1px;
 }
+
 .kbae {
   width: calc(0.5 * var(--default-key-x-spacing) + var(--default-key-width));
   height: calc(1.1 * var(--default-key-height));
@@ -450,6 +448,7 @@ export default {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 0px 2px inset,
     rgba(0, 0, 0, 0.3) 0px 0px 0px 1px;
 }
+
 .kbae::after {
   background: inherit;
   position: absolute;

@@ -1,4 +1,4 @@
-@import './qmk_colors';
+@use 'qmk_colors';
 // default theme
 html {
   body {
@@ -28,7 +28,7 @@ html {
     }
     // @see https://sass-lang.com/documentation/breaking-changes/mixed-decls/
     & {
-      background-color: $qmk-white;
+      background-color: qmk_colors.$qmk-white;
       color: #333;
     }
     #app {
@@ -46,7 +46,7 @@ html {
     #favorite-colorway {
       color: grey;
       &.active {
-        color: $qmk-green;
+        color: qmk_colors.$qmk-green;
       }
     }
     .embedded-tutorial {
@@ -95,7 +95,7 @@ html {
       }
     }
     .tester-key {
-      background: $qmk-grey-light;
+      background: qmk_colors.$qmk-grey-light;
       cursor: default;
       &.active {
         background: green;
@@ -118,7 +118,7 @@ html {
     .letter-key-code,
     .letter-code,
     .letter-key {
-      background-color: $qmk-grey-light;
+      background-color: qmk_colors.$qmk-grey-light;
       border-color: rgba(0, 0, 0, 0.7);
     }
     .status-log {
@@ -357,8 +357,8 @@ html {
 // Dark theme
 html[data-theme='dark'] {
   body {
-    color: $qmk-white;
-    background-color: $qmk-dark-bg;
+    color: qmk_colors.$qmk-white;
+    background-color: qmk_colors.$qmk-dark-bg;
     h3 {
       color: #ddd;
     }
@@ -374,21 +374,21 @@ html[data-theme='dark'] {
     }
   }
   header h1 a {
-    color: $qmk-grey-light;
+    color: qmk_colors.$qmk-grey-light;
     &:hover {
-      color: $qmk-grey;
+      color: qmk_colors.$qmk-grey;
     }
   }
   #controller-top,
   #controller-bottom {
-    background-color: $qmk-grey-dark;
-    color: $qmk-grey-light;
+    background-color: qmk_colors.$qmk-grey-dark;
+    color: qmk_colors.$qmk-grey-light;
     border-color: #0e0e0e;
   }
   .tester-key {
     background: #0c0c0c;
     &.detected {
-      color: $qmk-black;
+      color: qmk_colors.$qmk-black;
     }
   }
   #toggle-terminal-label {
@@ -404,11 +404,11 @@ html[data-theme='dark'] {
     color: #f8f8f2;
   }
   #visual-keymap {
-    background: $qmk-grey-dark;
-    border-color: $qmk-grey-dark;
+    background: qmk_colors.$qmk-grey-dark;
+    border-color: qmk_colors.$qmk-grey-dark;
   }
   .info-title {
-    color: $qmk-grey-light;
+    color: qmk_colors.$qmk-grey-light;
   }
   .help {
     color: #1db6ff;
@@ -425,7 +425,7 @@ html[data-theme='dark'] {
     color: #ddd;
   }
   .tab-area {
-    background: $qmk-grey-dark;
+    background: qmk_colors.$qmk-grey-dark;
     border-color: #2f2f2f;
   }
   .keycode-container:after,
@@ -437,17 +437,17 @@ html[data-theme='dark'] {
   .letter-key-code,
   .letter-code,
   .letter-key {
-    background-color: $qmk-grey-dark;
-    color: $qmk-grey-light;
+    background-color: qmk_colors.$qmk-grey-dark;
+    color: qmk_colors.$qmk-grey-light;
   }
   #app {
-    color: $qmk-grey-light;
+    color: qmk_colors.$qmk-grey-light;
   }
   .tab {
     border-color: #2f2f2f;
     color: #555;
     &.active {
-      color: $qmk-grey-light;
+      color: qmk_colors.$qmk-grey-light;
       background-color: #464646;
     }
   }
@@ -458,7 +458,7 @@ html[data-theme='dark'] {
     border-color: #0e0e0e;
   }
   .layers {
-    background-color: $qmk-dark-bg;
+    background-color: qmk_colors.$qmk-dark-bg;
   }
   .key {
     &:empty {
@@ -469,14 +469,14 @@ html[data-theme='dark'] {
     }
   }
   .slideout-panel .slideout-wrapper .slideout {
-    background-color: $qmk-grey-dark;
-    color: $qmk-grey-light;
+    background-color: qmk_colors.$qmk-grey-dark;
+    color: qmk_colors.$qmk-grey-light;
     h2 {
-      color: $qmk-grey-light;
+      color: qmk_colors.$qmk-grey-light;
     }
   }
   .layer {
-    background: $qmk-grey-dark;
+    background: qmk_colors.$qmk-grey-dark;
     border-color: #5a5a5a;
     color: #0e0e0e;
     &:hover {
@@ -491,7 +491,7 @@ html[data-theme='dark'] {
       }
     }
     &.non-empty {
-      color: $qmk-grey-light;
+      color: qmk_colors.$qmk-grey-light;
       &:hover {
         color: #000;
       }
@@ -500,8 +500,8 @@ html[data-theme='dark'] {
 
   @media print {
     body {
-      background-color: $qmk-white;
-      color: $qmk-dark-bg;
+      background-color: qmk_colors.$qmk-white;
+      color: qmk_colors.$qmk-dark-bg;
       th {
         color: #444444;
       }

@@ -1,7 +1,7 @@
-@import '@/scss/qmk_colors';
-@import '@/scss/themes';
-@import '@/scss/status-bar';
-@import '@/scss/tooltip.scss';
+@use 'qmk_colors';
+@use 'themes';
+@use 'status-bar';
+@use 'tooltip.scss';
 
 /*
 TO REFACTOR: import of style.css
