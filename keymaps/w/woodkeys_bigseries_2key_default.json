@@ -1,0 +1,11 @@
+{
+  "keyboard": "woodkeys/bigseries/2key",
+  "keymap": "default",
+  "commit": "da5cb5fd6f91c2f7aebbcebbf211252c51d9b4a5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_X"
+    ]
+  ]
+}

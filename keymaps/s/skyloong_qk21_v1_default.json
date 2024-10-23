@@ -1,0 +1,24 @@
+{
+  "keyboard": "skyloong/qk21/v1",
+  "keymap": "default",
+  "commit": "234e099c7242550dd0f662d9647ab9dda00f0c41",
+  "layout": "LAYOUT_numpad_6x4",
+  "layers": [
+    [
+      "KC_ESC",  "KC_TAB",  "MO(1)",   "KC_BSPC",
+      "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "QK_BOOT", "RGB_MOD",  "_______", "_______",
+      "_______", "RGB_HUD",  "RGB_HUI", "RGB_VAD",
+      "KC_HOME", "KC_UP",    "KC_PGUP",
+      "KC_LEFT", "RGB_M_SW", "KC_RGHT", "RGB_VAI",
+      "KC_END",  "KC_DOWN",  "KC_PGDN",
+      "KC_INS",              "KC_DEL",  "RGB_TOG"
+    ]
+  ]
+}

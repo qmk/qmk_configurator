@@ -1,0 +1,18 @@
+{
+  "keyboard": "ungodly/nines",
+  "keymap": "default",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_MPLY", "KC_HOME", "KC_MUTE",
+      "MO(1)",   "KC_UP",   "KC_END",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "QK_BOOT", "_______", "KC_STOP",
+      "_______", "KC_HOME", "_______",
+      "KC_MPRV", "KC_END",  "KC_MNXT"
+    ]
+  ]
+}

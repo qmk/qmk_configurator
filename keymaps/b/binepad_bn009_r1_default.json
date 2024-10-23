@@ -1,0 +1,13 @@
+{
+  "keyboard": "binepad/bn009/r1",
+  "keymap": "default",
+  "commit": "d52bafade333d2da76c514f2a152b38b3a446c1c",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_7", "KC_8", "KC_9",
+      "KC_4", "KC_5", "KC_6",
+      "KC_1", "KC_2", "KC_3"
+    ]
+  ]
+}

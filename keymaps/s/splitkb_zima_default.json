@@ -1,0 +1,26 @@
+{
+  "keyboard": "splitkb/zima",
+  "keymap": "default",
+  "commit": "c1361005fac8fe7ee20904e75fc014a8ef34704e",
+  "layout": "LAYOUT_ortho_4x3",
+  "layers": [
+    [
+      "KC_MUTE", "TG(1)",   "TG(2)",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ],
+    [
+      "QK_BOOT", "_______", "XXXXXXX",
+      "AU_ON",   "AU_OFF",  "XXXXXXX",
+      "CK_TOGG", "XXXXXXX", "CK_UP",
+      "CK_RST",  "XXXXXXX", "CK_DOWN"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "_______",
+      "UG_HUEU", "UG_SATU", "UG_VALU",
+      "UG_HUED", "UG_SATD", "UG_VALD",
+      "HF_TOGG", "HF_FDBK", "HF_CONT"
+    ]
+  ]
+}
