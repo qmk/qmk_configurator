@@ -52,7 +52,9 @@ export const useStatusStore = defineStore('status', {
         async (response) => {
           if (response.ok) {
             const description = await response.text();
-            this.message = `${escape(description)}${this.deferredMessage}`;
+            this.message = `${escape(description)}${escape(
+              this.deferredMessage
+            )}`;
             this.deferredMessage = '';
             this.scrollToEnd();
           }
