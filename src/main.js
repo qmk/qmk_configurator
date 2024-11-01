@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store, { pinia } from './store';
 import StatusBar from '@/components/StatusBar.vue';
 import BrowserWarn from '@/components/BrowserWarn.vue';
 import Veil from '@/components/Veil.vue';
@@ -68,8 +68,9 @@ if (
   isObject(navigator) &&
   isString(navigator.userAgent) &&
   navigator.userAgent.includes('Electron')
-)
+) {
   electron.init(); // initializes code specific for the electron app
+}
 
 Vue.component('VeilComponent', Veil);
 Vue.component('VSelect', vSelect);
@@ -116,13 +117,15 @@ store.$i18n = i18n._vm;
 new Vue({
   router,
   store,
+  pinia,
   i18n,
   render: (h) => h(App)
 }).$mount('#app');
 
 new Vue({
-  i18n,
   store,
+  pinia,
+  i18n,
   render: (h) => h(StatusBar)
 }).$mount('#status-app');
 

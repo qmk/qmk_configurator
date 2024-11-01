@@ -2,7 +2,7 @@ import { cy, describe, before, it } from 'local-cypress';
 describe('Simple browsing', function () {
   before(() => {
     cy.viewport('macbook-15');
-    cy.intercept('https://keyboards.qmk.fm/v1/keyboard_list.json', () => {
+    cy.intercept('https://keyboards.qmk.fm/v1/keyboard_list.json', () => ({
       keyboards: [
         '1upkeyboards/1up60hse',
         '1upkeyboards/1up60hte',
@@ -11,8 +11,8 @@ describe('Simple browsing', function () {
         '1upkeyboards/sweet16',
         '2_milk',
         '30wer'
-      ];
-    });
+      ]
+    }));
   });
   it('Should load darkmode from localstorage', () => {
     cy.clearLocalStorage();
@@ -32,7 +32,7 @@ describe('Simple browsing', function () {
     cy.get('html[data-theme="dark"]', { timeout: 10000 }).should('be.visible');
   });
   it('Should set darkmode localstorage and reload it', () => {
-    cy.visit('/keebio/iris/rev1', {
+    cy.visit('/', {
       onBeforeLoad(win) {
         // force false, even if OS has requested change
         cy.stub(win, 'matchMedia')
@@ -51,6 +51,7 @@ describe('Simple browsing', function () {
     cy.get('.bes-controls', { timeout: 5000 }).click();
     cy.get('#setting-toggle-darkmode').click();
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
+    cy.wait(500); // introduce wait, otherwise firefox cypress fails
     cy.visit('/');
     cy.get('html[data-theme="dark"]', { timeout: 5000 }).should('be.visible');
   });
@@ -80,6 +81,7 @@ describe('Simple browsing', function () {
     cy.get('.vs__dropdown-option.vs__dropdown-option--highlight').click();
     cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
     cy.get('#favorite-keyboard').click();
+    cy.wait(500); // introduce wait, otherwise firefox cypress fails
     cy.visit('/');
     cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
     cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
@@ -103,6 +105,7 @@ describe('Simple browsing', function () {
     cy.get('#setting-panel-language').select('fr');
     cy.get('.slideout-panel-bg').click();
     cy.get('#drop-label-keyboard', { timeout: 10000 }).contains('clavier');
+    cy.wait(500); // introduce wait, otherwise firefox cypress fails
     cy.visit('/', {
       onBeforeLoad: (win) => {
         Object.defineProperty(win.navigator, 'language', {

@@ -40,7 +40,7 @@ jobs:
           yarn run lint
 
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v6
         with:
           start: yarn dev
           wait-on: 'http://localhost:5173'
