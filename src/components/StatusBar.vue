@@ -48,7 +48,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios';
 import { backend_status_url } from '@/store/modules/constants';
 import { mapState, mapMutations } from 'vuex';
 /**
@@ -90,10 +89,11 @@ export default {
     getPollInterval() {
       return 25000 + 5000 * Math.random();
     },
-    fetchData() {
-      axios
-        .get(backend_status_url)
-        .then(({ data }) => {
+    async fetchData() {
+      try {
+        const resp = await fetch(backend_status_url);
+        if (resp.ok) {
+          const data = await resp.json();
           this.version = data.version;
           this.jobCount = parseInt(data.queue_length, 10);
           if (this.jobCount === 0) {
@@ -108,12 +108,12 @@ export default {
             this.status = 'Redis is probably down. Please contact devs on ';
             this.hasError = true;
           }
-        })
-        .catch((json) => {
-          this.status = 'DOWN';
-          this.hasError = true;
-          console.error('API status error', json);
-        });
+        }
+      } catch (error) {
+        this.status = 'DOWN';
+        this.hasError = true;
+        console.error('API status error', error);
+      }
       setTimeout(this.fetchData, this.getPollInterval());
     },
     clickSettings() {

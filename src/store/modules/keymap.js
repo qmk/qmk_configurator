@@ -402,6 +402,9 @@ const mutations = {
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
     const { name } = this.getters['keycodes/lookupKeycode'](code);
+    if (!layout) {
+      return;
+    }
     Vue.set(
       state.keymap,
       layer,
