@@ -5,7 +5,6 @@ import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 import defaults from './config';
-import axios from 'axios';
 import { backend_skeletons_url } from './constants';
 import { parseKeycode } from './parse.js';
 
@@ -180,9 +179,10 @@ const actions = {
   },
   async initTemplates({ commit }) {
     try {
-      const resp = await axios.get(`${backend_skeletons_url}/keymap`);
-      if (resp.status === 200) {
-        let template = Object.assign({}, resp.data);
+      const resp = await fetch(`${backend_skeletons_url}/keymap`);
+      if (resp.ok) {
+        const data = await resp.json();
+        let template = { ...data };
         delete template.keyboard;
         delete template.keymap;
         delete template.layout;
