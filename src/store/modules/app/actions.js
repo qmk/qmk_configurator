@@ -77,7 +77,7 @@ const actions = {
     commit('setKeyboard', keyboard);
     const oldLayout = state.layout || '';
     commit('setLayout', undefined);
-    dispatch('loadLayouts');
+    await dispatch('loadLayouts');
     let nextLayout = getPreferredLayout(state.layouts);
     console.info(getPreferredLayout(state.layouts));
     if (oldLayout && !isUndefined(state.layouts[oldLayout])) {
@@ -122,16 +122,15 @@ const actions = {
       });
       return p;
     }
-    await fetch(`${backend_keyboards_url}/${state.keyboard}/info.json`).then(
-      async (resp) => {
-        if (resp.ok) {
-          const data = await resp.json();
-          commit('setKeyboardMeta', data);
-          commit('processLayouts', data);
-          return resp;
-        }
-      }
+    const resp = await fetch(
+      `${backend_keyboards_url}/${state.keyboard}/info.json`
     );
+    if (resp.ok) {
+      const data = await resp.json();
+      commit('setKeyboardMeta', data);
+      commit('processLayouts', data);
+      return resp;
+    }
   },
   saveConfiguratorSettings({ state }) {
     localStorageSet(

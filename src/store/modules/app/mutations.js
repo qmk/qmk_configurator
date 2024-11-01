@@ -196,7 +196,6 @@ const mutations = {
     state.snowflakes = !state.snowflakes;
   },
   setKeyboardMeta(state, data) {
-    debugger;
     state.keyboardMeta = data?.keyboards ? data.keyboards : {};
   }
 };
