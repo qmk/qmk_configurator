@@ -1,5 +1,3 @@
-import values from 'lodash/values';
-import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';
 
 const keyLUT = {
@@ -47,7 +45,7 @@ export function generateKeypressCombos(store, _keycodes) {
       return acc;
     }, {});
 
-  return values(combos).map(generateKeypressHandler.bind(null, store));
+  return Object.values(combos).map(generateKeypressHandler.bind(null, store));
 }
 
 // Share the code between keydown handlers
@@ -116,19 +114,19 @@ export function generateKeypressHandler(store, keycode) {
     case 'KC_LCTL':
       return {
         keys: keycode.keys,
-        on_keydown: partial(modHandler, store, meta),
+        on_keydown: modHandler.bind(null, store, meta),
         prevent_default: true
       };
     case 'KC_LSFT':
       return {
         keys: keycode.keys,
-        on_keyup: partial(modHandler, store, meta),
+        on_keyup: modHandler.bind(null, store, meta),
         prevent_default: true
       };
     default:
       return {
         keys: keycode.keys,
-        on_keydown: partial(keydownHandler, store, meta),
+        on_keydown: keydownHandler.bind(null, store, meta),
         prevent_default: true
       };
   }
