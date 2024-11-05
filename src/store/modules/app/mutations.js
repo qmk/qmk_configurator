@@ -101,14 +101,14 @@ const mutations = {
    *        in same format containing keyboard layouts
    * @return {object} layouts map or empty object
    */
-  processLayouts(state, resp) {
-    if (resp.status === 200 || state.isPreview) {
+  processLayouts(state, data) {
+    if (data || state.isPreview) {
       let layouts = {};
       if (state.isPreview) {
-        layouts = resp.keyboards[PREVIEW_LABEL].layouts;
+        layouts = data.keyboards[PREVIEW_LABEL].layouts;
       } else {
-        if (resp.data && resp.data.keyboards) {
-          layouts = resp.data.keyboards[state.keyboard].layouts;
+        if (data && data.keyboards) {
+          layouts = data.keyboards[state.keyboard].layouts;
         }
       }
       if (size(layouts) === 0) {
@@ -195,11 +195,8 @@ const mutations = {
   toggleSnowflakes(state) {
     state.snowflakes = !state.snowflakes;
   },
-  setKeyboardMeta(state, value) {
-    if (value.status === 200) {
-      state.keyboardMeta =
-        value.data && value.data.keyboards ? value.data.keyboards : {};
-    }
+  setKeyboardMeta(state, data) {
+    state.keyboardMeta = data?.keyboards ? data.keyboards : {};
   }
 };
 

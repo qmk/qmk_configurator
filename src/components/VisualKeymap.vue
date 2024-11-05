@@ -9,13 +9,16 @@
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';
-import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
+import * as pinia from 'pinia';
 import BaseKeymap from '@/components/BaseKeymap.vue';
 import BaseKey from '@/components/BaseKey.vue';
 import AnyKey from '@/components/AnyKey.vue';
 import LayerKey from '@/components/LayerKey.vue';
 import ContainerKey from '@/components/ContainerKey.vue';
 import LayerContainerKey from '@/components/LayerContainerKey.vue';
+
+import { useStatusStore } from '@/store/status';
 
 export default {
   name: 'VisualKeymap',
@@ -109,8 +112,7 @@ export default {
       'resizeConfig',
       'setLoadingKeymapPromise'
     ]),
-    ...mapMutations('status', ['append']),
-    ...mapActions('status', ['scrollToEnd']),
+    ...pinia.mapActions(useStatusStore, ['append', 'scrollToEnd']),
     /**
      * Due to a quirk in how reactivity works we have to clear the layout
      * name to reset the UI to it's old value.

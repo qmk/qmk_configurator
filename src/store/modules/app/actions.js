@@ -1,4 +1,3 @@
-import axios from 'axios';
 import isUndefined from 'lodash/isUndefined';
 import { keypress } from 'keypress.js';
 import { generateKeypressCombos } from './keypress-utils.js';
@@ -16,15 +15,21 @@ const actions = {
    * fetchKeyboards - fetch keyboard list from API
    */
   async fetchKeyboards({ commit }) {
-    const r = await axios.get(backend_keyboard_list_url);
-    if (r.status === 200) {
-      const exclude = getExclusionList();
-      const results = r.data.keyboards.filter((keeb) => {
-        return isUndefined(exclude[keeb]);
-      });
-      commit('setKeyboards', results);
-      return results;
+    try {
+      const r = await fetch(backend_keyboard_list_url);
+      if (r.ok) {
+        const data = await r.json();
+        const exclude = getExclusionList();
+        const results = data.keyboards.filter((keeb) => {
+          return isUndefined(exclude[keeb]);
+        });
+        commit('setKeyboards', results);
+        return results;
+      }
+    } catch (error) {
+      console.error('Error fetching keyboards', error);
     }
+    // always return an empty array if we fail to fetch
     return [];
   },
   /**
@@ -33,11 +38,15 @@ const actions = {
   async loadDefaultKeymap({ state }) {
     const keyboardPath = state.keyboard.slice(0, 1).toLowerCase();
     const keyboardName = state.keyboard.replace(/\//g, '_');
-    const resp = await axios.get(
-      `keymaps/${keyboardPath}/${keyboardName}_default.json`
-    );
-    if (resp.status === 200) {
-      return resp.data;
+    try {
+      const resp = await fetch(
+        `keymaps/${keyboardPath}/${keyboardName}_default.json`
+      );
+      if (resp.ok) {
+        return await resp.json();
+      }
+    } catch (error) {
+      console.error('Error fetching default keymap', error);
     }
     return undefined;
   },
@@ -45,8 +54,8 @@ const actions = {
    * load keymap from the selected URL
    */
   async loadKeymapFromUrl(_, url) {
-    return axios.get(url).then((r) => {
-      return r.data;
+    return fetch(url).then(async (r) => {
+      return await r.json();
     });
   },
   /**
@@ -99,7 +108,7 @@ const actions = {
    *                 We use this instead of loading layout from API.
    * @return {object} promise that is fulfilled once action is complete
    */
-  loadLayouts({ commit, state }, preview) {
+  async loadLayouts({ commit, state }, preview) {
     if (!isUndefined(preview)) {
       preview.layouts['  '] = { layout: [] };
       let p = new Promise((resolve) => {
@@ -113,13 +122,15 @@ const actions = {
       });
       return p;
     }
-    return axios
-      .get(`${backend_keyboards_url}/${state.keyboard}/info.json`)
-      .then((resp) => {
-        commit('setKeyboardMeta', resp);
-        commit('processLayouts', resp);
-        return resp;
-      });
+    const resp = await fetch(
+      `${backend_keyboards_url}/${state.keyboard}/info.json`
+    );
+    if (resp.ok) {
+      const data = await resp.json();
+      commit('setKeyboardMeta', data);
+      commit('processLayouts', data);
+      return resp;
+    }
   },
   saveConfiguratorSettings({ state }) {
     localStorageSet(

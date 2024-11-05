@@ -1,4 +1,3 @@
-import axios from 'axios';
 import store from './store';
 import { useStatusStore } from './store/status';
 
@@ -13,30 +12,34 @@ function statusError(message) {
   statusStore.scrollToEnd();
 }
 
-function compileLayout(_keyboard, _keymapName, _layout) {
+function compileLayout(keyboard, keymap, layout) {
   disableCompileButton();
   let template = store.state.keymap.templates.keymap;
   const layers = store.getters['keymap/exportLayers']({ compiler: true });
-  let request = JSON.stringify(
-    Object.assign(template, {
-      keyboard: _keyboard,
-      keymap: _keymapName,
-      layout: _layout,
-      layers: layers
-    })
-  );
+  let request = JSON.stringify({
+    ...template,
+    keyboard,
+    keymap,
+    layout,
+    layers
+  });
   console.log(request);
   const statusStore = useStatusStore();
   if (statusStore.empty) {
     statusStore.append('\n');
   }
-  statusStore.append(`* Sending ${_keyboard}:${_keymapName} with ${_layout}`);
-  axios
-    .post(backend_compile_url, request)
-    .then((resp) => {
-      const { status, data } = resp;
-      if (status === 200) {
+  statusStore.append(`* Sending ${keyboard}:${keymap} with ${layout}`);
+  fetch(backend_compile_url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: request
+  })
+    .then(async (resp) => {
+      if (resp.ok) {
         store.commit('app/setShowSpinner', true);
+        const data = await resp.json();
         if (data.enqueued) {
           statusStore.append(`\n* Received job_id: ${data.job_id}`);
           statusStore.scrollToEnd();
@@ -81,13 +84,12 @@ function check_status() {
   const url = `${backend_compile_url}/${store.state.app.jobID}`;
   const start = performance.now();
   const statusStore = useStatusStore();
-  axios
-    .get(url)
-    .then((resp) => {
+  fetch(url)
+    .then(async (resp) => {
       console.log(`response in ${performance.now() - start}ms`, resp);
       let msg;
-      let { status, data } = resp;
-      if (status !== 200) {
+      const data = await resp.json();
+      if (!resp.ok) {
         console.log('Unexpected status', data.status);
         enableCompileButton();
       } else {
