@@ -55,7 +55,10 @@ const actions = {
    */
   async loadKeymapFromUrl(_, url) {
     return fetch(url).then(async (r) => {
-      return await r.json();
+      if (r.ok) {
+        return await r.json();
+      }
+      console.error('Error fetching keymap from URL', r.statusText);
     });
   },
   /**
