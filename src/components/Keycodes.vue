@@ -58,12 +58,15 @@
   </div>
 </template>
 <script>
-import { mapState, mapGetters, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
+import * as pinia from 'pinia';
 import isUndefined from 'lodash/isUndefined';
 import debounce from 'lodash/debounce';
 import Keycode from '@/components/Keycode.vue';
 import Space from '@/components/Space.vue';
 import store from '@/store';
+
+import { useKeycodesStore } from '../store/keycodes.js';
 
 export default {
   name: 'keycodes-component',
@@ -78,9 +81,13 @@ export default {
     this.debouncedSetSearchFilter = debounce(this.setSearchFilter, 500);
   },
   computed: {
-    ...mapGetters('keycodes', ['keycodes']),
+    ...pinia.mapState(useKeycodesStore, [
+      'keycodes',
+      'searchFilter',
+      'searchCounters',
+      'active'
+    ]),
     ...mapState('app', ['configuratorSettings']),
-    ...mapState('keycodes', ['searchFilter', 'searchCounters', 'active']),
     activeTab() {
       return this.keycodesByGroup[this.active];
     },
@@ -108,7 +115,7 @@ export default {
   },
   methods: {
     ...mapMutations('app', ['setMessage', 'stopListening', 'startListening']),
-    ...mapMutations('keycodes', ['setSearchFilter', 'changeActive']),
+    ...pinia.mapActions(useKeycodesStore, ['setSearchFilter', 'changeActive']),
     getComponent(code) {
       return isUndefined(code) ? Space : Keycode;
     },

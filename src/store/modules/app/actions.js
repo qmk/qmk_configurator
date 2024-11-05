@@ -7,8 +7,15 @@ import {
 } from '@/store/modules/constants';
 import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
+import { useKeycodesStore } from '../../keycodes.js';
 
-const steno_keyboards = ['gergo', 'georgi'];
+const steno_keyboards = new Set([
+  'gboards/gergo',
+  'gboards/georgi',
+  'stenokeyboards/the_uni/pro_micro',
+  'stenokeyboards/the_uni/rp_2040',
+  'stenokeyboards/the_uni/usb_c'
+]);
 
 const actions = {
   /**
@@ -89,13 +96,11 @@ const actions = {
     commit('setLayout', nextLayout);
 
     // enable and disable steno in keycode UI
-    const stenoCheck = steno_keyboards.reduce((_, keeb) => {
-      return { [keeb]: true };
-    }, {});
-    if (stenoCheck[keyboard]) {
-      this.commit('keycodes/enableSteno');
+    const keycodesStore = useKeycodesStore();
+    if (steno_keyboards.has(keyboard)) {
+      keycodesStore.enableSteno();
     } else {
-      this.commit('keycodes/disableSteno');
+      keycodesStore.disableSteno();
     }
 
     if (clearKeymap) {
@@ -150,11 +155,12 @@ const actions = {
   },
   async changeOSKeyboardLayout({ dispatch, state, commit }, osLayout) {
     commit('setOSKeyboardLayout', osLayout);
-    // Important to call keycodes/updateKeycodeNames *before* keymap/updateKeycodeNames.
-    this.commit('keycodes/updateKeycodeNames');
+    const keycodesStore = useKeycodesStore();
+
+    // Important to call keycodes/updatekeycodeNames *before* keymap/updateKeycodeNames.
+    keycodesStore.updateKeycodeNames();
     this.commit('keymap/updateKeycodeNames');
-    this.commit(
-      'keycodes/changeActive',
+    keycodesStore.changeActive(
       state.configuratorSettings.iso ? 'ISO/JIS' : 'ANSI'
     );
     this.commit(
@@ -233,10 +239,8 @@ const actions = {
   async initKeypressListener({ commit }) {
     const store = this;
     const keypressListener = new keypress.Listener();
-    const conf = generateKeypressCombos(
-      store,
-      store.getters['keycodes/keycodes']
-    );
+    const keycodesStore = useKeycodesStore();
+    const conf = generateKeypressCombos(store, keycodesStore.keycodes);
     keypressListener.register_many(conf);
     keypressListener.simple_combo('ctrl shift i', () => {
       if (!store.state.app.isPreview) {

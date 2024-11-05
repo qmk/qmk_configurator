@@ -160,8 +160,8 @@ const actions = {
       if (state.keymap[toLayer] === undefined) {
         commit('initLayer', { layer: toLayer });
       }
-      let store = this;
-      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
+      let keycodesStore = useKeycodesStore();
+      let { name, code } = keycodesStore.lookupKeycode('KC_TRNS');
       commit('assignKey', {
         _layer: toLayer,
         index,
@@ -241,18 +241,18 @@ const mutations = {
    * @param {} state
    */
   updateKeycodeNames(state) {
-    let store = this;
+    let keycodesStore = useKeycodesStore();
     // assumes the keycode store has changed due to layout update
     state.keymap = state.keymap.reduce((layers, layer) => {
       const transformedLayer = layer.map((meta) => {
         if (meta.contents) {
-          meta.contents.name = store.getters['keycodes/lookupKeycode'](
+          meta.contents.name = keycodesStore.lookupKeycode(
             meta.contents.code
           ).name;
         }
         return {
           ...meta,
-          name: store.getters['keycodes/lookupKeycode'](meta.code).name
+          name: keycodesStore.lookupKeycode(meta.code).name
         };
       });
       layers.push(transformedLayer);
@@ -263,8 +263,8 @@ const mutations = {
     if (isUndefined(state.selectedIndex)) {
       return;
     }
-    let store = this;
-    let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
+    const keycodesStore = useKeycodesStore();
+    let { name, code, type } = keycodesStore.lookupKeycode(_code);
 
     if (state.selectedContent) {
       // only set values on contents not container, does not support continuous input
@@ -395,7 +395,8 @@ const mutations = {
     );
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
-    const { name } = this.getters['keycodes/lookupKeycode'](code);
+    const keycodesStore = useKeycodesStore();
+    const { name } = keycodesStore.lookupKeycode(code);
     if (!layout) {
       return;
     }

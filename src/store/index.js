@@ -3,7 +3,6 @@ import Vuex from 'vuex';
 import { createPinia, PiniaVuePlugin } from 'pinia';
 import app from './modules/app';
 import keymap from './modules/keymap';
-import keycodes from './modules/keycodes';
 import tester from './modules/tester';
 
 Vue.use(Vuex);
@@ -15,7 +14,6 @@ export default new Vuex.Store({
   modules: {
     app,
     keymap,
-    keycodes,
     tester
   },
   state: {},

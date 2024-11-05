@@ -54,7 +54,7 @@ function toLocaleKeycode(keycodeLUT, keycodeObject) {
   }
 }
 
-function generateKeycodes(osKeyboardLayout, isSteno) {
+function generateKeycodes(osKeyboardLayout, isSteno = false) {
   store.commit('app/setIso', !isANSI());
   const keycodes = [
     ...(isANSI()
@@ -114,29 +114,29 @@ export const useKeycodesStore = defineStore('keycodes', {
         )
   },
   actions: {
-    changeActive(state, newActive) {
-      state.active = newActive;
+    changeActive(newActive) {
+      this.active = newActive;
     },
-    enableSteno(state) {
-      state.steno = true;
-      state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
+    enableSteno() {
+      this.steno = true;
+      this.keycodes = generateKeycodes(getOSKeyboardLayout(), this.steno);
     },
-    disableSteno(state) {
-      state.steno = false;
-      state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
+    disableSteno() {
+      this.steno = false;
+      this.keycodes = generateKeycodes(getOSKeyboardLayout(), this.steno);
     },
-    updateKeycodeNames(state) {
-      state.keycodes = generateKeycodes(getOSKeyboardLayout(), state.steno);
+    updateKeycodeNames() {
+      this.keycodes = generateKeycodes(getOSKeyboardLayout(), this.steno);
     },
-    setSearchFilter(state, newVal) {
-      state.searchFilter = newVal;
+    setSearchFilter(newVal) {
+      this.searchFilter = newVal;
       if (this.searchFilter !== '') {
-        state.searchCounters = {
-          ANSI: countMatches(state.searchFilter, ansi),
-          'ISO/JIS': countMatches(state.searchFilter, iso_jis),
-          Quantum: countMatches(state.searchFilter, quantum),
-          KeyboardSettings: countMatches(state.searchFilter, settings),
-          AppMediaMouse: countMatches(state.searchFilter, media)
+        this.searchCounters = {
+          ANSI: countMatches(this.searchFilter, ansi),
+          'ISO/JIS': countMatches(this.searchFilter, iso_jis),
+          Quantum: countMatches(this.searchFilter, quantum),
+          KeyboardSettings: countMatches(this.searchFilter, settings),
+          AppMediaMouse: countMatches(this.searchFilter, media)
         };
       }
     }
