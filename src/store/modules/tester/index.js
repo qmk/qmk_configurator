@@ -67,9 +67,9 @@ const getters = {
 
 function mapKeymap(store, arr) {
   // Create look up table for QMK Code to Layout position
-  const keycodeStore = useKeycodesStore();
+  const keycodesStore = useKeycodesStore();
   return arr.map((code) => {
-    const meta = keycodeStore.lookupKeycode(code);
+    const meta = keycodesStore.lookupKeycode(code);
     return {
       ...meta
     };

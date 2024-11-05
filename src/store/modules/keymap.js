@@ -4,6 +4,7 @@ import colorways from '@/components/colorways';
 import defaults from './config';
 import { backend_skeletons_url } from './constants';
 import { parseKeycode } from './parse.js';
+import { useKeycodesStore } from '../keycodes';
 
 function random(max) {
   return Math.floor(Math.random() * max);
@@ -189,7 +190,7 @@ const actions = {
   },
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   load_converted_keymap({ commit }, converted_keymap) {
-    const store = this;
+    const keycodesStore = useKeycodesStore();
     //Loop over each layer from the keymap
     console.log('converted_keymap', converted_keymap);
     const acc = converted_keymap.reduce(
@@ -199,7 +200,7 @@ const actions = {
         //Loop over each keycode in the layer
         acc.layers.push(
           layerData.map((keycode) => {
-            return parseKeycode(store, keycode, acc.stats);
+            return parseKeycode(keycodesStore, keycode, acc.stats);
           })
         );
         acc.stats.layers += 1;
