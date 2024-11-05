@@ -1,4 +1,5 @@
 import isUndefined from 'lodash/isUndefined';
+import { useKeycodesStore } from '../../keycodes';
 
 const keyLUT = {
   ContextMenu: 'KC_APP'
@@ -52,6 +53,7 @@ export function generateKeypressCombos(store, _keycodes) {
 // Use currying to bind the meta parameter at runtime.
 export function keydownHandler(store, meta, ev) {
   let _meta = meta;
+  const keycodeStore = useKeycodesStore();
 
   // detect numpad
   switch (meta.code) {
@@ -72,7 +74,7 @@ export function keydownHandler(store, meta, ev) {
     case 'KC_DOT':
     case 'KC_EQL':
       if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
-        _meta = store.getters['keycodes/lookupKeycode'](numPadLUT[meta.code]);
+        _meta = keycodeStore.lookupKeycode(numPadLUT[meta.code]);
       }
       break;
   }
@@ -93,13 +95,14 @@ export function modHandler(store, meta, ev) {
   }
 
   // handle special cases eg. ContextMenu
+  const keycodeStore = useKeycodesStore();
   const special = keyLUT[ev.key];
   if (!isUndefined(special)) {
-    _meta = store.getters['keycodes/lookupKeycode'](special);
+    _meta = keycodeStore.lookupKeycode(special);
   } else {
     // detect left and right mods
     if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-      _meta = store.getters['keycodes/lookupKeycode'](modsLUT[meta.code]);
+      _meta = keycodeStore.lookupKeycode(modsLUT[meta.code]);
     }
   }
   store.commit('keymap/setKeycode', { _code: _meta.code });
@@ -107,7 +110,8 @@ export function modHandler(store, meta, ev) {
 
 // generate a keypress combo handler per keycode
 export function generateKeypressHandler(store, keycode) {
-  const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
+  const keycodeStore = useKeycodesStore();
+  const meta = keycodeStore.lookupKeycode(keycode.code);
   switch (meta.code) {
     case 'KC_LGUI':
     case 'KC_LALT':
