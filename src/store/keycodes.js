@@ -18,10 +18,7 @@ const keycodePickerTabLayout = {
 
 function getOSKeyboardLayout() {
   let osKeyboardLayout = store.getters['app/osKeyboardLayout'];
-  if (
-    isUndefined(osKeyboardLayout) ||
-    !keymapExtras[osKeyboardLayout]
-  ) {
+  if (isUndefined(osKeyboardLayout) || !keymapExtras[osKeyboardLayout]) {
     const fallbackOSKeyboardLayout = 'keymap_us';
     console.log(
       `The stored OS keyboard layout value (${osKeyboardLayout}) is not a valid value! Falling back to '${fallbackOSKeyboardLayout}'.`
@@ -38,10 +35,7 @@ function isANSI() {
 
 function toLocaleKeycode(keycodeLUT, keycodeObject) {
   console.assert(!isUndefined(keycodeLUT));
-  if (
-    !keycodeObject.name ||
-    !keycodeObject.code
-  ) {
+  if (!keycodeObject.name || !keycodeObject.code) {
     // Not an object describing a keyboard key; return as is
     return keycodeObject;
   }
@@ -75,8 +69,8 @@ function countMatches(filter, collection) {
     if (!isUndefined(code)) {
       if (
         code.includes(filter) ||
-        (name && name.toUpperCase().includes(filter)) ||
-        (title && title.toUpperCase().includes(filter))
+        name?.toUpperCase().includes(filter) ||
+        title?.toUpperCase().includes(filter)
       ) {
         matchCount += 1;
       }
