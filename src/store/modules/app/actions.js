@@ -8,7 +8,7 @@ import {
 import { getPreferredLayout, getExclusionList } from '@/util';
 import { localStorageSet, CONSTS } from '@/store/localStorage';
 
-const steno_keyboards = ['gergo', 'georgi'];
+const steno_keyboards = ['gergo', 'georgi', 'splitography'];
 
 const actions = {
   /**
