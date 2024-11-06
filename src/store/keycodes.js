@@ -20,7 +20,7 @@ function getOSKeyboardLayout() {
   let osKeyboardLayout = store.getters['app/osKeyboardLayout'];
   if (
     isUndefined(osKeyboardLayout) ||
-    !Object.keys(keymapExtras).includes(osKeyboardLayout)
+    !keymapExtras[osKeyboardLayout]
   ) {
     const fallbackOSKeyboardLayout = 'keymap_us';
     console.log(
@@ -39,8 +39,8 @@ function isANSI() {
 function toLocaleKeycode(keycodeLUT, keycodeObject) {
   console.assert(!isUndefined(keycodeLUT));
   if (
-    !Object.keys(keycodeObject).includes('name') ||
-    !Object.keys(keycodeObject).includes('code')
+    !keycodeObject.name ||
+    !keycodeObject.code
   ) {
     // Not an object describing a keyboard key; return as is
     return keycodeObject;
