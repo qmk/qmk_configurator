@@ -30,14 +30,14 @@ export default {
         return this.formatName(this.breakLines(this.meta.text));
       }
       if (this.meta.type === 'layer-container') {
-        return `${this.meta.name.toUpperCase()},\n${this.formatName(
-          this.meta.contents.code
+        return `${this.meta.name.toUpperCase()}\n${this.formatName(
+          this.meta.contents.name
         )}`;
       }
       if (this.meta.type === 'container') {
-        return `${this.meta.name.toUpperCase()}\n(${this.formatName(
-          this.meta.contents.code
-        )})`;
+        return `${this.meta.name.toUpperCase()}\n${this.formatName(
+          this.meta.contents.name
+        )}`;
       }
       return this.formatName(this.breakLines(this.meta.name));
     }
