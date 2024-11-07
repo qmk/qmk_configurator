@@ -1,12 +1,14 @@
 import Vue from 'vue';
-import random from 'lodash/random';
-import size from 'lodash/size';
-import reduce from 'lodash/reduce';
 import isUndefined from 'lodash/isUndefined';
 import colorways from '@/components/colorways';
 import defaults from './config';
 import { backend_skeletons_url } from './constants';
 import { parseKeycode } from './parse.js';
+import { useKeycodesStore } from '../keycodes';
+
+function random(max) {
+  return Math.floor(Math.random() * max);
+}
 
 const state = {
   keymap: [[]], // array of arrays
@@ -22,7 +24,7 @@ const state = {
   // otherwise they race against each other and the visual keymap erases the keymap data
   loadingKeymapPromise: undefined,
   colorways: colorways.list,
-  colorwayIndex: random(0, colorways.list.length - 1),
+  colorwayIndex: random(colorways.list.length - 1),
   continuousInput: false,
   ignoreMod: false,
   templates: {
@@ -52,7 +54,7 @@ const getters = {
   size:
     (state) =>
     (_layer = 0) => {
-      return size(state.keymap[_layer]);
+      return state.keymap[_layer].length;
     },
   isDirty: (state) => state.dirty,
   /**
@@ -69,71 +71,63 @@ const getters = {
         return acc;
       }, 0);
 
-      return reduce(
-        state.keymap,
-        function convertALayer(exportedLayers, _layer, currentLayerIdx) {
-          // Ignore Empty layers if there are no layers above this layer
-          if (currentLayerIdx > highestActiveLayer) {
-            return exportedLayers;
-          }
-
-          exportedLayers[currentLayerIdx] = [];
-          // Work around backend not handling sparse keymaps
-          // insert an dummy layer filled with KC_TRNS
-          if (
-            compiler &&
-            currentLayerIdx < highestActiveLayer &&
-            (isUndefined(_layer) || _layer.length === 0)
-          ) {
-            _layer = state.keymap[0].map(() => {
-              return {
-                name: '',
-                code: 'KC_TRNS',
-                type: undefined
-              };
-            });
-          }
-
-          // Convert internal representation to QMK keycodes
-          // lodash/reduce handles null/undefined safely and returns empty array
-          var aLayer = reduce(
-            _layer,
-            function exportQMKKeycode(newLayer, key, i) {
-              var keycode = key.code;
-              if (keycode) {
-                if (keycode.endsWith('(kc)') || keycode.endsWith(',kc)')) {
-                  if (key.contents) {
-                    keycode = keycode.replace('kc', key.contents.code);
-                  } else {
-                    keycode = keycode.replace('kc', 'KC_NO');
-                  }
-                }
-                if (keycode.endsWith('(layer)')) {
-                  keycode = keycode.replace('layer', key.layer);
-                }
-                if (keycode === 'text') {
-                  // add a special ANY marker to keycodes that were defined using ANY
-                  // This will be stripped back off on import.
-                  keycode = compiler ? key.text : `ANY(${key.text})`;
-                }
-              } else {
-                console.error(
-                  `ERROR: unexpected keycode ${key}`,
-                  key,
-                  i,
-                  _layer
-                );
-              }
-              newLayer.push(keycode);
-              return newLayer;
-            },
-            []
-          );
-          exportedLayers[currentLayerIdx] = aLayer;
+      return state.keymap.reduce(function convertALayer(
+        exportedLayers,
+        _layer,
+        currentLayerIdx
+      ) {
+        // Ignore Empty layers if there are no layers above this layer
+        if (currentLayerIdx > highestActiveLayer) {
           return exportedLayers;
-        },
-        []
-      );
+        }
+
+        exportedLayers[currentLayerIdx] = [];
+        // Work around backend not handling sparse keymaps
+        // insert an dummy layer filled with KC_TRNS
+        if (
+          compiler &&
+          currentLayerIdx < highestActiveLayer &&
+          (isUndefined(_layer) || _layer.length === 0)
+        ) {
+          _layer = state.keymap[0].map(() => {
+            return {
+              name: '',
+              code: 'KC_TRNS',
+              type: undefined
+            };
+          });
+        }
+
+        // Convert internal representation to QMK keycodes
+        // lodash/reduce handles null/undefined safely and returns empty array
+        var aLayer = _layer.reduce(function exportQMKKeycode(newLayer, key, i) {
+          var keycode = key.code;
+          if (keycode) {
+            if (keycode.endsWith('(kc)') || keycode.endsWith(',kc)')) {
+              if (key.contents) {
+                keycode = keycode.replace('kc', key.contents.code);
+              } else {
+                keycode = keycode.replace('kc', 'KC_NO');
+              }
+            }
+            if (keycode.endsWith('(layer)')) {
+              keycode = keycode.replace('layer', key.layer);
+            }
+            if (keycode === 'text') {
+              // add a special ANY marker to keycodes that were defined using ANY
+              // This will be stripped back off on import.
+              keycode = compiler ? key.text : `ANY(${key.text})`;
+            }
+          } else {
+            console.error(`ERROR: unexpected keycode ${key}`, key, i, _layer);
+          }
+          newLayer.push(keycode);
+          return newLayer;
+        }, []);
+        exportedLayers[currentLayerIdx] = aLayer;
+        return exportedLayers;
+      },
+      []);
     },
   activeLayers(state) {
     const active = state.keymap.reduce(
@@ -166,8 +160,8 @@ const actions = {
       if (state.keymap[toLayer] === undefined) {
         commit('initLayer', { layer: toLayer });
       }
-      let store = this;
-      let { name, code } = store.getters['keycodes/lookupKeycode']('KC_TRNS');
+      let keycodesStore = useKeycodesStore();
+      let { name, code } = keycodesStore.lookupKeycode('KC_TRNS');
       commit('assignKey', {
         _layer: toLayer,
         index,
@@ -196,7 +190,7 @@ const actions = {
   },
   //Function that takes in a keymap loops over it and fills populates the keymap variable
   load_converted_keymap({ commit }, converted_keymap) {
-    const store = this;
+    const keycodesStore = useKeycodesStore();
     //Loop over each layer from the keymap
     console.log('converted_keymap', converted_keymap);
     const acc = converted_keymap.reduce(
@@ -206,7 +200,7 @@ const actions = {
         //Loop over each keycode in the layer
         acc.layers.push(
           layerData.map((keycode) => {
-            return parseKeycode(store, keycode, acc.stats);
+            return parseKeycode(keycodesStore, keycode, acc.stats);
           })
         );
         acc.stats.layers += 1;
@@ -247,18 +241,18 @@ const mutations = {
    * @param {} state
    */
   updateKeycodeNames(state) {
-    let store = this;
+    let keycodesStore = useKeycodesStore();
     // assumes the keycode store has changed due to layout update
     state.keymap = state.keymap.reduce((layers, layer) => {
       const transformedLayer = layer.map((meta) => {
         if (meta.contents) {
-          meta.contents.name = store.getters['keycodes/lookupKeycode'](
+          meta.contents.name = keycodesStore.lookupKeycode(
             meta.contents.code
           ).name;
         }
         return {
           ...meta,
-          name: store.getters['keycodes/lookupKeycode'](meta.code).name
+          name: keycodesStore.lookupKeycode(meta.code).name
         };
       });
       layers.push(transformedLayer);
@@ -269,8 +263,8 @@ const mutations = {
     if (isUndefined(state.selectedIndex)) {
       return;
     }
-    let store = this;
-    let { name, code, type } = store.getters['keycodes/lookupKeycode'](_code);
+    const keycodesStore = useKeycodesStore();
+    let { name, code, type } = keycodesStore.lookupKeycode(_code);
 
     if (state.selectedContent) {
       // only set values on contents not container, does not support continuous input
@@ -401,7 +395,8 @@ const mutations = {
     );
   },
   initKeymap(state, { layout, layer, code = 'KC_NO' }) {
-    const { name } = this.getters['keycodes/lookupKeycode'](code);
+    const keycodesStore = useKeycodesStore();
+    const { name } = keycodesStore.lookupKeycode(code);
     if (!layout) {
       return;
     }

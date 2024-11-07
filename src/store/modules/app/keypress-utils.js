@@ -1,6 +1,5 @@
-import values from 'lodash/values';
-import partial from 'lodash/partial';
 import isUndefined from 'lodash/isUndefined';
+import { useKeycodesStore } from '../../keycodes';
 
 const keyLUT = {
   ContextMenu: 'KC_APP'
@@ -47,13 +46,14 @@ export function generateKeypressCombos(store, _keycodes) {
       return acc;
     }, {});
 
-  return values(combos).map(generateKeypressHandler.bind(null, store));
+  return Object.values(combos).map(generateKeypressHandler.bind(null, store));
 }
 
 // Share the code between keydown handlers
 // Use currying to bind the meta parameter at runtime.
 export function keydownHandler(store, meta, ev) {
   let _meta = meta;
+  const keycodesStore = useKeycodesStore();
 
   // detect numpad
   switch (meta.code) {
@@ -74,7 +74,7 @@ export function keydownHandler(store, meta, ev) {
     case 'KC_DOT':
     case 'KC_EQL':
       if (ev.location === ev.DOM_KEY_LOCATION_NUMPAD) {
-        _meta = store.getters['keycodes/lookupKeycode'](numPadLUT[meta.code]);
+        _meta = keycodesStore.lookupKeycode(numPadLUT[meta.code]);
       }
       break;
   }
@@ -95,13 +95,14 @@ export function modHandler(store, meta, ev) {
   }
 
   // handle special cases eg. ContextMenu
+  const keycodesStore = useKeycodesStore();
   const special = keyLUT[ev.key];
   if (!isUndefined(special)) {
-    _meta = store.getters['keycodes/lookupKeycode'](special);
+    _meta = keycodesStore.lookupKeycode(special);
   } else {
     // detect left and right mods
     if (ev.location === ev.DOM_KEY_LOCATION_RIGHT) {
-      _meta = store.getters['keycodes/lookupKeycode'](modsLUT[meta.code]);
+      _meta = keycodesStore.lookupKeycode(modsLUT[meta.code]);
     }
   }
   store.commit('keymap/setKeycode', { _code: _meta.code });
@@ -109,26 +110,27 @@ export function modHandler(store, meta, ev) {
 
 // generate a keypress combo handler per keycode
 export function generateKeypressHandler(store, keycode) {
-  const meta = store.getters['keycodes/lookupKeycode'](keycode.code);
+  const keycodesStore = useKeycodesStore();
+  const meta = keycodesStore.lookupKeycode(keycode.code);
   switch (meta.code) {
     case 'KC_LGUI':
     case 'KC_LALT':
     case 'KC_LCTL':
       return {
         keys: keycode.keys,
-        on_keydown: partial(modHandler, store, meta),
+        on_keydown: modHandler.bind(null, store, meta),
         prevent_default: true
       };
     case 'KC_LSFT':
       return {
         keys: keycode.keys,
-        on_keyup: partial(modHandler, store, meta),
+        on_keyup: modHandler.bind(null, store, meta),
         prevent_default: true
       };
     default:
       return {
         keys: keycode.keys,
-        on_keydown: partial(keydownHandler, store, meta),
+        on_keydown: keydownHandler.bind(null, store, meta),
         prevent_default: true
       };
   }

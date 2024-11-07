@@ -93,6 +93,7 @@ import { mapState, mapGetters, mapMutations, mapActions } from 'vuex';
 import BaseKeymap from '@/components/BaseKeymap.vue';
 import TesterKey from '@/components/TesterKey.vue';
 import { Howl } from 'howler';
+import { useKeycodesStore } from '../store/keycodes';
 
 export default {
   name: 'VisualTesterKeymap',
@@ -185,7 +186,8 @@ export default {
   },
   async mounted() {
     this.createKeyListeners();
-    this.$store.commit('keycodes/updateKeycodeNames');
+    const keycodesStore = useKeycodesStore();
+    keycodesStore.updateKeycodeNames();
     await this.init();
     this.setSize(this.calculateMax(this.layout));
   },

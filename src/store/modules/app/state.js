@@ -37,9 +37,9 @@ const state = {
   keyboard: '',
   keyboardMeta: {},
   configuratorSettings: loadSettings(),
-  keyboards: [],
+  keyboards: [], // current filtered view keyboards
   appInitialized: false,
-  _keyboards: [],
+  _keyboards: [], // upstream source list of keyboards
   layout: '',
   layouts: {},
   keymapName: '',
@@ -83,6 +83,4 @@ const state = {
   snowflakes: false
 };
 
-export default {
-  ...state
-};
+export default state;
