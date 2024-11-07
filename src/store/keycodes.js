@@ -176,9 +176,9 @@ export const useKeycodesStore = defineStore('keycodes', {
  * @typedef {Object} KeycodeLabel - used to label groups of keycodes
  * @property {string} label - Label name
  * @property {'label'} width - always the special indicator 'label'
- * @property {boolean} group - group following keycodes under this
- * @property {string} icon - font-awesome icon to display
- * @property {string} iconClass - css class to apply
+ * @property {boolean} [group] - group following keycodes under this
+ * @property {string} [icon] - font-awesome icon to display
+ * @property {string} [iconClass] - css class to apply
  */
 
 /**
@@ -190,11 +190,11 @@ export const useKeycodesStore = defineStore('keycodes', {
  * @typedef {Object} KeycodeDefinition - metadata about a keycode
  * @property {string} name - UI display label for the keycode
  * @property {string} code - QMK keycode defintion
- * @property {boolean} keys - javascript keypress id. Used by keyboard handler
- * @property {number} width - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000.
- * @property {'text'|'layer'|'container'|'layer-container'} type
- * @property {number} layer
- * @property {string} title - help text for hover
+ * @property {string} [keys] - javascript keypress id. Used by keyboard handler
+ * @property {number} [width] - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000.
+ * @property {'text'|'layer'|'container'|'layer-container'} [type]
+ * @property {number} [layer]
+ * @property {string} [title] - help text for hover
  */
 
 /**
