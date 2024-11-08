@@ -59,13 +59,13 @@ function toLocaleKeycode(keycodeLUT, keycodeObject) {
 }
 
 /**
- * Used to dynamically generate the tab data for they keycode
+ * Used to dynamically generate the tab data for the keycode
  * display. This UI is customized based on the OS keyboard layout
  * selected.
  *
  * @param {string} osKeyboardLayout
  * @param {boolean} isSteno
- * @returns {Array.<KeycodeDefinition|KeycodeLabel|WidthPlaceholder}
+ * @returns {Array.<KeycodeDefinition|KeycodeLabel|WidthPlaceholder>}
  */
 function generateKeycodes(osKeyboardLayout, isSteno = false) {
   store.commit('app/setIso', !isANSI());
@@ -189,9 +189,9 @@ export const useKeycodesStore = defineStore('keycodes', {
 /**
  * @typedef {Object} KeycodeDefinition - metadata about a keycode
  * @property {string} name - UI display label for the keycode
- * @property {string} code - QMK keycode defintion
+ * @property {string} code - QMK keycode definition
  * @property {string} [keys] - javascript keypress id. Used by keyboard handler
- * @property {number} [width] - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000.
+ * @property {number} [width] - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000
  * @property {'text'|'layer'|'container'|'layer-container'} [type]
  * @property {number} [layer]
  * @property {string} [title] - help text for hover
@@ -211,7 +211,7 @@ export const useKeycodesStore = defineStore('keycodes', {
 /**
  * @typedef {Object} KeycodeStoreState
  * @property {Array.<KeycodeDefinition|KeycodeLabel|WidthPlaceholder>} keycodes - active keycodes
- * @property {string} searchFilter - currently search filter
+ * @property {string} searchFilter - current query in keycode picker search filter
  * @property {SearchCounters} searchCounters - count of matching keycodes per tab
  * @property {boolean} steno - is steno tab active
  * @property {'ANSI'|'ISO/JIS'|'AppMediaMouse'|'Quantum'|'Steno'|'KeyboardSettings'} active - active tab

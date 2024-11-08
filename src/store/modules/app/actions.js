@@ -157,7 +157,7 @@ const actions = {
     commit('setOSKeyboardLayout', osLayout);
     const keycodesStore = useKeycodesStore();
 
-    // Important to call keycodes/updatekeycodeNames *before* keymap/updateKeycodeNames.
+    // Important to call keycodesStore.updatekeycodeNames *before* keymap/updateKeycodeNames.
     keycodesStore.updateKeycodeNames();
     this.commit('keymap/updateKeycodeNames');
     keycodesStore.changeActive(
