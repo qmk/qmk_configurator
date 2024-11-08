@@ -183,7 +183,7 @@ export const useKeycodesStore = defineStore('keycodes', {
 
 /**
  * @typedef {Object} WidthPlaceholder - used for spacing
- * @property {number} width - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000.
+ * @property {number} width - width in Key Units * 1000. e.g. 1U = 1000, 2U = 2000
  */
 
 /**
