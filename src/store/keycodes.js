@@ -77,9 +77,16 @@ function generateKeycodes(osKeyboardLayout, isSteno = false) {
     ...(isSteno ? steno : [])
   ];
   const { keycodeLUT } = keymapExtras[getOSKeyboardLayout()];
-  return keycodes.map((keycodeObject) =>
-    toLocaleKeycode(keycodeLUT, keycodeObject)
-  );
+  return [
+    ...keycodes.map((keycodeObject) =>
+      toLocaleKeycode(keycodeLUT, keycodeObject)
+    ),
+    ...Object.entries(keycodeLUT).map(([code, { name, title }]) => ({
+      code: title?.split(' ')[0],
+      name,
+      title: code
+    }))
+  ];
 }
 
 /**
@@ -138,10 +145,8 @@ export const useKeycodesStore = defineStore('keycodes', {
       (state) =>
       (searchTerm, isKeys = false) =>
         state.keycodes.find(
-          ({ code, keys, title }) =>
-            code === searchTerm ||
-            (isKeys && keys && keys === searchTerm) ||
-            title?.split(' ')?.[0] === searchTerm
+          ({ code, keys }) =>
+            code === searchTerm || (isKeys && keys && keys === searchTerm)
         )
   },
   actions: {

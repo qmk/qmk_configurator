@@ -190,7 +190,7 @@ function parseKeycode(keycodesStore, keycode, stats) {
     }
 
     //Check whether it is a layer switching code, mod-tap, or combo keycode
-    if (internal.includes('KC') || metadata?.code?.includes('KC')) {
+    if (internal.includes('KC') || metadata?.title?.includes('KC')) {
       // Layer Tap keycode
       if (maincode === 'LT') {
         return newLayerContainerKey(keycodesStore, maincode, internal);
