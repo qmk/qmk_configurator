@@ -181,6 +181,7 @@ function parseKeycode(keycodesStore, keycode, stats) {
     }
     let internal = splitcode[1];
     internal = internal.split(')')[0];
+    metadata = keycodesStore.lookupKeycode(internal);
 
     // check for an OSM keycode
     if (maincode === 'OSM') {
@@ -189,13 +190,12 @@ function parseKeycode(keycodesStore, keycode, stats) {
     }
 
     //Check whether it is a layer switching code, mod-tap, or combo keycode
-    if (internal.includes('KC')) {
+    if (internal.includes('KC') || metadata?.code?.includes('KC')) {
       // Layer Tap keycode
       if (maincode === 'LT') {
         return newLayerContainerKey(keycodesStore, maincode, internal);
       }
       internal = longFormKeycodes[internal] || internal;
-      metadata = keycodesStore.lookupKeycode(internal);
       if (metadata === undefined) {
         stats.any += 1;
         return newAnyKey(keycodesStore, keycode);

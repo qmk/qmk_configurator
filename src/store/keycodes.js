@@ -138,8 +138,10 @@ export const useKeycodesStore = defineStore('keycodes', {
       (state) =>
       (searchTerm, isKeys = false) =>
         state.keycodes.find(
-          ({ code, keys }) =>
-            code === searchTerm || (isKeys && keys && keys === searchTerm)
+          ({ code, keys, title }) =>
+            code === searchTerm ||
+            (isKeys && keys && keys === searchTerm) ||
+            title === searchTerm
         )
   },
   actions: {
