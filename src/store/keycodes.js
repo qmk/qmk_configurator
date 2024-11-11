@@ -141,7 +141,7 @@ export const useKeycodesStore = defineStore('keycodes', {
           ({ code, keys, title }) =>
             code === searchTerm ||
             (isKeys && keys && keys === searchTerm) ||
-            title === searchTerm
+            title?.split(' ')?.[0] === searchTerm
         )
   },
   actions: {
