@@ -13,7 +13,16 @@ import steno from './modules/keycodes/steno';
 const keycodePickerTabLayout = {
   ANSI_ISO: [...ansi, ...iso_jis],
   ISO_ANSI: [...iso_jis, ...ansi],
-  special: [...quantum, ...settings, ...media]
+  special: [...quantum, ...settings, ...media],
+  extra: Object.values(keymapExtras)
+    .map(({ keycodeLUT }) =>
+      Object.entries(keycodeLUT).map(([code, { name, title }]) => ({
+        code: title?.split(' ')[0], // split removes ' (dead)'
+        name,
+        title: code
+      }))
+    )
+    .flat()
 };
 
 /**
@@ -81,11 +90,7 @@ function generateKeycodes(osKeyboardLayout, isSteno = false) {
     ...keycodes.map((keycodeObject) =>
       toLocaleKeycode(keycodeLUT, keycodeObject)
     ),
-    ...Object.entries(keycodeLUT).map(([code, { name, title }]) => ({
-      code: title?.split(' ')[0],
-      name,
-      title: code
-    }))
+    ...keycodePickerTabLayout.extra
   ];
 }
 
@@ -125,7 +130,8 @@ export const useKeycodesStore = defineStore('keycodes', {
   state: () => ({
     keycodes: [
       ...keycodePickerTabLayout.ANSI_ISO,
-      ...keycodePickerTabLayout.special
+      ...keycodePickerTabLayout.special,
+      ...keycodePickerTabLayout.extra
     ],
     searchFilter: '',
     searchCounters: {
