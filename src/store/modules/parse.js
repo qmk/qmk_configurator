@@ -133,7 +133,8 @@ function newKey(metadata, keycode, obj) {
   var key = {
     name: metadata.name,
     code: keycode,
-    type: metadata.type
+    type: metadata.type,
+    language_prefix: metadata.language_prefix
   };
 
   if (obj !== undefined) {
@@ -190,7 +191,7 @@ function parseKeycode(keycodesStore, keycode, stats) {
     }
 
     //Check whether it is a layer switching code, mod-tap, or combo keycode
-    if (internal.includes('KC') || metadata?.title?.includes('KC')) {
+    if (internal.includes('KC') || metadata?.language_prefix !== undefined) {
       // Layer Tap keycode
       if (maincode === 'LT') {
         return newLayerContainerKey(keycodesStore, maincode, internal);

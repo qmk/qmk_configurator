@@ -5,6 +5,7 @@
     @dragover.prevent="dragover" @dragenter.prevent="dragenter">{{ displayName }}<font-awesome-icon v-if="icon"
       size="2x" :icon="icon" /><template v-if="visible">
       <div v-if="visible" class="remove" @click.stop="remove">x</div>
+      <span v-if="visible" class="language">{{ displayLanguage }}</span>
     </template></div>
 </template>
 <script>
@@ -117,6 +118,9 @@ export default {
     },
     visible() {
       return this.meta ? this.meta.code !== 'KC_NO' : false;
+    },
+    displayLanguage() {
+      return this.meta.language_prefix
     },
     displayName() {
       switch (this.legends) {

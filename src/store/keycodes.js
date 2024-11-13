@@ -15,10 +15,11 @@ const keycodePickerTabLayout = {
   ISO_ANSI: [...iso_jis, ...ansi],
   special: [...quantum, ...settings, ...media],
   extra: Object.values(keymapExtras)
-    .map(({ keycodeLUT }) =>
+    .map(({ keycodeLUT, prefix }) =>
       Object.entries(keycodeLUT).map(([code, { name, title }]) => ({
         code: title?.split(' ')[0], // split removes ' (dead)'
         name,
+        language_prefix: prefix,
         title: code
       }))
     )
