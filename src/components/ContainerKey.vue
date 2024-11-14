@@ -20,7 +20,12 @@
     @dragenter.prevent="dragenterContents"
     @dragleave.prevent="dragleaveContents"
     @click.prevent.stop="clickContents"
-    >{{ contents }}</div></div><div
+    >{{ contents }}</div>
+    <span
+        v-if="visible"
+        class="language"
+      >{{ displayLanguage }}</span>
+    </div><div
         v-if="visible"
         class="remove"
         @click.stop="remove"
@@ -45,6 +50,11 @@ export default {
         return this.formatName(this.meta.contents.name);
       }
       return '';
+    },
+    displayLanguage() {
+      // The language label is only relevant for keymap legends
+      if (this.legends !== 'keymap') return;
+      return this.meta.contents.language_prefix;
     },
     contentClasses() {
       let classes = [];
