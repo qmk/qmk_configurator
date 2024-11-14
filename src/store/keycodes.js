@@ -15,14 +15,36 @@ const keycodePickerTabLayout = {
   ISO_ANSI: [...iso_jis, ...ansi],
   special: [...quantum, ...settings, ...media],
   extra: Object.values(keymapExtras)
-    .map(({ keycodeLUT, prefix }) =>
-      Object.entries(keycodeLUT).map(([code, { name, title }]) => ({
-        code: title?.split(' ')[0], // split removes ' (dead)'
-        name,
-        language_prefix: prefix,
-        title: code
-      }))
-    )
+    .map(({ keycodeLUT, prefix }) => {
+      const keycodes = [];
+      Object.entries(keycodeLUT).forEach(([code, { name, title }]) => {
+        if (title === undefined) {
+          return;
+        }
+
+        let start = title.search(prefix + '_');
+        if (start < 0) {
+          return;
+        }
+
+        let end = start + prefix.length + 1;
+        while (
+          end < title.length &&
+          ((title.charCodeAt(end) >= 65 && title.charCodeAt(end) <= 90) ||
+            (title.charCodeAt(end) >= 48 && title.charCodeAt(end) <= 57))
+        ) {
+          end++;
+        }
+
+        keycodes.push({
+          code: title.substring(start, end),
+          name,
+          language_prefix: prefix,
+          title: code
+        });
+      });
+      return keycodes;
+    })
     .flat()
 };
 
