@@ -52,6 +52,8 @@ export default {
       return '';
     },
     displayLanguage() {
+      // The language label is only relevant for keymap legends
+      if (this.legends !== 'keymap') return;
       return this.meta.contents.language_prefix;
     },
     contentClasses() {
