@@ -120,7 +120,9 @@ export default {
       return this.meta ? this.meta.code !== 'KC_NO' : false;
     },
     displayLanguage() {
-      return this.meta.language_prefix
+      // The language label is only relevant for keymap legends
+      if (this.legends !== 'keymap') return;
+      return this.meta.language_prefix;
     },
     displayName() {
       switch (this.legends) {
