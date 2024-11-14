@@ -14,9 +14,10 @@ const keycodePickerTabLayout = {
   ANSI_ISO: [...ansi, ...iso_jis],
   ISO_ANSI: [...iso_jis, ...ansi],
   special: [...quantum, ...settings, ...media],
-  extra: Object.values(keymapExtras)
-    .map(({ keycodeLUT, prefix }) => {
+  extra: Object.fromEntries(
+    Object.entries(keymapExtras).map(([keymap, { keycodeLUT, prefix }]) => {
       const keycodes = [];
+
       Object.entries(keycodeLUT).forEach(([code, { name, title }]) => {
         if (title === undefined) {
           return;
@@ -43,9 +44,10 @@ const keycodePickerTabLayout = {
           title: code
         });
       });
-      return keycodes;
+
+      return [keymap, keycodes];
     })
-    .flat()
+  )
 };
 
 /**
@@ -113,7 +115,7 @@ function generateKeycodes(osKeyboardLayout, isSteno = false) {
     ...keycodes.map((keycodeObject) =>
       toLocaleKeycode(keycodeLUT, keycodeObject)
     ),
-    ...keycodePickerTabLayout.extra
+    ...keycodePickerTabLayout.extra[getOSKeyboardLayout()]
   ];
 }
 
@@ -153,8 +155,7 @@ export const useKeycodesStore = defineStore('keycodes', {
   state: () => ({
     keycodes: [
       ...keycodePickerTabLayout.ANSI_ISO,
-      ...keycodePickerTabLayout.special,
-      ...keycodePickerTabLayout.extra
+      ...keycodePickerTabLayout.special
     ],
     searchFilter: '',
     searchCounters: {
