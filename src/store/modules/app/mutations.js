@@ -177,6 +177,9 @@ const mutations = {
   setNotes(state, newNotes) {
     state.notes = newNotes;
   },
+  setMacros(state, newMacros) {
+    state.macros = newMacros;
+  },
   toggleTutorial(state) {
     state.tutorialEnabled = !state.tutorialEnabled;
   },
