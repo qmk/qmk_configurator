@@ -1,0 +1,14 @@
+{
+  "keyboard": "thevankeyboards/roadkit",
+  "keymap": "default",
+  "commit": "ad8d934d3cb325d5ad2ed98167a8aa869ccc5e9e",
+  "layout": "LAYOUT_numpad_4x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ]
+  ]
+}

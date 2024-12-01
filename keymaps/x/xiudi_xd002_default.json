@@ -1,0 +1,11 @@
+{
+  "keyboard": "xiudi/xd002",
+  "keymap": "default",
+  "commit": "78ccd9c201199444bc06161b05ee8d7ba9c31613",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "hfdkb/ac001",
+  "keymap": "default",
+  "commit": "3110a70f6f208e20174056e8600830e767b911ff",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "RGB_MOD", "KC_LCTL", "KC_ENT",  "KC_NO",   "KC_NO"
+    ]
+  ]
+}

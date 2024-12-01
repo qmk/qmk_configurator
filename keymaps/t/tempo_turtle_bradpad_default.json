@@ -1,0 +1,15 @@
+{
+  "keyboard": "tempo_turtle/bradpad",
+  "keymap": "default",
+  "commit": "c6f1b594a2085e67219bd5f0f7ba7898429d331c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PSLS",
+      "KC_NUM",  "KC_P0",   "KC_PDOT", "KC_PAST",
+                 "KC_PENT", "KC_EQL"
+    ]
+  ]
+}

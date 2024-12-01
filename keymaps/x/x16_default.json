@@ -1,0 +1,20 @@
+{
+  "keyboard": "x16",
+  "keymap": "default",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_BSPC",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_VOLU",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_VOLD",
+      "MO(1)",   "KC_P0",   "KC_DOT",  "KC_ENT"
+    ],
+    [
+      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_DEL",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPLY"
+    ]
+  ]
+}

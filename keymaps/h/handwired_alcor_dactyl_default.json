@@ -1,0 +1,18 @@
+{
+  "keyboard": "handwired/alcor_dactyl",
+  "keymap": "default",
+  "commit": "cd682ad8b768db9f5c470d9de90ee158e72f6720",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                            "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                                                                        "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                                                  "KC_NO",   "KC_NO",                            "KC_NO",   "KC_NO",
+                                                             "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",
+                                                             "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO"
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "keyboard": "skippys_custom_pcs/roopad",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_CALC", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_WSCH", "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_MAIL", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "MO(1)",   "KC_P0",              "KC_PDOT"
+    ],
+    [
+                 "KC_NUM",  "KC_PSLS", "KC_PAST", "UG_VALD",
+      "KC_TRNS", "KC_F7",   "KC_F8",   "KC_F9",   "UG_VALU",
+      "KC_TRNS", "KC_F4",   "KC_F5",   "KC_F6",
+      "KC_TRNS", "KC_F1",   "KC_F2",   "KC_F3",   "UG_NEXT",
+      "KC_TRNS", "KC_TRNS",            "UG_TOGG"
+    ]
+  ]
+}

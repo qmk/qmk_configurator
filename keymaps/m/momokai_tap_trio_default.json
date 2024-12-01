@@ -1,0 +1,12 @@
+{
+  "keyboard": "momokai/tap_trio",
+  "keymap": "default",
+  "commit": "371499c3a79227d55ac481d23060074edc8c155a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_X",    "KC_C",
+      "KC_GRV",  "KC_ESC",  "KC_F2"
+    ]
+  ]
+}

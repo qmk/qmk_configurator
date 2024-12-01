@@ -1,0 +1,22 @@
+{
+  "keyboard": "magic_force/mf17",
+  "keymap": "default",
+  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "KC_NUM",  "KC_PSLS", "KC_PAST", "LT(1,KC_PMNS)",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+                 "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS",  "KC_CALC",  "KC_BSPC",  "KC_TRNS",
+      "RGB_MOD",  "RGB_VAI",  "RGB_HUI",
+      "RGB_SPD",  "RGB_TOG",  "RGB_SPI",  "QK_BOOT",
+      "RGB_RMOD", "RGB_VAD",  "RGB_HUD",
+                  "KC_TRNS",  "KC_TRNS",  "EE_CLR"
+    ]
+  ]
+}

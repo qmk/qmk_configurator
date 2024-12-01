@@ -1,0 +1,52 @@
+{
+  "keyboard": "h0oni/deskpad",
+  "keymap": "default",
+  "commit": "5624804c6822b68d091e77642e07dc3640bf4ca6",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action": "tap", "keycodes": ["LCTL", "L"]},
+      "https://www.youtube.com/",
+      {"action": "delay", "duration": 200},
+      {"action": "tap", "keycodes": ["ENT"]}
+    ],
+    [
+      {"action": "tap", "keycodes": ["LCTL", "L"]},
+      "https://www.facebook.com/",
+      {"action": "delay", "duration": 200},
+      {"action": "tap", "keycodes": ["ENT"]}
+    ],
+    [
+      {"action": "tap", "keycodes": ["LGUI", "S"]},
+      "valorant",
+      {"action": "delay", "duration": 200},
+      {"action": "tap", "keycodes": ["ENT"]}
+    ],
+    [
+      {"action": "tap", "keycodes": ["LGUI", "S"]},
+      "vscode",
+      {"action": "delay", "duration": 200},
+      {"action": "tap", "keycodes": ["ENT"]}
+    ],
+    [
+      {"action": "tap", "keycodes": ["LGUI", "S"]},
+      "discord",
+      {"action": "delay", "duration": 200},
+      {"action": "tap", "keycodes": ["ENT"]}
+    ]
+  ],
+  "layers": [
+    [
+      "C(KC_Z)", "KC_MPRV", "KC_MPLY", "KC_MNXT", "C(KC_V)",    "TO(1)"
+    ],
+    [
+      "MC_0",    "KC_WBAK", "KC_WREF", "KC_WFWD", "MC_1",       "TO(2)"
+    ],
+    [
+      "A(KC_F4)", "SGUI(KC_S)", "KC_MYCM", "LCA(KC_DEL)", "KC_CALC",    "TO(3)"
+    ],
+    [
+      "C(KC_SLSH)", "MC_2",    "MC_3",    "MC_4",    "LSA(KC_A)",    "TO(0)"
+    ]
+  ]
+}
