@@ -164,6 +164,7 @@ export default {
       'firmwareSourceURL',
       'keymapSourceURL',
       'author',
+      'macros',
       'notes',
       'electron'
     ]),
@@ -209,6 +210,7 @@ export default {
       'setKeymapName',
       'setLayout',
       'setNotes',
+      'setMacros',
       'startListening',
       'stopListening'
     ]),
@@ -258,6 +260,7 @@ export default {
       const { keymap } = this.templates;
       let data = Object.assign(keymap, {
         keyboard: this.keyboard,
+        macros: this.macros,
         keymap: this.exportKeymapName,
         layout: this.layout,
         layers: layers,
@@ -365,6 +368,10 @@ export default {
         const { author, notes } = data;
         this.setAuthor(author);
         this.setNotes(notes);
+      }
+
+      if (!isUndefined(data.macros)) {
+        this.setMacros(data.macros);
       }
 
       // remap old json files to new mappings if they need it
