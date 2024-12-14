@@ -1,7 +1,7 @@
 {
   "keyboard": "pimoroni/keybow2040",
   "keymap": "default",
-  "commit": "fe50774cb488f981dfd41c7a5bc5f34dfcd9cb9d",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -12,10 +12,10 @@
       "TO(1)"
     ],
     [
-      "_______", "_______", "_______",  "_______",
-      "_______", "_______", "_______",  "_______",
-      "RGB_SAD", "RGB_SAI", "RGB_HUD",  "RGB_HUI",
-      "_______", "RGB_TOG", "RGB_RMOD", "RGB_MOD",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "RM_SATD", "RM_SATU", "RM_HUED", "RM_HUEU",
+      "KC_TRNS", "RM_TOGG", "RM_PREV", "RM_NEXT",
       "TO(0)"
     ]
   ]

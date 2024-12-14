@@ -1,7 +1,7 @@
 {
   "keyboard": "palette1202",
   "keymap": "default",
-  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -55,8 +55,8 @@
                  "KC_LALT",    "KC_I",    "SGUI(KC_Z)", "KC_H"
     ],
     [
-      "_______", "DF(8)",   "DF(4)",   "DF(0)",   "KC_NO",
-      "_______", "KC_NO",   "DF(6)",   "DF(2)",   "KC_NO",
+      "_______", "PDF(8)",  "PDF(4)",  "PDF(0)",  "KC_NO",
+      "_______", "KC_NO",   "PDF(6)",  "PDF(2)",  "KC_NO",
                  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
     ]
   ]
