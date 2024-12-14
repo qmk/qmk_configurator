@@ -1,7 +1,7 @@
 {
   "keyboard": "bastardkb/skeletyl/v2/elitec",
   "keymap": "default",
-  "commit": "356561c438766df09e8b90a81778b2053e319a6a",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [
@@ -24,8 +24,8 @@
     ],
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RGB_HUI", "RGB_SAI", "RGB_VAI", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "RGB_HUD", "RGB_SAD", "RGB_VAD", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "RM_HUEU", "RM_SATU", "RM_VALU", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "RM_HUED", "RM_SATD", "RM_VALD", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
                             "KC_LGUI", "KC_SPC",  "_______",    "_______", "KC_ENT",  "KC_RALT"
     ]
   ]

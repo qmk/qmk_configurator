@@ -1,7 +1,7 @@
 {
   "keyboard": "binepad/bnk9",
   "keymap": "default",
-  "commit": "d8cda43d14d76d59a04c6ea1ed290395b9ca0968",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,10 +11,10 @@
       "KC_P7",   "KC_P8",   "LT(1,KC_P9)"
     ],
     [
-      "RGB_TOG",
-      "RGB_HUI",  "RGB_SAI", "RGB_SPI",
-      "RGB_HUD",  "RGB_SAD", "RGB_SPD",
-      "RGB_RMOD", "RGB_MOD", "_______"
+      "RM_TOGG",
+      "RM_HUEU", "RM_SATU", "RM_SPDU",
+      "RM_HUED", "RM_SATD", "RM_SPDD",
+      "RM_PREV", "RM_NEXT", "_______"
     ]
   ]
 }
