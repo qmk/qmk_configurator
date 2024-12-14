@@ -1,7 +1,7 @@
 {
   "keyboard": "dumbpad/v3x",
   "keymap": "default",
-  "commit": "474c0bc8a2886077fa8dbdb4a8a7a57f4e1291d1",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,10 +11,10 @@
       "KC_MUTE", "TT(1)",   "KC_P0",   "_______", "KC_ENT"
     ],
     [
-                 "RGB_TOG", "RGB_VAD", "RGB_VAI", "QK_BOOT",
-                 "KC_NO",   "RGB_HUD", "RGB_HUI", "KC_NO",
-                 "KC_NO",   "RGB_SAD", "RGB_SAI", "KC_NO",
-      "KC_NO",   "_______", "RGB_SPD", "RGB_SPI", "KC_NO"
+                 "RM_TOGG", "RM_VALD", "RM_VALU", "QK_BOOT",
+                 "KC_NO",   "RM_HUED", "RM_HUEU", "KC_NO",
+                 "KC_NO",   "RM_SATD", "RM_SATU", "KC_NO",
+      "KC_NO",   "_______", "RM_SPDD", "RM_SPDU", "KC_NO"
     ]
   ]
 }

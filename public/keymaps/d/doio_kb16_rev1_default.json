@@ -1,7 +1,7 @@
 {
   "keyboard": "doio/kb16/rev1",
   "keymap": "default",
-  "commit": "98f0c5ee249fdbc80755b7a086dc066cda16018e",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,10 +23,10 @@
       "_______", "_______", "_______", "_______"
     ],
     [
-      "RGB_SPI", "RGB_SPD", "_______", "QK_BOOT", "_______",
-      "RGB_SAI", "RGB_SAD", "_______", "_______", "TO(0)",
-      "RGB_TOG", "RGB_MOD", "RGB_HUI", "_______", "_______",
-      "_______", "RGB_VAI", "RGB_HUD", "RGB_VAD"
+      "RM_SPDU", "RM_SPDD", "_______", "QK_BOOT", "_______",
+      "RM_SATU", "RM_SATD", "_______", "_______", "TO(0)",
+      "RM_TOGG", "RM_NEXT", "RM_HUEU", "_______", "_______",
+      "_______", "RM_VALU", "RM_HUED", "RM_VALD"
     ]
   ]
 }

@@ -1,7 +1,7 @@
 {
   "keyboard": "doio/kb30",
   "keymap": "default",
-  "commit": "9b36ec53512f89ee834a894e23a64a8b4fcf3fc8",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -29,11 +29,11 @@
                                                                                          "KC_TRNS", "TO(3)",   "KC_TRNS"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "RGB_HUI", "RGB_SAI", "RGB_SPI",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "RGB_HUD", "RGB_SAD", "RGB_SPD",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "RM_HUEU", "RM_SATU", "RM_SPDU",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "RM_HUED", "RM_SATD", "RM_SPDD",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "RGB_MOD",
-      "KC_TRNS",            "KC_TRNS",               "RGB_VAD", "RGB_TOG", "RGB_VAI",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "RM_NEXT",
+      "KC_TRNS",            "KC_TRNS",               "RM_VALD", "RM_TOGG", "RM_VALU",
                                                                                          "KC_TRNS", "TO(0)",   "KC_TRNS"
     ]
   ]
