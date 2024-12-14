@@ -1,7 +1,7 @@
 {
   "keyboard": "horrortroll/handwired_k552",
   "keymap": "default",
-  "commit": "724aa3a4b256ccb058e4ef86c882167635d6815d",
+  "commit": "6fa11bf21913b5ccb531acc3c2baec963f4d384a",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [
@@ -21,12 +21,12 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                                   "KC_RALT", "MO(2)",   "KC_APP",  "KC_RCTL",    "KC_LEFT", "KC_DOWN", "KC_RIGHT"
     ],
     [
-      "QK_BOOT",            "KC_MSEL", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_MSTP", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MAIL", "KC_WHOM", "KC_CALC", "KC_WSCH",    "RGB_RMOD", "RGB_MOD", "RGB_TOG",
-      "NK_TOGG", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "RGB_SPD", "RGB_SPI", "_______",    "_______",  "_______", "_______",
-      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______", "_______", "_______",    "_______",  "_______", "TG(1)",
+      "QK_BOOT",            "KC_MSEL", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_MSTP", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MAIL", "KC_WHOM", "KC_CALC", "KC_WSCH",    "RM_PREV", "RM_NEXT", "RM_TOGG",
+      "NK_TOGG", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "RM_SPDD", "RM_SPDU", "_______",    "XXXXXXX", "_______", "_______",
+      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "TG(1)",
       "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______",            "_______",
-      "_______",            "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",                "RGB_VAI",
-      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "_______", "_______",    "RGB_HUD",  "RGB_VAD", "RGB_HUI"
+      "_______",            "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",               "RM_VALU",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "_______", "_______",    "RM_HUED", "RM_VALD", "RM_HUEU"
     ]
   ]
 }

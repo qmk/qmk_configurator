@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/hnah108",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_all",
   "layers": [
     [
@@ -13,12 +13,12 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                                   "KC_RALT", "KC_APP",  "KC_RGUI", "KC_RCTL",    "KC_LEFT", "KC_DOWN", "KC_RGHT",    "KC_P0",              "KC_PDOT"
     ],
     [
-      "QK_BOOT",            "BL_STEP", "RGB_TOG", "RGB_MOD", "RGB_RMOD", "RGB_HUI", "RGB_HUD", "RGB_VAI", "RGB_VAD", "RGB_SPI", "RGB_SPD", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLD", "KC_VOLU", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",                                        "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",               "KC_BRIU",               "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                   "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_BRID", "KC_TRNS",    "KC_TRNS",            "KC_TRNS"
+      "QK_BOOT",            "BL_STEP", "RM_TOGG", "RM_NEXT", "RM_PREV", "RM_HUEU", "RM_HUED", "RM_VALU", "RM_VALD", "RM_SPDU", "RM_SPDD", "_______", "_______",    "_______", "_______", "_______",    "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_VOLD", "KC_VOLU", "_______",    "_______", "_______", "_______",    "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "_______",    "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",                                        "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",            "_______",               "KC_BRIU",               "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "_______", "_______",    "_______", "KC_BRID", "_______",    "_______",            "_______"
     ]
   ]
 }
