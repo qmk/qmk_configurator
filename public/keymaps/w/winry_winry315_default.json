@@ -1,7 +1,7 @@
 {
   "keyboard": "winry/winry315",
   "keymap": "default",
-  "commit": "249bc3a5c58607d71534cb538a8c76565557849a",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_top",
   "layers": [
     [
@@ -11,10 +11,10 @@
       "LT(1,KC_ESC)", "KC_TAB",  "KC_SPC",  "KC_BSPC", "KC_ENT"
     ],
     [
-                  "RGB_M_P", "RGB_M_B", "RGB_M_R",
-      "RGB_MOD",  "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_SPI",
-      "RGB_RMOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_SPD",
-      "KC_TRNS",  "RGB_TOG", "RGB_M_P", "RGB_M_B", "RGB_M_R"
+                 "RGB_M_P", "RGB_M_B", "RGB_M_R",
+      "RM_NEXT", "RM_HUEU", "RM_SATU", "RM_VALU", "RM_SPDU",
+      "RM_PREV", "RM_HUED", "RM_SATD", "RM_VALD", "RM_SPDD",
+      "KC_TRNS", "RM_TOGG", "RGB_M_P", "RGB_M_B", "RGB_M_R"
     ]
   ]
 }
