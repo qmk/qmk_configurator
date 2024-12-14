@@ -1,0 +1,21 @@
+{
+  "keyboard": "madjax_macropad",
+  "keymap": "default",
+  "commit": "70055221767ff6b004006d3f349fcfdfcc864180",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action": "tap", "keycodes": ["P0"]},
+      {"action": "tap", "keycodes": ["P0"]}
+    ]
+  ],
+  "layers": [
+    [
+                                       "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PERC",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_EQL",
+      "KC_P0",   "MC_0",    "KC_PDOT", "KC_PENT"
+    ]
+  ]
+}
