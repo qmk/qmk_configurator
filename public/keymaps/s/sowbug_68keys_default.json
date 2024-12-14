@@ -1,7 +1,7 @@
 {
   "keyboard": "sowbug/68keys",
   "keymap": "default",
-  "commit": "74223c34a969c0877bde035c721c21a1f25890fa",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,10 +13,10 @@
     ],
     [
       "_______", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "_______",    "_______", "KC_HOME",
-      "BL_TOGG", "BL_STEP", "KC_UP",   "_______", "_______", "_______", "_______", "_______", "RGB_SPI", "KC_PSCR", "KC_SCRL", "KC_PAUS", "_______", "KC_BSLS",    "_______", "KC_END",
+      "BL_TOGG", "BL_STEP", "KC_UP",   "_______", "_______", "_______", "_______", "_______", "RM_SPDU", "KC_PSCR", "KC_SCRL", "KC_PAUS", "_______", "KC_BSLS",    "_______", "KC_END",
       "_______", "KC_LEFT", "KC_DOWN", "KC_RGHT", "_______", "_______", "_______", "_______", "_______", "_______", "KC_HOME", "KC_QUOT",            "KC_ENT",
-      "_______",            "_______", "KC_MPLY", "KC_MSTP", "KC_MPRV", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MUTE", "_______", "KC_END",             "_______",    "RGB_MOD",
-      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "KC_MENU",    "RGB_VAI", "RGB_TOG", "RGB_HUI"
+      "_______",            "_______", "KC_MPLY", "KC_MSTP", "KC_MPRV", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MUTE", "_______", "KC_END",             "_______",    "RM_NEXT",
+      "_______", "_______", "_______",                                  "_______",                                  "_______", "_______", "KC_MENU",    "RM_VALU", "RM_TOGG", "RM_HUEU"
     ]
   ]
 }

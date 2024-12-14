@@ -1,0 +1,14 @@
+{
+  "keyboard": "shorty",
+  "keymap": "default",
+  "commit": "e31eeb85db481f977dbe7d6d2d9007a9faaeaf3e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",               "KC_D",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ]
+  ]
+}

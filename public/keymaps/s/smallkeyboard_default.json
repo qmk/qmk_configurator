@@ -1,7 +1,7 @@
 {
   "keyboard": "smallkeyboard",
   "keymap": "default",
-  "commit": "bb754069e95237bec69cc23845e2515eea5f33e4",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [
@@ -9,7 +9,7 @@
       "KC_P3",   "KC_P4",   "KC_P3"
     ],
     [
-      "RGB_TOG", "RGB_MOD", "MO(1)",
+      "RM_TOGG", "RM_NEXT", "MO(1)",
       "AU_ON",   "AU_OFF",  "MI_ON"
     ],
     [
