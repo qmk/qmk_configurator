@@ -1,7 +1,7 @@
 {
   "keyboard": "atlantis/ps17",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,7 +13,7 @@
       "KC_P0",              "KC_PDOT"
     ],
     [
-      "RGB_MOD",
+      "RM_NEXT",
       "TO(2)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
@@ -21,7 +21,7 @@
       "KC_TRNS",            "KC_TRNS"
     ],
     [
-      "RGB_MOD",
+      "RM_NEXT",
       "TO(3)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
@@ -29,7 +29,7 @@
       "KC_TRNS",            "KC_TRNS"
     ],
     [
-      "RGB_MOD",
+      "RM_NEXT",
       "TO(0)",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",
