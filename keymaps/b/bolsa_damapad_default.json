@@ -1,0 +1,13 @@
+{
+  "keyboard": "bolsa/damapad",
+  "keymap": "default",
+  "commit": "dccb5711c710d074c29f715494b93f9275f5ac55",
+  "layout": "LAYOUT_wkl",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MSTP", "KC_MSEL", "KC_MUTE",
+      "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_PGUP",
+      "KC_NO",   "KC_COPY",            "KC_PSTE",            "KC_PGDN"
+    ]
+  ]
+}

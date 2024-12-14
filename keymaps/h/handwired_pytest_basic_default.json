@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/pytest/basic",
+  "keymap": "default",
+  "commit": "f03b10b6c1c9a5b0e07f7f78c6060610246b4a7f",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

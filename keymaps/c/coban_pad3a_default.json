@@ -1,0 +1,11 @@
+{
+  "keyboard": "coban/pad3a",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MNXT", "KC_MPLY"
+    ]
+  ]
+}

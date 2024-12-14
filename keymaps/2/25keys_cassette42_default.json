@@ -1,0 +1,28 @@
+{
+  "keyboard": "25keys/cassette42",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",                        "KC_ENT",
+      "LT(1,KC_MPRV)", "LT(2,KC_MPLY)", "LT(3,KC_MNXT)", "LT(4,KC_SPC)"
+    ],
+    [
+      "UG_TOGG",            "XXXXXXX",
+      "_______", "_______", "UG_HUED", "UG_HUEU"
+    ],
+    [
+      "_______",            "_______",
+      "_______", "_______", "UG_SATD", "UG_SATU"
+    ],
+    [
+      "_______",            "_______",
+      "UG_VALD", "UG_VALU", "_______", "UG_VALU"
+    ],
+    [
+      "_______",            "XXXXXXX",
+      "UG_PREV", "UG_NEXT", "UG_NEXT", "_______"
+    ]
+  ]
+}

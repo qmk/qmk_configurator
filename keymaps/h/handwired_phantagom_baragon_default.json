@@ -1,0 +1,18 @@
+{
+  "keyboard": "handwired/phantagom/baragon",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_P4",
+      "KC_P5",   "KC_P6",   "KC_P7",
+      "KC_P8",   "MO(1)",   "KC_P9"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "UG_HUEU", "_______",
+      "_______", "_______", "_______",
+      "_______", "_______", "_______"
+    ]
+  ]
+}
