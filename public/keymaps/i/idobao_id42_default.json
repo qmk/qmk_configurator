@@ -1,7 +1,7 @@
 {
   "keyboard": "idobao/id42",
   "keymap": "default",
-  "commit": "7f805cc7799deb0ca75f751cebd32c6640058af9",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,10 +23,10 @@
       "KC_RCTL", "KC_RGUI", "KC_RALT",            "_______",            "_______",                       "KC_MSTP", "KC_VOLD", "KC_MPLY"
     ],
     [
-      "_______", "XXXXXXX", "XXXXXXX",  "XXXXXXX", "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
-      "_______", "RGB_TOG", "RGB_MOD",  "RGB_HUD", "RGB_HUI", "RGB_SAD", "RGB_SAI", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "_______",
-      "_______",            "RGB_RMOD", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "NK_TOGG", "XXXXXXX", "XXXXXXX", "RGB_VAI", "XXXXXXX",
-      "_______", "_______", "_______",             "_______",            "_______",                       "RGB_SPD", "RGB_VAD", "RGB_SPI"
+      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
+      "_______", "RM_TOGG", "RM_NEXT", "RM_HUED", "RM_HUEU", "RM_SATD", "RM_SATU", "XXXXXXX", "XXXXXXX", "XXXXXXX",            "_______",
+      "_______",            "RM_PREV", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "NK_TOGG", "XXXXXXX", "XXXXXXX", "RM_VALU", "XXXXXXX",
+      "_______", "_______", "_______",            "_______",            "_______",                       "RM_SPDD", "RM_VALD", "RM_SPDU"
     ]
   ]
 }
