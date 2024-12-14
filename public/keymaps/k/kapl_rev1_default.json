@@ -1,7 +1,7 @@
 {
   "keyboard": "kapl/rev1",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -19,11 +19,11 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_NO",   "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_P0",   "KC_PDOT", "KC_PENT", "KC_F15"
     ],
     [
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
-      "KC_NO",   "RGB_SAI", "RGB_SPI", "RGB_VAI", "RGB_HUI", "RGB_MOD",  "KC_NO",      "KC_NO",   "KC_VOLU", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "RGB_SAD", "RGB_SPD", "RGB_VAD", "RGB_HUD", "RGB_RMOD", "KC_NO",      "KC_NO",   "KC_VOLD", "KC_MPLY", "KC_MNXT", "KC_MPRV", "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RGB_TOG", "RGB_M_P",  "KC_NO",      "KC_NO",   "KC_MUTE", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT",
+      "KC_NO",   "RM_SATU", "RM_SPDU", "RM_VALU", "RM_HUEU", "RM_NEXT", "KC_NO",      "KC_NO",   "KC_VOLU", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "RM_SATD", "RM_SPDD", "RM_VALD", "RM_HUED", "RM_PREV", "KC_NO",      "KC_NO",   "KC_VOLD", "KC_MPLY", "KC_MNXT", "KC_MPRV", "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "RM_TOGG", "RGB_M_P", "KC_NO",      "KC_NO",   "KC_MUTE", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO"
     ]
   ]
 }

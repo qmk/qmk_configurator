@@ -1,7 +1,7 @@
 {
   "keyboard": "system76/launch_1",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "6fa11bf21913b5ccb531acc3c2baec963f4d384a",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -14,7 +14,7 @@
     ],
     [
       "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MPLY",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_TOG", "RGB_VAD", "RGB_VAI", "KC_TRNS", "KC_VOLU",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RM_TOGG", "RM_VALD", "RM_VALU", "KC_TRNS", "KC_VOLU",
       "KC_PSCR", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_END",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_VOLD",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_MUTE",
       "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGUP",

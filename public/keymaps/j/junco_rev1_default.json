@@ -1,7 +1,7 @@
 {
   "keyboard": "junco/rev1",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_split4x6_r1",
   "layers": [
     [
@@ -33,11 +33,11 @@
                               "_______", "_______", "_______", "_______", "_______",    "_______", "MO(4)",   "_______", "_______", "_______"
     ],
     [
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",                            "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "RGB_SPI", "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_MOD",  "KC_NO",                            "KC_NO",   "EE_CLR",  "QK_RBT",  "DB_TOGG", "QK_BOOT", "KC_NO",
-      "RGB_SPD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_RMOD", "RGB_TOG",                          "KC_NO",   "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-                            "_______", "_______", "_______",  "_______", "_______",    "_______", "_______", "_______", "_______", "_______"
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",                            "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "RM_SPDU", "RM_HUEU", "RM_SATU", "RM_VALU", "RM_NEXT", "KC_NO",                            "KC_NO",   "EE_CLR",  "QK_RBT",  "DB_TOGG", "QK_BOOT", "KC_NO",
+      "RM_SPDD", "RM_HUED", "RM_SATD", "RM_VALD", "RM_PREV", "RM_TOGG",                          "KC_NO",   "DF(0)",   "DF(1)",   "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                            "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "_______", "_______", "_______"
     ]
   ]
 }

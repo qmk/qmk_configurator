@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/terminus_mini",
   "keymap": "default",
-  "commit": "ad8d934d3cb325d5ad2ed98167a8aa869ccc5e9e",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -48,7 +48,7 @@
     ],
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TO(1)",   "TO(0)",   "TO(2)",   "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "PDF(1)",  "PDF(0)",  "PDF(2)",  "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS",            "KC_TRNS",       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]

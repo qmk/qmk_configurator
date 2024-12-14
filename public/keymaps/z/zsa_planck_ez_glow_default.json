@@ -1,7 +1,7 @@
 {
   "keyboard": "zsa/planck_ez/glow",
   "keymap": "default",
-  "commit": "2d2eed9594bb62b79d1eaffe25775d56adcd537f",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_planck_1x2uC",
   "layers": [
     [
@@ -23,7 +23,7 @@
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "KC_MNXT", "KC_VOLD", "KC_VOLU", "KC_MPLY"
     ],
     [
-      "KC_TRNS", "QK_BOOT", "DB_TOGG", "UG_TOGG", "UG_NEXT", "UG_HUEU", "UG_HUED", "UG_SATU", "UG_SATD", "UG_VALU", "UG_VALD", "KC_DEL",
+      "KC_TRNS", "QK_BOOT", "DB_TOGG", "RM_TOGG", "RM_NEXT", "RM_HUEU", "RM_HUED", "RM_SATU", "RM_SATD", "RM_VALU", "RM_VALD", "KC_DEL",
       "KC_TRNS", "KC_TRNS", "MU_NEXT", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "AU_PREV", "AU_NEXT", "MU_ON",   "MU_OFF",  "MI_ON",   "MI_OFF",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"

@@ -1,7 +1,7 @@
 {
   "keyboard": "boardsource/equals/60",
   "keymap": "default",
-  "commit": "44062b50560d7a1c44eec0ee09f4441f06591b65",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
@@ -9,7 +9,7 @@
       "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_DEL",
       "KC_ESC",  "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",    "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_SCLN", "KC_QUOT",
       "KC_LSFT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_SLSH", "KC_ENT",
-      "KC_PIPE", "KC_LCTL", "KC_LALT", "KC_LGUI", "MO(2)",   "KC_SPC",  "KC_SPC",  "MO(1)",   "KC_LEFT", "KC_RGHT", "RGB_MOD", "RGB_TOG"
+      "KC_PIPE", "KC_LCTL", "KC_LALT", "KC_LGUI", "MO(2)",   "KC_SPC",  "KC_SPC",  "MO(1)",   "KC_LEFT", "KC_RGHT", "RM_NEXT", "RM_TOGG"
     ],
     [
       "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",

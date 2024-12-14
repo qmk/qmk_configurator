@@ -1,7 +1,7 @@
 {
   "keyboard": "splitkb/aurora/lily58/rev1",
   "keymap": "default",
-  "commit": "acca2eb9630ec47ed44e493f4abb043e9ee3962d",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,7 +13,7 @@
     ],
     [
       "_______", "_______", "_______", "_______", "_______", "_______",                          "_______", "_______", "_______", "_______", "_______", "_______",
-      "KC_F1",     "KC_F2",   "KC_F3", "KC_F4",   "KC_F5",   "KC_F6",                            "KC_F7",   "KC_F8",  "KC_F9",    "KC_F10",  "KC_F11",  "KC_F12",
+      "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",                            "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
       "KC_GRV",  "KC_EXLM", "KC_AT",   "KC_HASH", "KC_DLR",  "KC_PERC",                          "KC_CIRC", "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_RPRN", "KC_TILD",
       "_______", "_______", "_______", "_______", "_______", "_______", "_______",    "_______", "XXXXXXX", "KC_UNDS", "KC_PLUS", "KC_LCBR", "KC_RCBR", "KC_PIPE",
                                        "_______", "_______", "_______", "_______",    "_______", "MO(3)",   "_______", "_______"
@@ -28,28 +28,25 @@
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI",
-      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "RM_TOGG", "RM_HUEU", "RM_SATU", "RM_VALU",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "RM_NEXT", "RM_HUED", "RM_SATD", "RM_VALD",
                                        "_______", "_______", "_______", "_______",    "_______", "_______", "_______", "_______"
     ]
   ],
-    "config": {
-        "features": {
-            "oled": true,
-            "rgb_matrix": true,
-            "rgblight": false
-        },
-        "encoder": {
-            "enabled": true
-        },
-        "rgblight": {
-            "hue_steps": 8,
-            "saturation_steps": 8,
-            "brightness_steps": 8,
-            "sleep": true
-        }
+  "config": {
+    "features": {
+      "oled": true,
+      "rgb_matrix": true,
+      "rgblight": false
+    },
+    "encoder": {
+      "enabled": true
+    },
+    "rgblight": {
+      "hue_steps": 8,
+      "saturation_steps": 8,
+      "brightness_steps": 8,
+      "sleep": true
     }
+  }
 }
-
-
-

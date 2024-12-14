@@ -1,7 +1,7 @@
 {
   "keyboard": "linworks/fave87h",
   "keymap": "default",
-  "commit": "1f8f0f70a2beacdc6d085d2541fe498300b1eaab",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -15,7 +15,7 @@
     [
       "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "RM_TOGG", "RM_NEXT", "RM_HUEU", "RM_HUED", "RM_SATU", "RM_SATD", "RM_VALU", "RM_VALD", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "EE_CLR",
       "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",                          "KC_VOLU",
       "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                                  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",               "KC_MPRV", "KC_VOLD", "KC_MNXT"

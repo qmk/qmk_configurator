@@ -1,7 +1,7 @@
 {
   "keyboard": "skmt/15k",
   "keymap": "default",
-  "commit": "f9f67d4cb33507e208f1495fe9f5d76e9f27c41b",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_default",
   "layers": [
     [
@@ -10,9 +10,9 @@
       "KC_F1",   "KC_P7",   "KC_P4",   "KC_P1",   "KC_P0"
     ],
     [
-      "RGB_TOG",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "RGB_MOD",  "RGB_HUI", "RGB_SAI", "RGB_VAI", "RGB_SPI",
-      "RGB_RMOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "RGB_SPD"
+      "RM_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "RM_NEXT", "RM_HUEU", "RM_SATU", "RM_VALU", "RM_SPDU",
+      "RM_PREV", "RM_HUED", "RM_SATD", "RM_VALD", "RM_SPDD"
     ]
   ]
 }

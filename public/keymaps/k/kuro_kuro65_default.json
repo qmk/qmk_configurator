@@ -1,7 +1,7 @@
 {
   "keyboard": "kuro/kuro65",
   "keymap": "default",
-  "commit": "f55d2cd6b66106621253c9d5d7f6d14824774ef5",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_65_iso",
   "layers": [
     [
@@ -12,11 +12,11 @@
       "KC_LCTL", "KC_LGUI", "KC_LALT",                                  "KC_SPC",                        "KC_RALT", "MO(1)",   "KC_RCTL", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",    "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",  "KC_HOME",
-      "KC_NO",   "RGB_TOG", "RGB_MOD", "RGB_RMOD", "RGB_HUI", "RGB_HUD", "RGB_SAI", "RGB_SAD", "RGB_VAI", "RGB_VAD", "KC_NO",   "KC_NO",   "KC_NO",              "KC_HOME",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_END",
-      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",    "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_MPLY", "KC_VOLU", "KC_END",
-      "KC_NO",   "KC_NO",   "KC_NO",                                     "KC_NO",                         "KC_NO",   "KC_TRNS", "KC_NO",   "KC_MPRV", "KC_VOLD", "KC_MNXT"
+      "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",  "KC_HOME",
+      "KC_NO",   "RM_TOGG", "RM_NEXT", "RM_PREV", "RM_HUEU", "RM_HUED", "RM_SATU", "RM_SATD", "RM_VALU", "RM_VALD", "KC_NO",   "KC_NO",   "KC_NO",              "KC_HOME",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_END",
+      "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_MPLY", "KC_VOLU", "KC_END",
+      "KC_NO",   "KC_NO",   "KC_NO",                                    "KC_NO",                         "KC_NO",   "KC_TRNS", "KC_NO",   "KC_MPRV", "KC_VOLD", "KC_MNXT"
     ],
     [
       "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",  "KC_HOME",

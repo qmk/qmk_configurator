@@ -1,7 +1,7 @@
 {
   "keyboard": "sofle/keyhive",
   "keymap": "default",
-  "commit": "e446366326c67071d3afbc4cbfbaa8d8db7bf0cd",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -34,7 +34,7 @@
     ],
     [
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "QK_BOOT", "XXXXXXX", "DF(0)",   "DF(1)",   "CG_TOGG", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "QK_BOOT", "XXXXXXX", "PDF(0)",  "PDF(1)",  "CG_TOGG", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "CG_TOGG", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "KC_VOLD", "KC_MUTE", "KC_VOLU", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX",
                             "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "_______", "_______", "_______"

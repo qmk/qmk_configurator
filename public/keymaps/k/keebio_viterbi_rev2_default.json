@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/viterbi/rev2",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT_ortho_5x14",
   "layers": [
     [

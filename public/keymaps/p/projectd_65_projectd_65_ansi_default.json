@@ -1,7 +1,7 @@
 {
   "keyboard": "projectd/65/projectd_65_ansi",
   "keymap": "default",
-  "commit": "a0c99e34312e83c59066a69147a902958966ba05",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -13,10 +13,10 @@
     ],
     [
       "KC_GRV",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",  "KC_DEL",  "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RGB_TOG", "RGB_MOD", "RGB_RMOD","KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RM_TOGG", "RM_NEXT", "RM_PREV", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",
-      "KC_LSFT",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_RSFT", "RGB_VAI", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                       "MO(2)",   "KC_TRNS",            "RGB_SPD", "RGB_VAD", "RGB_SPI"
+      "KC_LSFT",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_RSFT", "RM_VALU", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",                                  "KC_TRNS",                       "MO(2)",   "KC_TRNS",            "RM_SPDD", "RM_VALD", "RM_SPDU"
     ],
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",

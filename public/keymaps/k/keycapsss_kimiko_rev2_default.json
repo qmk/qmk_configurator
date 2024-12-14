@@ -1,7 +1,7 @@
 {
   "keyboard": "keycapsss/kimiko/rev2",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -27,8 +27,8 @@
     ],
     [
       "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                                                "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "UG_TOGG", "UG_HUEU", "UG_SATU", "UG_VALU", "XXXXXXX", "XXXXXXX",                                                "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "UG_NEXT", "UG_HUED", "UG_SATD", "UG_VALD", "XXXXXXX", "XXXXXXX",                                                "KC_VOLU", "KC_MUTE", "KC_VOLD", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "RM_TOGG", "RM_HUEU", "RM_SATU", "RM_VALU", "XXXXXXX", "XXXXXXX",                                                "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "RM_NEXT", "RM_HUED", "RM_SATD", "RM_VALD", "XXXXXXX", "XXXXXXX",                                                "KC_VOLU", "KC_MUTE", "KC_VOLD", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
                                        "_______", "_______", "_______", "_______", "_______",    "_______", "_______", "_______", "_______", "_______"
     ]

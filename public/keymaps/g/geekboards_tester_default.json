@@ -1,11 +1,11 @@
 {
   "keyboard": "geekboards/tester",
   "keymap": "default",
-  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT",
   "layers": [
     [
-      "RGB_MOD", "KC_1",    "KC_2",    "KC_3",
+      "RM_NEXT", "KC_1",    "KC_2",    "KC_3",
       "KC_4",    "KC_5",    "KC_6",    "MO(1)"
     ],
     [

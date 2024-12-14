@@ -1,7 +1,7 @@
 {
   "keyboard": "fractal",
   "keymap": "default",
-  "commit": "3b11e98215f1528287a28158837125408cbf3d9b",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [
@@ -42,7 +42,7 @@
     [
       "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
       "KC_TRNS", "QK_BOOT", "DB_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",
-      "KC_TRNS", "KC_TRNS", "MU_NEXT", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "TO(0)",   "TO(1)",   "TO(2)",   "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "MU_NEXT", "AU_ON",   "AU_OFF",  "AG_NORM", "AG_SWAP", "PDF(0)",  "PDF(1)",  "PDF(2)",  "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "AU_PREV", "AU_NEXT", "MU_ON",   "MU_OFF",  "MI_ON",   "MI_OFF",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
     ]

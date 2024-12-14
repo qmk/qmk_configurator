@@ -1,7 +1,7 @@
 {
   "keyboard": "ferris/0_2/bling",
   "keymap": "default",
-  "commit": "ebd402788346aa6e88bde1486b2a835684d40d39",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_split_3x5_2",
   "layers": [
     [
@@ -23,10 +23,10 @@
                                        "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS",    "KC_TRNS", "KC_UNDS", "KC_PIPE", "KC_QUOT", "KC_TRNS",
-      "KC_CIRC", "KC_ASTR", "KC_AMPR", "KC_NO",    "KC_TRNS",    "KC_HASH", "KC_TILD", "KC_SLSH", "KC_DQUO", "KC_DLR",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",  "KC_TRNS",    "KC_TRNS", "KC_MINS", "KC_BSLS", "KC_GRV",  "KC_TRNS",
-                                       "RGB_RMOD", "KC_TRNS",    "KC_TRNS", "RGB_MOD"
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_UNDS", "KC_PIPE", "KC_QUOT", "KC_TRNS",
+      "KC_CIRC", "KC_ASTR", "KC_AMPR", "KC_NO",   "KC_TRNS",    "KC_HASH", "KC_TILD", "KC_SLSH", "KC_DQUO", "KC_DLR",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_MINS", "KC_BSLS", "KC_GRV",  "KC_TRNS",
+                                       "RM_PREV", "KC_TRNS",    "KC_TRNS", "RM_NEXT"
     ],
     [
       "KC_TRNS", "KC_COLN", "KC_LT",   "KC_GT",   "KC_SCLN",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",

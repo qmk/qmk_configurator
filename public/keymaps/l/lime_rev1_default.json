@@ -1,7 +1,7 @@
 {
   "keyboard": "lime/rev1",
   "keymap": "default",
-  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -34,9 +34,9 @@
     ],
     [
       "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "DF(0)",   "XXXXXXX", "XXXXXXX", "CG_TOGG", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "PDF(0)",  "XXXXXXX", "XXXXXXX", "CG_TOGG", "XXXXXXX",                          "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                          "XXXXXXX", "KC_VOLD", "KC_MUTE", "KC_VOLU", "XXXXXXX", "XXXXXXX",
-      "XXXXXXX", "XXXXXXX", "XXXXXXX", "DF(1)",   "XXXXXXX", "XXXXXXX", "XXXXXXX",    "_______", "XXXXXXX", "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "PDF(1)",  "XXXXXXX", "XXXXXXX", "XXXXXXX",    "_______", "XXXXXXX", "KC_MPRV", "KC_MPLY", "KC_MNXT", "XXXXXXX", "XXXXXXX",
                  "_______", "CG_TOGG", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX"
     ]
   ]

@@ -1,7 +1,7 @@
 {
   "keyboard": "bastardkb/scylla/v2/stemcell",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
   "layout": "LAYOUT_split_4x6_5",
   "layers": [
     [
@@ -19,11 +19,11 @@
                  "KC_LCTL", "KC_HOME", "KC_TRNS", "KC_TRNS", "KC_RALT", "KC_RGUI", "KC_SPC",  "KC_BSPC", "KC_RCTL", "KC_ENT"
     ],
     [
-      "KC_F12",  "KC_F1",   "KC_F2",    "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",
-      "_______", "_______", "RGB_RMOD", "RGB_TOG", "RGB_MOD", "KC_LBRC", "KC_RBRC", "_______", "KC_NUM",  "KC_INS",  "KC_SCRL", "KC_MUTE",
-      "_______", "KC_LEFT", "KC_UP",    "KC_DOWN", "KC_RGHT", "KC_LPRN", "KC_RPRN", "KC_MPRV", "KC_MPLY", "KC_MNXT", "_______", "KC_VOLU",
-      "_______", "_______", "_______",  "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_VOLD",
-                 "KC_LCTL", "KC_HOME",  "KC_TRNS", "KC_TRNS", "KC_RALT", "QK_BOOT", "KC_SPC",  "KC_BSPC", "KC_RCTL", "KC_ENT"
+      "KC_F12",  "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",
+      "_______", "_______", "RM_PREV", "RM_TOGG", "RM_NEXT", "KC_LBRC", "KC_RBRC", "_______", "KC_NUM",  "KC_INS",  "KC_SCRL", "KC_MUTE",
+      "_______", "KC_LEFT", "KC_UP",   "KC_DOWN", "KC_RGHT", "KC_LPRN", "KC_RPRN", "KC_MPRV", "KC_MPLY", "KC_MNXT", "_______", "KC_VOLU",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_VOLD",
+                 "KC_LCTL", "KC_HOME", "KC_TRNS", "KC_TRNS", "KC_RALT", "QK_BOOT", "KC_SPC",  "KC_BSPC", "KC_RCTL", "KC_ENT"
     ]
   ]
 }
