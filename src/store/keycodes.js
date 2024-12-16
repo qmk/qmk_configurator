@@ -13,7 +13,41 @@ import steno from './modules/keycodes/steno';
 const keycodePickerTabLayout = {
   ANSI_ISO: [...ansi, ...iso_jis],
   ISO_ANSI: [...iso_jis, ...ansi],
-  special: [...quantum, ...settings, ...media]
+  special: [...quantum, ...settings, ...media],
+  extra: Object.fromEntries(
+    Object.entries(keymapExtras).map(([keymap, { keycodeLUT, prefix }]) => {
+      const keycodes = [];
+
+      Object.entries(keycodeLUT).forEach(([code, { name, title }]) => {
+        if (title === undefined) {
+          return;
+        }
+
+        let start = title.search(prefix + '_');
+        if (start < 0) {
+          return;
+        }
+
+        let end = start + prefix.length + 1;
+        while (
+          end < title.length &&
+          ((title.charCodeAt(end) >= 65 && title.charCodeAt(end) <= 90) ||
+            (title.charCodeAt(end) >= 48 && title.charCodeAt(end) <= 57))
+        ) {
+          end++;
+        }
+
+        keycodes.push({
+          code: title.substring(start, end),
+          name,
+          language_prefix: prefix,
+          title: code
+        });
+      });
+
+      return [keymap, keycodes];
+    })
+  )
 };
 
 /**
@@ -77,9 +111,12 @@ function generateKeycodes(osKeyboardLayout, isSteno = false) {
     ...(isSteno ? steno : [])
   ];
   const { keycodeLUT } = keymapExtras[getOSKeyboardLayout()];
-  return keycodes.map((keycodeObject) =>
-    toLocaleKeycode(keycodeLUT, keycodeObject)
-  );
+  return [
+    ...keycodes.map((keycodeObject) =>
+      toLocaleKeycode(keycodeLUT, keycodeObject)
+    ),
+    ...keycodePickerTabLayout.extra[getOSKeyboardLayout()]
+  ];
 }
 
 /**
