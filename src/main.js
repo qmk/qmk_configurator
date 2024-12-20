@@ -49,7 +49,17 @@ import {
   faChevronUp,
   faSearch,
   faQuestionCircle,
+  faPowerOff,
+  faMoon,
+  faEject,
+  faPlay,
+  faStop,
+  faBackward,
+  faForward,
+  faFastBackward,
+  faFastForward,
   faVolumeMute,
+  faVolumeDown,
   faVolumeUp,
   faBars
 } from '@fortawesome/free-solid-svg-icons';
@@ -105,7 +115,17 @@ const icons = [
   faWindows,
   faQuestionCircle,
   faVolumeUp,
-  faVolumeMute
+  faVolumeDown,
+  faVolumeMute,
+  faPowerOff,
+  faMoon,
+  faEject,
+  faPlay,
+  faStop,
+  faBackward,
+  faForward,
+  faFastBackward,
+  faFastForward
 ];
 library.add(...icons);
 
