@@ -20,7 +20,19 @@ export default {
     KC_DOWN: 'arrow-down',
     KC_LEFT: 'arrow-left',
     KC_RGHT: 'arrow-right',
-    KC_APP: 'bars'
+    KC_APP: 'bars',
+    KC_PWR: 'power-off',
+    KC_SLEP: 'moon',
+    KC_EJCT: 'eject',
+    KC_MPLY: 'play',
+    KC_MSTP: 'stop',
+    KC_MRWD: 'backward',
+    KC_MFFD: 'forward',
+    KC_MPRV: 'fast-backward',
+    KC_MNXT: 'fast-forward',
+    KC_MUTE: 'volume-mute',
+    KC_VOLD: 'volume-down',
+    KC_VOLU: 'volume-up'
   },
   /**
    * returns the correct icons for the identified platform
