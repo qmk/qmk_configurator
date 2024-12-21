@@ -223,7 +223,7 @@ export default [
   { name: 'RGB Mode T', code: 'RGB_M_T', title: 'RGB Mode: Test' },
   { width: 0 },
   { width: 1000 },
-  { name: 'RGB Mode ▾', code: 'RGB_RMOD', title: 'Previous RGB mode' },
+  { name: 'RGB Mode ◂', code: 'RGB_RMOD', title: 'Previous RGB mode' },
   { name: 'Hue ▾', code: 'RGB_HUD', title: 'Decrease hue' },
   { name: 'Sat ▾', code: 'RGB_SAD', title: 'Decrease saturation' },
   { name: 'Bright ▾', code: 'RGB_VAD', title: 'Decrease value' },
