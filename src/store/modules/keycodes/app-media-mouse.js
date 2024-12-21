@@ -102,21 +102,21 @@ export default [
 
   { label: 'Multimedia Keys', width: 'label' },
 
-  { name: 'Previous', code: 'KC_MPRV', title: 'Previous Track' },
+  { name: 'Prev', code: 'KC_MPRV', title: 'Previous Track' },
   { name: 'Next', code: 'KC_MNXT', title: 'Next Track' },
   { name: 'Mute', code: 'KC_MUTE', title: 'Mute Audio' },
-  { name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down' },
-  { name: 'Vol +', code: 'KC_VOLU', title: 'Volume Up' },
+  { name: 'Vol ▾', code: 'KC_VOLD', title: 'Volume Down' },
+  { name: 'Vol ▴', code: 'KC_VOLU', title: 'Volume Up' },
   { name: 'Media Stop', code: 'KC_MSTP', title: 'Media Stop' },
   { name: 'Play', code: 'KC_MPLY', title: 'Play/Pause' },
   { width: 250 },
   {
-    name: 'Prev Track',
+    name: 'Rewind',
     code: 'KC_MRWD',
     title: 'Previous Track / Rewind (macOS)'
   },
   {
-    name: 'Next Track',
+    name: 'FFwd',
     code: 'KC_MFFD',
     title: 'Next Track / Fast Forward (macOS)'
   },
@@ -125,10 +125,10 @@ export default [
 
   { label: 'Mouse Keys', width: 'label' },
 
-  { name: 'Mouse Up', code: 'KC_MS_U', title: 'Mouse Cursor Up' },
-  { name: 'Mouse Down', code: 'KC_MS_D', title: 'Mouse Cursor Down' },
-  { name: 'Mouse Left', code: 'KC_MS_L', title: 'Mouse Cursor Left' },
-  { name: 'Mouse Right', code: 'KC_MS_R', title: 'Mouse Cursor Right' },
+  { name: 'Mouse ▴', code: 'KC_MS_U', title: 'Mouse Cursor Up' },
+  { name: 'Mouse ▾', code: 'KC_MS_D', title: 'Mouse Cursor Down' },
+  { name: 'Mouse ◂', code: 'KC_MS_L', title: 'Mouse Cursor Left' },
+  { name: 'Mouse ▸', code: 'KC_MS_R', title: 'Mouse Cursor Right' },
   { width: 250 },
   { name: 'Mouse 1', code: 'KC_BTN1', title: 'Mouse Button 1' },
   { name: 'Mouse 2', code: 'KC_BTN2', title: 'Mouse Button 2' },
@@ -136,10 +136,10 @@ export default [
   { name: 'Mouse 4', code: 'KC_BTN4', title: 'Mouse Button 4' },
   { name: 'Mouse 5', code: 'KC_BTN5', title: 'Mouse Button 5' },
   { width: 250 },
-  { name: 'Mouse Wheel Up', code: 'KC_WH_U', title: 'Mouse Wheel Up' },
-  { name: 'Mouse Wheel Down', code: 'KC_WH_D', title: 'Mouse Wheel Down' },
-  { name: 'Mouse Wheel Left', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
-  { name: 'Mouse Wheel Right', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
+  { name: 'Mouse Wheel ▴', code: 'KC_WH_U', title: 'Mouse Wheel Up' },
+  { name: 'Mouse Wheel ▾', code: 'KC_WH_D', title: 'Mouse Wheel Down' },
+  { name: 'Mouse Wheel ◂', code: 'KC_WH_L', title: 'Mouse Wheel Left' },
+  { name: 'Mouse Wheel ▸', code: 'KC_WH_R', title: 'Mouse Wheel Right' },
   { width: 250 },
   {
     name: 'Mouse Accel 0',
