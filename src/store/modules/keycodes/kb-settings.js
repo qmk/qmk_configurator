@@ -183,7 +183,7 @@ export default [
     title: 'Set the backlight to max brightness'
   },
   {
-    name: 'BL ▴',
+    name: 'BL ⏶',
     code: 'BL_UP',
     title: 'Increase the backlight level'
   },
@@ -195,7 +195,7 @@ export default [
     title: 'Turn the backlight off'
   },
   {
-    name: 'BL ▾',
+    name: 'BL ⏷',
     code: 'BL_DOWN',
     title: 'Decrease the backlight level'
   },
@@ -207,11 +207,11 @@ export default [
     code: 'RGB_TOG',
     title: 'Toggle RGB lighting on or off'
   },
-  { name: 'RGB Mode ▸', code: 'RGB_MOD', title: 'Next RGB mode' },
-  { name: 'Hue ▴', code: 'RGB_HUI', title: 'Increase hue' },
-  { name: 'Sat ▴', code: 'RGB_SAI', title: 'Increase saturation' },
-  { name: 'Bright ▴', code: 'RGB_VAI', title: 'Increase value' },
-  { name: 'Speed ▴', code: 'RGB_SPI', title: 'Increase RGB effect speed' },
+  { name: 'RGB Mode ⏵', code: 'RGB_MOD', title: 'Next RGB mode' },
+  { name: 'Hue ⏶', code: 'RGB_HUI', title: 'Increase hue' },
+  { name: 'Sat ⏶', code: 'RGB_SAI', title: 'Increase saturation' },
+  { name: 'Bright ⏶', code: 'RGB_VAI', title: 'Increase value' },
+  { name: 'Speed ⏶', code: 'RGB_SPI', title: 'Increase RGB effect speed' },
   { name: 'RGB Mode P', code: 'RGB_M_P', title: 'RGB Mode: Plain' },
   { name: 'RGB Mode B', code: 'RGB_M_B', title: 'RGB Mode: Breathe' },
   { name: 'RGB Mode R', code: 'RGB_M_R', title: 'RGB Mode: Rainbow' },
@@ -223,9 +223,9 @@ export default [
   { name: 'RGB Mode T', code: 'RGB_M_T', title: 'RGB Mode: Test' },
   { width: 0 },
   { width: 1000 },
-  { name: 'RGB Mode ◂', code: 'RGB_RMOD', title: 'Previous RGB mode' },
-  { name: 'Hue ▾', code: 'RGB_HUD', title: 'Decrease hue' },
-  { name: 'Sat ▾', code: 'RGB_SAD', title: 'Decrease saturation' },
-  { name: 'Bright ▾', code: 'RGB_VAD', title: 'Decrease value' },
-  { name: 'Speed ▾', code: 'RGB_SPD', title: 'Decrease RGB effect speed' }
+  { name: 'RGB Mode ⏴', code: 'RGB_RMOD', title: 'Previous RGB mode' },
+  { name: 'Hue ⏷', code: 'RGB_HUD', title: 'Decrease hue' },
+  { name: 'Sat ⏷', code: 'RGB_SAD', title: 'Decrease saturation' },
+  { name: 'Bright ⏷', code: 'RGB_VAD', title: 'Decrease value' },
+  { name: 'Speed ⏷', code: 'RGB_SPD', title: 'Decrease RGB effect speed' }
 ];
