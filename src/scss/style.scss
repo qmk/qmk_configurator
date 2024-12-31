@@ -552,6 +552,23 @@ button {
   cursor: pointer;
 }
 
+.key .language {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  padding-right: 3px;
+  font-size: 7px;
+  opacity: 0.7;
+}
+.key.key-container div .language {
+  padding-right: 8px;
+  padding-bottom: 1px;
+}
+.key.smaller .language {
+  padding-right: 2px;
+  padding-bottom: 2px;
+}
+
 .key:hover .remove {
   width: unset;
   height: unset;
