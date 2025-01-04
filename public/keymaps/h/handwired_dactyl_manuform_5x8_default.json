@@ -1,9 +1,9 @@
 {
   "version": 1,
   "notes": "",
-  "documentation": "\"This file is a QMK Configurator export. You can import this at <https://config.qmk.fm>. It can also be used directly with QMK's source code.\n\nTo setup your QMK environment check out the tutorial: <https://docs.qmk.fm/#/newbs>\n\nYou can convert this file to a keymap.c using this command: `qmk json2c {keymap}`\n\nYou can compile this keymap using this command: `qmk compile {keymap}`\"\n",
   "keyboard": "handwired/dactyl_manuform/5x8",
   "keymap": "handwired_dactyl_manuform_5x8_default",
+  "commit": "b08e39407b112e3170083b66cb5477e3a670bb03",
   "layout": "LAYOUT_5x8",
   "layers": [
     [
