@@ -17,7 +17,7 @@ keyboards.
 This project is very much a work in progress. To begin contributing, please
 refer to the following:
 
-- [Issues](https://github.com/qmk/qmk_configurator/issues)
+-   [Issues](https://github.com/qmk/qmk_configurator/issues)
 
 ## Development
 
@@ -63,7 +63,7 @@ yarn run lint
 
 ### Run your end-to-end tests
 
-Start the server separatly
+Start the server separately
 
 ```shell
 yarn run test:cypress
@@ -71,7 +71,7 @@ yarn run test:cypress
 
 ### Run your end-to-end tests like CI
 
-Start the server separatly
+Start the server separately
 
 ```shell
 yarn run test:cypress:ci
