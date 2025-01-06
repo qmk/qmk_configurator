@@ -4,7 +4,7 @@
     @dragstart="dragstart" @dragend="dragend" @drop.stop="dropped" @dragleave.prevent="dragleave"
     @dragover.prevent="dragover" @dragenter.prevent="dragenter">{{ displayName }}<font-awesome-icon v-if="icon"
       size="2x" :icon="icon" /><template v-if="visible">
-      <div v-if="visible" class="remove" @click.stop="remove">x</div>
+      <div v-if="visible" class="remove" @click.stop="remove"><font-awesome-icon icon="times" size="xs" /></div>
     </template></div>
 </template>
 <script>

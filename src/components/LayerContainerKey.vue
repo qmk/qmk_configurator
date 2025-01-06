@@ -22,7 +22,7 @@
   @dragleave.prevent="dragleaveContents"
   @click.prevent.stop="clickContents"
   >{{ contents }}</div></div>
-    <div v-if="visible" class="remove" @click.stop="remove">x</div>
+    <div v-if="visible" class="remove" @click.stop="remove"><font-awesome-icon icon="times" size="xs" /></div>
   </div>
 </template>
 <script>
