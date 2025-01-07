@@ -9,7 +9,7 @@
         <label>{{ $t('keycodes.label') }}:</label>
         <span class="hint">
           <a
-            href="https://docs.qmk.fm/#/keycodes"
+            href="https://docs.qmk.fm/keycodes"
             :title="$t('keycodesRef.label')"
             target="_blank"
             rel="noopener"
