@@ -183,7 +183,7 @@ export default {
       );
     },
     configuratorDocsURL() {
-      return 'https://docs.qmk.fm/#/configurator_troubleshooting';
+      return 'https://docs.qmk.fm/configurator_troubleshooting';
     }
   },
   watch: {
