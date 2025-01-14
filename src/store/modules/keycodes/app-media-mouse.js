@@ -138,7 +138,7 @@ export default [
   { name: 'Mouse 6', code: 'MS_BTN6', title: 'Mouse Button 6' },
   { name: 'Mouse 7', code: 'MS_BTN7', title: 'Mouse Button 7' },
   { name: 'Mouse 8', code: 'MS_BTN8', title: 'Mouse Button 8' },
-  { width: 250 },
+  { width: 0 },
   { name: 'Mouse Whl ⏶', code: 'MS_WHLU', title: 'Mouse Wheel Up' },
   { name: 'Mouse Whl ⏷', code: 'MS_WHLD', title: 'Mouse Wheel Down' },
   { name: 'Mouse Whl ⏴', code: 'MS_WHLL', title: 'Mouse Wheel Left' },
