@@ -7,13 +7,14 @@ import ansi from './modules/keycodes/ansi';
 import iso_jis from './modules/keycodes/iso-jis';
 import quantum from './modules/keycodes/quantum';
 import settings from './modules/keycodes/kb-settings';
+import lighting from './modules/keycodes/lighting';
 import media from './modules/keycodes/app-media-mouse';
 import steno from './modules/keycodes/steno';
 
 const keycodePickerTabLayout = {
   ANSI_ISO: [...ansi, ...iso_jis],
   ISO_ANSI: [...iso_jis, ...ansi],
-  special: [...quantum, ...settings, ...media]
+  special: [...quantum, ...settings, ...lighting, ...media]
 };
 
 /**
@@ -126,6 +127,7 @@ export const useKeycodesStore = defineStore('keycodes', {
       'ISO/JIS': 0,
       Quantum: 0,
       KeyboardSettings: 0,
+      Lighting: 0,
       AppMediaMouse: 0
     },
     steno: false,
@@ -165,6 +167,7 @@ export const useKeycodesStore = defineStore('keycodes', {
           'ISO/JIS': countMatches(this.searchFilter, iso_jis),
           Quantum: countMatches(this.searchFilter, quantum),
           KeyboardSettings: countMatches(this.searchFilter, settings),
+          Lighting: countMatches(this.searchFilter, lighting),
           AppMediaMouse: countMatches(this.searchFilter, media)
         };
       }
@@ -203,6 +206,7 @@ export const useKeycodesStore = defineStore('keycodes', {
  *  & Record<'ANSI', number>
  *  & Record<'Quantum', number>
  *  & Record<'KeyboardSettings', number>
+ *  & Record<'Lighting', number>
  *  & Record<'AppMediaMouse', number>
  * } SearchCounters
  *
@@ -214,5 +218,5 @@ export const useKeycodesStore = defineStore('keycodes', {
  * @property {string} searchFilter - current query in keycode picker search filter
  * @property {SearchCounters} searchCounters - count of matching keycodes per tab
  * @property {boolean} steno - is steno tab active
- * @property {'ANSI'|'ISO/JIS'|'AppMediaMouse'|'Quantum'|'Steno'|'KeyboardSettings'} active - active tab
+ * @property {'ANSI'|'ISO/JIS'|'AppMediaMouse'|'Quantum'|'Steno'|'KeyboardSettings'|'Lighting'} active - active tab
  */

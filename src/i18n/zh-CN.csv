@@ -46,6 +46,7 @@ keycodesTab:ANSI:label,ANSI
 keycodesTab:AppMediaMouse:label,应用、多媒体和鼠标
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,键盘设置
+keycodesTab:Lighting:label,
 keycodesTab:Quantum:label,量子
 keycodesTab:Steno:label,
 keymap:label,键位
