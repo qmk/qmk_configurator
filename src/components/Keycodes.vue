@@ -167,7 +167,7 @@ export default {
 }
 .tabs {
   display: grid;
-  grid-template: auto / repeat(6, minmax(60px, 200px));
+  grid-template: auto / repeat(7, minmax(60px, 200px));
 }
 .tab {
   text-overflow: ellipsis;
@@ -184,10 +184,6 @@ export default {
   z-index: 100;
   cursor: pointer;
   margin-bottom: -1px;
-}
-.end-tab {
-  grid-column: -1;
-  justify-self: end;
 }
 .end-tab input {
   padding: 3px 7px;
