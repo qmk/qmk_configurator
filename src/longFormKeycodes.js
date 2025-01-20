@@ -164,17 +164,8 @@ export const longFormKeycodes = {
   SWIN: 'SGUI',
 
   // RGB Lighting
-  RGB_MODE_FORWARD: 'RGB_MOD',
-  RGB_MODE_REVERSE: 'RGB_RMOD',
-  RGB_MODE_PLAIN: 'RGB_M_P',
-  RGB_MODE_BREATHE: 'RGB_M_B',
-  RGB_MODE_RAINBOW: 'RGB_M_R',
-  RGB_MODE_SWIRL: 'RGB_M_SW',
-  RGB_MODE_SNAKE: 'RGB_M_SN',
-  RGB_MODE_KNIGHT: 'RGB_M_K',
-  RGB_MODE_XMAS: 'RGB_M_X',
-  RGB_MODE_GRADIENT: 'RGB_M_G',
-  RGB_MODE_RGBTEST: 'RGB_M_T',
+  RGB_MODE_FORWARD: 'UG_NEXT',
+  RGB_MODE_REVERSE: 'UG_PREV',
 
   // US ANSI Shifted Symbols
   KC_TILDE: 'KC_TILD',
@@ -264,6 +255,18 @@ export const longFormKeycodes = {
   // Grave Escape
   GRAVE_ESC: 'QK_GESC',
   KC_GESC: 'QK_GESC',
+  // RGBLight
+  RGB_TOG: 'UG_TOGG',
+  RGB_MOD: 'UG_NEXT',
+  RGB_RMOD: 'UG_PREV',
+  RGB_HUI: 'UG_HUEU',
+  RGB_HUD: 'UG_HUED',
+  RGB_SAI: 'UG_SATU',
+  RGB_SAD: 'UG_SATD',
+  RGB_VAI: 'UG_VALU',
+  RGB_VAD: 'UG_VALD',
+  RGB_SPI: 'UG_SPDU',
+  RGB_SPD: 'UG_SPDD',
   // Space Cadet
   KC_LCPO: 'SC_LCPO',
   KC_RCPC: 'SC_RCPC',
