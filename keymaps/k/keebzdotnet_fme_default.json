@@ -1,0 +1,18 @@
+{
+  "keyboard": "keebzdotnet/fme",
+  "keymap": "default",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+      "KC_K",    "KC_T",    "KC_H",    "KC_X",    "KC_BSPC",
+      "KC_B",    "KC_Y",    "KC_E",               "MO(1)",
+      "KC_SPC",             "KC_SPC",  "KC_SPC",  "KC_SPC"
+    ],
+    [
+      "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS",
+      "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

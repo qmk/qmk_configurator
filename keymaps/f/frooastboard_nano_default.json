@@ -1,0 +1,36 @@
+{
+  "keyboard": "frooastboard/nano",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",         "KC_X",
+      "LT(1,KC_ESC)", "KC_TILD"
+    ],
+    [
+      "KC_F23",  "KC_F24",
+      "KC_TRNS", "TO(2)"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT",
+      "TO(3)",   "TO(0)"
+    ],
+    [
+      "UG_HUED", "UG_HUEU",
+      "TO(4)",   "TO(2)"
+    ],
+    [
+      "UG_SATD", "UG_SATU",
+      "TO(5)",   "TO(3)"
+    ],
+    [
+      "UG_VALD", "UG_VALU",
+      "TO(6)",   "TO(4)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS",
+      "QK_BOOT", "TO(5)"
+    ]
+  ]
+}

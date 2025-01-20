@@ -1,0 +1,12 @@
+{
+  "keyboard": "mexsistor/ludmila",
+  "keymap": "default",
+  "commit": "5629ba18077ee5dcde72e497ddf46d848817dd5c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_COPY", "KC_PSCR", "KC_MUTE",
+      "KC_PSTE", "KC_ENT"
+    ]
+  ]
+}

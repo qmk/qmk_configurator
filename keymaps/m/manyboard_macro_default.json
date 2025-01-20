@@ -1,0 +1,26 @@
+{
+  "keyboard": "manyboard/macro",
+  "keymap": "default",
+  "commit": "319ac3b27bbccc4906ba0316d9cc9226af763729",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_F1",  "KC_F2",  "KC_F3",  "KC_F4",
+      "KC_F5",  "KC_F6",  "KC_F7",  "KC_F8",
+      "KC_F9",  "KC_F10", "KC_F11", "KC_F12",
+      "KC_F13", "KC_F14", "KC_F15", "TO(1)"
+    ],
+    [
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "TO(2)"
+    ],
+    [
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "KC_TRNS",
+      "KC_TRNS",  "KC_TRNS",  "KC_TRNS",  "TO(0)"
+    ]
+  ]
+}
