@@ -1,0 +1,18 @@
+{
+  "keyboard": "ckeys/washington",
+  "keymap": "default",
+  "commit": "7ff80a57cbe57e888646c3b90e2f4f9dea977156",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_PGUP", "KC_UP",   "KC_PGDN",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT",
+      "MO(1)",   "KC_MUTE", "BL_TOGG"
+    ],
+    [
+      "KC_HOME", "KC_CALC", "KC_END",
+      "BL_STEP", "KC_ESC",  "KC_SLEP",
+      "KC_TRNS", "KC_MPLY", "QK_BOOT"
+    ]
+  ]
+}

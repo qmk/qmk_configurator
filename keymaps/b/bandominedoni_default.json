@@ -1,0 +1,47 @@
+{
+  "keyboard": "bandominedoni",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MI_Gs1",  "MI_As1",  "MI_Cs2",  "MI_F2",   "MI_Gs3",
+      "MI_E1",   "MI_A1",   "MI_G2",   "MI_Ds2",  "MI_F3",   "MI_As2",        "MI_F1",
+      "MI_D2",   "MI_A2",   "MI_C3",   "MI_E3",   "MI_C2",   "MI_G1",         "TG(1)",
+      "MI_E2",   "MI_Gs2",  "MI_B2",   "MI_D3",   "MI_Fs3",  "MI_Cs3",        "MI_Fs1",
+      "MI_D1",   "MI_B1",   "MI_G3",   "MI_A3",   "MI_Ds3",  "MI_Fs2",        "MI_Ds1",  "MI_C1",
+      "MO(1)",   "MI_B5",   "MI_Gs5",  "MI_G5",   "MI_F5",   "LT(2,KC_MUTE)",
+      "MI_Cs3",  "MI_A5",   "MI_Fs5",  "MI_E5",   "MI_Ds5",
+      "MI_C3",   "MI_D3",   "MI_G3",   "MI_As4",  "MI_C5",   "MI_D5",
+      "TG(1)",   "MI_B2",   "MI_E3",   "MI_Cs4",  "MI_Fs3",  "MI_A3",         "MI_C4",   "MI_E4",
+      "MI_A2",   "MI_F3",   "MI_As3",  "MI_Gs3",  "MI_B3",   "MI_D4",         "MI_Gs4",  "MI_B4",
+      "MI_Gs2",  "MI_As2",  "MI_Ds3",  "MI_F4",   "MI_Ds4",  "MI_Fs4",        "MI_A4",   "MI_Cs5",  "MI_G4"
+    ],
+    [
+      "MI_Gs1",  "MI_As1",  "MI_Ds2",  "MI_Ds3",  "MI_G3",
+      "MI_D1",   "MI_D2",   "MI_As2",  "MI_C3",   "MI_Cs2",  "MI_C2",         "MI_Fs1",
+      "MI_G1",   "MI_G2",   "MI_B2",   "MI_D3",   "MI_F3",   "MI_Fs2",        "TG(1)",
+      "MI_A1",   "MI_E2",   "MI_A2",   "MI_Cs3",  "MI_E3",   "MI_Gs2",        "MI_B1",
+      "MI_E1",   "MI_E2",   "MI_Fs3",  "MI_Gs3",  "MI_B3",   "MI_F2",         "MI_Cs1",  "MI_F1",
+      "MO(1)",   "MI_A5",   "MI_Gs5",  "MI_Fs5",  "MI_F5",   "LT(2,KC_MUTE)",
+      "MI_C3",   "MI_G5",   "MI_As4",  "MI_C5",   "MI_Ds5",
+      "MI_D3",   "MI_Cs3",  "MI_Gs3",  "MI_As3",  "MI_C4",   "MI_D5",
+      "TG(1)",   "MI_B2",   "MI_Fs3",  "MI_Fs4",  "MI_G3",   "MI_B3",         "MI_D4",   "MI_G4",
+      "MI_A2",   "MI_F3",   "MI_E3",   "MI_A3",   "MI_Cs4",  "MI_E4",         "MI_A4",   "MI_Cs5",
+      "MI_Gs2",  "MI_As2",  "MI_Ds3",  "MI_F4",   "MI_E4",   "MI_Gs4",        "MI_B4",   "MI_E5",   "MI_Ds4"
+    ],
+    [
+      "DF(0)",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "_______",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "_______", "MI_OCTD", "MI_OCTU", "MI_VELD", "MI_VELU", "_______",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}

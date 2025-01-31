@@ -1,0 +1,11 @@
+{
+  "keyboard": "1k",
+  "keymap": "default",
+  "commit": "6fa11bf21913b5ccb531acc3c2baec963f4d384a",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "UG_HUEU"
+    ]
+  ]
+}

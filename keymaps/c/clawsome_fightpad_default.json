@@ -1,0 +1,12 @@
+{
+  "keyboard": "clawsome/fightpad",
+  "keymap": "default",
+  "commit": "266ff3339a72a9c44913cfd97e232adafe8feb51",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_W",               "KC_U",    "KC_I",    "KC_O",    "KC_P",
+      "KC_A",    "KC_S",    "KC_D",    "KC_H",    "KC_J",    "KC_K",    "KC_L"
+    ]
+  ]
+}

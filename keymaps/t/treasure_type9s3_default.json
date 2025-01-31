@@ -1,0 +1,28 @@
+{
+  "keyboard": "treasure/type9s3",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "MO(1)",   "KC_MPLY", "RM_TOGG",
+      "KC_VOLD", "KC_MUTE", "KC_VOLU",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ],
+    [
+      "KC_TRNS", "RGB_M_P", "MO(2)",
+      "RM_NEXT", "RM_HUEU", "RM_VALU",
+      "RM_PREV", "RM_HUED", "RM_VALD"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "MO(3)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "QK_BOOT", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

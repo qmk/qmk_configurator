@@ -1,0 +1,24 @@
+{
+  "keyboard": "makrosu",
+  "keymap": "default",
+  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_F1",   "KC_F2",
+      "MO(3)",   "KC_Z",    "KC_X"
+    ],
+    [
+      "A(KC_TAB)", "G(KC_TAB)", "C(KC_S)",
+      "MO(3)",     "C(KC_C)",   "C(KC_V)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "PDF(0)",  "PDF(1)",  "PDF(2)",
+      "_______", "_______", "_______"
+    ]
+  ]
+}

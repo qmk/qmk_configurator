@@ -1,0 +1,13 @@
+{
+  "keyboard": "tweetydabird/lbs6",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_MPLY",
+      "UG_NEXT", "UG_VALU", "UG_TOGG",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ]
+  ]
+}

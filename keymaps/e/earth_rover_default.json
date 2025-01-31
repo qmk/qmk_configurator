@@ -1,0 +1,14 @@
+{
+  "keyboard": "earth_rover",
+  "keymap": "default",
+  "commit": "784a9cdca4e776150af6b996f8944af89541f2f5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_A",    "KC_B",
+      "KC_C",    "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",    "KC_J",
+      "KC_K",    "KC_L",    "KC_M",    "KC_N"
+    ]
+  ]
+}

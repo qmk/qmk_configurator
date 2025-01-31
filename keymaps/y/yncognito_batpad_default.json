@@ -1,0 +1,20 @@
+{
+  "keyboard": "yncognito/batpad",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_ortho_2x4",
+  "layers": [
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+      "KC_LGUI", "KC_SPC",  "RM_TOGG", "RM_NEXT"
+    ],
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+      "KC_LGUI", "KC_SPC",  "RM_TOGG", "RM_NEXT"
+    ],
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+      "KC_LGUI", "KC_SPC",  "RM_TOGG", "RM_NEXT"
+    ]
+  ]
+}
