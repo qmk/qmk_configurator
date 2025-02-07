@@ -24,7 +24,7 @@
         v-if="visible"
         class="remove"
         @click.stop="remove"
-      >x</div></div>
+      ><font-awesome-icon icon="times" size="xs" /></div></div>
 </template>
 <script>
 import isUndefined from 'lodash/isUndefined';

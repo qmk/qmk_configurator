@@ -10,11 +10,11 @@ const getters = {
   filter: (state) => state.filter,
   exportKeymapName: (state) => {
     let exportName = state.keymapName.replace(/[\s/]/g, '_').toLowerCase();
-    let keyboardName = state.keyboard.replace(/[\s/]/g, '_').toLowerCase();
+    const keyboardName = state.keyboard.replace(/[\s/]/g, '_').toLowerCase();
     if (exportName === '') {
-      exportName = `${keyboardName}_${state.layout}_mine`.toLowerCase();
-    } else {
-      exportName = `${keyboardName}_${exportName}`.toLowerCase();
+      const currentISODate = new Date().toISOString().split('T')[0];
+      exportName =
+        `${keyboardName}_${state.layout}_${currentISODate}`.toLowerCase();
     }
     // issue #331 whitelist what we send to API for keymapName and save to disk
     exportName = exportName.replace(/[^a-z0-9_-]/gi, '');

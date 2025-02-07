@@ -23,7 +23,7 @@
                  "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"
     ],
     [
-      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "RGB_RST", "XXXXXXX", "XXXXXXX", "XXXXXXX",     "XXXXXXX",    "_______",
+      "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",     "XXXXXXX",    "_______",
       "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "UG_TOGG", "UG_NEXT", "XXXXXXX", "LCA(KC_DEL)", "A(KC_PSCR)", "KC_PSCR",
       "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",                       "UG_VALD", "UG_VALU", "UG_HUED", "UG_HUEU",     "UG_SATD",    "UG_SATU",
                  "_______", "_______", "_______", "_______", "_______", "QK_BOOT", "QK_BOOT", "_______", "_______", "_______", "_______",     "_______"

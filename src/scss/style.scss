@@ -550,11 +550,16 @@ button {
   padding-right: 2px;
   // color: #ccc;
   cursor: pointer;
+  opacity: 0.5;
 }
 
 .key:hover .remove {
   width: unset;
   height: unset;
+}
+
+.key:hover .remove:hover {
+  opacity: 1;
 }
 
 // .key.active-key {
