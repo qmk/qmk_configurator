@@ -1,7 +1,7 @@
 {
   "keyboard": "maxr1998/phoebe",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "894b9c458d91e0ecb5c482e8071315db8842e2b8",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -9,7 +9,7 @@
       "KC_GRV",  "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T",    "KC_Y",    "KC_U",    "KC_I",    "KC_O",    "KC_P",    "KC_BSPC",
       "KC_TAB",  "KC_A",    "KC_S",    "KC_D",    "KC_F",    "KC_G",    "KC_H",    "KC_J",    "KC_K",    "KC_L",    "KC_RBRC", "KC_ENT",
       "KC_LSFT", "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_B",    "KC_N",    "KC_M",    "KC_COMM", "KC_DOT",  "KC_UP",   "SC_RSPC",
-      "KC_LCTL", "KC_LGUI", "KC_LALT", "QK_LEAD", "MO(1)",        "KC_SPC",        "KC_RALT", "MO(2)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
+      "KC_LCTL", "KC_LGUI", "KC_LALT", "KC_BTN1", "KC_SC",        "KC_SPC",        "KC_ALGR", "KC_FN",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
@@ -23,7 +23,7 @@
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_LBRC", "KC_F9",    "KC_SCLN",  "KC_PSCR", "KC_DEL",
       "QK_LOCK", "KC_QUOT", "KC_MINS", "_______", "_______", "TO(3)",   "_______", "RGB_M_P", "RGB_M_SW", "RGB_M_SN", "_______", "_______",
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "UG_HUED", "UG_TOGG",  "UG_HUEU",  "KC_PGUP", "_______",
-      "XXXXXXX", "_______", "XXXXXXX", "XXXXXXX", "XXXXXXX",      "_______",       "XXXXXXX", "XXXXXXX",  "KC_HOME",  "KC_PGDN", "KC_END"
+      "XXXXXXX", "_______", "XXXXXXX", "KC_BTN2", "XXXXXXX",      "_______",       "XXXXXXX", "XXXXXXX",  "KC_HOME",  "KC_PGDN", "KC_END"
     ],
     [
       "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
