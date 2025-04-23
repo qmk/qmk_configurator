@@ -1,0 +1,11 @@
+{
+  "keyboard": "5keys",
+  "keymap": "default",
+  "commit": "3a8c76fae59387df3435948a424cdd0fcda7d66f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_WBAK", "KC_WFWD", "LSG_T(KC_S)", "G(KC_L)", "MO(1)"
+    ]
+  ]
+}

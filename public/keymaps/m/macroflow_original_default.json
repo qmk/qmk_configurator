@@ -1,0 +1,48 @@
+{
+  "keyboard": "macroflow_original",
+  "keymap": "default",
+  "commit": "03937e0c86109b7a488794bb8568d53d48d4ed16",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_0",                          "TO(1)",
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ],
+    [
+      "KC_9",                          "TO(2)",
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_E",    "KC_F",    "KC_G",    "KC_H"
+    ],
+    [
+      "KC_I",                          "TO(3)",
+      "KC_J",    "KC_K",    "KC_L",    "KC_M",
+      "KC_N",    "KC_O",    "KC_P",    "KC_Q"
+    ],
+    [
+      "KC_R",                          "TO(4)",
+      "KC_S",    "KC_T",    "KC_U",    "KC_V",
+      "KC_W",    "KC_X",    "KC_Y",    "KC_Z"
+    ],
+    [
+      "KC_TRNS",                       "TO(5)",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "TO(6)",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "TO(7)",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",                       "TO(0)",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

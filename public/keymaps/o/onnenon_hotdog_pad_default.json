@@ -1,0 +1,11 @@
+{
+  "keyboard": "onnenon/hotdog_pad",
+  "keymap": "default",
+  "commit": "be7786bfc6f8e14a796cf13991428d1ef8135f26",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",    "KC_MUTE"
+    ]
+  ]
+}
