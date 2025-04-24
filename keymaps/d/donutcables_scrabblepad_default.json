@@ -1,0 +1,25 @@
+{
+  "keyboard": "donutcables/scrabblepad",
+  "keymap": "default",
+  "commit": "0f0ebde0aa51b2d9bd9a817c0c6c2c5ef53e16e9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC",
+      "KC_SPC",  "KC_SPC",  "KC_S",    "KC_C",    "KC_R",    "KC_A",    "KC_B",    "KC_B",    "KC_L",    "KC_E",    "KC_P",    "KC_A",    "KC_D",    "KC_SPC",  "KC_SPC"
+    ]
+  ]
+}

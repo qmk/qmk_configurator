@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/frankie_macropad",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                            "KC_HOME", "KC_MUTE",
+      "KC_BRID", "KC_BRIU", "KC_NO",   "KC_NO",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_NO"
+    ]
+  ]
+}

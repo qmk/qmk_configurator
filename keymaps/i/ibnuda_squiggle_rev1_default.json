@@ -1,0 +1,32 @@
+{
+  "keyboard": "ibnuda/squiggle/rev1",
+  "keymap": "default",
+  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Q",         "KC_W",         "KC_E",         "KC_R",          "KC_T",           "KC_Y",           "KC_U",         "KC_I",         "KC_O",         "KC_P",
+      "RSFT_T(KC_A)", "RCTL_T(KC_S)", "RALT_T(KC_D)", "KC_F",          "RGUI_T(KC_G)",   "RGUI_T(KC_H)",   "KC_J",         "RALT_T(KC_K)", "RCTL_T(KC_L)", "RSFT_T(KC_SCLN)",
+      "KC_Z",         "KC_X",         "KC_C",         "KC_V",          "KC_B",           "KC_N",           "KC_M",         "KC_COMM",      "KC_DOT",       "KC_SLSH",
+                                                      "LT(1,KC_BSPC)", "LSFT_T(KC_ESC)", "LALT_T(KC_ENT)", "LT(2,KC_SPC)"
+    ],
+    [
+      "KC_ESC",  "KC_QUES", "KC_UNDS", "KC_F1",   "KC_F2",      "KC_F3",   "KC_F4",   "KC_MINS", "KC_SLSH", "KC_BSPC",
+      "KC_LSFT", "KC_TAB",  "KC_PGUP", "KC_F5",   "KC_F6",      "KC_F7",   "KC_F8",   "KC_HOME", "KC_LALT", "KC_ENT",
+      "KC_CAPS", "KC_SCRL", "KC_PGDN", "KC_F9",   "KC_F10",     "KC_F11",  "KC_F12",  "KC_END",  "KC_INS",  "KC_SLSH",
+                                       "MO(3)",   "_______",    "KC_DEL",  "MO(3)"
+    ],
+    [
+      "KC_EXLM", "KC_AT",   "KC_UP",   "KC_LCBR", "KC_RCBR",    "KC_BSLS",        "KC_7",         "KC_8",    "KC_9",    "KC_ASTR",
+      "KC_HASH", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_DLR",     "KC_EQL",         "KC_4",         "KC_5",    "KC_6",    "KC_0",
+      "KC_LBRC", "KC_RBRC", "KC_LPRN", "KC_RPRN", "KC_AMPR",    "KC_GRV",         "KC_1",         "KC_2",    "KC_3",    "KC_PLUS",
+                                       "MO(3)",   "_______",    "LALT_T(KC_ENT)", "LT(2,KC_SPC)"
+    ],
+    [
+      "_______",      "G(KC_E)",  "KC_UP",   "C(KC_PGUP)", "A(S(KC_TAB))",     "A(KC_TAB)",     "C(KC_PGDN)", "_______", "_______", "G(KC_L)",
+      "C(S(KC_ESC))", "KC_LEFT",  "KC_DOWN", "KC_RGHT",    "C(S(KC_PGUP))",    "C(S(KC_PGDN))", "KC_ENT",     "KC_LGUI", "_______", "C(A(KC_DEL))",
+      "_______",      "A(KC_F4)", "_______", "S(KC_INS)",  "QK_BOOT",          "_______",       "_______",    "_______", "_______", "_______",
+                                             "_______",    "_______",          "_______",       "_______"
+    ]
+  ]
+}

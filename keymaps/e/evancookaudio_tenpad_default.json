@@ -1,0 +1,12 @@
+{
+  "keyboard": "evancookaudio/tenpad",
+  "keymap": "default",
+  "commit": "4c9c7b9963ac0b7ee0c2285166678eac7f0b3c14",
+  "layout": "LAYOUT_ortho_2x5",
+  "layers": [
+    [
+      "KC_Q",  "KC_W",    "KC_E",    "KC_R",    "KC_T",
+      "KC_A",  "KC_S",    "KC_D",    "KC_F",    "KC_G"
+    ]
+  ]
+}

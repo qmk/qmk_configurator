@@ -1,0 +1,40 @@
+{
+  "keyboard": "adpenrose/akemipad",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+                 "MO(1)",   "MO(2)",   "MO(3)",   "KC_DEL",
+                 "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+                 "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+                 "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+                 "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_MUTE", "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+                 "KC_TRNS", "CK_DOWN", "CK_UP",   "CK_RST",
+                 "MU_TOGG", "MU_NEXT", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "CK_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+                 "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

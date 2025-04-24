@@ -1,0 +1,26 @@
+{
+  "keyboard": "doio/kb12",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",      "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",      "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",      "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12"
+    ],
+    [
+      "TO(2)",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(3)",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(4)",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(5)",      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(0)",      "RM_TOGG", "RM_NEXT", "RM_SPDU", "RM_SPDD",    "RM_SATU", "RM_SATD", "RM_HUEU", "RM_HUED",    "RM_VALU", "RM_VALD", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}
