@@ -46,6 +46,7 @@ keycodesTab:ANSI:label,ANSI
 keycodesTab:AppMediaMouse:label,"Aplikacje, Mysz i Multimedia"
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,Ustawienia klawiatury
+keycodesTab:Lighting:label,
 keycodesTab:Quantum:label,Quantum
 keycodesTab:Steno:label,
 keymap:label,Mapa klawiszy
