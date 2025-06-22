@@ -7,7 +7,7 @@ function makeLT(layer) {
     code: `LT(${layer},kc)`,
     type: 'layer-container',
     layer: layer,
-    title: `kc on tap, switch to layer ${layer} while held`
+    title: `Momentarily turn on layer ${layer} while held, kc when tapped`
   };
 }
 // make a One-Shot Mod Keycode Definition
@@ -20,17 +20,23 @@ const osmLookup = {
   MOD_RCTL: ['RCtl', 'Right Control'],
   MOD_RALT: ['RAlt', 'Right Alt'],
   MOD_RGUI: ['RGUI', 'Right GUI'],
-  MOD_HYPR: ['Hyper', 'Control, Shift, Alt and GUI'],
-  MOD_MEH: ['Meh', 'Control, Shift, and Alt'],
-  'MOD_LCTL|MOD_LSFT': ['CS', 'Control and Shift'],
-  'MOD_LCTL|MOD_LALT': ['CA', 'Control and Alt'],
-  'MOD_LCTL|MOD_LGUI': ['CG', 'Control and GUI'],
-  'MOD_LSFT|MOD_LALT': ['SA', 'Shift and Alt'],
-  'MOD_LSFT|MOD_LGUI': ['SG', 'Shift and GUI'],
-  'MOD_LALT|MOD_LGUI': ['AG', 'Alt and GUI'],
-  'MOD_LCTL|MOD_LSFT|MOD_LGUI': ['CSG', 'Control, Shift, and GUI'],
-  'MOD_LCTL|MOD_LALT|MOD_LGUI': ['CAG', 'Control, Alt, and GUI'],
-  'MOD_LSFT|MOD_LALT|MOD_LGUI': ['SAG', 'Shift, Alt, and GUI'],
+  MOD_HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI'],
+  MOD_MEH: ['Meh', 'Left Control, Left Shift, and Left Alt'],
+  'MOD_LCTL|MOD_LSFT': ['LCS', 'Left Control and Left Shift'],
+  'MOD_LCTL|MOD_LALT': ['LCA', 'Left Control and Left Alt'],
+  'MOD_LCTL|MOD_LGUI': ['LCG', 'Left Control and Left GUI'],
+  'MOD_LSFT|MOD_LALT': ['LSA', 'Left Shift and Left Alt'],
+  'MOD_LSFT|MOD_LGUI': ['LSG', 'Left Shift and Left GUI'],
+  'MOD_LALT|MOD_LGUI': ['LAG', 'Left Alt and Left GUI'],
+  'MOD_LCTL|MOD_LSFT|MOD_LGUI': [
+    'LCSG',
+    'Left Control, Left Shift, and Left GUI'
+  ],
+  'MOD_LCTL|MOD_LALT|MOD_LGUI': [
+    'LCAG',
+    'Left Control, Left Alt, and Left GUI'
+  ],
+  'MOD_LSFT|MOD_LALT|MOD_LGUI': ['LSAG', 'Left Shift, Left Alt, and Left GUI'],
   'MOD_RCTL|MOD_RSFT': ['RCS', 'Right Control and Right Shift'],
   'MOD_RCTL|MOD_RALT': ['RCA', 'Right Control and Right Alt'],
   'MOD_RCTL|MOD_RGUI': ['RCG', 'Right Control and Right GUI'],
@@ -59,7 +65,7 @@ function makeOSM(mod, width = 1000) {
   return {
     name: `OSM ${name}`,
     code: `OSM(${mod})`,
-    title: `Enable ${title} for one keypress`,
+    title: `Hold ${title} for one keypress`,
     width: width
   };
 }
@@ -67,35 +73,31 @@ function makeOSM(mod, width = 1000) {
 export default [
   { label: 'Quantum', width: 'label', group: true },
 
-  { label: 'QMK specific', width: 'label' },
-
   { name: '', code: 'KC_NO', title: 'Do nothing' },
   {
     name: '▽',
     code: 'KC_TRNS',
     title: 'Use the next lowest non-transparent key'
   },
-  { name: 'Reset', code: 'QK_BOOT', title: 'Reset the keyboard' },
+
+  { width: 1000 },
+
+  {
+    name: 'Boot',
+    code: 'QK_BOOT',
+    title: 'Put the keyboard into bootloader mode for flashing'
+  },
+  { name: 'Reboot', code: 'QK_RBT', title: 'Reset the keyboard' },
   { name: 'Debug', code: 'DB_TOGG', title: 'Toggle debug mode' },
   {
-    name: 'EEPROM Reset',
+    name: 'Clear EEPROM',
     code: 'EE_CLR',
-    title: 'Resets EEPROM state',
+    title: "Reinitialize the keyboard's EEPROM (persistent memory)",
     width: 1500
   },
-  {
-    name: 'Repeat',
-    code: 'QK_REP',
-    title: 'Repeat last key pressed',
-    width: 1500
-  },
-  {
-    name: 'Alt Repeat',
-    code: 'QK_AREP',
-    title: 'Perform alternate of last key pressed',
-    width: 1500
-  },
+
   { width: 1000 },
+
   {
     name: 'Any',
     code: 'text',
@@ -117,21 +119,23 @@ export default [
     code: 'MO(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Momentary turn layer on. AKA FN'
+    title:
+      'Momentarily turn on layer when pressed (requires KC_TRNS on destination layer)'
   },
   {
     name: 'TG',
     code: 'TG(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Toggle layer on/off'
+    title: 'Toggle layer on or off'
   },
   {
     name: 'TO',
     code: 'TO(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Turn on layer when pressed'
+    title:
+      'Turn on layer and turn off all other layers, except the default layer'
   },
   {
     name: 'TT',
@@ -139,21 +143,28 @@ export default [
     type: 'layer',
     layer: 0,
     title:
-      "Normally acts like MO unless it's tapped multple times which toggles layer on"
+      "Normally acts like MO unless it's tapped multiple times, which toggles layer on"
   },
   {
     name: 'DF',
     code: 'DF(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Sets the default layer'
+    title: 'Set the base (default) layer until the keyboard loses power'
+  },
+  {
+    name: 'PDF',
+    code: 'PDF(layer)',
+    type: 'layer',
+    layer: 0,
+    title: 'Set the base (default) layer in EEPROM'
   },
   {
     name: 'OSL',
     code: 'OSL(layer)',
     type: 'layer',
     layer: 0,
-    title: 'Switch to layer for one keypress'
+    title: 'Momentarily activates layer until a key is pressed'
   },
 
   { width: 500 },
@@ -166,7 +177,9 @@ export default [
   makeLT(5),
   makeLT(6),
   makeLT(7),
+
   { width: 250 },
+
   makeLT(8),
   makeLT(9),
   makeLT(10),
@@ -178,31 +191,153 @@ export default [
 
   {
     label:
-      'Mod key combinations (A = Alt, C = Control, G = Windows/Command/GUI, S = Shift)',
+      'Mod key combinations (C = Control, S = Shift, A = Alt, G = GUI/Windows/Command/Super)',
     width: 'label'
   },
 
-  { name: 'LSft', code: 'LSFT(kc)', type: 'container', title: 'Left Shift' },
-  { name: 'LCtl', code: 'LCTL(kc)', type: 'container', title: 'Left Control' },
-  { name: 'LAlt', code: 'LALT(kc)', type: 'container', title: 'Left Alt' },
-  { name: 'LGui', code: 'LGUI(kc)', type: 'container', title: 'Left GUI' },
-  { width: 250 },
-  { name: 'RSft', code: 'RSFT(kc)', type: 'container', title: 'Right Shift' },
-  { name: 'RCtl', code: 'RCTL(kc)', type: 'container', title: 'Right Control' },
-  { name: 'RAlt', code: 'RALT(kc)', type: 'container', title: 'Right Alt' },
-  { name: 'RGui', code: 'RGUI(kc)', type: 'container', title: 'Right GUI' },
-  { width: 0 },
   {
-    name: 'LSft_T',
-    code: 'LSFT_T(kc)',
+    name: 'LCtl',
+    code: 'LCTL(kc)',
     type: 'container',
-    title: 'Left Shift when held, kc when tapped'
+    title: 'Hold Left Control and press kc'
   },
+  {
+    name: 'LSft',
+    code: 'LSFT(kc)',
+    type: 'container',
+    title: 'Hold Left Shift and press kc'
+  },
+  {
+    name: 'LAlt',
+    code: 'LALT(kc)',
+    type: 'container',
+    title: 'Hold Left Alt and press kc'
+  },
+  {
+    name: 'LGUI',
+    code: 'LGUI(kc)',
+    type: 'container',
+    title: 'Hold Left GUI and press kc'
+  },
+
+  { width: 250 },
+
+  { width: 1000 }, // LCS
+  {
+    name: 'LCA',
+    code: 'LCA(kc)',
+    type: 'container',
+    title: 'Hold Left Control and Left Alt and press kc'
+  },
+  {
+    name: 'LSA',
+    code: 'LSA(kc)',
+    type: 'container',
+    title: 'Hold Left Shift and Left Alt and press kc'
+  },
+  {
+    name: 'LSG',
+    code: 'LSG(kc)',
+    type: 'container',
+    title: 'Hold Left Shift and Left GUI and press kc'
+  },
+  {
+    name: 'LAG',
+    code: 'LAG(kc)',
+    type: 'container',
+    title: 'Hold Left Alt and Left GUI and press kc'
+  },
+  {
+    name: 'LCAG',
+    code: 'LCAG(kc)',
+    type: 'container',
+    title: 'Hold Left Control, Left Alt and Left GUI and press kc'
+  },
+
+  { width: 1000 },
+
+  {
+    name: 'RCtl',
+    code: 'RCTL(kc)',
+    type: 'container',
+    title: 'Hold Right Control and press kc'
+  },
+  {
+    name: 'RSft',
+    code: 'RSFT(kc)',
+    type: 'container',
+    title: 'Hold Right Shift and press kc'
+  },
+  {
+    name: 'RAlt',
+    code: 'RALT(kc)',
+    type: 'container',
+    title: 'Hold Right Alt and press kc'
+  },
+  {
+    name: 'RGUI',
+    code: 'RGUI(kc)',
+    type: 'container',
+    title: 'Hold Right GUI and press kc'
+  },
+
+  { width: 250 },
+
+  {
+    name: 'RCS',
+    code: 'RCS(kc)',
+    type: 'container',
+    title: 'Hold Right Control and Right Shift and press kc'
+  },
+  { width: 1000 }, // RCA
+  {
+    name: 'RSA',
+    code: 'RSA(kc)',
+    type: 'container',
+    title: 'Hold Right Shift and Right Alt and press kc'
+  },
+  {
+    name: 'RSG',
+    code: 'RSG(kc)',
+    type: 'container',
+    title: 'Hold Right Shift and Right GUI and press kc'
+  },
+  {
+    name: 'RAG',
+    code: 'RAG(kc)',
+    type: 'container',
+    title: 'Hold Right Alt and Right GUI and press kc'
+  },
+  { width: 1000 }, // RCAG
+
+  { width: 1000 },
+
+  {
+    name: 'Meh',
+    code: 'MEH(kc)',
+    type: 'container',
+    title: 'Hold Left Control, Shift and Alt and press kc'
+  },
+  {
+    name: 'Hyper',
+    code: 'HYPR(kc)',
+    type: 'container',
+    title: 'Hold Left Control, Shift, Alt and GUI and press kc'
+  },
+
+  { width: 0 },
+
   {
     name: 'LCtl_T',
     code: 'LCTL_T(kc)',
     type: 'container',
     title: 'Left Control when held, kc when tapped'
+  },
+  {
+    name: 'LSft_T',
+    code: 'LSFT_T(kc)',
+    type: 'container',
+    title: 'Left Shift when held, kc when tapped'
   },
   {
     name: 'LAlt_T',
@@ -211,23 +346,64 @@ export default [
     title: 'Left Alt when held, kc when tapped'
   },
   {
-    name: 'LGui_T',
+    name: 'LGUI_T',
     code: 'LGUI_T(kc)',
     type: 'container',
     title: 'Left GUI when held, kc when tapped'
   },
+
   { width: 250 },
+
   {
-    name: 'RSft_T',
-    code: 'RSFT_T(kc)',
+    name: 'C_S_T',
+    code: 'C_S_T(kc)',
     type: 'container',
-    title: 'Right Shift when held, kc when tapped'
+    title: 'Left Control and Left Shift when held, kc when tapped'
   },
+  {
+    name: 'LCA_T',
+    code: 'LCA_T(kc)',
+    type: 'container',
+    title: 'Left Control and Left Alt when held, kc when tapped'
+  },
+  {
+    name: 'LSA_T',
+    code: 'LSA_T(kc)',
+    type: 'container',
+    title: 'Left Shift and Left Alt when held, kc when tapped'
+  },
+  {
+    name: 'LSG_T',
+    code: 'LSG_T(kc)',
+    type: 'container',
+    title: 'Left Shift and Left GUI when held, kc when tapped'
+  },
+  {
+    name: 'LAG_T',
+    code: 'LAG_T(kc)',
+    type: 'container',
+    title: 'Left Shift and Left Alt when held, kc when tapped'
+  },
+  {
+    name: 'LCAG_T',
+    code: 'LCAG_T(kc)',
+    type: 'container',
+    title: 'Left Control, Left Alt and Left GUI when held, kc when tapped'
+  },
+
+  { width: 1000 },
+
   {
     name: 'RCtl_T',
     code: 'RCTL_T(kc)',
     type: 'container',
     title: 'Right Control when held, kc when tapped'
+  },
+  {
+    name: 'RSft_T',
+    code: 'RSFT_T(kc)',
+    type: 'container',
+    title: 'Right Shift when held, kc when tapped'
   },
   {
     name: 'RAlt_T',
@@ -236,44 +412,48 @@ export default [
     title: 'Right Alt when held, kc when tapped'
   },
   {
-    name: 'RGui_T',
+    name: 'RGUI_T',
     code: 'RGUI_T(kc)',
     type: 'container',
     title: 'Right GUI when held, kc when tapped'
   },
+
   { width: 250 },
+
   {
-    name: 'C_S_T',
-    code: 'C_S_T(kc)',
+    name: 'RCS_T',
+    code: 'RCS_T(kc)',
     type: 'container',
-    title: 'Left Control + Left Shift when held, kc when tapped'
+    title: 'Right Control and Right Shift when held, kc when tapped'
+  },
+  { width: 1000 }, // RCA_T
+  {
+    name: 'RSA_T',
+    code: 'RSA_T(kc)',
+    type: 'container',
+    title: 'Right Control and Right Alt when held, kc when tapped'
   },
   {
-    name: 'LCA_T',
-    code: 'LCA_T(kc)',
+    name: 'RSG_T',
+    code: 'RSG_T(kc)',
     type: 'container',
-    title: 'Left Control + Left Alt when held, kc when tapped'
+    title: 'Right Control and Right Shift when held, kc when tapped'
   },
   {
-    name: 'SGUI_T',
-    code: 'SGUI_T(kc)',
+    name: 'RAG_T',
+    code: 'RAG_T(kc)',
     type: 'container',
-    title: 'Left Shift + Left GUI when held, kc when tapped'
-  },
-  { width: 250 },
-  {
-    name: 'LCAG_T',
-    code: 'LCAG_T(kc)',
-    type: 'container',
-    title: 'Left Control, Alt and GUI when held, kc when tapped'
+    title: 'Right Control and Right Alt when held, kc when tapped'
   },
   {
     name: 'RCAG_T',
     code: 'RCAG_T(kc)',
     type: 'container',
-    title: 'Right Control, Alt and GUI when held, kc when tapped'
+    title: 'Right Control, Left Alt and Left GUI when held, kc when tapped'
   },
-  { width: 250 },
+
+  { width: 1000 },
+
   {
     name: 'Meh_T',
     code: 'MEH_T(kc)',
@@ -281,80 +461,10 @@ export default [
     title: 'Left Control, Shift and Alt when held, kc when tapped'
   },
   {
-    name: 'All_T',
-    code: 'ALL_T(kc)',
+    name: 'Hyper_T',
+    code: 'HYPR_T(kc)',
     type: 'container',
     title: 'Left Control, Shift, Alt and GUI when held, kc when tapped'
-  },
-  { width: 0 },
-  {
-    name: 'LCA',
-    code: 'LCA(kc)',
-    type: 'container',
-    title: 'Left Control + Left Alt'
-  },
-  {
-    name: 'LSA',
-    code: 'LSA(kc)',
-    type: 'container',
-    title: 'Left Shift + Left Alt'
-  },
-  {
-    name: 'SGUI',
-    code: 'SGUI(kc)',
-    type: 'container',
-    title: 'Left Shift + Left GUI'
-  },
-  {
-    name: 'LAG',
-    code: 'LAG(kc)',
-    type: 'container',
-    title: 'Left Alt + Left GUI'
-  },
-  { width: 250 },
-  {
-    name: 'RCS',
-    code: 'RCS(kc)',
-    type: 'container',
-    title: 'Right Control + Right Shift'
-  },
-  {
-    name: 'RSA',
-    code: 'RSA(kc)',
-    type: 'container',
-    title: 'Right Shift + Right Alt'
-  },
-  {
-    name: 'RSG',
-    code: 'RSG(kc)',
-    type: 'container',
-    title: 'Right Shift + Right GUI'
-  },
-  {
-    name: 'RAG',
-    code: 'RAG(kc)',
-    type: 'container',
-    title: 'Right Alt + Right GUI'
-  },
-  { width: 250 },
-  {
-    name: 'LCAG',
-    code: 'LCAG(kc)',
-    type: 'container',
-    title: 'Left Control, Alt and GUI'
-  },
-  { width: 2250 },
-  {
-    name: 'Meh',
-    code: 'MEH(kc)',
-    type: 'container',
-    title: 'Left Control, Shift and Alt'
-  },
-  {
-    name: 'Hyper',
-    code: 'HYPR(kc)',
-    type: 'container',
-    title: 'Left Control, Shift, Alt and GUI'
   },
 
   {
@@ -366,37 +476,49 @@ export default [
       'Note: One-Shot keys combining left-hand and right-side modifiers will be sent with all right-hand modifiers'
   },
 
-  makeOSM('MOD_LSFT'),
   makeOSM('MOD_LCTL'),
+  makeOSM('MOD_LSFT'),
   makeOSM('MOD_LALT'),
   makeOSM('MOD_LGUI'),
+
   { width: 250 },
+
   makeOSM('MOD_LCTL|MOD_LSFT'),
   makeOSM('MOD_LCTL|MOD_LALT'),
   makeOSM('MOD_LCTL|MOD_LGUI'),
   makeOSM('MOD_LSFT|MOD_LALT'),
   makeOSM('MOD_LSFT|MOD_LGUI'),
   makeOSM('MOD_LALT|MOD_LGUI'),
+
   { width: 250 },
+
   makeOSM('MOD_LCTL|MOD_LSFT|MOD_LGUI'),
   makeOSM('MOD_LCTL|MOD_LALT|MOD_LGUI'),
   makeOSM('MOD_LSFT|MOD_LALT|MOD_LGUI'),
+
   { width: 250 },
+
   makeOSM('MOD_MEH'),
   makeOSM('MOD_HYPR'),
+
   { width: 0 },
-  makeOSM('MOD_RSFT'),
+
   makeOSM('MOD_RCTL'),
+  makeOSM('MOD_RSFT'),
   makeOSM('MOD_RALT'),
   makeOSM('MOD_RGUI'),
+
   { width: 250 },
+
   makeOSM('MOD_RCTL|MOD_RSFT'),
   makeOSM('MOD_RCTL|MOD_RALT'),
   makeOSM('MOD_RCTL|MOD_RGUI'),
   makeOSM('MOD_RSFT|MOD_RALT'),
   makeOSM('MOD_RSFT|MOD_RGUI'),
   makeOSM('MOD_RALT|MOD_RGUI'),
+
   { width: 250 },
+
   makeOSM('MOD_RCTL|MOD_RSFT|MOD_RGUI'),
   makeOSM('MOD_RCTL|MOD_RALT|MOD_RGUI'),
   makeOSM('MOD_RSFT|MOD_RALT|MOD_RGUI'),
@@ -408,6 +530,9 @@ export default [
     code: 'QK_GESC',
     title: 'Esc normally, but ` when GUI is active or ~ when Shift is active'
   },
+
+  { width: 250 },
+
   {
     name: 'LS / (',
     code: 'SC_LSPO',
@@ -443,10 +568,28 @@ export default [
     code: 'SC_SENT',
     title: 'Right Shift when held, Enter when tapped'
   },
+
+  { width: 250 },
+
   {
-    name: 'CW Toggle',
+    name: 'Toggle CW',
     code: 'CW_TOGG',
     title: 'Toggle Caps Word (Enable Caps Lock for the next word)',
+    width: 1500
+  },
+
+  { width: 250 },
+
+  {
+    name: 'Repeat',
+    code: 'QK_REP',
+    title: 'Repeat last key pressed',
+    width: 1500
+  },
+  {
+    name: 'Alt Repeat',
+    code: 'QK_AREP',
+    title: 'Perform alternate of last key pressed',
     width: 1500
   }
 ];
