@@ -674,6 +674,7 @@ button {
   content: 'N/A';
 }
 
+.keycode-text,
 .keycode-container,
 .keycode-layer,
 .keycode-layer-container {
@@ -681,11 +682,12 @@ button {
   display: block;
 }
 
+.keycode-text:after,
 .keycode-container:after,
 .keycode-layer-container:after,
 .keycode-layer:after {
-  content: '';
-  width: 14px;
+  content: '…';
+  width: 24px;
   height: 14px;
   border-radius: 2px;
   border: 1px solid;

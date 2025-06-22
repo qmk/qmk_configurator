@@ -153,6 +153,7 @@ html {
     .keycode-select {
       border-color: green !important;
     }
+    .keycode-text:after,
     .keycode-container:after,
     .keycode-layer-container:after,
     .keycode-layer:after {
@@ -428,6 +429,7 @@ html[data-theme='dark'] {
     background: qmk_colors.$qmk-grey-dark;
     border-color: #2f2f2f;
   }
+  .keycode-text:after,
   .keycode-container:after,
   .keycode-layer-container:after,
   .keycode-layer:after {
