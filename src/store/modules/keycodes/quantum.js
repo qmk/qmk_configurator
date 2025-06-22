@@ -191,7 +191,7 @@ export default [
 
   {
     label:
-      'Mod key combinations (C = Control, S = Shift, A = Alt, G = GUI/Windows/Command/Super)',
+      'Mod key combinations and Mod-Tap keys (C = Control, S = Shift, A = Alt, G = GUI/Windows/Command/Super)',
     width: 'label'
   },
 
