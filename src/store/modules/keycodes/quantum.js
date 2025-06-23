@@ -316,13 +316,13 @@ export default [
     name: 'Meh',
     code: 'MEH(kc)',
     type: 'container',
-    title: 'Hold Left Control, Shift and Alt and press kc'
+    title: 'Hold Left Control, Left Shift and Left Alt and press kc'
   },
   {
     name: 'Hyper',
     code: 'HYPR(kc)',
     type: 'container',
-    title: 'Hold Left Control, Shift, Alt and GUI and press kc'
+    title: 'Hold Left Control, Left Shift, Left Alt and Left GUI and press kc'
   },
 
   { width: 0 },
@@ -382,7 +382,7 @@ export default [
     name: 'LAG_T',
     code: 'LAG_T(kc)',
     type: 'container',
-    title: 'Left Shift and Left Alt when held, kc when tapped'
+    title: 'Left Alt and Left GUI when held, kc when tapped'
   },
   {
     name: 'LCAG_T',
@@ -431,25 +431,25 @@ export default [
     name: 'RSA_T',
     code: 'RSA_T(kc)',
     type: 'container',
-    title: 'Right Control and Right Alt when held, kc when tapped'
+    title: 'Right Shift and Right Alt when held, kc when tapped'
   },
   {
     name: 'RSG_T',
     code: 'RSG_T(kc)',
     type: 'container',
-    title: 'Right Control and Right Shift when held, kc when tapped'
+    title: 'Right Shift and Right GUI when held, kc when tapped'
   },
   {
     name: 'RAG_T',
     code: 'RAG_T(kc)',
     type: 'container',
-    title: 'Right Control and Right Alt when held, kc when tapped'
+    title: 'Right Alt and Right GUI when held, kc when tapped'
   },
   {
     name: 'RCAG_T',
     code: 'RCAG_T(kc)',
     type: 'container',
-    title: 'Right Control, Left Alt and Left GUI when held, kc when tapped'
+    title: 'Right Control, Right Alt and Right GUI when held, kc when tapped'
   },
 
   { width: 1000 },
@@ -458,13 +458,14 @@ export default [
     name: 'Meh_T',
     code: 'MEH_T(kc)',
     type: 'container',
-    title: 'Left Control, Shift and Alt when held, kc when tapped'
+    title: 'Left Control, Left Shift and Left Alt when held, kc when tapped'
   },
   {
     name: 'Hyper_T',
     code: 'HYPR_T(kc)',
     type: 'container',
-    title: 'Left Control, Shift, Alt and GUI when held, kc when tapped'
+    title:
+      'Left Control, Left Shift, Left Alt and Left GUI when held, kc when tapped'
   },
 
   {
