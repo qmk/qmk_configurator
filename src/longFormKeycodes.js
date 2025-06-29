@@ -184,6 +184,9 @@ export const longFormKeycodes = {
   RWIN: 'RGUI',
   SCMD: 'SGUI',
   SWIN: 'SGUI',
+  ALL_T: 'HYPR_T',
+  SGUI: 'LSG',
+  SGUI_T: 'LSG_T',
 
   // RGB Lighting
   RGB_MODE_FORWARD: 'UG_NEXT',
