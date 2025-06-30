@@ -1,0 +1,12 @@
+{
+  "keyboard": "woodkeys/bigseries/4key",
+  "keymap": "default",
+  "commit": "da5cb5fd6f91c2f7aebbcebbf211252c51d9b4a5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_HOME", "KC_PGUP",
+      "KC_END",  "KC_PGDN"
+    ]
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "keyboard": "kprepublic/jj4x4",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_ortho_4x4",
+  "macros": [
+    [
+      "QMK is the best thing ever!"
+    ],
+    [
+      "https://qmk.fm/",
+      {"action": "tap", "keycodes": ["ENT"]}
+    ]
+  ],
+  "layers": [
+    [
+      "KC_PGUP", "KC_HOME", "KC_UP",   "KC_END",
+      "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT",
+      "MO(2)",   "KC_VOLU", "KC_MPLY", "KC_MPRV",
+      "MO(1)",   "KC_VOLD", "KC_MUTE", "KC_MNXT"
+    ],
+    [
+      "KC_ESC",  "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_TAB",  "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_ENT",  "KC_P1",   "KC_P2",   "KC_P3",
+      "_______", "KC_P0",   "KC_P0",   "KC_DOT"
+    ],
+    [
+      "UG_TOGG", "UG_HUEU", "UG_SATU", "UG_VALU",
+      "UG_NEXT", "UG_HUED", "UG_SATD", "UG_VALD",
+      "_______", "_______", "_______", "QK_BOOT",
+      "BL_STEP", "_______", "MC_0",    "MC_1"
+    ]
+  ]
+}

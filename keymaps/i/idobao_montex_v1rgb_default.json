@@ -1,0 +1,24 @@
+{
+  "keyboard": "idobao/montex/v1rgb",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_numpad_6x5",
+  "layers": [
+    [
+      "QK_GESC", "KC_TAB",  "KC_F1",   "KC_CALC", "KC_BSPC",
+      "KC_LCTL", "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_LGUI", "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_LALT", "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_LSFT", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "MO(1)",   "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "QK_BOOT", "RM_TOGG", "RM_NEXT", "KC_PSCR", "KC_SCRL",
+      "RM_HUEU", "XXXXXXX", "RM_SPDD", "RM_SPDU", "RM_VALD",
+      "RM_HUED", "KC_HOME", "KC_UP",   "KC_PGUP", "RM_VALU",
+      "RM_SATU", "KC_LEFT", "XXXXXXX", "KC_RGHT",
+      "RM_SATD", "KC_END",  "KC_DOWN", "KC_PGDN", "KC_ENT",
+      "_______", "KC_INS",             "KC_DEL"
+    ]
+  ]
+}

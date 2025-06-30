@@ -1,0 +1,12 @@
+{
+  "keyboard": "boardsource/holiday/spooky",
+  "keymap": "default",
+  "commit": "8a1ca7f6b854163983bf79111d87e03428f93d33",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_F1",   "KC_F2",   "KC_F3",
+      "KC_F4",   "KC_F5",   "KC_F6"
+    ]
+  ]
+}

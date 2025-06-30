@@ -1,0 +1,18 @@
+{
+  "keyboard": "draytronics/daisy",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",                              "KC_HOME",
+      "MO(1)",      "KC_MPRV",  "KC_MNXT",    "KC_MPLY",
+      "C(KC_LEFT)", "C(KC_UP)", "C(KC_DOWN)", "C(KC_RGHT)"
+    ],
+    [
+      "KC_MUTE",                               "KC_END",
+      "_______",    "UG_NEXT",      "UG_VALU", "UG_TOGG",
+      "G(S(KC_5))", "G(A(KC_ESC))", "G(KC_F)", "QK_BOOT"
+    ]
+  ]
+}

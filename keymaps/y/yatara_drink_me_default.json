@@ -1,0 +1,14 @@
+{
+  "keyboard": "yatara/drink_me",
+  "keymap": "default",
+  "commit": "31e4583f4a171823cfa639cc6a9795e892c0455f",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LCTL(KC_Z)",
+      "LCTL(KC_X)",
+      "LCTL(KC_C)",
+      "LCTL(KC_V)"
+    ]
+  ]
+}

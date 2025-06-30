@@ -1,0 +1,20 @@
+{
+  "keyboard": "takashicompany/baumkuchen",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+      "KC_A",    "KC_S",    "KC_D",    "KC_F",
+      "KC_Z",    "KC_X",    "KC_C",    "LT(1,KC_V)", "KC_B",
+                                       "KC_NO",      "KC_NO"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "UG_HUEU", "UG_SATU", "UG_VALU",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                                       "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

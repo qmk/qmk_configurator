@@ -1,0 +1,16 @@
+{
+  "keyboard": "bobpad",
+  "keymap": "default",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_CAPS", "MO(1)",   "KC_PGUP",
+      "KC_DEL",  "KC_END",  "KC_PGDN"
+    ],
+    [
+      "KC_CAPS", "MO(1)",   "KC_PGUP",
+      "KC_DEL",  "KC_END",  "KC_PGDN"
+    ]
+  ]
+}

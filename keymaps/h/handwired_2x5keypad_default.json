@@ -1,0 +1,12 @@
+{
+  "keyboard": "handwired/2x5keypad",
+  "keymap": "default",
+  "commit": "55843480fffddebf15b3557fb11dca6206ab7b7b",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5",
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",    "KC_T"
+    ]
+  ]
+}

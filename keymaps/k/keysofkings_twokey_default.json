@@ -1,0 +1,48 @@
+{
+  "keyboard": "keysofkings/twokey",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(1,KC_MUTE)",
+      "LT(4,KC_MPLY)", "LT(7,KC_MNXT)"
+    ],
+    [
+      "KC_TRNS",
+      "TO(2)",   "TO(3)"
+    ],
+    [
+      "TO(0)",
+      "UG_TOGG", "UG_NEXT"
+    ],
+    [
+      "TO(0)",
+      "UG_VALU", "UG_VALD"
+    ],
+    [
+      "TO(0)",
+      "UG_HUEU", "UG_HUED"
+    ],
+    [
+      "TO(5)",
+      "KC_TRNS", "TO(6)"
+    ],
+    [
+      "TO(0)",
+      "UG_SATU", "UG_SATD"
+    ],
+    [
+      "TO(8)",
+      "TO(9)",   "KC_TRNS"
+    ],
+    [
+      "TO(0)",
+      "CK_TOGG", "MU_TOGG"
+    ],
+    [
+      "TO(0)",
+      "QK_BOOT", "EE_CLR"
+    ]
+  ]
+}

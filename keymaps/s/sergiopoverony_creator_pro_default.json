@@ -1,0 +1,28 @@
+{
+  "keyboard": "sergiopoverony/creator_pro",
+  "keymap": "default",
+  "commit": "ca4536e492c2378b916b970a786ce1ad3dcdb539",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+                                       "TO(1)",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ],
+    [
+      "KC_Q",    "KC_W",    "KC_E",    "KC_R",
+                                       "TO(2)",
+      "KC_A",    "KC_S",    "KC_D",    "KC_F"
+    ],
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+                                       "TO(3)",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ],
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",
+                                       "TO(0)",
+      "KC_5",    "KC_6",    "KC_7",    "KC_8"
+    ]
+  ]
+}

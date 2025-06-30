@@ -1,0 +1,20 @@
+{
+  "keyboard": "dumbpad/v3x",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                 "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+                 "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+                 "KC_P1",   "KC_P2",   "KC_P3",   "KC_PAST",
+      "KC_MUTE", "TT(1)",   "KC_P0",   "_______", "KC_ENT"
+    ],
+    [
+                 "RM_TOGG", "RM_VALD", "RM_VALU", "QK_BOOT",
+                 "KC_NO",   "RM_HUED", "RM_HUEU", "KC_NO",
+                 "KC_NO",   "RM_SATD", "RM_SATU", "KC_NO",
+      "KC_NO",   "_______", "RM_SPDD", "RM_SPDU", "KC_NO"
+    ]
+  ]
+}

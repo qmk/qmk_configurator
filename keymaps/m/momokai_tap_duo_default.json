@@ -1,0 +1,12 @@
+{
+  "keyboard": "momokai/tap_duo",
+  "keymap": "default",
+  "commit": "5447b075f946dcf8fb931e49083f5098042a7261",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_X",
+      "KC_GRV",  "KC_ESC",  "KC_F2"
+    ]
+  ]
+}
