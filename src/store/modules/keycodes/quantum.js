@@ -12,16 +12,16 @@ function makeLT(layer) {
 }
 // make a One-Shot Mod Keycode Definition
 const osmLookup = {
-  MOD_LSFT: ['LSft', 'Left Shift'],
   MOD_LCTL: ['LCtl', 'Left Control'],
+  MOD_LSFT: ['LSft', 'Left Shift'],
   MOD_LALT: ['LAlt', 'Left Alt'],
   MOD_LGUI: ['LGUI', 'Left GUI'],
-  MOD_RSFT: ['RSft', 'Right Shift'],
+
   MOD_RCTL: ['RCtl', 'Right Control'],
+  MOD_RSFT: ['RSft', 'Right Shift'],
   MOD_RALT: ['RAlt', 'Right Alt'],
   MOD_RGUI: ['RGUI', 'Right GUI'],
-  MOD_HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI'],
-  MOD_MEH: ['Meh', 'Left Control, Left Shift, and Left Alt'],
+
   'MOD_LCTL|MOD_LSFT': ['LCS', 'Left Control and Left Shift'],
   'MOD_LCTL|MOD_LALT': ['LCA', 'Left Control and Left Alt'],
   'MOD_LCTL|MOD_LGUI': ['LCG', 'Left Control and Left GUI'],
@@ -37,12 +37,14 @@ const osmLookup = {
     'Left Control, Left Alt, and Left GUI'
   ],
   'MOD_LSFT|MOD_LALT|MOD_LGUI': ['LSAG', 'Left Shift, Left Alt, and Left GUI'],
+
   'MOD_RCTL|MOD_RSFT': ['RCS', 'Right Control and Right Shift'],
   'MOD_RCTL|MOD_RALT': ['RCA', 'Right Control and Right Alt'],
   'MOD_RCTL|MOD_RGUI': ['RCG', 'Right Control and Right GUI'],
   'MOD_RSFT|MOD_RALT': ['RSA', 'Right Shift and Right Alt'],
   'MOD_RSFT|MOD_RGUI': ['RSG', 'Right Shift and Right GUI'],
   'MOD_RALT|MOD_RGUI': ['RAG', 'Right Alt and Right GUI'],
+
   'MOD_RCTL|MOD_RSFT|MOD_RGUI': [
     'RCSG',
     'Right Control, Right Shift, and Right GUI'
@@ -54,7 +56,10 @@ const osmLookup = {
   'MOD_RSFT|MOD_RALT|MOD_RGUI': [
     'RSAG',
     'Right Shift, Right Alt, and Right GUI'
-  ]
+  ],
+
+  MOD_HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI'],
+  MOD_MEH: ['Meh', 'Left Control, Left Shift, and Left Alt']
 };
 function makeOSM(mod, width = 1000) {
   const tuple = osmLookup[mod];
@@ -222,12 +227,23 @@ export default [
 
   { width: 250 },
 
-  { width: 1000 }, // LCS
+  {
+    name: 'LCS',
+    code: 'LCS(kc)',
+    type: 'container',
+    title: 'Hold Left Control and Left Shift and press kc'
+  },
   {
     name: 'LCA',
     code: 'LCA(kc)',
     type: 'container',
     title: 'Hold Left Control and Left Alt and press kc'
+  },
+  {
+    name: 'LCG',
+    code: 'LCG(kc)',
+    type: 'container',
+    title: 'Hold Left Control and Left GUI and press kc'
   },
   {
     name: 'LSA',
@@ -247,14 +263,29 @@ export default [
     type: 'container',
     title: 'Hold Left Alt and Left GUI and press kc'
   },
+
+  { width: 250 },
+
+  {
+    name: 'LCSG',
+    code: 'LCSG(kc)',
+    type: 'container',
+    title: 'Hold Left Control, Left Shift and Left GUI and press kc'
+  },
   {
     name: 'LCAG',
     code: 'LCAG(kc)',
     type: 'container',
     title: 'Hold Left Control, Left Alt and Left GUI and press kc'
   },
+  {
+    name: 'LSAG',
+    code: 'LSAG(kc)',
+    type: 'container',
+    title: 'Hold Left Shift, Left Alt and Left GUI and press kc'
+  },
 
-  { width: 1000 },
+  { width: 500 },
 
   {
     name: 'RCtl',
@@ -289,7 +320,18 @@ export default [
     type: 'container',
     title: 'Hold Right Control and Right Shift and press kc'
   },
-  { width: 1000 }, // RCA
+  {
+    name: 'RCA',
+    code: 'RCA(kc)',
+    type: 'container',
+    title: 'Hold Right Control and Right Alt and press kc'
+  },
+  {
+    name: 'RCG',
+    code: 'RCG(kc)',
+    type: 'container',
+    title: 'Hold Right Control and Right GUI and press kc'
+  },
   {
     name: 'RSA',
     code: 'RSA(kc)',
@@ -308,9 +350,29 @@ export default [
     type: 'container',
     title: 'Hold Right Alt and Right GUI and press kc'
   },
-  { width: 1000 }, // RCAG
 
-  { width: 1000 },
+  { width: 250 },
+
+  {
+    name: 'RCSG',
+    code: 'RCSG(kc)',
+    type: 'container',
+    title: 'Hold Right Control, Right Shift and Right GUI and press kc'
+  },
+  {
+    name: 'RCAG',
+    code: 'RCAG(kc)',
+    type: 'container',
+    title: 'Hold Right Control, Right Alt and Right GUI and press kc'
+  },
+  {
+    name: 'RSAG',
+    code: 'RSAG(kc)',
+    type: 'container',
+    title: 'Hold Right Shift, Right Alt and Right GUI and press kc'
+  },
+
+  { width: 500 },
 
   {
     name: 'Meh',
@@ -355,8 +417,8 @@ export default [
   { width: 250 },
 
   {
-    name: 'C_S_T',
-    code: 'C_S_T(kc)',
+    name: 'LCS_T',
+    code: 'LCS_T(kc)',
     type: 'container',
     title: 'Left Control and Left Shift when held, kc when tapped'
   },
@@ -365,6 +427,12 @@ export default [
     code: 'LCA_T(kc)',
     type: 'container',
     title: 'Left Control and Left Alt when held, kc when tapped'
+  },
+  {
+    name: 'LCG_T',
+    code: 'LCG_T(kc)',
+    type: 'container',
+    title: 'Left Control and Left GUI when held, kc when tapped'
   },
   {
     name: 'LSA_T',
@@ -384,14 +452,29 @@ export default [
     type: 'container',
     title: 'Left Alt and Left GUI when held, kc when tapped'
   },
+
+  { width: 250 },
+
+  {
+    name: 'LCSG_T',
+    code: 'LCSG_T(kc)',
+    type: 'container',
+    title: 'Left Control, Left Shift and Left GUI when held, kc when tapped'
+  },
   {
     name: 'LCAG_T',
     code: 'LCAG_T(kc)',
     type: 'container',
     title: 'Left Control, Left Alt and Left GUI when held, kc when tapped'
   },
+  {
+    name: 'LSAG_T',
+    code: 'LSAG_T(kc)',
+    type: 'container',
+    title: 'Left Shift, Left Alt and Left GUI when held, kc when tapped'
+  },
 
-  { width: 1000 },
+  { width: 500 },
 
   {
     name: 'RCtl_T',
@@ -426,7 +509,18 @@ export default [
     type: 'container',
     title: 'Right Control and Right Shift when held, kc when tapped'
   },
-  { width: 1000 }, // RCA_T
+  {
+    name: 'RCA_T',
+    code: 'RCA_T(kc)',
+    type: 'container',
+    title: 'Right Control and Right Alt when held, kc when tapped'
+  },
+  {
+    name: 'RCG_T',
+    code: 'RCG_T(kc)',
+    type: 'container',
+    title: 'Right Control and Right GUI when held, kc when tapped'
+  },
   {
     name: 'RSA_T',
     code: 'RSA_T(kc)',
@@ -445,14 +539,29 @@ export default [
     type: 'container',
     title: 'Right Alt and Right GUI when held, kc when tapped'
   },
+
+  { width: 250 },
+
+  {
+    name: 'RCSG_T',
+    code: 'RCSG_T(kc)',
+    type: 'container',
+    title: 'Right Control, Right Shift and Right GUI when held, kc when tapped'
+  },
   {
     name: 'RCAG_T',
     code: 'RCAG_T(kc)',
     type: 'container',
     title: 'Right Control, Right Alt and Right GUI when held, kc when tapped'
   },
+  {
+    name: 'RSAG_T',
+    code: 'RSAG_T(kc)',
+    type: 'container',
+    title: 'Right Shift, Right Alt and Right GUI when held, kc when tapped'
+  },
 
-  { width: 1000 },
+  { width: 500 },
 
   {
     name: 'Meh_T',
