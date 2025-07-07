@@ -1,7 +1,7 @@
 import isUndefined from 'lodash/isUndefined';
 
-// make a Layer Tap Key Keycode Definition
-function makeLT(layer) {
+// make a Layer Tap Keycode Definition
+function makeLayerTapKey(layer) {
   return {
     name: `LT ${layer}`,
     code: `LT(${layer},kc)`,
@@ -10,68 +10,85 @@ function makeLT(layer) {
     title: `Momentarily turn on layer ${layer} while held, kc when tapped`
   };
 }
-// make a One-Shot Mod Keycode Definition
-const osmLookup = {
-  MOD_LCTL: ['LCtl', 'Left Control'],
-  MOD_LSFT: ['LSft', 'Left Shift'],
-  MOD_LALT: ['LAlt', 'Left Alt'],
-  MOD_LGUI: ['LGUI', 'Left GUI'],
 
-  MOD_RCTL: ['RCtl', 'Right Control'],
-  MOD_RSFT: ['RSft', 'Right Shift'],
-  MOD_RALT: ['RAlt', 'Right Alt'],
-  MOD_RGUI: ['RGUI', 'Right GUI'],
+const modLookup = {
+  LCTL: ['LCtl', 'Left Control'],
+  LSFT: ['LSft', 'Left Shift'],
+  LALT: ['LAlt', 'Left Alt'],
+  LGUI: ['LGUI', 'Left GUI'],
 
-  'MOD_LCTL|MOD_LSFT': ['LCS', 'Left Control and Left Shift'],
-  'MOD_LCTL|MOD_LALT': ['LCA', 'Left Control and Left Alt'],
-  'MOD_LCTL|MOD_LGUI': ['LCG', 'Left Control and Left GUI'],
-  'MOD_LSFT|MOD_LALT': ['LSA', 'Left Shift and Left Alt'],
-  'MOD_LSFT|MOD_LGUI': ['LSG', 'Left Shift and Left GUI'],
-  'MOD_LALT|MOD_LGUI': ['LAG', 'Left Alt and Left GUI'],
-  'MOD_LCTL|MOD_LSFT|MOD_LGUI': [
-    'LCSG',
-    'Left Control, Left Shift, and Left GUI'
-  ],
-  'MOD_LCTL|MOD_LALT|MOD_LGUI': [
-    'LCAG',
-    'Left Control, Left Alt, and Left GUI'
-  ],
-  'MOD_LSFT|MOD_LALT|MOD_LGUI': ['LSAG', 'Left Shift, Left Alt, and Left GUI'],
+  LCS: ['LCS', 'Left Control and Left Shift'],
+  LCA: ['LCA', 'Left Control and Left Alt'],
+  LCG: ['LCG', 'Left Control and Left GUI'],
+  LSA: ['LSA', 'Left Shift and Left Alt'],
+  LSG: ['LSG', 'Left Shift and Left GUI'],
+  LAG: ['LAG', 'Left Alt and Left GUI'],
 
-  'MOD_RCTL|MOD_RSFT': ['RCS', 'Right Control and Right Shift'],
-  'MOD_RCTL|MOD_RALT': ['RCA', 'Right Control and Right Alt'],
-  'MOD_RCTL|MOD_RGUI': ['RCG', 'Right Control and Right GUI'],
-  'MOD_RSFT|MOD_RALT': ['RSA', 'Right Shift and Right Alt'],
-  'MOD_RSFT|MOD_RGUI': ['RSG', 'Right Shift and Right GUI'],
-  'MOD_RALT|MOD_RGUI': ['RAG', 'Right Alt and Right GUI'],
+  LCSG: ['LCSG', 'Left Control, Left Shift and Left GUI'],
+  LCAG: ['LCAG', 'Left Control, Left Alt and Left GUI'],
+  LSAG: ['LSAG', 'Left Shift, Left Alt and Left GUI'],
 
-  'MOD_RCTL|MOD_RSFT|MOD_RGUI': [
-    'RCSG',
-    'Right Control, Right Shift, and Right GUI'
-  ],
-  'MOD_RCTL|MOD_RALT|MOD_RGUI': [
-    'RCAG',
-    'Right Control, Right Alt, and Right GUI'
-  ],
-  'MOD_RSFT|MOD_RALT|MOD_RGUI': [
-    'RSAG',
-    'Right Shift, Right Alt, and Right GUI'
-  ],
+  RCTL: ['RCtl', 'Right Control'],
+  RSFT: ['RSft', 'Right Shift'],
+  RALT: ['RAlt', 'Right Alt'],
+  RGUI: ['RGUI', 'Right GUI'],
 
-  MOD_HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI'],
-  MOD_MEH: ['Meh', 'Left Control, Left Shift, and Left Alt']
+  RCS: ['RCS', 'Right Control and Right Shift'],
+  RCA: ['RCA', 'Right Control and Right Alt'],
+  RCG: ['RCG', 'Right Control and Right GUI'],
+  RSA: ['RSA', 'Right Shift and Right Alt'],
+  RSG: ['RSG', 'Right Shift and Right GUI'],
+  RAG: ['RAG', 'Right Alt and Right GUI'],
+
+  RCSG: ['RCSG', 'Right Control, Right Shift and Right GUI'],
+  RCAG: ['RCAG', 'Right Control, Right Alt and Right GUI'],
+  RSAG: ['RSAG', 'Right Shift, Right Alt and Right GUI'],
+
+  MEH: ['Meh', 'Left Control, Left Shift and Left Alt'],
+  HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI']
 };
-function makeOSM(mod, width = 1000) {
-  const tuple = osmLookup[mod];
+
+// make a Mod Keycode Definition
+function makeModKey(code) {
+  const tuple = modLookup[code];
   if (isUndefined(tuple)) {
-    throw new Error(`${mod} is not a valid One Shot Mod`);
+    throw new Error(`${code} is not a valid mod key`);
   }
-  const [name, title] = tuple;
+  const [name, desc] = tuple;
+  return {
+    name,
+    code: `${code}(kc)`,
+    type: 'container',
+    title: `Hold ${desc} and press kc`
+  };
+}
+
+// make a Mod-Tap Keycode Definition
+function makeModTapKey(code) {
+  const tuple = modLookup[code];
+  if (isUndefined(tuple)) {
+    throw new Error(`${code} is not a valid Mod-Tap key`);
+  }
+  const [name, desc] = tuple;
+  return {
+    name: `${name}_T`,
+    code: `${code}_T(kc)`,
+    type: 'container',
+    title: `${desc} when held, kc when tapped`
+  };
+}
+
+// make a One-Shot Mod Keycode Definition
+function makeOneShotModKey(code) {
+  const tuple = modLookup[code];
+  if (isUndefined(tuple)) {
+    throw new Error(`${code} is not a valid One Shot Mod key`);
+  }
+  const [name, desc] = tuple;
   return {
     name: `OSM ${name}`,
-    code: `OSM(${mod})`,
-    title: `Hold ${title} for one keypress`,
-    width: width
+    code: `OS_${code}`,
+    title: `Hold ${desc} for one keypress`
   };
 }
 
@@ -174,25 +191,25 @@ export default [
 
   { width: 500 },
 
-  makeLT(0),
-  makeLT(1),
-  makeLT(2),
-  makeLT(3),
-  makeLT(4),
-  makeLT(5),
-  makeLT(6),
-  makeLT(7),
+  makeLayerTapKey(0),
+  makeLayerTapKey(1),
+  makeLayerTapKey(2),
+  makeLayerTapKey(3),
+  makeLayerTapKey(4),
+  makeLayerTapKey(5),
+  makeLayerTapKey(6),
+  makeLayerTapKey(7),
 
   { width: 250 },
 
-  makeLT(8),
-  makeLT(9),
-  makeLT(10),
-  makeLT(11),
-  makeLT(12),
-  makeLT(13),
-  makeLT(14),
-  makeLT(15),
+  makeLayerTapKey(8),
+  makeLayerTapKey(9),
+  makeLayerTapKey(10),
+  makeLayerTapKey(11),
+  makeLayerTapKey(12),
+  makeLayerTapKey(13),
+  makeLayerTapKey(14),
+  makeLayerTapKey(15),
 
   {
     label:
@@ -200,382 +217,101 @@ export default [
     width: 'label'
   },
 
-  {
-    name: 'LCtl',
-    code: 'LCTL(kc)',
-    type: 'container',
-    title: 'Hold Left Control and press kc'
-  },
-  {
-    name: 'LSft',
-    code: 'LSFT(kc)',
-    type: 'container',
-    title: 'Hold Left Shift and press kc'
-  },
-  {
-    name: 'LAlt',
-    code: 'LALT(kc)',
-    type: 'container',
-    title: 'Hold Left Alt and press kc'
-  },
-  {
-    name: 'LGUI',
-    code: 'LGUI(kc)',
-    type: 'container',
-    title: 'Hold Left GUI and press kc'
-  },
+  makeModKey('LCTL'),
+  makeModKey('LSFT'),
+  makeModKey('LALT'),
+  makeModKey('LGUI'),
 
   { width: 250 },
 
-  {
-    name: 'LCS',
-    code: 'LCS(kc)',
-    type: 'container',
-    title: 'Hold Left Control and Left Shift and press kc'
-  },
-  {
-    name: 'LCA',
-    code: 'LCA(kc)',
-    type: 'container',
-    title: 'Hold Left Control and Left Alt and press kc'
-  },
-  {
-    name: 'LCG',
-    code: 'LCG(kc)',
-    type: 'container',
-    title: 'Hold Left Control and Left GUI and press kc'
-  },
-  {
-    name: 'LSA',
-    code: 'LSA(kc)',
-    type: 'container',
-    title: 'Hold Left Shift and Left Alt and press kc'
-  },
-  {
-    name: 'LSG',
-    code: 'LSG(kc)',
-    type: 'container',
-    title: 'Hold Left Shift and Left GUI and press kc'
-  },
-  {
-    name: 'LAG',
-    code: 'LAG(kc)',
-    type: 'container',
-    title: 'Hold Left Alt and Left GUI and press kc'
-  },
+  makeModKey('LCS'),
+  makeModKey('LCA'),
+  makeModKey('LCG'),
+  makeModKey('LSA'),
+  makeModKey('LSG'),
+  makeModKey('LAG'),
 
   { width: 250 },
 
-  {
-    name: 'LCSG',
-    code: 'LCSG(kc)',
-    type: 'container',
-    title: 'Hold Left Control, Left Shift and Left GUI and press kc'
-  },
-  {
-    name: 'LCAG',
-    code: 'LCAG(kc)',
-    type: 'container',
-    title: 'Hold Left Control, Left Alt and Left GUI and press kc'
-  },
-  {
-    name: 'LSAG',
-    code: 'LSAG(kc)',
-    type: 'container',
-    title: 'Hold Left Shift, Left Alt and Left GUI and press kc'
-  },
+  makeModKey('LCSG'),
+  makeModKey('LCAG'),
+  makeModKey('LSAG'),
 
   { width: 500 },
 
-  {
-    name: 'RCtl',
-    code: 'RCTL(kc)',
-    type: 'container',
-    title: 'Hold Right Control and press kc'
-  },
-  {
-    name: 'RSft',
-    code: 'RSFT(kc)',
-    type: 'container',
-    title: 'Hold Right Shift and press kc'
-  },
-  {
-    name: 'RAlt',
-    code: 'RALT(kc)',
-    type: 'container',
-    title: 'Hold Right Alt and press kc'
-  },
-  {
-    name: 'RGUI',
-    code: 'RGUI(kc)',
-    type: 'container',
-    title: 'Hold Right GUI and press kc'
-  },
+  makeModKey('RCTL'),
+  makeModKey('RSFT'),
+  makeModKey('RALT'),
+  makeModKey('RGUI'),
 
   { width: 250 },
 
-  {
-    name: 'RCS',
-    code: 'RCS(kc)',
-    type: 'container',
-    title: 'Hold Right Control and Right Shift and press kc'
-  },
-  {
-    name: 'RCA',
-    code: 'RCA(kc)',
-    type: 'container',
-    title: 'Hold Right Control and Right Alt and press kc'
-  },
-  {
-    name: 'RCG',
-    code: 'RCG(kc)',
-    type: 'container',
-    title: 'Hold Right Control and Right GUI and press kc'
-  },
-  {
-    name: 'RSA',
-    code: 'RSA(kc)',
-    type: 'container',
-    title: 'Hold Right Shift and Right Alt and press kc'
-  },
-  {
-    name: 'RSG',
-    code: 'RSG(kc)',
-    type: 'container',
-    title: 'Hold Right Shift and Right GUI and press kc'
-  },
-  {
-    name: 'RAG',
-    code: 'RAG(kc)',
-    type: 'container',
-    title: 'Hold Right Alt and Right GUI and press kc'
-  },
+  makeModKey('RCS'),
+  makeModKey('RCA'),
+  makeModKey('RCG'),
+  makeModKey('RSA'),
+  makeModKey('RSG'),
+  makeModKey('RAG'),
 
   { width: 250 },
 
-  {
-    name: 'RCSG',
-    code: 'RCSG(kc)',
-    type: 'container',
-    title: 'Hold Right Control, Right Shift and Right GUI and press kc'
-  },
-  {
-    name: 'RCAG',
-    code: 'RCAG(kc)',
-    type: 'container',
-    title: 'Hold Right Control, Right Alt and Right GUI and press kc'
-  },
-  {
-    name: 'RSAG',
-    code: 'RSAG(kc)',
-    type: 'container',
-    title: 'Hold Right Shift, Right Alt and Right GUI and press kc'
-  },
+  makeModKey('RCSG'),
+  makeModKey('RCAG'),
+  makeModKey('RSAG'),
 
   { width: 500 },
 
-  {
-    name: 'Meh',
-    code: 'MEH(kc)',
-    type: 'container',
-    title: 'Hold Left Control, Left Shift and Left Alt and press kc'
-  },
-  {
-    name: 'Hyper',
-    code: 'HYPR(kc)',
-    type: 'container',
-    title: 'Hold Left Control, Left Shift, Left Alt and Left GUI and press kc'
-  },
+  makeModKey('MEH'),
+  makeModKey('HYPR'),
 
   { width: 0 },
 
-  {
-    name: 'LCtl_T',
-    code: 'LCTL_T(kc)',
-    type: 'container',
-    title: 'Left Control when held, kc when tapped'
-  },
-  {
-    name: 'LSft_T',
-    code: 'LSFT_T(kc)',
-    type: 'container',
-    title: 'Left Shift when held, kc when tapped'
-  },
-  {
-    name: 'LAlt_T',
-    code: 'LALT_T(kc)',
-    type: 'container',
-    title: 'Left Alt when held, kc when tapped'
-  },
-  {
-    name: 'LGUI_T',
-    code: 'LGUI_T(kc)',
-    type: 'container',
-    title: 'Left GUI when held, kc when tapped'
-  },
+  makeModTapKey('LCTL'),
+  makeModTapKey('LSFT'),
+  makeModTapKey('LALT'),
+  makeModTapKey('LGUI'),
 
   { width: 250 },
 
-  {
-    name: 'LCS_T',
-    code: 'LCS_T(kc)',
-    type: 'container',
-    title: 'Left Control and Left Shift when held, kc when tapped'
-  },
-  {
-    name: 'LCA_T',
-    code: 'LCA_T(kc)',
-    type: 'container',
-    title: 'Left Control and Left Alt when held, kc when tapped'
-  },
-  {
-    name: 'LCG_T',
-    code: 'LCG_T(kc)',
-    type: 'container',
-    title: 'Left Control and Left GUI when held, kc when tapped'
-  },
-  {
-    name: 'LSA_T',
-    code: 'LSA_T(kc)',
-    type: 'container',
-    title: 'Left Shift and Left Alt when held, kc when tapped'
-  },
-  {
-    name: 'LSG_T',
-    code: 'LSG_T(kc)',
-    type: 'container',
-    title: 'Left Shift and Left GUI when held, kc when tapped'
-  },
-  {
-    name: 'LAG_T',
-    code: 'LAG_T(kc)',
-    type: 'container',
-    title: 'Left Alt and Left GUI when held, kc when tapped'
-  },
+  makeModTapKey('LCS'),
+  makeModTapKey('LCA'),
+  makeModTapKey('LCG'),
+  makeModTapKey('LSA'),
+  makeModTapKey('LSG'),
+  makeModTapKey('LAG'),
 
   { width: 250 },
 
-  {
-    name: 'LCSG_T',
-    code: 'LCSG_T(kc)',
-    type: 'container',
-    title: 'Left Control, Left Shift and Left GUI when held, kc when tapped'
-  },
-  {
-    name: 'LCAG_T',
-    code: 'LCAG_T(kc)',
-    type: 'container',
-    title: 'Left Control, Left Alt and Left GUI when held, kc when tapped'
-  },
-  {
-    name: 'LSAG_T',
-    code: 'LSAG_T(kc)',
-    type: 'container',
-    title: 'Left Shift, Left Alt and Left GUI when held, kc when tapped'
-  },
+  makeModTapKey('LCSG'),
+  makeModTapKey('LCAG'),
+  makeModTapKey('LSAG'),
 
   { width: 500 },
 
-  {
-    name: 'RCtl_T',
-    code: 'RCTL_T(kc)',
-    type: 'container',
-    title: 'Right Control when held, kc when tapped'
-  },
-  {
-    name: 'RSft_T',
-    code: 'RSFT_T(kc)',
-    type: 'container',
-    title: 'Right Shift when held, kc when tapped'
-  },
-  {
-    name: 'RAlt_T',
-    code: 'RALT_T(kc)',
-    type: 'container',
-    title: 'Right Alt when held, kc when tapped'
-  },
-  {
-    name: 'RGUI_T',
-    code: 'RGUI_T(kc)',
-    type: 'container',
-    title: 'Right GUI when held, kc when tapped'
-  },
+  makeModTapKey('RCTL'),
+  makeModTapKey('RSFT'),
+  makeModTapKey('RALT'),
+  makeModTapKey('RGUI'),
 
   { width: 250 },
 
-  {
-    name: 'RCS_T',
-    code: 'RCS_T(kc)',
-    type: 'container',
-    title: 'Right Control and Right Shift when held, kc when tapped'
-  },
-  {
-    name: 'RCA_T',
-    code: 'RCA_T(kc)',
-    type: 'container',
-    title: 'Right Control and Right Alt when held, kc when tapped'
-  },
-  {
-    name: 'RCG_T',
-    code: 'RCG_T(kc)',
-    type: 'container',
-    title: 'Right Control and Right GUI when held, kc when tapped'
-  },
-  {
-    name: 'RSA_T',
-    code: 'RSA_T(kc)',
-    type: 'container',
-    title: 'Right Shift and Right Alt when held, kc when tapped'
-  },
-  {
-    name: 'RSG_T',
-    code: 'RSG_T(kc)',
-    type: 'container',
-    title: 'Right Shift and Right GUI when held, kc when tapped'
-  },
-  {
-    name: 'RAG_T',
-    code: 'RAG_T(kc)',
-    type: 'container',
-    title: 'Right Alt and Right GUI when held, kc when tapped'
-  },
+  makeModTapKey('RCS'),
+  makeModTapKey('RCA'),
+  makeModTapKey('RCG'),
+  makeModTapKey('RSA'),
+  makeModTapKey('RSG'),
+  makeModTapKey('RAG'),
 
   { width: 250 },
 
-  {
-    name: 'RCSG_T',
-    code: 'RCSG_T(kc)',
-    type: 'container',
-    title: 'Right Control, Right Shift and Right GUI when held, kc when tapped'
-  },
-  {
-    name: 'RCAG_T',
-    code: 'RCAG_T(kc)',
-    type: 'container',
-    title: 'Right Control, Right Alt and Right GUI when held, kc when tapped'
-  },
-  {
-    name: 'RSAG_T',
-    code: 'RSAG_T(kc)',
-    type: 'container',
-    title: 'Right Shift, Right Alt and Right GUI when held, kc when tapped'
-  },
+  makeModTapKey('RCSG'),
+  makeModTapKey('RCAG'),
+  makeModTapKey('RSAG'),
 
   { width: 500 },
 
-  {
-    name: 'Meh_T',
-    code: 'MEH_T(kc)',
-    type: 'container',
-    title: 'Left Control, Left Shift and Left Alt when held, kc when tapped'
-  },
-  {
-    name: 'Hyper_T',
-    code: 'HYPR_T(kc)',
-    type: 'container',
-    title:
-      'Left Control, Left Shift, Left Alt and Left GUI when held, kc when tapped'
-  },
+  makeModTapKey('MEH'),
+  makeModTapKey('HYPR'),
 
   {
     label: 'One-Shot Mod keys',
@@ -586,52 +322,52 @@ export default [
       'Note: One-Shot keys combining left-hand and right-side modifiers will be sent with all right-hand modifiers'
   },
 
-  makeOSM('MOD_LCTL'),
-  makeOSM('MOD_LSFT'),
-  makeOSM('MOD_LALT'),
-  makeOSM('MOD_LGUI'),
+  makeOneShotModKey('LCTL'),
+  makeOneShotModKey('LSFT'),
+  makeOneShotModKey('LALT'),
+  makeOneShotModKey('LGUI'),
 
   { width: 250 },
 
-  makeOSM('MOD_LCTL|MOD_LSFT'),
-  makeOSM('MOD_LCTL|MOD_LALT'),
-  makeOSM('MOD_LCTL|MOD_LGUI'),
-  makeOSM('MOD_LSFT|MOD_LALT'),
-  makeOSM('MOD_LSFT|MOD_LGUI'),
-  makeOSM('MOD_LALT|MOD_LGUI'),
+  makeOneShotModKey('LCS'),
+  makeOneShotModKey('LCA'),
+  makeOneShotModKey('LCG'),
+  makeOneShotModKey('LSA'),
+  makeOneShotModKey('LSG'),
+  makeOneShotModKey('LAG'),
 
   { width: 250 },
 
-  makeOSM('MOD_LCTL|MOD_LSFT|MOD_LGUI'),
-  makeOSM('MOD_LCTL|MOD_LALT|MOD_LGUI'),
-  makeOSM('MOD_LSFT|MOD_LALT|MOD_LGUI'),
+  makeOneShotModKey('LCSG'),
+  makeOneShotModKey('LCAG'),
+  makeOneShotModKey('LSAG'),
 
   { width: 250 },
 
-  makeOSM('MOD_MEH'),
-  makeOSM('MOD_HYPR'),
+  makeOneShotModKey('MEH'),
+  makeOneShotModKey('HYPR'),
 
   { width: 0 },
 
-  makeOSM('MOD_RCTL'),
-  makeOSM('MOD_RSFT'),
-  makeOSM('MOD_RALT'),
-  makeOSM('MOD_RGUI'),
+  makeOneShotModKey('RCTL'),
+  makeOneShotModKey('RSFT'),
+  makeOneShotModKey('RALT'),
+  makeOneShotModKey('RGUI'),
 
   { width: 250 },
 
-  makeOSM('MOD_RCTL|MOD_RSFT'),
-  makeOSM('MOD_RCTL|MOD_RALT'),
-  makeOSM('MOD_RCTL|MOD_RGUI'),
-  makeOSM('MOD_RSFT|MOD_RALT'),
-  makeOSM('MOD_RSFT|MOD_RGUI'),
-  makeOSM('MOD_RALT|MOD_RGUI'),
+  makeOneShotModKey('RCS'),
+  makeOneShotModKey('RCA'),
+  makeOneShotModKey('RCG'),
+  makeOneShotModKey('RSA'),
+  makeOneShotModKey('RSG'),
+  makeOneShotModKey('RAG'),
 
   { width: 250 },
 
-  makeOSM('MOD_RCTL|MOD_RSFT|MOD_RGUI'),
-  makeOSM('MOD_RCTL|MOD_RALT|MOD_RGUI'),
-  makeOSM('MOD_RSFT|MOD_RALT|MOD_RGUI'),
+  makeOneShotModKey('RCSG'),
+  makeOneShotModKey('RCAG'),
+  makeOneShotModKey('RSAG'),
 
   { label: 'Special action keys', width: 'label' },
 
