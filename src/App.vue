@@ -20,14 +20,7 @@
       :class="helpClasses"
       :title="$t('help.label')"
       @click="toggleTutorial"
-      @mouseenter="
-        setMessage($t('help.label'));
-        hover = true;
-      "
-      @mouseleave="
-        setMessage('');
-        hover = false;
-      "
+      v-tooltip.bottom-end="$t('help.label')"
     >
       <font-awesome-icon
         v-show="!snowflakes && !tutorialEnabled"
@@ -143,12 +136,7 @@ export default {
     window.removeEventListener('beforeunload', this.showConfirmationPrompt);
   },
   methods: {
-    ...mapMutations([
-      'setShowSpinner',
-      'setSettingsPanel',
-      'toggleTutorial',
-      'setMessage'
-    ]),
+    ...mapMutations(['setShowSpinner', 'setSettingsPanel', 'toggleTutorial']),
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
       const len = size(this.$t('potato'));
