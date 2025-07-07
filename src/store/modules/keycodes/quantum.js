@@ -1,6 +1,11 @@
 import isUndefined from 'lodash/isUndefined';
 
-// make a Layer Tap Keycode Definition
+/**
+ * Make a Layer-Tap Keycode Definition
+ *
+ * @param {number} layer The layer number to activate while the key is held
+ * @returns A keycode definition for a Layer-Tap key
+ */
 function makeLayerTapKey(layer) {
   return {
     name: `LT ${layer}`,
@@ -48,7 +53,13 @@ const modLookup = {
   HYPR: ['Hyper', 'Left Control, Left Shift, Left Alt and Left GUI']
 };
 
-// make a Mod Keycode Definition
+/**
+ * Make a Mod Keycode Definition
+ *
+ * @param {string} code The modifier(s) to activate when the key is held
+ * @returns A keycode definition for a modifier key
+ * @see {@link modLookup}
+ */
 function makeModKey(code) {
   const tuple = modLookup[code];
   if (isUndefined(tuple)) {
@@ -63,7 +74,13 @@ function makeModKey(code) {
   };
 }
 
-// make a Mod-Tap Keycode Definition
+/**
+ * Make a Mod-Tap Keycode Definition
+ *
+ * @param {string} code The modifiers to activate while the key is held
+ * @returns A keycode definition for a Mod-Tap key
+ * @see {@link modLookup}
+ */
 function makeModTapKey(code) {
   const tuple = modLookup[code];
   if (isUndefined(tuple)) {
@@ -78,7 +95,13 @@ function makeModTapKey(code) {
   };
 }
 
-// make a One-Shot Mod Keycode Definition
+/**
+ * Make a One-Shot Mod Keycode Definition
+ *
+ * @param {string} code The modifiers to activate when the key is pressed
+ * @returns A keycode definition for an OSM key
+ * @see {@link modLookup}
+ */
 function makeOneShotModKey(code) {
   const tuple = modLookup[code];
   if (isUndefined(tuple)) {
