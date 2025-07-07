@@ -20,6 +20,8 @@
       :class="helpClasses"
       :title="$t('help.label')"
       @click="toggleTutorial"
+      @mouseenter="hover = true"
+      @mouseleave="hover = false"
       v-tooltip.bottom-end="$t('help.label')"
     >
       <font-awesome-icon
