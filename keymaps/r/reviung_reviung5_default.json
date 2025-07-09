@@ -1,0 +1,14 @@
+{
+  "keyboard": "reviung/reviung5",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(1,KC_VOLD)", "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_VOLU"
+    ],
+    [
+      "_______", "UG_HUEU", "UG_NEXT", "UG_TOGG", "KC_MUTE"
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "keyboard": "1upkeyboards/super16",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "RM_TOGG", "KC_1",    "KC_U",    "KC_P",
+      "RM_NEXT", "KC_1",    "KC_U",    "KC_P",
+      "RM_TOGG", "KC_1",    "KC_U",    "KC_P",
+      "RM_NEXT", "KC_1",    "KC_U",    "KC_P"
+    ]
+  ]
+}

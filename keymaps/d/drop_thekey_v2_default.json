@@ -1,0 +1,11 @@
+{
+  "keyboard": "drop/thekey/v2",
+  "keymap": "default",
+  "commit": "b2e5017e74f22ea38a3a12e8b4a672ae7a077727",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LCTL", "KC_C",    "KC_V"
+    ]
+  ]
+}

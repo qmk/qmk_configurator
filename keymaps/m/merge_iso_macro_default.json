@@ -1,0 +1,12 @@
+{
+  "keyboard": "merge/iso_macro",
+  "keymap": "default",
+  "commit": "1646c0f26cfa21a7023d404008e4d0aa4917193d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_HOME", "KC_4",    "KC_5",    "KC_6",    "KC_ENT",
+      "KC_MUTE", "KC_1",    "KC_2",    "KC_3"
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "keyboard": "clueboard/card",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "UG_TOGG", "UG_SATU", "UG_VALU",
+           "UG_HUED", "UG_HUEU",
+      "UG_NEXT", "UG_SATD", "UG_VALD",
+      "BL_STEP",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "keyboard": "mountainblocks/mb17",
+  "keymap": "default",
+  "commit": "b9d0b1f06478a1b3f596882b33cb9bd84e477bea",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "TG(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_HOME", "KC_UP",   "KC_PGUP",
+      "KC_LEFT", "KC_NO",   "KC_RGHT", "KC_TRNS",
+      "KC_END",  "KC_DOWN", "KC_PGDN",
+      "KC_INS",             "KC_DEL",  "KC_TRNS"
+    ]
+  ]
+}

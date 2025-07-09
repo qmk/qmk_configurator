@@ -1,0 +1,26 @@
+{
+  "keyboard": "chromatonemini",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+           "LT(2,KC_MUTE)",                "MI_SUST",
+           "MI_BNDU",
+      "MI_TRSD", "MI_TRSU",     "MI_C2",   "MI_D2",   "MI_E2",   "MI_Fs2",  "MI_Ab2",  "MI_Bb2",  "MI_C3",   "MI_D3",   "MI_E3",   "MI_Fs3",  "MI_Ab3",  "MI_Bb3",  "MI_C4",   "MI_D4",   "MI_E4",   "MI_Fs4",  "MI_Ab4",  "MI_Bb4",  "MI_C5",
+           "MI_BNDD",                "MI_Db2",  "MI_Eb2",  "MI_F2",   "MI_G2",   "MI_A2",   "MI_B2",   "MI_Db3",  "MI_Eb3",  "MI_F3",   "MI_G3",   "MI_A3",   "MI_B3",   "MI_Db4",  "MI_Eb4",  "MI_F4",   "MI_G4",   "MI_A4",   "MI_B4"
+    ],
+    [
+           "_______",                      "_______",
+           "_______",
+      "_______", "_______",     "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+           "_______",                 "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______"
+    ],
+    [
+           "_______",                     "XXXXXXX",
+           "MI_VELU",
+      "MI_OCTD", "MI_OCTU",     "DF(0)",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+           "MI_VELD",                "DF(1)",   "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "EE_CLR",  "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}
