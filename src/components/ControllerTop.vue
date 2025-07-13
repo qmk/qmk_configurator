@@ -44,15 +44,14 @@
           class="drop-label"
           >{{ $t('layout.label') }}:</label
         >
-        <select id="layout" v-model="layout" @focus="focus" @blur="blur">
-          <option
-            v-for="(aLayout, layoutName) in layouts"
-            :key="layoutName"
-            :value="layoutName"
-          >
-            {{ layoutName }}
-          </option>
-        </select>
+        <v-select
+          v-model="layout"
+          max-height="600px"
+          :clearable="false"
+          :options="Object.keys(layouts)"
+          @search:focus="focus"
+          @search:blur="blur"
+        ></v-select>
       </div>
       <div class="topctrl-keymap-name">
         <label class="drop-label" :class="fontAdjustClasses"
@@ -531,14 +530,14 @@ export default {
   display: inline-block;
   width: 30rem;
 }
-.topctrl-keyboards .v-select {
+.topctrl .v-select {
   font-family: 'Roboto Mono', Monaco, Bitstream Vera Sans Mono, Lucida Console,
     Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
     monospace;
   border-radius: 4px;
 }
 
-.topctrl-keyboards .v-select:focus-within {
+.topctrl .v-select:focus-within {
   outline: 2px solid black;
 }
 #open-on-github {
