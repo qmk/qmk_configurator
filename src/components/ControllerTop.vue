@@ -500,16 +500,6 @@ export default {
   grid-column-end: right;
   justify-self: start;
 }
-#layout {
-  padding: 5px 4px;
-  border-radius: 4px;
-  border: 1px solid;
-  width: 288px;
-  width: 30rem;
-  &:focus {
-    outline: 2px solid black;
-  }
-}
 .drop-label {
   display: inline-block;
   text-align: right;
