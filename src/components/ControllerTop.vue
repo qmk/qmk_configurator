@@ -21,7 +21,6 @@
         <v-select
           ref="select"
           v-model="keyboard"
-          max-height="600px"
           :clearable="false"
           :options="keyboards"
           @search:focus="opened"
@@ -46,7 +45,6 @@
         >
         <v-select
           v-model="layout"
-          max-height="600px"
           :clearable="false"
           :options="Object.keys(layouts)"
           @search:focus="focus"
