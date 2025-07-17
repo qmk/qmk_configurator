@@ -1,4 +1,4 @@
-import { cy, describe, before, it } from 'local-cypress';
+import { cy, describe, before, beforeEach, it } from 'local-cypress';
 describe('Simple browsing', function () {
   before(() => {
     cy.viewport('macbook-15');

@@ -69,22 +69,22 @@ describe('Simple browsing', function () {
         );
       }
     });
-    cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
-    cy.get('.vs__selected', { timeout: 5000 }).contains('1upkeyboards/super16');
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 5000 }).should('be.visible');
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 5000 }).contains('1upkeyboards/super16');
   });
   it('Should set favorite keyboard to localstorage and reload it', () => {
     cy.clearLocalStorage();
     cy.visit('/');
-    cy.get('.vs__selected', { timeout: 10000 }).should('be.visible');
-    cy.get('.vs__selected').click();
-    cy.get('.vs__search').type('2_milk');
-    cy.get('.vs__dropdown-option.vs__dropdown-option--highlight').click();
-    cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 10000 }).should('be.visible');
+    cy.get('.topctrl-keyboards .vs__selected').click();
+    cy.get('.topctrl-keyboards .vs__search').type('2_milk');
+    cy.get('.topctrl-keyboards .vs__dropdown-option.vs__dropdown-option--highlight').click();
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 5000 }).contains('2_milk');
     cy.get('#favorite-keyboard').click();
     cy.wait(500); // introduce wait, otherwise firefox cypress fails
     cy.visit('/');
-    cy.get('.vs__selected', { timeout: 5000 }).should('be.visible');
-    cy.get('.vs__selected', { timeout: 5000 }).contains('2_milk');
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 5000 }).should('be.visible');
+    cy.get('.topctrl-keyboards .vs__selected', { timeout: 5000 }).contains('2_milk');
     cy.get('#favorite-keyboard').should('have.class', 'active');
   });
   it('Should change language, set to localstorage and retrieve it', () => {
