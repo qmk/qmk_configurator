@@ -1,0 +1,22 @@
+{
+  "keyboard": "sentraq/number_pad",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_numpad_5x4",
+  "layers": [
+    [
+      "MO(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",              "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_TRNS", "UG_TOGG", "UG_NEXT", "UG_PREV",
+      "KC_NO",   "UG_HUED", "UG_HUEU",
+      "KC_NO",   "UG_SATD", "UG_SATU", "KC_NO",
+      "KC_NO",   "UG_VALD", "UG_VALU",
+      "KC_NO",              "KC_NO",   "KC_NUM"
+    ]
+  ]
+}

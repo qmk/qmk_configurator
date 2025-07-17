@@ -1,0 +1,18 @@
+{
+  "keyboard": "sdrakbs/sdrakb00",
+  "keymap": "default",
+  "commit": "f4e6af2dbe8c2b0d24dfa14e58d3be02bd6b2b7d",
+  "layout": "LAYOUT_ortho_3x4",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_MUTE",
+      "KC_P4",   "KC_P5",   "KC_P6",   "MO(1)",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_P0"
+    ],
+    [
+      "KC_BSPC", "KC_PSLS", "KC_PMNS", "_______",
+      "KC_EQL",  "KC_PAST", "KC_PPLS", "_______",
+      "KC_ENT",  "_______", "_______", "KC_PDOT"
+    ]
+  ]
+}

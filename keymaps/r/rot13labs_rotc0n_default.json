@@ -1,0 +1,12 @@
+{
+  "keyboard": "rot13labs/rotc0n",
+  "keymap": "default",
+  "commit": "b7b14678b2b3ab5244475eb1777a69a6e9997ca4",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_R",    "KC_O",    "KC_T",
+      "KC_C",    "KC_0",    "KC_N"
+    ]
+  ]
+}

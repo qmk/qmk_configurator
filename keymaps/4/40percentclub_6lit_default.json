@@ -1,0 +1,12 @@
+{
+  "keyboard": "40percentclub/6lit",
+  "keymap": "default",
+  "commit": "99b35940bc4166eae3853c9e2fa94bd2be72742e",
+  "layout": "LAYOUT_split",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",  "KC_F17",  "KC_F18",
+      "KC_F19",  "KC_F20",  "KC_F21",  "KC_F22",  "KC_F23",  "KC_F24"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "keyboard": "gowla",
+  "keymap": "default",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "LT(1,KC_MPRV)", "KC_MNXT", "KC_MPLY",
+      "KC_VOLD",       "KC_UP",   "KC_VOLU",
+      "KC_LEFT",       "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "KC_ESC",  "KC_MPLY", "QK_BOOT",
+      "KC_P7",   "KC_P1",   "KC_F1",
+      "KC_F2",   "KC_F3",   "KC_F4"
+    ]
+  ]
+}

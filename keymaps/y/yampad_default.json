@@ -1,0 +1,34 @@
+{
+  "keyboard": "yampad",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "00"
+    ]
+  ],
+  "layers": [
+    [
+      "TG(1)",   "KC_PSLS", "KC_PAST", "LT(2,KC_PMNS)",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P0",   "MC_0",    "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_INS",  "KC_HOME", "KC_PGUP", "TG(1)",
+      "KC_DEL",  "KC_END",  "KC_PGDN",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "KC_UP",   "XXXXXXX",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "XXXXXXX"
+    ],
+    [
+      "UG_NEXT", "RGB_M_P", "UG_TOGG", "_______",
+      "UG_HUED", "UG_HUEU", "XXXXXXX",
+      "UG_SATD", "UG_SATU", "XXXXXXX", "XXXXXXX",
+      "UG_VALD", "UG_VALU", "XXXXXXX",
+      "QK_BOOT", "XXXXXXX", "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}

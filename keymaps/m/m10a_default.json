@@ -1,0 +1,68 @@
+{
+  "keyboard": "m10a",
+  "keymap": "default",
+  "commit": "52b7ebd6be2532fc41ef1593be8e22c5f39d9a1e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F",
+      "KC_G",    "KC_H",    "KC_I",
+                            "KC_J"
+    ]
+  ]
+}

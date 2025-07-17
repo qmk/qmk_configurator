@@ -1,0 +1,14 @@
+{
+  "keyboard": "doio/kb04",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(1)",   "KC_MPRV", "KC_MPLY", "KC_MNXT",    "KC_MUTE"
+    ],
+    [
+      "KC_TRNS", "RM_HUED", "RM_TOGG", "RM_NEXT",    "KC_TRNS"
+    ]
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "keyboard": "qvex/lynepad2",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "G(KC_D)", "G(KC_TAB)", "C(G(KC_LEFT))", "C(G(KC_RGHT))",
+      "G(KC_E)", "XXXXXXX",   "C(KC_C)",       "C(KC_V)",
+      "KC_LGUI", "XXXXXXX",   "XXXXXXX",
+      "KC_VOLU", "KC_VOLD",   "KC_MPRV",       "KC_MNXT",
+      "KC_MPLY", "MO(4)"
+    ],
+    [
+      "KC_ESC",  "KC_R",    "KC_M",    "KC_DEL",
+      "KC_V",    "KC_G",    "KC_D",    "KC_X",
+      "MO(3)",   "KC_B",    "C(KC_V)",
+      "KC_PLUS", "KC_MINS", "C(KC_Y)", "C(KC_Z)",
+      "KC_PGDN", "MO(4)"
+    ],
+    [
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "MO(4)"
+    ],
+    [
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "XXXXXXX", "MO(4)"
+    ],
+    [
+      "TO(0)",   "TO(1)",   "TO(2)",   "TO(3)",
+      "BL_TOGG", "BL_STEP", "XXXXXXX", "XXXXXXX",
+      "QK_RBT",  "EE_CLR",  "QK_BOOT",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "UG_TOGG", "XXXXXXX"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "keyboard": "ploopyco/mouse/rev1_002",
+  "keymap": "default",
+  "commit": "961f0b7b2de54f988daf4ce7b791f91a33e55612",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "C(KC_C)", "KC_BTN1", "KC_BTN3",    "KC_BTN2", "C(KC_V)", "KC_BTN4", "KC_BTN5",
+                            "DPI_CONFIG"
+    ]
+  ]
+}
