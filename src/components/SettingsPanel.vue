@@ -115,16 +115,16 @@
           :title="$t('settingsPanel.clearLayer.title')"
           >{{ $t('settingsPanel.clearLayer.title') }}</label
         >
-        <div>
-          <toggle-button
-            id="settings-panel--clear-keymap"
-            :value="configuratorSettings.clearLayerDefault"
-            :width="defaultWidth"
-            :sync="true"
-            :labels="clearLayerLabels"
-            @change="clearLayerDefault"
-          />
-        </div>
+      </div>
+      <div>
+        <toggle-button
+          id="settings-panel--clear-keymap"
+          :value="configuratorSettings.clearLayerDefault"
+          :width="defaultWidth"
+          :sync="true"
+          :labels="clearLayerLabels"
+          @change="clearLayerDefault"
+        />
       </div>
     </div>
     <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
