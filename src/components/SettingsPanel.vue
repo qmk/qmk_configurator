@@ -3,6 +3,41 @@
     <div class="settings-panel--toggles">
       <div>
         <label
+          class="settings-panel--text"
+          @mouseover="help('language')"
+          :title="$t('settingsPanel.language.title')"
+          >{{ $t('settingsPanel.language.title') }}</label
+        >
+      </div>
+      <div>
+        <select id="setting-panel-language" v-model="language">
+          <option v-for="l in languages" :key="l.value" :value="l.value">
+            {{ l.label }}
+          </option>
+        </select>
+      </div>
+
+      <div>
+        <label
+          class="settings-panel--text"
+          @mouseover="help('darkmode')"
+          :title="$t('settingsPanel.darkmode.label')"
+          >{{ $t('settingsPanel.darkmode.label') }}</label
+        >
+      </div>
+      <div>
+        <toggle-button
+          id="setting-toggle-darkmode"
+          :value="configuratorSettings.darkmodeEnabled"
+          :width="defaultWidth"
+          :sync="true"
+          :labels="labels"
+          @change="darkMode"
+        />
+      </div>
+
+      <div>
+        <label
           :title="$t('settingsPanel.fastInput.title')"
           @mouseover="help('fastInput')"
           class="settings-panel--text"
@@ -19,21 +54,7 @@
           @change="toggleContinuousInput"
         />
       </div>
-      <div>
-        <label
-          class="settings-panel--legends"
-          @mouseover="help('legends')"
-          :title="$t('settingsPanel.legends.title')"
-          >{{ $t('settingsPanel.legends.title') }}</label
-        >
-      </div>
-      <div>
-        <select id="setting-panel-legends" v-model="keyLegends">
-          <option v-for="l in legendTypes" :key="l" :value="l">
-            {{ $t(`settingsPanel.legendType.${l}`) }}
-          </option>
-        </select>
-      </div>
+
       <div>
         <label
           class="settings-panel--text"
@@ -55,37 +76,20 @@
 
       <div>
         <label
-          class="settings-panel--text"
-          @mouseover="help('darkmode')"
-          :title="$t('settingsPanel.darkmode.label')"
-          >{{ $t('settingsPanel.darkmode.label') }}</label
+          class="settings-panel--legends"
+          @mouseover="help('legends')"
+          :title="$t('settingsPanel.legends.title')"
+          >{{ $t('settingsPanel.legends.title') }}</label
         >
       </div>
       <div>
-        <toggle-button
-          id="setting-toggle-darkmode"
-          :value="configuratorSettings.darkmodeEnabled"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="darkMode"
-        />
-      </div>
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('language')"
-          :title="$t('settingsPanel.language.title')"
-          >{{ $t('settingsPanel.language.title') }}</label
-        >
-      </div>
-      <div>
-        <select id="setting-panel-language" v-model="language">
-          <option v-for="l in languages" :key="l.value" :value="l.value">
-            {{ l.label }}
+        <select id="setting-panel-legends" v-model="keyLegends">
+          <option v-for="l in legendTypes" :key="l" :value="l">
+            {{ $t(`settingsPanel.legendType.${l}`) }}
           </option>
         </select>
       </div>
+
       <div>
         <label
           class="settings-panel--text"
@@ -108,6 +112,7 @@
           </option>
         </select>
       </div>
+
       <div>
         <label
           class="settings-panel--clear-keymap"
