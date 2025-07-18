@@ -23,7 +23,8 @@
         <toggle-button
           id="setting-toggle-darkmode"
           :value="configuratorSettings.darkmodeEnabled"
-          :width="defaultWidth"
+          :height="toggleButtonHeight"
+          :width="toggleButtonWidth"
           :sync="true"
           :labels="labels"
           @change="darkMode"
@@ -39,7 +40,8 @@
         <toggle-button
           id="setting-toggle-fast-input"
           :value="continuousInput"
-          :width="defaultWidth"
+          :height="toggleButtonHeight"
+          :width="toggleButtonWidth"
           :sync="true"
           :labels="labels"
           @change="toggleContinuousInput"
@@ -57,7 +59,8 @@
         <toggle-button
           id="setting-toggle-tutorial"
           :value="tutorialEnabled"
-          :width="defaultWidth"
+          :height="toggleButtonHeight"
+          :width="toggleButtonWidth"
           :sync="true"
           :labels="labels"
           @change="toggleTutorial"
@@ -110,7 +113,8 @@
         <toggle-button
           id="settings-panel--clear-keymap"
           :value="configuratorSettings.clearLayerDefault"
-          :width="defaultWidth"
+          :height="toggleButtonHeight"
+          :width="toggleButtonWidth"
           :sync="true"
           :labels="clearLayerLabels"
           @change="clearLayerDefault"
@@ -137,7 +141,8 @@ export default {
       },
       helpText: undefined,
       clearTextTimer: undefined,
-      defaultWidth: 75
+      toggleButtonHeight: 26,
+      toggleButtonWidth: 60
     };
   },
   components: { ToggleButton },
@@ -263,7 +268,7 @@ export default {
 .settings-panel--toggles {
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-row-gap: 5px;
+  grid-row-gap: 8px;
 }
 .settings-panel--help-text {
   position: absolute;
