@@ -105,13 +105,11 @@ printKeymap:label,Drukuj mapę
 printKeymap:title,Drukuj wszystkie warstwy mapy klawiszy
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
-settingsPanel:darkmode:help,
-settingsPanel:darkmode:label,Włącz/wyłącz tryb nocny
+settingsPanel:darkMode:label,Włącz/wyłącz tryb nocny
 settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego
 settingsPanel:fastInput:label,Szybkie wprowadzanie (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
-settingsPanel:language:help,
 settingsPanel:language:label,Język
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

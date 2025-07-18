@@ -105,13 +105,11 @@ printKeymap:label,Imprimir keymap
 printKeymap:title,Imprimir capas de keymap
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
-settingsPanel:darkmode:help,
-settingsPanel:darkmode:label,Cambiar Modo oscuro
+settingsPanel:darkMode:label,Cambiar Modo oscuro
 settingsPanel:fastInput:help,Ingresar teclas por medio del teclado sin hacer click en cada posición
 settingsPanel:fastInput:label,Entrada rápida (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
-settingsPanel:language:help,
 settingsPanel:language:label,Idioma
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

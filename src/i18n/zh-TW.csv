@@ -105,13 +105,11 @@ printKeymap:label,列印鍵位
 printKeymap:title,列印鍵位表
 settingsPanel:clearLayer:help,更改“清除層”功能所使用的預設鍵碼
 settingsPanel:clearLayer:label,清除層預設鍵碼
-settingsPanel:darkmode:help,使用 QMK 深色主題
-settingsPanel:darkmode:label,深色模式
+settingsPanel:darkMode:label,深色模式
 settingsPanel:fastInput:help,直接透過鍵盤輸入鍵位
 settingsPanel:fastInput:label,快速輸入 (Ctrl+Alt+F)
 settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
-settingsPanel:language:help,更改使用者介面語言
 settingsPanel:language:label,語言
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

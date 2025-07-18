@@ -2,9 +2,7 @@
   <div class="settings-panel">
     <div class="settings-panel--toggles">
       <div>
-        <label class="settings-panel--text" @mouseover="help('language')">{{
-          $t('settingsPanel.language.label')
-        }}</label>
+        <label>{{ $t('settingsPanel.language.label') }}</label>
       </div>
       <div>
         <select id="setting-panel-language" v-model="language">
@@ -15,9 +13,7 @@
       </div>
 
       <div>
-        <label class="settings-panel--text" @mouseover="help('darkmode')">{{
-          $t('settingsPanel.darkmode.label')
-        }}</label>
+        <label>{{ $t('settingsPanel.darkMode.label') }}</label>
       </div>
       <div>
         <toggle-button
@@ -32,9 +28,10 @@
       </div>
 
       <div>
-        <label @mouseover="help('fastInput')" class="settings-panel--text">{{
-          $t('settingsPanel.fastInput.label')
-        }}</label>
+        <label>{{ $t('settingsPanel.fastInput.label') }}</label>
+        <div class="settings-panel--subtitle">
+          {{ $t('settingsPanel.fastInput.help') }}
+        </div>
       </div>
       <div>
         <toggle-button
@@ -49,11 +46,10 @@
       </div>
 
       <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('toggleTutorial')"
-          >{{ $t('settingsPanel.toggleTutorial.label') }}</label
-        >
+        <label>{{ $t('settingsPanel.toggleTutorial.label') }}</label>
+        <div class="settings-panel--subtitle">
+          {{ $t('settingsPanel.toggleTutorial.help') }}
+        </div>
       </div>
       <div>
         <toggle-button
@@ -68,9 +64,10 @@
       </div>
 
       <div>
-        <label class="settings-panel--legends" @mouseover="help('legends')">{{
-          $t('settingsPanel.legends.label')
-        }}</label>
+        <label>{{ $t('settingsPanel.legends.label') }}</label>
+        <div class="settings-panel--subtitle">
+          {{ $t('settingsPanel.legends.help') }}
+        </div>
       </div>
       <div>
         <select id="setting-panel-legends" v-model="keyLegends">
@@ -81,11 +78,10 @@
       </div>
 
       <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('osKeyboardLayout')"
-          >{{ $t('settingsPanel.osKeyboardLayout.label') }}</label
-        >
+        <label>{{ $t('settingsPanel.osKeyboardLayout.label') }}</label>
+        <div class="settings-panel--subtitle">
+          {{ $t('settingsPanel.osKeyboardLayout.help') }}
+        </div>
       </div>
       <div>
         <select
@@ -103,11 +99,10 @@
       </div>
 
       <div>
-        <label
-          class="settings-panel--clear-keymap"
-          @mouseover="help('clearLayer')"
-          >{{ $t('settingsPanel.clearLayer.label') }}</label
-        >
+        <label>{{ $t('settingsPanel.clearLayer.label') }}</label>
+        <div class="settings-panel--subtitle">
+          {{ $t('settingsPanel.clearLayer.help') }}
+        </div>
       </div>
       <div>
         <toggle-button
@@ -121,7 +116,6 @@
         />
       </div>
     </div>
-    <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
   </div>
 </template>
 <script>
@@ -139,8 +133,6 @@ export default {
         checked: this.$t('settingsPanel.kctrns.label'),
         unchecked: this.$t('settingsPanel.kcno.label')
       },
-      helpText: undefined,
-      clearTextTimer: undefined,
       toggleButtonHeight: 26,
       toggleButtonWidth: 60
     };
@@ -222,39 +214,6 @@ export default {
     },
     clearLayerDefault() {
       this.toggleClearLayerDefault();
-    },
-    help(key) {
-      switch (key) {
-        case 'fastInput':
-          this.helpText = this.$t('settingsPanel.fastInput.help');
-          break;
-        case 'legends':
-          this.helpText = this.$t('settingsPanel.legends.help');
-          break;
-        case 'toggleTutorial':
-          this.helpText = this.$t('settingsPanel.toggleTutorial.help');
-          break;
-        case 'darkmode':
-          this.helpText = this.$t('settingsPanel.darkmode.help');
-          break;
-        case 'language':
-          this.helpText = this.$t('settingsPanel.language.help');
-          break;
-        case 'osKeyboardLayout':
-          this.helpText = this.$t('settingsPanel.osKeyboardLayout.help');
-          break;
-        case 'clearLayer':
-          this.helpText = this.$t('settingsPanel.clearLayer.help');
-          break;
-      }
-
-      if (this.clearTextTimer) {
-        window.clearTimeout(this.clearTextTimer);
-        this.clearTextTimer = undefined;
-      }
-      this.clearTextTimer = window.setTimeout(() => {
-        this.helpText = undefined;
-      }, 5000);
     }
   }
 };
@@ -270,15 +229,7 @@ export default {
   grid-template: 1fr / 1fr;
   grid-row-gap: 8px;
 }
-.settings-panel--help-text {
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  width: 100%;
-  height: 80px;
-  bottom: 0;
-  padding: 5px;
-  box-sizing: border-box;
-  text-overflow: none;
+.settings-panel--subtitle {
+  font-size: 80%;
 }
 </style>

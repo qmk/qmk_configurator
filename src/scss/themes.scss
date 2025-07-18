@@ -194,10 +194,6 @@ html {
     .key-contents.active-key {
       background: #d4f9d1;
     }
-    .settings-panel--help-text {
-      background: #add8e6;
-      color: #222;
-    }
     .input-url-modal {
       background-color: #eee;
       border-color: #ccc;
@@ -420,8 +416,7 @@ html[data-theme='dark'] {
   #keycodes {
     background-color: inherit;
   }
-  .bottom-fixed,
-  .settings-panel--help-text {
+  .bottom-fixed {
     background: #194452;
     color: #ddd;
   }
