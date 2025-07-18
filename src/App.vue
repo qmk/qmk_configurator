@@ -171,7 +171,7 @@ export default {
           component: SettingsPanel,
           openOn: 'right',
           props: {},
-          width: '300px'
+          width: '360px'
         });
         this.panel.promise.then(() => {
           // user clicked on veil
