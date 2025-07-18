@@ -121,7 +121,7 @@ settingsPanel:legends:help,
 settingsPanel:legends:label,
 settingsPanel:off:label,Aus
 settingsPanel:on:label,An
-settingsPanel:osKeyboardLayout:help,Stellen Sie die Tastenbeschriftung auf das Systemlayout.
+settingsPanel:osKeyboardLayout:help,Stellen Sie die Tastenbeschriftung auf das Systemlayout
 settingsPanel:osKeyboardLayout:option:keymap_belgian,Belgisch (Belgien)
 settingsPanel:osKeyboardLayout:option:keymap_bepo,Französisch (BÉPO)
 settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,Portugiesisch (Brasilien)

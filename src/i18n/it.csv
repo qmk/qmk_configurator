@@ -103,11 +103,11 @@ print:print:title,Stampa
 print:source:title,Fonte
 printKeymap:label,Stampa Keymap
 printKeymap:title,Stampa Livelli Keymap
-settingsPanel:clearLayer:help,Cambia il keycode predefinito per 
+settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,Azzera Livello Automaticamente
 settingsPanel:darkmode:help,Usa la modalità scura del configuratre QMK
 settingsPanel:darkmode:label,Modalità Scura
-settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
+settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione
 settingsPanel:fastInput:label,Ingresso rapido (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS

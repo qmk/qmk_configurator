@@ -121,7 +121,7 @@ settingsPanel:legends:help,
 settingsPanel:legends:label,
 settingsPanel:off:label,Выкл
 settingsPanel:on:label,Вкл
-settingsPanel:osKeyboardLayout:help,Изменяет легенды клавиш в соответствии с раскладкой клавиатуры операционной системы.
+settingsPanel:osKeyboardLayout:help,Изменяет легенды клавиш в соответствии с раскладкой клавиатуры операционной системы
 settingsPanel:osKeyboardLayout:option:keymap_belgian,Бельгийский (Бельгия)
 settingsPanel:osKeyboardLayout:option:keymap_bepo,Французский (BÉPO)
 settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,Португальский (Бразилия)

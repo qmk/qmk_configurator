@@ -107,7 +107,7 @@ settingsPanel:clearLayer:help,Change the default keycode for clear layer
 settingsPanel:clearLayer:label,Clear Layer Default
 settingsPanel:darkmode:help,Use QMK Configurator's dark theme
 settingsPanel:darkmode:label,Dark Mode
-settingsPanel:fastInput:help,Input keys via keyboard without clicking each position.
+settingsPanel:fastInput:help,Input keys via keyboard without clicking each position
 settingsPanel:fastInput:label,Fast Input (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
@@ -121,7 +121,7 @@ settingsPanel:legends:help,Change keycap display
 settingsPanel:legends:label,Legends
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
-settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout.
+settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout
 settingsPanel:osKeyboardLayout:option:keymap_belgian,Belgian (Belgium)
 settingsPanel:osKeyboardLayout:option:keymap_bepo,French (BÉPO)
 settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,Portuguese (Brazil)
