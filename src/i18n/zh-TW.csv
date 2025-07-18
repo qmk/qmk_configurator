@@ -103,13 +103,11 @@ print:print:title,列印
 print:source:title,原始碼
 printKeymap:label,列印鍵位
 printKeymap:title,列印鍵位表
-settingsPanel:clearLayer:help,更改“清除層”功能所使用的預設鍵碼
+settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,清除層預設鍵碼
 settingsPanel:darkMode:label,深色模式
 settingsPanel:fastInput:help,直接透過鍵盤輸入鍵位
 settingsPanel:fastInput:label,快速輸入 (Ctrl+Alt+F)
-settingsPanel:kcno:label,
-settingsPanel:kctrns:label,
 settingsPanel:language:label,語言
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

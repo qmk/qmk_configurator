@@ -111,7 +111,7 @@
           :height="toggleButtonHeight"
           :width="toggleButtonWidth"
           :sync="true"
-          :labels="clearLayerLabels"
+          :labels="labels"
           @change="clearLayerDefault"
         />
       </div>
@@ -128,10 +128,6 @@ export default {
       labels: {
         checked: this.$t('settingsPanel.on.label'),
         unchecked: this.$t('settingsPanel.off.label')
-      },
-      clearLayerLabels: {
-        checked: this.$t('settingsPanel.kctrns.label'),
-        unchecked: this.$t('settingsPanel.kcno.label')
       },
       toggleButtonHeight: 26,
       toggleButtonWidth: 60

@@ -108,8 +108,6 @@ settingsPanel:clearLayer:label,
 settingsPanel:darkMode:label,Die Seite dunkler machen
 settingsPanel:fastInput:help,"Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken"
 settingsPanel:fastInput:label,Schnelle Eingabe (Strg+Alt+F)
-settingsPanel:kcno:label,KC_NO
-settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:label,Sprache
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

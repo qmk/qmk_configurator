@@ -103,13 +103,11 @@ print:print:title,打印
 print:source:title,源码
 printKeymap:label,打印键位
 printKeymap:title,打印键位表
-settingsPanel:clearLayer:help,更改“清除层”功能所使用的默认键码
+settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,清除层默认键码
 settingsPanel:darkMode:label,深色模式
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入 (Ctrl+Alt+F)
-settingsPanel:kcno:label,
-settingsPanel:kctrns:label,
 settingsPanel:language:label,语言
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

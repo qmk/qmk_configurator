@@ -103,13 +103,11 @@ print:print:title,Print
 print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,Print Keymap Layers
-settingsPanel:clearLayer:help,Change the default keycode for clear layer
+settingsPanel:clearLayer:help,Use KC_TRNS instead of KC_NO when clearing layers
 settingsPanel:clearLayer:label,Clear Layer Default
 settingsPanel:darkMode:label,Dark Mode
 settingsPanel:fastInput:help,Input keys via keyboard without clicking each position
 settingsPanel:fastInput:label,Fast Input (Ctrl+Alt+F)
-settingsPanel:kcno:label,KC_NO
-settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:label,Language
 settingsPanel:legendType:index,Index
 settingsPanel:legendType:keymap,Keymap
@@ -119,7 +117,7 @@ settingsPanel:legends:help,Change keycap display
 settingsPanel:legends:label,Legends
 settingsPanel:off:label,Off
 settingsPanel:on:label,On
-settingsPanel:osKeyboardLayout:help,Change the key legends to match with your host keyboard layout
+settingsPanel:osKeyboardLayout:help,Change the key legends to match your host keyboard layout
 settingsPanel:osKeyboardLayout:option:keymap_belgian,Belgian (Belgium)
 settingsPanel:osKeyboardLayout:option:keymap_bepo,French (BÉPO)
 settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,Portuguese (Brazil)
