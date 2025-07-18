@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Workman ZXCVM
 settingsPanel:osKeyboardLayout:title,Host Keyboard Layout
 settingsPanel:snowflakes:label,Toggle Snowflakes
 settingsPanel:snowflakes:title,Snowflakes
-settingsPanel:title,Configurator Settings
 settingsPanel:toggleTutorial:help,MechMerlin's QMK Configurator video tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
 testKeys:label,Test Keyboard

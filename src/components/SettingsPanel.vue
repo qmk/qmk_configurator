@@ -1,7 +1,5 @@
 <template>
   <div class="settings-panel">
-    <h2>{{ $t('settingsPanel.title') }}</h2>
-
     <div class="settings-panel--toggles">
       <div>
         <label

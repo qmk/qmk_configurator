@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
 settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,Azionare fiocchi di neve
 settingsPanel:snowflakes:title,Fiocchi di neve
-settingsPanel:title,Impostazioni Configuratore
 settingsPanel:toggleTutorial:help,MechMerlin Configurazione QMK Video Tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
 testKeys:label,Prova tastiera

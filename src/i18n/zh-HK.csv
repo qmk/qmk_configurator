@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
 settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,開啓 Snowflakes
 settingsPanel:snowflakes:title,Snowflakes
-settingsPanel:title,配置選項
 settingsPanel:toggleTutorial:help,MechMerlin 的視頻教程
 settingsPanel:toggleTutorial:label,視頻教程
 testKeys:label,測試鍵盤

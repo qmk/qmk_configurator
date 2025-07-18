@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
 settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,雪の切り替え
 settingsPanel:snowflakes:title,雪
-settingsPanel:title,Configuratorの設定
 settingsPanel:toggleTutorial:help,MechMerlinのビデオガイド
 settingsPanel:toggleTutorial:label,ビデオチュートリアル
 testKeys:label,Test Keyboard

@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Уоркман / Workm
 settingsPanel:osKeyboardLayout:title,Раскладка клавиатуры операционной системы
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
-settingsPanel:title,Настройки конфигуратора
 settingsPanel:toggleTutorial:help,Видеоурок от MechMerlin
 settingsPanel:toggleTutorial:label,Видеоурок
 testKeys:label,Проверка клавиатуры

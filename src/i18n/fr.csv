@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,Workman ZXCVM
 settingsPanel:osKeyboardLayout:title,Disposition des touches du système d'opération
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
-settingsPanel:title,Paramètres du Configurateur
 settingsPanel:toggleTutorial:help,Guide vidéo de MechMerlin (en anglais)
 settingsPanel:toggleTutorial:label,Guide Vidéo
 testKeys:label,Testeur de clavier

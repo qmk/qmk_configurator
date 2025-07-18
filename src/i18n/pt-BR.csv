@@ -188,7 +188,6 @@ settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
 settingsPanel:osKeyboardLayout:title,
 settingsPanel:snowflakes:label,
 settingsPanel:snowflakes:title,
-settingsPanel:title,Configurações
 settingsPanel:toggleTutorial:help,MechMerlin video guide
 settingsPanel:toggleTutorial:label,Tutorial em Video
 testKeys:label,Testar teclado
