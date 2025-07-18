@@ -37,12 +37,9 @@
       </div>
 
       <div>
-        <label
-          :title="$t('settingsPanel.fastInput.title')"
-          @mouseover="help('fastInput')"
-          class="settings-panel--text"
-          >{{ $t('settingsPanel.fastInput.label') }}</label
-        >
+        <label @mouseover="help('fastInput')" class="settings-panel--text">{{
+          $t('settingsPanel.fastInput.label')
+        }}</label>
       </div>
       <div>
         <toggle-button

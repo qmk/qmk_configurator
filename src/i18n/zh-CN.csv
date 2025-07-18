@@ -108,8 +108,7 @@ settingsPanel:clearLayer:title,清除层默认键码
 settingsPanel:darkmode:help,使用 QMK 深色主题
 settingsPanel:darkmode:label,深色模式
 settingsPanel:fastInput:help,直接通过键盘输入键位
-settingsPanel:fastInput:label,快速输入
-settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:fastInput:label,快速输入 (Ctrl+Alt+F)
 settingsPanel:kcno:label,
 settingsPanel:kctrns:label,
 settingsPanel:language:help,更改用户界面语言

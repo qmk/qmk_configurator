@@ -108,8 +108,7 @@ settingsPanel:clearLayer:title,レイヤクリア時のデフォルト
 settingsPanel:darkmode:help,QMK Configuratorのダークテーマを使用する
 settingsPanel:darkmode:label,ダークモード
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
-settingsPanel:fastInput:label,高速入力
-settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:fastInput:label,高速入力 (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,ユーザインタフェースの言語を変更する

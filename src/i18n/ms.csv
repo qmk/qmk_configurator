@@ -108,8 +108,7 @@ settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Toggle Mod Gelap
 settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi.
-settingsPanel:fastInput:label,Input cepat
-settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:fastInput:label,Input cepat (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,

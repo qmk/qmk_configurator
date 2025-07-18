@@ -108,8 +108,7 @@ settingsPanel:clearLayer:title,
 settingsPanel:darkmode:help,
 settingsPanel:darkmode:label,Темный режим
 settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
-settingsPanel:fastInput:label,Быстрый ввод
-settingsPanel:fastInput:title,ctrl + alt + f
+settingsPanel:fastInput:label,Быстрый ввод (Ctrl+Alt+F)
 settingsPanel:kcno:label,KC_NO
 settingsPanel:kctrns:label,KC_TRNS
 settingsPanel:language:help,
