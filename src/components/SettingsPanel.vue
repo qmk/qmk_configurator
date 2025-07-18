@@ -267,14 +267,13 @@ export default {
 <style>
 .settings-panel {
   margin-top: 50px;
+  text-align: left;
+  padding: 12px;
 }
 .settings-panel--toggles {
   display: grid;
   grid-template: 1fr / 1fr;
   grid-row-gap: 5px;
-}
-.settings-panel--text {
-  text-align: left;
 }
 .settings-panel--help-text {
   position: absolute;
