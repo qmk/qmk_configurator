@@ -2,12 +2,9 @@
   <div class="settings-panel">
     <div class="settings-panel--toggles">
       <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('language')"
-          :title="$t('settingsPanel.language.title')"
-          >{{ $t('settingsPanel.language.title') }}</label
-        >
+        <label class="settings-panel--text" @mouseover="help('language')">{{
+          $t('settingsPanel.language.label')
+        }}</label>
       </div>
       <div>
         <select id="setting-panel-language" v-model="language">
@@ -18,12 +15,9 @@
       </div>
 
       <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('darkmode')"
-          :title="$t('settingsPanel.darkmode.label')"
-          >{{ $t('settingsPanel.darkmode.label') }}</label
-        >
+        <label class="settings-panel--text" @mouseover="help('darkmode')">{{
+          $t('settingsPanel.darkmode.label')
+        }}</label>
       </div>
       <div>
         <toggle-button
@@ -56,7 +50,6 @@
         <label
           class="settings-panel--text"
           @mouseover="help('toggleTutorial')"
-          :title="$t('settingsPanel.toggleTutorial.label')"
           >{{ $t('settingsPanel.toggleTutorial.label') }}</label
         >
       </div>
@@ -72,12 +65,9 @@
       </div>
 
       <div>
-        <label
-          class="settings-panel--legends"
-          @mouseover="help('legends')"
-          :title="$t('settingsPanel.legends.title')"
-          >{{ $t('settingsPanel.legends.title') }}</label
-        >
+        <label class="settings-panel--legends" @mouseover="help('legends')">{{
+          $t('settingsPanel.legends.label')
+        }}</label>
       </div>
       <div>
         <select id="setting-panel-legends" v-model="keyLegends">
@@ -91,8 +81,7 @@
         <label
           class="settings-panel--text"
           @mouseover="help('osKeyboardLayout')"
-          :title="$t('settingsPanel.osKeyboardLayout.title')"
-          >{{ $t('settingsPanel.osKeyboardLayout.title') }}</label
+          >{{ $t('settingsPanel.osKeyboardLayout.label') }}</label
         >
       </div>
       <div>
@@ -105,7 +94,7 @@
             :key="osLayout"
             :value="osLayout"
           >
-            {{ $t(`settingsPanel.osKeyboardLayout.label.${osLayout}`) }}
+            {{ $t(`settingsPanel.osKeyboardLayout.option.${osLayout}`) }}
           </option>
         </select>
       </div>
@@ -114,8 +103,7 @@
         <label
           class="settings-panel--clear-keymap"
           @mouseover="help('clearLayer')"
-          :title="$t('settingsPanel.clearLayer.title')"
-          >{{ $t('settingsPanel.clearLayer.title') }}</label
+          >{{ $t('settingsPanel.clearLayer.label') }}</label
         >
       </div>
       <div>
