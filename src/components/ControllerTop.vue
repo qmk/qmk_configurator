@@ -544,6 +544,6 @@ export default {
 #open-on-github {
   cursor: pointer;
   margin-left: 8px;
-  color: white;
+  color: unset;
 }
 </style>
