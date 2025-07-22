@@ -33,8 +33,8 @@ export default {
   font-size: 150%;
   opacity: 0.8;
   margin: 16px;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 16px 24px;
+  border-radius: 100px;
 }
 
 .fadelong-enter-active,
