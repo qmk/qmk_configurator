@@ -223,7 +223,7 @@ export default {
 .settings-panel--toggles {
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-row-gap: 12px;
+  grid-row-gap: 16px;
 }
 .settings-panel--subtitle {
   font-size: 80%;
