@@ -3,28 +3,28 @@
     <div class="settings-panel--toggles">
       <div>
         <label>{{ $t('settingsPanel.language.label') }}</label>
-      </div>
-      <div>
-        <select id="setting-panel-language" v-model="language">
-          <option v-for="l in languages" :key="l.value" :value="l.value">
-            {{ l.label }}
-          </option>
-        </select>
+        <div class="settings-panel--control">
+          <select id="setting-panel-language" v-model="language">
+            <option v-for="l in languages" :key="l.value" :value="l.value">
+              {{ l.label }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <div>
         <label>{{ $t('settingsPanel.darkMode.label') }}</label>
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-darkmode"
-          :value="configuratorSettings.darkmodeEnabled"
-          :height="toggleButtonHeight"
-          :width="toggleButtonWidth"
-          :sync="true"
-          :labels="labels"
-          @change="darkMode"
-        />
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-darkmode"
+            :value="configuratorSettings.darkmodeEnabled"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="darkMode"
+          />
+        </div>
       </div>
 
       <div>
@@ -32,17 +32,17 @@
         <div class="settings-panel--subtitle">
           {{ $t('settingsPanel.fastInput.help') }}
         </div>
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-fast-input"
-          :value="continuousInput"
-          :height="toggleButtonHeight"
-          :width="toggleButtonWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleContinuousInput"
-        />
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-fast-input"
+            :value="continuousInput"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="toggleContinuousInput"
+          />
+        </div>
       </div>
 
       <div>
@@ -50,17 +50,17 @@
         <div class="settings-panel--subtitle">
           {{ $t('settingsPanel.toggleTutorial.help') }}
         </div>
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-tutorial"
-          :value="tutorialEnabled"
-          :height="toggleButtonHeight"
-          :width="toggleButtonWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleTutorial"
-        />
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-tutorial"
+            :value="tutorialEnabled"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="toggleTutorial"
+          />
+        </div>
       </div>
 
       <div>
@@ -68,13 +68,13 @@
         <div class="settings-panel--subtitle">
           {{ $t('settingsPanel.legends.help') }}
         </div>
-      </div>
-      <div>
-        <select id="setting-panel-legends" v-model="keyLegends">
-          <option v-for="l in legendTypes" :key="l" :value="l">
-            {{ $t(`settingsPanel.legendType.${l}`) }}
-          </option>
-        </select>
+        <div class="settings-panel--control">
+          <select id="setting-panel-legends" v-model="keyLegends">
+            <option v-for="l in legendTypes" :key="l" :value="l">
+              {{ $t(`settingsPanel.legendType.${l}`) }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <div>
@@ -82,20 +82,20 @@
         <div class="settings-panel--subtitle">
           {{ $t('settingsPanel.osKeyboardLayout.help') }}
         </div>
-      </div>
-      <div>
-        <select
-          id="setting-panel-os-keyboard-layout"
-          v-model="osKeyboardLayout"
-        >
-          <option
-            v-for="osLayout in sortedOSKeyboardLayouts"
-            :key="osLayout"
-            :value="osLayout"
+        <div class="settings-panel--control">
+          <select
+            id="setting-panel-os-keyboard-layout"
+            v-model="osKeyboardLayout"
           >
-            {{ $t(`settingsPanel.osKeyboardLayout.option.${osLayout}`) }}
-          </option>
-        </select>
+            <option
+              v-for="osLayout in sortedOSKeyboardLayouts"
+              :key="osLayout"
+              :value="osLayout"
+            >
+              {{ $t(`settingsPanel.osKeyboardLayout.option.${osLayout}`) }}
+            </option>
+          </select>
+        </div>
       </div>
 
       <div>
@@ -103,17 +103,17 @@
         <div class="settings-panel--subtitle">
           {{ $t('settingsPanel.clearLayer.help') }}
         </div>
-      </div>
-      <div>
-        <toggle-button
-          id="settings-panel--clear-keymap"
-          :value="configuratorSettings.clearLayerDefault"
-          :height="toggleButtonHeight"
-          :width="toggleButtonWidth"
-          :sync="true"
-          :labels="labels"
-          @change="clearLayerDefault"
-        />
+        <div class="settings-panel--control">
+          <toggle-button
+            id="settings-panel--clear-keymap"
+            :value="configuratorSettings.clearLayerDefault"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="clearLayerDefault"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -223,9 +223,12 @@ export default {
 .settings-panel--toggles {
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-row-gap: 16px;
+  grid-row-gap: 28px;
 }
 .settings-panel--subtitle {
   font-size: 80%;
+}
+.settings-panel--control {
+  margin: 8px 0;
 }
 </style>
