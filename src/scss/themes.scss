@@ -187,7 +187,7 @@ html {
     .key-contents:empty:before {
       color: #ccc;
     }
-    .bottom-fixed {
+    .info-msg {
       background: #add8e6;
       color: #222;
     }
@@ -417,7 +417,7 @@ html[data-theme='dark'] {
   #keycodes {
     background-color: inherit;
   }
-  .bottom-fixed,
+  .info-msg,
   .settings-panel--help-text {
     background: #194452;
     color: #ddd;
