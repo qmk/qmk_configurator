@@ -103,11 +103,17 @@ print:print:title,打印
 print:source:title,源碼
 printKeymap:label,打印鍵位
 printKeymap:title,打印鍵位表
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,清除層默認鍵碼
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,深色模式
 settingsPanel:fastInput:help,直接通過鍵盤輸入鍵位
 settingsPanel:fastInput:label,快速輸入 (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,語言
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

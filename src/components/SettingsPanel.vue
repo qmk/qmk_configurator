@@ -1,8 +1,15 @@
 <template>
   <div class="settings-panel">
-    <div class="settings-panel--toggles">
-      <div>
-        <label>{{ $t('settingsPanel.language.label') }}</label>
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.basic.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.language.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.language.help') }}
+          </div>
+        </div>
         <div class="settings-panel--control">
           <select id="setting-panel-language" v-model="language">
             <option v-for="l in languages" :key="l.value" :value="l.value">
@@ -12,8 +19,13 @@
         </div>
       </div>
 
-      <div>
-        <label>{{ $t('settingsPanel.darkMode.label') }}</label>
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.darkMode.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.darkMode.help') }}
+          </div>
+        </div>
         <div class="settings-panel--control">
           <toggle-button
             id="setting-toggle-darkmode"
@@ -26,11 +38,17 @@
           />
         </div>
       </div>
+    </div>
 
-      <div>
-        <label>{{ $t('settingsPanel.fastInput.label') }}</label>
-        <div class="settings-panel--subtitle">
-          {{ $t('settingsPanel.fastInput.help') }}
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.input.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.fastInput.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.fastInput.help') }}
+          </div>
         </div>
         <div class="settings-panel--control">
           <toggle-button
@@ -45,42 +63,12 @@
         </div>
       </div>
 
-      <div>
-        <label>{{ $t('settingsPanel.toggleTutorial.label') }}</label>
-        <div class="settings-panel--subtitle">
-          {{ $t('settingsPanel.toggleTutorial.help') }}
-        </div>
-        <div class="settings-panel--control">
-          <toggle-button
-            id="setting-toggle-tutorial"
-            :value="tutorialEnabled"
-            :height="toggleButtonHeight"
-            :width="toggleButtonWidth"
-            :sync="true"
-            :labels="labels"
-            @change="toggleTutorial"
-          />
-        </div>
-      </div>
-
-      <div>
-        <label>{{ $t('settingsPanel.legends.label') }}</label>
-        <div class="settings-panel--subtitle">
-          {{ $t('settingsPanel.legends.help') }}
-        </div>
-        <div class="settings-panel--control">
-          <select id="setting-panel-legends" v-model="keyLegends">
-            <option v-for="l in legendTypes" :key="l" :value="l">
-              {{ $t(`settingsPanel.legendType.${l}`) }}
-            </option>
-          </select>
-        </div>
-      </div>
-
-      <div>
-        <label>{{ $t('settingsPanel.osKeyboardLayout.label') }}</label>
-        <div class="settings-panel--subtitle">
-          {{ $t('settingsPanel.osKeyboardLayout.help') }}
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.osKeyboardLayout.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.osKeyboardLayout.help') }}
+          </div>
         </div>
         <div class="settings-panel--control">
           <select
@@ -97,11 +85,33 @@
           </select>
         </div>
       </div>
+    </div>
 
-      <div>
-        <label>{{ $t('settingsPanel.clearLayer.label') }}</label>
-        <div class="settings-panel--subtitle">
-          {{ $t('settingsPanel.clearLayer.help') }}
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.advanced.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.legends.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.legends.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <select id="setting-panel-legends" v-model="keyLegends">
+            <option v-for="l in legendTypes" :key="l" :value="l">
+              {{ $t(`settingsPanel.legendType.${l}`) }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.clearLayer.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.clearLayer.help') }}
+          </div>
         </div>
         <div class="settings-panel--control">
           <toggle-button
@@ -112,6 +122,30 @@
             :sync="true"
             :labels="labels"
             @change="clearLayerDefault"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.help.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.toggleTutorial.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.toggleTutorial.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-tutorial"
+            :value="tutorialEnabled"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="toggleTutorial"
           />
         </div>
       </div>
@@ -219,16 +253,26 @@ export default {
   margin-top: 50px;
   text-align: left;
   padding: 12px;
-}
-.settings-panel--toggles {
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-row-gap: 28px;
+  grid-row-gap: 12px;
+}
+.settings-panel--group {
+  padding: 12px;
+  border-radius: 12px;
+}
+.settings-panel--item {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.settings-panel--item-label {
+  flex-shrink: 0;
 }
 .settings-panel--subtitle {
   font-size: 80%;
-}
-.settings-panel--control {
-  margin: 8px 0;
 }
 </style>

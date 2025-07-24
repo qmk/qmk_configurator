@@ -103,11 +103,17 @@ print:print:title,Drukuj
 print:source:title,Źródło
 printKeymap:label,Drukuj mapę
 printKeymap:title,Drukuj wszystkie warstwy mapy klawiszy
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Włącz/wyłącz tryb nocny
 settingsPanel:fastInput:help,Autmatyczne podświetlanie kolejnego klawisza po zdefiniowaniu funkcji poprzedniego
 settingsPanel:fastInput:label,Szybkie wprowadzanie (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Język
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

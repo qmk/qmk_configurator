@@ -103,11 +103,17 @@ print:print:title,Drucken
 print:source:title,Quelle
 printKeymap:label,Drucken
 printKeymap:title,Drucke die Tastaturbelegung der verschiedenen Ebenen
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Die Seite dunkler machen
 settingsPanel:fastInput:help,"Gib die Tasten über die Tastatur ein, ohne auf die einzelnen Positionen zu klicken"
 settingsPanel:fastInput:label,Schnelle Eingabe (Strg+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Sprache
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

@@ -103,11 +103,17 @@ print:print:title,Распечатать
 print:source:title,Источник
 printKeymap:label,Распечатать раскладку
 printKeymap:title,Распечатать слои раскладки
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Темный режим
 settingsPanel:fastInput:help,Ввод клавиш через клавиатуру без необходимости нажимать на каждую позицию
 settingsPanel:fastInput:label,Быстрый ввод (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Язык
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

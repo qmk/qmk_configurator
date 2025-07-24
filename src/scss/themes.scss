@@ -34,6 +34,12 @@ html {
     #app {
       color: #2c3e50;
     }
+    .settings-panel--group {
+      background-color: #eee;
+    }
+    .settings-panel--subtitle {
+      color: #777;
+    }
     #chatter-threshold {
       background-color: #eeeeee;
       border: none;
@@ -439,6 +445,12 @@ html[data-theme='dark'] {
   }
   #app {
     color: qmk_colors.$qmk-grey-light;
+  }
+  .settings-panel--group {
+    background-color: #383838;
+  }
+  .settings-panel--subtitle {
+    color: #bbb;
   }
   .tab {
     border-color: #2f2f2f;

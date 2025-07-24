@@ -103,11 +103,17 @@ print:print:title,Print
 print:source:title,Source
 printKeymap:label,Print Keymap
 printKeymap:title,キーマップレイヤの印刷
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,レイヤクリア時のデフォルト
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,ダークモード
 settingsPanel:fastInput:help,各位置をクリックせずキーボードでキーを入力する
 settingsPanel:fastInput:label,高速入力 (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,言語
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

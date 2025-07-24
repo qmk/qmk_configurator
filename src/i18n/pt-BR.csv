@@ -103,11 +103,17 @@ print:print:title,Impressão
 print:source:title,Fonte
 printKeymap:label,Printar Keymap
 printKeymap:title,Printar camadas de Keymap
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
-settingsPanel:darkMode:label,Toggle Darkmode
+settingsPanel:darkMode:help,
+settingsPanel:darkMode:label,
 settingsPanel:fastInput:help,Entrada de comandos a partir do teclado sem clicar em outra posição
 settingsPanel:fastInput:label,Entrada rápida (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Linguagem
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

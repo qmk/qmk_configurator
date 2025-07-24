@@ -103,11 +103,17 @@ print:print:title,Imprimer
 print:source:title,Source
 printKeymap:label,Imprimer la disposition
 printKeymap:title,Imprime les calques de la disposition
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Mode Sombre
 settingsPanel:fastInput:help,Permet d'entrer les touches via votre clavier sans cliquer sur chaque position
 settingsPanel:fastInput:label,Entrée Rapide (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Langue
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

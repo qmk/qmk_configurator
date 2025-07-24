@@ -103,11 +103,17 @@ print:print:title,Stampa
 print:source:title,Fonte
 printKeymap:label,Stampa Keymap
 printKeymap:title,Stampa Livelli Keymap
+settingsPanel:advanced:heading,Advanced
+settingsPanel:basic:heading,User Interface
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,Azzera Livello Automaticamente
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Modalità Scura
 settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione
 settingsPanel:fastInput:label,Ingresso rapido (Ctrl+Alt+F)
+settingsPanel:help:heading,Help & Resources
+settingsPanel:input:heading,Input
+settingsPanel:language:help,
 settingsPanel:language:label,Lingua
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,

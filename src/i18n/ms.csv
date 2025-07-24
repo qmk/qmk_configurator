@@ -103,11 +103,17 @@ print:print:title,Cetak
 print:source:title,Sumber
 printKeymap:label,Cetak Keymap
 printKeymap:title,Cetak Lapisan Keymap
+settingsPanel:advanced:heading,
+settingsPanel:basic:heading,
 settingsPanel:clearLayer:help,
 settingsPanel:clearLayer:label,
+settingsPanel:darkMode:help,
 settingsPanel:darkMode:label,Toggle Mod Gelap
 settingsPanel:fastInput:help,Masukkan kekunci melalui papan kekunci tanpa klik setiap posisi
 settingsPanel:fastInput:label,Input cepat (Ctrl+Alt+F)
+settingsPanel:help:heading,
+settingsPanel:input:heading,
+settingsPanel:language:help,
 settingsPanel:language:label,Bahasa
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,
