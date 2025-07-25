@@ -1,4 +1,4 @@
-import { cy, describe, before, it } from 'local-cypress';
+import { cy, describe, before, beforeEach, it } from 'local-cypress';
 
 describe('Issue #364', function () {
   before(() => {
@@ -47,8 +47,8 @@ describe('Issue #364', function () {
     cy.get('#fwFile', { timeout: 1000 }).should('be.enabled');
     cy.get('#source', { timeout: 1000 }).should('be.enabled');
 
-    cy.get('.v-select.vs--single.vs--searchable').click();
-    cy.get('.vs__search').type('planck{enter}');
+    cy.get('.topctrl-keyboards .v-select.vs--single.vs--searchable').click();
+    cy.get('.topctrl-keyboards .vs__search').type('planck{enter}');
     cy.wait(1000);
 
     cy.get('#fwFile', { timeout: 1000 }).should('be.disabled');
