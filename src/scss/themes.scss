@@ -34,6 +34,12 @@ html {
     #app {
       color: #2c3e50;
     }
+    .settings-panel--group {
+      background-color: #eee;
+    }
+    .settings-panel--subtitle {
+      color: #777;
+    }
     #chatter-threshold {
       background-color: #eeeeee;
       border: none;
@@ -193,10 +199,6 @@ html {
     }
     .key-contents.active-key {
       background: #d4f9d1;
-    }
-    .settings-panel--help-text {
-      background: #add8e6;
-      color: #222;
     }
     .input-url-modal {
       background-color: #eee;
@@ -417,8 +419,7 @@ html[data-theme='dark'] {
   #keycodes {
     background-color: inherit;
   }
-  .info-msg,
-  .settings-panel--help-text {
+  .info-msg {
     background: #194452;
     color: #ddd;
   }
@@ -441,6 +442,12 @@ html[data-theme='dark'] {
   }
   #app {
     color: qmk_colors.$qmk-grey-light;
+  }
+  .settings-panel--group {
+    background-color: #383838;
+  }
+  .settings-panel--subtitle {
+    color: #bbb;
   }
   .tab {
     border-color: #2f2f2f;

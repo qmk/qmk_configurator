@@ -1,135 +1,155 @@
 <template>
   <div class="settings-panel">
-    <h2>{{ $t('settingsPanel.title') }}</h2>
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.basic.heading') }}</h3>
 
-    <div class="settings-panel--toggles">
-      <div>
-        <label
-          :title="$t('settingsPanel.fastInput.title')"
-          @mouseover="help('fastInput')"
-          class="settings-panel--text"
-          >{{ $t('settingsPanel.fastInput.label') }}</label
-        >
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-fast-input"
-          :value="continuousInput"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleContinuousInput"
-        />
-      </div>
-      <div>
-        <label
-          class="settings-panel--legends"
-          @mouseover="help('legends')"
-          :title="$t('settingsPanel.legends.title')"
-          >{{ $t('settingsPanel.legends.title') }}</label
-        >
-      </div>
-      <div>
-        <select id="setting-panel-legends" v-model="keyLegends">
-          <option v-for="l in legendTypes" :key="l" :value="l">
-            {{ $t(`settingsPanel.legendType.${l}`) }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('toggleTutorial')"
-          :title="$t('settingsPanel.toggleTutorial.label')"
-          >{{ $t('settingsPanel.toggleTutorial.label') }}</label
-        >
-      </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-tutorial"
-          :value="tutorialEnabled"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="toggleTutorial"
-        />
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.language.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.language.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <select id="setting-panel-language" v-model="language">
+            <option v-for="l in languages" :key="l.value" :value="l.value">
+              {{ l.label }}
+            </option>
+          </select>
+        </div>
       </div>
 
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('darkmode')"
-          :title="$t('settingsPanel.darkmode.label')"
-          >{{ $t('settingsPanel.darkmode.label') }}</label
-        >
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.darkMode.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.darkMode.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-darkmode"
+            :value="configuratorSettings.darkmodeEnabled"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="darkMode"
+          />
+        </div>
       </div>
-      <div>
-        <toggle-button
-          id="setting-toggle-darkmode"
-          :value="configuratorSettings.darkmodeEnabled"
-          :width="defaultWidth"
-          :sync="true"
-          :labels="labels"
-          @change="darkMode"
-        />
+    </div>
+
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.input.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.fastInput.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.fastInput.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-fast-input"
+            :value="continuousInput"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="toggleContinuousInput"
+          />
+        </div>
       </div>
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('language')"
-          :title="$t('settingsPanel.language.title')"
-          >{{ $t('settingsPanel.language.title') }}</label
-        >
-      </div>
-      <div>
-        <select id="setting-panel-language" v-model="language">
-          <option v-for="l in languages" :key="l.value" :value="l.value">
-            {{ l.label }}
-          </option>
-        </select>
-      </div>
-      <div>
-        <label
-          class="settings-panel--text"
-          @mouseover="help('osKeyboardLayout')"
-          :title="$t('settingsPanel.osKeyboardLayout.title')"
-          >{{ $t('settingsPanel.osKeyboardLayout.title') }}</label
-        >
-      </div>
-      <div>
-        <select
-          id="setting-panel-os-keyboard-layout"
-          v-model="osKeyboardLayout"
-        >
-          <option
-            v-for="osLayout in sortedOSKeyboardLayouts"
-            :key="osLayout"
-            :value="osLayout"
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.osKeyboardLayout.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.osKeyboardLayout.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <select
+            id="setting-panel-os-keyboard-layout"
+            v-model="osKeyboardLayout"
           >
-            {{ $t(`settingsPanel.osKeyboardLayout.label.${osLayout}`) }}
-          </option>
-        </select>
+            <option
+              v-for="osLayout in sortedOSKeyboardLayouts"
+              :key="osLayout"
+              :value="osLayout"
+            >
+              {{ $t(`settingsPanel.osKeyboardLayout.option.${osLayout}`) }}
+            </option>
+          </select>
+        </div>
       </div>
-      <div>
-        <label
-          class="settings-panel--clear-keymap"
-          @mouseover="help('clearLayer')"
-          :title="$t('settingsPanel.clearLayer.title')"
-          >{{ $t('settingsPanel.clearLayer.title') }}</label
-        >
-        <div>
+    </div>
+
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.advanced.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.legends.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.legends.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <select id="setting-panel-legends" v-model="keyLegends">
+            <option v-for="l in legendTypes" :key="l" :value="l">
+              {{ $t(`settingsPanel.legendType.${l}`) }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.clearLayer.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.clearLayer.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
           <toggle-button
             id="settings-panel--clear-keymap"
             :value="configuratorSettings.clearLayerDefault"
-            :width="defaultWidth"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
             :sync="true"
-            :labels="clearLayerLabels"
+            :labels="labels"
             @change="clearLayerDefault"
           />
         </div>
       </div>
     </div>
-    <div v-if="helpText" class="settings-panel--help-text">{{ helpText }}</div>
+
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.help.heading') }}</h3>
+
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>{{ $t('settingsPanel.toggleTutorial.label') }}</label>
+          <div class="settings-panel--subtitle">
+            {{ $t('settingsPanel.toggleTutorial.help') }}
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="setting-toggle-tutorial"
+            :value="tutorialEnabled"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="toggleTutorial"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -143,13 +163,8 @@ export default {
         checked: this.$t('settingsPanel.on.label'),
         unchecked: this.$t('settingsPanel.off.label')
       },
-      clearLayerLabels: {
-        checked: this.$t('settingsPanel.kctrns.label'),
-        unchecked: this.$t('settingsPanel.kcno.label')
-      },
-      helpText: undefined,
-      clearTextTimer: undefined,
-      defaultWidth: 75
+      toggleButtonHeight: 26,
+      toggleButtonWidth: 60
     };
   },
   components: { ToggleButton },
@@ -229,39 +244,6 @@ export default {
     },
     clearLayerDefault() {
       this.toggleClearLayerDefault();
-    },
-    help(key) {
-      switch (key) {
-        case 'fastInput':
-          this.helpText = this.$t('settingsPanel.fastInput.help');
-          break;
-        case 'legends':
-          this.helpText = this.$t('settingsPanel.legends.help');
-          break;
-        case 'toggleTutorial':
-          this.helpText = this.$t('settingsPanel.toggleTutorial.help');
-          break;
-        case 'darkmode':
-          this.helpText = this.$t('settingsPanel.darkmode.help');
-          break;
-        case 'language':
-          this.helpText = this.$t('settingsPanel.language.help');
-          break;
-        case 'osKeyboardLayout':
-          this.helpText = this.$t('settingsPanel.osKeyboardLayout.help');
-          break;
-        case 'clearLayer':
-          this.helpText = this.$t('settingsPanel.clearLayer.help');
-          break;
-      }
-
-      if (this.clearTextTimer) {
-        window.clearTimeout(this.clearTextTimer);
-        this.clearTextTimer = undefined;
-      }
-      this.clearTextTimer = window.setTimeout(() => {
-        this.helpText = undefined;
-      }, 5000);
     }
   }
 };
@@ -269,24 +251,28 @@ export default {
 <style>
 .settings-panel {
   margin-top: 50px;
-}
-.settings-panel--toggles {
+  text-align: left;
+  padding: 12px;
   display: grid;
   grid-template: 1fr / 1fr;
-  grid-row-gap: 5px;
+  grid-row-gap: 12px;
 }
-.settings-panel--text {
-  text-align: left;
+.settings-panel--group {
+  padding: 12px;
+  border-radius: 12px;
 }
-.settings-panel--help-text {
-  position: absolute;
-  text-align: center;
-  font-size: 16px;
-  width: 100%;
-  height: 80px;
-  bottom: 0;
-  padding: 5px;
-  box-sizing: border-box;
-  text-overflow: none;
+.settings-panel--item {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.settings-panel--item-label {
+  flex-shrink: 0;
+}
+.settings-panel--subtitle {
+  font-size: 80%;
 }
 </style>

@@ -103,92 +103,91 @@ print:print:title,Stampa
 print:source:title,Fonte
 printKeymap:label,Stampa Keymap
 printKeymap:title,Stampa Livelli Keymap
-settingsPanel:clearLayer:help,Cambia il keycode predefinito per 
-settingsPanel:clearLayer:title,Azzera Livello Automaticamente
-settingsPanel:darkmode:help,Usa la modalità scura del configuratre QMK
-settingsPanel:darkmode:label,Modalità Scura
-settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione.
-settingsPanel:fastInput:label,Ingresso rapido
-settingsPanel:fastInput:title,Ctrl + Alt + F
-settingsPanel:kcno:label,KC_NO
-settingsPanel:kctrns:label,KC_TRNS
-settingsPanel:language:help,Cambia lingua dell'interfaccia utente
-settingsPanel:language:title,Lingua
+settingsPanel:advanced:heading,Advanced
+settingsPanel:basic:heading,User Interface
+settingsPanel:clearLayer:help,
+settingsPanel:clearLayer:label,Azzera Livello Automaticamente
+settingsPanel:darkMode:help,
+settingsPanel:darkMode:label,Modalità Scura
+settingsPanel:fastInput:help,Inserire i tasti tramite la tastiera senza fare clic su ogni posizione
+settingsPanel:fastInput:label,Ingresso rapido (Ctrl+Alt+F)
+settingsPanel:help:heading,Help & Resources
+settingsPanel:input:heading,Input
+settingsPanel:language:help,
+settingsPanel:language:label,Lingua
 settingsPanel:legendType:index,
 settingsPanel:legendType:keymap,
 settingsPanel:legendType:matrix,
 settingsPanel:legendType:size,
 settingsPanel:legends:help,
-settingsPanel:legends:title,
+settingsPanel:legends:label,
 settingsPanel:off:label,Spegnimento
 settingsPanel:on:label,Accensione
 settingsPanel:osKeyboardLayout:help,
-settingsPanel:osKeyboardLayout:label:keymap_belgian,
-settingsPanel:osKeyboardLayout:label:keymap_bepo,
-settingsPanel:osKeyboardLayout:label:keymap_brazilian_abnt2,
-settingsPanel:osKeyboardLayout:label:keymap_canadian_multilingual,
-settingsPanel:osKeyboardLayout:label:keymap_colemak,
-settingsPanel:osKeyboardLayout:label:keymap_croatian,
-settingsPanel:osKeyboardLayout:label:keymap_czech,
-settingsPanel:osKeyboardLayout:label:keymap_danish,
-settingsPanel:osKeyboardLayout:label:keymap_dvorak,
-settingsPanel:osKeyboardLayout:label:keymap_dvorak_fr,
-settingsPanel:osKeyboardLayout:label:keymap_dvorak_programmer,
-settingsPanel:osKeyboardLayout:label:keymap_estonian,
-settingsPanel:osKeyboardLayout:label:keymap_finnish,
-settingsPanel:osKeyboardLayout:label:keymap_french,
-settingsPanel:osKeyboardLayout:label:keymap_french_afnor,
-settingsPanel:osKeyboardLayout:label:keymap_french_mac_iso,
-settingsPanel:osKeyboardLayout:label:keymap_german,Tedesco (Germania e Austria)
-settingsPanel:osKeyboardLayout:label:keymap_greek,
-settingsPanel:osKeyboardLayout:label:keymap_hebrew,
-settingsPanel:osKeyboardLayout:label:keymap_hungarian,
-settingsPanel:osKeyboardLayout:label:keymap_icelandic,
-settingsPanel:osKeyboardLayout:label:keymap_irish,
-settingsPanel:osKeyboardLayout:label:keymap_italian,
-settingsPanel:osKeyboardLayout:label:keymap_italian_mac_ansi,
-settingsPanel:osKeyboardLayout:label:keymap_italian_mac_iso,
-settingsPanel:osKeyboardLayout:label:keymap_japanese,
-settingsPanel:osKeyboardLayout:label:keymap_korean,
-settingsPanel:osKeyboardLayout:label:keymap_latvian,
-settingsPanel:osKeyboardLayout:label:keymap_lithuanian_azerty,
-settingsPanel:osKeyboardLayout:label:keymap_lithuanian_qwerty,
-settingsPanel:osKeyboardLayout:label:keymap_neo2,
-settingsPanel:osKeyboardLayout:label:keymap_norman,
-settingsPanel:osKeyboardLayout:label:keymap_norwegian,
-settingsPanel:osKeyboardLayout:label:keymap_polish,
-settingsPanel:osKeyboardLayout:label:keymap_portuguese,
-settingsPanel:osKeyboardLayout:label:keymap_portuguese_mac_iso,
-settingsPanel:osKeyboardLayout:label:keymap_romanian,
-settingsPanel:osKeyboardLayout:label:keymap_russian,Russo
-settingsPanel:osKeyboardLayout:label:keymap_serbian,
-settingsPanel:osKeyboardLayout:label:keymap_serbian_latin,
-settingsPanel:osKeyboardLayout:label:keymap_slovak,
-settingsPanel:osKeyboardLayout:label:keymap_slovenian,
-settingsPanel:osKeyboardLayout:label:keymap_spanish,
-settingsPanel:osKeyboardLayout:label:keymap_spanish_dvorak,
-settingsPanel:osKeyboardLayout:label:keymap_spanish_latin_america,
-settingsPanel:osKeyboardLayout:label:keymap_swedish,
-settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_ansi,
-settingsPanel:osKeyboardLayout:label:keymap_swedish_mac_iso,
-settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_ansi,
-settingsPanel:osKeyboardLayout:label:keymap_swedish_pro_mac_iso,
-settingsPanel:osKeyboardLayout:label:keymap_swiss_de,
-settingsPanel:osKeyboardLayout:label:keymap_swiss_fr,
-settingsPanel:osKeyboardLayout:label:keymap_turkish_f,
-settingsPanel:osKeyboardLayout:label:keymap_turkish_q,
-settingsPanel:osKeyboardLayout:label:keymap_uk,Inglese (Regno Unito)
-settingsPanel:osKeyboardLayout:label:keymap_ukrainian,
-settingsPanel:osKeyboardLayout:label:keymap_us,Inglese (US)
-settingsPanel:osKeyboardLayout:label:keymap_us_extended,
-settingsPanel:osKeyboardLayout:label:keymap_us_international,
-settingsPanel:osKeyboardLayout:label:keymap_us_international_linux,
-settingsPanel:osKeyboardLayout:label:keymap_workman,
-settingsPanel:osKeyboardLayout:label:keymap_workman_zxcvm,
-settingsPanel:osKeyboardLayout:title,
+settingsPanel:osKeyboardLayout:option:keymap_belgian,
+settingsPanel:osKeyboardLayout:option:keymap_bepo,
+settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,
+settingsPanel:osKeyboardLayout:option:keymap_canadian_multilingual,
+settingsPanel:osKeyboardLayout:option:keymap_colemak,
+settingsPanel:osKeyboardLayout:option:keymap_croatian,
+settingsPanel:osKeyboardLayout:option:keymap_czech,
+settingsPanel:osKeyboardLayout:option:keymap_danish,
+settingsPanel:osKeyboardLayout:option:keymap_dvorak,
+settingsPanel:osKeyboardLayout:option:keymap_dvorak_fr,
+settingsPanel:osKeyboardLayout:option:keymap_dvorak_programmer,
+settingsPanel:osKeyboardLayout:option:keymap_estonian,
+settingsPanel:osKeyboardLayout:option:keymap_finnish,
+settingsPanel:osKeyboardLayout:option:keymap_french,
+settingsPanel:osKeyboardLayout:option:keymap_french_afnor,
+settingsPanel:osKeyboardLayout:option:keymap_french_mac_iso,
+settingsPanel:osKeyboardLayout:option:keymap_german,Tedesco (Germania e Austria)
+settingsPanel:osKeyboardLayout:option:keymap_greek,
+settingsPanel:osKeyboardLayout:option:keymap_hebrew,
+settingsPanel:osKeyboardLayout:option:keymap_hungarian,
+settingsPanel:osKeyboardLayout:option:keymap_icelandic,
+settingsPanel:osKeyboardLayout:option:keymap_irish,
+settingsPanel:osKeyboardLayout:option:keymap_italian,
+settingsPanel:osKeyboardLayout:option:keymap_italian_mac_ansi,
+settingsPanel:osKeyboardLayout:option:keymap_italian_mac_iso,
+settingsPanel:osKeyboardLayout:option:keymap_japanese,
+settingsPanel:osKeyboardLayout:option:keymap_korean,
+settingsPanel:osKeyboardLayout:option:keymap_latvian,
+settingsPanel:osKeyboardLayout:option:keymap_lithuanian_azerty,
+settingsPanel:osKeyboardLayout:option:keymap_lithuanian_qwerty,
+settingsPanel:osKeyboardLayout:option:keymap_neo2,
+settingsPanel:osKeyboardLayout:option:keymap_norman,
+settingsPanel:osKeyboardLayout:option:keymap_norwegian,
+settingsPanel:osKeyboardLayout:option:keymap_polish,
+settingsPanel:osKeyboardLayout:option:keymap_portuguese,
+settingsPanel:osKeyboardLayout:option:keymap_portuguese_mac_iso,
+settingsPanel:osKeyboardLayout:option:keymap_romanian,
+settingsPanel:osKeyboardLayout:option:keymap_russian,Russo
+settingsPanel:osKeyboardLayout:option:keymap_serbian,
+settingsPanel:osKeyboardLayout:option:keymap_serbian_latin,
+settingsPanel:osKeyboardLayout:option:keymap_slovak,
+settingsPanel:osKeyboardLayout:option:keymap_slovenian,
+settingsPanel:osKeyboardLayout:option:keymap_spanish,
+settingsPanel:osKeyboardLayout:option:keymap_spanish_dvorak,
+settingsPanel:osKeyboardLayout:option:keymap_spanish_latin_america,
+settingsPanel:osKeyboardLayout:option:keymap_swedish,
+settingsPanel:osKeyboardLayout:option:keymap_swedish_mac_ansi,
+settingsPanel:osKeyboardLayout:option:keymap_swedish_mac_iso,
+settingsPanel:osKeyboardLayout:option:keymap_swedish_pro_mac_ansi,
+settingsPanel:osKeyboardLayout:option:keymap_swedish_pro_mac_iso,
+settingsPanel:osKeyboardLayout:option:keymap_swiss_de,
+settingsPanel:osKeyboardLayout:option:keymap_swiss_fr,
+settingsPanel:osKeyboardLayout:option:keymap_turkish_f,
+settingsPanel:osKeyboardLayout:option:keymap_turkish_q,
+settingsPanel:osKeyboardLayout:option:keymap_uk,Inglese (Regno Unito)
+settingsPanel:osKeyboardLayout:option:keymap_ukrainian,
+settingsPanel:osKeyboardLayout:option:keymap_us,Inglese (US)
+settingsPanel:osKeyboardLayout:option:keymap_us_extended,
+settingsPanel:osKeyboardLayout:option:keymap_us_international,
+settingsPanel:osKeyboardLayout:option:keymap_us_international_linux,
+settingsPanel:osKeyboardLayout:option:keymap_workman,
+settingsPanel:osKeyboardLayout:option:keymap_workman_zxcvm,
+settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,Azionare fiocchi di neve
-settingsPanel:snowflakes:title,Fiocchi di neve
-settingsPanel:title,Impostazioni Configuratore
 settingsPanel:toggleTutorial:help,MechMerlin Configurazione QMK Video Tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
 testKeys:label,Prova tastiera
