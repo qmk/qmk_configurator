@@ -1,0 +1,15 @@
+{
+  "keyboard": "ai",
+  "keymap": "default",
+  "commit": "53cc6170ae2687b0c894f05738181a2f16ad0d6c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_TAB",  "KC_Q",    "KC_W",    "KC_E",
+      "KC_BSPC", "KC_R",    "KC_T",    "KC_A",
+      "KC_LSFT", "KC_S",    "KC_D",    "KC_F",
+      "KC_LCTL", "KC_Z",    "KC_X",    "KC_C",
+      "KC_MENU", "KC_LGUI", "KC_LALT"
+    ]
+  ]
+}

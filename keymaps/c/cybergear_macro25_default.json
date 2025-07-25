@@ -1,0 +1,12 @@
+{
+  "keyboard": "cybergear/macro25",
+  "keymap": "default",
+  "commit": "bcceb701cdfd91ed098407e1d6b7bcd261447621",
+  "layout": "LAYOUT_ortho_2x5",
+  "layers": [
+    [
+      "RCTL(RGUI(RALT(KC_P0)))", "RCTL(RGUI(RALT(KC_P1)))", "RCTL(RGUI(RALT(KC_P2)))", "RCTL(RGUI(RALT(KC_P3)))", "RCTL(RGUI(RALT(KC_P4)))",
+      "RCTL(RGUI(RALT(KC_P5)))", "RCTL(RGUI(RALT(KC_P6)))", "RCTL(RGUI(RALT(KC_P7)))", "RCTL(RGUI(RALT(KC_P8)))", "RCTL(RGUI(RALT(KC_P9)))"
+    ]
+  ]
+}

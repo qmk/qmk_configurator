@@ -1,0 +1,15 @@
+{
+  "keyboard": "synthandkeys/bento_box",
+  "keymap": "default",
+  "commit": "34a2f1427426e28f9e260e2e9f53a63a131e6ad2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                       "C(KC_0)",      "G(S(KC_S))",
+                 "KC_MUTE",            "C(KC_C)",      "C(KC_V)",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_HOME", "KC_UP",   "KC_END",  "C(KC_T)",      "C(KC_W)",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "S(C(KC_TAB))", "C(KC_TAB)"
+    ]
+  ]
+}

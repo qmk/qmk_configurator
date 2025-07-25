@@ -1,0 +1,11 @@
+{
+  "keyboard": "zfrontier/big_switch",
+  "keymap": "default",
+  "commit": "40f7981395f4225c48084c005af981bda2f94d50",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ENT"
+    ]
+  ]
+}

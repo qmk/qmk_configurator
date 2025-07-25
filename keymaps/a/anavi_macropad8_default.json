@@ -1,0 +1,16 @@
+{
+  "keyboard": "anavi/macropad8",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_ortho_2x4",
+  "layers": [
+    [
+      "G(KC_D)", "KC_UP",   "C(KC_C)", "C(KC_V)",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "MO(1)"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "RGB_M_R", "RGB_M_SN",
+      "BL_TOGG", "BL_STEP", "BL_BRTG", "_______"
+    ]
+  ]
+}

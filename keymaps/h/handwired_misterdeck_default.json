@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/misterdeck",
+  "keymap": "default",
+  "commit": "1e95f7be8f214c544bf99f415916a4a5f07a1e9b",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "C(S(KC_F1))", "C(S(KC_F2))", "C(S(KC_F3))", "C(S(KC_F4))",
+      "C(S(KC_F5))", "C(S(KC_F6))", "C(S(KC_F7))", "C(S(KC_F8))",
+      "JS_0",        "JS_1",        "JS_2",        "JS_3"
+    ]
+  ]
+}

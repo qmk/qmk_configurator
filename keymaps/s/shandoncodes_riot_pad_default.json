@@ -1,0 +1,16 @@
+{
+  "keyboard": "shandoncodes/riot_pad",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "MO(1)"
+    ],
+    [
+      "UG_NEXT", "UG_PREV", "UG_TOGG",
+      "UG_VALU", "UG_VALD", "KC_TRNS"
+    ]
+  ]
+}

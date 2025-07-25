@@ -1,0 +1,11 @@
+{
+  "keyboard": "kb_elmo/isolation",
+  "keymap": "default",
+  "commit": "25eac95348548b41f4bf4e8a02fc8bace270bd35",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ENT"
+    ]
+  ]
+}

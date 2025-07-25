@@ -1,0 +1,12 @@
+{
+  "keyboard": "maxr1998/pulse4k",
+  "keymap": "default",
+  "commit": "5faa23d54ca1e3ab83097f2a07922f48800616e6",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_END",  "KC_UP",   "KC_MUTE",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ]
+  ]
+}

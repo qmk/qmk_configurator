@@ -1,0 +1,12 @@
+{
+  "keyboard": "nightly_boards/n2",
+  "keymap": "default",
+  "commit": "83c12a516b3d0c1b603bce28a55bdeba476311df",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_L",
+      "KC_O"
+    ]
+  ]
+}
