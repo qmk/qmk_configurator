@@ -3,7 +3,7 @@
     <span style="display: none">{{ revision }}</span>
     <div>
       <header>
-        <p class="random-potato">{{ potatoFact }}</p>
+        <p class="random-potato">{{ $t(potatoFactId) }}</p>
       </header>
       <router-view />
       <spinner :is-visible="showSpinner" :status="spinnerMsg" />
@@ -84,7 +84,7 @@ export default {
   data() {
     return {
       revision: import.meta.env.VITE_TRAVIS_COMMIT || 'dev',
-      potatoFact: 'QMK for potatoes',
+      potatoFactId: 'potatoes',
       interval: 120000,
       destroyWatcher: undefined,
       panel: undefined,
@@ -142,7 +142,7 @@ export default {
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
       const len = size(this.$t('potato'));
-      this.potatoFact = this.$t('potato.' + random(1, len));
+      this.potatoFactId = 'potato.' + random(1, len);
     },
     async appLoad() {
       await this.loadApplicationState();
