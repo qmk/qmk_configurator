@@ -60,7 +60,7 @@ layer:title,Ebene löschen
 layout:label,Layout
 loadDefault:label,Zurücksetzen
 loadDefault:title,Standard-Tastaturbelegung der QMK Firmware laden
-potato:1,Henry Spalding pflanzte erstmals 1837 Kartoffeln in Idaho
+potato:1,Henry Spalding pflanzte erstmals 1837 Kartoffeln in Idaho.
 potato:10,China ist der weltweit größte Kartoffelproduzent.
 potato:11,"Kartoffeln waren das erste Gemüse, das im Weltraum angebaut wurde."
 potato:12,Kartoffeln sind völlig glutenfrei.
@@ -88,6 +88,7 @@ potato:6,"Die größte angebaute Kartoffel wog laut dem Guinness-Buch der Rekord
 potato:7,"Kartoffeln sind das vierte Grundnahrungsmittel der Welt - nach Weizen, Mais und Reis."
 potato:8,Kartoffeln werden in mehr als 125 Ländern angebaut.
 potato:9,"Jedes Jahr werden weltweit genug Kartoffeln angebaut, um eine vierspurige Autobahn zu bedecken, die die Welt sechsmal umkreist."
+potatoes,QMK für Kartoffeln
 print:anonymous:label,Anonym
 print:author:placeholder,Ihr Name (optional)
 print:author:title,Autor
