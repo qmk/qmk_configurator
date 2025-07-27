@@ -275,6 +275,11 @@ button + button {
   margin-left: 4px;
 }
 
+.label-button {
+  pointer-events: none;
+  user-select: none;
+}
+
 #status {
   position: relative;
 }
