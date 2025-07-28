@@ -71,14 +71,14 @@ potato:16,"Hoy en día hay más de 4,000 variedades de papas."
 potato:17,"Las papas pertenecen a una familia pequeña, las belladonas o solanáceas."
 potato:18,"Durante la Fiebre del oro de Klondike (1897-1898), las papas prácticamente valían su peso en oro."
 potato:19,"Walter Raleigh introdujo las papas en Inglaterra en 1589 en los 40,000 acres de terreno cerca de Cork."
-potato:2,“Papas fritas” fueron dadas a conocer en América cuando Thomas Jefferson las sirvió en una cena de la Casa Blanca.
+potato:2,"""Papas fritas"" fueron dadas a conocer en América cuando Thomas Jefferson las sirvió en una cena de la Casa Blanca."
 potato:20,Las papas están disponibles todo el año gracias a que se cosechan en alguna parte del mundo cada mes del año.
 potato:21,"Nativos de África y Asia, los ñames (camotes) varían en tamaño desde el tamaño de una papa pequeña hasta el tamaño récord de 130 libras."
 potato:22,El 19 de agosto y el 27 de octubre son el Día Nacional de la Papa.
 potato:23,"Las papas también se usan para elaborar bebidas alcohólicas tal como el vodka, poitín o aquavit."
 potato:24,Las papas son entre las verduras más ecológicas. Son fáciles de cultivar y no requieren cantidades masivas de abono y aditivos químicos para prosperar como muchas otras verduras.
 potato:25,La papa proviene de la región del sur de Perú donde fue domesticada por primera vez entre 8000 a. C. y 5000 a. C.
-potato:26,La palabra inglesa potato proviene de la palabra española patata.
+potato:26,"La palabra inglesa ""potato"" proviene de la palabra española ""patata""."
 potato:27,Las plantas de papas suelen ser polinizadas por insectos como abejas.
 potato:28,Una papa se compone de 80% agua y 20% materia sólida.
 potato:3,Fanáticos estadounidenses de papas ingirieron más de 4 millones de toneladas de papas fritas en varias formas y tamaños en 2017.
@@ -88,6 +88,7 @@ potato:6,"La papa más grande pesó 18 libras y 4 onzas, según el Libro de Reco
 potato:7,"Las papas son el cuarto alimento básico del mundo – después de trigo, maíz y arroz."
 potato:8,Las papas son cultivadas en más de 125 países.
 potato:9,Cada año el mundo produce una cantidad de papas suficientes para cubrir una carretera de cuatro carriles que rodea el mundo seis veces.
+potatoes,QMK para las papas
 print:anonymous:label,Anónimo
 print:author:placeholder,"Opcionalmente, Tu Nombre"
 print:author:title,Autor

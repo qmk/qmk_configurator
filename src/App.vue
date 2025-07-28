@@ -3,7 +3,11 @@
     <span style="display: none">{{ revision }}</span>
     <div>
       <header>
-        <p class="random-potato">{{ potatoFact }}</p>
+        <Transition name="potato-fade" mode="out-in">
+          <p class="random-potato" :key="potatoFactId">
+            {{ $t(potatoFactId) }}
+          </p>
+        </Transition>
       </header>
       <router-view />
       <spinner :is-visible="showSpinner" :status="spinnerMsg" />
@@ -84,7 +88,7 @@ export default {
   data() {
     return {
       revision: import.meta.env.VITE_TRAVIS_COMMIT || 'dev',
-      potatoFact: 'QMK for potatoes',
+      potatoFactId: 'potatoes',
       interval: 120000,
       destroyWatcher: undefined,
       panel: undefined,
@@ -142,7 +146,7 @@ export default {
     ...mapActions('app', ['loadApplicationState']),
     randomPotatoFact() {
       const len = size(this.$t('potato'));
-      this.potatoFact = this.$t('potato.' + random(1, len));
+      this.potatoFactId = 'potato.' + random(1, len);
     },
     async appLoad() {
       await this.loadApplicationState();
@@ -235,6 +239,19 @@ export default {
   height: 36px;
   transform: scale(0.777777);
   margin-top: 2px;
+}
+
+.potato-fade-enter-active,
+.potato-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.potato-fade-enter,
+.potato-fade-leave-to {
+  opacity: 0;
+}
+.potato-fade-leave,
+.potato-fade-enter-to {
+  opacity: 1;
 }
 
 /* TADA - from https://l-lin.github.io/font-awesome-animation/ */

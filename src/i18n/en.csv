@@ -60,8 +60,8 @@ layer:title,Clear Layer
 layout:label,layout
 loadDefault:label,Load Default
 loadDefault:title,Load default keymap from QMK Firmware
-potato:1,Henry Spalding first planted potatoes in Idaho in 1837
-potato:10,China is the world’s largest potato producer.
+potato:1,Henry Spalding first planted potatoes in Idaho in 1837.
+potato:10,China is the world's largest potato producer.
 potato:11,Potatoes were the first vegetable grown in space.
 potato:12,Potatoes are totally gluten-free.
 potato:13,One of the most basic Incan measurements of time was the time it took to cook a potato.
@@ -69,25 +69,26 @@ potato:14,"If a potato is exposed to light while growing, it will turn green and
 potato:15,"It takes 10,000 pounds of potatoes to make 2,500 pounds of potato chips."
 potato:16,Today there are more than 4000 different kinds of potatoes.
 potato:17,"Potatoes belong to a small family, the Nightshade or Solanaceae family."
-potato:18,"During the Alaskan Klondike gold rush, (1897-1898) potatoes were practically worth their weight in gold."
+potato:18,"During the Alaskan Klondike gold rush (1897-1898), potatoes were practically worth their weight in gold."
 potato:19,"Sir Walter Raleigh introduced potatoes to Ireland in 1589 on the 40,000 acres of land near Cork."
-potato:2,“French Fries” were introduced to America when Thomas Jefferson served them at a White House dinner.
+potato:2,"""French Fries"" were introduced to America when Thomas Jefferson served them at a White House dinner."
 potato:20,Potatoes are available year-round as they are harvested somewhere every month of the year.
 potato:21,"Native to Africa and Asia, yams vary in size from the size of a small potato up to the record size of 130 pounds."
 potato:22,August 19th and October 27th are National Potato Day.
 potato:23,"Potatoes are also used to brew alcoholic beverages such as vodka, potcheen, or akvavit."
-potato:24,"Potatoes are among the most environmentally friendly vegetables. They’re easy to grow, and don’t require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do."
+potato:24,"Potatoes are among the most environmentally friendly vegetables. They're easy to grow, and don't require massive amounts of fertilizer and chemical additives to thrive like many other vegetables do."
 potato:25,The potato originated in the region of southern Peru where it was first domesticated between 8000 BC and 5000 BC.
-potato:26,The word potato comes from the Spanish word patata.
+potato:26,"The word ""potato"" comes from the Spanish word ""patata""."
 potato:27,Potato plants are usually pollinated by insects such as bumblebees.
 potato:28,A potato is about 80% water and 20% solid.
 potato:3,American potato lovers consumed more than 4 million tons of French Fries in various shapes and sizes in 2017.
 potato:4,"Potatoes are a powerful aphrodisiac, says a physician in Ireland."
 potato:5,The average American eats 140 pounds of potatoes per year. Germans eat more than 200 pounds per year.
 potato:6,The largest potato grown was 18 pounds and 4 ounces according to the Guinness Book of World Records. It was grown in England in 1795.
-potato:7,"Potatoes are the world’s fourth food staple – after wheat, corn and rice."
+potato:7,"Potatoes are the world's fourth food staple – after wheat, corn and rice."
 potato:8,Potatoes are grown in more than 125 countries.
 potato:9,Every year enough potatoes are grown worldwide to cover a four-lane motorway circling the world six times.
+potatoes,QMK for potatoes
 print:anonymous:label,Anonymous
 print:author:placeholder,Optionally Your Name
 print:author:title,Author
