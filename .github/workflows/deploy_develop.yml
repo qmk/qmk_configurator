@@ -48,7 +48,7 @@ jobs:
       - name: build
         run: |
           sed -i 's,\(VITE_KEYBOARDS_URL=\).*,\1https://keyboards.develop.qmk.fm,' .env.production
-          echo VITE_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          echo VITE_GHA_COMMIT=$GITHUB_SHA >> .env.production
           yarn run build
 
       - name: Deploy Develop Configurator

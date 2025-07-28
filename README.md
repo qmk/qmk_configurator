@@ -96,7 +96,7 @@ can use docker. By default it spins up a self-contained environment.
     docker run -p 8080:80 qmkfm/qmk_configurator:latest
 ```
 
-You can specify a different backend URL by setting `VUE_APP_API_URL`:
+You can specify a different backend URL by setting `VITE_API_URL`:
 
 ```shell
     docker run -e VITE_API_URL=http://localhost:8080 -p 8080:80 qmkfm/qmk_configurator:latest
