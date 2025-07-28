@@ -450,7 +450,7 @@ export default {
 </script>
 <style lang="scss">
 #drop-label-keyboard {
-  min-width: 137px;
+  min-width: 138px;
 }
 .topctrl {
   text-align: left;
