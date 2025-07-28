@@ -275,6 +275,10 @@ button + button {
   margin-left: 4px;
 }
 
+.label-button {
+  user-select: none;
+}
+
 #status {
   position: relative;
 }

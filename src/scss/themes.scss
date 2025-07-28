@@ -92,6 +92,9 @@ html {
       background-color: #49ad4c;
       color: #fff;
       border-color: #000;
+      &:hover {
+        background-color: #50ba51;
+      }
     }
     .tab {
       background: #fff;
@@ -280,6 +283,9 @@ html {
       background-color: #49ad4c;
       color: white;
       border-color: #000;
+      &:hover {
+        background-color: #50ba51;
+      }
     }
     #compile:disabled,
     #fwFile:disabled,
