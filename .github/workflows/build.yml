@@ -40,7 +40,7 @@ jobs:
           wait-on: 'http://localhost:5173'
       - name: build
         run: |
-          echo VITE_TRAVIS_COMMIT=$GITHUB_SHA >> .env.production
+          echo VITE_GHA_COMMIT=$GITHUB_SHA >> .env.production
           yarn run build
           echo config.qmk.fm > dist/CNAME
       - name: Deploy

@@ -87,7 +87,7 @@ export default {
   },
   data() {
     return {
-      revision: import.meta.env.VITE_TRAVIS_COMMIT || 'dev',
+      revision: import.meta.env.VITE_GHA_COMMIT || 'dev',
       potatoFactId: 'potatoes',
       interval: 120000,
       destroyWatcher: undefined,
