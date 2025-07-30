@@ -1,0 +1,13 @@
+{
+  "keyboard": "era/sirind/chickpad",
+  "keymap": "default",
+  "commit": "516fa90f991f95edc005b823e59fdfa789e8dfeb",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_ENT",
+      "KC_LSFT", "KC_VOLU", "KC_VOLD", "KC_UP",
+      "KC_SPC",             "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ]
+  ]
+}

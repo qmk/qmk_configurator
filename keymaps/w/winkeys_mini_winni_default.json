@@ -1,0 +1,24 @@
+{
+  "keyboard": "winkeys/mini_winni",
+  "keymap": "default",
+  "commit": "a31eea61b70a75f8228189cdcafc1e37d1d8ce74",
+  "layout": "LAYOUT_ortho_2x4",
+  "layers": [
+    [
+      "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",
+      "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

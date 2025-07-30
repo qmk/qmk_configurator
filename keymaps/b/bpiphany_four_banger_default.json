@@ -1,0 +1,17 @@
+{
+  "keyboard": "bpiphany/four_banger",
+  "keymap": "default",
+  "commit": "250fd721ace2a979261f8f1b97a487ed8016ee75",
+  "layout": "LAYOUT_ortho_2x2",
+  "macros": [
+    [
+      "http://1upkeyboards.com"
+    ]
+  ],
+  "layers": [
+    [
+      "KC_1",    "KC_U",
+      "KC_P",    "MC_0"
+    ]
+  ]
+}

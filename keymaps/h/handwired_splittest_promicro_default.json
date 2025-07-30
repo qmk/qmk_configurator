@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/splittest/promicro",
+  "keymap": "default",
+  "commit": "92bcbee22615114286916bbbc4df4256c2818f0d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_L",    "KC_R"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "40percentclub/4pack",
+  "keymap": "default",
+  "commit": "fe6d6cf76dc827adb2f46d55217dc189eae21b02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_S",    "KC_D",    "KC_F"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "dailycraft/stickey4",
+  "keymap": "default",
+  "commit": "c4a67d3f3302f3096bb6b15921c9587643164ba9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",   "KC_D"
+    ]
+  ]
+}

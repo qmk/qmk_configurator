@@ -1,0 +1,21 @@
+{
+  "keyboard": "tender/macrowo_pad",
+  "keymap": "default",
+  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "OWO"
+    ]
+  ],
+  "layers": [
+    [
+      "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",
+      "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",    "MC_0",               "MC_0",    "MC_0",    "MC_0"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

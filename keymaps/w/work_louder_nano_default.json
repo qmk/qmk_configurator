@@ -1,0 +1,14 @@
+{
+  "keyboard": "work_louder/nano",
+  "keymap": "default",
+  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_PSCR", "KC_LSFT", "MO(1)"
+    ],
+    [
+      "QK_BOOT", "KC_LCTL", "_______"
+    ]
+  ]
+}
