@@ -296,7 +296,7 @@ html {
     }
     #terminal {
       background: #272822;
-      border-color: #000;
+      border-color: #ccc;
       color: #f8f8f2;
     }
     #controller-bottom {
@@ -389,13 +389,16 @@ html[data-theme='dark'] {
   #controller-bottom {
     background-color: qmk_colors.$qmk-grey-dark;
     color: qmk_colors.$qmk-grey-light;
-    border-color: #0e0e0e;
+    border-color: #555;
   }
   .tester-key {
     background: #0c0c0c;
     &.detected {
       color: qmk_colors.$qmk-black;
     }
+  }
+  #terminal {
+    border-color: #555;
   }
   #toggle-terminal-label {
     color: #f8f8f2;
@@ -431,7 +434,7 @@ html[data-theme='dark'] {
   }
   .tab-area {
     background: qmk_colors.$qmk-grey-dark;
-    border-color: #2f2f2f;
+    border-color: #555;
   }
   .keycode-text:after,
   .keycode-container:after,
@@ -456,8 +459,8 @@ html[data-theme='dark'] {
     color: #bbb;
   }
   .tab {
-    border-color: #2f2f2f;
-    color: #555;
+    background-color: #444;
+    border-color: #555;
     &.active {
       color: qmk_colors.$qmk-grey-light;
       background-color: #464646;
@@ -490,7 +493,7 @@ html[data-theme='dark'] {
   .layer {
     background: qmk_colors.$qmk-grey-dark;
     border-color: #5a5a5a;
-    color: #0e0e0e;
+    color: #999;
     &:hover {
       background: #eee;
       color: #000;
