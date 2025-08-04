@@ -248,27 +248,16 @@ a img {
   vertical-align: middle;
 }
 
-#compile,
-#fwFile,
-#toolbox,
-#source,
-#export,
-#import,
-#import-url,
-#settings,
-#printkeymaps,
-#testkeys,
-#leaveTest,
-#resetTest,
-#load-default,
 .ui-button {
   line-height: 120%;
   border-radius: 3px;
-  // background-color: #49ad4c;
-  // color: white;
-  border: 0px solid #000;
+  border: none;
   padding: 5px 8px;
   cursor: pointer;
+
+  &:disabled {
+    cursor: unset;
+  }
 }
 
 button + button {
@@ -347,22 +336,9 @@ button + button {
   padding: 0 5px;
 }
 
-#compile {
-  margin-right: 0px;
-}
-
 #fileImport,
 #infoPreview {
   display: none;
-}
-
-#compile:disabled,
-#fwFile:disabled,
-#toolbox:disabled,
-#source:disabled {
-  // background: #ccc;
-  // color: #999;
-  cursor: unset;
 }
 
 select,

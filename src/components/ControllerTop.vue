@@ -68,6 +68,7 @@
       <div class="topctrl-controls">
         <button
           id="load-default"
+          class="ui-button"
           v-tooltip="$t('loadDefault.title')"
           @click="loadDefault"
         >
@@ -75,6 +76,7 @@
         </button>
         <button
           id="compile"
+          class="ui-button"
           v-tooltip="$t('compile.title')"
           :disabled="compileDisabled"
           @click="compile"

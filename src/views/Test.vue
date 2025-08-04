@@ -1,10 +1,15 @@
 <template>
   <div class="visual-tester">
-    <button id="leaveTest" @click="gohome()">
+    <button id="leaveTest" class="ui-button" @click="gohome()">
       <font-awesome-icon icon="chevron-left" size="lg" fixed-width />
       {{ $t('tester.back.label') }}
     </button>
-    <button id="resetTest" :title="$t('tester.reset.title')" @click="reset()">
+    <button
+      id="resetTest"
+      class="ui-button"
+      :title="$t('tester.reset.title')"
+      @click="reset()"
+    >
       <font-awesome-icon icon="undo" size="lg" fixed-width />
       {{ $t('tester.reset.label') }}
     </button>

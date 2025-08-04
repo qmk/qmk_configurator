@@ -431,12 +431,10 @@ export default {
 }
 .layout-btn-select {
   line-height: 120%;
-  margin: 0px 4px 0px 0px;
   border-radius: 3px;
   border: 0px solid;
   padding: 6px 12px;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 .volume {
   margin-right: 10px;

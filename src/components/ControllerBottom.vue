@@ -13,8 +13,8 @@
             />
           </div>
           <div>
-            <button @click="importUrlkeymap">Load</button>
-            <button @click="closeVeil">cancel</button>
+            <button class="ui-button" @click="importUrlkeymap">Load</button>
+            <button class="ui-button" @click="closeVeil">cancel</button>
           </div>
         </div>
       </template>
@@ -22,6 +22,7 @@
     <div class="botctrl-1-1">
       <button
         id="export"
+        class="ui-button"
         v-tooltip.bottom="$t('downloadJSON.title')"
         @click="exportJSON"
       >
@@ -30,6 +31,7 @@
       <span class="label-button">{{ $t('downloadJSON.label') }}</span>
       <button
         id="import"
+        class="ui-button"
         v-tooltip.bottom="$t('importJSON.title')"
         @click="importKeymap"
       >
@@ -37,6 +39,7 @@
       </button>
       <button
         id="import-url"
+        class="ui-button"
         v-tooltip.bottom="$t('importUrlJSON.title')"
         @click="openVeil"
       >
@@ -59,6 +62,7 @@
       </a>
       <button
         id="printkeymaps"
+        class="ui-button"
         v-tooltip.bottom="$t('printKeymap.title')"
         @click="printKeymaps"
       >
@@ -67,6 +71,7 @@
       </button>
       <button
         id="testkeys"
+        class="ui-button"
         v-tooltip.bottom="$t('testKeys.title')"
         @click="testKeys"
       >
@@ -97,7 +102,7 @@
         id="source"
         v-tooltip="$t('downloadSource.title')"
         :disabled="disableDownloadSource"
-        class="fixed-size"
+        class="fixed-size ui-button"
         @click="downloadSource"
       >
         <font-awesome-icon icon="download" size="lg" fixed-width />
@@ -105,6 +110,7 @@
       </button>
       <button
         id="fwFile"
+        class="ui-button"
         v-tooltip="$t('downloadFirmware.title')"
         :disabled="disableDownloadBinary"
         @click="downloadFirmware"
@@ -517,9 +523,6 @@ export default {
 }
 #import {
   border-radius: 0 4px 4px 0;
-}
-#import-url {
-  border-radius: 4px;
 }
 .input-url-modal label {
   padding-right: 5px;

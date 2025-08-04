@@ -13,11 +13,7 @@
         @click="clicked(layer.id)"
       >{{ layer.name }}</div>
     </div>
-    <button
-      class="clear-button"
-      v-tooltip="$t('layer.title')"
-      @click="clearLayer"
-    >
+    <button class="ui-button" v-tooltip="$t('layer.title')" @click="clearLayer">
       <font-awesome-icon icon="trash" size="lg" fixed-width />
     </button>
   </div>
@@ -78,13 +74,3 @@ export default {
   }
 };
 </script>
-<style>
-.clear-button {
-  line-height: 100%;
-  margin: 0;
-  border-radius: 3px;
-  border: 0px solid;
-  padding: 6px 8px;
-  cursor: pointer;
-}
-</style>
