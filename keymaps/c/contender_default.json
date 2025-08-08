@@ -1,0 +1,37 @@
+{
+  "keyboard": "contender",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "00"
+    ]
+  ],
+  "layers": [
+    [
+                 "KC_ESC",  "KC_LSFT", "KC_TAB",  "KC_BSPC",
+                 "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_EQL",
+                 "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "MO(2)",   "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "UG_TOGG", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "TG(1)",   "KC_P0",   "MC_0",    "KC_PDOT"
+    ],
+    [
+                 "KC_ESC",  "KC_LSFT", "KC_TAB",  "KC_BSPC",
+                 "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_EQL",
+                 "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "_______", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "_______", "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "_______", "KC_P0",   "MC_0",    "KC_PDOT"
+    ],
+    [
+                 "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",
+                 "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                 "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+      "_______", "UG_PREV", "UG_NEXT", "KC_NO",   "KC_NO",
+      "_______", "UG_HUEU", "UG_SATU", "UG_VALU", "KC_NO",
+      "_______", "UG_HUED", "UG_SATD", "UG_VALD"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "keyboard": "ymdk/ymd09",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",       "KC_P9",
+      "KC_P4",   "LT(1,KC_P5)", "KC_P6",
+      "KC_P1",   "KC_P2",       "KC_P3"
+    ],
+    [
+      "RM_PREV", "RM_VALU", "RM_NEXT",
+      "RM_HUEU", "KC_TRNS", "RM_SATU",
+      "RM_HUED", "RM_VALD", "RM_SATD"
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "keyboard": "keyhive/navi10/rev3",
+  "keymap": "default",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",   "KC_HOME", "KC_PGUP",
+      "KC_DEL",  "KC_END",  "KC_PGDN",
+
+                 "KC_UP",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "TO(2)",   "KC_PAUS", "KC_VOLU",
+      "KC_ENT",  "KC_SCRL", "KC_VOLD",
+
+                 "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "TO(0)",   "KC_TRNS", "KC_VOLU",
+      "KC_MUTE", "KC_TRNS", "KC_VOLD",
+
+                 "KC_SPC",
+      "KC_MRWD", "KC_MPLY", "KC_MFFD"
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "keyboard": "knops/mini",
+  "keymap": "default",
+  "commit": "61c7c1f74cc5365501a3038181df551df11f719e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(3,KC_MSTP)","KC_VOLU", "KC_MPLY",
+      "KC_MPRV",      "KC_VOLD", "KC_MNXT"
+    ],
+    [
+      "LT(3,KC_ESC)", "C(KC_Z)", "C(S(KC_Z))",
+      "C(KC_X)",      "C(KC_C)", "C(KC_V)"
+    ],
+    [
+      "LT(3,KC_1)", "KC_2",    "KC_3",
+      "KC_4",       "_______", "_______"
+    ],
+    [
+      "_______", "_______", "QK_BOOT",
+      "TO(0)",   "TO(1)",   "TO(2)"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "keyboard": "handwired/bdn9_ble",
+  "keymap": "default",
+  "commit": "d810878d5e36e032ec99fb309b66caf3ea57e4ba",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MEH(KC_1)", "MEH(KC_2)", "MEH(KC_3)",
+      "MEH(KC_4)", "MEH(KC_5)", "MEH(KC_6)",
+      "MEH(KC_7)", "MEH(KC_8)", "LT(1,MEH(KC_9))"
+    ],
+    [
+      "KC_TRNS", "OU_AUTO", "QK_BOOT",
+      "BL_STEP", "OU_USB",  "KC_TRNS",
+      "BL_TOGG", "OU_BT",   "KC_TRNS"
+    ]
+  ]
+}

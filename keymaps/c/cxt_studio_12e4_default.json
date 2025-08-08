@@ -1,0 +1,14 @@
+{
+  "keyboard": "cxt_studio/12e4",
+  "keymap": "default",
+  "commit": "93de5335803242f1df93600602ef5725d4df3a4c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_F11",  "KC_NO",   "KC_MSTP",
+      "KC_NO",   "KC_NO",   "KC_MRWD", "KC_MFFD",
+      "KC_NO",   "KC_MPLY", "KC_MPLY", "KC_MNXT",
+      "KC_MUTE", "KC_NO",   "KC_NO",   "RM_TOGG"
+    ]
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "keyboard": "yynmt/dozen0",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LCTL(KC_X)", "LCTL(KC_C)", "LCTL(KC_V)", "KC_UP",   "KC_DEL",  "LT(2,KC_BSPC)",
+      "KC_LCTL",    "KC_LSFT",    "KC_LEFT",    "KC_DOWN", "KC_RGHT", "LT(1,KC_ENT)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGUP", "KC_TRNS", "MO(3)",
+      "KC_TRNS", "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_END",  "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MO(3)"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "UG_HUEU", "UG_SATU", "UG_VALU", "KC_TRNS",
+      "KC_TRNS", "UG_PREV", "UG_HUED", "UG_SATD", "UG_VALD", "KC_TRNS"
+    ]
+  ]
+}
