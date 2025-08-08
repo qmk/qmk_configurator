@@ -184,6 +184,7 @@ export default {
   z-index: 100;
   cursor: pointer;
   margin-bottom: -1px;
+  user-select: none;
 }
 .end-tab input {
   padding: 3px 7px;

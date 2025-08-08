@@ -506,10 +506,14 @@ export default {
   padding: 5px;
   border: 1px solid;
   border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 16px;
   width: 400px;
 }
 .fixed-size {
   min-width: 150px;
+}
+.hide-small {
+  margin-left: 4px;
 }
 #export {
   border-radius: 4px 0 0 4px;

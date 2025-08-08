@@ -1,5 +1,5 @@
 <template functional>
-  <transition name="fade" appear>
+  <transition name="veil" appear>
     <div class="veil-container" v-show="props.isVisible">
       <slot name="contents">Something to Unveil</slot>
     </div>
@@ -29,14 +29,14 @@ export default {
   height: 100%;
   z-index: 50000;
 }
-.fade-enter-active {
-  transition: all 0.5s ease;
+.veil-enter-active {
+  transition: opacity 0.2s ease-in-out;
 }
-.fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+.veil-leave-active {
+  transition: opacity 0.2s ease-in-out;
 }
-.fade-enter,
-.fade-leave-to {
+.veil-enter,
+.veil-leave-to {
   opacity: 0;
 }
 </style>
