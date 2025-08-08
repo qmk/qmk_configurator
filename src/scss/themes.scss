@@ -88,14 +88,6 @@ html {
       background: #4b0082;
       color: #ffa500;
     }
-    .clear-button {
-      background-color: #49ad4c;
-      color: #fff;
-      border-color: #000;
-      &:hover {
-        background-color: #50ba51;
-      }
-    }
     .tab {
       background: #fff;
       border-color: #ccc;
@@ -265,34 +257,16 @@ html {
       border-color: #fff;
     }
 
-    #compile,
-    #fwFile,
-    #toolbox,
-    #source,
-    #export,
-    #import,
-    #import-url,
-    #settings,
-    #printkeymaps,
-    #testkeys,
-    #leavePrint,
-    #leaveTest,
-    #resetTest,
-    #load-default,
     .ui-button {
       background-color: #49ad4c;
       color: white;
-      border-color: #000;
       &:hover {
         background-color: #50ba51;
       }
-    }
-    #compile:disabled,
-    #fwFile:disabled,
-    #toolbox:disabled,
-    #source:disabled {
-      background: #ccc;
-      color: #999;
+      &:disabled {
+        background: #ccc;
+        color: #999;
+      }
     }
     #terminal {
       background: #272822;
