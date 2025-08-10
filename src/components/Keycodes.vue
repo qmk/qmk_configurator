@@ -127,11 +127,19 @@ export default {
       return classes.join(' ');
     },
     message(key) {
-      let msg = '';
+      if (!key.name) return;
+
+      let msg = {};
       if (isUndefined(key.code)) {
-        msg = key.title ? key.title : '';
+        msg = {
+          title: key.title ?? key.name
+        };
       } else {
-        msg = key.title ? `${key.code} - ${key.title}` : key.code;
+        msg = {
+          code: key.code,
+          alias: key.alias ?? null,
+          title: key.title ?? key.name
+        };
       }
       this.setMessage(msg);
       this.messageClear();
@@ -141,7 +149,7 @@ export default {
         window.clearTimeout(this.clearTimeout);
       }
       this.clearTimeout = window.setTimeout(() => {
-        store.commit('app/setMessage', '');
+        store.commit('app/setMessage', null);
       }, 3000);
     },
     filterClass(key) {
