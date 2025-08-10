@@ -135,6 +135,9 @@ export default {
 };
 </script>
 <style>
+.bes-controls {
+  user-select: none;
+}
 .bes-high-job-count {
   color: red;
 }

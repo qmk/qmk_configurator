@@ -220,7 +220,7 @@ export default {
     sortedOSKeyboardLayouts: function () {
       // Locale-aware sort of the OS keyboard layouts by their labels.
       const translatedLayoutName = (osLayout) =>
-        this.$t(`settingsPanel.osKeyboardLayout.label.${osLayout}`);
+        this.$t(`settingsPanel.osKeyboardLayout.option.${osLayout}`);
       return [...this.osKeyboardLayouts].sort((a, b) =>
         translatedLayoutName(a).localeCompare(translatedLayoutName(b))
       );

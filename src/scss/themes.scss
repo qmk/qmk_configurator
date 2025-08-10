@@ -114,7 +114,7 @@ html {
       color: rgba(0, 0, 0, 0.7);
     }
     .veil-container {
-      background: rgba(30, 30, 30, 0.3);
+      background: rgba(0, 0, 0, 0.4);
     }
     .letter-key-code,
     .letter-code,
@@ -342,8 +342,10 @@ html[data-theme='dark'] {
     h3 {
       color: #ddd;
     }
-    th {
+    th,
+    td {
       color: #bbb;
+      border-color: #444;
     }
     .print-keymap {
       background: #464646;
@@ -363,6 +365,10 @@ html[data-theme='dark'] {
   #controller-bottom {
     background-color: qmk_colors.$qmk-grey-dark;
     color: qmk_colors.$qmk-grey-light;
+    border-color: #555;
+  }
+  .input-url-modal {
+    background-color: qmk_colors.$qmk-grey-dark;
     border-color: #555;
   }
   .tester-key {
