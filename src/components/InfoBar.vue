@@ -1,7 +1,17 @@
 <template functional>
   <transition name="fadelong" appear>
-    <div v-if="props.msg.length" class="bottom-fixed">
-      <div class="info-msg">{{ props.msg }}</div>
+    <div v-if="props.msg" class="bottom-fixed">
+      <div class="info-msg">
+        <div v-if="props.msg.alias">
+          <ruby>
+            {{ props.msg.alias }}<rt>{{ props.msg.code }}</rt> </ruby
+          >: {{ props.msg.title }}
+        </div>
+        <div v-else>
+          <span class="msg-code">{{ props.msg.code }}</span
+          >: {{ props.msg.title }}
+        </div>
+      </div>
     </div>
   </transition>
 </template>
@@ -10,8 +20,7 @@ export default {
   name: 'InfoBar',
   props: {
     msg: {
-      type: String,
-      required: true
+      type: Object
     }
   }
 };
