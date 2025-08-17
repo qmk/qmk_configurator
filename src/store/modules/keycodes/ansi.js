@@ -298,6 +298,6 @@ export default [
   { name: '>', code: 'KC_GT', keys: '>', title: '>' },
   { name: ':', code: 'KC_COLN', keys: ':', title: ':' },
   { name: '|', code: 'KC_PIPE', keys: '|', title: '|' },
-  { name: '?', code: 'KC_QUES', keys: '?', title: '' },
+  { name: '?', code: 'KC_QUES', keys: '?', title: '?' },
   { name: '"', code: 'KC_DQUO', keys: '"', title: '"' }
 ];
