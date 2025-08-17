@@ -1,0 +1,15 @@
+{
+  "keyboard": "handwired/dc/mc/001",
+  "keymap": "default",
+  "commit": "85ba5074825f608501e14594764cdc3c82a08c01",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",
+      "KC_MSTP",
+      "KC_MPRV",
+      "KC_MNXT",
+      "KC_MPLY"
+    ]
+  ]
+}

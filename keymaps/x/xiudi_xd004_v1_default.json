@@ -1,0 +1,11 @@
+{
+  "keyboard": "xiudi/xd004/v1",
+  "keymap": "default",
+  "commit": "e950b758cce5e69b3df272f589421dbb883314c7",
+  "layout": "LAYOUT_ortho_1x4",
+  "layers": [
+    [
+      "KC_L",    "KC_O",    "KC_V",    "KC_E"
+    ]
+  ]
+}

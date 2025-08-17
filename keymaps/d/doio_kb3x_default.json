@@ -1,0 +1,26 @@
+{
+  "keyboard": "doio/kb3x",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",   "RM_NEXT", "RM_TOGG",                                              "RM_HUEU", "RM_VALD", "RM_VALU",
+                 "KC_MPLY",                             "KC_UP",                               "KC_UP",
+      "KC_MNXT", "KC_TRNS", "KC_MPRV",    "A(KC_LEFT)", "KC_TRNS", "A(KC_RGHT)",    "KC_RGHT", "KC_TRNS", "KC_LEFT",
+                 "KC_MPLY",                             "KC_DOWN",                             "KC_DOWN"
+    ],
+    [
+      "TO(2)",      "KC_TRNS", "KC_TRNS",                                              "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                    "KC_WH_U",                             "S(KC_RBRC)",                          "C(KC_L)",
+      "C(KC_WH_D)", "KC_TRNS", "C(KC_WH_U)",    "KC_DOT",  "KC_TRNS",    "KC_COMM",    "C(KC_B)", "KC_TRNS", "C(KC_U)",
+                    "KC_WH_D",                             "S(KC_LBRC)",                          "C(KC_M)"
+    ],
+    [
+      "TO(0)",   "KC_TRNS", "KC_TRNS",                                        "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                 "KC_B",                             "KC_UP",                            "S(KC_I)",
+      "KC_P",    "KC_TRNS", "KC_H",       "KC_RGHT", "KC_TRNS", "KC_LEFT",    "KC_O",    "KC_TRNS", "KC_I",
+                 "KC_Y",                             "KC_DOWN",                          "S(KC_O)"
+    ]
+  ]
+}

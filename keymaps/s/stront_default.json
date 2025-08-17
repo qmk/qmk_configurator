@@ -1,0 +1,50 @@
+{
+  "keyboard": "stront",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                                 "KC_W",         "KC_E",         "KC_R",         "KC_T",            "KC_Y",         "KC_U",          "KC_I",           "KC_O",
+      "KC_Q",    "LGUI_T(KC_A)", "LALT_T(KC_S)", "LCTL_T(KC_D)", "LSFT_T(KC_F)", "KC_G",            "KC_H",         "RSFT_T(KC_J)",  "RCTL_T(KC_K)",   "LALT_T(KC_L)", "RGUI_T(KC_SCLN)", "KC_P",
+      "KC_MINS", "KC_Z",         "KC_X",         "KC_C",         "KC_V",         "KC_B",            "KC_N",         "KC_M",          "KC_COMM",        "KC_DOT",       "KC_SLSH",         "KC_QUOT",
+                                                 "LT(5,KC_ESC)", "LT(3,KC_TAB)", "LT(4,KC_SPC)",    "LT(5,KC_ENT)", "LT(2,KC_BSPC)", "LALT_T(KC_DEL)"
+    ],
+    [
+                                    "KC_W",    "KC_E",           "KC_R",         "KC_T",            "KC_Y",         "KC_U",          "KC_I",           "KC_O",
+      "LALT_T(KC_Q)",    "KC_A",    "KC_S",    "KC_D",           "KC_F",         "KC_G",            "KC_H",         "KC_J",          "KC_K",           "KC_L",    "KC_SCLN", "KC_P",
+      "LSFT_T(KC_MINS)", "KC_Z",    "KC_X",    "KC_C",           "KC_V",         "KC_B",            "KC_N",         "KC_M",          "KC_COMM",        "KC_DOT",  "KC_SLSH", "LGUI_T(KC_QUOT)",
+                                               "LCTL_T(KC_ESC)", "LT(3,KC_TAB)", "LT(4,KC_SPC)",    "LT(5,KC_ENT)", "LT(2,KC_BSPC)", "LALT_T(KC_DEL)"
+    ],
+    [
+                            "XXXXXXX", "XXXXXXX",      "XXXXXXX",      "XXXXXXX",         "XXXXXXX", "XXXXXXX", "KC_PGDN",        "KC_PGUP",
+      "XXXXXXX", "KC_LGUI", "KC_LALT", "KC_LCTL",      "KC_LSFT",      "XXXXXXX",         "XXXXXXX", "KC_LEFT", "KC_DOWN",        "KC_UP",   "KC_RGHT", "KC_PAUS",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",      "XXXXXXX",      "XXXXXXX",         "XXXXXXX", "KC_HOME", "KC_END",         "KC_INS",  "KC_APP",  "XXXXXXX",
+                                       "LT(5,KC_ESC)", "LT(3,KC_TAB)", "LT(4,KC_SPC)",    "XXXXXXX", "_______", "LALT_T(KC_DEL)"
+    ],
+    [
+                            "KC_7",    "KC_8",    "KC_9",    "KC_GRV",     "XXXXXXX",      "XXXXXXX",       "XXXXXXX",        "XXXXXXX",
+      "KC_EQL",  "KC_0",    "KC_4",    "KC_5",    "KC_6",    "KC_LBRC",    "XXXXXXX",      "KC_RSFT",       "KC_RCTL",        "KC_LALT", "KC_RGUI", "XXXXXXX",
+      "KC_MINS", "KC_BSLS", "KC_1",    "KC_2",    "KC_3",    "KC_RBRC",    "XXXXXXX",      "XXXXXXX",       "XXXXXXX",        "XXXXXXX", "XXXXXXX", "XXXXXXX",
+                                       "KC_ENT",  "_______", "TG(1)",      "LT(5,KC_ENT)", "LT(2,KC_BSPC)", "LALT_T(KC_DEL)"
+    ],
+    [
+                                        "LSFT(KC_7)", "LSFT(KC_8)", "LSFT(KC_9)", "LSFT(KC_GRV)",     "XXXXXXX",      "XXXXXXX",       "XXXXXXX",        "XXXXXXX",
+      "LSFT(KC_EQL)",  "LSFT(KC_0)",    "LSFT(KC_4)", "LSFT(KC_5)", "LSFT(KC_6)", "LSFT(KC_LBRC)",    "XXXXXXX",      "KC_RSFT",       "KC_RCTL",        "KC_LALT", "KC_RGUI", "XXXXXXX",
+      "LSFT(KC_MINS)", "LSFT(KC_BSLS)", "LSFT(KC_1)", "LSFT(KC_2)", "LSFT(KC_3)", "LSFT(KC_RBRC)",    "XXXXXXX",      "XXXXXXX",       "XXXXXXX",        "XXXXXXX", "XXXXXXX", "XXXXXXX",
+                                                      "MO(6)",      "KC_BSPC",    "_______",          "LT(5,KC_ENT)", "LT(2,KC_BSPC)", "LALT_T(KC_DEL)"
+    ],
+    [
+                            "KC_F7",   "KC_F8",   "KC_F9",   "KC_CAPS",    "XXXXXXX", "KC_PSCR", "KC_SCRL", "KC_NUM",
+      "KC_F12",  "KC_F11",  "KC_F4",   "KC_F5",   "KC_F6",   "KC_F12",     "XXXXXXX", "KC_RSFT", "KC_RCTL", "KC_LALT", "KC_RGUI", "XXXXXXX",
+      "XXXXXXX", "KC_F10",  "KC_F1",   "KC_F2",   "KC_F3",   "XXXXXXX",    "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+                                       "_______", "KC_MNXT", "KC_MPLY",    "_______", "XXXXXXX", "MO(6)"
+    ],
+    [
+                            "BL_DOWN", "BL_UP",   "BL_TOGG", "XXXXXXX",    "XXXXXXX", "RM_TOGG", "RM_NEXT", "RM_PREV",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",    "XXXXXXX", "RM_HUEU", "RM_SATU", "RM_VALU", "RM_SPDU", "RGB_M_P",
+      "EH_LEFT", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX", "EH_RGHT",    "EH_RGHT", "RM_HUED", "RM_SATD", "RM_VALD", "RM_SPDD", "EH_LEFT",
+                                       "_______", "QK_BOOT", "_______",    "_______", "QK_BOOT", "_______"
+    ]
+  ]
+}

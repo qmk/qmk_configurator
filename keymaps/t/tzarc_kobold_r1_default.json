@@ -1,0 +1,14 @@
+{
+  "keyboard": "tzarc/kobold/r1",
+  "keymap": "default",
+  "commit": "e83b709169e7f19cd79f44066ba7faf17ecdd952",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_E",    "KC_F",    "KC_G",    "KC_H",
+      "KC_I",    "KC_J",    "KC_K",    "KC_L",
+      "KC_M",    "KC_N",    "KC_O",    "KC_P"
+    ]
+  ]
+}

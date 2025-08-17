@@ -1,0 +1,13 @@
+{
+  "keyboard": "bthlabs/geekpad",
+  "keymap": "default",
+  "commit": "2dcce4c35160066e32b827985a924c4f7ea5b4d9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F1",   "KC_F2",   "KC_F3",
+      "KC_MRWD", "KC_MPLY", "KC_MFFD",
+      "KC_MUTE", "KC_VOLD", "KC_VOLU"
+    ]
+  ]
+}

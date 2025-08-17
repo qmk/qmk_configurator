@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/6key",
+  "keymap": "default",
+  "commit": "88555d8e18e90c2571c5d6553aae46c697c3341b",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Z",    "KC_Y",    "KC_A",
+      "KC_C",    "KC_D",    "KC_S"
+    ],
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",
+      "KC_F16",  "KC_F17",  "KC_F18"
+    ]
+  ]
+}

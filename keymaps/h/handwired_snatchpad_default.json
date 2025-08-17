@@ -1,0 +1,23 @@
+{
+  "keyboard": "handwired/snatchpad",
+  "keymap": "default",
+  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_SPC",  "MO(2)",
+      "KC_MPRV", "KC_MNXT", "KC_ENT",
+      "KC_MUTE",            "KC_MPLY"
+    ],
+    [
+      "QK_LOCK", "KC_UP",   "_______",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT",
+      "KC_BTN1",            "KC_BTN2"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "_______",
+      "TO(0)",              "TO(1)"
+    ]
+  ]
+}

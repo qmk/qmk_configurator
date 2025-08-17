@@ -1,0 +1,32 @@
+{
+  "keyboard": "ymdk/np24/u4rgb6",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_ortho_6x4",
+  "layers": [
+    [
+      "KC_ESC",  "KC_CALC", "MO(1)",   "MO(2)",
+      "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "BL_ON",   "_______", "BL_UP",
+      "_______", "BL_TOGG", "_______", "BL_UP",
+      "_______", "BL_OFF",  "_______", "BL_DOWN",
+      "BL_BRTG", "_______", "_______", "BL_DOWN"
+    ],
+    [
+      "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "UG_NEXT", "_______", "UG_VALU",
+      "_______", "UG_TOGG", "_______", "UG_VALU",
+      "_______", "UG_PREV", "_______", "UG_VALD",
+      "RGB_M_R", "_______", "_______", "UG_VALD"
+    ]
+  ]
+}

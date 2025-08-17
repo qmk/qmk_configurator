@@ -1,0 +1,32 @@
+{
+  "keyboard": "salicylic_acid3/setta21/rev1",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_numpad_6x4",
+  "layers": [
+    [
+      "LT(2,KC_ESC)", "KC_F2",   "KC_EQL",  "KC_DEL",
+      "KC_NUM",       "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",        "KC_P8",   "KC_P9",
+      "KC_P4",        "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",        "KC_P2",   "KC_P3",
+      "LT(1,KC_P0)",             "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "KC_ESC",  "_______", "_______", "_______",
+      "XXXXXXX", "_______", "_______", "_______",
+      "XXXXXXX", "KC_UP",   "XXXXXXX",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "_______",
+      "XXXXXXX", "KC_DOWN", "XXXXXXX",
+      "MO(1)",              "_______", "_______"
+    ],
+    [
+      "MO(2)",   "_______", "_______", "_______",
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "UG_SATD", "UG_SATU", "XXXXXXX",
+      "UG_HUED", "UG_HUEU", "XXXXXXX", "UG_TOGG",
+      "UG_VALD", "UG_VALU", "XXXXXXX",
+      "XXXXXXX",            "XXXXXXX", "UG_NEXT"
+    ]
+  ]
+}

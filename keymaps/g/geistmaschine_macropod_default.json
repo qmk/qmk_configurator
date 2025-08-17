@@ -1,0 +1,14 @@
+{
+  "keyboard": "geistmaschine/macropod",
+  "keymap": "default",
+  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "layout": "LAYOUT_fourkey",
+  "layers": [
+    [
+      "LT(1,KC_MUTE)", "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

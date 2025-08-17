@@ -1,0 +1,14 @@
+{
+  "keyboard": "1upkeyboards/1upocarina",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_1x5",
+  "layers": [
+    [
+      "KC_Z",    "KC_X",    "LT(1,KC_ESC)", "KC_C",    "KC_V"
+    ],
+    [
+      "RM_TOGG", "RM_NEXT", "KC_TRNS", "RM_VALD", "RM_VALU"
+    ]
+  ]
+}

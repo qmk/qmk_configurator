@@ -1,0 +1,32 @@
+{
+  "keyboard": "ocean/sus",
+  "keymap": "default",
+  "commit": "6823e03b0143ed839e594cd5e8d06872ba907a42",
+  "layout": "LAYOUT_ortho_4x3",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_PENT", "KC_P0",   "MO(1)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

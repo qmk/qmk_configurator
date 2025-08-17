@@ -1,0 +1,11 @@
+{
+  "keyboard": "millet/doksin",
+  "keymap": "default",
+  "commit": "18ef3da8e87c8f8e5a02a44da2cab5e734b5dc04",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_1"
+    ]
+  ]
+}

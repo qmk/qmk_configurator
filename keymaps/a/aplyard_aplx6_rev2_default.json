@@ -1,0 +1,20 @@
+{
+  "keyboard": "aplyard/aplx6/rev2",
+  "keymap": "default",
+  "commit": "9d235d4fc5c34f372b0c393f41686b5ef4f8dc13",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MPLY", "TO(1)",
+      "KC_MPRV", "KC_MSTP", "KC_MNXT"
+    ],
+    [
+      "KC_HOME", "KC_PGUP", "TO(2)",
+      "KC_END",  "KC_PGDN", "KC_INS"
+    ],
+    [
+      "KC_CALC",    "KC_MYCM",    "TO(0)",
+      "LCTL(KC_C)", "LCTL(KC_X)", "LCTL(KC_V)"
+    ]
+  ]
+}
