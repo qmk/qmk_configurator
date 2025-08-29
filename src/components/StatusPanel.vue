@@ -7,22 +7,18 @@
       readonly
       :class="terminalClasses"
     />
-    <label
-      for="toggle-terminal"
-      id="toggle-terminal-label"
-      :class="terminalClasses"
-      @click="toggleTerminal"
-      >{{ $t('toggleTerminal.label') }}</label
-    >
-    <font-awesome-icon
-      icon="chevron-up"
-      size="lg"
-      fixed-width
-      id="toggle-terminal"
-      :title="$t('toggleTerminal.title')"
-      :class="terminalClasses"
-      @click="toggleTerminal"
-    />
+    <div id="toggle-terminal" :class="terminalClasses" @click="toggleTerminal">
+      <label for="toggle-terminal-chevron" id="toggle-terminal-label">{{
+        $t('toggleTerminal.label')
+      }}</label>
+      <font-awesome-icon
+        icon="chevron-up"
+        size="lg"
+        fixed-width
+        id="toggle-terminal-chevron"
+        :title="$t('toggleTerminal.title')"
+      />
+    </div>
   </div>
 </template>
 <script>

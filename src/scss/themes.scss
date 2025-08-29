@@ -273,6 +273,12 @@ html {
       border-color: #ccc;
       color: #f8f8f2;
     }
+    #toggle-terminal-chevron {
+      color: #f8f8f2;
+    }
+    #toggle-terminal.collapsed #toggle-terminal-chevron {
+      color: unset;
+    }
     #controller-bottom {
       background: #eee;
       border-color: #ccc;
@@ -383,13 +389,10 @@ html[data-theme='dark'] {
   #toggle-terminal-label {
     color: #f8f8f2;
   }
-  #toggle-terminal-label.collapsed {
+  #toggle-terminal-chevron {
     color: #f8f8f2;
   }
-  #toggle-terminal {
-    color: #f8f8f2;
-  }
-  #toggle-terminal.collapsed {
+  #toggle-terminal.collapsed #toggle-terminal-chevron {
     color: #f8f8f2;
   }
   #visual-keymap {

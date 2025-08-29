@@ -272,42 +272,38 @@ button + button {
   position: relative;
 }
 
-#toggle-terminal-label {
-  cursor: pointer;
+#toggle-terminal {
+  top: 4px;
+  transition: top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   position: absolute;
-  top: -12px;
-  right: 59px;
-  color: #f8f8f2;
-  opacity: 0;
-  transform: scaleY(0);
-  transition: all 0.5s ease-out;
+  right: 20px;
+  display: flex;
+  align-items: center;
 }
-#toggle-terminal-label.collapsed {
-  opacity: 0.5;
-  color: #272822;
-  top: -22px;
-  transform: scaleY(1);
-  transition: all 0.25s 0.25s ease-out;
+#toggle-terminal.collapsed {
+  top: -32px;
 }
 
-#toggle-terminal {
+#toggle-terminal-label {
   cursor: pointer;
-  position: absolute;
-  top: 4px;
-  right: 21px;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#toggle-terminal.collapsed #toggle-terminal-label {
+  opacity: 0.5;
+}
+
+#toggle-terminal-chevron {
+  cursor: pointer;
   width: 36px;
   height: 27px;
   white-space: nowrap;
-  color: #f8f8f2;
   margin: 0;
-  transition: all 0.5s ease-out;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-#toggle-terminal.collapsed {
-  transition: all 0.5s ease-out;
-  top: -25px;
-  color: #272822;
-  transform: scaleY(-1);
+#toggle-terminal.collapsed #toggle-terminal-chevron {
+  transform: rotate(-180deg);
 }
 
 #terminal {
@@ -327,11 +323,10 @@ button + button {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: block;
-  transition: all 0.5s ease-out;
+  transition: height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 #terminal.collapsed {
-  transition: all 0.5s ease-out;
   height: 0px;
   padding: 0 5px;
 }
