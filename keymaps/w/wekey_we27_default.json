@@ -1,0 +1,24 @@
+{
+  "keyboard": "wekey/we27",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_numpad_6x5",
+  "layers": [
+    [
+      "KC_ESC",  "KC_PWR",  "KC_SLEP", "KC_F11",  "KC_MUTE",
+      "KC_NUM",  "KC_BSPC", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "RM_NEXT", "KC_P7",   "KC_P8",   "KC_P9",
+      "RM_PREV", "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "RM_TOGG", "KC_P1",   "KC_P2",   "KC_P3",
+      "MO(1)",   "KC_P0",              "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "_______", "_______", "_______", "_______", "KC_MPLY",
+      "_______", "_______", "_______", "_______", "_______",
+      "RM_SPDU", "RM_HUEU", "RM_SATU", "RM_VALU",
+      "RM_SPDD", "RM_HUED", "RM_SATD", "RM_VALD", "_______",
+      "_______", "_______", "_______", "_______",
+      "_______", "_______",            "_______", "QK_BOOT"
+    ]
+  ]
+}

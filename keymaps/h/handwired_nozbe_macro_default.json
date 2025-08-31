@@ -1,0 +1,14 @@
+{
+  "keyboard": "handwired/nozbe_macro",
+  "keymap": "default",
+  "commit": "35b6d1e9927ab1329f2f1095d7f43e92dc7c38e8",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(1,KC_N)", "LALT(KC_UP)", "LALT(KC_DOWN)", "LALT(KC_D)"
+    ],
+    [
+      "KC_TRNS", "KC_1",    "KC_2",    "BL_STEP"
+    ]
+  ]
+}

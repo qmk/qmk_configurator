@@ -1,0 +1,40 @@
+{
+    "keyboard": "rubi",
+    "keymap": "default",
+    "commit": "961f0b7b2de54f988daf4ce7b791f91a33e55612",
+    "layout": "LAYOUT",
+    "layers": [
+        [
+                                             "ENC_PRESS",
+            "KC_NUM",  "KC_PSLS", "KC_PAST", "KC_PMNS",
+            "KC_P7"  , "KC_P8"  , "KC_P9"  , "KC_PPLS",
+            "KC_P4"  , "KC_P5"  , "KC_P6"  ,
+            "KC_P1"  , "KC_P2"  , "KC_P3"  , "KC_PENT",
+                       "KC_P0"  , "LT(2,KC_PDOT)"
+        ],
+        [
+                                             "KC_TRNS",
+            "KC_C"   , "KC_SLSH", "CL_STAR", "KC_MINS",
+            "KC_7"   , "KC_8"   , "KC_9"   , "CL_PLUS",
+            "KC_4"   , "KC_5"   , "KC_6"   ,
+            "KC_1"   , "KC_2"   , "KC_3"   , "KC_EQL",
+                       "KC_0"   , "KC_DOT"
+        ],
+        [
+                                             "KC_TRNS",
+            "KC_TRNS", "KC_N"   , "KC_S"   , "KC_R"   ,
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                       "KC_TRNS", "KC_TRNS"
+        ],
+        [
+                                             "KC_TRNS",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+            "KC_TRNS", "QK_BOOT"  , "KC_TRNS",
+            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+                       "KC_TRNS", "KC_TRNS"
+        ]
+    ]
+}
