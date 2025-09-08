@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_manuform/4x5",
   "keymap": "default",
-  "commit": "ad8d934d3cb325d5ad2ed98167a8aa869ccc5e9e",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -14,10 +14,10 @@
                                                                             "MO(1)",   "KC_GRV",     "KC_LGUI", "MO(2)"
     ],
     [
-      "_______", "_______", "KC_MS_U", "_______", "_______",                                                "KC_VOLU", "_______", "KC_UP",   "_______", "KC_PGUP",
-      "_______", "KC_MS_L", "KC_MS_D", "KC_MS_R", "_______",                                                "KC_MUTE", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PGDN",
+      "_______", "_______", "MS_UP",   "_______", "_______",                                                "KC_VOLU", "_______", "KC_UP",   "_______", "KC_PGUP",
+      "_______", "MS_LEFT", "MS_DOWN", "MS_RGHT", "_______",                                                "KC_MUTE", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PGDN",
       "_______", "_______", "_______", "_______", "_______",                                                "KC_VOLD", "KC_SLSH", "KC_BSLS", "KC_QUES", "KC_PIPE",
-                 "_______", "_______",                                                                                            "KC_BTN1", "KC_BTN2",
+                 "_______", "_______",                                                                                            "MS_BTN1", "MS_BTN2",
                                        "_______", "_______",                                                "_______", "_______",
                                                              "_______", "_______",    "_______", "_______",
                                                              "_______", "_______",    "_______", "_______"

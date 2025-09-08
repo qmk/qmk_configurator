@@ -1,7 +1,7 @@
 {
   "keyboard": "tominabox1/underscore33/rev2",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_33_split_space",
   "layers": [
     [
@@ -18,8 +18,8 @@
     ],
     [
       "QK_BOOT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_GRV",  "KC_PGDN", "KC_UP",   "KC_PGUP", "KC_SCLN",
-      "RGB_TOG", "RGB_HUI", "RGB_SAI", "RGB_VAI", "KC_NO",   "KC_HOME", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_END",
-      "RGB_MOD", "RGB_HUD", "RGB_SAD", "RGB_VAD", "KC_NO",   "KC_MINS", "KC_INT1", "KC_COMM", "KC_DOT",  "KC_BSLS",
+      "UG_TOGG", "UG_HUEU", "UG_SATU", "UG_VALU", "KC_NO",   "KC_HOME", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_END",
+      "UG_NEXT", "UG_HUED", "UG_SATD", "UG_VALD", "KC_NO",   "KC_MINS", "KC_INT1", "KC_COMM", "KC_DOT",  "KC_BSLS",
                  "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS"
     ]
   ]

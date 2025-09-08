@@ -1,7 +1,7 @@
 {
   "keyboard": "ckeys/thedora",
   "keymap": "default",
-  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,10 +23,10 @@
       "_______", "MI_C2",   "MI_Cs2",  "MI_D2",   "MI_Ds2",  "MI_E2"
     ],
     [
-                 "KC_BTN5", "_______", "KC_WH_U", "_______", "_______",
-                 "_______", "KC_BTN1", "KC_MS_U", "KC_BTN2", "TG(3)",
-                 "KC_BTN4", "KC_MS_L", "KC_MS_D", "KC_MS_R", "_______",
-      "_______", "KC_BTN3", "KC_WH_L", "KC_WH_D", "KC_WH_R", "_______"
+                 "MS_BTN5", "_______", "MS_WHLU", "_______", "_______",
+                 "_______", "MS_BTN1", "MS_UP",   "MS_BTN2", "TG(3)",
+                 "MS_BTN4", "MS_LEFT", "MS_DOWN", "MS_RGHT", "_______",
+      "_______", "MS_BTN3", "MS_WHLL", "MS_WHLD", "MS_WHLR", "_______"
     ],
     [
                  "QK_BOOT", "_______", "_______", "_______", "TG(4)",

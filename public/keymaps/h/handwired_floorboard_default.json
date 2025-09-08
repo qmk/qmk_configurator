@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/floorboard",
   "keymap": "default",
-  "commit": "96d4ba84c245066ae0ccd0f8216d7f11f80e5d98",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [
@@ -17,10 +17,10 @@
       "KC_TRNS", "KC_NO",   "KC_LGUI", "KC_LALT", "KC_SPC",  "KC_TRNS", "KC_NO",   "KC_DEL",  "KC_RALT", "KC_PSCR", "KC_APP",  "KC_NO"
     ],
     [
-      "KC_WAKE", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_MS_L", "KC_MS_D", "KC_MS_U", "KC_MS_R", "KC_SLEP",
+      "KC_WAKE", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "MS_LEFT", "MS_DOWN", "MS_UP",   "MS_RGHT", "KC_SLEP",
       "KC_LCTL", "KC_NO",   "KC_CUT",  "KC_COPY", "KC_PSTE", "KC_NO",   "KC_NO",   "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_ENT",
       "KC_LSFT", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_TRNS", "KC_NO",   "KC_LGUI", "KC_LALT", "KC_BTN1", "KC_BTN2", "KC_TRNS", "KC_NO",   "KC_RALT", "KC_NO",   "KC_APP",  "KC_NO"
+      "KC_TRNS", "KC_NO",   "KC_LGUI", "KC_LALT", "MS_BTN1", "MS_BTN2", "KC_TRNS", "KC_NO",   "KC_RALT", "KC_NO",   "KC_APP",  "KC_NO"
     ],
     [
       "KC_TAB",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",

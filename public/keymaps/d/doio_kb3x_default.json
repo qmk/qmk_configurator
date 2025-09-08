@@ -1,7 +1,7 @@
 {
   "keyboard": "doio/kb3x",
   "keymap": "default",
-  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -12,9 +12,9 @@
     ],
     [
       "TO(2)",      "KC_TRNS", "KC_TRNS",                                              "KC_TRNS", "KC_TRNS", "KC_TRNS",
-                    "KC_WH_U",                             "S(KC_RBRC)",                          "C(KC_L)",
+                    "MS_WHLU",                             "S(KC_RBRC)",                          "C(KC_L)",
       "C(KC_WH_D)", "KC_TRNS", "C(KC_WH_U)",    "KC_DOT",  "KC_TRNS",    "KC_COMM",    "C(KC_B)", "KC_TRNS", "C(KC_U)",
-                    "KC_WH_D",                             "S(KC_LBRC)",                          "C(KC_M)"
+                    "MS_WHLD",                             "S(KC_LBRC)",                          "C(KC_M)"
     ],
     [
       "TO(0)",   "KC_TRNS", "KC_TRNS",                                        "KC_TRNS", "KC_TRNS", "KC_TRNS",

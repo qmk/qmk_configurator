@@ -1,7 +1,7 @@
 {
   "keyboard": "frobiac/hypernano",
   "keymap": "default",
-  "commit": "313fc4cb8f4e41c921112d0b105b82ad5d8a653e",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -35,9 +35,9 @@
       "_______", "_______", "_______", "_______", "_______", "XXXXXXX",    "XXXXXXX", "_______", "_______", "_______", "_______", "_______"
     ],
     [
-      "KC_WH_L",    "XXXXXXX", "KC_MS_U", "XXXXXXX", "XXXXXXX",                          "KC_ACL0", "XXXXXXX", "KC_BTN3", "XXXXXXX", "KC_BTN5",
-      "KC_WH_R",    "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_WH_U",                          "KC_ACL1", "XXXXXXX", "KC_BTN1", "KC_BTN2", "KC_BTN4",
-      "LT(5,KC_X)", "KC_BTN1", "KC_BTN3", "KC_BTN2", "KC_WH_D", "XXXXXXX",    "XXXXXXX", "KC_ACL2", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
+      "MS_WHLL",    "XXXXXXX", "MS_UP",   "XXXXXXX", "XXXXXXX",                          "MS_ACL0", "XXXXXXX", "MS_BTN3", "XXXXXXX", "MS_BTN5",
+      "MS_WHLR",    "MS_LEFT", "MS_DOWN", "MS_RGHT", "MS_WHLU",                          "MS_ACL1", "XXXXXXX", "MS_BTN1", "MS_BTN2", "MS_BTN4",
+      "LT(5,KC_X)", "MS_BTN1", "MS_BTN3", "MS_BTN2", "MS_WHLD", "XXXXXXX",    "XXXXXXX", "MS_ACL2", "XXXXXXX", "XXXXXXX", "XXXXXXX", "XXXXXXX",
       "_______",    "_______", "_______", "_______", "_______", "XXXXXXX",    "XXXXXXX", "_______", "_______", "_______", "_______", "_______"
     ]
   ]

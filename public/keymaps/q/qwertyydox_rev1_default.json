@@ -1,7 +1,7 @@
 {
   "keyboard": "qwertyydox/rev1",
   "keymap": "default",
-  "commit": "002b58f0e4ea64eb5b06e36d988160bbb907cb83",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "macros": [
     [
@@ -31,9 +31,9 @@
       "KC_LCTL", "KC_ESC",  "KC_NO",   "MC_2",    "KC_ENT",  "KC_LSFT", "TO(2)",              "TO(0)",   "KC_SPC",  "KC_BSPC", "KC_LEFT", "KC_RALT", "KC_RGUI", "KC_RCTL"
     ],
     [
-      "KC_ESC",  "KC_NO",   "KC_ACL0", "KC_ACL1", "KC_ACL2", "KC_WH_L", "KC_WH_R",            "KC_ESC",  "KC_NO",   "KC_UP",   "KC_PSLS", "KC_PAST", "KC_PMNS", "KC_PPLS",
-      "KC_NO",   "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "KC_WH_U",            "KC_NO",   "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_INS",  "KC_HOME", "KC_PGUP", "KC_BTN1", "KC_BTN2", "KC_WH_D",                       "KC_MS_L", "KC_MS_U", "KC_MS_D", "KC_MS_R", "KC_NO",   "KC_NO",
+      "KC_ESC",  "KC_NO",   "MS_ACL0", "MS_ACL1", "MS_ACL2", "MS_WHLL", "MS_WHLR",            "KC_ESC",  "KC_NO",   "KC_UP",   "KC_PSLS", "KC_PAST", "KC_PMNS", "KC_PPLS",
+      "KC_NO",   "KC_Z",    "KC_X",    "KC_C",    "KC_V",    "MS_WHLU",            "KC_NO",   "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_INS",  "KC_HOME", "KC_PGUP", "MS_BTN1", "MS_BTN2", "MS_WHLD",                       "MS_LEFT", "MS_UP",   "MS_DOWN", "MS_RGHT", "KC_NO",   "KC_NO",
       "KC_DEL",  "KC_END",  "KC_PGDN", "MC_1",    "KC_LCTL", "KC_SPC",  "TO(0)",              "TO(1)",   "KC_LSFT", "KC_BSPC", "KC_NO",   "KC_NO",   "KC_NO",   "QK_BOOT"
     ]
   ]
