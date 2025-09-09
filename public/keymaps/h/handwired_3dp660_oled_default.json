@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/3dp660_oled",
   "keymap": "default",
-  "commit": "9f317832493357c2838eb53856770002995df997",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_all",
   "layers": [
     [

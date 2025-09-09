@@ -1,7 +1,7 @@
 {
   "keyboard": "mmkeyboard/class60/soldered",
   "keymap": "default",
-  "commit": "c2dbbc060ac69093fece6ae4c0cbde05693e3820",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
   "layout": "LAYOUT_all",
   "layers": [
     [

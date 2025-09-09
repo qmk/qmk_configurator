@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/osborne1",
   "keymap": "default",
-  "commit": "d98ec93eb8bcbb63d9f8c4778ebf5bafbd2e98f9",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_64_ansi",
   "layers": [
     [

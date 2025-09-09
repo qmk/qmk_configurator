@@ -1,7 +1,7 @@
 {
   "keyboard": "tkc/portico75",
   "keymap": "default",
-  "commit": "13821fdbd7809ee311b38d3a593165c275b44879",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_75_ansi",
   "layers": [
     [

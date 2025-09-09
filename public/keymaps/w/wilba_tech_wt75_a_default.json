@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt75_a",
   "keymap": "default",
-  "commit": "bd4c83427c8d9239f70446c68e1199051322bed3",
+  "commit": "8abd87d586d023105d689fd22bd9d3b7d514c454",
   "layout": "LAYOUT_ansi_blocker_split_bs",
   "layers": [
     [

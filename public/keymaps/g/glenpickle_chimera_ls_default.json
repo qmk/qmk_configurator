@@ -1,7 +1,7 @@
 {
   "keyboard": "glenpickle/chimera_ls",
   "keymap": "default",
-  "commit": "002b58f0e4ea64eb5b06e36d988160bbb907cb83",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

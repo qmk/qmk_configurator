@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt65_h3",
   "keymap": "default",
-  "commit": "c5f544cd9696eb607e88b921d3fc31959ada914a",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_all",
   "layers": [
     [

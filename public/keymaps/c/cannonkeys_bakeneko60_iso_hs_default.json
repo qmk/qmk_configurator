@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/bakeneko60_iso_hs",
   "keymap": "default",
-  "commit": "44cd8a2f88f7dd1a38625bce036ebf898135bb3b",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_60_iso",
   "layers": [
     [

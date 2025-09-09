@@ -1,7 +1,7 @@
 {
   "keyboard": "kibou/harbour",
   "keymap": "default",
-  "commit": "884a348e5de13f577a0b8865fc5f65bce4d28e70",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_65_ansi_blocker_tsangan_split_bs",
   "layers": [
     [

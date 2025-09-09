@@ -1,58 +1,58 @@
 {
   "keyboard": "palette1202",
   "keymap": "default",
-  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
+  "commit": "baf0060761db4e0f1d631b00e6057c6763470e78",
   "layout": "LAYOUT",
   "layers": [
     [
-      "KC_TAB",  "LGUI(KC_A)", "KC_E",    "KC_P",       "LGUI(KC_0)",
-      "MO(1)",   "KC_M",       "KC_BSPC", "KC_B",       "KC_HYPR",
-                 "KC_LSFT",    "KC_LGUI", "LGUI(KC_Z)", "KC_SPC"
+      "KC_TAB",  "G(KC_A)", "KC_E",    "KC_P",    "G(KC_0)",
+      "MO(1)",   "KC_M",    "KC_BSPC", "KC_B",    "KC_HYPR",
+                 "KC_LSFT", "KC_LGUI", "G(KC_Z)", "KC_SPC"
     ],
     [
-      "MO(10)",  "KC_ESC",     "KC_G",    "KC_R",       "LGUI(KC_GRV)",
-      "_______", "LGUI(KC_D)", "KC_K",    "KC_F",       "LGUI(KC_S)",
-                 "KC_LALT",    "KC_I",    "SGUI(KC_Z)", "KC_H"
+      "MO(10)",  "KC_ESC",  "KC_G",    "KC_R",      "G(KC_GRV)",
+      "_______", "G(KC_D)", "KC_K",    "KC_F",      "G(KC_S)",
+                 "KC_LALT", "KC_I",    "LSG(KC_Z)", "KC_H"
     ],
     [
-      "KC_TAB",  "LGUI(KC_A)", "KC_E",         "KC_B",          "LGUI(KC_1)",
-      "MO(3)",   "KC_L",       "LGUI(KC_DEL)", "LGUI(KC_QUOT)", "KC_MEH",
-                 "KC_LSFT",    "KC_LGUI",      "LGUI(KC_Z)",    "KC_SPC"
+      "KC_TAB",  "G(KC_A)", "KC_E",      "KC_B",       "G(KC_1)",
+      "MO(3)",   "KC_L",    "G(KC_DEL)", "G(KC_QUOT)", "KC_MEH",
+                 "KC_LSFT", "KC_LGUI",   "G(KC_Z)",    "KC_SPC"
     ],
     [
-      "MO(10)",  "KC_ESC",     "KC_G",    "KC_R",       "KC_ESC",
-      "_______", "LGUI(KC_D)", "KC_V",    "LGUI(KC_T)", "LGUI(KC_S)",
-                 "KC_LALT",    "KC_I",    "SGUI(KC_Z)", "KC_H"
+      "MO(10)",  "KC_ESC",  "KC_G",    "KC_R",      "KC_ESC",
+      "_______", "G(KC_D)", "KC_V",    "G(KC_T)",   "G(KC_S)",
+                 "KC_LALT", "KC_I",    "LSG(KC_Z)", "KC_H"
     ],
     [
-      "KC_TAB",  "LCTL(KC_A)", "KC_E",    "KC_P",       "LCTL(KC_0)",
-      "MO(5)",   "KC_M",       "KC_BSPC", "KC_B",       "KC_HYPR",
-                 "KC_LSFT",    "KC_LCTL", "LCTL(KC_Z)", "KC_SPC"
+      "KC_TAB",  "C(KC_A)", "KC_E",    "KC_P",    "C(KC_0)",
+      "MO(5)",   "KC_M",    "KC_BSPC", "KC_B",    "KC_HYPR",
+                 "KC_LSFT", "KC_LCTL", "C(KC_Z)", "KC_SPC"
     ],
     [
-      "MO(10)",  "KC_ESC",     "KC_G",    "KC_R",       "LCTL(KC_GRV)",
-      "_______", "LCTL(KC_D)", "KC_K",    "KC_F",       "LCTL(KC_S)",
-                 "KC_LALT",    "KC_I",    "C(S(KC_Z))", "KC_H"
+      "MO(10)",  "KC_ESC",  "KC_G",    "KC_R",      "C(KC_GRV)",
+      "_______", "C(KC_D)", "KC_K",    "KC_F",      "C(KC_S)",
+                 "KC_LALT", "KC_I",    "LCS(KC_Z)", "KC_H"
     ],
     [
-      "KC_TAB",  "LCTL(KC_A)", "KC_E",         "KC_B",          "LCTL(KC_1)",
-      "MO(7)",   "KC_L",       "LCTL(KC_DEL)", "LCTL(KC_QUOT)", "KC_MEH",
-                 "KC_LSFT",    "KC_LCTL",      "LCTL(KC_Z)",    "KC_SPC"
+      "KC_TAB",  "C(KC_A)", "KC_E",      "KC_B",       "C(KC_1)",
+      "MO(7)",   "KC_L",    "C(KC_DEL)", "C(KC_QUOT)", "KC_MEH",
+                 "KC_LSFT", "KC_LCTL",   "C(KC_Z)",    "KC_SPC"
     ],
     [
-      "MO(10)",  "KC_ESC",     "KC_G",    "KC_R",       "KC_ESC",
-      "_______", "LCTL(KC_D)", "KC_V",    "LCTL(KC_T)", "LCTL(KC_S)",
-                 "KC_LALT",    "KC_I",    "C(S(KC_Z))", "KC_H"
+      "MO(10)",  "KC_ESC",  "KC_G",    "KC_R",      "KC_ESC",
+      "_______", "C(KC_D)", "KC_V",    "C(KC_T)",   "C(KC_S)",
+                 "KC_LALT", "KC_I",    "LCS(KC_Z)", "KC_H"
     ],
     [
-      "KC_TAB",  "LGUI(KC_A)", "KC_E",    "KC_P",       "LGUI(KC_0)",
-      "MO(9)",   "KC_M",       "KC_BSPC", "KC_B",       "LGUI(KC_LALT)",
-                 "KC_LSFT",    "KC_LGUI", "LGUI(KC_Z)", "KC_SPC"
+      "KC_TAB",  "G(KC_A)", "KC_E",    "KC_P",    "G(KC_0)",
+      "MO(9)",   "KC_M",    "KC_BSPC", "KC_B",    "G(KC_LALT)",
+                 "KC_LSFT", "KC_LGUI", "G(KC_Z)", "KC_SPC"
     ],
     [
-      "MO(10)",  "KC_ESC",     "KC_G",    "KC_R",       "LGUI(KC_EQL)",
-      "_______", "LGUI(KC_D)", "KC_K",    "KC_F",       "LGUI(KC_S)",
-                 "KC_LALT",    "KC_I",    "SGUI(KC_Z)", "KC_H"
+      "MO(10)",  "KC_ESC",  "KC_G",    "KC_R",      "G(KC_EQL)",
+      "_______", "G(KC_D)", "KC_K",    "KC_F",      "G(KC_S)",
+                 "KC_LALT", "KC_I",    "LSG(KC_Z)", "KC_H"
     ],
     [
       "_______", "PDF(8)",  "PDF(4)",  "PDF(0)",  "KC_NO",

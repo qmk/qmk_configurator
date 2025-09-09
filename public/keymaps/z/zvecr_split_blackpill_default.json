@@ -1,7 +1,7 @@
 {
   "keyboard": "zvecr/split_blackpill",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "12dc6d1ac80b6919fcdb084d897612559b2f391b",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/dawn60/rev1_qmk",
   "keymap": "default",
-  "commit": "aaf4b348f072385697f2246e39105c49bb21f8c8",
+  "commit": "28b6a8841fcc4f3198b107f1ae0bf4e3badf3fca",
   "layout": "LAYOUT_all",
   "layers": [
     [

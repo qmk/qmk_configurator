@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/riblee_split",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "fa35be51358cf23650660cdfa7f547ea6150dd10",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

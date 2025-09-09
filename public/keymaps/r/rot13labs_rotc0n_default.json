@@ -1,7 +1,7 @@
 {
   "keyboard": "rot13labs/rotc0n",
   "keymap": "default",
-  "commit": "b7b14678b2b3ab5244475eb1777a69a6e9997ca4",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_2x3",
   "layers": [
     [

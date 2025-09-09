@@ -1,7 +1,7 @@
 {
   "keyboard": "vt40",
   "keymap": "default",
-  "commit": "d589dbb05b31a318086cbf01588230831140d95f",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

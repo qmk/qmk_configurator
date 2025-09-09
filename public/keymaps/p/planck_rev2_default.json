@@ -1,7 +1,7 @@
 {
   "keyboard": "planck/rev2",
   "keymap": "default",
-  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT_planck_grid",
   "layers": [
     [

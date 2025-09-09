@@ -1,7 +1,7 @@
 {
   "keyboard": "matchstickworks/normiepad",
   "keymap": "default",
-  "commit": "c70c99367a5fb838ceff28e2c898a0d7676990fb",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_numpad_6x4",
   "layers": [
     [

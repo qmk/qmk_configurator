@@ -12,25 +12,25 @@
       "MO(3)",          "KC_LCTL", "KC_LALT", "KC_LGUI", "MO(1)",        "KC_SPC",        "LSFT_T(KC_BSPC)", "MO(2)",   "MO(1)",   "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "KC_TRNS", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
-      "KC_TRNS", "KC_EXLM", "KC_AT",   "KC_HASH", "KC_DLR",  "KC_PERC", "KC_CIRC", "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_RPRN", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TILD", "KC_GRV",  "KC_BSLS", "KC_PIPE", "KC_MINS", "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_TILD", "KC_GRV",  "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_ENT",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_PGUP", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_UNDS",       "KC_DEL",  "KC_TRNS", "KC_TRNS", "KC_HOME", "KC_PGDN", "KC_END"
+      "_______", "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",   "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_F11",  "KC_F12",
+      "_______", "KC_EXLM", "KC_AT",   "KC_HASH", "KC_DLR",  "KC_PERC", "KC_CIRC", "KC_AMPR", "KC_ASTR", "KC_LPRN", "KC_RPRN", "_______", "_______",
+      "_______", "KC_TILD", "KC_GRV",  "KC_BSLS", "KC_PIPE", "KC_MINS", "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_TILD", "KC_GRV",  "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "KC_ENT",  "_______", "_______", "_______", "KC_PGUP", "_______",
+      "_______", "_______", "_______", "_______", "_______",      "KC_UNDS",       "KC_DEL",  "_______", "_______", "KC_HOME", "KC_PGDN", "KC_END"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_PWR",  "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "KC_VOLD", "KC_VOLU", "KC_MUTE", "KC_PWR",  "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______",      "_______",       "_______", "_______", "_______", "_______", "_______", "_______"
     ],
     [
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MS_BTN1", "MS_BTN2", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MS_LEFT", "MS_DOWN", "MS_UP",   "MS_RGHT", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MS_WHLD", "MS_WHLU", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",      "KC_TRNS",       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "MS_BTN1", "MS_BTN2", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "MS_LEFT", "MS_DOWN", "MS_UP",   "MS_RGHT", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______", "_______", "MS_WHLD", "MS_WHLU", "_______", "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______", "_______",      "_______",       "_______", "_______", "_______", "_______", "_______", "_______"
     ]
   ]
 }

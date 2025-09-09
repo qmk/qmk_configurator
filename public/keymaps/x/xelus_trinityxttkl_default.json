@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/trinityxttkl",
   "keymap": "default",
-  "commit": "cede70905068f019603c7fefd35a7dce0d1b6214",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ansi_split_space_split_bs_rshift",
   "layers": [
     [

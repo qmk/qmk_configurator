@@ -1,7 +1,7 @@
 {
   "keyboard": "keyhive/opus",
   "keymap": "default",
-  "commit": "9f63bce70bd8e065e54de17c48994c3c008d2e0a",
+  "commit": "baf0060761db4e0f1d631b00e6057c6763470e78",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,10 +23,10 @@
                                        "KC_NO",   "KC_NO",   "KC_NO",      "KC_NO",   "KC_SPC",  "KC_BSPC"
     ],
     [
-      "KC_NO",   "KC_NO",   "LALT(KC_RGHT)", "SGUI(KC_LBRC)", "SGUI(KC_RBRC)", "KC_NO",            "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_NO",   "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_LCTL", "KC_LALT",       "KC_LSFT",       "KC_LGUI",       "KC_NO",            "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_NO",   "KC_NO",
-      "KC_NO",   "KC_NO",   "KC_NO",         "KC_NO",         "KC_NO",         "LALT(KC_LEFT)",    "KC_END",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
-                                             "KC_TRNS",       "KC_NO",         "KC_NO",            "KC_NO",   "KC_SPC",  "KC_BSPC"
+      "KC_NO",   "KC_NO",   "LALT(KC_RGHT)", "LSG(KC_LBRC)", "LSG(KC_RBRC)", "KC_NO",            "KC_HOME", "KC_PGDN", "KC_PGUP", "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_LCTL", "KC_LALT",       "KC_LSFT",      "KC_LGUI",      "KC_NO",            "KC_LEFT", "KC_DOWN", "KC_UP",   "KC_RGHT", "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO",         "KC_NO",        "KC_NO",        "LALT(KC_LEFT)",    "KC_END",  "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",
+                                             "KC_TRNS",      "KC_NO",        "KC_NO",            "KC_NO",   "KC_SPC",  "KC_BSPC"
     ]
   ]
 }

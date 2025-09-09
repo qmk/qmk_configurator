@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/bebol",
   "keymap": "default",
-  "commit": "1ab355802faeeafffba701a692f3f61ed6b4250a",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_65_ansi_split_bs",
   "layers": [
     [

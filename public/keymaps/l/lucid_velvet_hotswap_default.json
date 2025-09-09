@@ -1,7 +1,7 @@
 {
   "keyboard": "lucid/velvet_hotswap",
   "keymap": "default",
-  "commit": "1a300d05bd420d05e2c6106a4c7d1380f413590f",
+  "commit": "b6d5cfe5751f9dba6d06b9fce110ed8c6160576c",
   "layout": "LAYOUT_tkl_f13_ansi_split_bs_rshift",
   "layers": [
     [

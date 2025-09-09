@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/kangaroo/rev1",
   "keymap": "default",
-  "commit": "29c6fd21818ce146247aba67cce6e3fdb9009514",
+  "commit": "8ff8e9eae5b20b1a0a6cafe7689bfc34188f7aa8",
   "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [
     [

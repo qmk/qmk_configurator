@@ -1,7 +1,7 @@
 {
   "keyboard": "artemis/paragon/hotswap",
   "keymap": "default",
-  "commit": "aa91d98531a299f86f9dab8875dcf46983b16af1",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_all",
   "layers": [
     [

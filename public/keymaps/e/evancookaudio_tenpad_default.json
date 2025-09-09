@@ -1,7 +1,7 @@
 {
   "keyboard": "evancookaudio/tenpad",
   "keymap": "default",
-  "commit": "4c9c7b9963ac0b7ee0c2285166678eac7f0b3c14",
+  "commit": "d044a6bcc2c6a643e83754f5b746ea0dd900607f",
   "layout": "LAYOUT_ortho_2x5",
   "layers": [
     [

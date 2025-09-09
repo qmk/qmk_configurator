@@ -1,7 +1,7 @@
 {
   "keyboard": "rmi_kb/tkl_ff/v1",
   "keymap": "default",
-  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_tkl_f13_ansi",
   "layers": [
     [

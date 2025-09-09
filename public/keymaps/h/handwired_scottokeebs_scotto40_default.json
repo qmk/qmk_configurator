@@ -1,7 +1,7 @@
 {
     "keyboard": "handwired/scottokeebs/scotto40",
     "keymap": "default",
-    "commit": "eaef139fc30852a2e7f2311c3ab7297e61fb5252",
+    "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
     "layout": "LAYOUT_ortho_4x10",
     "layers": [
         [

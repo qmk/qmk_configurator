@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/ec_60x",
   "keymap": "default",
-  "commit": "1c6cdb8d74ae58583fb99c194aa94224a03f0162",
+  "commit": "e0788d19d4c3ea3b4f2f706baaaf16912f1c2dec",
   "layout": "LAYOUT_all",
   "layers": [
     [

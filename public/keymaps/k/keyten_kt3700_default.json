@@ -1,7 +1,7 @@
 {
   "keyboard": "keyten/kt3700",
   "keymap": "default",
-  "commit": "9f84b9ac095f31d65ab0cb9310bf5130cc9775aa",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [

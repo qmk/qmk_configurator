@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/quefrency/rev1",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "d7b09ad5602888e94f75cb8ed3c3e0931df4234e",
   "layout": "LAYOUT_65_with_macro",
   "layers": [
     [

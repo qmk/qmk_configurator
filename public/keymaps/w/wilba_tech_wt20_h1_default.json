@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt20_h1",
   "keymap": "default",
-  "commit": "624d0964c16557684c84dd3640071bb11b313c27",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [

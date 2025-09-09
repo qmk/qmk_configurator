@@ -1,7 +1,7 @@
 {
   "keyboard": "ekow/akira",
   "keymap": "default",
-  "commit": "d766e20196e0f91f5f43592e642ff5c76ecb29ba",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_60_hhkb",
   "layers": [
     [

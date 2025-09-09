@@ -1,7 +1,7 @@
 {
   "keyboard": "merge/uma",
   "keymap": "default",
-  "commit": "4bc9adbc64732138ca3d158b8f546bfc4a3fc0b6",
+  "commit": "bcfe3a071851f4c8bd06928014dd9c744fdb5e80",
   "layout": "LAYOUT_ansi_rspace_2u_bksp",
   "layers": [
     [

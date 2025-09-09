@@ -1,7 +1,7 @@
 {
   "keyboard": "emery65",
   "keymap": "default",
-  "commit": "82a725636d2b583cbbdc41a8d9ef373f00a329ff",
+  "commit": "22b3cf4e9102aa6d746f9ac2b5ee5b529e884010",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [

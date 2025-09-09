@@ -1,7 +1,7 @@
 {
   "keyboard": "cmm_studio/saka68/solder",
   "keymap": "default",
-  "commit": "3296c26c9829ec261261a273130197235b05b05e",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_68_ansi",
   "layers": [
     [

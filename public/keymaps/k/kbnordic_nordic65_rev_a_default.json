@@ -1,7 +1,7 @@
 {
   "keyboard": "kbnordic/nordic65/rev_a",
   "keymap": "default",
-  "commit": "31d28ba2283a8130b043c48b6ef2c93e293a7f62",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_all",
   "layers": [
     [

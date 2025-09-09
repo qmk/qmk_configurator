@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/kawayo",
   "keymap": "default",
-  "commit": "ed791972e1bf812c432655de31e3cf92f3bcf397",
+  "commit": "7a28c6ede32bf77e8429c65899fc1fb1a6505c10",
   "layout": "LAYOUT_65_ansi_cb_blocker_split_bs",
   "layers": [
     [

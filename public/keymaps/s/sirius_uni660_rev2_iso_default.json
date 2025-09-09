@@ -1,7 +1,7 @@
 {
   "keyboard": "sirius/uni660/rev2/iso",
   "keymap": "default",
-  "commit": "7e77c2361fbfba60fabb490a8dae310d5b7309ba",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_iso",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/swiftrax/astro65",
   "keymap": "default",
-  "commit": "9f36aa640e9580354928d72d87187d6c80c69bc4",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_65_ansi_blocker_split_bs",
   "layers": [
     [

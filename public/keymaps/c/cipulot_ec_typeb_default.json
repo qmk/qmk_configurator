@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/ec_typeb",
   "keymap": "default",
-  "commit": "4e9967557ef9d68202f9e321a0798be2490b51a7",
+  "commit": "4c2bdf7ab0e170af68f6de91d3851b1dc4113fea",
   "layout": "LAYOUT_60_hhkb",
   "layers": [
     [

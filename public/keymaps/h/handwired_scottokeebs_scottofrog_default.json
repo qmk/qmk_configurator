@@ -1,7 +1,7 @@
 {
     "keyboard": "handwired/scottokeebs/scottofrog",
     "keymap": "default",
-    "commit": "2d838d8ba9acb98f93cf2549e4296399b7d1a7b4",
+    "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
     "layout": "LAYOUT_ortho_3x5_5",
     "layers": [
         [

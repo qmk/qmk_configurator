@@ -1,7 +1,7 @@
 {
   "keyboard": "dumbpad/v1x_oled",
   "keymap": "default",
-  "commit": "7cbff9d921879ef3c54837cb2ffc455e019f45b4",
+  "commit": "d044a6bcc2c6a643e83754f5b746ea0dd900607f",
   "layout": "LAYOUT",
   "layers": [
     [

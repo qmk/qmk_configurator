@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/xs60/hotswap",
   "keymap": "default",
-  "commit": "0b1d5497fccc3d175eb4558ec83ede2e2fcfcf63",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_60_ansi_tsangan_split_rshift",
   "layers": [
     [

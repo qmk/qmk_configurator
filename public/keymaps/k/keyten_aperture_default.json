@@ -1,7 +1,7 @@
 {
   "keyboard": "keyten/aperture",
   "keymap": "default",
-  "commit": "e4f4e0a3073085fbc4cca52d70ecab27ab90a68e",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_65_ansi_blocker_tsangan_split_bs",
   "layers": [
     [

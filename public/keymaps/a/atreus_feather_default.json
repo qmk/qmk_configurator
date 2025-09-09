@@ -1,7 +1,7 @@
 {
   "keyboard": "atreus/feather",
   "keymap": "default",
-  "commit": "af8fe44e0fc3dc461a9fdf85c601c012b5a517eb",
+  "commit": "07684bcc99515c04a9edda3e1dfac2fc9eb79fac",
   "layout": "LAYOUT_pcb_up",
   "layers": [
     [

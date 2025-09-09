@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/n2",
   "keymap": "default",
-  "commit": "83c12a516b3d0c1b603bce28a55bdeba476311df",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT",
   "layers": [
     [

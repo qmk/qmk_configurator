@@ -1,7 +1,7 @@
 {
   "keyboard": "lfkeyboards/smk65/revf",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "03a53e29af8983e1d3185fc6557312f341ec4c9f",
   "layout": "LAYOUT_65_ansi",
   "layers": [
     [

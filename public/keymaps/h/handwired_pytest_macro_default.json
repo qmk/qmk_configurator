@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/pytest/macro",
   "keymap": "default",
-  "commit": "125a9039034610712dadf2dc4cb4e94ff405c100",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_ortho_1x1",
   "macros": [
     [

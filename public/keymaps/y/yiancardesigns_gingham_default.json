@@ -1,7 +1,7 @@
 {
   "keyboard": "yiancardesigns/gingham",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "8ff8e9eae5b20b1a0a6cafe7689bfc34188f7aa8",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

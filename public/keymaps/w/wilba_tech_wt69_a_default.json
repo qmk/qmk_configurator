@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt69_a",
   "keymap": "default",
-  "commit": "c8b6137e57cea158bbb225fbca82b501329b5f58",
+  "commit": "17498fa48a8c5c0ac439e59d0db12a41954d4fb0",
   "layout": "LAYOUT_65_xt_ansi_blocker_tsangan_split_bs",
   "layers": [
     [

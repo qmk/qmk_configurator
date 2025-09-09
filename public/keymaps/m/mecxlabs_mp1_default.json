@@ -1,7 +1,7 @@
 {
   "keyboard": "mecxlabs/mp1",
   "keymap": "default",
-  "commit": "252b041b97c03374e8f10570a54992f7f91f5f26",
+  "commit": "a65818d929f415cc1b13ef06769a143579c91c67",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [

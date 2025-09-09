@@ -1,7 +1,7 @@
 {
   "keyboard": "tokyokeyboard/alix40",
   "keymap": "default",
-  "commit": "37e14fd02bd71ffd32fe381b10ce72f2b85b4049",
+  "commit": "912124f71cfcd9276fec13b27dea0029e49b1483",
   "layout": "LAYOUT_40_alix",
   "layers": [
     [

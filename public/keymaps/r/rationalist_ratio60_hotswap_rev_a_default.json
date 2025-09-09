@@ -1,7 +1,7 @@
 {
   "keyboard": "rationalist/ratio60_hotswap/rev_a",
   "keymap": "default",
-  "commit": "ad4ecd6eb47dd3569cad8407fe85187362ffa9da",
+  "commit": "28b6a8841fcc4f3198b107f1ae0bf4e3badf3fca",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

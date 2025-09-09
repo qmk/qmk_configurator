@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/i75/promicro",
   "keymap": "default",
-  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "commit": "243c21568ab47aeca069f5d0a0744ae51d39bd53",
   "layout": "LAYOUT_ortho_5x15",
   "layers": [
     [

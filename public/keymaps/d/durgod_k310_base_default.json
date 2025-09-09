@@ -1,7 +1,7 @@
 {
   "keyboard": "durgod/k310/base",
   "keymap": "default",
-  "commit": "2a25e79760a7c760e1fbda0ad21f1c9b6f7ec0b1",
+  "commit": "22b3cf4e9102aa6d746f9ac2b5ee5b529e884010",
   "layout": "LAYOUT_all",
   "layers": [
     [

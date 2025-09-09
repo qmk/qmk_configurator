@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/meck_tkl/blackpill_f401",
   "keymap": "default",
-  "commit": "5e4b076af3c99d36632d6b92f3ddd046f38a01af",
+  "commit": "e869c80af74a91d28e51628da495e66da0cbc3ce",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

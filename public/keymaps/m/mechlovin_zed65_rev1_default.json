@@ -1,7 +1,7 @@
 {
   "keyboard": "mechlovin/zed65/rev1",
   "keymap": "default",
-  "commit": "636093f75dd5a8b568c822aaab093484386e8e6e",
+  "commit": "8f8fffc1740be81fbfe4a07a74e9f03962c1062a",
   "layout": "LAYOUT_65_ansi_split_bs",
   "layers": [
     [

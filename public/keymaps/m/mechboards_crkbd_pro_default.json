@@ -1,7 +1,7 @@
 {
   "keyboard": "mechboards/crkbd/pro",
   "keymap": "default",
-  "commit": "6a947fa5345b47f8d41c5ab13c0c6dac79cb3bc9",
+  "commit": "b43fc33be3df1d8f9b0b13c43dea764adf2d70c5",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [

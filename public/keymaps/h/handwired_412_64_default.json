@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/412_64",
   "keymap": "default",
-  "commit": "b7771ec25b96f2b88a7fa4201081e10ca6fbb9d4",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ortho_4x16",
   "layers": [
     [

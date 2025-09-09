@@ -1,7 +1,7 @@
 {
   "keyboard": "kb_elmo/twelvekey",
   "keymap": "default",
-  "commit": "dd0a35273c9445357e1bd5c28ef81ab93306e108",
+  "commit": "e69b638756c80c0a26efa1959b611a04548a9f82",
   "layout": "LAYOUT_ortho_3x4",
   "layers": [
     [

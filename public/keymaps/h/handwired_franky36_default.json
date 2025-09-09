@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/franky36",
   "keymap": "default",
-  "commit": "ce2f7d86be171f7273299720ba739b8c85d4c267",
+  "commit": "5b0039aae60b97dad7a07f80e3ed2f60fe3bb45c",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "ymdk/wings",
   "keymap": "default",
-  "commit": "838205d4af355bb1447a4e9e4fb608f8d96d8974",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ansi_split_bs",
   "layers": [
     [

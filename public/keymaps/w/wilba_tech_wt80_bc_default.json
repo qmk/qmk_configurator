@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt80_bc",
   "keymap": "default",
-  "commit": "843e1d6032b2758b8ecf0aba8e8ac7fae7dbbdc2",
+  "commit": "43a122e050647057dbaa16bc50417b9306e00bcc",
   "layout": "LAYOUT_tkl_ansi_tsangan",
   "layers": [
     [

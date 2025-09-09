@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/ec_vero",
   "keymap": "default",
-  "commit": "822ba1edfa0a4309eeb8304749fb31fd414d369c",
+  "commit": "4c2bdf7ab0e170af68f6de91d3851b1dc4113fea",
   "layout": "LAYOUT_all",
   "layers": [
     [

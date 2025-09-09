@@ -1,7 +1,7 @@
 {
   "keyboard": "ibm/model_m/modelh",
   "keymap": "default",
-  "commit": "b10b4cc8649dbe0a5620c7ad52df0e66e4046852",
+  "commit": "4ae24004b7ef911fbdf134485bd00c10909414c1",
   "layout": "LAYOUT_fullsize_ansi_wkl",
   "layers": [
     [

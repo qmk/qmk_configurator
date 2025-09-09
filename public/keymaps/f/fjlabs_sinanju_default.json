@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/sinanju",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "0a84bf8b574b0efdf4ea729b3204ea32ffceef6e",
   "layout": "LAYOUT_60_ansi_wkl_split_bs_rshift",
   "layers": [
     [

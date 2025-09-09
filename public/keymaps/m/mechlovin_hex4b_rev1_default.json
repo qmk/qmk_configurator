@@ -1,7 +1,7 @@
 {
   "keyboard": "mechlovin/hex4b/rev1",
   "keymap": "default",
-  "commit": "a8e13f041e55fe46d7168eecf1c9862f22ef5f3e",
+  "commit": "a65818d929f415cc1b13ef06769a143579c91c67",
   "layout": "LAYOUT_split_bs",
   "layers": [
     [

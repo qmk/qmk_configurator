@@ -1,7 +1,7 @@
 {
   "keyboard": "pizzakeyboards/slice65",
   "keymap": "default",
-  "commit": "a1b16b8227fbf43e67c398f926a922d4241a9829",
+  "commit": "40d0512794651237a182b4f53a2278d0fb2e583e",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

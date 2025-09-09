@@ -1,7 +1,7 @@
 {
   "keyboard": "deltapad",
   "keymap": "default",
-  "commit": "76f94a4275ca1d6417c85c9ad173ae61247f0d19",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

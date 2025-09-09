@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/bolsa65",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "a2176f6a039b5f92ba4cb473f7a2de560b57dd86",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

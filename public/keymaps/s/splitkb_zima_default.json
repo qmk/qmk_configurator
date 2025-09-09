@@ -1,7 +1,7 @@
 {
   "keyboard": "splitkb/zima",
   "keymap": "default",
-  "commit": "c1361005fac8fe7ee20904e75fc014a8ef34704e",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
   "layout": "LAYOUT_ortho_4x3",
   "layers": [
     [

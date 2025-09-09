@@ -1,7 +1,7 @@
 {
   "keyboard": "sirius/uni660/rev2/ansi",
   "keymap": "default",
-  "commit": "72ca319beefcd479954d5fb08325c0187148b357",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

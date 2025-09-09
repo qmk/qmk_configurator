@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/wt65_f",
   "keymap": "default",
-  "commit": "7a98f57bdd61426d9728826297c2cc5c44caeaae",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
