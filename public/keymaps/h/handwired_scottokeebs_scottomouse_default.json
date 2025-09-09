@@ -1,11 +1,11 @@
 {
     "keyboard": "handwired/scottokeebs/scottomouse",
     "keymap": "default",
-    "commit": "1c62cb7b42022e4c9e1fcfe36840d9f1ea9c1320",
+    "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
     "layout": "LAYOUT",
     "layers": [
         [
-            "KC_MS_BTN1", "KC_MS_BTN2", "KC_MS_LEFT", "KC_MS_UP",  "KC_MS_DOWN", "KC_MS_RIGHT"
+            "MS_BTN1", "MS_BTN2", "MS_LEFT", "MS_UP",  "MS_DOWN", "MS_RGHT"
         ]
     ]
 }

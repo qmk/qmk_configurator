@@ -1,7 +1,7 @@
 {
   "keyboard": "thumbsup/rev9_promicro_4x12",
   "keymap": "default",
-  "commit": "f25624dca4717150f719bc6d72418a6e195fb1f7",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -11,15 +11,15 @@
                       "KC_SPC",  "KC_LGUI", "KC_LALT", "KC_LSFT", "LT(1,KC_SPC)",    "LT(2,KC_SPC)", "KC_RSFT", "KC_RALT", "KC_APP",  "KC_SPC"
     ],
     [
-      "_______", "KC_PAUS", "KC_HOME", "KC_UP",   "KC_END",  "KC_PGUP",    "KC_DEL",  "KC_WH_U",   "KC_MS_U",   "KC_WH_D",   "KC_GRV",  "KC_DEL",
-      "KC_ENT",  "C(KC_A)", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PGDN",    "XXXXXXX", "KC_MS_L",   "KC_MS_D",   "KC_MS_R",   "XXXXXXX", "_______",
-      "_______", "XXXXXXX", "KC_BTN2", "KC_BTN3", "KC_BTN1", "KC_INS",     "XXXXXXX", "C(KC_DEL)", "C(KC_INS)", "S(KC_INS)", "XXXXXXX", "_______",
+      "_______", "KC_PAUS", "KC_HOME", "KC_UP",   "KC_END",  "KC_PGUP",    "KC_DEL",  "MS_WHLU",   "MS_UP",     "MS_WHLD",   "KC_GRV",  "KC_DEL",
+      "KC_ENT",  "C(KC_A)", "KC_LEFT", "KC_DOWN", "KC_RGHT", "KC_PGDN",    "XXXXXXX", "MS_LEFT",   "MS_DOWN",   "MS_RGHT",   "XXXXXXX", "_______",
+      "_______", "XXXXXXX", "MS_BTN2", "MS_BTN3", "MS_BTN1", "KC_INS",     "XXXXXXX", "C(KC_DEL)", "C(KC_INS)", "S(KC_INS)", "XXXXXXX", "_______",
                  "_______", "_______", "_______", "_______", "_______",    "_______", "_______",   "_______",   "_______",   "_______"
     ],
     [
-      "_______", "KC_PAUS", "KC_WH_D",   "KC_MS_U",   "KC_WH_U",   "KC_DEL",     "KC_PGUP", "KC_HOME", "KC_UP",   "KC_END",  "KC_GRV",  "KC_DEL",
-      "KC_ENT",  "C(KC_A)", "KC_MS_L",   "KC_MS_D",   "KC_MS_R",   "XXXXXXX",    "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT", "XXXXXXX", "_______",
-      "_______", "C(KC_Z)", "S(KC_DEL)", "C(KC_INS)", "S(KC_INS)", "XXXXXXX",    "KC_INS",  "KC_BTN1", "KC_BTN3", "KC_BTN2", "XXXXXXX", "_______",
+      "_______", "KC_PAUS", "MS_WHLD",   "MS_UP",     "MS_WHLU",   "KC_DEL",     "KC_PGUP", "KC_HOME", "KC_UP",   "KC_END",  "KC_GRV",  "KC_DEL",
+      "KC_ENT",  "C(KC_A)", "MS_LEFT",   "MS_DOWN",   "MS_RGHT",   "XXXXXXX",    "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT", "XXXXXXX", "_______",
+      "_______", "C(KC_Z)", "S(KC_DEL)", "C(KC_INS)", "S(KC_INS)", "XXXXXXX",    "KC_INS",  "MS_BTN1", "MS_BTN3", "MS_BTN2", "XXXXXXX", "_______",
                  "_______", "_______",   "_______",   "_______",   "_______",    "_______", "_______", "_______", "_______", "_______"
     ],
     [

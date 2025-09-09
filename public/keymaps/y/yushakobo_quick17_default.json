@@ -1,7 +1,7 @@
 {
   "keyboard": "yushakobo/quick17",
   "keymap": "default",
-  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -15,7 +15,7 @@
       "KC_LSFT", "KC_X",    "KC_V",    "KC_B",    "LT(2,KC_SPC)", "C(KC_S)"
     ],
     [
-      "KC_ESC",  "KC_Q",    "KC_BTN3", "KC_INS",  "KC_ENT",  "KC_DEL",
+      "KC_ESC",  "KC_Q",    "MS_BTN3", "KC_INS",  "KC_ENT",  "KC_DEL",
       "KC_LCTL", "KC_LBRC", "KC_RBRC", "KC_PGDN", "KC_PGUP", "C(KC_Y)",
       "KC_LSFT", "TO(3)",   "RM_TOGG", "TO(0)",   "_______", "KC_NO"
     ],

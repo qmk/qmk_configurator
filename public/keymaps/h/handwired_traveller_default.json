@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/traveller",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -23,10 +23,10 @@
       "_______", "KC_SLSH", "_______", "_______", "TT(1)",   "_______", "_______", "_______", "_______", "_______", "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
-      "TG(3)",   "XXXXXXX",       "XXXXXXX",    "KC_UP",      "XXXXXXX",    "RGUI(KC_RGHT)",                       "KC_WH_U", "XXXXXXX", "KC_MS_U", "XXXXXXX", "XXXXXXX", "KC_ACL2",
-      "_______", "RGUI(KC_LEFT)", "KC_LEFT",    "KC_DOWN",    "KC_RGHT",    "LCTL(KC_E)",                          "KC_BTN3", "KC_MS_L", "KC_MS_U", "KC_MS_R", "XXXXXXX", "KC_ACL1",
-      "_______", "LCTL(KC_A)",    "LGUI(KC_X)", "RGUI(KC_C)", "RGUI(KC_V)", "XXXXXXX",                             "KC_WH_D", "XXXXXXX", "KC_MS_D", "XXXXXXX", "KC_UP",   "KC_ACL0",
-      "_______", "RGUI(KC_Z)",    "_______",    "_______",    "_______",    "_______",       "KC_ENT",  "KC_BTN2", "KC_BTN1", "_______", "_______", "KC_LEFT", "KC_DOWN", "KC_RGHT"
+      "TG(3)",   "XXXXXXX",       "XXXXXXX",    "KC_UP",      "XXXXXXX",    "RGUI(KC_RGHT)",                       "MS_WHLU", "XXXXXXX", "MS_UP",   "XXXXXXX", "XXXXXXX", "MS_ACL2",
+      "_______", "RGUI(KC_LEFT)", "KC_LEFT",    "KC_DOWN",    "KC_RGHT",    "LCTL(KC_E)",                          "MS_BTN3", "MS_LEFT", "MS_UP",   "MS_RGHT", "XXXXXXX", "MS_ACL1",
+      "_______", "LCTL(KC_A)",    "LGUI(KC_X)", "RGUI(KC_C)", "RGUI(KC_V)", "XXXXXXX",                             "MS_WHLD", "XXXXXXX", "MS_DOWN", "XXXXXXX", "KC_UP",   "MS_ACL0",
+      "_______", "RGUI(KC_Z)",    "_______",    "_______",    "_______",    "_______",       "KC_ENT",  "MS_BTN2", "MS_BTN1", "_______", "_______", "KC_LEFT", "KC_DOWN", "KC_RGHT"
     ],
     [
       "TG(4)",   "KC_F1",   "KC_F2",   "KC_F3",   "KC_F4",   "KC_F5",                         "KC_F6",   "KC_F7",   "KC_F8",   "KC_F9",   "KC_F10",  "KC_RCTL",

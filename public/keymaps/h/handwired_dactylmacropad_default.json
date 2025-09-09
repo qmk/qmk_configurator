@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactylmacropad",
   "keymap": "default",
-  "commit": "e659c3dae9c50293a1483190db07601a83b73fef",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "macros": [
     [
@@ -24,7 +24,7 @@
     [
       "MC_0",           "LCTL(KC_V)", "KC_UP",     "LCTL(KC_C)",
       "LSFT_T(KC_ESC)", "KC_LEFT",    "KC_DOWN",   "KC_RGHT",
-      "TO(1)",          "KC_LCTL",    "A(KC_TAB)", "KC_APP",     "KC_BTN3"
+      "TO(1)",          "KC_LCTL",    "A(KC_TAB)", "KC_APP",     "MS_BTN3"
     ],
     [
       "LCTL(LSFT(KC_H))", "LCTL(KC_F6)", "KC_TRNS",    "KC_PGUP",

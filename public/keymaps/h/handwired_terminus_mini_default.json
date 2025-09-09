@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/terminus_mini",
   "keymap": "default",
-  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -41,10 +41,10 @@
       "KC_TRNS", "KC_TRNS", "KC_NO",   "KC_TRNS",      "KC_TRNS",            "KC_TRNS",       "KC_TRNS", "KC_NO",   "KC_NO",   "KC_PAUS"
     ],
     [
-      "KC_ESC",  "KC_WH_U", "KC_WH_L", "KC_MS_U", "KC_WH_R", "KC_NO",   "KC_NO",   "KC_BTN3", "KC_BTN4", "KC_BTN5", "KC_NO",   "KC_NO",
-      "KC_BSPC", "KC_WH_D", "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_NO",   "KC_NO",   "KC_BTN1", "KC_BTN2", "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_ESC",  "MS_WHLU", "MS_WHLL", "MS_UP",   "MS_WHLR", "KC_NO",   "KC_NO",   "MS_BTN3", "MS_BTN4", "MS_BTN5", "KC_NO",   "KC_NO",
+      "KC_BSPC", "MS_WHLD", "MS_LEFT", "MS_DOWN", "MS_RGHT", "KC_NO",   "KC_NO",   "MS_BTN1", "MS_BTN2", "KC_NO",   "KC_NO",   "KC_NO",
       "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "KC_NO",   "SC_RSPC",
-      "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",        "KC_ACL2",            "KC_ACL0",       "KC_NO",   "MO(6)",   "KC_NO",   "KC_RCTL"
+      "KC_TRNS", "KC_NO",   "KC_NO",   "KC_NO",        "MS_ACL2",            "MS_ACL0",       "KC_NO",   "MO(6)",   "KC_NO",   "KC_RCTL"
     ],
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "QK_BOOT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_DEL",

@@ -1,19 +1,19 @@
 {
   "keyboard": "buzzard/rev1",
   "keymap": "default",
-  "commit": "2e19d0d7d14fef69d583886c244d3c67b3c0cc3d",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
                              "KC_Q",         "KC_W",         "KC_E",         "KC_R",          "KC_T",                                                                        "KC_Y",    "KC_U",         "KC_I",         "KC_O",           "KC_P",
       "OSM(MOD_LSFT)",       "LGUI_T(KC_A)", "LALT_T(KC_S)", "LCTL_T(KC_D)", "LSFT_T(KC_F)",  "KC_G",                                                                        "KC_H",    "RSFT_T(KC_J)", "RCTL_T(KC_K)", "LALT_T(KC_L)",   "RGUI_T(KC_SCLN)", "KC_DEL",
       "LCTL_T(KC_ESC)", "KC_Z",         "RALT_T(KC_X)", "KC_C",         "KC_V",          "KC_B",                                                                        "KC_N",    "KC_M",         "KC_COMM",      "RALT_T(KC_DOT)", "KC_SLSH",         "MO(5)",
-                                                                                              "KC_BTN1", "LT(1,KC_SPC)", "LT(3,KC_TAB)",    "LT(4,KC_BSPC)", "LT(2,KC_ENT)", "KC_BTN2"
+                                                                                              "MS_BTN1", "LT(1,KC_SPC)", "LT(3,KC_TAB)",    "LT(4,KC_BSPC)", "LT(2,KC_ENT)", "MS_BTN2"
     ],
     [
                  "_______", "_______", "_______", "_______", "_______",                                                "KC_INS",     "LCTL(KC_X)", "KC_PGUP", "KC_PGDN", "_______",
       "_______", "_______", "_______", "_______", "_______", "_______",                                                "LCTL(KC_C)", "KC_LEFT",    "KC_UP",   "KC_DOWN", "KC_RGHT", "_______",
-      "_______", "_______", "_______", "_______", "_______", "_______",                                                "LCTL(KC_V)", "KC_HOME",    "KC_WH_U", "KC_WH_D", "KC_END",  "_______",
+      "_______", "_______", "_______", "_______", "_______", "_______",                                                "LCTL(KC_V)", "KC_HOME",    "MS_WHLU", "MS_WHLD", "KC_END",  "_______",
                                                              "_______", "_______", "_______",    "KC_BSPC", "KC_ENT",  "_______"
     ],
     [

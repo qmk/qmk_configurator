@@ -1,7 +1,7 @@
 {
   "keyboard": "ckeys/handwire_101",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [
@@ -29,10 +29,10 @@
       "KC_M",    "KC_M",    "KC_M",    "KC_M"
     ],
     [
-      "KC_BTN5", "_______", "KC_WH_U", "_______",
-      "_______", "KC_BTN1", "KC_MS_U", "KC_BTN2",
-      "KC_BTN4", "KC_MS_L", "KC_MS_D", "KC_MS_R",
-      "KC_BTN3", "KC_WH_L", "KC_WH_D", "KC_WH_R"
+      "MS_BTN5", "_______", "MS_WHLU", "_______",
+      "_______", "MS_BTN1", "MS_UP",   "MS_BTN2",
+      "MS_BTN4", "MS_LEFT", "MS_DOWN", "MS_RGHT",
+      "MS_BTN3", "MS_WHLL", "MS_WHLD", "MS_WHLR"
     ],
     [
       "_______", "XXXXXXX", "_______", "_______",

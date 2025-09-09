@@ -1,15 +1,15 @@
 {
   "keyboard": "mechwild/puckbuddy",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT",
   "layers": [
     [
       "KC_MUTE", "MO(3)",   "MO(2)",   "MO(1)",   "LGUI(KC_D)",
       "MO(2)",                                    "KC_HOME",
       "MO(3)",                                    "KC_END",
-      "KC_BTN3",                                  "DPI_FINE",
-                 "KC_BTN1", "KC_BTN2", "KC_BTN2", "KC_BTN1"
+      "MS_BTN3",                                  "DPI_FINE",
+                 "MS_BTN1", "MS_BTN2", "MS_BTN2", "MS_BTN1"
     ],
     [
       "UG_TOGG", "KC_TRNS", "KC_TRNS", "KC_TRNS", "TAP_TOG",

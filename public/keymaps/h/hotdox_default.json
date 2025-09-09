@@ -1,7 +1,7 @@
 {
   "keyboard": "hotdox",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT_ergodox",
   "layers": [
     [
@@ -44,10 +44,10 @@
     ],
     [
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_MS_U", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_MS_L", "KC_MS_D", "KC_MS_R", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "MS_UP",   "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "MS_LEFT", "MS_DOWN", "MS_RGHT", "KC_TRNS",
       "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
-      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_BTN1", "KC_BTN2",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "MS_BTN1", "MS_BTN2",
                                                              "KC_TRNS", "KC_TRNS",
                                                                         "KC_TRNS",
                                                   "KC_TRNS", "KC_TRNS", "KC_TRNS",
