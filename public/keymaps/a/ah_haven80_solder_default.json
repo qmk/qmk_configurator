@@ -1,7 +1,7 @@
 {
   "keyboard": "ah/haven80/solder",
   "keymap": "default",
-  "commit": "dd17b6be29ec7cb839bc562d39593942132d3fac",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_tkl_f13_ansi_tsangan",
   "layers": [
     [

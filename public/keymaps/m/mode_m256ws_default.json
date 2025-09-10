@@ -1,7 +1,7 @@
 {
   "keyboard": "mode/m256ws",
   "keymap": "default",
-  "commit": "294fc6caef704f5bf1eeb70c5176812c1a77adcb",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_all",
   "layers": [
     [

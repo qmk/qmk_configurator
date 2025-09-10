@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/usb_usb/hasu",
   "keymap": "default",
-  "commit": "976317df3cb2cd9b8772cb852dd66314f6856ed1",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_all",
   "layers": [
     [

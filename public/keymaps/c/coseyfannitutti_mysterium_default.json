@@ -1,7 +1,7 @@
 {
   "keyboard": "coseyfannitutti/mysterium",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "b7b4ffc44974e8f8c65bf54b32a8fc8f1b2ee043",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

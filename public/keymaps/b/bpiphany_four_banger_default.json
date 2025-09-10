@@ -1,7 +1,7 @@
 {
   "keyboard": "bpiphany/four_banger",
   "keymap": "default",
-  "commit": "250fd721ace2a979261f8f1b97a487ed8016ee75",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_2x2",
   "macros": [
     [

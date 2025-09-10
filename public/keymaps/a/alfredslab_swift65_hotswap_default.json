@@ -1,7 +1,7 @@
 {
   "keyboard": "alfredslab/swift65/hotswap",
   "keymap": "default",
-  "commit": "164065682eae63805ebe61a4c5a561c4ea2f523c",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ansi_blocker_tsangan",
   "layers": [
     [

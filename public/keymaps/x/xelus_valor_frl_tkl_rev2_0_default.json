@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/valor_frl_tkl/rev2_0",
   "keymap": "default",
-  "commit": "9d6ed655d71b48e8b6a374b5ea79ca87d06ab67d",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [
     [

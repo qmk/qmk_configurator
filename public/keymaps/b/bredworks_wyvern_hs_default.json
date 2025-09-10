@@ -1,7 +1,7 @@
 {
   "keyboard": "bredworks/wyvern_hs",
   "keymap": "default",
-  "commit": "9d3c0018c118ed2cf5fc251e24774a8c52df09ee",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_mirrored_numpad",
   "layers": [
     [

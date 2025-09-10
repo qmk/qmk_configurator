@@ -1,7 +1,7 @@
 {
   "keyboard": "yiancardesigns/barleycorn",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "a2176f6a039b5f92ba4cb473f7a2de560b57dd86",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

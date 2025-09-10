@@ -1,7 +1,7 @@
 {
   "keyboard": "input_club/infinity60/rev1",
   "keymap": "default",
-  "commit": "59787a2e515b50eb84b5fb29ae20bfc61b49851f",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

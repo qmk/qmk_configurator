@@ -1,7 +1,7 @@
 {
   "keyboard": "bluebell/swoop",
   "keymap": "default",
-  "commit": "4a30ea6a18efcc122fd0b7b3626cc1602227e586",
+  "commit": "6347d18a2d4ffa041e175655e8669041e1f45d53",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

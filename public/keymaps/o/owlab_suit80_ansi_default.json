@@ -1,7 +1,7 @@
 {
   "keyboard": "owlab/suit80/ansi",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

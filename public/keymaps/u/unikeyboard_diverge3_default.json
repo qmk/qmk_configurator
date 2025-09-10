@@ -1,8 +1,8 @@
 {
   "keyboard": "unikeyboard/diverge3",
   "keymap": "default",
-  "commit": "1978007faefc0fb3af809ddf0d2ff1274e540570",
-  "layout": "LAYOUT",
+  "commit": "12dc6d1ac80b6919fcdb084d897612559b2f391b",
+  "layout": "//KEYMAP",
   "macros": [
     [
       "()"

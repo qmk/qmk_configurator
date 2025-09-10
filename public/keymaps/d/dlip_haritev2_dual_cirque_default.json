@@ -1,0 +1,21 @@
+{
+  "keyboard": "dlip/haritev2/dual_cirque",
+  "keymap": "default",
+  "commit": "8c108efb0d72d7ef6c735c25295538968c68af99",
+  "layout": "LAYOUT_split_5x6",
+  "layers": [
+    [
+                 "KC_U",                          "KC_U",                          "KC_U",                          "KC_U",                             "KC_U",                          "KC_U",                          "KC_U",                          "KC_U",
+      "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",       "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",    "KC_L",    "KC_C",    "KC_R",
+                 "KC_D",                          "KC_D",                          "KC_D",                          "KC_D",                             "KC_D",                          "KC_D",                          "KC_D",                          "KC_D",
+
+                                                                                                                    "KC_U",                             "KC_U",
+                                                                                                         "KC_L",    "KC_C",    "KC_R",       "KC_L",    "KC_C",    "KC_R",
+                                                                                                                    "KC_D",                             "KC_D",
+
+                                                                                                                    "KC_U",                             "KC_U",
+                                                                                                         "KC_L",    "KC_C",    "KC_R",       "KC_L",    "KC_C",    "KC_R",
+                                                                                                                    "KC_D",                             "KC_D"
+    ]
+  ]
+}

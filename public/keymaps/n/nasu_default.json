@@ -1,7 +1,7 @@
 {
   "keyboard": "nasu",
   "keymap": "default",
-  "commit": "69527be90b3ea40368739517b6cb979364ce4d58",
+  "commit": "dc0095c64b2658a8fb5421ce93cb6bdc53806693",
   "layout": "LAYOUT_alice_split_bs",
   "layers": [
     [

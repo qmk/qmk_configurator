@@ -1,7 +1,7 @@
 {
   "keyboard": "cmm_studio/saka68/hotswap",
   "keymap": "default",
-  "commit": "5c2d15573d32b839f0cf7915ef141812ab03bfdf",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_68_ansi",
   "layers": [
     [

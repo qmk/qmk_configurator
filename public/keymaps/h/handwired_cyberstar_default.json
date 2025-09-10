@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/cyberstar",
   "keymap": "default",
-  "commit": "bb8557463058902a9ca296f00defac3b2433fd80",
+  "commit": "e869c80af74a91d28e51628da495e66da0cbc3ce",
   "layout": "LAYOUT_split_space_split_bs",
   "layers": [
     [

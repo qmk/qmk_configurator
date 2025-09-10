@@ -1,7 +1,7 @@
 {
   "keyboard": "cutie_club/novus",
   "keymap": "default",
-  "commit": "2f917dd768fda45d73ab8fd67138f7ab7d23c76c",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_60_ansi_split_bs_rshift",
   "layers": [
     [

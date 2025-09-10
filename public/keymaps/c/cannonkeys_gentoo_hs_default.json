@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/gentoo_hs",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "8ad2e307323415ac0a0198daf79223b3ae90de97",
   "layout": "LAYOUT_65_ansi_rwkl",
   "layers": [
     [

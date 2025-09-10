@@ -1,7 +1,7 @@
 {
   "keyboard": "rmi_kb/squishytkl",
   "keymap": "default",
-  "commit": "df3c9a54015616d31ae0f55afb7b326bd6c300e6",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ansi",
   "layers": [
     [

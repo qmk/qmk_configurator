@@ -1,7 +1,7 @@
 {
   "keyboard": "peej/tripel/right",
   "keymap": "default",
-  "commit": "1cb1a5a3744dc569fbe25c44004d860241fd26b1",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_ortho_7u",
   "layers": [
     [

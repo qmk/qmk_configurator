@@ -1,7 +1,7 @@
 {
   "keyboard": "touchpad",
   "keymap": "default",
-  "commit": "edcedd53d1bfb761cca37553729ad881f2a738e6",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ortho_6x6",
   "layers": [
 	[

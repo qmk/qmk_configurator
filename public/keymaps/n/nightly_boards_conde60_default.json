@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/conde60",
   "keymap": "default",
-  "commit": "d66b5db1d621fc26fcb6afbd55689eae59be4118",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "nibell/micropad4x4",
   "keymap": "default",
-  "commit": "e592a7da0017a57a476debee2355f8dbb5d81349",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ortho_4x4",
   "layers": [
     [

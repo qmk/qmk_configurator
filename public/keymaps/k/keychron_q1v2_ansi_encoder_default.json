@@ -1,7 +1,7 @@
 {
   "keyboard": "keychron/q1v2/ansi_encoder",
   "keymap": "default",
-  "commit": "6fa11bf21913b5ccb531acc3c2baec963f4d384a",
+  "commit": "7a939ec218056346930096a6e1836fd6bcf64027",
   "layout": "LAYOUT_ansi_82",
   "layers": [
     [

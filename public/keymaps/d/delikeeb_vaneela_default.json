@@ -1,7 +1,7 @@
 {
   "keyboard": "delikeeb/vaneela",
   "keymap": "default",
-  "commit": "18dc851e37a203b32db0261c365dd300488e1c71",
+  "commit": "d044a6bcc2c6a643e83754f5b746ea0dd900607f",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

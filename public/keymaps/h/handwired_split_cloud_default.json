@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/split_cloud",
   "keymap": "default",
-  "commit": "e4e015c0c80ca59d329e1343ee7803250b7e60fe",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

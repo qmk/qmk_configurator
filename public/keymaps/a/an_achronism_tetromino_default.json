@@ -1,7 +1,7 @@
 {
   "keyboard": "an_achronism/tetromino",
   "keymap": "default",
-  "commit": "1ec8ae8a49f02ae732cc5315d75bf2a6505fe00d",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_5x14",
   "layers": [
     [

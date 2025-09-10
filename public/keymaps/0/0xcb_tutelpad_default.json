@@ -1,7 +1,7 @@
 {
   "keyboard": "0xcb/tutelpad",
   "keymap": "default",
-  "commit": "16c91e0cf2f01cc28b32c22d108e806538f7dba7",
+  "commit": "243c21568ab47aeca069f5d0a0744ae51d39bd53",
   "layout": "LAYOUT",
   "layers": [
     [

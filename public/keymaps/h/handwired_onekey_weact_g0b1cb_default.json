@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/weact_g0b1cb",
+  "keymap": "default",
+  "commit": "f686ad9e6361e05fcfa78f453f90cd72181a7516",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "keyboard": "checkerboards/candybar_ortho",
   "keymap": "default",
-  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "commit": "07684bcc99515c04a9edda3e1dfac2fc9eb79fac",
   "layout": "LAYOUT_grid",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "xelus/xs108",
   "keymap": "default",
-  "commit": "e172148e466830af974bfc4d036323b2bc194dbc",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_108_ansi",
   "layers": [
     [

@@ -1,0 +1,11 @@
+{
+  "keyboard": "sneakbox/lilbae",
+  "keymap": "default",
+  "commit": "da7811f82aad8997495750c9ef70117f9934f340",
+  "layout": "LAYOUT_bae",
+  "layers": [
+    [
+      "KC_ENT"
+    ]
+  ]
+}

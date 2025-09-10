@@ -1,7 +1,7 @@
 {
   "keyboard": "peej/lumberjack",
   "keymap": "default",
-  "commit": "619885b48432bccb7ba4b65f0f5a3c9f4a8d40e2",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_5x12",
   "layers": [
     [

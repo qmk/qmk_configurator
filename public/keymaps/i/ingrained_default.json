@@ -1,7 +1,7 @@
 {
   "keyboard": "ingrained",
   "keymap": "default",
-  "commit": "101d7b533745947ef2b92a919d5f02a137428235",
+  "commit": "e869c80af74a91d28e51628da495e66da0cbc3ce",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [

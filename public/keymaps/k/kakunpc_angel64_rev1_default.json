@@ -1,7 +1,7 @@
 {
   "keyboard": "kakunpc/angel64/rev1",
   "keymap": "default",
-  "commit": "f0618a1d53a50a6ed6a6b050daf31365599bef4b",
+  "commit": "8e64ff574ab444f3dd1b4b7b71ec274ced3e99df",
   "layout": "LAYOUT_all",
   "layers": [
     [

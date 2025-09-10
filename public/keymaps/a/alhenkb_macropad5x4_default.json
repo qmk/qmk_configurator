@@ -1,7 +1,7 @@
 {
   "keyboard": "alhenkb/macropad5x4",
   "keymap": "default",
-  "commit": "896f38c52cf720473df0c6687581852adf26d99f",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_5x4",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "boardsource/unicorne",
   "keymap": "default",
-  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "commit": "f29d8117bf877a4df1f88f40e0131f4465748540",
   "layout": "LAYOUT_split_3x6_3",
   "layers": [
     [

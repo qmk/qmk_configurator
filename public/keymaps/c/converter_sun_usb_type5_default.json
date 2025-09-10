@@ -1,7 +1,7 @@
 {
   "keyboard": "converter/sun_usb/type5",
   "keymap": "default",
-  "commit": "0000000",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_jp_unix",
   "layers": [
     [

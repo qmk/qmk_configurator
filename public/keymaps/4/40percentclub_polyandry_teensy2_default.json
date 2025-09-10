@@ -1,7 +1,7 @@
 {
   "keyboard": "40percentclub/polyandry/teensy2",
   "keymap": "default",
-  "commit": "cdb04900cd1c84bb2ef983a8eca0667fba4ce5c0",
+  "commit": "76bd5142cfed1fb8e07b9f32fb0b010fbc068fa4",
   "layout": "LAYOUT_ortho_4x3",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "drewkeys/mercury65",
   "keymap": "default",
-  "commit": "91e0e46e4a949080c0d203d4433170ce49d42ada",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "wilba_tech/rama_works_m65_bx",
   "keymap": "default",
-  "commit": "1448744ea97522c05d1a64364be0b01527653547",
+  "commit": "8abd87d586d023105d689fd22bd9d3b7d514c454",
   "layout": "LAYOUT_65_ansi_blocker_tsangan_split_bs",
   "layers": [
     [

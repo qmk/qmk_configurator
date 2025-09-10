@@ -1,7 +1,7 @@
 {
   "keyboard": "cannonkeys/ortho48v2",
   "keymap": "default",
-  "commit": "5fda3490187a7448176b7d37bf16c1cd1d80b736",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

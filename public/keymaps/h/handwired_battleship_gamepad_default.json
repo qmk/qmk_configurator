@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/battleship_gamepad",
   "keymap": "default",
-  "commit": "6bbe8b6eddc56d43f4db07c665bf1791ea2ab871",
+  "commit": "53a0cdc4467fb688faa2708fe75daa26686e918d",
   "layout": "LAYOUT",
   "layers": [
     [

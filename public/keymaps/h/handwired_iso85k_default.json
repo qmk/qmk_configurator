@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/iso85k",
   "keymap": "default",
-  "commit": "72f93e7fc2f6eae29c4b4a5a0875714c48e1a69b",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_75_iso",
   "layers": [
     [

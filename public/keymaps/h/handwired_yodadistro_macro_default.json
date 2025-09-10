@@ -1,0 +1,12 @@
+{
+  "keyboard": "handwired/yodadistro/macro",
+  "keymap": "default",
+  "commit": "664c0bc4c32d3f2c287f02ef4f786c32c0f51cb9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_E",    "KC_F",    "KC_G",    "KC_H"
+    ]
+  ]
+}

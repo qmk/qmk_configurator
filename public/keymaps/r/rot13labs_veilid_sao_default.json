@@ -1,7 +1,7 @@
 {
   "keyboard": "rot13labs/veilid_sao",
   "keymap": "default",
-  "commit": "7b5d7907df3b2e5871aa627cd02359879f04b42d",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ortho_1x1",
   "macros": [
     [

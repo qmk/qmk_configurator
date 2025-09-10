@@ -1,7 +1,7 @@
 {
   "keyboard": "keebio/wavelet",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "d7b09ad5602888e94f75cb8ed3c3e0931df4234e",
   "layout": "LAYOUT_ortho_4x12",
   "layers": [
     [

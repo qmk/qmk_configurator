@@ -1,7 +1,7 @@
 {
   "keyboard": "tkc/california",
   "keymap": "default",
-  "commit": "92114252c5e19adb25193c6233831caacfee562f",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_ansi_split_bs_rshift",
   "layers": [
     [

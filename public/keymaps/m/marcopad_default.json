@@ -1,7 +1,7 @@
 {
   "keyboard": "marcopad",
   "keymap": "default",
-  "commit": "88d4462e528a64a50942b718e9b7705b4d6dd3dd",
+  "commit": "b43fc33be3df1d8f9b0b13c43dea764adf2d70c5",
   "layout": "LAYOUT_ortho_3x3",
   "layers": [
     [

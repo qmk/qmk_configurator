@@ -1,7 +1,7 @@
 {
   "keyboard": "nightly_boards/ph_arisu",
   "keymap": "default",
-  "commit": "1184e0d9beb7322b0cea017e805d36d11e4f47f2",
+  "commit": "b4cabc3cf7311c76930788fdf5b43645e191a7e9",
   "layout": "LAYOUT",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "ah/haven65",
   "keymap": "default",
-  "commit": "4b1aa1640c667da83f9bff77b5db6c2db428ea1e",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [

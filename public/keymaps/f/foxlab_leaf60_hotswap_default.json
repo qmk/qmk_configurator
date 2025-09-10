@@ -1,7 +1,7 @@
 {
   "keyboard": "foxlab/leaf60/hotswap",
   "keymap": "default",
-  "commit": "28b6a8841fcc4f3198b107f1ae0bf4e3badf3fca",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_60_ansi_tsangan_split_bs_rshift",
   "layers": [
     [

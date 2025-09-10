@@ -1,7 +1,7 @@
 {
   "keyboard": "cipulot/mnk_65_ec",
   "keymap": "default",
-  "commit": "5fc4e331bda7025ebef63260f0085be5b5be9f9f",
+  "commit": "abe4d9cdcac51b49da494ec9077ffe79bbfd5ef7",
   "layout": "LAYOUT_65_ansi_blocker_tsangan",
   "layers": [
     [

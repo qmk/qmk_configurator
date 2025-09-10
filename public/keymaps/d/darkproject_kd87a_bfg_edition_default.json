@@ -1,7 +1,7 @@
 {
   "keyboard": "darkproject/kd87a_bfg_edition",
   "keymap": "default",
-  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_tkl_ansi",
   "layers": [
     [

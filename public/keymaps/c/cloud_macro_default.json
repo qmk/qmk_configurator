@@ -1,0 +1,11 @@
+{
+  "keyboard": "cloud_macro",
+  "keymap": "default",
+  "commit": "c3773d9c350cef5c4323c209f85ffd076177f8f1",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",    "KC_2",    "KC_3",    "KC_4",    "KC_5"
+    ]
+  ]
+}

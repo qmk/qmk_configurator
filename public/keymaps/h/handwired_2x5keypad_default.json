@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/2x5keypad",
   "keymap": "default",
-  "commit": "55843480fffddebf15b3557fb11dca6206ab7b7b",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT",
   "layers": [
     [

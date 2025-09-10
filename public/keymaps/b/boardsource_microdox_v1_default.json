@@ -1,7 +1,7 @@
 {
   "keyboard": "boardsource/microdox/v1",
   "keymap": "default",
-  "commit": "59c7b15b4da6e9325b7af6bd34fc4cb557ebb184",
+  "commit": "e8103722bcbce957ebf15da34b80571b49737572",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

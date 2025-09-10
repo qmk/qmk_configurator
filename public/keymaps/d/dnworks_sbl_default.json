@@ -1,7 +1,7 @@
 {
   "keyboard": "dnworks/sbl",
   "keymap": "default",
-  "commit": "31e39a9ff49e15db6dc787e996b08708c88a1967",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_all",
   "layers": [
     [

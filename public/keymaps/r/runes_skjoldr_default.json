@@ -1,7 +1,7 @@
 {
   "keyboard": "runes/skjoldr",
   "keymap": "default",
-  "commit": "b6ac0ecf824bccfdc4114a0a15fc2c95b0ccd14d",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
   "layout": "LAYOUT_60_ansi_arrow",
   "layers": [
     [

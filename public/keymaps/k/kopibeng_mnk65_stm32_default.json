@@ -1,7 +1,7 @@
 {
   "keyboard": "kopibeng/mnk65_stm32",
   "keymap": "default",
-  "commit": "61708d60fbc8f23597b697a2e18163c6dc9003c7",
+  "commit": "07684bcc99515c04a9edda3e1dfac2fc9eb79fac",
   "layout": "LAYOUT_all",
   "layers": [
     [

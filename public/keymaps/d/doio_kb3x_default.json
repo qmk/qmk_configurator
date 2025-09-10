@@ -13,7 +13,7 @@
     [
       "TO(2)",      "KC_TRNS", "KC_TRNS",                                              "KC_TRNS", "KC_TRNS", "KC_TRNS",
                     "MS_WHLU",                             "S(KC_RBRC)",                          "C(KC_L)",
-      "C(KC_WH_D)", "KC_TRNS", "C(KC_WH_U)",    "KC_DOT",  "KC_TRNS",    "KC_COMM",    "C(KC_B)", "KC_TRNS", "C(KC_U)",
+      "C(MS_WHLD)", "KC_TRNS", "C(MS_WHLU)",    "KC_DOT",  "KC_TRNS",    "KC_COMM",    "C(KC_B)", "KC_TRNS", "C(KC_U)",
                     "MS_WHLD",                             "S(KC_LBRC)",                          "C(KC_M)"
     ],
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "artifact/lvl/rev_hs01",
   "keymap": "default",
-  "commit": "c5a75eb16f1d570ffa2aa5078172117efeef723e",
+  "commit": "6b60089fc704e4fc6bb75686b725a19da6a92fa9",
   "layout": "LAYOUT_tkl_ansi_tsangan",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "dnworks/numpad",
   "keymap": "default",
-  "commit": "39f06c3afb2a59d04bfc1e5ef52020bfd4e68f84",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
   "layout": "LAYOUT_ortho_6x4",
   "layers": [
     [

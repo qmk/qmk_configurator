@@ -1,7 +1,7 @@
 {
   "keyboard": "jaykeeb/jk60",
   "keymap": "default",
-  "commit": "e484a3a17926dae6abc37e9997b78043ff383efd",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
   "layout": "LAYOUT_60_ansi",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "adafruit/macropad",
   "keymap": "default",
-  "commit": "c9f619124d41637ece157570703423c3890cb6c2",
+  "commit": "d333a25868039292a327a141dc90c0015b7fd017",
   "layout": "LAYOUT",
   "layers": [
     [

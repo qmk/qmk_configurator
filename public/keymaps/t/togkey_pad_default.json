@@ -1,0 +1,12 @@
+{
+  "keyboard": "togkey/pad",
+  "keymap": "default",
+  "commit": "177e461d903e6414e6d7b5b80eb36f48b0d68626",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+           "KC_VOLD", "KC_VOLU",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ]
+  ]
+}

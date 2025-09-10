@@ -1,7 +1,7 @@
 {
   "keyboard": "crimsonkeyboards/resume1800",
   "keymap": "default",
-  "commit": "a40cccced29990eef5dac798d522c87807aa5e3a",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_ansi_all",
   "macros": [
     [

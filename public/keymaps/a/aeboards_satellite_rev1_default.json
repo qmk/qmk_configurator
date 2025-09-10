@@ -1,7 +1,7 @@
 {
   "keyboard": "aeboards/satellite/rev1",
   "keymap": "default",
-  "commit": "8a4867e23a9e9993260808ba882f6c8ec90dcfb5",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
   "layout": "LAYOUT_65_ansi_rwkl",
   "layers": [
     [

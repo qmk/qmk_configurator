@@ -1,7 +1,7 @@
 {
   "keyboard": "handwired/dactyl_minidox",
   "keymap": "default",
-  "commit": "339b820520e13ea9c21eada904a973576a7985cc",
+  "commit": "2d37e80ac9c85ccbb16ee580edd335c1e44044a9",
   "layout": "LAYOUT_split_3x5_3",
   "layers": [
     [

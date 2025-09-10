@@ -1,7 +1,7 @@
 {
   "keyboard": "fjlabs/peaker",
   "keymap": "default",
-  "commit": "a6b47de7325df78ebfb78f700f6ac0587787c23b",
+  "commit": "0a84bf8b574b0efdf4ea729b3204ea32ffceef6e",
   "layout": "LAYOUT_tkl_all",
   "layers": [
     [

@@ -1,7 +1,7 @@
 {
   "keyboard": "keycult/keycult65",
   "keymap": "default",
-  "commit": "aa15b64f552d69419ed2ef8f73e9517992818c5f",
+  "commit": "e69b638756c80c0a26efa1959b611a04548a9f82",
   "layout": "LAYOUT_65_ansi_blocker",
   "layers": [
     [
