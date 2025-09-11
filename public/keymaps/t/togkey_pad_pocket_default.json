@@ -5,7 +5,7 @@
   "layout": "LAYOUT",
   "layers": [
     [
-      "TD(TD_VOLDOWN_MEDIAPREV)", "TD(TD_VOLUP_MEDIANEXT)"
+      "KC_VOLD", "KC_VOLU"
     ]
   ]
 }
