@@ -1,0 +1,12 @@
+{
+  "keyboard": "kingly_keys/smd_milk",
+  "keymap": "default",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_HOME",
+      "KC_END"
+    ]
+  ]
+}

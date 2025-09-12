@@ -1,0 +1,15 @@
+{
+  "keyboard": "dc01/arrow",
+  "keymap": "default",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_INS",  "KC_HOME", "KC_PGUP",
+      "KC_DEL",  "KC_END",  "KC_PGDN",
+
+                 "KC_UP",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ]
+  ]
+}

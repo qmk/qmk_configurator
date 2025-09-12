@@ -1,0 +1,18 @@
+{
+  "keyboard": "westm/westm9/rev2",
+  "keymap": "default",
+  "commit": "8f6d2ac53cdde6d0befc9f86c326f56620dcfcc0",
+  "layout": "LAYOUT_macropad",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",
+      "KC_VOLD", "KC_VOLU", "KC_MUTE",
+      "KC_NO",   "KC_NO",   "MO(1)"
+    ],
+    [
+      "UG_TOGG", "UG_PREV", "UG_SATU",
+      "UG_VALD", "UG_VALU", "UG_SATD",
+      "UG_HUED", "UG_HUEU", "KC_NO"
+    ]
+  ]
+}

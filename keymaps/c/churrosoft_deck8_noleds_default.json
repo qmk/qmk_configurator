@@ -1,0 +1,12 @@
+{
+  "keyboard": "churrosoft/deck8/noleds",
+  "keymap": "default",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MEH(KC_A)", "MEH(KC_B)", "MEH(KC_C)", "MEH(KC_D)",
+      "MEH(KC_E)", "MEH(KC_F)", "MEH(KC_G)", "MEH(KC_H)"
+    ]
+  ]
+}

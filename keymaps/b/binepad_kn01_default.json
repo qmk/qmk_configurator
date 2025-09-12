@@ -1,0 +1,24 @@
+{
+  "keyboard": "binepad/kn01",
+  "keymap": "default",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "LT(1,KC_MUTE)"
+    ],
+    [
+      "_______"
+    ]
+  ],
+  "config": {
+    "features": {
+      "encoder_map": true
+    }
+  },
+  "encoders": [
+    [{"ccw": "KC_VOLD", "cw": "KC_VOLU"}],
+    [{"ccw": "MS_WHLD", "cw": "MS_WHLU"}]
+  ],
+  "version": 1
+}

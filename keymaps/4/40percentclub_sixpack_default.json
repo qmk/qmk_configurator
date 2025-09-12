@@ -1,0 +1,12 @@
+{
+  "keyboard": "40percentclub/sixpack",
+  "keymap": "default",
+  "commit": "243c21568ab47aeca069f5d0a0744ae51d39bd53",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_MUTE", "KC_UP",   "KC_MPLY",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ]
+  ]
+}

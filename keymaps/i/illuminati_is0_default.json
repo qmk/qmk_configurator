@@ -1,0 +1,16 @@
+{
+  "keyboard": "illuminati/is0",
+  "keymap": "default",
+  "commit": "07684bcc99515c04a9edda3e1dfac2fc9eb79fac",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "Hello from Illuminati Works"
+    ]
+  ],
+  "layers": [
+    [
+      "MC_0"
+    ]
+  ]
+}

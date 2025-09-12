@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/at_start_f415",
+  "keymap": "default",
+  "commit": "02525f683e7ad1a2f032dfe8663b0303d1714a7d",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

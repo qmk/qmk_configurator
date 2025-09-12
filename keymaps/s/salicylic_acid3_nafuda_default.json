@@ -1,0 +1,28 @@
+{
+  "keyboard": "salicylic_acid3/nafuda",
+  "keymap": "default",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                       "TG(1)",
+      "LT(3,KC_BSPC)", "KC_UP",   "TG(2)",
+      "KC_LEFT",       "KC_DOWN", "KC_RGHT"
+    ],
+    [
+                 "TG(1)",
+      "MS_BTN1", "MS_UP",   "MS_BTN2",
+      "MS_LEFT", "MS_DOWN", "MS_RGHT"
+    ],
+    [
+                      "C(KC_W)",
+      "C(S(KC_T))",   "MS_WHLU", "TG(2)",
+      "C(S(KC_TAB))", "MS_WHLD", "C(KC_TAB)"
+    ],
+    [
+                 "UG_VALD",
+      "MO(3)",   "UG_SATD", "UG_VALU",
+      "UG_NEXT", "UG_TOGG", "UG_SATU"
+    ]
+  ]
+}

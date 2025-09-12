@@ -1,0 +1,12 @@
+{
+  "keyboard": "sixkeyboard",
+  "keymap": "default",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F"
+    ]
+  ]
+}

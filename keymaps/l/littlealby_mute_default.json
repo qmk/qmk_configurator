@@ -1,0 +1,11 @@
+{
+  "keyboard": "littlealby/mute",
+  "keymap": "default",
+  "commit": "baf0060761db4e0f1d631b00e6057c6763470e78",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LSG(KC_A)"
+    ]
+  ]
+}

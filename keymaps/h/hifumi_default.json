@@ -1,0 +1,24 @@
+{
+  "keyboard": "hifumi",
+  "keymap": "default",
+  "commit": "091eac1fce89cfb3b470fbdedaccd58720203b21",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(1,KC_F5)", "KC_UP",   "LT(2,KC_PSCR)",
+      "KC_LEFT",     "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "_______", "KC_PGUP", "MO(3)",
+      "KC_HOME", "KC_PGDN", "KC_END"
+    ],
+    [
+      "MO(3)",   "_______", "_______",
+      "_______", "_______", "_______"
+    ],
+    [
+      "_______",  "UG_TOGG", "_______",
+      "RGB_M_SN", "RGB_M_P", "UG_HUEU"
+    ]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "keyboard": "handwired/novem",
+  "keymap": "default",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_HOME", "KC_DEL",
+      "MO(1)",   "KC_UP",   "KC_ENT",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "KC_TRNS", "XXXXXXX", "XXXXXXX",
+      "KC_TRNS", "XXXXXXX", "XXXXXXX",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

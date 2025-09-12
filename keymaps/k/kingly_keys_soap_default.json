@@ -1,0 +1,16 @@
+{
+  "keyboard": "kingly_keys/soap",
+  "keymap": "default",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_DEL",  "KC_UP",   "KC_ENT",     "UG_NEXT",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT",    "MO(1)"
+    ],
+    [
+      "UG_HUEU", "UG_VALU", "UG_SATU",    "KC_TRNS",
+      "UG_HUED", "UG_VALD", "UG_SATD",    "KC_TRNS"
+    ]
+  ]
+}
