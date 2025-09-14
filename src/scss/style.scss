@@ -645,10 +645,6 @@ button {
   z-index: 1001;
 }
 
-.keycode:empty:after {
-  content: 'N/A';
-}
-
 .keycode-text,
 .keycode-container,
 .keycode-layer,
