@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/stream_cheap/2x4",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT_ortho_2x4",
+  "layers": [
+    [
+      "XXXXXXX", "XXXXXXX", "XXXXXXX", "KC_4",
+      "KC_5",    "KC_6",    "KC_7",    "TO(1)"
+    ],
+    [
+      "KC_A",    "KC_B",    "KC_C",    "KC_D",
+      "KC_E",    "KC_F",    "KC_G",    "TO(0)"
+    ]
+  ]
+}

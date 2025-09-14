@@ -1,0 +1,11 @@
+{
+  "keyboard": "cannonkeys/is0gr",
+  "keymap": "default",
+  "commit": "abe4d9cdcac51b49da494ec9077ffe79bbfd5ef7",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_ENT"
+    ]
+  ]
+}

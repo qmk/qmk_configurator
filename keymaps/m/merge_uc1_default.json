@@ -1,0 +1,11 @@
+{
+  "keyboard": "merge/uc1",
+  "keymap": "default",
+  "commit": "021c3cc12587d3b1b3d51b753470614d11e318bd",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_1",    "KC_2",    "KC_3"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "keyboard": "tzarc/ghoul/rev1/stm32",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_Q",           "KC_W",         "KC_E",         "KC_R",         "KC_T",    "RM_NEXT", "KC_Y",    "KC_U",         "KC_I",         "KC_O",         "KC_P",
+      "LGUI_T(KC_A)",   "LALT_T(KC_S)", "LSFT_T(KC_D)", "LCTL_T(KC_F)", "KC_G",               "KC_H",    "RCTL_T(KC_J)", "RSFT_T(KC_K)", "LALT_T(KC_L)", "RGUI_T(KC_SCLN)",
+      "KC_Z",           "KC_X",         "KC_C",         "KC_V",         "KC_B",               "KC_N",    "KC_M",         "KC_COMM",      "KC_DOT",       "KC_SLSH",
+      "LSFT_T(KC_ESC)", "KC_LCTL",      "KC_LGUI",      "KC_SPC",       "MO(1)",              "MO(2)",   "KC_SPC",       "KC_LALT",      "KC_BSPC",      "SC_SENT"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RM_NEXT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "MO(3)",   "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RM_NEXT", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "MO(3)",              "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "RM_NEXT", "KC_TRNS", "KC_TRNS", "DB_TOGG", "EE_CLR",  "QK_BOOT",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",            "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "keyboard": "syenakeyboards/elaruus",
+  "keymap": "default",
+  "commit": "950d7653708965bb37f3b4919db041ab98d42f69",
+  "layout": "LAYOUT_ortho_1x2",
+  "layers": [
+    [
+      "LT(1,KC_LEFT)", "LT(2,KC_RGHT)"
+    ],
+    [
+      "_______", "KC_UP"
+    ],
+    [
+      "KC_DOWN", "_______"
+    ]
+  ]
+}

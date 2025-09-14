@@ -1,0 +1,32 @@
+{
+  "keyboard": "zlabkeeb/vrynboard",
+  "keymap": "default",
+  "commit": "8b42e5fb8f74da4de63f3cec941f53ba6b974aba",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "QK_KB_0",
+      "KC_VOLD", "KC_MUTE", "KC_VOLU",
+      "KC_LEFT", "KC_MPLY", "KC_RGHT",
+      "KC_ESC",  "KC_PSCR", "KC_DEL"
+    ],
+    [
+      "QK_KB_0",
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_6",    "KC_7",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "QK_KB_0",
+      "KC_J",    "KC_K",    "KC_L",
+      "KC_M",    "KC_N",    "KC_O",
+      "KC_TRNS", "KC_TRNS", "KC_TRNS"
+    ],
+    [
+      "QK_KB_0",
+      "UG_NEXT", "UG_TOGG", "UG_PREV",
+      "UG_HUED", "KC_ESC",  "UG_HUEU",
+      "UG_VALD", "KC_ENT",  "UG_VALU"
+    ]
+  ]
+}

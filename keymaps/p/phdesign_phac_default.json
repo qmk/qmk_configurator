@@ -1,0 +1,13 @@
+{
+  "keyboard": "phdesign/phac",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                      "KC_B",
+      "KC_S",    "KC_D",    "KC_K",    "KC_L",
+           "KC_V",               "KC_N"
+    ]
+  ]
+}
