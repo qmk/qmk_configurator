@@ -118,7 +118,7 @@ function makeOneShotModKey(code) {
 export default [
   { label: 'Quantum', width: 'label', group: true },
 
-  { name: '', code: 'KC_NO', title: 'Do nothing' },
+  { name: 'N/A', code: 'KC_NO', title: 'Do nothing' },
   {
     name: '▽',
     code: 'KC_TRNS',
