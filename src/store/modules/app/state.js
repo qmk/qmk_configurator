@@ -56,7 +56,7 @@ const state = {
   keypressListener: undefined,
   showSpinner: false,
   spinnerMsg: '',
-  message: '',
+  message: null,
   settingsPanelVisible: false,
   author: '',
   notes: '',
