@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/stream_cheap/2x5",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT_ortho_2x5",
+  "layers": [
+    [
+      "XXXXXXX", "XXXXXXX", "LGUI(KC_L)", "XXXXXXX", "KC_F5",
+      "KC_F9",   "KC_F10",  "KC_F11",     "KC_F12",  "TO(1)"
+    ],
+    [
+      "KC_MUTE",    "KC_VOLD",    "KC_VOLU",    "KC_MPLY",    "KC_MSTP",
+      "LCTL(KC_X)", "LCTL(KC_C)", "LCTL(KC_V)", "LCTL(KC_F)", "TO(0)"
+    ]
+  ]
+}

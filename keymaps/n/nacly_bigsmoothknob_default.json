@@ -1,0 +1,12 @@
+{
+  "keyboard": "nacly/bigsmoothknob",
+  "keymap": "default",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1", "KC_2", "KC_3", "KC_4",
+      "KC_5", "KC_6", "KC_7", "KC_8"
+    ]
+  ]
+}

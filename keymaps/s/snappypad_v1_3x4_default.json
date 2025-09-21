@@ -1,0 +1,32 @@
+{
+  "keyboard": "snappypad/v1_3x4",
+  "keymap": "default",
+  "commit": "9c965bb62ec9ea84e68e0a1559dfbc35429df090",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "TO(1)",                         "KC_MPLY",
+      "KC_F13",  "KC_F14",  "KC_F15",  "KC_F16",
+      "KC_F17",  "KC_F18",  "KC_F19",  "KC_F20",
+      "KC_F21",  "KC_F22",  "KC_F23",  "KC_F24"
+    ],
+    [
+      "TO(2)",                               "KC_TRNS",
+      "S(KC_F13)", "S(KC_F14)", "S(KC_F15)", "S(KC_F16)",
+      "S(KC_F17)", "S(KC_F18)", "S(KC_F19)", "S(KC_F20)",
+      "S(KC_F21)", "S(KC_F22)", "S(KC_F23)", "S(KC_F24)"
+    ],
+    [
+      "TO(3)",                               "KC_TRNS",
+      "C(KC_F13)", "C(KC_F14)", "C(KC_F15)", "C(KC_F16)",
+      "C(KC_F17)", "C(KC_F18)", "C(KC_F19)", "C(KC_F20)",
+      "C(KC_F21)", "C(KC_F22)", "C(KC_F23)", "C(KC_F24)"
+    ],
+    [
+      "TO(0)",                               "KC_TRNS",
+      "A(KC_F13)", "A(KC_F14)", "A(KC_F15)", "A(KC_F16)",
+      "A(KC_F17)", "A(KC_F18)", "A(KC_F19)", "A(KC_F20)",
+      "A(KC_F21)", "A(KC_F22)", "A(KC_F23)", "A(KC_F24)"
+    ]
+  ]
+}

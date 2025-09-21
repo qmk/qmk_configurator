@@ -1,0 +1,12 @@
+{
+  "keyboard": "nullbitsco/scramble/v1",
+  "keymap": "default",
+  "commit": "dc0095c64b2658a8fb5421ce93cb6bdc53806693",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "KC_F15",
+      "KC_F16",  "KC_F17",  "KC_F18"
+    ]
+  ]
+}

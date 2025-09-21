@@ -1,0 +1,14 @@
+{
+  "keyboard": "arrayperipherals/vector",
+  "keymap": "default",
+  "commit": "36008922f8456694d45d2c36500dfba3c4271b09",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT", "KC_MUTE",    "TG(1)"
+    ],
+    [
+      "KC_TRNS", "KC_TRNS", "KC_TRNS", "KC_TRNS",    "TG(1)"
+    ]
+  ]
+}

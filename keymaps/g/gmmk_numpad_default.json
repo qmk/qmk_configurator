@@ -1,0 +1,22 @@
+{
+  "keyboard": "gmmk/numpad",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MO(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_CALC",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "_______", "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "RM_VALU", "KC_P9",   "KC_PPLS",
+      "RM_PREV", "KC_P5",   "RM_NEXT", "KC_CALC",
+      "KC_P1",   "RM_VALD", "KC_P3",   "KC_PENT",
+      "RM_TOGG",            "QK_BOOT"
+    ]
+  ]
+}

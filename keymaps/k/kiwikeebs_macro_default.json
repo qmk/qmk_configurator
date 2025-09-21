@@ -1,0 +1,24 @@
+{
+  "keyboard": "kiwikeebs/macro",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_DEL",  "KC_HOME", "LT(1,KC_END)",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",      "KC_MUTE"
+    ],
+    [
+      "QK_BOOT", "KC_UP",   "_______",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT", "NK_TOGG"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______"
+    ],
+    [
+      "_______", "_______", "_______",
+      "_______", "_______", "_______", "_______"
+    ]
+  ]
+}

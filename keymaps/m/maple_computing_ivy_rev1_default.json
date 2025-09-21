@@ -1,0 +1,18 @@
+{
+  "keyboard": "maple_computing/ivy/rev1",
+  "keymap": "default",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_1",
+      "KC_2",
+      "MO(1)"
+    ],
+    [
+      "LCTL(LALT(KC_DEL))",
+      "LCTL(LSFT(KC_ESC))",
+      "KC_TRNS"
+    ]
+  ]
+}

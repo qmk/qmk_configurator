@@ -1,0 +1,14 @@
+{
+  "keyboard": "steelseries/prime_plus",
+  "keymap": "default",
+  "commit": "90b87abb11df68dea659042bfea437f23dc860d2",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "MS_BTN1", "MS_BTN3", "MS_BTN2",
+      "MS_BTN5",
+      "MS_BTN4",
+      "QK_BOOT"
+    ]
+  ]
+}

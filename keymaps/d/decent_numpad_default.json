@@ -1,0 +1,24 @@
+{
+  "keyboard": "decent/numpad",
+  "keymap": "default",
+  "commit": "e6fa351d3bb40bc5023850a55f9e47c72f40bdb5",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F11",  "KC_F12",
+      "MO(1)",   "KC_PSLS", "KC_PAST", "KC_PMNS",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PPLS",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",              "KC_PDOT"
+    ],
+    [
+      "S(KC_F11)", "S(KC_F12)",
+      "_______",   "_______",   "_______", "RM_VALD",
+      "_______",   "RM_HUEU",   "_______", "RM_VALU",
+      "RM_SPDD",   "_______",   "RM_SPDU",
+      "RM_PREV",   "RM_HUED",   "RM_NEXT", "QK_BOOT",
+      "RM_TOGG",                "_______"
+    ]
+  ]
+}

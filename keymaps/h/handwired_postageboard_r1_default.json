@@ -1,0 +1,21 @@
+{
+  "keyboard": "handwired/postageboard/r1",
+  "keymap": "default",
+  "commit": "a1c142759480fbad6e947862c0995d040ae9d8d4",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "https://qmk.fm/\n"
+    ]
+  ],
+  "layers": [
+    [
+      "KC_A",    "KC_1",    "MO(1)"
+    ],
+    [
+      "QK_BOOT", "MC_0",    "KC_TRNS"
+    ]
+  ]
+}
+
+

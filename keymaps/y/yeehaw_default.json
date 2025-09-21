@@ -1,0 +1,32 @@
+{
+  "keyboard": "yeehaw",
+  "keymap": "default",
+  "commit": "196285c59c8ad906803747e1ca2de0de12e575cd",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "yeehaw!"
+    ],
+    [
+      "https://squashkb.com"
+    ]
+  ],
+  "layers": [
+    [
+                 "KC_VOLU",
+                 "KC_VOLD",
+                 "KC_MPRV", "MC_0",    "KC_UP",   "MC_1",
+      "MO(1)",   "KC_MNXT", "KC_LEFT", "KC_DOWN", "KC_RGHT",
+                 "KC_MPLY", "C(KC_S)",
+                      "UG_TOGG"
+    ],
+    [
+                 "UG_HUEU",
+                 "UG_HUED",
+                 "UG_SATU", "UG_VALU", "UG_VALD", "UG_SPDU",
+      "KC_TRNS", "UG_SATD", "RGB_M_P", "UG_NEXT", "UG_SPDD",
+                 "KC_TRNS", "KC_TRNS",
+                      "QK_BOOT"
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "keyboard": "crypt_macro",
+  "keymap": "default",
+  "commit": "abe4d9cdcac51b49da494ec9077ffe79bbfd5ef7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_VOLU", "KC_VOLD", "KC_MPLY",
+                 "MO(1)"
+    ],
+    [
+      "LCTL(KC_X)", "LCTL(KC_C)", "LCTL(KC_V)",
+                    "KC_TRNS"
+    ]
+  ]
+}
