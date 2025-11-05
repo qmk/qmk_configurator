@@ -123,8 +123,7 @@ function computeIntl2US(lines) {
   for (const aliasDefinition of lines.filter((line) =>
     kcAliasDefRegExp.test(line)
   )) {
-    // eslint-disable-next-line no-unused-vars
-    const [fullMatch, intlAlias, macroExpansion] =
+    const [, intlAlias, macroExpansion] =
       kcAliasDefRegExp.exec(aliasDefinition);
     const usAlias = translateToUS(macroExpansion, intl2us);
     intl2us.set(intlAlias, usAlias);
@@ -239,8 +238,7 @@ function convertLine(line, kcInfo, intl2us) {
 
   const copyrightRegExp = /(^.*)Copyright .*$/;
   if (copyrightRegExp.test(line)) {
-    // eslint-disable-next-line no-unused-vars
-    let [fullMatch, beforeCopyrightWord] = copyrightRegExp.exec(line);
+    let [, beforeCopyrightWord] = copyrightRegExp.exec(line);
     return (
       beforeCopyrightWord +
       'Copyright ' +
@@ -255,9 +253,7 @@ function convertLine(line, kcInfo, intl2us) {
   }
 
   if (kcAliasDefRegExp.test(line)) {
-    // eslint-disable-next-line no-unused-vars
-    let [fullMatch, intlAlias, macroExpansion, comment] =
-      kcAliasDefRegExp.exec(line);
+    let [fullMatch, , macroExpansion] = kcAliasDefRegExp.exec(line);
     const usMacroExpansion = translateToUS(macroExpansion, intl2us);
     let kcInfoLine = stringify(usMacroExpansion, kcInfo.get(usMacroExpansion));
     if (shiftedKc2shiftedAlias.has(usMacroExpansion)) {
@@ -336,9 +332,7 @@ function generateMissingShiftedAliasKcInfo(kcInfo) {
 
 function generateSpaceCadetKcInfo(kc, kcInfo) {
   const spaceCadetKeycodeRegExp = /([LR])([GASC])P([OC])/;
-  // eslint-disable-next-line no-unused-vars
-  let [fullMatch, handedness, modifier, variant] =
-    spaceCadetKeycodeRegExp.exec(kc);
+  let [, handedness, modifier, variant] = spaceCadetKeycodeRegExp.exec(kc);
   const table = new Map([
     ['L', 'Left'],
     ['R', 'Right'],
