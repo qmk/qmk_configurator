@@ -120,7 +120,7 @@ settingsPanel:legendType:index,索引
 settingsPanel:legendType:keymap,键位
 settingsPanel:legendType:matrix,矩阵（行，列）
 settingsPanel:legendType:size,尺寸
-settingsPanel:legends:help,更改键帽显示（用于调试）
+settingsPanel:legends:help,更改键帽图例（用于调试）
 settingsPanel:legends:label,键帽图例
 settingsPanel:off:label,关闭
 settingsPanel:on:label,开启
