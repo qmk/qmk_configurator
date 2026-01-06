@@ -3,8 +3,8 @@ apiVersion,API 版本
 apiVersionPrefix,API
 favoriteColor,收藏配色
 favoriteKeyboard,收藏键盘
-hostedOn,部署在 GitHub Pages
-jobsAhead,前往
+hostedOn,托管于 GitHub Pages
+jobsAhead,个任务
 jobsWaiting,个任务等待中
 maintain,该项目由 QMK 开发者和贡献者维护
 ready,就绪
@@ -21,7 +21,7 @@ compile:title,编译键位
 downloadFirmware:label,固件
 downloadFirmware:title,下载固件
 downloadJSON:label,Keymap.JSON
-downloadJSON:title,导出 Keymap JSON 文件
+downloadJSON:title,下载此 QMK 键位 JSON 文件
 downloadKeymap:label,仅键位
 downloadKeymap:title,仅下载 keymap.c
 downloadSource:label,全部代码
@@ -30,25 +30,25 @@ downloadToolbox:label,获取 QMK Toolbox
 errors:invalidQMKKeymap,对不起，这不是一个合法的 QMK keymap 文件
 errors:kbfirmwareJSONUnsupported,对不起，QMK Configurator 不支持 kbfirmware JSON 文件。
 errors:unknownJSON,对不起，这似乎不是一个 QMK keymap 文件
-errors:unsupportedBrowser,你正在使用一个不支持的浏览器。建议使用
+errors:unsupportedBrowser,您正在使用的浏览器不受支持。推荐使用
 flashFile:label,自定义刷写
-flashFile:title,刷写选择的固件文件到 MCU
+flashFile:title,将所选固件文件刷写至 MCU
 flashFirmware:label,自动刷写
 flashFirmware:title,自动将编译好的固件刷写到 MCU
-githubKeyboardFolder:title,在Github上查看这个键盘
+githubKeyboardFolder:title,在 Github 上查看这个键盘
 help:label,开启向导
-importJSON:title,导入 Keymap JSON 文件
+importJSON:title,上传 Keymap JSON 文件
 importUrlJSON:title,从 URL 导入 Keymap JSON 文件
 keyboard:label,键盘
 keycodes:label,键位码
 keycodesRef:label,键位码参考
 keycodesTab:ANSI:label,ANSI
-keycodesTab:AppMediaMouse:label,应用、多媒体和鼠标
+keycodesTab:AppMediaMouse:label,应用、多媒体与鼠标
 keycodesTab:ISO/JIS:label,ISO/JIS
 keycodesTab:KeyboardSettings:label,键盘设置
-keycodesTab:Lighting:label,
+keycodesTab:Lighting:label,背光
 keycodesTab:Quantum:label,量子
-keycodesTab:Steno:label,
+keycodesTab:Steno:label,速记
 keymap:label,键位
 keymapHelp:label,帮助
 keymapHelp:title,如何使用 keymap.json？
@@ -60,35 +60,35 @@ layer:title,清除层
 layout:label,配列
 loadDefault:label,加载默认
 loadDefault:title,从 QMK 固件加载默认键位
-potato:1,亨利·斯伯丁于1837年在爱达荷首次种植马铃薯。
-potato:10,中国是最大的马铃薯生产国。
-potato:11,马铃薯是第一种在太空中种植的蔬菜。
-potato:12,土豆是完全无麸质。
+potato:1,亨利·斯伯丁于1837年在爱达荷首次种植土豆。
+potato:10,中国是最大的土豆生产国。
+potato:11,土豆是第一种在太空中种植的蔬菜。
+potato:12,土豆不含麸质成分。
 potato:13,印加对于时间最基本的衡量标准之一是煮土豆所需的时间。
-potato:14,如果马铃薯暴露在光线中生长，它会变绿并且带有毒性。
+potato:14,如果土豆暴露在光线中生长，它会变绿并且带有毒性。
 potato:15,"制造2500磅薯片需要10,000磅土豆。"
 potato:16,如今有4000多种不同的土豆。
-potato:17,马铃薯属于一个科，茄属植物或茄科。
+potato:17,土豆属于一个小科，即茄科（Solanaceae）。
 potato:18,在阿拉斯加克朗代克淘金热期间（1897年至1898年），土豆在重量上和黄金实际上是等值的。
 potato:19,"沃尔特·罗利爵士于1589年在科克附近的40,000英亩土地上将土豆引入了爱尔兰。"
 potato:2,法式薯条由托马斯·杰斐逊在一次白宫晚宴中带到美国。
-potato:20,一年四季都可以收获马铃薯，因为它们每个月都会在某个地方收获。
-potato:21,原产于非洲和亚洲的洋芋大小不一，从小土豆到创纪录的130磅。
-potato:22,8月19日和10月27日是美国的国家马铃薯日。
-potato:23,马铃薯还可以用来酿造酒精饮料，例如伏特加，波奇恩或阿夸维特。
-potato:24,"马铃薯是最环保的蔬菜之一。它们易于种植，不需要像许多其他蔬菜一样大量依赖肥料和化学添加剂。"
-potato:25,马铃薯起源于南秘鲁地区，最早在公元前8000年至5000年之间被驯化。
-potato:26,马铃薯的英文 potato 源自西班牙语词汇 patata。
-potato:27,马铃薯通常由昆虫授粉，比如黄蜂。
+potato:20,一年四季都可以收获土豆，因为它们每个月都会在某个地方收获。
+potato:21,山药原产于非洲和亚洲，大小不一，小如土豆，大可重达创纪录的130磅。
+potato:22,8月19日和10月27日是美国的国家土豆日。
+potato:23,土豆还可以用来酿造酒精饮料，例如伏特加，波奇恩或阿夸维特。
+potato:24,"土豆是最环保的蔬菜之一。它们易于种植，不需要像许多其他蔬菜一样大量依赖肥料和化学添加剂。"
+potato:25,土豆起源于南秘鲁地区，最早在公元前8000年至5000年之间被驯化。
+potato:26,土豆的英文 potato 源自西班牙语词汇 patata。
+potato:27,土豆通常由昆虫授粉，比如黄蜂。
 potato:28,一个土豆由80%的水和20%的固体构成。
 potato:3,2017年，美国的土豆爱好者消费了400万吨不同形状和尺寸的薯条。
-potato:4,土豆是一种强力的催情剂，一名爱尔兰物理学家表示。
+potato:4,一位爱尔兰医生表示，土豆是一种强效的催情剂。
 potato:5,美国人每年人均食用140镑土豆。德国人每年人均食用200镑土豆。
 potato:6,根据吉尼斯世界纪录，最大的土豆重18镑4盎司，于1795年在英格兰长成。
-potato:7,马铃薯是世界第四大主食，排在小麦、玉米和大米之后。
-potato:8,马铃薯在超过125个国家种植。
-potato:9,世界每年的马铃薯产量足以覆盖一条4车道马路环绕地球6圈。
-potatoes,马铃薯 QMK
+potato:7,土豆是世界第四大主食，排在小麦、玉米和大米之后。
+potato:8,土豆在超过125个国家种植。
+potato:9,世界每年的土豆产量足以覆盖一条4车道马路环绕地球6圈。
+potatoes,土豆 QMK
 print:anonymous:label,匿名
 print:author:placeholder,你的名字（可选）
 print:author:title,作者
@@ -104,27 +104,27 @@ print:print:title,打印
 print:source:title,源码
 printKeymap:label,打印键位
 printKeymap:title,打印键位表
-settingsPanel:advanced:heading,
-settingsPanel:basic:heading,
-settingsPanel:clearLayer:help,
+settingsPanel:advanced:heading,高级选项
+settingsPanel:basic:heading,用户界面
+settingsPanel:clearLayer:help,清除层时使用 KC_TRNS 取代 KC_NO
 settingsPanel:clearLayer:label,清除层默认键码
-settingsPanel:darkMode:help,
+settingsPanel:darkMode:help,使用深色主题以缓解眼睛疲劳
 settingsPanel:darkMode:label,深色模式
 settingsPanel:fastInput:help,直接通过键盘输入键位
 settingsPanel:fastInput:label,快速输入 (Ctrl+Alt+F)
-settingsPanel:help:heading,
-settingsPanel:input:heading,
-settingsPanel:language:help,
+settingsPanel:help:heading,帮助与资源
+settingsPanel:input:heading,输入选项
+settingsPanel:language:help,选择您的偏好语言
 settingsPanel:language:label,语言
-settingsPanel:legendType:index,
-settingsPanel:legendType:keymap,
-settingsPanel:legendType:matrix,
-settingsPanel:legendType:size,
-settingsPanel:legends:help,
-settingsPanel:legends:label,
+settingsPanel:legendType:index,索引
+settingsPanel:legendType:keymap,键位
+settingsPanel:legendType:matrix,矩阵（行，列）
+settingsPanel:legendType:size,尺寸
+settingsPanel:legends:help,更改键帽显示（用于调试）
+settingsPanel:legends:label,键帽图例
 settingsPanel:off:label,关闭
 settingsPanel:on:label,开启
-settingsPanel:osKeyboardLayout:help,
+settingsPanel:osKeyboardLayout:help,更改键位图例以匹配您主机的键盘布局
 settingsPanel:osKeyboardLayout:option:keymap_belgian,
 settingsPanel:osKeyboardLayout:option:keymap_bepo,
 settingsPanel:osKeyboardLayout:option:keymap_brazilian_abnt2,
@@ -187,7 +187,7 @@ settingsPanel:osKeyboardLayout:option:keymap_us_international,
 settingsPanel:osKeyboardLayout:option:keymap_us_international_linux,
 settingsPanel:osKeyboardLayout:option:keymap_workman,
 settingsPanel:osKeyboardLayout:option:keymap_workman_zxcvm,
-settingsPanel:osKeyboardLayout:label,
+settingsPanel:osKeyboardLayout:label,系统键盘布局
 settingsPanel:snowflakes:label,开启 Snowflakes
 settingsPanel:toggleTutorial:help,MechMerlin 的视频教程
 settingsPanel:toggleTutorial:label,视频教程
@@ -202,9 +202,9 @@ tester:keycodeStatus:label,键码已探测
 tester:letters:code:label,键位代码
 tester:letters:key:label,键位值
 tester:letters:keycode:label,键位码
-tester:page:label,重置
-tester:reset:label,重置已测试按键
-tester:reset:title,开启打字机音效
+tester:page:label,键盘测试
+tester:reset:label,重置
+tester:reset:title,重置已测试按键
 tester:typewritericon:label,开启打字机音效
 toggleTerminal:label,点击展开
 toggleTerminal:title,开启终端显示
