@@ -4,7 +4,7 @@ apiVersionPrefix,API
 favoriteColor,收藏配色
 favoriteKeyboard,收藏键盘
 hostedOn,托管于 GitHub Pages
-jobsAhead,个任务
+jobsAhead,个任务排队中
 jobsWaiting,个任务等待中
 maintain,该项目由 QMK 开发者和贡献者维护
 ready,就绪
@@ -35,7 +35,7 @@ flashFile:label,自定义刷写
 flashFile:title,将所选固件文件刷写至 MCU
 flashFirmware:label,自动刷写
 flashFirmware:title,自动将编译好的固件刷写到 MCU
-githubKeyboardFolder:title,在 Github 上查看这个键盘
+githubKeyboardFolder:title,在 GitHub 上查看这个键盘
 help:label,开启向导
 importJSON:title,上传 Keymap JSON 文件
 importUrlJSON:title,从 URL 导入 Keymap JSON 文件
