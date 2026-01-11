@@ -150,6 +150,47 @@
         </div>
       </div>
     </div>
+        <div class="settings-panel--group">
+      <h3>Printing</h3>
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>Use Blank Space for Unassigned Keys</label>
+          <div class="settings-panel--subtitle">
+           Display a blank space instead of N/A when printing unassigned keys.
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="settings-panel--clear-keymap"
+            :value="configuratorSettings.showBlankForUnassigned"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="showBlankForUnassigned"
+          />
+        </div>
+      </div>
+      <div class="settings-panel--item">
+        <div class="settings-panel--item-label">
+          <label>Use Disabled style for Unassigned Keys</label>
+          <div class="settings-panel--subtitle">
+           Apply a gray background when printing unassigned keys.
+          </div>
+        </div>
+        <div class="settings-panel--control">
+          <toggle-button
+            id="settings-panel--clear-keymap"
+            :value="configuratorSettings.applyDisabledStyleForUnassigned"
+            :height="toggleButtonHeight"
+            :width="toggleButtonWidth"
+            :sync="true"
+            :labels="labels"
+            @change="applyDisabledStyleForUnassigned"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -237,13 +278,21 @@ export default {
       'toggleDarkMode',
       'changeLanguage',
       'changeOSKeyboardLayout',
-      'toggleClearLayerDefault'
+      'toggleClearLayerDefault',
+      'toggleShowBlankForUnassigned',
+      'toggleApplyDisabledStyleForUnassigned'
     ]),
     darkMode() {
       this.toggleDarkMode();
     },
     clearLayerDefault() {
       this.toggleClearLayerDefault();
+    },
+    showBlankForUnassigned() {
+      this.toggleShowBlankForUnassigned();
+    },
+    applyDisabledStyleForUnassigned() {
+      this.toggleApplyDisabledStyleForUnassigned();
     }
   }
 };

@@ -10,6 +10,7 @@
   </div>
 </template>
 <script>
+import { mapState } from 'vuex';
 import BaseKey from './BaseKey.vue';
 
 export default {
@@ -19,6 +20,7 @@ export default {
   },
   extends: BaseKey,
   computed: {
+    ...mapState('app', ['configuratorSettings']),
     myid() {
       return `key-${this.layer}-${this.id}`;
     },
@@ -39,7 +41,10 @@ export default {
           this.meta.contents.name
         )}`;
       }
-      if (this.meta.code === 'KC_NO') {
+      if (
+        this.meta.code === 'KC_NO' &&
+        this.configuratorSettings.showBlankForUnassigned
+      ) {
         return '';
       }
       return this.formatName(this.breakLines(this.meta.name));
