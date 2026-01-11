@@ -39,6 +39,9 @@ export default {
           this.meta.contents.name
         )}`;
       }
+      if (this.meta.code === 'KC_NO') {
+        return '';
+      }
       return this.formatName(this.breakLines(this.meta.name));
     }
   },

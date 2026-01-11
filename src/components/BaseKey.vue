@@ -186,6 +186,9 @@ export default {
       ) {
         classes.push('smaller');
       }
+      if (this.meta && this.meta.code === 'KC_NO') {
+        classes.push('disabled');
+      }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
       classes.push(getKeySizeClass(this.uh, this.uw));
       if (!isUndefined(this.meta) && !this.printable) {

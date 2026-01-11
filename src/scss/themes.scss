@@ -512,7 +512,14 @@ html[data-theme='dark'] {
         color: #2c3e50;
         .key,
         .key:empty {
+          -webkit-print-color-adjust: exact; /* Chrome, Safari, Edge, Opera */
+          print-color-adjust: exact; /* Standard property for Firefox and modern browsers */
           background-color: #ffffff;
+        }
+        .key.disabled {
+          -webkit-print-color-adjust: exact; /* Chrome, Safari, Edge, Opera */
+          print-color-adjust: exact; /* Standard property for Firefox and modern browsers */
+          background: #dddddd;
         }
       }
     }
