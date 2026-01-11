@@ -150,13 +150,13 @@
         </div>
       </div>
     </div>
-        <div class="settings-panel--group">
-      <h3>Printing</h3>
+    <div class="settings-panel--group">
+      <h3>{{ $t('settingsPanel.printing.heading') }}</h3>
       <div class="settings-panel--item">
         <div class="settings-panel--item-label">
-          <label>Use Blank Space for Unassigned Keys</label>
+          <label>{{ $t('settingsPanel.printing.useBlankForUnassigned.label') }}</label>
           <div class="settings-panel--subtitle">
-           Display a blank space instead of N/A when printing unassigned keys.
+            {{ $t('settingsPanel.printing.useBlankForUnassigned.help') }}
           </div>
         </div>
         <div class="settings-panel--control">
@@ -173,9 +173,9 @@
       </div>
       <div class="settings-panel--item">
         <div class="settings-panel--item-label">
-          <label>Use Disabled style for Unassigned Keys</label>
+          <label>{{ $t('settingsPanel.printing.applyDisabledStyleForUnassigned.label') }}</label>
           <div class="settings-panel--subtitle">
-           Apply a gray background when printing unassigned keys.
+            {{ $t('settingsPanel.printing.applyDisabledStyleForUnassigned.help') }}
           </div>
         </div>
         <div class="settings-panel--control">

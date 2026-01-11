@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,Host Keyboard Layout
 settingsPanel:snowflakes:label,Toggle Snowflakes
 settingsPanel:toggleTutorial:help,MechMerlin's QMK Configurator video tutorial
 settingsPanel:toggleTutorial:label,Video Tutorial
+settingsPanel:printing:heading,Printing
+settingsPanel:printing:useBlankForUnassigned:label,Use Blank Space for Unassigned Keys
+settingsPanel:printing:useBlankForUnassigned:help,Display a blank space instead of N/A when printing unassigned keys.
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,Use Disabled style for Unassigned Keys
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,Apply a gray background when printing unassigned keys.
 testKeys:label,Test Keyboard
 testKeys:title,Test Keyboard Input
 tester:back:label,Back

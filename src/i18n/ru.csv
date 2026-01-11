@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,Раскладка клавиатуры о�
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,Видеоурок от MechMerlin
 settingsPanel:toggleTutorial:label,Видеоурок
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Проверка клавиатуры
 testKeys:title,Проверка ввода с клавиатуры
 tester:back:label,Назад

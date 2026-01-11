@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,开启 Snowflakes
 settingsPanel:toggleTutorial:help,MechMerlin 的视频教程
 settingsPanel:toggleTutorial:label,视频教程
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,测试键盘
 testKeys:title,测试键盘输入
 tester:back:label,返回
