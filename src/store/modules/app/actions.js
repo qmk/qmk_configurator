@@ -192,14 +192,12 @@ const actions = {
   },
   async toggleShowBlankForUnassigned({ commit, state, dispatch }) {
     let status = state.configuratorSettings.showBlankForUnassigned;
-    status = !status;
-    commit('setShowBlankForUnassigned', status);
+    commit('setShowBlankForUnassigned', !status);
     await dispatch('saveConfiguratorSettings');
   },
   async toggleApplyDisabledStyleForUnassigned({ commit, state, dispatch }) {
     let status = state.configuratorSettings.applyDisabledStyleForUnassigned;
-    status = !status;
-    commit('setApplyDisabledStyleForUnassigned', status);
+    commit('setApplyDisabledStyleForUnassigned', !status);
     await dispatch('saveConfiguratorSettings');
   },
   async setFavoriteKeyboard({ commit, dispatch }, keyboard) {
