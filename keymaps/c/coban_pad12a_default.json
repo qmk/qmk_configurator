@@ -1,0 +1,13 @@
+{
+  "keyboard": "coban/pad12a",
+  "keymap": "default",
+  "commit": "9e775b8e9d955828407b586f980187461c5bfbd6",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPLY", "KC_MPRV", "KC_MUTE", "KC_MNXT",
+      "KC_PGUP", "KC_ESC",  "KC_UP",   "KC_ENT",
+      "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ]
+  ]
+}

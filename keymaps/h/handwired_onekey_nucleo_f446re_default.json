@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/nucleo_f446re",
+  "keymap": "default",
+  "commit": "94a9099c3843a04dc0eb54f8009dff5b4422e430",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "keyboard": "blu/vimclutch",
+  "keymap": "default",
+  "commit": "b8f29c38652fb56fd122e61018778fd5355a8739",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      {"action": "tap", "keycodes": ["ESC"]},
+      {"action": "delay", "duration": 50}
+    ]
+  ],
+  "layers": [
+    [
+      "TO(0)",   "TO(1)",   "KC_F13"
+    ],
+    [
+      "TO(0)",   "TO(1)",   "MC_0"
+    ]
+  ]
+}

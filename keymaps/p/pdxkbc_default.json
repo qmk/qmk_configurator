@@ -1,0 +1,31 @@
+{
+  "keyboard": "pdxkbc",
+  "keymap": "default",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
+  "layout": "LAYOUT",
+  "macros": [
+    [
+      "https://reddit.com/r/pdxkbc",
+      {"action": "tap","keycodes": ["ENT"]}
+    ],
+    [
+      "https://discordapp.com/invite/bHwjHXh",
+      {"action": "tap","keycodes": ["ENT"]}
+    ],
+    [
+      "#badgelife",
+      {"action": "tap","keycodes": ["ENT"]}
+    ],
+    [
+      "HACK THE PLANET!",
+      {"action": "tap","keycodes": ["ENT"]}
+    ]
+  ],
+  "layers": [
+    [
+      "MC_0",    "MC_1",
+      "MC_2",    "MC_3",
+      "KC_VOLU", "KC_VOLD"
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "keyboard": "binepad/bnk9",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P7",   "KC_P8",   "LT(1,KC_P9)"
+    ],
+    [
+      "RM_TOGG",
+      "RM_HUEU", "RM_SATU", "RM_SPDU",
+      "RM_HUED", "RM_SATD", "RM_SPDD",
+      "RM_PREV", "RM_NEXT", "_______"
+    ]
+  ]
+}

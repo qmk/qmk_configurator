@@ -1,0 +1,28 @@
+{
+  "keyboard": "jcpm2",
+  "keymap": "default",
+  "commit": "92c4f0095dcef88c0a983f5fd661f7de2966bcc0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE",            "S(KC_COMM)", "S(KC_DOT)",
+      "DF(2)",              "KC_J",       "KC_L",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",    "TG(1)"
+    ],
+    [
+      "_______",                 "RM_VALU", "RM_NEXT",
+      "_______",                 "RM_VALD", "RM_TOGG",
+      "C(G(KC_SPC))", "_______", "_______", "TG(1)"
+    ],
+    [
+      "S(G(KC_B))",         "G(KC_B)", "G(KC_EQL)",
+      "DF(3)",              "A(KC_K)", "G(KC_MINS)",
+      "KC_J",    "KC_K",    "KC_L",    "KC_BSPC"
+    ],
+    [
+      "KC_E",               "KC_ESC",  "KC_M",
+      "DF(0)",              "G(KC_Z)", "KC_X",
+      "KC_V",    "KC_D",    "KC_U",    "KC_BSPC"
+    ]
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "keyboard": "atset/at6",
+  "keymap": "default",
+  "commit": "63bc7b63a650c4da63611900437e06ea7d051f14",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_7",    "KC_8",    "KC_9",
+      "KC_4",    "KC_5",    "KC_6"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ],
+    [
+      "KC_NO",   "KC_NO",   "KC_NO",
+      "KC_NO",   "KC_NO",   "KC_NO"
+    ]
+  ]
+}

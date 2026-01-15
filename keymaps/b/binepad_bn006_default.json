@@ -1,0 +1,12 @@
+{
+  "keyboard": "binepad/bn006",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT_ortho_2x3",
+  "layers": [
+    [
+      "KC_MPLY", "KC_MUTE", "KC_VOLU",
+      "KC_MPRV", "KC_MNXT", "KC_VOLD"
+    ]
+  ]
+}

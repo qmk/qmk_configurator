@@ -1,0 +1,12 @@
+{
+  "keyboard": "handwired/splittest/teensy_2",
+  "keymap": "default",
+  "commit": "2d37e80ac9c85ccbb16ee580edd335c1e44044a9",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_L",    "KC_R"
+    ]
+  ]
+}
+

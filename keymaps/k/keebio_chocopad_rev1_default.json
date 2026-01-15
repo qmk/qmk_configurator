@@ -1,0 +1,26 @@
+{
+  "keyboard": "keebio/chocopad/rev1",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_ortho_4x4",
+  "layers": [
+    [
+      "KC_PGUP", "KC_HOME", "KC_UP",   "KC_END",
+      "KC_PGDN", "KC_LEFT", "KC_DOWN", "KC_RGHT",
+      "MO(2)",   "KC_VOLU", "KC_MPLY", "KC_MPRV",
+      "MO(1)",   "KC_VOLD", "KC_MUTE", "KC_MNXT"
+    ],
+    [
+      "KC_ESC",  "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_TAB",  "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_ENT",  "KC_P1",   "KC_P2",   "KC_P3",
+      "_______", "KC_P0",   "KC_P0",   "KC_DOT"
+    ],
+    [
+      "RM_TOGG", "RM_HUEU", "RM_SATU", "RM_VALU",
+      "RM_NEXT", "RM_HUED", "RM_SATD", "RM_VALD",
+      "_______", "_______", "_______", "QK_BOOT",
+      "BL_STEP", "_______", "_______", "_______"
+    ]
+  ]
+}

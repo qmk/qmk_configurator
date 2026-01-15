@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/scottokeebs/scottodeck",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "HYPR(KC_9)",                             "HYPR(KC_0)",
+      "HYPR(KC_5)", "HYPR(KC_6)", "HYPR(KC_7)", "HYPR(KC_8)",
+      "HYPR(KC_1)", "HYPR(KC_2)", "HYPR(KC_3)", "HYPR(KC_4)"
+    ]
+  ]
+}

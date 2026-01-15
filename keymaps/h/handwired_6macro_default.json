@@ -1,0 +1,20 @@
+{
+  "keyboard": "handwired/6macro",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_F13",  "KC_F14",  "LT(1,KC_F15)",
+      "KC_F16",  "KC_F17",  "KC_F18"
+    ],
+    [
+      "UG_TOGG", "UG_NEXT", "KC_TRNS",
+      "UG_HUEU", "UG_VALU", "MO(2)"
+    ],
+    [
+      "QK_BOOT", "UG_PREV", "KC_NO",
+      "UG_HUED", "UG_VALD", "KC_TRNS"
+    ]
+  ]
+}

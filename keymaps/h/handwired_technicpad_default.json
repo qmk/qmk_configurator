@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/technicpad",
+  "keymap": "default",
+  "commit": "e578434ba883fe8a355307dc891e7a895a8ce131",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A", "KC_B", "KC_C", "KC_D"
+    ]
+  ]
+}

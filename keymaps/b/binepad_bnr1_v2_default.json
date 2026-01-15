@@ -1,0 +1,14 @@
+{
+  "keyboard": "binepad/bnr1/v2",
+  "keymap": "default",
+  "commit": "6b38dc17cd12b740b45b56c67ad04bb428f3bddb",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "LT(1,KC_MUTE)"
+    ],
+    [
+      "_______"
+    ]
+  ]
+}

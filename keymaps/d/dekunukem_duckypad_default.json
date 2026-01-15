@@ -1,0 +1,22 @@
+{
+  "keyboard": "dekunukem/duckypad",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_P1",   "KC_P2",   "KC_P3",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_PDOT", "KC_P0",   "KC_PENT",
+      "KC_PMNS", "KC_PPLS", "KC_EQL",  "TG(1)",   "KC_NO"
+    ],
+    [
+      "RGB_M_P",  "RGB_M_B", "RGB_M_R",
+      "RGB_M_SW", "RM_SPDD", "RM_SPDU",
+      "RM_NEXT",  "RM_SATD", "RM_SATU",
+      "RM_PREV",  "RM_HUED", "RM_HUEU",
+      "RM_TOGG",  "RM_VALD", "RM_VALU", "TG(1)",   "KC_NO"
+    ]
+  ]
+}

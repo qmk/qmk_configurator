@@ -1,0 +1,11 @@
+{
+  "keyboard": "keebio/tukey",
+  "keymap": "default",
+  "commit": "d7b09ad5602888e94f75cb8ed3c3e0931df4234e",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "UG_NEXT", "KC_ENTER"
+    ]
+  ]
+}

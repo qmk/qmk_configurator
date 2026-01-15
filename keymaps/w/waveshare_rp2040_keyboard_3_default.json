@@ -1,0 +1,11 @@
+{
+  "keyboard": "waveshare/rp2040_keyboard_3",
+  "keymap": "default",
+  "commit": "0f948fe039fd44d6237653316aafa6ba3d195b1d",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_LCTL", "KC_C",    "KC_V"
+    ]
+  ]
+}

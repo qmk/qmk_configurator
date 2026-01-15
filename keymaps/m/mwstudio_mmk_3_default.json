@@ -1,0 +1,20 @@
+{
+  "keyboard": "mwstudio/mmk_3",
+  "keymap": "default",
+  "commit": "960c4969a539fbbc1880d3fad1c1af83827d535a",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "LT(3,KC_LCTL)", "LT(1,KC_C)", "LT(2,KC_V)"
+    ],
+    [
+      "UG_VALD", "KC_TRNS", "UG_VALU"
+    ],
+    [
+      "UG_SATD", "UG_SATU", "KC_TRNS"
+    ],
+    [
+      "KC_TRNS", "UG_HUED", "UG_HUEU"
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "keyboard": "ungodly/launch_pad",
+  "keymap": "default",
+  "commit": "f3bae5680843dae8a59cf90b5ac6535da632f42c",
+  "layout": "LAYOUT_ortho_5x4",
+  "layers": [
+    [
+      "TO(1)",   "KC_PSLS", "KC_PAST", "LT(2,KC_BSPC)",
+      "KC_P7",   "KC_P8",   "KC_P9",   "KC_PMNS",
+      "KC_P4",   "KC_P5",   "KC_P6",   "KC_PPLS",
+      "KC_P1",   "KC_P2",   "KC_P3",   "KC_PENT",
+      "KC_P0",   "KC_P0",   "KC_PDOT", "KC_PENT"
+    ],
+    [
+      "TO(2)",   "KC_NUM",  "XXXXXXX", "XXXXXXX",
+      "KC_HOME", "KC_UP",   "KC_PGUP", "XXXXXXX",
+      "KC_LEFT", "XXXXXXX", "KC_RGHT", "XXXXXXX",
+      "KC_END",  "KC_DOWN", "KC_PGDN", "KC_PENT",
+      "KC_INS",  "KC_INS",  "KC_DEL",  "KC_PENT"
+    ],
+    [
+      "TO(0)",   "XXXXXXX", "XXXXXXX", "RM_TOGG",
+      "RM_HUED", "RM_HUEU", "XXXXXXX", "RGB_M_P",
+      "RM_SATD", "RM_SATU", "XXXXXXX", "RM_NEXT",
+      "RM_VALD", "RM_VALU", "XXXXXXX", "XXXXXXX",
+      "QK_BOOT", "QK_BOOT", "XXXXXXX", "XXXXXXX"
+    ]
+  ]
+}

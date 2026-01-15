@@ -1,0 +1,13 @@
+{
+  "keyboard": "synthlabs/solo",
+  "keymap": "default",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
+  "layout": "LAYOUT_all",
+  "layers": [
+    [
+                    "KC_J",    "KC_U",    "KC_K",    "KC_I",    "KC_L",    "KC_O", "KC_SCLN",
+      "KC_MUTE",
+                    "KC_J",    "KC_U",    "KC_K",    "KC_I",    "KC_L",    "KC_O", "KC_SCLN"
+    ]
+  ]
+}

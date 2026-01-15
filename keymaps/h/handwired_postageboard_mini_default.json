@@ -1,0 +1,14 @@
+{
+  "keyboard": "handwired/postageboard/mini",
+  "keymap": "default",
+  "commit": "a1c142759480fbad6e947862c0995d040ae9d8d4",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_1",    "MO(1)"
+    ],
+    [
+      "QK_BOOT", "KC_NO",   "KC_TRNS"
+    ]
+  ]
+}

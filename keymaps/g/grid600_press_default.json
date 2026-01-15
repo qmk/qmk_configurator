@@ -1,0 +1,11 @@
+{
+  "keyboard": "grid600/press",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_G",    "KC_R",    "KC_I",    "KC_D"
+    ]
+  ]
+}

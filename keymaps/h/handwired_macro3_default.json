@@ -1,0 +1,16 @@
+{
+  "keyboard": "handwired/macro3",
+  "keymap": "default",
+  "commit": "831deac212fa0342b9fad9d419b7f15890abfa02",
+  "layout": "LAYOUT_ortho_2x4",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MPLY", "KC_MRWD", "LT(1,KC_MFFD)",
+      "C(KC_Z)", "C(KC_X)", "C(KC_C)", "C(KC_V)"
+    ],
+    [
+      "_______", "_______", "_______", "_______",
+      "QK_BOOT", "_______", "_______", "_______"
+    ]
+  ]
+}

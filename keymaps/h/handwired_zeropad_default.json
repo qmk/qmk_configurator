@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/zeropad",
+  "keymap": "default",
+  "commit": "e73b3c08a060bbb0e5a94ee3ac7023a17cea0402",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_1",   "KC_2",   "KC_3",
+      "KC_4",   "KC_5",   "KC_6",
+      "KC_7",   "KC_8",   "KC_9"
+    ]
+  ]
+}

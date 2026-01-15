@@ -1,0 +1,11 @@
+{
+  "keyboard": "togkey/pad_pocket",
+  "keymap": "default",
+  "commit": "9e757bc2ecc09a48dcde351e8d3e31f02c05e4e7",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_VOLD", "KC_VOLU"
+    ]
+  ]
+}

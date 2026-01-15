@@ -1,0 +1,18 @@
+{
+  "keyboard": "keebio/bdn9/rev3",
+  "keymap": "default",
+  "commit": "40d0de39b7ac28ee929729b17e938b98e73db444",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_HOME", "KC_MPLY",
+      "MO(1)",   "KC_UP",   "RM_NEXT",
+      "KC_LEFT", "KC_DOWN", "KC_RGHT"
+    ],
+    [
+      "QK_BOOT", "BL_STEP", "KC_STOP",
+      "_______", "KC_HOME", "RM_NEXT",
+      "KC_MPRV", "KC_END",  "KC_MNXT"
+    ]
+  ]
+}

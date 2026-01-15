@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/mutepad",
+  "keymap": "default",
+  "commit": "4b295009ae9595e5bc07e6f4445abe91629458ea",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "C(S(KC_M))", "KC_F23",  "KC_F24",  "KC_MPLY"
+    ]
+  ]
+}

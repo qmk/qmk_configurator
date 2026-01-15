@@ -1,0 +1,12 @@
+{
+  "keyboard": "custommk/cmk11",
+  "keymap": "default",
+  "commit": "d333a25868039292a327a141dc90c0015b7fd017",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "KC_C",    "KC_V",   "KC_VOLU", "KC_VOLD", "KC_DEL",
+      "KC_LCTL", "KC_PGUP", "KC_SPC", "KC_PGDN", "KC_ENT"
+    ]
+  ]
+}

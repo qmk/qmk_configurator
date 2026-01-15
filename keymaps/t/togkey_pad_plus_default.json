@@ -1,0 +1,28 @@
+{
+  "keyboard": "togkey/pad_plus",
+  "keymap": "default",
+  "commit": "177e461d903e6414e6d7b5b80eb36f48b0d68626",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+                            "TO(1)",
+      "KC_VOLD", "KC_MUTE", "KC_VOLU",
+      "KC_MPRV", "KC_MPLY", "KC_MNXT"
+    ],
+    [
+                            "TO(2)",
+      "KC_1",    "KC_2",    "KC_3",
+      "KC_4",    "KC_5",    "KC_6"
+    ],
+    [
+                            "TO(3)",
+      "KC_A",    "KC_B",    "KC_C",
+      "KC_D",    "KC_E",    "KC_F"
+    ],
+    [
+                            "TO(0)",
+      "KC_J",    "KC_K",    "KC_L",
+      "KC_M",    "KC_N",    "KC_O"
+    ]
+  ]
+}

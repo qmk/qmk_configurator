@@ -1,0 +1,18 @@
+{
+  "keyboard": "tweetydabird/lbs4",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+           "KC_MPLY",
+      "TO(1)",   "KC_MSEL",
+      "KC_MPRV", "KC_MNXT"
+    ],
+    [
+           "KC_MPLY",
+      "TO(0)",   "UG_VALU",
+      "UG_TOGG", "UG_VALD"
+    ]
+  ]
+}

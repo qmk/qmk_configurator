@@ -1,0 +1,13 @@
+{
+  "keyboard": "handwired/maverick0197/keydeck8",
+  "keymap": "default",
+  "commit": "7a939ec218056346930096a6e1836fd6bcf64027",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MPRV", "KC_MPLY", "KC_MNXT",       
+      "KC_1",    "KC_2",    "KC_3",       
+      "KC_4",    "KC_5",    "KC_6"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "jpe230/big_knob",
+  "keymap": "default",
+  "commit": "e69b638756c80c0a26efa1959b611a04548a9f82",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_MUTE"
+    ]
+  ]
+}

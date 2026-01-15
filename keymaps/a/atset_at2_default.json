@@ -1,0 +1,11 @@
+{
+  "keyboard": "atset/at2",
+  "keymap": "default",
+  "commit": "6a73c8299b53426295e6af9c30a51a1823b872c1",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_MUTE", "KC_MPLY"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/bluepill_f103c6",
+  "keymap": "default",
+  "commit": "e869c80af74a91d28e51628da495e66da0cbc3ce",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

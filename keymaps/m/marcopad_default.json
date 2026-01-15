@@ -1,0 +1,13 @@
+{
+  "keyboard": "marcopad",
+  "keymap": "default",
+  "commit": "b43fc33be3df1d8f9b0b13c43dea764adf2d70c5",
+  "layout": "LAYOUT_ortho_3x3",
+  "layers": [
+    [
+      "KC_P7",   "KC_P8",   "KC_P9",
+      "KC_P4",   "KC_P5",   "KC_P6",
+      "KC_P1",   "KC_P2",   "KC_P3"
+    ]
+  ]
+}

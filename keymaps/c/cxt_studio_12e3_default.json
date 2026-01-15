@@ -1,0 +1,18 @@
+{
+  "keyboard": "cxt_studio/12e3",
+  "keymap": "default",
+  "commit": "1bc3494494203cc2ff4d97627d810a5f9483f3cc",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_ESC",  "C(KC_X)", "C(KC_C)", "C(KC_V)", "MS_BTN3", "RM_TOGG",
+      "KC_PSCR", "C(KC_Z)", "KC_CALC", "KC_MNXT",      "KC_MPLY",
+      "MO(1)",   "KC_LGUI", "KC_DEL",  "KC_APP"
+    ],
+    [
+      "RM_NEXT", "RM_SATU", "KC_INS",  "KC_DEL",  "_______", "_______",
+      "RM_PREV", "RM_SATD", "KC_PGUP", "KC_HOME",      "KC_MUTE",
+      "_______", "QK_BOOT", "KC_PGDN", "KC_END"
+    ]
+  ]
+}

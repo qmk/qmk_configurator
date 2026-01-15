@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/footy",
+  "keymap": "default",
+  "commit": "ebfa3cdd5c38d023ed4525e25004155aad7ad3e0",
+  "layout": "LAYOUT",
+  "layers": [
+    [
+      "KC_A",    "KC_B",    "KC_C"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "keyboard": "handwired/onekey/kb2040",
+  "keymap": "default",
+  "commit": "baa6000ed33f1f190f43bcd993f84f3b057e952d",
+  "layout": "LAYOUT_ortho_1x1",
+  "layers": [
+    [
+      "KC_A"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "keyboard": "labbe/labbeminiv1",
+  "keymap": "default",
+  "commit": "0bd02952eab98f3c2327b80705f03ce7ede6e100",
+  "layout": "LAYOUT_wasd",
+  "layers": [
+    [
+                 "KC_W",
+      "KC_A",    "KC_S",    "KC_D"
+    ]
+  ]
+}
