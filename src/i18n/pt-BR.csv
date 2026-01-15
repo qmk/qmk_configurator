@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,MechMerlin video guide
 settingsPanel:toggleTutorial:label,Tutorial em Video
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Testar teclado
 testKeys:title,Testar entrada do teclado
 tester:back:label,Back

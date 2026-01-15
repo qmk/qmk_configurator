@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,雪の切り替え
 settingsPanel:toggleTutorial:help,MechMerlinのビデオガイド
 settingsPanel:toggleTutorial:label,ビデオチュートリアル
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Test Keyboard
 testKeys:title,キーボード入力テスト
 tester:back:label,Back

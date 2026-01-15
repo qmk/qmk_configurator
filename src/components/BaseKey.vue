@@ -109,6 +109,7 @@ export default {
     ...mapState('keymap', { curLayer: 'layer' }),
     ...mapGetters('keymap', ['getKey', 'getSelectedKey', 'colorwayOverride']),
     ...mapGetters('keycodes', ['lookupKeycode']),
+    ...mapState('app', ['configuratorSettings']),
     myTitle() {
       return this.meta ? this.meta.code : '';
     },
@@ -185,6 +186,13 @@ export default {
         this.isShowingKeymapLegends
       ) {
         classes.push('smaller');
+      }
+      if (
+        this.meta &&
+        this.meta.code === 'KC_NO' &&
+        this.configuratorSettings.applyDisabledStyleForUnassigned
+      ) {
+        classes.push('disabled');
       }
       const { KEY_WIDTH, KEY_HEIGHT } = this.config;
       classes.push(getKeySizeClass(this.uh, this.uw));

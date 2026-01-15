@@ -190,6 +190,16 @@ const actions = {
     commit('setClearLayerDefault', status);
     await dispatch('saveConfiguratorSettings');
   },
+  async toggleShowBlankForUnassigned({ commit, state, dispatch }) {
+    let status = state.configuratorSettings.showBlankForUnassigned;
+    commit('setShowBlankForUnassigned', !status);
+    await dispatch('saveConfiguratorSettings');
+  },
+  async toggleApplyDisabledStyleForUnassigned({ commit, state, dispatch }) {
+    let status = state.configuratorSettings.applyDisabledStyleForUnassigned;
+    commit('setApplyDisabledStyleForUnassigned', !status);
+    await dispatch('saveConfiguratorSettings');
+  },
   async setFavoriteKeyboard({ commit, dispatch }, keyboard) {
     commit('setFavoriteKeyboard', keyboard);
     await dispatch('saveConfiguratorSettings');

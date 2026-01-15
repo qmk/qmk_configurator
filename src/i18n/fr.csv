@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,Disposition des touches du système d'opér
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,Guide vidéo de MechMerlin (en anglais)
 settingsPanel:toggleTutorial:label,Guide Vidéo
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Testeur de clavier
 testKeys:title,Teste le clavier
 tester:back:label,Retour

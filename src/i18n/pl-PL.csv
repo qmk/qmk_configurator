@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,Przewodnik wideo MechMerlina
 settingsPanel:toggleTutorial:label,Przewodnik wideo
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Test klawiatury
 testKeys:title,Przetestuj działanie klawiatury
 tester:back:label,Wróć

@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,MechMerlin video guía
 settingsPanel:toggleTutorial:label,Video Tutorial
+settingsPanel:printing:heading,Impresión
+settingsPanel:printing:useBlankForUnassigned:label,Usar espacio en blanco para teclas no asignadas
+settingsPanel:printing:useBlankForUnassigned:help,Muestra un espacio en blanco en lugar de N/A al imprimir teclas no asignadas.
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,Usar estilo deshabilitado para teclas no asignadas
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,Aplica un fondo gris al imprimir teclas no asignadas.
 testKeys:label,Probar teclado
 testKeys:title,Probar entrada del teclado
 tester:back:label,Atrás

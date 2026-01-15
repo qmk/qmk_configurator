@@ -192,6 +192,12 @@ const mutations = {
   setClearLayerDefault(state, value) {
     state.configuratorSettings.clearLayerDefault = value;
   },
+  setShowBlankForUnassigned(state, value) {
+    state.configuratorSettings.showBlankForUnassigned = value;
+  },
+  setApplyDisabledStyleForUnassigned(state, value) {
+    state.configuratorSettings.applyDisabledStyleForUnassigned = value;
+  },
   toggleSnowflakes(state) {
     state.snowflakes = !state.snowflakes;
   },

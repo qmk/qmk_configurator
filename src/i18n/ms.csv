@@ -191,6 +191,11 @@ settingsPanel:osKeyboardLayout:label,
 settingsPanel:snowflakes:label,
 settingsPanel:toggleTutorial:help,Panduan video MechMerlin
 settingsPanel:toggleTutorial:label,Video Tutorial
+settingsPanel:printing:heading,
+settingsPanel:printing:useBlankForUnassigned:label,
+settingsPanel:printing:useBlankForUnassigned:help,
+settingsPanel:printing:applyDisabledStyleForUnassigned:label,
+settingsPanel:printing:applyDisabledStyleForUnassigned:help,
 testKeys:label,Test Keyboard
 testKeys:title,Uji Input Papan kekunci
 tester:back:label,Belakang
