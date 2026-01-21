@@ -67,7 +67,7 @@
     "sass": "1",
     "simplecc-wasm": "^0.1.4",
     "start-server-and-test": "1",
-    "tar": "^6.2.1",
+    "tar": "^7.5.4",
     "vite": "5",
     "vite-plugin-vue2": "^1.9.2"
   },
