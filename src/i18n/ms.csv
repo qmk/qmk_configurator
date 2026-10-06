@@ -55,6 +55,8 @@ keymapHelp:title,
 keymapName:label,Nama Keymap
 keymapName:placeholder,Sesuaikan nama keymap
 layer:confirm,Anda pasti ingin membuang lapisan?
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Lapisan
 layer:title,Buang Lapisan
 layout:label,susunan

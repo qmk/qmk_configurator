@@ -55,6 +55,8 @@ keymapHelp:title,
 keymapName:label,Nazwa mapy klawiszy
 keymapName:placeholder,Własna mapa klawiszy
 layer:confirm,Na pewno chcesz wyczyścić aktualną warstwę?
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Warstwa
 layer:title,Wyczyść warstwę
 layout:label,Układ

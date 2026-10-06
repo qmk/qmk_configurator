@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import isUndefined from 'lodash/isUndefined';
+import cloneDeep from 'lodash/cloneDeep';
 import colorways from '@/components/colorways';
 import defaults from './config';
 import { backend_skeletons_url } from './constants';
@@ -331,6 +332,11 @@ const mutations = {
   },
   setLayers(state, layers) {
     Vue.set(state, 'keymap', layers);
+  },
+  copyLayer(state, { from, to }) {
+    // deep copy so the two layers don't share key objects (e.g. contents)
+    Vue.set(state.keymap, to, cloneDeep(state.keymap[from]));
+    mutations.setDirty(state);
   },
   setDirty(state) {
     state.dirty = true;

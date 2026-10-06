@@ -55,6 +55,8 @@ keymapHelp:title,Как использовать keymap.json?
 keymapName:label,Название раскладки
 keymapName:placeholder,название пользовательской раскладки
 layer:confirm,"Вы уверены, что хотите очистить слой?"
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Слой
 layer:title,Очистить слой
 layout:label,раскладка

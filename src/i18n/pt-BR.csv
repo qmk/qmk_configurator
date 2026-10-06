@@ -55,6 +55,8 @@ keymapHelp:title,
 keymapName:label,Nome da keymap
 keymapName:placeholder,nome da keymap customizada
 layer:confirm,Limpar as camadas”
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Camadas
 layer:title,Limpar camadas
 layout:label,layout

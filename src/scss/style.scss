@@ -414,6 +414,10 @@ button {
   // color: #ccc;
 }
 
+.layers.copy-target .layer:hover {
+  cursor: copy;
+}
+
 .layer:hover {
   cursor: pointer;
   // background: #eee;

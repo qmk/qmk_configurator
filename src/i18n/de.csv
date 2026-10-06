@@ -55,6 +55,8 @@ keymapHelp:title,
 keymapName:label,Name
 keymapName:placeholder,Eigener Name der Tastaturbelegung
 layer:confirm,Soll die Ebene wirklich gelöscht werden?
+layer:copyConfirm,Ebene {to} mit Ebene {from} überschreiben?
+layer:copyTitle,Ebene kopieren
 layer:label,Ebene
 layer:title,Ebene löschen
 layout:label,Layout

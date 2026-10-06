@@ -55,6 +55,8 @@ keymapHelp:title,keymap.jsonを使用するにはどうすればいいですか�
 keymapName:label,Keymap Name
 keymapName:placeholder,カスタムキーマップ名
 layer:confirm,レイヤをクリアしますか？
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Layer
 layer:title,レイヤのクリア
 layout:label,layout

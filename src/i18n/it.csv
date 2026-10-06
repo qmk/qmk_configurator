@@ -55,6 +55,8 @@ keymapHelp:title,Come uso il file keymap.json?
 keymapName:label,Nome keymap
 keymapName:placeholder,Nome keymap personalizzato
 layer:confirm,Sei sicurə di voler cancellare il livello?
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Livello
 layer:title,Elimina livello
 layout:label,layout

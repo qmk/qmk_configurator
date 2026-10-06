@@ -55,6 +55,8 @@ keymapHelp:title,
 keymapName:label,Nom de la disposition
 keymapName:placeholder,Disposition Personnalisée
 layer:confirm,Etes-vous sur de vouloir effacer ce calque?
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,Calque
 layer:title,Efface le calque
 layout:label,version

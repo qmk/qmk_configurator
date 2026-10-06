@@ -55,6 +55,8 @@ keymapHelp:title,如何使用 keymap.json？
 keymapName:label,鍵位名
 keymapName:placeholder,自定義鍵位名
 layer:confirm,確認清除該層？
+layer:copyConfirm,
+layer:copyTitle,
 layer:label,鍵位層
 layer:title,清除層
 layout:label,配列
